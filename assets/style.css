@@ -183,15 +183,24 @@ img {
 }
 
 .hero__title {
-    font-size: 4rem;
+    font-size: 2.7rem;
     margin-bottom: .25rem;
     margin-top: 0;
 }
 
+@media (min-width: 40rem) {
+    font-size: 4rem;
+}
+
 .hero__tagline {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     margin-top: 0;
+    margin-bottom: 3rem;
     color: var(--color-02);
+}
+
+@media (min-width: 40rem) {
+    font-size: 2.5rem;
 }
 
 .section {
@@ -200,7 +209,7 @@ img {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .section__title {
@@ -218,7 +227,6 @@ img {
 
 .section--subscribe {
     background: var(--color-04);
-    max-height: 25rem;
 }
 
 .section--subscribe .row {
@@ -245,4 +253,30 @@ img {
 
 .footer {
     color: var(--color-gray-01);
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
+
+    .footer .logo {
+        width: 4rem;
+        height: 4rem;
+        display: block;
+        margin: auto;
+    }
+    
+    .footer .name {
+        font-size: 1.2rem;
+        margin-bottom: .25rem;
+    }
+    
+    .footer a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 .5rem;
+    }
+    
+    .footer .copyright {
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
