@@ -161,7 +161,7 @@ img {
     align-items: center;
     justify-content: center;
     
-    background: url('hero2.jpg') no-repeat center center;
+    background: url('hero.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
     padding-top: 2rem;
@@ -174,7 +174,7 @@ img {
         left: 0; right: 0; top: 0; bottom: 0;
         display: block;
         background: #fff;
-        opacity: .6;
+        opacity: .8;
         z-index: 0;
     }
     
