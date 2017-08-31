@@ -200,8 +200,12 @@ img {
     .form__control:valid:not(:focus):not(:placeholder-shown) {
         border-color: #01FF70;
     }
-    .form__control:invalid:not(:focus):not(:placeholder-shown) {
+    .form__control:invalid:not(:focus):not(:placeholder-shown),
+    .form__control.error {
         border-color: #FF4136;
+        color: #FF4136;
+    }
+    .form__label.error {
         color: #FF4136;
     }
 

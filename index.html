@@ -25,7 +25,7 @@
         <link rel="icon" type="image/png" href="assets/img/touch-icon.png" sizes="192x192">
         <link rel="icon" type="image/png" href="assets/img/favicon32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="assets/img/favicon16.png" sizes="16x16">
-        <link rel="mask-icon" href="assets/favicon-glyph.svg" color="#008996">
+        <link rel="mask-icon" href="assets/img/favicon-glyph.svg" color="#008996">
 
         <!-- Win 8/8.1  -->
         <meta name="msapplication-TileImage" content="https://ocean.exchange/assets/img/touch-icon.png"/>
@@ -39,13 +39,13 @@
         <meta name="twitter:creator" content="@ocean_exchange">
         <meta name="twitter:title" content="Ocean Exchange">
         <meta name="twitter:url" content="https://ocean.exchange">
-        <meta name="twitter:description" content="Ocean Exchange is a global, decentralized data marketplace to make data available for everyone. Ocean Exchange allows data providers to find data consumers, with trust, security, compliance and transparency.">
+        <meta name="twitter:description" content="Ocean Exchange is a global, decentralized data marketplace to make data available for everyone.">
         <meta name="twitter:image:src" content="https://ocean.exchange/assets/img/share-image.jpg">
         
         <meta property="og:type" content="website">
         <meta property="og:site_name" content="Ocean Exchange">
         <meta property="og:title" content="Ocean Exchange">
-        <meta property="og:description" content="Ocean Exchange is a global, decentralized data marketplace to make data available for everyone. Ocean Exchange allows data providers to find data consumers, with trust, security, compliance and transparency.">
+        <meta property="og:description" content="Ocean Exchange is a global, decentralized data marketplace to make data available for everyone.">
         <meta property="og:url" content="https://ocean.exchange">
         <meta property="og:image" content="https://ocean.exchange/assets/img/share-image.jpg">
         
@@ -100,16 +100,21 @@
                     <h1 class="section__title">Know when we're ready</h1>
                     <p class="section__description">Get notified as soon as Ocean Exchange is ready.</p>
                 </header>
-                
-                <form class="form form--signup" action="#" method="post">
+    
+                <form class="form form--notify" action="//exchange.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71" method="post" name="mc-embedded-subscribe-form" target="_blank">
                     <div class="form__group">
-                        <label class="form__label" for="email">Your Email</label>                   
+                        <label class="form__label" for="mce-EMAIL">Your Email</label>                   
                         <div class="input-group">
-                            <input class="form__control" type="email" name="email" id="email" value="" placeholder="your@email.com" required>
-                            <input class="button button--primary" type="submit" name="submit" value="Notify me">
+                            <input class="form__control" type="email" name="EMAIL" id="mce-EMAIL" value="" placeholder="your@email.com" required>
+                            <input class="button button--primary" type="submit" name="submit" value="Notify me" id="mc-embedded-subscribe">
+                            
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cd10df7575858374f6a066d13_3c6eed8b71" tabindex="-1" value=""></div>
+                            <input type="hidden" name="u" value="cd10df7575858374f6a066d13" />
+                            <input type="hidden" name="id" value="3c6eed8b71" />
                         </div>
                     </div>
                 </form>
+
             </div>
         </section>
         
@@ -143,8 +148,9 @@
                 <p class="copyright"><small>&copy; 2017 Ocean Exchange Foundation - All rights reserved.</small></p>
             </div>
         </footer>
-
-        <!-- <script src="assets/script.js"></script> -->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/script.js"></script>
         
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
