@@ -94,7 +94,7 @@
             </div>
         </section>
         
-        <section class="section section--subscribe" id="subscribe">
+        <section class="section section--notify" id="notify">
             <div class="row">
                 <header class="section__header">
                     <h1 class="section__title">Know when we're ready</h1>
@@ -103,10 +103,9 @@
                 
                 <form class="form form--signup" action="#" method="post">
                     <div class="form__group">
-                        <label class="form__label" for="email">Your Email</label>
-                        
+                        <label class="form__label" for="email">Your Email</label>                   
                         <div class="input-group">
-                            <input class="form__control" type="email" name="email" value="" placeholder="your@email.com" required>
+                            <input class="form__control" type="email" name="email" id="email" value="" placeholder="your@email.com" required>
                             <input class="button button--primary" type="submit" name="submit" value="Notify me">
                         </div>
                     </div>
@@ -127,7 +126,18 @@
                 <p>
                     <small>
                         <a href="https://ocean.exchange">ocean.exchange</a>
-                        <a href="mailto:info@ocean.exchange">info@ocean.exchange</a>
+                        <a href="https://twitter.com/ocean_exchange">
+                            <svg class="icon">
+                                <use xlink:href="assets/img/sprite.svg#twitter"></use>
+                            </svg>
+                            @ocean_exchange
+                        </a>
+                        <a href="mailto:info@ocean.exchange">
+                            <svg class="icon">
+                                <use xlink:href="assets/img/sprite.svg#email"></use>
+                            </svg>
+                            info@ocean.exchange
+                        </a>
                     </small>
                 </p>
                 <p class="copyright"><small>&copy; 2017 Ocean Exchange Foundation - All rights reserved.</small></p>
