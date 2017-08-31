@@ -19,6 +19,12 @@ body {
     height: 100%;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 18px;
 }
@@ -28,20 +34,36 @@ body {
     font-size: 1rem;
     font-family: var(--font-family-base);
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .row {
-    max-width: 30rem;
+    max-width: 35rem;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: var(--font-family-headings);
     font-weight: 500;
     color: var(--color-01);
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--color-03);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .form {
@@ -62,16 +84,16 @@ h1, h2 {
     width: 100%;
     max-width: 100%;
     appearance: none;
-    padding: .25rem .5rem;
+    padding: .75rem;
+    border-radius: .4rem;
     margin: 0;
-    font-family: $font-family-base;
     font-size: 1rem;
+    font-family: var(--font-family-base);
     font-weight: 500;
-    color: $brand-03;
-    background: lighten($brand-05, 4%);
+    color: var(--color-gray-04);
+    background: #fff;
     box-shadow: none;
-    border: 1.5px solid darken($brand-05, 10%);
-    border-radius: .3rem;
+    border: 0;
     transition: .15s ease-out;
 }
 
@@ -97,33 +119,60 @@ h1, h2 {
     }
 
 .button {
+    font-family: var(--font-family-headings);
+    font-weight: 600;
     display: inline-block;
-    padding: .5rem 2rem;
+    padding: .75rem 2rem;
     border-radius: .4rem;
-    background: var(--color-01);
+    background: var(--color-03);
     color: #fff;
     text-decoration: none;
     border: none;
-    box-shadow: none;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, .1);
     outline: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1;
 }
+
 
 /*
     Hero 
 */
+
 .hero {
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
     max-height: 800px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    
+    background: url('hero2.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
+    .hero:before {
+        content: '';
+        position: absolute;
+        left: 0; right: 0; top: 0; bottom: 0;
+        display: block;
+        background: #fff;
+        opacity: .6;
+        z-index: 0;
+    }
+    
+    .hero .row {
+        position: relative;
+        z-index: 1;
+        max-width: none;
+    }
+
 .hero__logo {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     width: 10rem;
     height: 10rem;
 }
@@ -134,13 +183,66 @@ h1, h2 {
 }
 
 .hero__title {
-    font-size: 5vw;
+    font-size: 4rem;
     margin-bottom: .25rem;
     margin-top: 0;
 }
 
 .hero__tagline {
-    font-size: 3vw;
+    font-size: 2.5rem;
     margin-top: 0;
+    color: var(--color-02);
+}
+
+.section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.section__title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.section__description {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: var(--color-02);
+}
+
+.section--subscribe {
+    background: var(--color-04);
+    max-height: 25rem;
+}
+
+.section--subscribe .row {
+    width: 100%;
+}
+
+.section--wrigleygang {
+    background: var(--color-01);
     color: var(--color-04);
+}
+
+    .section--wrigleygang .section__title {
+        color: var(--color-04);
+    }
+    
+    .section--wrigleygang a {
+        color: #fff;
+    }
+
+.wrigleygang {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    color: var(--color-gray-01);
 }
