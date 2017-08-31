@@ -45,6 +45,12 @@ body {
     padding-right: 1rem;
 }
 
+
+/*
+    STANDARD ELEMENTS 
+    -------------------------------------------------------
+*/
+
 h1, h2, h3 {
     font-family: var(--font-family-headings);
     font-weight: 500;
@@ -65,6 +71,12 @@ img {
     height: auto;
     margin-bottom: 1rem;
 }
+
+
+/*
+    FORMS 
+    -------------------------------------------------------
+*/
 
 .form {
     
@@ -136,7 +148,8 @@ img {
 
 
 /*
-    Hero 
+    HERO 
+    -------------------------------------------------------
 */
 
 .hero {
@@ -203,6 +216,12 @@ img {
     font-size: 2.5rem;
 }
 
+
+/*
+    SECTIONS 
+    -------------------------------------------------------
+*/
+
 .section {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -250,6 +269,12 @@ img {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
+
+
+/*
+    FOOTER 
+    -------------------------------------------------------
+*/
 
 .footer {
     color: var(--color-gray-01);
