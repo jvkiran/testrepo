@@ -14,12 +14,12 @@ jQuery(function($) {
 
     function formCallback (resp) {
         if (resp.result === 'success') {
-            form.find('.input-group').addClass('hide')
+            form.find('.input-group').css('display', 'none')
         }
         if (resp.result === 'error') {
             form.find('.button')
                 .removeClass('disabled')
-                .text('Subscribe')
+                .text('Notify me')
         }
     }
     
