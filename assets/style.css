@@ -1,0 +1,133 @@
+:root {
+    --font-family-base: 'tablet-gothic', sans-serif;
+    --font-family-headings: 'gineso', 'tablet-gothic', sans-serif;
+    --color-01: #008996;
+    --color-02: #0099A9;
+    --color-03: #1BCAD4;
+    --color-04: #84DADF;
+    
+    --color-gray-01: #98999B;
+    --color-gray-02: #898B8E;
+    --color-gray-03: #54565B;
+    --color-gray-04: #231F20;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    color: var(--color-gray-03);
+    font-size: 1rem;
+    font-family: var(--font-family-base);
+    font-weight: 400;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1, h2 {
+    font-family: var(--font-family-headings);
+    font-weight: 500;
+    color: var(--color-01);
+}
+
+.form {
+    
+}
+
+.form__label {
+    user-select: none;
+    display: block;
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    appearance: none;
+    padding: .25rem .5rem;
+    margin: 0;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $brand-03;
+    background: lighten($brand-05, 4%);
+    box-shadow: none;
+    border: 1.5px solid darken($brand-05, 10%);
+    border-radius: .3rem;
+    transition: .15s ease-out;
+}
+
+.form__control:focus {
+    outline: 0;
+    border-color: $brand-02;
+    background: $brand-05;
+}
+
+.input-group {
+    display: flex;
+}
+
+    .input-group .form__control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+    }
+
+    .input-group .button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+.button {
+    
+}
+
+/*
+    Hero 
+*/
+.hero {
+    text-align: center;
+    min-height: 100vh;
+    max-height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__logo {
+    margin-bottom: 4rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.hero__title,
+.hero__tagline {
+    width: 100%;
+}
+
+.hero__title {
+    font-size: 5vw;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.hero__tagline {
+    font-size: 3vw;
+    margin-top: 0;
+}
