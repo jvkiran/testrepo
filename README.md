@@ -1,8 +1,9 @@
-# Ocean Exchange
+# Ocean Protocol
 
 > Unlock the world’s data.
 
-http://ocean.exchange.s3-website-ap-southeast-1.amazonaws.com
+https://oceanprotocol.com
+http://oceanprotocol.com.s3-website-ap-southeast-1.amazonaws.com
 
 ## Deployment
 
