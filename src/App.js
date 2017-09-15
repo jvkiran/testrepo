@@ -5,6 +5,32 @@ import emailIcon from './assets/email-icon.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, responsive } from './styles';
+import SubscribeForm from 'react-mailchimp-subscribe';
+ 
+const formProps = {
+  action: '//exchange.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
+  messages: {
+    inputPlaceholder: "type@your.email",
+    btnLabel: "Join us",
+    sending: "Sending...",
+    success: "Thanks!",
+    error: "Oops, something went wrong"
+  },
+  styles: {
+    sending: {
+      fontSize: 18,
+      color: "auto"
+    },
+    success: {
+      fontSize: 18,
+      color: "green"
+    },
+    error: {
+      fontSize: 18,
+      color: "red"
+    }
+  }
+}
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -106,6 +132,7 @@ const App = () => (
         <img src={oceanLogo} alt="Ocean" />
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
+      <SubscribeForm {...formProps}/>
       <StyledSubscribe onSubmit={e => alert(`${e.target.value} is subscribed`)}>
         <img src={emailIcon} alt="email" />
         <input placeholder="type@your.email" />
