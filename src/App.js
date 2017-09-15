@@ -18,15 +18,15 @@ const formProps = {
   },
   styles: {
     sending: {
-      fontSize: 18,
+      fontSize: 16,
       color: 'auto'
     },
     success: {
-      fontSize: 18,
+      fontSize: 16,
       color: 'green'
     },
     error: {
-      fontSize: 18,
+      fontSize: 16,
       color: 'red'
     }
   }
@@ -53,7 +53,12 @@ const StyledColumn = styled.div`
   align-items: center;
   text-align: center;
   @media screen and (${responsive.sm.max}) {
-    padding: 25px;
+    margin: 0 auto;
+    padding: 50px 25px;
+    overflow: scroll;
+  }
+  @media screen and (min-height: 650px) and (${responsive.sm.max}) {
+    justify-content: center;
   }
 `;
 
@@ -68,7 +73,9 @@ const StyledTagline = styled.h1`
   margin: 40px 0;
   font-weight: 400;
   font-size: 26px;
-  margin-top: 70px;
+  @media screen and (${responsive.sm.min}) {
+    margin-top: 70px;
+  }
 `;
 
 const StyledSubscribeWrapper = styled.div`
@@ -87,6 +94,7 @@ const StyledSubscribe = styled(SubscribeForm)`
   }
   & input {
     outline: none;
+    margin: 0;
     border-radius: 2px 0 0 2px;
     font-size: 16px;
     padding: 14px;
@@ -95,6 +103,12 @@ const StyledSubscribe = styled(SubscribeForm)`
     padding-left: 54px;
     border: none;
     border-style: none;
+    @media screen and (${responsive.sm.max}) {
+      line-height: 1;
+      padding: 10px;
+      padding-left: 44px;
+      width: 200px;
+    }
   }
   & input::placeholder {
     color: rgb(${colors.black});
@@ -106,6 +120,7 @@ const StyledSubscribe = styled(SubscribeForm)`
     border-radius: 0 2px 2px 0;
     font-size: 16px;
     padding: 14px 34px;
+    margin: 0;
     &:hover {
       opacity: 0.7;
     }
@@ -113,11 +128,18 @@ const StyledSubscribe = styled(SubscribeForm)`
       padding: 14px 20px;
     }
   }
+  & > form > p {
+    position: absolute;
+    text-align: center;
+  }
 `;
 
 const StyledPoweredBy = styled.div`
   font-size: 20px;
   margin-top: 35px;
+  & a {
+    height: 30px;
+  }
   & img {
     height: 30px;
   }
@@ -125,23 +147,6 @@ const StyledPoweredBy = styled.div`
     padding-right: 15px;
   }
 `;
-
-const StyledTilted = styled.div`
-  height: 25vh;
-  position: absolute;
-  width: 100%;
-  max-width: 1000px;
-  left: 0;
-  bottom: 0;
-  opacity: 0;
-  overflow: hidden;
-  & div {
-    height: 100%;
-    transform: skewY(5deg) translate3d(0, 5vh, 0);
-    background: rgba(${colors.white}, 0.1);
-  }
-`;
-
 const App = () => (
   <StyledWrapper>
     <StyledColumn>
@@ -156,13 +161,14 @@ const App = () => (
           <button>Join our community</button>
         </StyledSubscribe>
       </StyledSubscribeWrapper>
-      <StyledTilted>
-        <div />
-      </StyledTilted>
       <StyledPoweredBy>
         <p>Powered by</p>
-        <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-        <img src={dexLogo} alt="Dex Logo" />
+        <a href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
+          <img src={bigchainDBLogo} alt="BigchainDB Logo" />
+        </a>
+        <a href="https://www.dex.sg/" target="_blank" rel="noopener noreferrer">
+          <img src={dexLogo} alt="Dex Logo" />
+        </a>
       </StyledPoweredBy>
     </StyledColumn>
   </StyledWrapper>
