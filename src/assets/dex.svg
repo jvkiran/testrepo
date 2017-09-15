@@ -1,0 +1,47 @@
+<svg width="85" height="28" viewBox="0 0 85 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>dex</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-4435 60)">
+<g id="dex">
+<g id="DEX">
+<use xlink:href="#path0_fill" transform="translate(4474 -62)" fill="#FFFFFF"/>
+</g>
+<g id="Group">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(0.707035 0.707179 -0.707179 0.707035 4455 -50)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(0.708705 -0.705505 0.705505 0.708705 4451 -46.1118)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(-0.707035 0.707179 0.707179 0.707035 4442.91 -50)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(-0.708705 -0.705505 -0.705505 0.708705 4446.92 -46.1118)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(-0.707179 -0.707035 -0.707035 0.707179 4452.91 -52.0859)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(0.705505 -0.708705 -0.708705 -0.705505 4449.02 -48.083)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Group">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(0.707179 0.707035 0.707035 -0.707179 4445 -39.9971)" fill="#FFFFFF"/>
+</g>
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="matrix(-0.705505 0.708705 0.708705 0.705505 4448.89 -44)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 2.24609 7.3374L 2.24609 24L 7.83691 24C 13.2812 24 15.1978 20.46 15.1978 15.6504C 15.1978 10.7676 13.208 7.3374 7.83691 7.3374L 2.24609 7.3374ZM 4.76074 9.62012L 7.60498 9.62012C 11.2793 9.62012 12.6099 12.0737 12.6099 15.687C 12.6099 19.813 10.9863 21.7051 7.60498 21.7051L 4.76074 21.7051L 4.76074 9.62012ZM 29.0405 21.7051L 21.3013 21.7051L 21.3013 16.627L 28.6011 16.627L 28.6011 14.4297L 21.3013 14.4297L 21.3013 9.63232L 29.0405 9.63232L 29.0405 7.3374L 18.7988 7.3374L 18.7988 24L 29.0405 24L 29.0405 21.7051ZM 45.0317 7.3374L 42.1631 7.3374L 38.2446 13.6362L 38.1226 13.6362L 34.1675 7.3374L 31.1646 7.3374L 36.4502 15.6016L 31.1035 24L 33.8989 24L 37.8784 17.75L 38.0005 17.75L 41.9678 24L 44.9341 24L 39.5752 15.7236L 45.0317 7.3374Z"/>
+<path id="path1_fill" d="M 0 0L 11.181 0L 11.181 5.65984L 0 5.65984L 0 0Z"/>
+</defs>
+</svg>
