@@ -13,7 +13,7 @@ const formProps = {
     inputPlaceholder: 'type@your.email',
     btnLabel: 'Join us',
     sending: 'Sending...',
-    success: 'Thanks!',
+    success: 'Thanks! Please click the link in the confirmation email to complete your subscription.',
     error: 'Oops, something went wrong'
   },
   styles: {
