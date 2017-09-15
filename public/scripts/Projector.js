@@ -1,3 +1,5 @@
+/* global THREE */
+
 /**
  * @author mrdoob / http://mrdoob.com/
  * @author supereggbert / http://www.paulbrunt.co.uk/

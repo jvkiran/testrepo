@@ -1,3 +1,5 @@
+/* global THREE */
+
 /**
  * @author mrdoob / http://mrdoob.com/
  */

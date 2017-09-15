@@ -1,3 +1,5 @@
+/* global THREE */
+
 document.addEventListener('DOMContentLoaded', function() {
   if (window.innerWidth >= 640) {
     var SEPARATION = 100,
