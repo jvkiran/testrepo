@@ -48,6 +48,9 @@ const StyledColumn = styled.div`
   overflow: hidden;
   position: relative;
   max-height: 650px;
+  @media screen and (${responsive.sm.max}) {
+    padding: 25px;
+  }
 `;
 
 const StyledLogo = styled.div`
@@ -102,7 +105,7 @@ const StyledSubscribe = styled(SubscribeForm)`
       opacity: 0.7;
     }
     @media screen and (${responsive.sm.max}) {
-      padding: 14px 20px;
+      padding: 16px 20px;
     }
   }
 `;
