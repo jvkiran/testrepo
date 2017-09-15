@@ -6,31 +6,31 @@ import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, responsive } from './styles';
 import SubscribeForm from 'react-mailchimp-subscribe';
- 
+
 const formProps = {
   action: '//exchange.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
   messages: {
-    inputPlaceholder: "type@your.email",
-    btnLabel: "Join us",
-    sending: "Sending...",
-    success: "Thanks!",
-    error: "Oops, something went wrong"
+    inputPlaceholder: 'type@your.email',
+    btnLabel: 'Join us',
+    sending: 'Sending...',
+    success: 'Thanks!',
+    error: 'Oops, something went wrong'
   },
   styles: {
     sending: {
       fontSize: 18,
-      color: "auto"
+      color: 'auto'
     },
     success: {
       fontSize: 18,
-      color: "green"
+      color: 'green'
     },
     error: {
       fontSize: 18,
-      color: "red"
+      color: 'red'
     }
   }
-}
+};
 
 const StyledWrapper = styled.div`
   width: 100%;
@@ -48,7 +48,6 @@ const StyledColumn = styled.div`
   overflow: hidden;
   position: relative;
   max-height: 650px;
-  background: rgb(${colors.black});
 `;
 
 const StyledLogo = styled.div`
@@ -64,8 +63,7 @@ const StyledTagline = styled.h1`
   font-size: 26px;
 `;
 
-const StyledSubscribe = styled.form`
-  display: flex;
+const StyledSubscribeWrapper = styled.div`
   position: relative;
   & img {
     position: absolute;
@@ -73,9 +71,16 @@ const StyledSubscribe = styled.form`
     top: 19px;
     left: 19px;
   }
+`;
+
+const StyledSubscribe = styled(SubscribeForm)`
+  & > div {
+    display: flex;
+  }
   & input {
+    outline: none;
     border-radius: 2px 0 0 2px;
-    background: transparent;
+    background: rgb(${colors.black});
     font-size: 16px;
     padding: 14px;
     color: rgb(${colors.white});
@@ -90,9 +95,12 @@ const StyledSubscribe = styled.form`
   & button {
     border-radius: 0 2px 2px 0;
     font-size: 16px;
-    padding: 14px 34px;
+    padding: 16px 34px;
     background: rgb(${colors.white});
     color: rgb(${colors.black});
+    &:hover {
+      opacity: 0.7;
+    }
     @media screen and (${responsive.sm.max}) {
       padding: 14px 20px;
     }
@@ -105,7 +113,7 @@ const StyledPoweredBy = styled.div`
   bottom: 10vh;
   & img {
     height: 30px;
-    padding-left: 10px;
+    padding-right: 15px;
   }
 `;
 
@@ -132,19 +140,20 @@ const App = () => (
         <img src={oceanLogo} alt="Ocean" />
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
-      <SubscribeForm {...formProps}/>
-      <StyledSubscribe onSubmit={e => alert(`${e.target.value} is subscribed`)}>
+      <StyledSubscribeWrapper>
         <img src={emailIcon} alt="email" />
-        <input placeholder="type@your.email" />
-        <button>Join us</button>
-      </StyledSubscribe>
+        <StyledSubscribe {...formProps}>
+          <input placeholder="type@your.email" />
+          <button>Join us</button>
+        </StyledSubscribe>
+      </StyledSubscribeWrapper>
       <StyledTilted>
         <div />
       </StyledTilted>
       <StyledPoweredBy>
         <p>Powered by</p>
         <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-        <img src={dexLogo} alt="Dex Logo"/>
+        <img src={dexLogo} alt="Dex Logo" />
       </StyledPoweredBy>
     </StyledColumn>
   </StyledWrapper>
