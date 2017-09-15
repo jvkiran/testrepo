@@ -8,7 +8,7 @@ import { colors, responsive } from './styles';
 import SubscribeForm from 'react-mailchimp-subscribe';
  
 const formProps = {
-  action: '//exchange.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
+  action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
   messages: {
     inputPlaceholder: "type@your.email",
     btnLabel: "Join us",
