@@ -104,6 +104,10 @@ export const globalStyles = `
     left: 0;
     right: 0;
     z-index: -1;
+    overflow: hidden;
+  }
+  div#container > canvas {
+    transform: translate3d(0, 25%, 0);
   }
   @media screen and (${responsive.sm.max}) {
     div#container {

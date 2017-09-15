@@ -76,13 +76,13 @@ const StyledSubscribeWrapper = styled.div`
   & img {
     position: absolute;
     width: 18px;
-    top: 18px;
     left: 18px;
+    top: calc(50% - 5px);
   }
 `;
 
 const StyledSubscribe = styled(SubscribeForm)`
-  & > div {
+  & div {
     display: flex;
   }
   & input {
@@ -117,8 +117,7 @@ const StyledSubscribe = styled(SubscribeForm)`
 
 const StyledPoweredBy = styled.div`
   font-size: 20px;
-  position: absolute;
-  bottom: 15vh;
+  margin-top: 35px;
   & img {
     height: 30px;
   }
