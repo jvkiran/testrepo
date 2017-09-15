@@ -97,10 +97,6 @@ export const globalStyles = `
     color: inherit;
   }
 
-  div {
-    width: 100%;
-  }
-
   div#container {
     position: absolute;
     top: 0;

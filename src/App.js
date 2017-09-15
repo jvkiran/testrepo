@@ -11,7 +11,7 @@ const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
   messages: {
     inputPlaceholder: 'type@your.email',
-    btnLabel: 'Join us',
+    btnLabel: 'Join our community',
     sending: 'Sending...',
     success: 'Thanks! Please click the link in the confirmation email to complete your subscription.',
     error: 'Oops, something went wrong'
@@ -48,6 +48,10 @@ const StyledColumn = styled.div`
   overflow: hidden;
   position: relative;
   max-height: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   @media screen and (${responsive.sm.max}) {
     padding: 25px;
   }
@@ -64,6 +68,7 @@ const StyledTagline = styled.h1`
   margin: 40px 0;
   font-weight: 400;
   font-size: 26px;
+  margin-top: 70px;
 `;
 
 const StyledSubscribeWrapper = styled.div`
@@ -71,8 +76,8 @@ const StyledSubscribeWrapper = styled.div`
   & img {
     position: absolute;
     width: 18px;
-    top: 19px;
-    left: 19px;
+    top: 18px;
+    left: 18px;
   }
 `;
 
@@ -83,29 +88,29 @@ const StyledSubscribe = styled(SubscribeForm)`
   & input {
     outline: none;
     border-radius: 2px 0 0 2px;
-    background: rgb(${colors.black});
     font-size: 16px;
     padding: 14px;
-    color: rgb(${colors.white});
+    background: rgb(${colors.white});
+    color: rgb(${colors.black});
     padding-left: 54px;
     border: none;
     border-style: none;
-    border: 1px solid white;
   }
   & input::placeholder {
-    color: rgb(${colors.white});
+    color: rgb(${colors.black});
   }
   & button {
+    color: rgb(${colors.white});
+    background: rgb(${colors.black});
+    border: 1px solid white;
     border-radius: 0 2px 2px 0;
     font-size: 16px;
-    padding: 16px 34px;
-    background: rgb(${colors.white});
-    color: rgb(${colors.black});
+    padding: 14px 34px;
     &:hover {
       opacity: 0.7;
     }
     @media screen and (${responsive.sm.max}) {
-      padding: 16px 20px;
+      padding: 14px 20px;
     }
   }
 `;
@@ -113,9 +118,11 @@ const StyledSubscribe = styled(SubscribeForm)`
 const StyledPoweredBy = styled.div`
   font-size: 20px;
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   & img {
     height: 30px;
+  }
+  & img:first-of-type {
     padding-right: 15px;
   }
 `;
@@ -147,7 +154,7 @@ const App = () => (
         <img src={emailIcon} alt="email" />
         <StyledSubscribe {...formProps}>
           <input placeholder="type@your.email" />
-          <button>Join us</button>
+          <button>Join our community</button>
         </StyledSubscribe>
       </StyledSubscribeWrapper>
       <StyledTilted>
