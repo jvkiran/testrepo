@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import oceanLogo from './assets/ocean-logo.svg';
-import emailIcon from './assets/email-icon.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, responsive } from './styles';
@@ -10,7 +9,7 @@ import SubscribeForm from 'react-mailchimp-subscribe';
 const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
   messages: {
-    inputPlaceholder: 'type@your.email',
+    inputPlaceholder: 'your@email.com',
     btnLabel: 'Join our community',
     sending: 'Sending...',
     success: 'Thanks! Please click the link in the confirmation email to complete your subscription.',
@@ -18,15 +17,15 @@ const formProps = {
   },
   styles: {
     sending: {
-      fontSize: 16,
+      fontSize: '1.4rem',
       color: 'auto'
     },
     success: {
-      fontSize: 16,
+      fontSize: '1.4rem',
       color: 'green'
     },
     error: {
-      fontSize: 16,
+      fontSize: '1.4rem',
       color: 'red'
     }
   }
@@ -38,77 +37,54 @@ const StyledWrapper = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
+  font-size: 1rem;
 `;
 
 const StyledColumn = styled.div`
   width: 100%;
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 30px 60px;
-  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 4rem;
   position: relative;
-  max-height: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  @media screen and (${responsive.sm.max}) {
-    margin: 0 auto;
-    padding: 50px 25px;
-    overflow: scroll;
-  }
-  @media screen and (min-height: 650px) and (${responsive.sm.max}) {
+  @media screen and (${responsive.sm.max}) and (min-height: 599px) {
+    padding-top: 50px;
     justify-content: center;
   }
 `;
 
 const StyledLogo = styled.div`
-  width: 90px;
+  height: 13.8rem;
   & img {
-    width: 100%;
+    height: 100%;
   }
 `;
 
 const StyledTagline = styled.h1`
-  margin: 40px 0;
+  margin: 5.3rem 0 3.55rem;
   font-weight: 400;
-  font-size: 26px;
-  @media screen and (${responsive.sm.min}) {
-    margin-top: 70px;
-  }
-`;
-
-const StyledSubscribeWrapper = styled.div`
-  position: relative;
-  & img {
-    position: absolute;
-    width: 18px;
-    left: 18px;
-    top: calc(50% - 5px);
-  }
+  font-size: 2.65rem;
 `;
 
 const StyledSubscribe = styled(SubscribeForm)`
+  position: relative;
   & div {
     display: flex;
+    background: rgb(${colors.white});
+    border-radius: 0.7rem;
   }
   & input {
     outline: none;
     margin: 0;
-    border-radius: 2px 0 0 2px;
-    font-size: 16px;
-    padding: 14px;
-    background: rgb(${colors.white});
+    font-size: 1.8rem;
+    padding: 1.2rem 2rem;
     color: rgb(${colors.black});
-    padding-left: 54px;
+    background: transparent;
     border: none;
     border-style: none;
-    @media screen and (${responsive.sm.max}) {
-      line-height: 1;
-      padding: 10px;
-      padding-left: 44px;
-      width: 200px;
-    }
   }
   & input::placeholder {
     color: rgb(${colors.black});
@@ -116,35 +92,39 @@ const StyledSubscribe = styled(SubscribeForm)`
   & button {
     color: rgb(${colors.white});
     background: rgb(${colors.black});
-    border: 1px solid white;
-    border-radius: 0 2px 2px 0;
-    font-size: 16px;
-    padding: 14px 34px;
-    margin: 0;
-    &:hover {
-      opacity: 0.7;
-    }
-    @media screen and (${responsive.sm.max}) {
-      padding: 14px 20px;
+    border-radius: 0.7rem;
+    font-size: 1.6rem;
+    padding: 1.2rem 2rem;
+    margin: 0.3rem;
+    @media screen and (hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
   & > form > p {
+    width: 100%;
     position: absolute;
     text-align: center;
   }
 `;
 
 const StyledPoweredBy = styled.div`
-  font-size: 20px;
-  margin-top: 35px;
+  font-size: 1.6rem;
+  margin-top: 9rem;
+  margin-bottom: 3rem;
+  & p {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
   & a {
-    height: 30px;
+    height: 2.65rem;
   }
   & img {
-    height: 30px;
+    height: 2.65rem;
   }
   & img:first-of-type {
-    padding-right: 15px;
+    padding-right: 3rem;
   }
 `;
 const App = () => (
@@ -154,13 +134,7 @@ const App = () => (
         <img src={oceanLogo} alt="Ocean" />
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
-      <StyledSubscribeWrapper>
-        <img src={emailIcon} alt="email" />
-        <StyledSubscribe {...formProps}>
-          <input placeholder="type@your.email" />
-          <button>Join our community</button>
-        </StyledSubscribe>
-      </StyledSubscribeWrapper>
+      <StyledSubscribe {...formProps} />
       <StyledPoweredBy>
         <p>Powered by</p>
         <a href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">

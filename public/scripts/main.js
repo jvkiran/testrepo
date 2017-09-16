@@ -1,13 +1,15 @@
 /* global THREE */
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.innerWidth >= 640) {
+  if (!('ontouchstart' in window && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 800)) {
     var SEPARATION = 100,
       AMOUNTX = 100,
       AMOUNTY = 70;
     var camera, scene, renderer;
 
     var container;
+
+    var show = window.innerWidth >= 640 && window.innerHeight >= 600;
 
     var particles,
       particle,
@@ -65,6 +67,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onWindowResize() {
+      console.log('show is', show);
+      if (window.innerWidth >= 640 && window.innerHeight >= 600) {
+        if (!show) {
+          show = true;
+          animate();
+        }
+      } else {
+        show = false;
+      }
       windowHalfX = window.innerWidth / 2;
       windowHalfY = window.innerHeight / 2;
 
@@ -79,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
     //
 
     function animate() {
+      console.log('animate', show);
+      if (!show) return null;
       requestAnimationFrame(animate);
 
       render();
