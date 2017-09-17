@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onWindowResize() {
-      console.log('show is', show);
       if (window.innerWidth >= 640 && window.innerHeight >= 600) {
         if (!show) {
           show = true;
@@ -90,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
     //
 
     function animate() {
-      console.log('animate', show);
       if (!show) return null;
       requestAnimationFrame(animate);
 
