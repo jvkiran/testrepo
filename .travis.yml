@@ -3,9 +3,15 @@ node_js: node
 
 # will run `npm install` automatically
 
+before_install:
+  # - install awscli somehow, do we really need Python?
+
 script:
   - npm run test
   - npm run build
+
+after_success:
+  - npm run deploy
 
 notifications:
     email: false

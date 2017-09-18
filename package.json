@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "./node_modules/eslint/bin/eslint.js {src,public} && react-scripts test --env=jsdom",
+    "deploy": "./deploy.sh",
     "eject": "react-scripts eject"
   },
   "dependencies": {
