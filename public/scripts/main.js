@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   if (!('ontouchstart' in window && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 800)) {
     var SEPARATION = 100,
-      AMOUNTX = 100,
-      AMOUNTY = 70;
+        AMOUNTX = 100,
+        AMOUNTY = 70;
     var camera, scene, renderer;
 
     var container;
@@ -12,14 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var show = window.innerWidth >= 640 && window.innerHeight >= 600;
 
     var particles,
-      particle,
-      count = 0;
-
-    var mouseX = 0,
-      mouseY = 0;
-
-    var windowHalfX = window.innerWidth / 2;
-    var windowHalfY = window.innerHeight / 2;
+        particle,
+        count = 0;
 
     init();
     animate();
@@ -34,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       scene = new THREE.Scene();
 
-      particles = new Array();
+      particles = [];
 
       var PI2 = Math.PI * 2;
       var material = new THREE.SpriteCanvasMaterial({
@@ -75,8 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
       } else {
         show = false;
       }
-      windowHalfX = window.innerWidth / 2;
-      windowHalfY = window.innerHeight / 2;
 
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
