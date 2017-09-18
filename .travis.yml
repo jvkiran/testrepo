@@ -1,7 +1,11 @@
 language: node_js
 node_js: node
 
-# will run `npm install` & `npm test` automatically
+# will run `npm install` automatically
+
+script:
+  - npm run test
+  - npm run build
 
 notifications:
     email: false
