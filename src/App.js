@@ -12,8 +12,8 @@ const formProps = {
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Join our community',
     sending: 'Sending...',
-    success: 'Thanks! Please click the link in the confirmation email to complete your subscription.',
-    error: 'Oops, something went wrong'
+    success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
+    error: 'Oops, something went wrong. Would you mind trying again?'
   },
   styles: {
     sending: {
@@ -64,7 +64,7 @@ const StyledLogo = styled.div`
 `;
 
 const StyledTagline = styled.h1`
-  margin: 5.3rem 0 3.55rem;
+  margin: 5rem 0;
   font-weight: 400;
   font-size: 2.65rem;
 `;

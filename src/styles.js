@@ -31,10 +31,12 @@ export const globalStyles = `
       font-size: 8px;
     }
   }
+  
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
 
   body {
     background: rgb(${colors.black});
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
     color: rgb(${colors.white});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
@@ -82,5 +84,9 @@ export const globalStyles = `
 
   * {
     box-sizing: border-box !important;
+  }
+  
+  form > div + p {
+      color: #fff !important;
   }
 `;
