@@ -2,6 +2,8 @@
 
 ![](public/twitter_card.png)
 
+[![Build Status](https://travis-ci.com/oceanprotocol/site.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/oceanprotocol/site)
+
 > Landing page for Ocean Protocol https://oceanprotocol.com
 
 ## Development
