@@ -92,10 +92,18 @@ const StyledSubscribe = styled(SubscribeForm)`
     box-shadow: none;
     text-align: center;
     width: 100%;
+    transition: .15s ease-out;
     
     @media screen and (${responsive.sm.min}) {
         text-align: left;
         width: auto;
+        min-width: 18rem;
+    }
+    
+    &:focus {            
+        &::placeholder {
+            color: rgba(${colors.black}, .3);
+        }
     }
   }
   & input::placeholder {
@@ -110,6 +118,7 @@ const StyledSubscribe = styled(SubscribeForm)`
     margin: .15rem;
     width: 100%;
     transition: .15s ease-out;
+    cursor: pointer;
 
     @media screen and (hover: hover) {
       &:hover,
@@ -130,22 +139,36 @@ const StyledPoweredBy = styled.div`
   margin-bottom: 2rem;
   
   @media screen and (${responsive.sm.min}) {
-      margin-top: 5vh;
+      margin-top: 7vh;
       margin-bottom: 5vh;
   }
   & p {
     margin: 0;
     margin-bottom: 1rem;
   }
-  & img {
-    height: 1rem;
-    
-    @media screen and (${responsive.sm.min}) {
-        height: 1.5rem;
-    }
-  }
-  & img:first-of-type {
-    margin-right: 2rem;
+  & .logo {
+      display: inline-block;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      transition: .15s ease-out;
+      
+      &:hover,
+      &:focus {
+          transform: translate3d(0, -.05rem, 0);
+      }
+      
+      &:active {
+          transform: none;
+          transition: none;
+      }
+      
+      img {
+        height: 1rem;
+        
+        @media screen and (${responsive.sm.min}) {
+            height: 1.5rem;
+        }
+      }
   }
 `;
 const App = () => (
@@ -158,10 +181,10 @@ const App = () => (
       <StyledSubscribe {...formProps} />
       <StyledPoweredBy>
         <p>Powered by</p>
-        <a href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
+        <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
           <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
-        <a href="https://www.dex.sg/" target="_blank" rel="noopener noreferrer">
+        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener noreferrer">
           <img src={dexLogo} alt="Dex Logo" />
         </a>
       </StyledPoweredBy>
