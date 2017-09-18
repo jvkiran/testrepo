@@ -17,16 +17,16 @@ const formProps = {
   },
   styles: {
     sending: {
-      fontSize: '1.4rem',
+      fontSize: '.7rem',
       color: 'auto'
     },
     success: {
-      fontSize: '1.4rem',
-      color: 'green'
+      fontSize: '.7rem',
+      color: 'auto'
     },
     error: {
-      fontSize: '1.4rem',
-      color: 'red'
+      fontSize: '.7rem',
+      color: 'auto'
     }
   }
 };
@@ -36,69 +36,85 @@ const StyledWrapper = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  font-size: 1rem;
 `;
 
 const StyledColumn = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding: 20px;
-  padding-top: 4rem;
+  padding: 2rem 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  @media screen and (${responsive.sm.max}) and (min-height: 599px) {
-    padding-top: 50px;
-    justify-content: center;
-  }
 `;
 
 const StyledLogo = styled.div`
-  height: 13.8rem;
   & img {
-    height: 100%;
+    width: 89px;
+    height: 123px;
   }
 `;
 
 const StyledTagline = styled.h1`
-  margin: 5rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-weight: 400;
-  font-size: 2.65rem;
+  font-size: 1.5rem;
+  
+  @media screen and (${responsive.sm.min}) {
+    font-size: 1.75rem;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
 `;
 
 const StyledSubscribe = styled(SubscribeForm)`
   position: relative;
   & div {
     display: flex;
+    flex-wrap: wrap;
     background: rgb(${colors.white});
-    border-radius: 0.7rem;
+    border-radius: .5rem;
+    
+    @media screen and (${responsive.sm.min}) {
+        flex-wrap: nowrap;
+    }
   }
   & input {
     outline: none;
     margin: 0;
-    font-size: 1.8rem;
-    padding: 1.2rem 2rem;
+    font-size: 1rem;
+    padding: .75rem 1rem;
     color: rgb(${colors.black});
     background: transparent;
     border: none;
-    border-style: none;
+    box-shadow: none;
+    text-align: center;
+    width: 100%;
+    
+    @media screen and (${responsive.sm.min}) {
+        text-align: left;
+        width: auto;
+    }
   }
   & input::placeholder {
-    color: rgb(${colors.black});
+    color: rgba(${colors.black}, .5);
   }
   & button {
     color: rgb(${colors.white});
     background: rgb(${colors.black});
-    border-radius: 0.7rem;
-    font-size: 1.6rem;
-    padding: 1.2rem 2rem;
-    margin: 0.3rem;
+    border-radius: .35rem;
+    font-size: .85rem;
+    padding: .75rem 1rem;
+    margin: .15rem;
+    width: 100%;
+    transition: .15s ease-out;
+
     @media screen and (hover: hover) {
-      &:hover {
-        opacity: 0.7;
+      &:hover,
+      &:focus {
+        opacity: .85;
       }
     }
   }
@@ -110,21 +126,26 @@ const StyledSubscribe = styled(SubscribeForm)`
 `;
 
 const StyledPoweredBy = styled.div`
-  font-size: 1.6rem;
-  margin-top: 9rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  
+  @media screen and (${responsive.sm.min}) {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+  }
   & p {
     margin: 0;
-    margin-bottom: 2rem;
-  }
-  & a {
-    height: 2.65rem;
+    margin-bottom: 1rem;
   }
   & img {
-    height: 2.65rem;
+    height: 1rem;
+    
+    @media screen and (${responsive.sm.min}) {
+        height: 1.5rem;
+    }
   }
   & img:first-of-type {
-    padding-right: 3rem;
+    margin-right: 2rem;
   }
 `;
 const App = () => (

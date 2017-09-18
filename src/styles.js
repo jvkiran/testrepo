@@ -10,29 +10,24 @@ export const responsive = {
   }
 };
 
-export const globalStyles = `
+export const globalStyles = `  
   html, body, #root, #router-root {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  html {
-    font-size: 1vh;
-    position: relative;
-  }
-  @media screen and (${responsive.sm.max}) {
-    html {
-      font-size: 1.2vh;
-    }
-  }
-  @media screen and (max-height: 599px) {
-    html {
-      font-size: 8px;
-    }
+  
+  * {
+    box-sizing: border-box;
   }
   
   @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+  html {
+    font-size: 16px;
+    position: relative;
+  }
 
   body {
     background: rgb(${colors.black});
@@ -41,11 +36,13 @@ export const globalStyles = `
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   button {
     border-style: none;
-    line-height: 1em;
+    line-height: 1;
   }
 
   button:active,
@@ -53,8 +50,7 @@ export const globalStyles = `
   button.active {
     background-image: none;
     outline: 0;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 
   [tabindex] {
@@ -69,7 +65,7 @@ export const globalStyles = `
 
   div#container {
     position: absolute;
-    top: 0;
+    top: 10vh;
     bottom: 0;
     left: 0;
     right: 0;
@@ -80,13 +76,5 @@ export const globalStyles = `
     div#container {
       display: none;
     }
-  }
-
-  * {
-    box-sizing: border-box !important;
-  }
-  
-  form > div + p {
-      color: #fff !important;
   }
 `;
