@@ -5,3 +5,7 @@ node_js: node
 
 notifications:
     email: false
+
+cache:
+  directories:
+    - node_modules
