@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import oceanLogo from './assets/ocean-logo.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
-import { colors, responsive } from './styles';
+import { colors, layout, responsive } from './styles';
 import SubscribeForm from 'react-mailchimp-subscribe';
 
 const formProps = {
@@ -61,6 +61,8 @@ const StyledTagline = styled.h1`
   margin-bottom: 2rem;
   font-weight: 400;
   font-size: 1.5rem;
+  max-width: ${layout.maxWidth};
+  width: 100%;
   
   @media screen and (${responsive.sm.min}) {
     font-size: 1.75rem;
@@ -71,6 +73,9 @@ const StyledTagline = styled.h1`
 
 const StyledSubscribe = styled(SubscribeForm)`
   position: relative;
+  max-width: ${layout.maxWidthSm};
+  width: 100%;
+
   & div {
     display: flex;
     flex-wrap: wrap;
@@ -134,12 +139,42 @@ const StyledSubscribe = styled(SubscribeForm)`
   }
 `;
 
+const StyledLinks = styled.div`
+  margin-top: 2rem;
+  font-size: .9rem;
+  text-align: left;
+  width: 100%;
+  max-width: ${layout.maxWidthSm};
+  
+  @media screen and (${responsive.sm.min}) {
+      margin-top: 2vh;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  & h2 {
+      font-size: .9rem;
+      margin-bottom: 0;
+  }
+  
+  & a {
+      display: block;
+  }
+  
+  & .dimmed {
+      margin-right: .25rem;
+      text-decoration: none;
+      display: block;
+  }
+`;
+
 const StyledPoweredBy = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: .9rem;
   
   @media screen and (${responsive.sm.min}) {
-      margin-top: 7vh;
+      margin-top: 5vh;
       margin-bottom: 5vh;
   }
   & p {
@@ -179,8 +214,20 @@ const App = () => (
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
       <StyledSubscribe {...formProps} />
+      <StyledLinks>
+          <div>
+              <h2 className="dimmed">Announcement</h2>
+              <a href="https://medium.com/oceanprotocol/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">From AI to Blockchain to Data: Meet Ocean</a>
+          </div>
+          <div>
+              <h2 className="dimmed">Follow</h2>
+              <a href="https://twitter.com/oceanprotocol">Twitter</a>
+          </div>
+          
+          
+      </StyledLinks>
       <StyledPoweredBy>
-        <p>Powered by</p>
+        <p className="dimmed">Powered by</p>
         <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
           <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
