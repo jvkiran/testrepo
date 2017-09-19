@@ -93,6 +93,19 @@ export const globalStyles = `
       display: none;
     }
   }
+  @media screen and (max-height: 700px) {
+    div#container {
+      &:before {
+        content: '';
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+      }
+    }
+  }
   
   .dimmed {
       opacity: .5;
