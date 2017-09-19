@@ -4,7 +4,10 @@ node_js: node
 # will run `npm install` automatically
 
 before_install:
-  # - install awscli somehow, do we really need Python?
+  - sudo apt-get -qq update
+  - sudo apt-get install python python-pip
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
 
 script:
   - npm run test
