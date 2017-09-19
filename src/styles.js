@@ -3,6 +3,11 @@ export const colors = {
   black: '0, 0, 0'
 };
 
+export const layout = {
+  maxWidth: '40rem',
+  maxWidthSm: '30rem'
+};
+
 export const responsive = {
   sm: {
     min: 'min-width: 649px',
@@ -25,7 +30,7 @@ export const globalStyles = `
   @import url('https://fonts.googleapis.com/css?family=Raleway');
 
   html {
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
   }
 
@@ -38,6 +43,7 @@ export const globalStyles = `
     -moz-osx-font-smoothing: grayscale;
     font-size: 1rem;
     line-height: 1.5;
+    font-weight: 400;
   }
 
   button {
@@ -61,6 +67,16 @@ export const globalStyles = `
   a {
     text-decoration: none;
     color: inherit;
+    
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+  }
+  
+  h1, h2, h3, h4, h5 {
+      color: inherit;
+      font-weight: 400;
   }
 
   div#container {
@@ -76,5 +92,22 @@ export const globalStyles = `
     div#container {
       display: none;
     }
+  }
+  @media screen and (max-height: 700px) {
+    div#container {
+      &:before {
+        content: '';
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+      }
+    }
+  }
+  
+  .dimmed {
+      opacity: .5;
   }
 `;

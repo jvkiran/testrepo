@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import SubscribeForm from 'react-mailchimp-subscribe';
 import oceanLogo from './assets/ocean-logo.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
-import { colors, responsive } from './styles';
-import SubscribeForm from 'react-mailchimp-subscribe';
+import { colors, layout, responsive } from './styles';
+import { IconTwitter, IconFacebook } from './icons';
 
 const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
@@ -61,6 +62,8 @@ const StyledTagline = styled.h1`
   margin-bottom: 2rem;
   font-weight: 400;
   font-size: 1.5rem;
+  max-width: ${layout.maxWidth};
+  width: 100%;
   
   @media screen and (${responsive.sm.min}) {
     font-size: 1.75rem;
@@ -71,6 +74,9 @@ const StyledTagline = styled.h1`
 
 const StyledSubscribe = styled(SubscribeForm)`
   position: relative;
+  max-width: ${layout.maxWidthSm};
+  width: 100%;
+
   & div {
     display: flex;
     flex-wrap: wrap;
@@ -131,20 +137,73 @@ const StyledSubscribe = styled(SubscribeForm)`
     width: 100%;
     position: absolute;
     text-align: center;
+    margin-top: .25rem;
+  }
+`;
+
+const StyledLinks = styled.div`
+  margin-top: 2rem;
+  font-size: .9rem;
+  text-align: left;
+  width: 100%;
+  max-width: ${layout.maxWidthSm};
+  
+  @media screen and (${responsive.sm.min}) {
+      margin-top: 2vh;
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  & h2 {
+      font-size: .9rem;
+      margin-bottom: .1rem;
+  }
+  
+  & a {
+      display: inline-block;
+  }
+  
+  & .social-link {
+      padding-left: .75rem;
+      padding-right: .75rem;
+      margin-left: -.75rem;
+      
+  }
+  
+  & .icon {
+      width: 1rem;
+      height: 1rem;
+      fill: #fff;
+      margin-bottom: -.1rem;
+  }
+  
+  & .icon--twitter {
+      &:hover,
+      &:focus {
+          fill: #00b6f1;
+      }
+  }
+  
+  & .icon--facebook {
+      &:hover,
+      &:focus {
+          fill: #3b5998;
+      }
   }
 `;
 
 const StyledPoweredBy = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: .9rem;
   
   @media screen and (${responsive.sm.min}) {
-      margin-top: 7vh;
+      margin-top: 5vh;
       margin-bottom: 5vh;
   }
   & p {
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
   }
   & .logo {
       display: inline-block;
@@ -179,8 +238,25 @@ const App = () => (
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
       <StyledSubscribe {...formProps} />
+      <StyledLinks>
+          <div>
+              <h2 className="dimmed">Announcement</h2>
+              <a href="https://medium.com/oceanprotocol/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
+                From AI to Blockchain to Data: Meet Ocean
+              </a>
+          </div>
+          <div>
+              <h2 className="dimmed">Follow</h2>
+              <a className="social-link" href="https://twitter.com/oceanprotocol" title="Twitter">
+                  <IconTwitter />
+              </a>
+              <a className="social-link" href="https://facebook.com/oceanprotocol" title="Facebook">
+                <IconFacebook />
+              </a>
+          </div>
+      </StyledLinks>
       <StyledPoweredBy>
-        <p>Powered by</p>
+        <p className="dimmed">Powered by</p>
         <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
           <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
