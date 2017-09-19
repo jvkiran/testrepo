@@ -190,12 +190,6 @@ const StyledLinks = styled.div`
           fill: #3b5998;
       }
   }
-  
-  & .dimmed {
-      margin-right: .25rem;
-      text-decoration: none;
-      display: block;
-  }
 `;
 
 const StyledPoweredBy = styled.div`
