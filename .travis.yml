@@ -1,0 +1,24 @@
+language: node_js
+node_js: node
+
+# will run `npm install` automatically
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install python python-pip
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+script:
+  - npm run test
+  - npm run build
+
+after_success:
+  - npm run deploy
+
+notifications:
+    email: false
+
+cache:
+  directories:
+    - node_modules
