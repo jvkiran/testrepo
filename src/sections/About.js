@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import Section from '../components/Section';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
@@ -11,15 +10,13 @@ import DraftTwo from '../assets/drafts/draft-2.png';
 import DraftThree from '../assets/drafts/draft-3.png';
 import DraftFour from '../assets/drafts/draft-4.png';
 
-
-
 const About = () => (
   <Section id="About">
     <Title>Ocean is the protocol to unlock data</Title>
 
     <Row center left>
       <Cell width={2 / 3}>
-        <img style={{ width:'100%' }} src={DraftOne} />
+        <img style={{ width: '100%' }} src={DraftOne} alt="draft" />
       </Cell>
       <Cell width={1 / 3}>
         <SubTitle>A protocol to create data exchange marketplaces</SubTitle>
@@ -34,7 +31,7 @@ const About = () => (
 
     <Row center>
       <Cell width={1 / 3}>
-        <img style={{ width:'100%' }} src={DraftTwo} />
+        <img style={{ width: '100%' }} src={DraftTwo} alt="draft" />
       </Cell>
       <Cell width={2 / 3}>
         <SubTitle>The world’s data is growing exponentially yet is massively under-utilized</SubTitle>
@@ -49,7 +46,7 @@ const About = () => (
 
     <Row center left>
       <Cell width={1 / 3}>
-        <img style={{ width:'100%' }} src={DraftThree} />
+        <img style={{ width: '100%' }} src={DraftThree} alt="draft" />
       </Cell>
       <Cell width={2 / 3}>
         <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
@@ -63,7 +60,7 @@ const About = () => (
 
     <Row center>
       <Cell width={1 / 3}>
-        <img style={{ width:'100%' }} src={DraftFour} />
+        <img style={{ width: '100%' }} src={DraftFour} alt="draft" />
       </Cell>
       <Cell width={2 / 3}>
         <SubTitle>A free market for data allows AI to become democratic</SubTitle>
