@@ -3,9 +3,15 @@ export const colors = {
   black: '0, 0, 0'
 };
 
-export const layout = {
-  maxWidth: '40rem',
-  maxWidthSm: '30rem'
+export const transitions = {
+  short: 'all 0.1s ease-in-out',
+  base: 'all 0.2s ease-in-out',
+  long: 'all 0.3s ease-in-out'
+};
+
+export const gradient = {
+  red: 'linear-gradient(to right, #f54659, #e82177 71%, #ff485b)',
+  purple: 'linear-gradient(to bottom, #353145, #141127)'
 };
 
 export const responsive = {
@@ -15,18 +21,18 @@ export const responsive = {
   }
 };
 
-export const globalStyles = `  
+export const globalStyles = `
   html, body, #root, #router-root {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  
+
   * {
     box-sizing: border-box;
   }
-  
+
   @import url('https://fonts.googleapis.com/css?family=Raleway');
 
   html {
@@ -67,13 +73,13 @@ export const globalStyles = `
   a {
     text-decoration: none;
     color: inherit;
-    
+
     &:hover,
     &:focus {
         text-decoration: underline;
     }
   }
-  
+
   h1, h2, h3, h4, h5 {
       color: inherit;
       font-weight: 400;
@@ -106,7 +112,7 @@ export const globalStyles = `
       }
     }
   }
-  
+
   .dimmed {
       opacity: .5;
   }
