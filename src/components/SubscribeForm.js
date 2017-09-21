@@ -1,8 +1,83 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import jsonp from 'jsonp';
+import emailIcon from '../assets/email-icon.svg';
+import { colors, responsive, transitions } from '../styles';
 
-const getAjaxUrl = url => url.replace('/post?', '/post-json?');
+const StyledSubscribe = styled.div`
+  position: relative;
+  max-width: 34rem;
+  width: 100%;
+
+  & img {
+    position: absolute;
+    left: 1rem;
+    top: calc(50% - 0.5rem);
+    height: 0.9rem;
+  }
+
+  & div {
+    display: flex;
+    border-radius: 2px;
+    background: linear-gradient(to right, #b3b3b3, #909090);
+    border: 1px solid rgb(${colors.white});
+    @media screen and (${responsive.sm.max}) {
+      flex-wrap: wrap;
+    }
+  }
+  & input {
+    outline: none;
+    margin: 0;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    padding-left: 3rem;
+    background: rgb(${colors.black});
+    color: rgb(${colors.white});
+    border: none;
+    min-width: 18rem;
+    border-radius: 2px;
+    box-shadow: none;
+    transition: ${transitions.short};
+
+    @media screen and (${responsive.sm.max}) {
+      text-align: center;
+      width: 100%;
+      min-width: 0;
+    }
+
+    &:focus {
+      &::placeholder {
+        color: rgba(${colors.white}, 0.3);
+      }
+    }
+  }
+  & input::placeholder {
+    color: rgba(${colors.white}, 0.5);
+  }
+  & button {
+    color: rgb(${colors.white});
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    transition: ${transitions.short};
+    cursor: pointer;
+
+    @media screen and (hover: hover) {
+      &:hover,
+      &:focus {
+        opacity: 0.85;
+      }
+    }
+  }
+  & > form > p {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+`;
 
 class SubscribeForm extends React.Component {
   constructor(props, ...args) {
@@ -20,7 +95,9 @@ class SubscribeForm extends React.Component {
       });
       return;
     }
-    const url = getAjaxUrl(this.props.action) + `&EMAIL=${encodeURIComponent(this.input.value)}`;
+    const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(
+      this.input.value
+    )}`;
     this.setState(
       {
         status: 'sending',
@@ -54,11 +131,11 @@ class SubscribeForm extends React.Component {
     );
   };
   render() {
-    const { children, action, messages, className, style, styles } = this.props;
+    const { children, action, messages, styles, ...props } = this.props;
     const { status } = this.state;
     return (
-      <div className={className} style={style}>
-        {children}
+      <StyledSubscribe {...props}>
+        <img src={emailIcon} alt="email" />
         <form action={action} method="post" noValidate>
           <div>
             <input
@@ -81,13 +158,12 @@ class SubscribeForm extends React.Component {
           {status === 'success' && <p style={styles.success} dangerouslySetInnerHTML={{ __html: messages.success }} />}
           {status === 'error' && <p style={styles.error} dangerouslySetInnerHTML={{ __html: messages.error }} />}
         </form>
-      </div>
+      </StyledSubscribe>
     );
   }
 }
 
 SubscribeForm.propTypes = {
-  children: PropTypes.node,
   messages: PropTypes.object,
   styles: PropTypes.object
 };
@@ -95,25 +171,24 @@ SubscribeForm.propTypes = {
 SubscribeForm.defaultProps = {
   chidren: null,
   messages: {
-    inputPlaceholder: 'Votre email',
-    btnLabel: 'Envoyer',
-    sending: 'Envoi en cours...',
-    success:
-      "Merci de votre intérêt!<p>Nous devons confirmer votre adresse e-mail. Pour compléter le processus d'abonnement, veuillez cliquer sur le lien contenu dans l'e-mail que nous venons de vous envoyer.</p>",
-    error: "Oops, impossible d'enregistrer cette adresse"
+    inputPlaceholder: 'your@email.com',
+    btnLabel: 'Join our community',
+    sending: 'Sending...',
+    success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
+    error: 'Oops, something went wrong. Would you mind trying again?'
   },
   styles: {
     sending: {
-      fontSize: 18,
+      fontSize: '.7rem',
       color: 'auto'
     },
     success: {
-      fontSize: 18,
-      color: 'green'
+      fontSize: '.7rem',
+      color: 'auto'
     },
     error: {
-      fontSize: 18,
-      color: 'red'
+      fontSize: '.7rem',
+      color: 'auto'
     }
   }
 };
