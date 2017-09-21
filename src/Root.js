@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Welcome from './sections/Welcome';
 import About from './sections/About';
 import UseCases from './sections/UseCases';
+import Medium from './sections/Medium';
 import { colors } from './styles';
 
 const StyledRoot = styled.div`
@@ -10,7 +11,7 @@ const StyledRoot = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, ${colors.lightPurple}, transparent);
+  background: linear-gradient(to bottom, rgb(${colors.lightPurple}), transparent);
 `;
 
 const Root = () => (
@@ -18,6 +19,7 @@ const Root = () => (
     <Welcome />
     <About />
     <UseCases />
+    <Medium />
   </StyledRoot>
 );
 

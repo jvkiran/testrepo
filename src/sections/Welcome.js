@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SubscribeForm from '../components/SubscribeForm';
 import Section from '../components/Section';
+import Title from '../components/Title';
 import oceanLogo from '../assets/ocean-logo.svg';
 import buttonMedium from '../assets/button-medium.svg';
 import buttonTwitter from '../assets/button-twitter.svg';
@@ -9,19 +10,6 @@ import buttonSlack from '../assets/button-slack.svg';
 import bigchainDBLogo from '../assets/bigchain-db.svg';
 import dexLogo from '../assets/dex.svg';
 import { responsive, transitions } from '../styles';
-
-const StyledColumn = styled.div`
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 6rem 1rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  @media screen and (${responsive.sm.max}) {
-    padding: 2rem 1rem;
-  }
-`;
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -49,20 +37,7 @@ const StyledLogo = styled.div`
   }
 `;
 
-const StyledTitle = styled.h1`
-  font-size: 2.27rem;
-  margin-top: 5rem;
-  margin-bottom: 1.45rem;
-  font-weight: 600;
-
-  @media screen and (${responsive.sm.max}) {
-    font-size: 1.95rem;
-    margin-top: 2rem;
-    margin-bottom: 0.42rem;
-  }
-`;
-
-const StyledDescription = styled.p`
+const StyledIntro = styled.p`
   line-height: 2.13;
   font-size: 1rem;
   font-weight: 400;
@@ -135,57 +110,50 @@ const StyledPoweredBy = styled.div`
 
 const Welcome = () => (
   <Section id="Welcome" viewport>
-    <StyledColumn>
-      <StyledHeader>
-        <StyledLogo>
-          <img src={oceanLogo} alt="Ocean" />
-        </StyledLogo>
-        <StyledNav>
-          <a href="">What is Ocean?</a>
-          <a href="">Use Cases</a>
-          <a href="">Blog</a>
-          <a href="">Community & Team</a>
-        </StyledNav>
-      </StyledHeader>
-      <StyledTitle>A Decentralized Data Exchange Protocol</StyledTitle>
-      <StyledDescription>
-        Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-        consumers of valuable datasets, while providing open access for developers to build services.
-      </StyledDescription>
-      <StyledActions>
-        <SubscribeForm />
-        <StyledSocialLinks>
-          <a href="medium.com">
-            <img src={buttonMedium} alt="Medium" />
-          </a>
-          <a href="twitter.com">
-            <img src={buttonTwitter} alt="Twitter" />
-          </a>
-          <a href="slack.com">
-            <img src={buttonSlack} alt="Slack" />
-          </a>
-        </StyledSocialLinks>
-      </StyledActions>
-      <StyledPoweredBy>
-        <p className="dimmed">Powered by</p>
-        <a
-          className="logo"
-          href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <img src={bigchainDBLogo} alt="BigchainDB Logo" />
+    <StyledHeader>
+      <StyledLogo>
+        <img src={oceanLogo} alt="Ocean" />
+      </StyledLogo>
+      <StyledNav>
+        <a href="">What is Ocean?</a>
+        <a href="">Use Cases</a>
+        <a href="">Blog</a>
+        <a href="">Community & Team</a>
+      </StyledNav>
+    </StyledHeader>
+    <Title>A Decentralized Data Exchange Protocol</Title>
+    <StyledIntro>
+      Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
+      consumers of valuable datasets, while providing open access for developers to build services.
+    </StyledIntro>
+    <StyledActions>
+      <SubscribeForm />
+      <StyledSocialLinks>
+        <a href="medium.com">
+          <img src={buttonMedium} alt="Medium" />
         </a>
-        <a
+        <a href="twitter.com">
+          <img src={buttonTwitter} alt="Twitter" />
+        </a>
+        <a href="slack.com">
           className="logo"
         <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
-          target="_blank" // eslint-disable-line
+          <img src={buttonSlack} alt="Slack" />
           rel="noopener"
         >
           <img src={dexLogo} alt="Dex Logo" />
         </a>
-      </StyledPoweredBy>
-    </StyledColumn>
+      </StyledSocialLinks>
+    </StyledActions>
+    <StyledPoweredBy>
+      <p className="dimmed">Powered by</p>
+      <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener">
+        <img src={bigchainDBLogo} alt="BigchainDB Logo" />
+      </a>
+      <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
+        <img src={dexLogo} alt="Dex Logo" />
+      </a>
+    </StyledPoweredBy>
   </Section>
 );
 
