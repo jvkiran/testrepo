@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import SubscribeForm from 'react-mailchimp-subscribe';
+import SubscribeForm from './components/SubscribeForm';
 import oceanLogo from './assets/ocean-logo.svg';
+import emailIcon from './assets/email-icon.svg';
+import buttonMedium from './assets/button-medium.svg';
+import buttonTwitter from './assets/button-twitter.svg';
+import buttonSlack from './assets/button-slack.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, responsive, transitions } from './styles';
@@ -58,14 +62,15 @@ const StyledHeader = styled.div`
 `;
 
 const StyledNav = styled.nav`
-  display: flex;
   text-transform: uppercase;
   & a {
+    transition: ${transitions.short};
     margin: 0 18px;
   }
-  & a:hover {
+  & a:hover,
+  & a:focus {
     text-decoration: none;
-    opacity: 0.7;
+    transform: translate3d(0, -0.05rem, 0);
   }
 `;
 
@@ -101,15 +106,28 @@ const StyledDescription = styled.p`
   }
 `;
 
+const StyledActions = styled.div`
+  width: 100%;
+  display: flex;
+`;
+
 const StyledSubscribe = styled(SubscribeForm)`
   position: relative;
   max-width: 34rem;
   width: 100%;
 
+  & img {
+    position: absolute;
+    left: 1rem;
+    top: calc(50% - 0.5rem);
+    height: 0.9rem;
+  }
+
   & div {
     display: flex;
-    background: rgb(${colors.white});
-
+    border-radius: 2px;
+    background: linear-gradient(to right, #b3b3b3, #909090);
+    border: 1px solid rgb(${colors.white});
     @media screen and (${responsive.sm.max}) {
       flex-wrap: wrap;
     }
@@ -119,10 +137,12 @@ const StyledSubscribe = styled(SubscribeForm)`
     margin: 0;
     font-size: 1rem;
     padding: 0.75rem 1rem;
-    color: rgb(${colors.black});
-    background: transparent;
+    padding-left: 3rem;
+    background: rgb(${colors.black});
+    color: rgb(${colors.white});
     border: none;
     min-width: 18rem;
+    border-radius: 2px;
     box-shadow: none;
     transition: ${transitions.short};
 
@@ -134,20 +154,18 @@ const StyledSubscribe = styled(SubscribeForm)`
 
     &:focus {
       &::placeholder {
-        color: rgba(${colors.black}, 0.3);
+        color: rgba(${colors.white}, 0.3);
       }
     }
   }
   & input::placeholder {
-    color: rgba(${colors.black}, 0.5);
+    color: rgba(${colors.white}, 0.5);
   }
   & button {
     color: rgb(${colors.white});
-    background: rgb(${colors.black});
     font-size: 1rem;
     text-transform: uppercase;
     padding: 0.75rem 1rem;
-    margin: 0.15rem;
     width: 100%;
     transition: ${transitions.short};
     cursor: pointer;
@@ -164,6 +182,22 @@ const StyledSubscribe = styled(SubscribeForm)`
     position: absolute;
     text-align: center;
     margin-top: 0.25rem;
+  }
+`;
+
+const StyledSocialLinks = styled.div`
+  display: flex;
+  & a {
+    transition: ${transitions.short};
+    margin-left: 20px;
+  }
+  & a:hover,
+  & a:focus {
+    transform: translate3d(0, -0.05rem, 0);
+  }
+  & img {
+    width: calc(2.5rem + 4px);
+    height: calc(2.5rem + 4px);
   }
 `;
 
@@ -224,7 +258,22 @@ const App = () => (
         Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
         consumers of valuable datasets, while providing open access for developers to build services.
       </StyledDescription>
-      <StyledSubscribe {...formProps} />
+      <StyledActions>
+        <StyledSubscribe {...formProps}>
+          <img src={emailIcon} alt="email" />
+        </StyledSubscribe>
+        <StyledSocialLinks>
+          <a href="medium.com">
+            <img src={buttonMedium} alt="Medium" />
+          </a>
+          <a href="twitter.com">
+            <img src={buttonTwitter} alt="Twitter" />
+          </a>
+          <a href="slack.com">
+            <img src={buttonSlack} alt="Slack" />
+          </a>
+        </StyledSocialLinks>
+      </StyledActions>
       <StyledPoweredBy>
         <p className="dimmed">Powered by</p>
         <a
