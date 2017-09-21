@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import jsonp from 'jsonp';
 import emailIcon from '../assets/email-icon.svg';
+import Button from './Button';
 import { colors, responsive, transitions } from '../styles';
 
 const StyledSubscribe = styled.div`
@@ -15,13 +16,13 @@ const StyledSubscribe = styled.div`
     left: 1rem;
     top: calc(50% - 0.5rem);
     height: 0.9rem;
+    opacity: 0.7;
   }
 
   & div {
     display: flex;
     border-radius: 2px;
-    background: linear-gradient(to right, #b3b3b3, #909090);
-    border: 1px solid rgb(${colors.white});
+    background: linear-gradient(to right, rgb(${colors.red}), rgb(${colors.pink}) 71%, rgb(${colors.orange}));
     @media screen and (${responsive.sm.max}) {
       flex-wrap: wrap;
     }
@@ -31,8 +32,9 @@ const StyledSubscribe = styled.div`
     margin: 0;
     font-size: 1rem;
     padding: 0.75rem 1rem;
+    margin: 1px;
     padding-left: 3rem;
-    background: rgb(${colors.black});
+    background: rgb(${colors.fadedPurple});
     color: rgb(${colors.white});
     border: none;
     min-width: 18rem;
@@ -60,6 +62,7 @@ const StyledSubscribe = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     padding: 0.75rem 1rem;
+    background: transparent;
     width: 100%;
     transition: ${transitions.short};
     cursor: pointer;
@@ -146,13 +149,13 @@ class SubscribeForm extends React.Component {
               required={true}
               placeholder={messages.inputPlaceholder}
             />
-            <button
+            <Button
               disabled={this.state.status === 'sending' || this.state.status === 'success'}
               onClick={this.onSubmit}
               type="submit"
             >
               {messages.btnLabel}
-            </button>
+            </Button>
           </div>
           {status === 'sending' && <p style={styles.sending} dangerouslySetInnerHTML={{ __html: messages.sending }} />}
           {status === 'success' && <p style={styles.success} dangerouslySetInnerHTML={{ __html: messages.success }} />}
