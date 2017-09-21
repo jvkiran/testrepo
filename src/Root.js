@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Welcome from './sections/Welcome';
+import About from './sections/About';
 
 const StyledRoot = styled.div`
   width: 100%;
@@ -12,6 +13,7 @@ const StyledRoot = styled.div`
 const Root = () => (
   <StyledRoot>
     <Welcome />
+    <About />
   </StyledRoot>
 );
 
