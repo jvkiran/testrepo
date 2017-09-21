@@ -4,7 +4,7 @@ import SubscribeForm from 'react-mailchimp-subscribe';
 import oceanLogo from './assets/ocean-logo.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
-import { colors, layout, responsive } from './styles';
+import { colors, responsive, transitions } from './styles';
 
 const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
@@ -40,13 +40,33 @@ const StyledWrapper = styled.div`
 
 const StyledColumn = styled.div`
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 6rem 1rem;
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @media screen and (${responsive.sm.max}) {
+    padding: 2rem 1rem;
+  }
+`;
+
+const StyledHeader = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const StyledNav = styled.nav`
+  display: flex;
+  text-transform: uppercase;
+  & a {
+    margin: 0 18px;
+  }
+  & a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+  }
 `;
 
 const StyledLogo = styled.div`
@@ -57,33 +77,41 @@ const StyledLogo = styled.div`
 `;
 
 const StyledTagline = styled.h1`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  max-width: ${layout.maxWidth};
-  width: 100%;
+  font-size: 2.27rem;
+  margin-top: 5rem;
+  margin-bottom: 1.45rem;
+  font-weight: 600;
 
-  @media screen and (${responsive.sm.min}) {
-    font-size: 1.75rem;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+  @media screen and (${responsive.sm.max}) {
+    font-size: 1.95rem;
+    margin-top: 2rem;
+    margin-bottom: 0.42rem;
+  }
+`;
+
+const StyledDescription = styled.p`
+  line-height: 2.13;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 3rem;
+  @media screen and (${responsive.sm.max}) {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
   }
 `;
 
 const StyledSubscribe = styled(SubscribeForm)`
   position: relative;
-  max-width: ${layout.maxWidthSm};
+  max-width: 34rem;
   width: 100%;
 
   & div {
     display: flex;
-    flex-wrap: wrap;
     background: rgb(${colors.white});
-    border-radius: 0.5rem;
 
-    @media screen and (${responsive.sm.min}) {
-      flex-wrap: nowrap;
+    @media screen and (${responsive.sm.max}) {
+      flex-wrap: wrap;
     }
   }
   & input {
@@ -94,15 +122,14 @@ const StyledSubscribe = styled(SubscribeForm)`
     color: rgb(${colors.black});
     background: transparent;
     border: none;
+    min-width: 18rem;
     box-shadow: none;
-    text-align: center;
-    width: 100%;
-    transition: 0.15s ease-out;
+    transition: ${transitions.short};
 
-    @media screen and (${responsive.sm.min}) {
-      text-align: left;
-      width: auto;
-      min-width: 18rem;
+    @media screen and (${responsive.sm.max}) {
+      text-align: center;
+      width: 100%;
+      min-width: 0;
     }
 
     &:focus {
@@ -117,12 +144,12 @@ const StyledSubscribe = styled(SubscribeForm)`
   & button {
     color: rgb(${colors.white});
     background: rgb(${colors.black});
-    border-radius: 0.35rem;
-    font-size: 0.85rem;
+    font-size: 1rem;
+    text-transform: uppercase;
     padding: 0.75rem 1rem;
     margin: 0.15rem;
     width: 100%;
-    transition: 0.15s ease-out;
+    transition: ${transitions.short};
     cursor: pointer;
 
     @media screen and (hover: hover) {
@@ -141,13 +168,13 @@ const StyledSubscribe = styled(SubscribeForm)`
 `;
 
 const StyledPoweredBy = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   font-size: 0.9rem;
 
-  @media screen and (${responsive.sm.min}) {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+  @media screen and (${responsive.sm.max}) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   & p {
     margin: 0;
@@ -155,9 +182,8 @@ const StyledPoweredBy = styled.div`
   }
   & .logo {
     display: inline-block;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    transition: 0.15s ease-out;
+    margin-right: 2rem;
+    transition: ${transitions.short};
 
     &:hover,
     &:focus {
@@ -170,10 +196,10 @@ const StyledPoweredBy = styled.div`
     }
 
     img {
-      height: 1rem;
+      height: 1.5rem;
 
-      @media screen and (${responsive.sm.min}) {
-        height: 1.5rem;
+      @media screen and (${responsive.sm.max}) {
+        height: 1rem;
       }
     }
   }
@@ -182,10 +208,22 @@ const StyledPoweredBy = styled.div`
 const App = () => (
   <StyledWrapper>
     <StyledColumn>
-      <StyledLogo>
-        <img src={oceanLogo} alt="Ocean" />
-      </StyledLogo>
+      <StyledHeader>
+        <StyledLogo>
+          <img src={oceanLogo} alt="Ocean" />
+        </StyledLogo>
+        <StyledNav>
+          <a href="">What is Ocean?</a>
+          <a href="">Use Cases</a>
+          <a href="">Blog</a>
+          <a href="">Community & Team</a>
+        </StyledNav>
+      </StyledHeader>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
+      <StyledDescription>
+        Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
+        consumers of valuable datasets, while providing open access for developers to build services.
+      </StyledDescription>
       <StyledSubscribe {...formProps} />
       <StyledPoweredBy>
         <p className="dimmed">Powered by</p>
