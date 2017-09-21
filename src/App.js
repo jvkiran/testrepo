@@ -249,6 +249,9 @@ const App = () => (
           <a className="social-link" href="https://twitter.com/oceanprotocol" title="Twitter">
             <IconTwitter />
           </a>
+          <a className="social-link" href="https://facebook.com/oceanprotocol" title="Facebook">
+            <IconFacebook />
+          </a>
         </div>
       </StyledLinks>
       <StyledPoweredBy>
