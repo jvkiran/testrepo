@@ -51,8 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
-      renderer = new THREE.CanvasRenderer();
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer = new THREE.CanvasRenderer({ alpha: true });
+			renderer.setPixelRatio( window.devicePixelRatio );
+      renderer.setClearColor( 0xffffff, 0);
       renderer.setSize(window.innerWidth, window.innerHeight);
       container.appendChild(renderer.domElement);
       //
