@@ -64,7 +64,7 @@ const StyledTagline = styled.h1`
   font-size: 1.5rem;
   max-width: ${layout.maxWidth};
   width: 100%;
-  
+
   @media screen and (${responsive.sm.min}) {
     font-size: 1.75rem;
     margin-top: 5vh;
@@ -82,7 +82,7 @@ const StyledSubscribe = styled(SubscribeForm)`
     flex-wrap: wrap;
     background: rgb(${colors.white});
     border-radius: .5rem;
-    
+
     @media screen and (${responsive.sm.min}) {
         flex-wrap: nowrap;
     }
@@ -99,14 +99,14 @@ const StyledSubscribe = styled(SubscribeForm)`
     text-align: center;
     width: 100%;
     transition: .15s ease-out;
-    
+
     @media screen and (${responsive.sm.min}) {
         text-align: left;
         width: auto;
         min-width: 18rem;
     }
-    
-    &:focus {            
+
+    &:focus {
         &::placeholder {
             color: rgba(${colors.black}, .3);
         }
@@ -147,43 +147,43 @@ const StyledLinks = styled.div`
   text-align: left;
   width: 100%;
   max-width: ${layout.maxWidthSm};
-  
+
   @media screen and (${responsive.sm.min}) {
       margin-top: 2vh;
       display: flex;
       justify-content: space-between;
   }
-  
+
   & h2 {
       font-size: .9rem;
       margin-bottom: .1rem;
   }
-  
+
   & a {
       display: inline-block;
   }
-  
+
   & .social-link {
       padding-left: .75rem;
       padding-right: .75rem;
       margin-left: -.75rem;
-      
+
   }
-  
+
   & .icon {
       width: 1rem;
       height: 1rem;
       fill: #fff;
       margin-bottom: -.1rem;
   }
-  
+
   & .icon--twitter {
       &:hover,
       &:focus {
           fill: #00b6f1;
       }
   }
-  
+
   & .icon--facebook {
       &:hover,
       &:focus {
@@ -196,7 +196,7 @@ const StyledPoweredBy = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: .9rem;
-  
+
   @media screen and (${responsive.sm.min}) {
       margin-top: 5vh;
       margin-bottom: 5vh;
@@ -210,20 +210,20 @@ const StyledPoweredBy = styled.div`
       margin-right: 1rem;
       margin-left: 1rem;
       transition: .15s ease-out;
-      
+
       &:hover,
       &:focus {
           transform: translate3d(0, -.05rem, 0);
       }
-      
+
       &:active {
           transform: none;
           transition: none;
       }
-      
+
       img {
         height: 1rem;
-        
+
         @media screen and (${responsive.sm.min}) {
             height: 1.5rem;
         }
@@ -257,10 +257,10 @@ const App = () => (
       </StyledLinks>
       <StyledPoweredBy>
         <p className="dimmed">Powered by</p>
-        <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener noreferrer">
+        <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener">
           <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
-        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener noreferrer">
+        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
           <img src={dexLogo} alt="Dex Logo" />
         </a>
       </StyledPoweredBy>
