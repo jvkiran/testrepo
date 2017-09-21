@@ -23,13 +23,13 @@ const StyledColumn = styled.div`
 const StyledTitle = styled.h1`
   font-size: 2.27rem;
   margin-top: 5rem;
-  margin-bottom: 1.45rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 
   @media screen and (${responsive.sm.max}) {
     font-size: 1.95rem;
     margin-top: 2rem;
-    margin-bottom: 0.42rem;
+    margin-bottom: 0.33rem;
   }
 `;
 
@@ -55,6 +55,7 @@ const StyledRow = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  margin: 2rem 0;
   & div:first-child {
     order: ${({ left }) => (left ? 1 : 0)};
     padding-left: ${({ left }) => (left ? '20px' : 0)};
