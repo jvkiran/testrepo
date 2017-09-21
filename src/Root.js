@@ -4,6 +4,7 @@ import Welcome from './sections/Welcome';
 import About from './sections/About';
 import UseCases from './sections/UseCases';
 import Medium from './sections/Medium';
+import Team from './sections/Team';
 import { colors } from './styles';
 
 const StyledRoot = styled.div`
@@ -20,6 +21,7 @@ const Root = () => (
     <About />
     <UseCases />
     <Medium />
+    <Team />
   </StyledRoot>
 );
 

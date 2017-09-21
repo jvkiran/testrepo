@@ -4,8 +4,10 @@ export const colors = {
   darkPurple: '20, 17, 39',
   fadedPurple: '42, 38, 59',
   lightPurple: '53, 49, 69',
+  purple: '63, 19, 121',
   red: '245, 70, 89',
   pink: '232, 33, 119',
+  softPink: '218, 89, 119',
   orange: '255, 72, 91'
 };
 
@@ -92,7 +94,6 @@ export const globalStyles = `
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
     overflow: hidden;
   }
   @media screen and (${responsive.sm.max}) {
