@@ -134,7 +134,7 @@ const StyledPoweredBy = styled.div`
 `;
 
 const Welcome = () => (
-  <Section id="Welcome">
+  <Section id="Welcome" viewport>
     <StyledColumn>
       <StyledHeader>
         <StyledLogo>
