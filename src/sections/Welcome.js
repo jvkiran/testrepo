@@ -1,20 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import SubscribeForm from './components/SubscribeForm';
-import oceanLogo from './assets/ocean-logo.svg';
-import buttonMedium from './assets/button-medium.svg';
-import buttonTwitter from './assets/button-twitter.svg';
-import buttonSlack from './assets/button-slack.svg';
-import bigchainDBLogo from './assets/bigchain-db.svg';
-import dexLogo from './assets/dex.svg';
-import { responsive, transitions } from './styles';
-
-const StyledWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-`;
+import SubscribeForm from '../components/SubscribeForm';
+import Section from '../components/Section';
+import oceanLogo from '../assets/ocean-logo.svg';
+import buttonMedium from '../assets/button-medium.svg';
+import buttonTwitter from '../assets/button-twitter.svg';
+import buttonSlack from '../assets/button-slack.svg';
+import bigchainDBLogo from '../assets/bigchain-db.svg';
+import dexLogo from '../assets/dex.svg';
+import { responsive, transitions } from '../styles';
 
 const StyledColumn = styled.div`
   width: 100%;
@@ -139,8 +133,8 @@ const StyledPoweredBy = styled.div`
   }
 `;
 
-const App = () => (
-  <StyledWrapper>
+const Welcome = () => (
+  <Section id="Welcome">
     <StyledColumn>
       <StyledHeader>
         <StyledLogo>
@@ -192,7 +186,7 @@ const App = () => (
         </a>
       </StyledPoweredBy>
     </StyledColumn>
-  </StyledWrapper>
+  </Section>
 );
 
-export default App;
+export default Welcome;
