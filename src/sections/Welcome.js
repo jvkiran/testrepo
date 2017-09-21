@@ -49,7 +49,7 @@ const StyledLogo = styled.div`
   }
 `;
 
-const StyledTagline = styled.h1`
+const StyledTitle = styled.h1`
   font-size: 2.27rem;
   margin-top: 5rem;
   margin-bottom: 1.45rem;
@@ -147,7 +147,7 @@ const Welcome = () => (
           <a href="">Community & Team</a>
         </StyledNav>
       </StyledHeader>
-      <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
+      <StyledTitle>A Decentralized Data Exchange Protocol</StyledTitle>
       <StyledDescription>
         Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
         consumers of valuable datasets, while providing open access for developers to build services.
