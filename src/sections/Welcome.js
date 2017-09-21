@@ -178,7 +178,7 @@ const Welcome = () => (
         </a>
         <a
           className="logo"
-          href="https://www.dex.sg/"
+        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
           target="_blank" // eslint-disable-line
           rel="noopener"
         >
