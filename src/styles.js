@@ -1,17 +1,18 @@
 export const colors = {
   white: '255, 255, 255',
-  black: '0, 0, 0'
+  black: '0, 0, 0',
+  darkPurple: '20, 17, 39',
+  fadedPurple: '42, 38, 59',
+  lightPurple: '53, 49, 69',
+  red: '245, 70, 89',
+  pink: '232, 33, 119',
+  orange: '255, 72, 91'
 };
 
 export const transitions = {
   short: 'all 0.1s ease-in-out',
   base: 'all 0.2s ease-in-out',
   long: 'all 0.3s ease-in-out'
-};
-
-export const gradient = {
-  red: 'linear-gradient(to right, #f54659, #e82177 71%, #ff485b)',
-  purple: 'linear-gradient(to bottom, #353145, #141127)'
 };
 
 export const responsive = {
@@ -41,7 +42,7 @@ export const globalStyles = `
   }
 
   body {
-    background: rgb(${colors.black});
+    background: rgb(${colors.darkPurple});
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
     color: rgb(${colors.white});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

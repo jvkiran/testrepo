@@ -61,7 +61,7 @@ const StyledCell = styled.div`
 
 const StyledDraft = styled.img`width: 100%;`;
 
-const StyledButton = styled.div`
+const StyledTabButtons = styled.div`
   padding: 15px;
   font-size: 1rem;
   font-weight: 600;
@@ -70,7 +70,7 @@ const StyledButton = styled.div`
   text-align: left;
   margin-right: 20px;
   border-radius: 5px;
-  color: ${({ active }) => (active ? `rgb(${colors.black})` : `rgb(${colors.white})`)};
+  color: ${({ active }) => (active ? `rgb(${colors.fadedPurple})` : `rgb(${colors.white})`)};
   background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
   cursor: pointer;
   &:hover {
@@ -108,13 +108,13 @@ class UseCases extends Component {
 
         <StyledTabs>
           {Object.keys(tabs).map(tab => (
-            <StyledButton
+            <StyledTabButtons
               key={tab}
               active={this.state.activeTab === tab}
               onClick={() => this.setState({ activeTab: tab })}
             >
               {tab}
-            </StyledButton>
+            </StyledTabButtons>
           ))}
         </StyledTabs>
 
