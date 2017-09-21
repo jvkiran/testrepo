@@ -5,7 +5,6 @@ import oceanLogo from './assets/ocean-logo.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, layout, responsive } from './styles';
-import { IconTwitter } from './icons';
 
 const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
@@ -141,56 +140,6 @@ const StyledSubscribe = styled(SubscribeForm)`
   }
 `;
 
-const StyledLinks = styled.div`
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  text-align: left;
-  width: 100%;
-  max-width: ${layout.maxWidthSm};
-
-  @media screen and (${responsive.sm.min}) {
-    margin-top: 2vh;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  & h2 {
-    font-size: 0.9rem;
-    margin-bottom: 0.1rem;
-  }
-
-  & a {
-    display: inline-block;
-  }
-
-  & .social-link {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    margin-left: -0.75rem;
-  }
-
-  & .icon {
-    width: 1rem;
-    height: 1rem;
-    fill: #fff;
-    margin-bottom: -0.1rem;
-  }
-
-  & .icon--twitter {
-    &:hover,
-    &:focus {
-      fill: #00b6f1;
-    }
-  }
-
-  & .icon--facebook {
-    &:hover,
-    &:focus {
-      fill: #3b5998;
-    }
-  }
-`;
-
 const StyledPoweredBy = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -229,6 +178,7 @@ const StyledPoweredBy = styled.div`
     }
   }
 `;
+
 const App = () => (
   <StyledWrapper>
     <StyledColumn>
@@ -237,23 +187,6 @@ const App = () => (
       </StyledLogo>
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
       <StyledSubscribe {...formProps} />
-      <StyledLinks>
-        <div>
-          <h2 className="dimmed">Announcement</h2>
-          <a href="https://blog.oceanprotocol.com/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
-            From AI to Blockchain to Data: Meet Ocean
-          </a>
-        </div>
-        <div>
-          <h2 className="dimmed">Follow</h2>
-          <a className="social-link" href="https://twitter.com/oceanprotocol" title="Twitter">
-            <IconTwitter />
-          </a>
-          <a className="social-link" href="https://facebook.com/oceanprotocol" title="Facebook">
-            <IconFacebook />
-          </a>
-        </div>
-      </StyledLinks>
       <StyledPoweredBy>
         <p className="dimmed">Powered by</p>
         <a
