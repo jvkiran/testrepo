@@ -8,7 +8,7 @@ import { colors, responsive, transitions } from '../styles';
 
 const StyledSubscribe = styled.div`
   position: relative;
-  max-width: 34rem;
+  max-width: ${({ maxWidth }) => `${maxWidth}rem`};
   width: 100%;
 
   & img {
@@ -74,12 +74,15 @@ const StyledSubscribe = styled.div`
       }
     }
   }
-  & > form > p {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    margin-top: 0.25rem;
-  }
+`;
+
+const StyledMessage = styled.p`
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: auto;
 `;
 
 class SubscribeForm extends React.Component {
@@ -134,10 +137,10 @@ class SubscribeForm extends React.Component {
     );
   };
   render() {
-    const { children, action, messages, styles, ...props } = this.props;
+    const { maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, styles, ...props } = this.props;
     const { status } = this.state;
     return (
-      <StyledSubscribe {...props}>
+      <StyledSubscribe maxWidth={maxWidth} {...props}>
         <img src={emailIcon} alt="email" />
         <form action={action} method="post" noValidate>
           <div>
@@ -147,19 +150,19 @@ class SubscribeForm extends React.Component {
               defaultValue=""
               name="EMAIL"
               required={true}
-              placeholder={messages.inputPlaceholder}
+              placeholder={inputPlaceholder}
             />
             <Button
               disabled={this.state.status === 'sending' || this.state.status === 'success'}
               onClick={this.onSubmit}
               type="submit"
             >
-              {messages.btnLabel}
+              {btnLabel}
             </Button>
           </div>
-          {status === 'sending' && <p style={styles.sending} dangerouslySetInnerHTML={{ __html: messages.sending }} />}
-          {status === 'success' && <p style={styles.success} dangerouslySetInnerHTML={{ __html: messages.success }} />}
-          {status === 'error' && <p style={styles.error} dangerouslySetInnerHTML={{ __html: messages.error }} />}
+          {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
+          {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
+          {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: error }} />}
         </form>
       </StyledSubscribe>
     );
@@ -167,33 +170,21 @@ class SubscribeForm extends React.Component {
 }
 
 SubscribeForm.propTypes = {
-  messages: PropTypes.object,
-  styles: PropTypes.object
+  maxWidth: PropTypes.number,
+  inputPlaceholder: PropTypes.string,
+  btnLabel: PropTypes.string,
+  sending: PropTypes.string,
+  success: PropTypes.string,
+  error: PropTypes.string
 };
 
 SubscribeForm.defaultProps = {
-  chidren: null,
-  messages: {
-    inputPlaceholder: 'your@email.com',
-    btnLabel: 'Join our community',
-    sending: 'Sending...',
-    success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
-    error: 'Oops, something went wrong. Would you mind trying again?'
-  },
-  styles: {
-    sending: {
-      fontSize: '.7rem',
-      color: 'auto'
-    },
-    success: {
-      fontSize: '.7rem',
-      color: 'auto'
-    },
-    error: {
-      fontSize: '.7rem',
-      color: 'auto'
-    }
-  }
+  maxWidth: 34,
+  inputPlaceholder: 'your@email.com',
+  btnLabel: 'Join our community',
+  sending: 'Sending...',
+  success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
+  error: 'Oops, something went wrong. Would you mind trying again?'
 };
 
 export default SubscribeForm;
