@@ -147,10 +147,10 @@ const Welcome = () => (
     </StyledActions>
     <StyledPoweredBy>
       <p className="dimmed">Powered by</p>
-      <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener">
+      <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noreferrer noopener">
         <img src={bigchainDBLogo} alt="BigchainDB Logo" />
       </a>
-      <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
+      <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noreferrer noopener">
         <img src={dexLogo} alt="Dex Logo" />
       </a>
     </StyledPoweredBy>
