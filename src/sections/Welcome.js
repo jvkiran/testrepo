@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import smoothScroll from 'smoothscroll';
 import SubscribeForm from '../components/SubscribeForm';
 import Section from '../components/Section';
 import Title from '../components/Title';
@@ -19,14 +20,10 @@ const StyledHeader = styled.div`
 
 const StyledNav = styled.nav`
   text-transform: uppercase;
+  text-align: right;
   & a {
-    transition: ${transitions.short};
-    margin: 0 18px;
-  }
-  & a:hover,
-  & a:focus {
-    text-decoration: none;
-    transform: translate3d(0, -0.05rem, 0);
+    display: inline-block;
+    margin-right: 20px;
   }
 `;
 
@@ -34,6 +31,19 @@ const StyledLogo = styled.div`
   & img {
     width: 89px;
     height: 123px;
+  }
+`;
+
+const StyledTagline = styled(Title)`
+  font-size: 2.27rem;
+  margin-top: 5rem;
+  margin-bottom: 1.45rem;
+  font-weight: 600;
+
+  @media screen and (${responsive.sm.max}) {
+    font-size: 1.95rem;
+    margin-top: 2rem;
+    margin-bottom: 0.42rem;
   }
 `;
 
@@ -71,8 +81,8 @@ const StyledSocialLinks = styled.div`
 `;
 
 const StyledPoweredBy = styled.div`
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   font-size: 0.9rem;
 
   @media screen and (${responsive.sm.max}) {
@@ -83,20 +93,9 @@ const StyledPoweredBy = styled.div`
     margin: 0;
     margin-bottom: 0.75rem;
   }
-  & .logo {
+  & a {
     display: inline-block;
     margin-right: 2rem;
-    transition: ${transitions.short};
-
-    &:hover,
-    &:focus {
-      transform: translate3d(0, -0.05rem, 0);
-    }
-
-    &:active {
-      transform: none;
-      transition: none;
-    }
 
     img {
       height: 1.5rem;
@@ -111,17 +110,27 @@ const StyledPoweredBy = styled.div`
 const Welcome = () => (
   <Section id="Welcome" viewport>
     <StyledHeader>
-      <StyledLogo>
-        <img src={oceanLogo} alt="Ocean" />
-      </StyledLogo>
+      <a href="/">
+        <StyledLogo>
+          <img src={oceanLogo} alt="Ocean" />
+        </StyledLogo>
+      </a>
       <StyledNav>
-        <a href="">What is Ocean?</a>
-        <a href="">Use Cases</a>
-        <a href="">Blog</a>
-        <a href="">Community & Team</a>
+        <a onClick={smoothScroll} href="#About">
+          What is Ocean?
+        </a>
+        <a onClick={smoothScroll} href="#UseCases">
+          Use Cases
+        </a>
+        <a onClick={smoothScroll} href="#Medium">
+          Blog
+        </a>
+        <a onClick={smoothScroll} href="#Team">
+          Community & Team
+        </a>
       </StyledNav>
     </StyledHeader>
-    <Title>A Decentralized Data Exchange Protocol</Title>
+    <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
     <StyledIntro>
       Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
       consumers of valuable datasets, while providing open access for developers to build services.
@@ -146,11 +155,11 @@ const Welcome = () => (
       </StyledSocialLinks>
     </StyledActions>
     <StyledPoweredBy>
-      <p className="dimmed">Powered by</p>
-      <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noreferrer noopener">
+      <p>Powered by</p>
+      <a href="https://www.bigchaindb.com/" target="_blank" rel="noreferrer noopener">
         <img src={bigchainDBLogo} alt="BigchainDB Logo" />
       </a>
-      <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noreferrer noopener">
+      <a href="https://www.dex.sg/" target="_blank" rel="noreferrer noopener">
         <img src={dexLogo} alt="Dex Logo" />
       </a>
     </StyledPoweredBy>

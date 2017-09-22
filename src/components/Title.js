@@ -3,14 +3,12 @@ import { responsive } from '../styles';
 
 const Title = styled.h1`
   font-size: 2.27rem;
-  margin-top: 5rem;
-  margin-bottom: 1.45rem;
+  margin: 1rem 0;
   font-weight: 600;
 
   @media screen and (${responsive.sm.max}) {
     font-size: 1.95rem;
-    margin-top: 2rem;
-    margin-bottom: 0.42rem;
+    margin: 0.33rem 0;
   }
 `;
 
