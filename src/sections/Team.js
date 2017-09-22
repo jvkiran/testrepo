@@ -177,8 +177,8 @@ const Team = () => (
                   {!!member.linkedin && (
                     <StyledIcon
                       href={`https://www.linkedin.com/in/${member.linkedin}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
+                      target="_blank" //eslint-disable-line
+                      rel="noopener"
                     >
                       <img src={buttonLinkedIn} alt="linkedin" />
                     </StyledIcon>
@@ -186,8 +186,8 @@ const Team = () => (
                   {!!member.twitter && (
                     <StyledIcon
                       href={`https://www.twitter.com/${member.twitter}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
+                      target="_blank" //eslint-disable-line
+                      rel="noopener"
                     >
                       <img src={buttonTwitter} alt="twitter" />
                     </StyledIcon>
@@ -200,25 +200,49 @@ const Team = () => (
         ))}
       </StyledTeam>
       <StyledCompanies>
-        <StyledCompanyLogo href="https://www.bigchaindb.com/" target="_blank" rel="noreferrer noopener">
+        <StyledCompanyLogo
+          href="https://www.bigchaindb.com/"
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <img src={bigchainDBLogo} alt="BigchainDB" />
         </StyledCompanyLogo>
-        <StyledCompanyLogo href="https://www.dex.sg/" target="_blank" rel="noreferrer noopener">
+        <StyledCompanyLogo
+          href="https://www.dex.sg/"
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <img src={dexLogo} alt="Dex" />
         </StyledCompanyLogo>
-        <StyledCompanyLogo href="https://ipdb.foundation/" target="_blank" rel="noreferrer noopener">
+        <StyledCompanyLogo
+          href="https://ipdb.foundation/"
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <img src={IPDBLogo} alt="IPDB" />
         </StyledCompanyLogo>
       </StyledCompanies>
       <StyledLine />
       <StyledActions>
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <a
+          href=""
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <StyledButton>I have data</StyledButton>
         </a>
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <a
+          href=""
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <StyledButton>Join the community</StyledButton>
         </a>
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <a
+          href=""
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <StyledButton>I want data</StyledButton>
         </a>
       </StyledActions>
