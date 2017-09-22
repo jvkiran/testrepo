@@ -140,10 +140,18 @@ const Welcome = () => (
     </StyledActions>
     <StyledPoweredBy>
       <p>Powered by</p>
-      <a href="https://www.bigchaindb.com/" target="_blank" rel="noreferrer noopener">
+      <a
+        href="https://www.bigchaindb.com/"
+        target="_blank" // eslint-disable-line
+        rel="noopener"
+      >
         <img src={bigchainDBLogo} alt="BigchainDB Logo" />
       </a>
-      <a href="https://www.dex.sg/" target="_blank" rel="noreferrer noopener">
+      <a
+        href="https://www.dex.sg/"
+        target="_blank" // eslint-disable-line
+        rel="noopener"
+      >
         <img src={dexLogo} alt="Dex Logo" />
       </a>
     </StyledPoweredBy>
