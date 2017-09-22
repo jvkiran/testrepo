@@ -1,6 +1,7 @@
 export const colors = {
   white: '255, 255, 255',
   black: '0, 0, 0',
+  dark: '48, 48, 48',
   darkPurple: '20, 17, 39',
   fadedPurple: '42, 38, 59',
   lightPurple: '53, 49, 69',
@@ -76,12 +77,21 @@ export const globalStyles = `
   a {
     text-decoration: none;
     color: inherit;
-
-    &:hover,
-    &:focus {
-        text-decoration: underline;
-    }
+    transition: ${transitions.short};
   }
+
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    transform: translate3d(0, -0.05rem, 0);
+  }
+
+  a:active {
+    text-decoration: none;
+    transform: none;
+    transition: none;
+  }
+
 
   h1, h2, h3, h4, h5 {
       color: inherit;
@@ -92,6 +102,7 @@ export const globalStyles = `
     position: absolute;
     top: 10vh;
     bottom: 0;
+    z-index: -1;
     left: 0;
     right: 0;
     overflow: hidden;
