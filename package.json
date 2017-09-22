@@ -27,9 +27,6 @@
     "eslint-plugin-react": "^7.3.0"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "rules": {
-      "react/jsx-no-target-blank": 0
-    }
+    "extends": "react-app"
   }
 }
