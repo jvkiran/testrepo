@@ -81,55 +81,55 @@ const StyledSubscribe = styled(SubscribeForm)`
     display: flex;
     flex-wrap: wrap;
     background: rgb(${colors.white});
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 
     @media screen and (${responsive.sm.min}) {
-        flex-wrap: nowrap;
+      flex-wrap: nowrap;
     }
   }
   & input {
     outline: none;
     margin: 0;
     font-size: 1rem;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
     color: rgb(${colors.black});
     background: transparent;
     border: none;
     box-shadow: none;
     text-align: center;
     width: 100%;
-    transition: .15s ease-out;
+    transition: 0.15s ease-out;
 
     @media screen and (${responsive.sm.min}) {
-        text-align: left;
-        width: auto;
-        min-width: 18rem;
+      text-align: left;
+      width: auto;
+      min-width: 18rem;
     }
 
     &:focus {
-        &::placeholder {
-            color: rgba(${colors.black}, .3);
-        }
+      &::placeholder {
+        color: rgba(${colors.black}, 0.3);
+      }
     }
   }
   & input::placeholder {
-    color: rgba(${colors.black}, .5);
+    color: rgba(${colors.black}, 0.5);
   }
   & button {
     color: rgb(${colors.white});
     background: rgb(${colors.black});
-    border-radius: .35rem;
-    font-size: .85rem;
-    padding: .75rem 1rem;
-    margin: .15rem;
+    border-radius: 0.35rem;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    margin: 0.15rem;
     width: 100%;
-    transition: .15s ease-out;
+    transition: 0.15s ease-out;
     cursor: pointer;
 
     @media screen and (hover: hover) {
       &:hover,
       &:focus {
-        opacity: .85;
+        opacity: 0.85;
       }
     }
   }
@@ -137,97 +137,96 @@ const StyledSubscribe = styled(SubscribeForm)`
     width: 100%;
     position: absolute;
     text-align: center;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
   }
 `;
 
 const StyledLinks = styled.div`
   margin-top: 2rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-align: left;
   width: 100%;
   max-width: ${layout.maxWidthSm};
 
   @media screen and (${responsive.sm.min}) {
-      margin-top: 2vh;
-      display: flex;
-      justify-content: space-between;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-between;
   }
 
   & h2 {
-      font-size: .9rem;
-      margin-bottom: .1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
   }
 
   & a {
-      display: inline-block;
+    display: inline-block;
   }
 
   & .social-link {
-      padding-left: .75rem;
-      padding-right: .75rem;
-      margin-left: -.75rem;
-
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-left: -0.75rem;
   }
 
   & .icon {
-      width: 1rem;
-      height: 1rem;
-      fill: #fff;
-      margin-bottom: -.1rem;
+    width: 1rem;
+    height: 1rem;
+    fill: #fff;
+    margin-bottom: -0.1rem;
   }
 
   & .icon--twitter {
-      &:hover,
-      &:focus {
-          fill: #00b6f1;
-      }
+    &:hover,
+    &:focus {
+      fill: #00b6f1;
+    }
   }
 
   & .icon--facebook {
-      &:hover,
-      &:focus {
-          fill: #3b5998;
-      }
+    &:hover,
+    &:focus {
+      fill: #3b5998;
+    }
   }
 `;
 
 const StyledPoweredBy = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
 
   @media screen and (${responsive.sm.min}) {
-      margin-top: 5vh;
-      margin-bottom: 5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
   }
   & p {
     margin: 0;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
   & .logo {
-      display: inline-block;
-      margin-right: 1rem;
-      margin-left: 1rem;
-      transition: .15s ease-out;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    transition: 0.15s ease-out;
 
-      &:hover,
-      &:focus {
-          transform: translate3d(0, -.05rem, 0);
+    &:hover,
+    &:focus {
+      transform: translate3d(0, -0.05rem, 0);
+    }
+
+    &:active {
+      transform: none;
+      transition: none;
+    }
+
+    img {
+      height: 1rem;
+
+      @media screen and (${responsive.sm.min}) {
+        height: 1.5rem;
       }
-
-      &:active {
-          transform: none;
-          transition: none;
-      }
-
-      img {
-        height: 1rem;
-
-        @media screen and (${responsive.sm.min}) {
-            height: 1.5rem;
-        }
-      }
+    }
   }
 `;
 const App = () => (
@@ -239,28 +238,38 @@ const App = () => (
       <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
       <StyledSubscribe {...formProps} />
       <StyledLinks>
-          <div>
-              <h2 className="dimmed">Announcement</h2>
-              <a href="https://medium.com/oceanprotocol/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
-                From AI to Blockchain to Data: Meet Ocean
-              </a>
-          </div>
-          <div>
-              <h2 className="dimmed">Follow</h2>
-              <a className="social-link" href="https://twitter.com/oceanprotocol" title="Twitter">
-                  <IconTwitter />
-              </a>
-              <a className="social-link" href="https://facebook.com/oceanprotocol" title="Facebook">
-                <IconFacebook />
-              </a>
-          </div>
+        <div>
+          <h2 className="dimmed">Announcement</h2>
+          <a href="https://medium.com/oceanprotocol/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
+            From AI to Blockchain to Data: Meet Ocean
+          </a>
+        </div>
+        <div>
+          <h2 className="dimmed">Follow</h2>
+          <a className="social-link" href="https://twitter.com/oceanprotocol" title="Twitter">
+            <IconTwitter />
+          </a>
+          <a className="social-link" href="https://facebook.com/oceanprotocol" title="Facebook">
+            <IconFacebook />
+          </a>
+        </div>
       </StyledLinks>
       <StyledPoweredBy>
         <p className="dimmed">Powered by</p>
-        <a className="logo" href="https://www.bigchaindb.com/" target="_blank" rel="noopener">
+        <a
+          className="logo"
+          href="https://www.bigchaindb.com/"
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
-        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
+        <a
+          className="logo"
+          href="https://www.dex.sg/"
+          target="_blank" // eslint-disable-line
+          rel="noopener"
+        >
           <img src={dexLogo} alt="Dex Logo" />
         </a>
       </StyledPoweredBy>
