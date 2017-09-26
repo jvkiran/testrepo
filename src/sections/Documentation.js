@@ -34,7 +34,12 @@ const StyledSubTitle = styled.h4`
   }
 `;
 
-const StyledAbstract = styled.div`margin-top: 1rem;`;
+const StyledAbstract = styled.div`
+  margin-top: 1rem;
+  @media screen and (${responsive.sm.max}) {
+    order: -1;
+  }
+`;
 
 class Documentation extends Component {
   state = {
