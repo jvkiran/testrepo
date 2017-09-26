@@ -26,6 +26,15 @@ const StyledNav = styled.nav`
     display: inline-block;
     margin-right: 20px;
   }
+
+  @media screen and (${responsive.sm.max}) {
+    display: flex;
+    flex-direction: column;
+    & a {
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+  }
 `;
 
 const StyledLogo = styled.div`
@@ -51,6 +60,9 @@ const StyledTagline = styled(Title)`
 const StyledActions = styled.div`
   width: 100%;
   display: flex;
+  @media screen and (${responsive.sm.max}) {
+    flex-direction: column;
+  }
 `;
 
 const StyledSocialLinks = styled.div`
@@ -61,6 +73,13 @@ const StyledSocialLinks = styled.div`
   & img {
     width: calc(2.5rem + 4px);
     height: calc(2.5rem + 4px);
+  }
+  @media screen and (${responsive.sm.max}) {
+    margin-top: 1.25rem;
+    & a {
+      margin-left: 0;
+      margin-right: 20px;
+    }
   }
 `;
 

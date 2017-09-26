@@ -8,11 +8,10 @@ import Row from '../components/Row';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
-import { colors } from '../styles';
+import { colors, responsive } from '../styles';
 
 const StyledTabButtons = styled(Button)`
   border-radius: 5px;
-  padding: 15px;
   margin-right: 20px;
   color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
   background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
@@ -25,6 +24,10 @@ const StyledTabButtons = styled(Button)`
 const StyledTabs = styled.div`
   display: flex;
   margin-top: 1rem;
+  @media screen and (${responsive.sm.max}) {
+    margin: 0;
+    flex-direction: column;
+  }
 `;
 
 class UseCases extends Component {

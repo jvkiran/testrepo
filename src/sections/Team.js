@@ -39,7 +39,7 @@ const StyledTeam = styled.div`
 const StyledMember = styled.div`
   position: relative;
   margin: 0.5rem 0;
-  width: 10%;
+  width: calc(100% / 10);
   &:hover > div {
     opacity: 1;
     pointer-events: auto;
@@ -50,6 +50,12 @@ const StyledMember = styled.div`
     border-radius: 2px;
     width: 5.5rem;
     height: 5.5rem;
+  }
+  @media screen and (${responsive.lg.max}) {
+    width: calc(100% / 6);
+  }
+  @media screen and (${responsive.sm.max}) {
+    width: calc(100% / 5);
   }
 `;
 

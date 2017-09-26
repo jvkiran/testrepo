@@ -24,6 +24,14 @@ export const responsive = {
   sm: {
     min: 'min-width: 649px',
     max: 'max-width: 640px'
+  },
+  md: {
+    min: 'min-width: 799px',
+    max: 'max-width: 800px'
+  },
+  lg: {
+    min: 'min-width: 1023px',
+    max: 'max-width: 1024px'
   }
 };
 

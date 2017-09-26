@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { responsive } from '../styles';
 
 const Row = styled.div`
   width: 100%;
@@ -14,6 +15,17 @@ const Row = styled.div`
   }
   & > div:nth-child(2) {
     padding-left: ${({ left }) => (left ? 0 : '20px')};
+  }
+  @media screen and (${responsive.sm.max}) {
+    flex-direction: column;
+    & > div:first-child {
+      order: 0;
+      padding-left: 0;
+    }
+    & > div:nth-child(2) {
+      order: 1;
+      padding-left: 0;
+    }
   }
 `;
 

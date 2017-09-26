@@ -14,8 +14,8 @@ const StyledSubscribe = styled.div`
   & img {
     position: absolute;
     left: 1rem;
-    top: calc(50% - 0.5rem);
-    height: 0.9rem;
+    top: 1rem;
+    height: 1rem;
     opacity: 0.7;
   }
 
