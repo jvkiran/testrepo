@@ -5,7 +5,7 @@ import oceanLogo from './assets/ocean-logo.svg';
 import bigchainDBLogo from './assets/bigchain-db.svg';
 import dexLogo from './assets/dex.svg';
 import { colors, layout, responsive } from './styles';
-import { IconTwitter, IconFacebook } from './icons';
+import { IconTwitter } from './icons';
 
 const formProps = {
   action: '//oceanprotocol.us16.list-manage.com/subscribe/post?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71',
