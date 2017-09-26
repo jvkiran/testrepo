@@ -92,7 +92,7 @@ const StyledPoweredBy = styled.div`
 `;
 
 const Welcome = () => (
-  <Section id="Welcome" viewport>
+  <Section id="Welcome" viewport shadow>
     <StyledHeader>
       <a href="/">
         <StyledLogo>
@@ -106,8 +106,8 @@ const Welcome = () => (
         <a onClick={smoothScroll} href="#UseCases">
           Use Cases
         </a>
-        <a onClick={smoothScroll} href="#Medium">
-          Blog
+        <a onClick={smoothScroll} href="#Documentation">
+          Documentation
         </a>
         <a onClick={smoothScroll} href="#Team">
           Community & Team

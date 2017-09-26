@@ -3,22 +3,18 @@ import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Description from '../components/Description';
+import Button from '../components/Button';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
 import { colors } from '../styles';
 
-const StyledTabButtons = styled.div`
-  padding: 15px;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.38;
-  text-transform: uppercase;
-  text-align: left;
-  margin-right: 20px;
+const StyledTabButtons = styled(Button)`
   border-radius: 5px;
-  color: ${({ active }) => (active ? `rgb(${colors.fadedPurple})` : `rgb(${colors.white})`)};
+  padding: 15px;
+  margin-right: 20px;
+  color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
   background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
   cursor: pointer;
   &:hover {
@@ -36,7 +32,7 @@ class UseCases extends Component {
     activeTab: 'autonomous vehicles'
   };
   render = () => (
-    <Section id="UseCases" background={`rgba(${colors.white}, 0.1)`} minHeight={700}>
+    <Section id="UseCases" background={colors.lightGrey} minHeight={700} shadow>
       <Title>Use Cases</Title>
 
       <StyledTabs>

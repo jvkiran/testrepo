@@ -3,8 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   if (!('ontouchstart' in window && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 800)) {
     var SEPARATION = 100,
-        AMOUNTX = 100,
-        AMOUNTY = 70;
+      AMOUNTX = 100,
+      AMOUNTY = 70;
     var camera, scene, renderer;
 
     var container;
@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var show = window.innerWidth >= 640 && window.innerHeight >= 600;
 
     var particles,
-        particle,
-        count = 0;
+      particle,
+      count = 0;
 
     init();
     animate();
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       camera.position.z = 10000;
 
       scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x121212);
 
       particles = [];
 
@@ -51,9 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
-      renderer = new THREE.CanvasRenderer({ alpha: true });
-			renderer.setPixelRatio( window.devicePixelRatio );
-      renderer.setClearColor( 0xffffff, 0);
+      renderer = new THREE.CanvasRenderer();
+      renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(window.innerWidth, window.innerHeight);
       container.appendChild(renderer.domElement);
       //

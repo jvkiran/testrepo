@@ -22,7 +22,7 @@ const StyledSubscribe = styled.div`
   & div {
     display: flex;
     border-radius: 2px;
-    background: linear-gradient(to right, rgb(${colors.red}), rgb(${colors.pink}) 71%, rgb(${colors.orange}));
+    background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
     @media screen and (${responsive.sm.max}) {
       flex-wrap: wrap;
     }
@@ -34,7 +34,7 @@ const StyledSubscribe = styled.div`
     padding: 0.75rem 1rem;
     margin: 1px;
     padding-left: 3rem;
-    background: rgb(${colors.fadedPurple});
+    background: rgb(${colors.darkBackground});
     color: rgb(${colors.white});
     border: none;
     min-width: 18rem;
@@ -61,6 +61,7 @@ const StyledSubscribe = styled.div`
     color: rgb(${colors.white});
     font-size: 1rem;
     text-transform: uppercase;
+    margin: 0;
     padding: 0.75rem 1rem;
     background: transparent;
     width: 100%;

@@ -4,7 +4,22 @@ import styled from 'styled-components';
 import { colors } from '../styles';
 
 const StyledButton = styled.button`
-  background: linear-gradient(to right, rgb(${colors.red}), rgb(${colors.pink}) 71%, rgb(${colors.orange}));
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: block;
+  width: fit-content;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.38;
+  text-transform: uppercase;
+  margin: 20px 0;
+  border-radius: 2px;
+  color: rgb(${colors.white});
+  background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
 `;
 
 const Button = ({ children, ...props }) => <StyledButton {...props}>{children}</StyledButton>;
