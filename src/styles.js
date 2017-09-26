@@ -2,13 +2,15 @@ export const colors = {
   white: '255, 255, 255',
   black: '0, 0, 0',
   dark: '48, 48, 48',
+  grey: '38, 41, 45',
+  lightGrey: '53, 58, 64',
+  darkGrey: '23, 25, 26',
+  darkBackground: '18, 18, 18',
   darkPurple: '20, 17, 39',
-  fadedPurple: '42, 38, 59',
-  lightPurple: '53, 49, 69',
-  purple: '63, 19, 121',
-  red: '245, 70, 89',
-  pink: '232, 33, 119',
+  purple: '123, 17, 115',
+  pink: '246, 56, 138',
   softPink: '218, 89, 119',
+  red: '245, 70, 89',
   orange: '255, 72, 91'
 };
 
@@ -45,7 +47,7 @@ export const globalStyles = `
   }
 
   body {
-    background: rgb(${colors.darkPurple});
+    background: rgb(${colors.grey});
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
     color: rgb(${colors.white});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -96,6 +98,16 @@ export const globalStyles = `
   h1, h2, h3, h4, h5 {
       color: inherit;
       font-weight: 400;
+  }
+
+  div#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(${colors.darkBackground});
+    z-index: -2;
   }
 
   div#container {

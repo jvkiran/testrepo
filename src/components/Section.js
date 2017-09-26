@@ -5,10 +5,11 @@ import { responsive } from '../styles';
 
 const StyledSection = styled.div`
   width: 100%;
-  background: ${({ background }) => background};
+  background: ${({ background }) => (background ? `rgb(${background})` : 'none')};
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
   margin: 0;
   padding: 0;
+  box-shadow: ${({ shadow }) => (shadow ? '4px 4px 34px 8px rgba(0, 0, 0, 0.5)' : 'none')};
 `;
 
 const StyledColumn = styled.div`
@@ -38,7 +39,7 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
-  background: 'none',
+  background: '',
   minHeight: 0,
   viewport: false
 };

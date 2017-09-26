@@ -152,11 +152,7 @@ const StyledButton = styled.button`
 `;
 
 const Team = () => (
-  <Section
-    id="Team"
-    minHeight={900}
-    background={`linear-gradient(153deg, rgb(${colors.purple}), rgb(${colors.softPink}))`}
-  >
+  <Section id="Team" background={colors.darkGrey} minHeight={900} shadow>
     <StyledWrapper>
       <Title>The People Building The Ocean Protocol</Title>
       <StyledLine />

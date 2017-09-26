@@ -1,0 +1,16 @@
+{
+  "technical whitepaper": {
+    "download": "https://google.com",
+    "abstract":
+      "This paper presents a decentralized data marketplace protocol and network called Ocean, on which data marketplaces can be built. The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves. "
+  },
+  "one pager": {
+    "download": "https://google.com",
+    "abstract":
+      "There will be text here I promise, there is always some text here. Sure we could put some Lorem Ipsum but thats so 2000s lets make the difference and break the pattern, ok enough back to work"
+  },
+  "manifesto": {
+    "download": "https://google.com",
+    "abstract": "Thought I was done? Never!"
+  }
+}

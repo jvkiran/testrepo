@@ -3,17 +3,15 @@ import styled from 'styled-components';
 import Welcome from './sections/Welcome';
 import About from './sections/About';
 import UseCases from './sections/UseCases';
-import Medium from './sections/Medium';
+import Documentation from './sections/Documentation';
 import Team from './sections/Team';
 import Footer from './sections/Footer';
-import { colors } from './styles';
 
 const StyledRoot = styled.div`
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, rgb(${colors.lightPurple}), transparent);
 `;
 
 const Root = () => (
@@ -21,7 +19,7 @@ const Root = () => (
     <Welcome />
     <About />
     <UseCases />
-    <Medium />
+    <Documentation />
     <Team />
     <Footer />
   </StyledRoot>
