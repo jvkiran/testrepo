@@ -7,7 +7,7 @@ import Button from '../components/Button';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
 import downloads from '../data/downloads.json';
-import { colors, responsive } from '../styles';
+import { colors } from '../styles';
 
 const STab = styled(Button)`
   color: ${({ active }) => (active ? `rgb(${colors.white})` : `rgb(${colors.dark})`)};
