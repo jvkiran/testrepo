@@ -99,6 +99,13 @@ const Welcome = () => (
         <a onClick={smoothScroll} href="#Documentation">
           Documentation
         </a>
+        <a
+          href="https://blog.oceanprotocol.com/"
+          target="_blank" //eslint-disable-line
+          rel="noopener"
+        >
+          Blog
+        </a>
         <a onClick={smoothScroll} href="#Team">
           Community & Team
         </a>
