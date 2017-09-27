@@ -1,20 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import smoothScroll from 'smoothscroll';
-import SubscribeForm from '../components/SubscribeForm';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
-import oceanLogo from '../assets/ocean-logo.svg';
-import buttonMedium from '../assets/button-medium.svg';
-import buttonTwitter from '../assets/button-twitter.svg';
-import buttonSlack from '../assets/button-slack.svg';
+import oceanLogo from '../assets/logos/ocean-logo.svg';
+import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
+import dexLogo from '../assets/logos/dex.svg';
 import { colors, responsive, fonts } from '../styles';
 
 const StyledHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `;
 
 const StyledNav = styled.nav`
@@ -36,9 +35,9 @@ const StyledNav = styled.nav`
 `;
 
 const StyledLogo = styled.div`
+  height: 44px;
   & img {
-    width: 89px;
-    height: 123px;
+    height: 100%;
   }
 `;
 
@@ -55,29 +54,34 @@ const StyledTagline = styled(Title)`
   }
 `;
 
-const StyledActions = styled.div`
-  width: 100%;
-  display: flex;
-  @media screen and (${responsive.sm.max}) {
-    flex-direction: column;
-  }
+const SParagraph = styled(Paragraph)`
+  font-weight: 400;
+  max-width: 40rem;
+  margin: 0 auto;
 `;
 
-const StyledSocialLinks = styled.div`
-  display: flex;
+const StyledPoweredBy = styled.div`
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media screen and (${responsive.sm.max}) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  & p {
+    margin: 0;
+    margin-bottom: 0.75rem;
+  }
   & a {
-    margin-left: 20px;
+    display: inline-block;
+    margin-right: 2rem;
   }
   & img {
-    width: calc(2.5rem + 4px);
-    height: calc(2.5rem + 4px);
-  }
-  @media screen and (${responsive.sm.max}) {
-    margin-top: 1.25rem;
-    & a {
-      margin-left: 0;
-      margin-right: 20px;
-    }
+    height: 1rem;
+    margin-right: -1rem;
   }
 `;
 
@@ -91,13 +95,16 @@ const Welcome = () => (
       </a>
       <StyledNav>
         <a onClick={smoothScroll} href="#About">
-          What is Ocean?
+          Project
         </a>
         <a onClick={smoothScroll} href="#UseCases">
           Use Cases
         </a>
         <a onClick={smoothScroll} href="#Documentation">
-          Documentation
+          Docs
+        </a>
+        <a onClick={smoothScroll} href="#Team">
+          Team
         </a>
         <a
           href="https://blog.oceanprotocol.com/"
@@ -106,30 +113,30 @@ const Welcome = () => (
         >
           Blog
         </a>
-        <a onClick={smoothScroll} href="#Team">
-          Community & Team
-        </a>
       </StyledNav>
     </StyledHeader>
-    <StyledTagline>A Decentralized Data Exchange Protocol</StyledTagline>
-    <Paragraph>
+    <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
+    <SParagraph>
       Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
       consumers of valuable datasets, while providing open access for developers to build services.
-    </Paragraph>
-    <StyledActions>
-      <SubscribeForm />
-      <StyledSocialLinks>
-        <a href="medium.com">
-          <img src={buttonMedium} alt="Medium" />
-        </a>
-        <a href="twitter.com">
-          <img src={buttonTwitter} alt="Twitter" />
-        </a>
-        <a href="slack.com">
-          <img src={buttonSlack} alt="Slack" />
-        </a>
-      </StyledSocialLinks>
-    </StyledActions>
+    </SParagraph>
+    <StyledPoweredBy>
+      <p>Powered by</p>
+      <a
+        href="https://www.bigchaindb.com/"
+        target="_blank" // eslint-disable-line
+        rel="noopener"
+      >
+        <img src={bigchainDBLogo} alt="BigchainDB Logo" />
+      </a>
+      <a
+        href="https://www.dex.sg/"
+        target="_blank" // eslint-disable-line
+        rel="noopener"
+      >
+        <img src={dexLogo} alt="Dex Logo" />
+      </a>
+    </StyledPoweredBy>
   </Section>
 );
 

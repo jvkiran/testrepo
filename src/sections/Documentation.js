@@ -14,16 +14,14 @@ const STab = styled(Button)`
   background: ${({ active }) => (active ? `rgb(${colors.dark})` : `rgba(${colors.dark}, 0.05)`)};
 `;
 
-const SDownload = styled(Button)`box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);`;
+const SDownload = styled(Button)`
+  float: right;
+  box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);
+`;
 
 const StyledSubTitle = styled(Description)`font-weight: 600;`;
 
-const StyledAbstract = styled.div`
-  margin-top: 1rem;
-  @media screen and (${responsive.sm.max}) {
-    order: -1;
-  }
-`;
+const StyledAbstract = styled.div`margin-top: 1rem;`;
 
 class Documentation extends Component {
   state = {
@@ -44,13 +42,13 @@ class Documentation extends Component {
           </div>
         </Cell>
         <Cell width={2 / 3}>
-          <a href={downloads[this.state.activeTab].download}>
-            <SDownload>Download</SDownload>
-          </a>
           <StyledAbstract>
             <StyledSubTitle>Abstract</StyledSubTitle>
             <Description>{downloads[this.state.activeTab].abstract}</Description>
           </StyledAbstract>
+          <a href={downloads[this.state.activeTab].download}>
+            <SDownload>Download</SDownload>
+          </a>
         </Cell>
       </Row>
     </Section>

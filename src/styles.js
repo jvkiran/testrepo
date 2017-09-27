@@ -18,16 +18,18 @@ export const fonts = {
   size: {
     root: '16px',
     base: '1rem',
-    large: '1.2rem',
+    large: '1.25rem',
     small: '.85rem',
-    h1: '3rem',
+    h1: '3.6rem',
     h2: '2.7rem',
     h3: '2rem',
     h4: '1.5rem',
-    h5: '1.15rem'
+    h5: '1.125rem'
   },
   family: {
-    base: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
+    base: '"GT Pressura Mono", sans-serif',
+    title: '"Sharp Sans", sans-serif',
+    button: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
     headings: 'inherit'
   }
 };
@@ -58,6 +60,36 @@ export const responsive = {
 };
 
 export const globalStyles = `
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+  @font-face {
+    font-family: 'Sharp Sans';
+    src: url('../fonts/SharpSansDispNo1-Bold.otf');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: 'GT Pressura Mono';
+    src: url('../fonts/GT-Pressura-Mono-Bold.otf');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: 'GT Pressura Mono';
+    src: url('../fonts/GT-Pressura-Mono-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   html, body, #root, #router-root {
     margin: 0;
     padding: 0;
@@ -68,12 +100,6 @@ export const globalStyles = `
     margin: 20px;
   }
 
-  * {
-    box-sizing: border-box;
-  }
-
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-
   html {
     font-size: ${fonts.size.root};
     position: relative;
@@ -82,6 +108,7 @@ export const globalStyles = `
   body {
     background: rgb(${colors.white});
     font-family: ${fonts.family.base};
+    text-align: center;
     color: rgb(${colors.dark});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;

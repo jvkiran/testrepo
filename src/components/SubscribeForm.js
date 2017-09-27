@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import jsonp from 'jsonp';
-import emailIcon from '../assets/email-icon.svg';
+import emailIcon from '../assets/misc/email-icon.svg';
 import Button from './Button';
 import { colors, responsive, transitions, fonts } from '../styles';
 
@@ -182,7 +182,7 @@ SubscribeForm.propTypes = {
 SubscribeForm.defaultProps = {
   maxWidth: 34,
   inputPlaceholder: 'your@email.com',
-  btnLabel: 'Join our community',
+  btnLabel: 'Join us',
   sending: 'Sending...',
   success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
   error: 'Oops, something went wrong. Would you mind trying again?'

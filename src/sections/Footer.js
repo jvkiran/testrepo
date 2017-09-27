@@ -7,11 +7,11 @@ import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
 import Description from '../components/Description';
 import SubscribeForm from '../components/SubscribeForm';
-import buttonMedium from '../assets/button-medium.svg';
-import buttonTwitter from '../assets/button-twitter.svg';
-import buttonSlack from '../assets/button-slack.svg';
-import buttonTelegram from '../assets/button-telegram.svg';
-import buttonReddit from '../assets/button-reddit.svg';
+import buttonMedium from '../assets/buttons/medium.svg';
+import buttonTwitter from '../assets/buttons/twitter.svg';
+import buttonSlack from '../assets/buttons/slack.svg';
+import buttonTelegram from '../assets/buttons/telegram.svg';
+import buttonReddit from '../assets/buttons/reddit.svg';
 
 const StyledStrong = styled.span`
   font-weight: 600;
@@ -41,7 +41,7 @@ const Footer = () => (
     <Row>
       <Cell width={1 / 2}>
         <Title>Get Involved</Title>
-        <SubscribeForm maxWidth={28} btnLabel={'Join us'} />
+        <SubscribeForm maxWidth={28} />
         <StyledActions>
           <StyledSocialLinks>
             <a href="medium.com">

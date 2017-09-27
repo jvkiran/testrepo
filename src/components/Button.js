@@ -12,6 +12,7 @@ const StyledButton = styled.button`
   display: block;
   width: fit-content;
   padding: 15px 35px;
+  font-family: ${fonts.family.button};
   font-size: ${fonts.size.base};
   font-weight: 600;
   line-height: 1.38;
