@@ -240,7 +240,7 @@ const App = () => (
       <StyledLinks>
         <div>
           <h2 className="dimmed">Announcement</h2>
-          <a href="https://medium.com/oceanprotocol/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
+          <a href="https://blog.oceanprotocol.com/from-ai-to-blockchain-to-data-meet-ocean-f210ff460465">
             From AI to Blockchain to Data: Meet Ocean
           </a>
         </div>
@@ -255,7 +255,7 @@ const App = () => (
         <p className="dimmed">Powered by</p>
         <a
           className="logo"
-          href="https://www.bigchaindb.com/"
+          href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
           target="_blank" // eslint-disable-line
           rel="noopener"
         >
