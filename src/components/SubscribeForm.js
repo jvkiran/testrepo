@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import jsonp from 'jsonp';
 import emailIcon from '../assets/email-icon.svg';
 import Button from './Button';
-import { colors, responsive, transitions } from '../styles';
+import { colors, responsive, transitions, fonts } from '../styles';
 
 const StyledSubscribe = styled.div`
   position: relative;
@@ -30,7 +30,7 @@ const StyledSubscribe = styled.div`
   & input {
     outline: none;
     margin: 0;
-    font-size: 1rem;
+    font-size: ${fonts.size.base};
     padding: 0.75rem 1rem;
     margin: 1px;
     padding-left: 3rem;
@@ -59,7 +59,7 @@ const StyledSubscribe = styled.div`
   }
   & button {
     color: rgb(${colors.white});
-    font-size: 1rem;
+    font-size: ${fonts.size.base};
     text-transform: uppercase;
     margin: 0;
     padding: 0.75rem 1rem;

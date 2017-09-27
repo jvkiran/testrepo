@@ -9,7 +9,7 @@ import oceanLogo from '../assets/ocean-logo.svg';
 import buttonMedium from '../assets/button-medium.svg';
 import buttonTwitter from '../assets/button-twitter.svg';
 import buttonSlack from '../assets/button-slack.svg';
-import { responsive } from '../styles';
+import { responsive, fonts } from '../styles';
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -43,13 +43,13 @@ const StyledLogo = styled.div`
 `;
 
 const StyledTagline = styled(Title)`
-  font-size: 2.27rem;
+  font-size: ${fonts.size.h1};
   margin-top: 5rem;
   margin-bottom: 1.45rem;
   font-weight: 600;
 
   @media screen and (${responsive.sm.max}) {
-    font-size: 1.95rem;
+    font-size: ${fonts.size.h3};
     margin-top: 2rem;
     margin-bottom: 0.42rem;
   }

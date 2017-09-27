@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { responsive } from '../styles';
+import { responsive, fonts } from '../styles';
 
 const Description = styled.p`
   line-height: 2;
-  font-size: 0.875rem;
+  font-size: ${fonts.size.small};
   font-weight: 400;
   @media screen and (${responsive.sm.max}) {
-    font-size: 1rem;
+    font-size: ${fonts.size.base};
   }
 `;
 

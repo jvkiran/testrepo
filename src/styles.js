@@ -14,6 +14,24 @@ export const colors = {
   orange: '255, 72, 91'
 };
 
+export const fonts = {
+  size: {
+    root: '16px',
+    base: '1rem',
+    large: '1.2rem',
+    small: '.85rem',
+    h1: '3rem',
+    h2: '2.7rem',
+    h3: '2rem',
+    h4: '1.5rem',
+    h5: '1.15rem'
+  },
+  family: {
+    base: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
+    headings: 'inherit'
+  }
+};
+
 export const transitions = {
   short: 'all 0.1s ease-in-out',
   base: 'all 0.2s ease-in-out',
@@ -54,18 +72,18 @@ export const globalStyles = `
   @import url('https://fonts.googleapis.com/css?family=Raleway');
 
   html {
-    font-size: 15px;
+    font-size: ${fonts.size.root};
     position: relative;
   }
 
   body {
     background: rgb(${colors.grey});
-    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: ${fonts.family.base};
     color: rgb(${colors.white});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 1rem;
+    font-size: ${fonts.size.base};
     line-height: 1.5;
     font-weight: 400;
   }
@@ -108,8 +126,26 @@ export const globalStyles = `
 
 
   h1, h2, h3, h4, h5 {
+      font-family: ${fonts.family.headings};
       color: inherit;
+      line-height: 1.2;
       font-weight: 400;
+  }
+
+  h1 {
+    font-size: ${fonts.size.h1}
+  }
+
+  h2 {
+    font-size: ${fonts.size.h2}
+  }
+
+  h3 {
+    font-size: ${fonts.size.h3}
+  }
+
+  h4 {
+    font-size: ${fonts.size.h4}
   }
 
   div#backgroundWrapper {

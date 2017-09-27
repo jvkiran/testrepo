@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../styles';
+import { colors, fonts } from '../styles';
 
 const StyledButton = styled.button`
   border: none;
@@ -12,7 +12,7 @@ const StyledButton = styled.button`
   display: block;
   width: fit-content;
   padding: 15px 35px;
-  font-size: 1rem;
+  font-size: ${fonts.size.base};
   font-weight: 600;
   line-height: 1.38;
   text-transform: uppercase;
