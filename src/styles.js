@@ -115,6 +115,7 @@ export const globalStyles = `
   div#backgroundWrapper {
     position: absolute;
     top: 0;
+    z-index: -1;
   }
 
   div#background {
@@ -122,14 +123,12 @@ export const globalStyles = `
     width: 100vw;
     height: 100vh;
     background: rgb(${colors.darkBackground});
-    z-index: -2;
   }
 
   div#container {
     position: absolute;
     top: 10vh;
     bottom: 0;
-    z-index: -1;
     left: 0;
     right: 0;
     overflow: hidden;
