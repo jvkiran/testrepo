@@ -126,12 +126,7 @@ const Welcome = () => (
           <img src={buttonTwitter} alt="Twitter" />
         </a>
         <a href="slack.com">
-          className="logo"
-        <a className="logo" href="https://www.dex.sg/" target="_blank" rel="noopener">
           <img src={buttonSlack} alt="Slack" />
-          rel="noopener"
-        >
-          <img src={dexLogo} alt="Dex Logo" />
         </a>
       </StyledSocialLinks>
     </StyledActions>
