@@ -255,7 +255,7 @@ const App = () => (
         <p className="dimmed">Powered by</p>
         <a
           className="logo"
-          href="https://www.bigchaindb.com/"
+          href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
           target="_blank" // eslint-disable-line
           rel="noopener"
         >
