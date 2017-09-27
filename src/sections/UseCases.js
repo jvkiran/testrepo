@@ -3,14 +3,18 @@ import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Description from '../components/Description';
-import Tab from '../components/Tab';
+import Button from '../components/Button';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
 import { colors, responsive } from '../styles';
 
-const STab = styled(Tab)`margin-right: 20px;`;
+const STab = styled(Button)`
+  margin: 0 20px 1rem 0;
+  color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
+  background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
+`;
 
 const StyledTabs = styled.div`
   display: flex;
@@ -26,7 +30,7 @@ class UseCases extends Component {
     activeTab: 'autonomous vehicles'
   };
   render = () => (
-    <Section id="UseCases" background={colors.lightGrey} minHeight={700} shadow>
+    <Section id="UseCases" background={colors.lightGrey} fontColor={colors.white} minHeight={700} shadow>
       <Title>Use Cases</Title>
 
       <StyledTabs>

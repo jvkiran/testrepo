@@ -59,10 +59,13 @@ export const responsive = {
 
 export const globalStyles = `
   html, body, #root, #router-root {
-    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+  }
+
+  body {
+    margin: 20px;
   }
 
   * {
@@ -77,9 +80,9 @@ export const globalStyles = `
   }
 
   body {
-    background: rgb(${colors.grey});
+    background: rgb(${colors.white});
     font-family: ${fonts.family.base};
-    color: rgb(${colors.white});
+    color: rgb(${colors.dark});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -151,13 +154,16 @@ export const globalStyles = `
   div#backgroundWrapper {
     position: absolute;
     top: 0;
+    width: 100%;
     z-index: -1;
+    margin: 20px;
+    left: 0;
   }
 
   div#background {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
     background: rgb(${colors.darkBackground});
   }
 

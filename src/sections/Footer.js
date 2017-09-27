@@ -10,6 +10,8 @@ import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/button-medium.svg';
 import buttonTwitter from '../assets/button-twitter.svg';
 import buttonSlack from '../assets/button-slack.svg';
+import buttonTelegram from '../assets/button-telegram.svg';
+import buttonReddit from '../assets/button-reddit.svg';
 
 const StyledStrong = styled.span`
   font-weight: 600;
@@ -28,6 +30,7 @@ const StyledSocialLinks = styled.div`
     margin-right: 20px;
   }
   & img {
+    border-radius: 2px;
     width: calc(2.5rem + 4px);
     height: calc(2.5rem + 4px);
   }
@@ -49,6 +52,12 @@ const Footer = () => (
             </a>
             <a href="slack.com">
               <img src={buttonSlack} alt="Slack" />
+            </a>
+            <a href="telegram.org">
+              <img src={buttonTelegram} alt="Slack" />
+            </a>
+            <a href="reddit.com">
+              <img src={buttonReddit} alt="Slack" />
             </a>
           </StyledSocialLinks>
         </StyledActions>

@@ -17,30 +17,35 @@ const StyledColumn = styled.div`
   max-width: 1000px;
   min-height: ${({ minHeight }) => (minHeight ? `${minHeight}px` : 'auto')};
   margin: 0 auto;
-  padding: 6rem 1rem;
+  padding: 6rem 2rem;
   position: relative;
   display: flex;
+  color ${({ fontColor }) => `rgb(${fontColor})`};
   flex-direction: column;
   @media screen and (${responsive.sm.max}) {
     padding: 2rem 1rem;
   }
 `;
 
-const Section = ({ children, viewport, minHeight, background, ...props }) => (
+const Section = ({ children, viewport, fontColor, minHeight, background, ...props }) => (
   <StyledSection viewport={viewport} background={background} {...props}>
-    <StyledColumn minHeight={minHeight}>{children}</StyledColumn>
+    <StyledColumn minHeight={minHeight} fontColor={fontColor}>
+      {children}
+    </StyledColumn>
   </StyledSection>
 );
 
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   background: PropTypes.string,
+  fiontColor: PropTypes.string,
   viewport: PropTypes.bool
 };
 
 Section.defaultProps = {
   background: '',
   minHeight: 0,
+  fontColor: 'inherit',
   viewport: false
 };
 

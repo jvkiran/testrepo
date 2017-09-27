@@ -9,7 +9,7 @@ import oceanLogo from '../assets/ocean-logo.svg';
 import buttonMedium from '../assets/button-medium.svg';
 import buttonTwitter from '../assets/button-twitter.svg';
 import buttonSlack from '../assets/button-slack.svg';
-import { responsive, fonts } from '../styles';
+import { colors, responsive, fonts } from '../styles';
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -82,7 +82,7 @@ const StyledSocialLinks = styled.div`
 `;
 
 const Welcome = () => (
-  <Section id="Welcome" viewport shadow>
+  <Section id="Welcome" viewport fontColor={colors.white}>
     <StyledHeader>
       <a href="/">
         <StyledLogo>

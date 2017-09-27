@@ -4,14 +4,14 @@ import Section from '../components/Section';
 import Title from '../components/Title';
 import Description from '../components/Description';
 import Button from '../components/Button';
-import Tab from '../components/Tab';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
 import downloads from '../data/downloads.json';
 import { colors, responsive } from '../styles';
 
-const STab = styled(Tab)`
-  background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.05)`)};
+const STab = styled(Button)`
+  color: ${({ active }) => (active ? `rgb(${colors.white})` : `rgb(${colors.dark})`)};
+  background: ${({ active }) => (active ? `rgb(${colors.dark})` : `rgba(${colors.dark}, 0.05)`)};
 `;
 
 const SDownload = styled(Button)`box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);`;
