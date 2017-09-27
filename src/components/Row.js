@@ -5,7 +5,6 @@ const Row = styled.div`
   width: 100%;
   display: flex;
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
-  margin: 2rem 0;
   & > div {
     justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
   }

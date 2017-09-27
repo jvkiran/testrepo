@@ -7,8 +7,8 @@ const Title = styled.h1`
   font-weight: 600;
 
   @media screen and (${responsive.sm.max}) {
-    font-size: 1.95rem;
-    margin: 0.33rem 0;
+    font-size: 2.6rem;
+    margin: 1.5rem 0;
   }
 `;
 

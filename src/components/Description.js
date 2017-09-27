@@ -6,7 +6,7 @@ const Description = styled.p`
   font-size: 0.875rem;
   font-weight: 400;
   @media screen and (${responsive.sm.max}) {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 `;
 
