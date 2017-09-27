@@ -22,15 +22,13 @@ const StyledColumn = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (${responsive.sm.max}) {
-    padding: ${({ viewport }) => (viewport ? '1.4rem 1rem 0' : '2rem 1rem')};
+    padding: 2rem 1rem;
   }
 `;
 
 const Section = ({ children, viewport, minHeight, background, ...props }) => (
   <StyledSection viewport={viewport} background={background} {...props}>
-    <StyledColumn viewport={viewport} minHeight={minHeight}>
-      {children}
-    </StyledColumn>
+    <StyledColumn minHeight={minHeight}>{children}</StyledColumn>
   </StyledSection>
 );
 

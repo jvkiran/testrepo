@@ -21,6 +21,10 @@ export const transitions = {
 };
 
 export const responsive = {
+  xs: {
+    min: 'min-width: 419px',
+    max: 'max-width: 420px'
+  },
   sm: {
     min: 'min-width: 649px',
     max: 'max-width: 640px'
@@ -37,10 +41,10 @@ export const responsive = {
 
 export const globalStyles = `
   html, body, #root, #router-root {
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
 
   * {
@@ -108,12 +112,15 @@ export const globalStyles = `
       font-weight: 400;
   }
 
-  div#background {
+  div#backgroundWrapper {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  }
+
+  div#background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     background: rgb(${colors.darkBackground});
     z-index: -2;
   }

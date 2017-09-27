@@ -9,8 +9,6 @@ import oceanLogo from '../assets/ocean-logo.svg';
 import buttonMedium from '../assets/button-medium.svg';
 import buttonTwitter from '../assets/button-twitter.svg';
 import buttonSlack from '../assets/button-slack.svg';
-import bigchainDBLogo from '../assets/bigchain-db.svg';
-import dexLogo from '../assets/dex.svg';
 import { responsive } from '../styles';
 
 const StyledHeader = styled.div`
@@ -83,33 +81,6 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
-const StyledPoweredBy = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  font-size: 0.9rem;
-
-  @media screen and (${responsive.sm.max}) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  & p {
-    margin: 0;
-    margin-bottom: 0.75rem;
-  }
-  & a {
-    display: inline-block;
-    margin-right: 2rem;
-
-    img {
-      height: 1.5rem;
-
-      @media screen and (${responsive.sm.max}) {
-        height: 1rem;
-      }
-    }
-  }
-`;
-
 const Welcome = () => (
   <Section id="Welcome" viewport shadow>
     <StyledHeader>
@@ -152,23 +123,6 @@ const Welcome = () => (
         </a>
       </StyledSocialLinks>
     </StyledActions>
-    <StyledPoweredBy>
-      <p>Powered by</p>
-      <a
-        href="https://www.bigchaindb.com/"
-        target="_blank" // eslint-disable-line
-        rel="noopener"
-      >
-        <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-      </a>
-      <a
-        href="https://www.dex.sg/"
-        target="_blank" // eslint-disable-line
-        rel="noopener"
-      >
-        <img src={dexLogo} alt="Dex Logo" />
-      </a>
-    </StyledPoweredBy>
   </Section>
 );
 

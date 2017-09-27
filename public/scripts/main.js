@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function init() {
       container = document.createElement('div');
       container.id = 'container';
-      document.body.appendChild(container);
+      document.getElementById('background').appendChild(container);
 
       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
       camera.position.z = 10000;

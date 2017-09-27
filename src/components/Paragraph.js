@@ -8,7 +8,7 @@ const Paragraph = styled.p`
   margin-top: 0;
   margin-bottom: 3rem;
   @media screen and (${responsive.sm.max}) {
-    font-size: 0.85rem;
+    font-size: 1.15rem;
     margin-bottom: 1.2rem;
   }
 `;

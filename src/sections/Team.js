@@ -57,6 +57,9 @@ const StyledMember = styled.div`
   @media screen and (${responsive.sm.max}) {
     width: calc(100% / 5);
   }
+  @media screen and (${responsive.xs.max}) {
+    width: calc(100% / 3);
+  }
 `;
 
 const StyledProfile = styled.div`

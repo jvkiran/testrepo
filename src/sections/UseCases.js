@@ -3,23 +3,14 @@ import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Description from '../components/Description';
-import Button from '../components/Button';
+import Tab from '../components/Tab';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
 import { colors, responsive } from '../styles';
 
-const StyledTabButtons = styled(Button)`
-  border-radius: 5px;
-  margin-right: 20px;
-  color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
-  background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
-  cursor: pointer;
-  &:hover {
-    opacity: 0.7;
-  }
-`;
+const STab = styled(Tab)`margin-right: 20px;`;
 
 const StyledTabs = styled.div`
   display: flex;
@@ -40,13 +31,9 @@ class UseCases extends Component {
 
       <StyledTabs>
         {Object.keys(useCases).map(tab => (
-          <StyledTabButtons
-            key={tab}
-            active={this.state.activeTab === tab}
-            onClick={() => this.setState({ activeTab: tab })}
-          >
+          <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
             {tab}
-          </StyledTabButtons>
+          </STab>
         ))}
       </StyledTabs>
 
