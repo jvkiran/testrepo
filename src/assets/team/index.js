@@ -1,5 +1,6 @@
 import bruce from './bruce.jpg';
 import chirdeep from './chirdeep.jpg';
+import cristina from './cristina.jpg';
 import cristinaV from './cristina-v.jpg';
 import daniel from './daniel.jpg';
 import daryl from './daryl.jpg';
@@ -22,6 +23,7 @@ import wojciech from './wojciech.jpg';
 export default {
   bruce,
   chirdeep,
+  cristina,
   cristinaV,
   daniel,
   daryl,
