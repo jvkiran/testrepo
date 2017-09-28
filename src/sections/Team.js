@@ -50,7 +50,11 @@ const StyledTeam = styled.div`
 const StyledMember = styled.div`
   position: relative;
   margin: .25rem .5rem;
-  flex: 1 1 calc(100% / 8);
+  flex: 1 1 calc(100% / 4);
+
+  @media screen and (${responsive.sm.min}) {
+    flex: 1 1 calc(100% / 8);
+  }
 
   &:hover > div {
     opacity: 1;
@@ -66,6 +70,7 @@ const StyledMember = styled.div`
       border-radius: 2px;
       max-width: 100%;
       height: auto;
+      filter: grayscale(100%);
     }
   }
 `;
