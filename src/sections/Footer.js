@@ -5,7 +5,6 @@ import Row from '../components/Row';
 import Cell from '../components/Cell';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
-import Description from '../components/Description';
 import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
@@ -69,10 +68,10 @@ const Footer = () => (
           ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem
           growth and take measures to ensure that the platform becomes ever more decentralized with time.
         </Paragraph>
-        <Description>
+        <Paragraph>
           <StyledStrong>DISCLAIMER:</StyledStrong> This site may contain forward-looking statements, subject to risks
           and uncertainties that could cause the actual results to differ materially.
-        </Description>
+        </Paragraph>
       </Cell>
     </Row>
   </Section>

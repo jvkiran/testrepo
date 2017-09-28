@@ -45,7 +45,7 @@ const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
   margin-top: 5rem;
   margin-bottom: 1.45rem;
-  font-weight: 600;
+  text-align: center;
 
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
@@ -55,17 +55,17 @@ const StyledTagline = styled(Title)`
 `;
 
 const SParagraph = styled(Paragraph)`
-  font-weight: 400;
   max-width: 40rem;
   margin: 0 auto;
+  text-align: center;
 `;
 
 const StyledPoweredBy = styled.div`
   margin-top: 4rem;
   margin-bottom: 4rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: ${fonts.size.small};
   text-transform: uppercase;
+  text-align: center;
 
   @media screen and (${responsive.sm.max}) {
     margin-top: 2rem;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
-import Description from '../components/Description';
+import Paragraph from '../components/Paragraph';
 import Button from '../components/Button';
 import Row from '../components/Row';
 import Cell from '../components/Cell';
@@ -46,7 +46,7 @@ class UseCases extends Component {
           <img style={{ width: '100%' }} src={DraftFive} alt="draft" />
         </Cell>
         <Cell width={1 / 2}>
-          <Description>{useCases[this.state.activeTab].description}</Description>
+          <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
         </Cell>
       </Row>
     </Section>

@@ -20,17 +20,24 @@ export const fonts = {
     base: '1rem',
     large: '1.25rem',
     small: '.85rem',
-    h1: '3.6rem',
+    h1: '3.2rem',
     h2: '2.7rem',
     h3: '2rem',
     h4: '1.5rem',
     h5: '1.125rem'
   },
   family: {
-    base: '"GT Pressura Mono", sans-serif',
+    base: '-apple-system, sans-serif',
     title: '"Sharp Sans", sans-serif',
-    button: 'Raleway, -apple-system, BlinkMacSystemFont, sans-serif',
-    headings: 'inherit'
+    button: '"Sharp Sans", sans-serif'
+  },
+  lineHeight: {
+    base: '1.65',
+    title: '1.25'
+  },
+  fontWeight: {
+    base: '400',
+    title: '600'
   }
 };
 
@@ -60,8 +67,6 @@ export const responsive = {
 };
 
 export const globalStyles = `
-  @import url('https://fonts.googleapis.com/css?family=Raleway');
-
   @font-face {
     font-family: 'Sharp Sans';
     src: url('../fonts/SharpSansDispNo1-Bold.otf');
@@ -108,14 +113,13 @@ export const globalStyles = `
   body {
     background: rgb(${colors.white});
     font-family: ${fonts.family.base};
-    text-align: center;
-    color: rgb(${colors.dark});
+    color: rgb(${colors.grey});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: ${fonts.size.base};
-    line-height: 1.5;
-    font-weight: 400;
+    line-height: ${fonts.lineHeight.base};
+    font-weight: ${fonts.fontWeight.base};
   }
 
   button {
@@ -156,10 +160,10 @@ export const globalStyles = `
 
 
   h1, h2, h3, h4, h5 {
-      font-family: ${fonts.family.headings};
+      font-family: ${fonts.family.title};
       color: inherit;
-      line-height: 1.2;
-      font-weight: 400;
+      line-height: ${fonts.lineHeight.title};
+      font-weight: ${fonts.fontWeight.title};
   }
 
   h1 {
