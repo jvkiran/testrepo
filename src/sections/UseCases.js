@@ -4,11 +4,12 @@ import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
 import Button from '../components/Button';
-import Row from '../components/Row';
+import Grid from '../components/Grid';
+import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
-import { colors, responsive, layout } from '../styles';
+import { colors, responsive } from '../styles';
 
 const STab = styled(Button)`
   margin: 0 20px 1rem 0;
@@ -18,8 +19,7 @@ const STab = styled(Button)`
 
 const StyledTabs = styled.div`
   display: flex;
-  max-width: ${layout.maxWidth.base};
-  margin: 1rem auto 0 auto;
+  margin-top: 1rem;
   @media screen and (${responsive.sm.max}) {
     margin-top: 0;
     flex-direction: column;
@@ -31,25 +31,27 @@ class UseCases extends Component {
     activeTab: 'autonomous vehicles'
   };
   render = () => (
-    <Section id="UseCases" background={colors.lightGrey} fontColor={colors.white} minHeight={700} shadow>
-      <Title>Use Cases</Title>
+    <Section id="UseCases" background={colors.lightGrey} fontColor={colors.white} minHeight={700}>
+      <ContentRow>
+        <Title>Use Cases</Title>
 
-      <StyledTabs>
-        {Object.keys(useCases).map(tab => (
-          <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
-            {tab}
-          </STab>
-        ))}
-      </StyledTabs>
+        <StyledTabs>
+          {Object.keys(useCases).map(tab => (
+            <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
+              {tab}
+            </STab>
+          ))}
+        </StyledTabs>
 
-      <Row left>
-        <Cell width={1 / 2}>
-          <img style={{ width: '100%' }} src={DraftFive} alt="draft" />
-        </Cell>
-        <Cell width={1 / 2}>
-          <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
-        </Cell>
-      </Row>
+        <Grid left>
+          <Cell width={1 / 2}>
+            <img style={{ width: '100%' }} src={DraftFive} alt="draft" />
+          </Cell>
+          <Cell width={1 / 2}>
+            <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
+          </Cell>
+        </Grid>
+      </ContentRow>
     </Section>
   );
 }

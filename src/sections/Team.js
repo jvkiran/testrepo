@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
+import ContentRow from '../components/ContentRow';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import IPDBLogo from '../assets/logos/ipdb.svg';
@@ -11,7 +12,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import arrow from '../assets/misc/arrow.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
-import { colors, responsive, transitions, layout } from '../styles';
+import { colors, responsive, transitions } from '../styles';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -19,8 +20,6 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: ${layout.maxWidth.base};
-  margin: 0 auto;
 `;
 
 const StyledLine = styled.div`
@@ -164,95 +163,104 @@ const StyledButton = styled.button`
 
 const Team = () => (
   <Section id="Team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
+    
     <StyledWrapper>
-      <Title>The People Building The Ocean Protocol</Title>
-      <StyledLine />
-      <Paragraph>
-        The Ocean team combines a deep background in big data, blockchain, artificial intelligence and data exchanges,
-        with real-world business experience as entrepreneurs, designers and technologists who have started over 20
-        companies.
-      </Paragraph>
-      <StyledTeam>
-        {team.map(member => (
-          <StyledMember key={member.name}>
-            <img src={teamImg[member.image]} alt={member.name} />
-            <StyledProfile>
-              <StyledProfileWrapper>
-                <StyledName>{member.name}</StyledName>
-                <StyledBio>{member.bio}</StyledBio>
-                <StyledLinks>
-                  {!!member.linkedin && (
-                    <StyledIcon
-                      href={`https://www.linkedin.com/in/${member.linkedin}`}
-                      target="_blank" //eslint-disable-line
-                      rel="noopener"
-                    >
-                      <img src={buttonLinkedIn} alt="linkedin" />
-                    </StyledIcon>
-                  )}
-                  {!!member.twitter && (
-                    <StyledIcon
-                      href={`https://www.twitter.com/${member.twitter}`}
-                      target="_blank" //eslint-disable-line
-                      rel="noopener"
-                    >
-                      <img src={buttonTwitter} alt="twitter" />
-                    </StyledIcon>
-                  )}
-                </StyledLinks>
-                <img src={arrow} alt="arrow" />
-              </StyledProfileWrapper>
-            </StyledProfile>
-          </StyledMember>
-        ))}
-      </StyledTeam>
-      <StyledCompanies>
-        <StyledCompanyLogo
-          href="https://www.bigchaindb.com/"
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <img src={bigchainDBLogo} alt="BigchainDB" />
-        </StyledCompanyLogo>
-        <StyledCompanyLogo
-          href="https://www.dex.sg/"
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <img src={dexLogo} alt="Dex" />
-        </StyledCompanyLogo>
-        <StyledCompanyLogo
-          href="https://ipdb.foundation/"
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <img src={IPDBLogo} alt="IPDB" />
-        </StyledCompanyLogo>
-      </StyledCompanies>
-      <StyledLine />
-      <StyledActions>
-        <a
-          href=""
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <StyledButton>I have data</StyledButton>
-        </a>
-        <a
-          href=""
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <StyledButton>Join the community</StyledButton>
-        </a>
-        <a
-          href=""
-          target="_blank" // eslint-disable-line
-          rel="noopener"
-        >
-          <StyledButton>I want data</StyledButton>
-        </a>
-      </StyledActions>
+      <ContentRow>
+        <Title>The People Building The Ocean Protocol</Title>
+        <StyledLine />
+      </ContentRow>
+
+      <ContentRow narrow>
+        <Paragraph>
+          The Ocean team combines a deep background in big data, blockchain, artificial intelligence and data exchanges,
+          with real-world business experience as entrepreneurs, designers and technologists who have started over 20
+          companies.
+        </Paragraph>
+      </ContentRow>
+
+      <ContentRow>
+        <StyledTeam>
+          {team.map(member => (
+            <StyledMember key={member.name}>
+              <img src={teamImg[member.image]} alt={member.name} />
+              <StyledProfile>
+                <StyledProfileWrapper>
+                  <StyledName>{member.name}</StyledName>
+                  <StyledBio>{member.bio}</StyledBio>
+                  <StyledLinks>
+                    {!!member.linkedin && (
+                      <StyledIcon
+                        href={`https://www.linkedin.com/in/${member.linkedin}`}
+                        target="_blank" //eslint-disable-line
+                        rel="noopener"
+                      >
+                        <img src={buttonLinkedIn} alt="linkedin" />
+                      </StyledIcon>
+                    )}
+                    {!!member.twitter && (
+                      <StyledIcon
+                        href={`https://www.twitter.com/${member.twitter}`}
+                        target="_blank" //eslint-disable-line
+                        rel="noopener"
+                      >
+                        <img src={buttonTwitter} alt="twitter" />
+                      </StyledIcon>
+                    )}
+                  </StyledLinks>
+                  <img src={arrow} alt="arrow" />
+                </StyledProfileWrapper>
+              </StyledProfile>
+            </StyledMember>
+          ))}
+        </StyledTeam>
+        <StyledCompanies>
+          <StyledCompanyLogo
+            href="https://www.bigchaindb.com/"
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <img src={bigchainDBLogo} alt="BigchainDB" />
+          </StyledCompanyLogo>
+          <StyledCompanyLogo
+            href="https://www.dex.sg/"
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <img src={dexLogo} alt="Dex" />
+          </StyledCompanyLogo>
+          <StyledCompanyLogo
+            href="https://ipdb.foundation/"
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <img src={IPDBLogo} alt="IPDB" />
+          </StyledCompanyLogo>
+        </StyledCompanies>
+        <StyledLine />
+        <StyledActions>
+          <a
+            href=""
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <StyledButton>I have data</StyledButton>
+          </a>
+          <a
+            href=""
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <StyledButton>Join the community</StyledButton>
+          </a>
+          <a
+            href=""
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+            <StyledButton>I want data</StyledButton>
+          </a>
+        </StyledActions>
+      </ContentRow>
     </StyledWrapper>
   </Section>
 );

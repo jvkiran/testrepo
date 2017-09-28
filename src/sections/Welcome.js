@@ -4,6 +4,7 @@ import smoothScroll from 'smoothscroll';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
+import ContentRow from '../components/ContentRow';
 import oceanLogo from '../assets/logos/ocean-logo.svg';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
@@ -118,8 +119,6 @@ const StyledTagline = styled(Title)`
 `;
 
 const SParagraph = styled(Paragraph)`
-  max-width: 40rem;
-  margin: 0 auto;
   text-align: center;
 `;
 
@@ -179,28 +178,33 @@ const Welcome = () => (
         </a>
         </StyledNav>
       </StyledHeader>
-      <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
-      <SParagraph>
-          Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-          consumers of valuable datasets, while providing open access for developers to build services.
-      </SParagraph>
-      <StyledPoweredBy>
-        <p>Powered by</p>
-        <a
-          href="https://www.bigchaindb.com/"
-          target="_blank" // eslint-disable-line
-          rel="noopener">
-          
-          <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-        </a>
-        <a
-          href="https://www.dex.sg/"
-          target="_blank" // eslint-disable-line
-          rel="noopener">
-          
-          <img src={dexLogo} alt="Dex Logo" />
-        </a>
-        </StyledPoweredBy>
+
+      <ContentRow>
+        <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
+      </ContentRow>
+      <ContentRow narrow>
+        <SParagraph>
+            Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
+            consumers of valuable datasets, while providing open access for developers to build services.
+        </SParagraph>
+        <StyledPoweredBy>
+          <p>Powered by</p>
+          <a
+            href="https://www.bigchaindb.com/"
+            target="_blank" // eslint-disable-line
+            rel="noopener">
+            
+            <img src={bigchainDBLogo} alt="BigchainDB Logo" />
+          </a>
+          <a
+            href="https://www.dex.sg/"
+            target="_blank" // eslint-disable-line
+            rel="noopener">
+            
+            <img src={dexLogo} alt="Dex Logo" />
+          </a>
+          </StyledPoweredBy>
+        </ContentRow>
       </StyledHeroContent>
     <StyledWaves>
       <div id="background"></div>

@@ -1,10 +1,8 @@
 import styled from 'styled-components';
-import { responsive, layout } from '../styles';
+import { responsive } from '../styles';
 
-const Row = styled.div`
+const Grid = styled.div`
   width: 100%;
-  max-width: ${layout.maxWidth.base};
-  margin: 0 auto;
   display: flex;
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
   & > div {
@@ -30,4 +28,4 @@ const Row = styled.div`
   }
 `;
 
-export default Row;
+export default Grid;

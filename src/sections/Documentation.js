@@ -5,7 +5,8 @@ import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
 import SubTitle from '../components/SubTitle';
 import Button from '../components/Button';
-import Row from '../components/Row';
+import Grid from '../components/Grid';
+import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
 import downloads from '../data/downloads.json';
 import { colors } from '../styles';
@@ -28,28 +29,30 @@ class Documentation extends Component {
   };
   render = () => (
     <Section id="Documentation" background={colors.darkGrey} fontColor={colors.white}>
-      <Title>Learn how Ocean Protocol works</Title>
+      <ContentRow>
+        <Title>Learn how Ocean Protocol works</Title>
 
-      <Row>
-        <Cell width={1 / 3}>
-          <div>
-            {Object.keys(downloads).map(tab => (
-              <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
-                {tab}
-              </STab>
-            ))}
-          </div>
-        </Cell>
-        <Cell width={2 / 3}>
-          <StyledAbstract>
-            <SubTitle>Abstract</SubTitle>
-            <Paragraph>{downloads[this.state.activeTab].abstract}</Paragraph>
-          </StyledAbstract>
-          <a href={downloads[this.state.activeTab].download}>
-            <SDownload>Download</SDownload>
-          </a>
-        </Cell>
-      </Row>
+        <Grid>
+          <Cell width={1 / 3}>
+            <div>
+              {Object.keys(downloads).map(tab => (
+                <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
+                  {tab}
+                </STab>
+              ))}
+            </div>
+          </Cell>
+          <Cell width={2 / 3}>
+            <StyledAbstract>
+              <SubTitle>Abstract</SubTitle>
+              <Paragraph>{downloads[this.state.activeTab].abstract}</Paragraph>
+            </StyledAbstract>
+            <a href={downloads[this.state.activeTab].download}>
+              <SDownload>Download</SDownload>
+            </a>
+          </Cell>
+        </Grid>
+      </ContentRow>
     </Section>
   );
 }
