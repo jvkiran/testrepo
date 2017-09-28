@@ -180,7 +180,7 @@ const StyledButton = styled.button`
 `;
 
 const Team = () => (
-  <Section id="team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
+  <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
         <StyledTitle>The People Building The Ocean Protocol</StyledTitle>

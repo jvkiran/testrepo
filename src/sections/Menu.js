@@ -6,7 +6,7 @@ import Hamburger from '../components/Hamburger';
 import { colors, responsive, transitions, layout } from '../styles';
 
 const StyledMenu = styled.div`
-  background: rgb(${colors.darkBackground});
+  background: rgb(${colors.black});
   width: ${({ fixed }) => (fixed ? '100vw' : '100%')};
   position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
   top: ${({ fixed }) => (fixed ? '0' : 'auto')};
@@ -57,7 +57,7 @@ const StyledMobileToggle = styled.div`
 `;
 
 const StyledMobileNav = styled.div`
-  background: rgb(${colors.darkBackground});
+  background: rgb(${colors.black});
   position: fixed;
   display: none;
   top: 0;

@@ -9,7 +9,7 @@ import dexLogo from '../assets/logos/dex.svg';
 import { colors, responsive, fonts, layout } from '../styles';
 
 const StyledHero = styled(Section)`
-  background: rgb(${colors.darkBackground});
+  background: rgb(${colors.black});
   padding-top: 0;
   min-height: calc(100vh - (${layout.pageFrame} * 2));
   position: relative;
@@ -62,8 +62,8 @@ const StyledWaves = styled.div`
         position: absolute;
         background: linear-gradient(
           to bottom,
-          rgba(${colors.darkBackground}, 1) 20%,
-          rgba(${colors.darkBackground}, 0) 60%
+          rgba(${colors.black}, 1) 20%,
+          rgba(${colors.black}, 0) 60%
         );
         z-index: 1;
       }

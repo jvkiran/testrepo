@@ -1,11 +1,10 @@
 export const colors = {
   white: '255, 255, 255',
-  black: '0, 0, 0',
+  black: '20, 20, 20',
   dark: '48, 48, 48',
   grey: '38, 41, 45',
   lightGrey: '53, 58, 64',
   darkGrey: '23, 25, 26',
-  darkBackground: '18, 18, 18',
   darkPurple: '20, 17, 39',
   purple: '123, 17, 115',
   pink: '246, 56, 138',
