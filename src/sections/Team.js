@@ -25,7 +25,7 @@ const StyledTitle = styled(Title)`
   margin-bottom: 2rem;
 `;
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled(Paragraph)`
   margin-bottom: 0;
   text-align: center;
 `;
