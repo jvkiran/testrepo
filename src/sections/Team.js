@@ -12,19 +12,28 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import arrow from '../assets/misc/arrow.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
-import { colors, responsive, transitions } from '../styles';
+import { colors, fonts, responsive, transitions } from '../styles';
 
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const StyledTitle = styled(Title)`
+  margin-bottom: 2rem;
+`;
+
+const StyledParagraph = styled(Paragraph)`
+  margin-bottom: 0;
   text-align: center;
 `;
 
 const StyledLine = styled.div`
   width: 100%;
-  margin: 0 0 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   border-bottom: 1px solid rgba(${colors.white}, 0.25);
   @media screen and (${responsive.sm.max}) {
     margin: 2rem 0;
@@ -32,34 +41,37 @@ const StyledLine = styled.div`
 `;
 
 const StyledTeam = styled.div`
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
 `;
 
 const StyledMember = styled.div`
   position: relative;
-  margin: 0.5rem 0;
-  width: calc(100% / 10);
+  margin: .25rem .5rem;
+  flex: 1 1 calc(100% / 4);
+
+  @media screen and (${responsive.sm.min}) {
+    flex: 1 1 calc(100% / 8);
+  }
+
   &:hover > div {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
   }
-  & > img {
-    box-shadow: 2px 2px 27px 2px rgba(0, 0, 0, 0.11), 2px 2px 5px 2px rgba(0, 0, 0, 0.39);
-    border-radius: 2px;
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-  @media screen and (${responsive.lg.max}) {
-    width: calc(100% / 6);
-  }
-  @media screen and (${responsive.sm.max}) {
-    width: calc(100% / 5);
-  }
-  @media screen and (${responsive.xs.max}) {
-    width: calc(100% / 3);
+
+  & > figure {
+    display: block;
+    margin: 0;
+
+    > img {
+      border-radius: 2px;
+      max-width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+    }
   }
 `;
 
@@ -92,19 +104,21 @@ const StyledProfileWrapper = styled.div`
   }
 `;
 
-const StyledName = styled.p`
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.6;
-  text-align: left;
+const StyledName = styled.h3`
+  font-size: ${fonts.size.base};
   margin: 0;
   color: rgb(${colors.dark});
 `;
 
+const StyledRole = styled.h4`
+  font-size: ${fonts.size.base};
+  margin: 0;
+  color: rgb(${colors.dark});
+  opacity: .5;
+`;
+
 const StyledBio = styled.p`
-  font-size: 0.75rem;
-  line-height: 2;
-  text-align: left;
+  font-size: ${fonts.size.small};
   color: rgb(${colors.dark});
 `;
 
@@ -168,26 +182,29 @@ const Team = () => (
   <Section id="team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
-        <Title>The People Building The Ocean Protocol</Title>
-        <StyledLine />
+        <StyledTitle>The People Building The Ocean Protocol</StyledTitle>
       </ContentRow>
 
       <ContentRow narrow>
-        <Paragraph>
+        <StyledParagraph>
           The Ocean team combines a deep background in big data, blockchain, artificial intelligence and data exchanges,
           with real-world business experience as entrepreneurs, designers and technologists who have started over 20
           companies.
-        </Paragraph>
+        </StyledParagraph>
       </ContentRow>
 
       <ContentRow>
+        <StyledLine />
         <StyledTeam>
           {team.map(member => (
             <StyledMember key={member.name}>
-              <img src={teamImg[member.image]} alt={member.name} />
+              <figure>
+                <img src={teamImg[member.image]} alt={member.name} />
+              </figure>
               <StyledProfile>
                 <StyledProfileWrapper>
                   <StyledName>{member.name}</StyledName>
+                  <StyledRole>{member.role}</StyledRole>
                   <StyledBio>{member.bio}</StyledBio>
                   <StyledLinks>
                     {!!member.linkedin && (
@@ -215,6 +232,9 @@ const Team = () => (
             </StyledMember>
           ))}
         </StyledTeam>
+      </ContentRow>
+
+      <ContentRow narrow>
         <StyledCompanies>
           <StyledCompanyLogo
             href="https://www.bigchaindb.com/"
@@ -238,7 +258,11 @@ const Team = () => (
             <img src={IPDBLogo} alt="IPDB" />
           </StyledCompanyLogo>
         </StyledCompanies>
+      </ContentRow>
+
+      <ContentRow>
         <StyledLine />
+        
         <StyledActions>
           <a
             href=""
