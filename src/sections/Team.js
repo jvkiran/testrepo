@@ -12,7 +12,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import arrow from '../assets/misc/arrow.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
-import { colors, fonts, responsive, transitions } from '../styles';
+import { colors, fonts, responsive, layout, transitions } from '../styles';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -43,17 +43,22 @@ const StyledLine = styled.div`
 const StyledTeam = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -.5rem;
-  margin-right: -.5rem;
+  justify-content: space-around;
+  margin-left: -${layout.pageFrame};
 `;
 
 const StyledMember = styled.div`
   position: relative;
-  margin: .25rem .5rem;
-  flex: 1 1 calc(100% / 4);
+  margin-left: ${layout.pageFrame};
+  margin-bottom: ${layout.pageFrame};
+  width: calc(100% / 4);
 
   @media screen and (${responsive.sm.min}) {
-    flex: 1 1 calc(100% / 8);
+    width: calc(100% / 8);
+  }
+
+  @media screen and (${responsive.md.min}) {
+    width: calc(100% / 10);
   }
 
   &:hover > div {
@@ -62,16 +67,12 @@ const StyledMember = styled.div`
     visibility: visible;
   }
 
-  & > figure {
-    display: block;
+  & > img {
     margin: 0;
-
-    > img {
-      border-radius: 2px;
-      max-width: 100%;
-      height: auto;
-      filter: grayscale(100%);
-    }
+    border-radius: .2rem;
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
   }
 `;
 
@@ -196,9 +197,7 @@ const Team = () => (
         <StyledTeam>
           {team.map(member => (
             <StyledMember key={member.name}>
-              <figure>
-                <img src={teamImg[member.image]} alt={member.name} />
-              </figure>
+              <img src={teamImg[member.image]} alt={member.name} />
               <StyledProfile>
                 <StyledProfileWrapper>
                   <StyledName>{member.name}</StyledName>
