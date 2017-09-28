@@ -8,8 +8,8 @@ import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
 import DraftOne from '../assets/drafts/draft-1.png';
 
-const Intro = () => (
-  <Section id="Intro">
+const Project = () => (
+  <Section id="project">
     <ContentRow>
       <Title>Ocean protocol <br />unlocks data</Title>
 
@@ -29,4 +29,4 @@ const Intro = () => (
   </Section>
 );
 
-export default Intro;
+export default Project;

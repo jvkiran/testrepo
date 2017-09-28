@@ -10,8 +10,8 @@ import DraftTwo from '../assets/drafts/draft-2.png';
 import DraftThree from '../assets/drafts/draft-3.png';
 import DraftFour from '../assets/drafts/draft-4.png';
 
-const About = () => (
-  <Section id="About">
+const Data = () => (
+  <Section id="data">
     <ContentRow>
       <Title>Only 1% of collected data is analyzed</Title>
 
@@ -63,4 +63,4 @@ const About = () => (
   </Section>
 );
 
-export default About;
+export default Data;

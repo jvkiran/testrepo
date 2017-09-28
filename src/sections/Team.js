@@ -162,7 +162,7 @@ const StyledButton = styled.button`
 `;
 
 const Team = () => (
-  <Section id="Team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
+  <Section id="team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
     
     <StyledWrapper>
       <ContentRow>

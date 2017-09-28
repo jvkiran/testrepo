@@ -157,18 +157,21 @@ const Welcome = () => (
           </StyledLogo>
         </a>
         <StyledNav>
-          <a onClick={smoothScroll} href="#About">
+          <a onClick={smoothScroll} href="#project">
             Project
-        </a>
-          <a onClick={smoothScroll} href="#UseCases">
-            Use Cases
-        </a>
+          </a>
           <a onClick={smoothScroll} href="#Documentation">
-            Docs
-        </a>
-          <a onClick={smoothScroll} href="#Team">
+            Whitepaper
+          </a>
+          <a onClick={smoothScroll} href="#data">
+            Data
+          </a>
+          <a onClick={smoothScroll} href="#usecases">
+            Use Cases
+          </a>
+          <a onClick={smoothScroll} href="#team">
             Team
-        </a>
+          </a>
           <a
             href="https://blog.oceanprotocol.com/"
             target="_blank" //eslint-disable-line

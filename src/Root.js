@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Welcome from './sections/Welcome';
-import Intro from './sections/Intro';
-import About from './sections/About';
+import Project from './sections/Project';
+import Data from './sections/Data';
 import UseCases from './sections/UseCases';
 import Documentation from './sections/Documentation';
 import Team from './sections/Team';
@@ -18,9 +18,9 @@ const StyledRoot = styled.div`
 const Root = () => (
   <StyledRoot>
     <Welcome />
-    <Intro />
+    <Project />
     <Documentation />
-    <About />
+    <Data />
     <UseCases />
     <Team />
     <Footer />
