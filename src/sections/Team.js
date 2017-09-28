@@ -140,7 +140,7 @@ const StyledIcon = styled.a`
 `;
 
 const StyledCompanies = styled.div`
-  margin-top: 4rem;
+  margin: 2rem 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -164,7 +164,10 @@ const StyledCompanyLogo = styled.a`
   }
 `;
 
-const StyledActions = styled.div`display: flex;`;
+const StyledActions = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const StyledButton = styled.button`
   background: rgb(${colors.white});
@@ -178,7 +181,6 @@ const StyledButton = styled.button`
 
 const Team = () => (
   <Section id="team" background={colors.darkGrey} fontColor={colors.white} minHeight={900} shadow>
-    
     <StyledWrapper>
       <ContentRow>
         <StyledTitle>The People Building The Ocean Protocol</StyledTitle>

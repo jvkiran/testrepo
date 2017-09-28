@@ -50,10 +50,11 @@ export const transitions = {
 export const layout = {
   pageFrame: '1rem',
   maxWidth: {
+    wide: '80rem',
     base: '60rem',
     small: '40rem'
   }
-}
+};
 
 export const responsive = {
   xs: {
@@ -126,7 +127,12 @@ export const globalStyles = `
     font-size: ${fonts.size.base};
     line-height: ${fonts.lineHeight.base};
     font-weight: ${fonts.fontWeight.base};
-    padding: ${layout.pageFrame};
+  }
+
+  @media screen and (${responsive.sm.min}) {
+    body {
+      padding: ${layout.pageFrame};
+    }
   }
 
   button {
