@@ -1,23 +1,43 @@
-import one from './team-1.png';
-import two from './team-2.png';
-import three from './team-3.png';
-import four from './team-4.png';
-import five from './team-5.png';
-import six from './team-6.png';
-import seven from './team-7.png';
-import eight from './team-8.png';
-import nine from './team-9.png';
-import ten from './team-10.png';
+import bruce from './bruce.jpg';
+import chirdeep from './chirdeep.jpg';
+import cristinaV from './cristina-v.jpg';
+import daniel from './daniel.jpg';
+import daryl from './daryl.jpg';
+import dimi from './dimi.jpg';
+import dinh from './dinh.jpg';
+import gautam from './gautam.jpg';
+import greg from './greg.jpg';
+import jernej from './jernej.jpg';
+import kamal from './kamal.jpg';
+import kasia from './kasia.jpg';
+import masha from './masha.jpg';
+import muawia from './muawia.jpg';
+import rodolphe from './rodolphe.jpg';
+import sarah from './sarah.jpg';
+import timothy from './timothy.jpg';
+import trent from './trent.jpg';
+import troy from './troy.jpg';
+import wojciech from './wojciech.jpg';
 
 export default {
-  one,
-  two,
-  three,
-  four,
-  five,
-  six,
-  seven,
-  eight,
-  nine,
-  ten
+  bruce,
+  chirdeep,
+  cristinaV,
+  daniel,
+  daryl,
+  dimi,
+  dinh,
+  gautam,
+  greg,
+  jernej,
+  kamal,
+  kasia,
+  masha,
+  muawia,
+  rodolphe,
+  sarah,
+  timothy,
+  trent,
+  troy,
+  wojciech
 };

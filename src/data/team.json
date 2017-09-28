@@ -5,238 +5,222 @@
     "role": "Marketing",
     "twitter": "cristinapon",
     "linkedin": "cristinapon",
-    "image": "one"
+    "image": "cristina"
   },
   {
     "name": "Bruce Pon",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "two"
+    "role": "CEO",
+    "twitter": "BrucePon",
+    "linkedin": "ponbruce",
+    "image": "bruce"
   },
   {
     "name": "Oana Ionescu",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "three"
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
   },
   {
-    "name": "Matthias",
+    "name": "Cristina Vulpe",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "four"
+    "role": "Design",
+    "twitter": "",
+    "linkedin": "",
+    "image": "cristinaV"
   },
   {
-    "name": "Worjcieh",
+    "name": "Matthias Kretschmann",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "five"
+    "role": "Design & Development",
+    "twitter": "kremalicious",
+    "github": "kremalicious",
+    "image": ""
   },
   {
-    "name": "Trent",
+    "name": "Wojciech Hupert",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "six"
+    "role": "Design",
+    "twitter": "wojciechhupert",
+    "linkedin": "wojciechhupert",
+    "image": "wojciech"
   },
   {
-    "name": "John",
+    "name": "Trent McConaghy",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "seven"
+    "role": "CTO",
+    "twitter": "trentmc0",
+    "github": "trentmc",
+    "linkedin": "trentmc",
+    "image": "trent"
   },
   {
-    "name": "Daniella",
+    "name": "Sylvain Bellmare",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "eight"
+    "role": "Development",
+    "twitter": "sbellem",
+    "github": "sbellem",
+    "linkedin": "sylvainbellemare",
+    "image": ""
   },
   {
-    "name": "Andrew",
+    "name": "Tim Daubenschütz",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "nine"
+    "twitter": "TimDaub",
+    "github": "TimDaub",
+    "image": ""
   },
   {
-    "name": "Tim",
+    "name": "Dimitri De Jonghe",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "ten"
+    "twitter": "DimitriDeJonghe",
+    "github": "diminator",
+    "linkedin": "dimitridejonghe",
+    "image": "dimi"
   },
   {
-    "name": "Sarah",
+    "name": "Gautam Dhameja",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "one"
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "gautam"
   },
   {
-    "name": "Sam",
+    "name": "Jernej Pregelj",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "two"
+    "role": "Development",
+    "twitter": "",
+    "linkedin": "",
+    "image": "jernej"
   },
   {
-    "name": "Christian",
+    "name": "Ahmed Muawia Khan",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "three"
+    "role": "Development",
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
   },
   {
-    "name": "Leonie",
+    "name": "Rodolphe Marques",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "four"
+    "role": "Development",
+    "twitter": "rodmar_",
+    "github": "r-marques",
+    "linkedin": "rodolphemarques",
+    "image": "rodolphe"
   },
   {
-    "name": "Julia",
+    "name": "Troy McConaghy",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "five"
+    "role": "Development",
+    "twitter": "TroyMc",
+    "image": "troy"
   },
   {
-    "name": "Francis",
+    "name": "Gregory McMullen",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "six"
+    "role": "CPO",
+    "twitter": "gmcmullen",
+    "linkedin": "gregmcm",
+    "image": "greg"
   },
   {
-    "name": "Matthew",
+    "name": "Masha McConaghy",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "seven"
+    "role": "CMO",
+    "linkedin": "mashamc",
+    "image": "masha"
+  },
+  {
+    "name": "Kamal Ved",
+    "bio": "Calculated gravity assited trajectories between Earth and Mars",
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "kamal"
   },
   {
     "name": "Richard",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "eight"
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
   },
   {
     "name": "Charlie",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "nine"
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
   },
   {
-    "name": "Cal",
+    "name": "Sarah Vallon",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "ten"
+    "twitter": "",
+    "linkedin": "",
+    "image": "sarah"
   },
   {
-    "name": "Random",
+    "name": "Daniel Lustig",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
+    "role": "Administrative Assistant",
+    "linkedin": "daniel-lustig-852a408a",
     "image": "one"
   },
   {
-    "name": "Francesca",
+    "name": "Katarzyna Kazimierczak",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "two"
+    "role": "Operations Manager",
+    "linkedin": "katarzyna-kazimierczak",
+    "image": "kasia"
   },
   {
-    "name": "Xian",
+    "name": "Don Gossen",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
     "image": "three"
   },
   {
-    "name": "Arian",
+    "name": "Daryl Arnold",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "four"
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "daryl"
   },
   {
-    "name": "Matt",
+    "name": "Chirdeep Chhabra",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "five"
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "chirdeep"
   },
   {
-    "name": "Patrick",
+    "name": "Dinh Xuan Nhat",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "six"
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "dinh"
   },
   {
-    "name": "Felicia",
+    "name": "Timothy Ley",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "seven"
-  },
-  {
-    "name": "Don",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "eight"
-  },
-  {
-    "name": "Maria",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "nine"
-  },
-  {
-    "name": "Pal",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "ten"
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "timothy"
   }
 ]
