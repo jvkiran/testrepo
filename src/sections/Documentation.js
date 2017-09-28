@@ -27,8 +27,8 @@ class Documentation extends Component {
     activeTab: 'technical whitepaper'
   };
   render = () => (
-    <Section id="Documentation">
-      <Title>Download</Title>
+    <Section id="Documentation" background={colors.darkGrey} fontColor={colors.white}>
+      <Title>Learn how Ocean Protocol works</Title>
 
       <Row>
         <Cell width={1 / 3}>

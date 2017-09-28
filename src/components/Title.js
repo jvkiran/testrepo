@@ -6,12 +6,13 @@ const Title = styled.h1`
   font-weight: ${fonts.fontWeight.title};
   line-height: ${fonts.lineHeight.title};
   font-size: ${fonts.size.h1};
-  margin: 1rem auto;
+  margin: 0 auto 4rem auto;
   color: inherit;
   max-width: 800px;
+  text-align: center;
 
   @media screen and (${responsive.sm.max}) {
-    margin: 1.5rem 0;
+    margin: 0 auto 2rem auto;
   }
 `;
 

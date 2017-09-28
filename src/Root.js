@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Welcome from './sections/Welcome';
+import Intro from './sections/Intro';
 import About from './sections/About';
 import UseCases from './sections/UseCases';
 import Documentation from './sections/Documentation';
@@ -17,9 +18,10 @@ const StyledRoot = styled.div`
 const Root = () => (
   <StyledRoot>
     <Welcome />
+    <Intro />
+    <Documentation />
     <About />
     <UseCases />
-    <Documentation />
     <Team />
     <Footer />
   </StyledRoot>
