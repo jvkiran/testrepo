@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import smoothScroll from 'smoothscroll';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
-import oceanLogo from '../assets/logos/ocean-logo.svg';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import { colors, responsive, fonts, layout } from '../styles';
@@ -26,13 +24,6 @@ const StyledHero = styled(Section)`
 const StyledHeroContent = styled.div`
   position: relative;
   z-index: 2;
-`;
-
-const StyledHeader = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `;
 
 const StyledWaves = styled.div`
@@ -69,7 +60,11 @@ const StyledWaves = styled.div`
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(to bottom, rgba(${colors.darkBackground}, 1) 20%, rgba(${colors.darkBackground}, 0) 60%);
+        background: linear-gradient(
+          to bottom,
+          rgba(${colors.darkBackground}, 1) 20%,
+          rgba(${colors.darkBackground}, 0) 60%
+        );
         z-index: 1;
       }
     }
@@ -80,47 +75,20 @@ const StyledWaves = styled.div`
   }
 `;
 
-const StyledNav = styled.nav`
-  text-transform: uppercase;
-  text-align: right;
-  & a {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  @media screen and (${responsive.sm.max}) {
-    display: flex;
-    flex-direction: column;
-    & a {
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-  }
-`;
-
-const StyledLogo = styled.div`
-  height: 44px;
-  & img {
-    height: 100%;
-  }
-`;
-
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
-  margin-top: 5rem;
-  margin-bottom: 1.45rem;
+  margin-top: 10rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
-    margin-top: 2rem;
-    margin-bottom: 0.42rem;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
-const SParagraph = styled(Paragraph)`
-  text-align: center;
-`;
+const SParagraph = styled(Paragraph)`text-align: center;`;
 
 const StyledPoweredBy = styled.div`
   margin-top: 4rem;
@@ -150,67 +118,35 @@ const StyledPoweredBy = styled.div`
 const Welcome = () => (
   <StyledHero id="Welcome" viewport fontColor={colors.white}>
     <StyledHeroContent>
-      <StyledHeader>
-        <a href="/">
-          <StyledLogo>
-            <img src={oceanLogo} alt="Ocean" />
-          </StyledLogo>
-        </a>
-        <StyledNav>
-          <a onClick={smoothScroll} href="#project">
-            Project
-          </a>
-          <a onClick={smoothScroll} href="#Documentation">
-            Whitepaper
-          </a>
-          <a onClick={smoothScroll} href="#data">
-            Data
-          </a>
-          <a onClick={smoothScroll} href="#usecases">
-            Use Cases
-          </a>
-          <a onClick={smoothScroll} href="#team">
-            Team
-          </a>
-          <a
-            href="https://blog.oceanprotocol.com/"
-            target="_blank" //eslint-disable-line
-            rel="noopener"
-          >
-            Blog
-        </a>
-        </StyledNav>
-      </StyledHeader>
-
       <ContentRow>
         <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
       </ContentRow>
       <ContentRow narrow>
         <SParagraph>
-            Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-            consumers of valuable datasets, while providing open access for developers to build services.
+          Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
+          consumers of valuable datasets, while providing open access for developers to build services.
         </SParagraph>
         <StyledPoweredBy>
           <p>Powered by</p>
           <a
             href="https://www.bigchaindb.com/"
             target="_blank" // eslint-disable-line
-            rel="noopener">
-            
+            rel="noopener"
+          >
             <img src={bigchainDBLogo} alt="BigchainDB Logo" />
           </a>
           <a
             href="https://www.dex.sg/"
             target="_blank" // eslint-disable-line
-            rel="noopener">
-            
+            rel="noopener"
+          >
             <img src={dexLogo} alt="Dex Logo" />
           </a>
-          </StyledPoweredBy>
-        </ContentRow>
-      </StyledHeroContent>
+        </StyledPoweredBy>
+      </ContentRow>
+    </StyledHeroContent>
     <StyledWaves>
-      <div id="background"></div>
+      <div id="background" />
     </StyledWaves>
   </StyledHero>
 );

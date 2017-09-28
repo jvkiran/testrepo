@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Menu from './sections/Menu';
 import Welcome from './sections/Welcome';
 import Project from './sections/Project';
 import Data from './sections/Data';
@@ -13,10 +14,12 @@ const StyledRoot = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
+  position: relative;
 `;
 
 const Root = () => (
   <StyledRoot>
+    <Menu />
     <Welcome />
     <Project />
     <Documentation />
