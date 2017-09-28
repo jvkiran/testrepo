@@ -3,6 +3,8 @@ import { responsive } from '../styles';
 
 const Row = styled.div`
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
   & > div {

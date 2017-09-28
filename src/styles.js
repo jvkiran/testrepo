@@ -91,7 +91,9 @@ export const globalStyles = `
     font-stretch: normal;
   }
 
-  * {
+  *,
+  *:before,
+  *:after {
     box-sizing: border-box;
   }
 
@@ -99,10 +101,6 @@ export const globalStyles = `
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-  }
-
-  body {
-    margin: 20px;
   }
 
   html {
@@ -120,6 +118,7 @@ export const globalStyles = `
     font-size: ${fonts.size.base};
     line-height: ${fonts.lineHeight.base};
     font-weight: ${fonts.fontWeight.base};
+    padding: 1.5rem;
   }
 
   button {
@@ -180,49 +179,6 @@ export const globalStyles = `
 
   h4 {
     font-size: ${fonts.size.h4}
-  }
-
-  div#backgroundWrapper {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    margin: 20px;
-    left: 0;
-  }
-
-  div#background {
-    position: relative;
-    width: calc(100vw - 40px);
-    height: calc(100vh - 40px);
-    background: rgb(${colors.darkBackground});
-  }
-
-  div#container {
-    position: absolute;
-    top: 10vh;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-  }
-  @media screen and (${responsive.sm.max}) {
-    div#container {
-      display: none;
-    }
-  }
-  @media screen and (max-height: 700px) {
-    div#container {
-      &:before {
-        content: '';
-        top: 50%;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
-        background: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
-      }
-    }
   }
 
   .dimmed {

@@ -14,9 +14,7 @@ const StyledSection = styled.div`
 
 const StyledColumn = styled.div`
   width: 100%;
-  max-width: 1000px;
   min-height: ${({ minHeight }) => (minHeight ? `${minHeight}px` : 'auto')};
-  margin: 0 auto;
   padding: 6rem 2rem;
   position: relative;
   display: flex;

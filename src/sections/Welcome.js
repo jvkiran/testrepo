@@ -16,6 +16,64 @@ const StyledHeader = styled.div`
   align-items: center;
 `;
 
+const StyledHero = styled(Section)`
+  background: rgb(${colors.darkBackground});
+  padding-top: 0;
+
+  > div {
+    padding-top: 2rem;
+  }
+`;
+
+const StyledHeroContent = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+
+const StyledWaves = styled.div`
+  z-index: 0;
+
+  &,
+  #background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  div#container {
+    position: absolute;
+    top: 10vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
+  @media screen and (${responsive.sm.max}) {
+    div#container {
+      display: none;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    div#container {
+      &:before {
+        content: '';
+        top: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+      }
+    }
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+`;
+
 const StyledNav = styled.nav`
   text-transform: uppercase;
   text-align: right;
@@ -86,58 +144,63 @@ const StyledPoweredBy = styled.div`
 `;
 
 const Welcome = () => (
-  <Section id="Welcome" viewport fontColor={colors.white}>
-    <StyledHeader>
-      <a href="/">
-        <StyledLogo>
-          <img src={oceanLogo} alt="Ocean" />
-        </StyledLogo>
-      </a>
-      <StyledNav>
-        <a onClick={smoothScroll} href="#About">
-          Project
+  <StyledHero id="Welcome" viewport fontColor={colors.white}>
+    <StyledHeroContent>
+      <StyledHeader>
+        <a href="/">
+          <StyledLogo>
+            <img src={oceanLogo} alt="Ocean" />
+          </StyledLogo>
         </a>
-        <a onClick={smoothScroll} href="#UseCases">
-          Use Cases
+        <StyledNav>
+          <a onClick={smoothScroll} href="#About">
+            Project
         </a>
-        <a onClick={smoothScroll} href="#Documentation">
-          Docs
+          <a onClick={smoothScroll} href="#UseCases">
+            Use Cases
         </a>
-        <a onClick={smoothScroll} href="#Team">
-          Team
+          <a onClick={smoothScroll} href="#Documentation">
+            Docs
+        </a>
+          <a onClick={smoothScroll} href="#Team">
+            Team
+        </a>
+          <a
+            href="https://blog.oceanprotocol.com/"
+            target="_blank" //eslint-disable-line
+            rel="noopener"
+          >
+            Blog
+        </a>
+        </StyledNav>
+      </StyledHeader>
+      <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
+      <SParagraph>
+          Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
+          consumers of valuable datasets, while providing open access for developers to build services.
+      </SParagraph>
+      <StyledPoweredBy>
+        <p>Powered by</p>
+        <a
+          href="https://www.bigchaindb.com/"
+          target="_blank" // eslint-disable-line
+          rel="noopener">
+          
+          <img src={bigchainDBLogo} alt="BigchainDB Logo" />
         </a>
         <a
-          href="https://blog.oceanprotocol.com/"
-          target="_blank" //eslint-disable-line
-          rel="noopener"
-        >
-          Blog
+          href="https://www.dex.sg/"
+          target="_blank" // eslint-disable-line
+          rel="noopener">
+          
+          <img src={dexLogo} alt="Dex Logo" />
         </a>
-      </StyledNav>
-    </StyledHeader>
-    <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
-    <SParagraph>
-      Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-      consumers of valuable datasets, while providing open access for developers to build services.
-    </SParagraph>
-    <StyledPoweredBy>
-      <p>Powered by</p>
-      <a
-        href="https://www.bigchaindb.com/"
-        target="_blank" // eslint-disable-line
-        rel="noopener"
-      >
-        <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-      </a>
-      <a
-        href="https://www.dex.sg/"
-        target="_blank" // eslint-disable-line
-        rel="noopener"
-      >
-        <img src={dexLogo} alt="Dex Logo" />
-      </a>
-    </StyledPoweredBy>
-  </Section>
+        </StyledPoweredBy>
+      </StyledHeroContent>
+    <StyledWaves>
+      <div id="background"></div>
+    </StyledWaves>
+  </StyledHero>
 );
 
 export default Welcome;
