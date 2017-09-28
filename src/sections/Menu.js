@@ -28,6 +28,7 @@ const StyledContainer = styled.div`
 const StyledLogo = styled.div`
   height: 44px;
   margin-left: 20px;
+  z-index: 10;
   & img {
     height: 100%;
   }
@@ -127,11 +128,11 @@ class Menu extends Component {
   render = () => (
     <StyledMenu fixed={this.state.fixed}>
       <StyledContainer>
-        <a href="/">
-          <StyledLogo>
+        <StyledLogo>
+          <a href="/">
             <img src={oceanLogo} alt="Ocean" />
-          </StyledLogo>
-        </a>
+          </a>
+        </StyledLogo>
         <StyledNav>
           {MenuItems.map(item => (
             <a key={item.name} onClick={smoothScroll} href={item.href}>
