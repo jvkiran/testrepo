@@ -9,7 +9,6 @@ const StyledSection = styled.div`
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
   margin: 0;
   padding: 0;
-  box-shadow: ${({ shadow }) => (shadow ? '4px 4px 34px 8px rgba(0, 0, 0, 0.5)' : 'none')};
 `;
 
 const StyledColumn = styled.div`

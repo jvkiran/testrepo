@@ -47,6 +47,10 @@ export const transitions = {
   long: 'all 0.3s ease-in-out'
 };
 
+export const layout = {
+  pageFrame: '1rem'
+}
+
 export const responsive = {
   xs: {
     min: 'min-width: 419px',
@@ -118,7 +122,7 @@ export const globalStyles = `
     font-size: ${fonts.size.base};
     line-height: ${fonts.lineHeight.base};
     font-weight: ${fonts.fontWeight.base};
-    padding: 1.5rem;
+    padding: ${layout.pageFrame};
   }
 
   button {

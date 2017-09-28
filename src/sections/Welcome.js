@@ -7,27 +7,31 @@ import Paragraph from '../components/Paragraph';
 import oceanLogo from '../assets/logos/ocean-logo.svg';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
-import { colors, responsive, fonts } from '../styles';
+import { colors, responsive, fonts, layout } from '../styles';
+
+const StyledHero = styled(Section)`
+  background: rgb(${colors.darkBackground});
+  padding-top: 0;
+  min-height: calc(100vh - (${layout.pageFrame} * 2));
+  position: relative;
+
+  > div {
+    padding-top: 2rem;
+    min-height: auto;
+    position: static;
+  }
+`;
+
+const StyledHeroContent = styled.div`
+  position: relative;
+  z-index: 2;
+`;
 
 const StyledHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-const StyledHero = styled(Section)`
-  background: rgb(${colors.darkBackground});
-  padding-top: 0;
-
-  > div {
-    padding-top: 2rem;
-  }
-`;
-
-const StyledHeroContent = styled.div`
-  position: relative;
-  z-index: 1;
 `;
 
 const StyledWaves = styled.div`
@@ -64,7 +68,8 @@ const StyledWaves = styled.div`
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(to bottom, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+        background: linear-gradient(to bottom, rgba(${colors.darkBackground}, 1) 20%, rgba(${colors.darkBackground}, 0) 60%);
+        z-index: 1;
       }
     }
   }
