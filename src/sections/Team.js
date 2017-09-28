@@ -41,33 +41,32 @@ const StyledLine = styled.div`
 `;
 
 const StyledTeam = styled.div`
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
 `;
 
 const StyledMember = styled.div`
   position: relative;
-  margin: 0.5rem 0;
-  width: calc(100% / 10);
+  margin: .25rem .5rem;
+  flex: 1 1 calc(100% / 8);
+
   &:hover > div {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
   }
-  & > img {
-    border-radius: 2px;
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-  @media screen and (${responsive.lg.max}) {
-    width: calc(100% / 6);
-  }
-  @media screen and (${responsive.sm.max}) {
-    width: calc(100% / 5);
-  }
-  @media screen and (${responsive.xs.max}) {
-    width: calc(100% / 3);
+
+  & > figure {
+    display: block;
+    margin: 0;
+
+    > img {
+      border-radius: 2px;
+      max-width: 100%;
+      height: auto;
+    }
   }
 `;
 
@@ -192,7 +191,9 @@ const Team = () => (
         <StyledTeam>
           {team.map(member => (
             <StyledMember key={member.name}>
-              <img src={teamImg[member.image]} alt={member.name} />
+              <figure>
+                <img src={teamImg[member.image]} alt={member.name} />
+              </figure>
               <StyledProfile>
                 <StyledProfileWrapper>
                   <StyledName>{member.name}</StyledName>
