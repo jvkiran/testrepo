@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { responsive, fonts, layout } from '../styles';
+import { responsive, fonts } from '../styles';
 
 const Title = styled.h1`
   font-family: ${fonts.family.title};
