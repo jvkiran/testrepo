@@ -8,7 +8,7 @@ import Row from '../components/Row';
 import Cell from '../components/Cell';
 import DraftFive from '../assets/drafts/draft-5.png';
 import useCases from '../data/useCases.json';
-import { colors, responsive } from '../styles';
+import { colors, responsive, layout } from '../styles';
 
 const STab = styled(Button)`
   margin: 0 20px 1rem 0;
@@ -18,9 +18,10 @@ const STab = styled(Button)`
 
 const StyledTabs = styled.div`
   display: flex;
-  margin-top: 1rem;
+  max-width: ${layout.maxWidth.base};
+  margin: 1rem auto 0 auto;
   @media screen and (${responsive.sm.max}) {
-    margin: 0;
+    margin-top: 0;
     flex-direction: column;
   }
 `;

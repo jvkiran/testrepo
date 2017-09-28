@@ -11,7 +11,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import arrow from '../assets/misc/arrow.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
-import { colors, responsive, transitions } from '../styles';
+import { colors, responsive, transitions, layout } from '../styles';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -19,11 +19,13 @@ const StyledWrapper = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: ${layout.maxWidth.base};
+  margin: 0 auto;
 `;
 
 const StyledLine = styled.div`
   width: 100%;
-  margin: 4rem 0;
+  margin: 0 0 4rem;
   border-bottom: 1px solid rgba(${colors.white}, 0.25);
   @media screen and (${responsive.sm.max}) {
     margin: 2rem 0;

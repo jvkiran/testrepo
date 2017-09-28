@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { responsive } from '../styles';
+import { responsive, layout } from '../styles';
 
 const Row = styled.div`
   width: 100%;
-  max-width: 1000px;
+  max-width: ${layout.maxWidth.base};
   margin: 0 auto;
   display: flex;
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};

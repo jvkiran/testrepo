@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { responsive, fonts } from '../styles';
+import { responsive, fonts, layout } from '../styles';
 
 const Title = styled.h1`
   font-family: ${fonts.family.title};
@@ -8,7 +8,7 @@ const Title = styled.h1`
   font-size: ${fonts.size.h1};
   margin: 0 auto 4rem auto;
   color: inherit;
-  max-width: 800px;
+  max-width: ${layout.maxWidth.small};
   text-align: center;
 
   @media screen and (${responsive.sm.max}) {

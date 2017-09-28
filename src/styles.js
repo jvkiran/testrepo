@@ -48,7 +48,11 @@ export const transitions = {
 };
 
 export const layout = {
-  pageFrame: '1rem'
+  pageFrame: '1rem',
+  maxWidth: {
+    base: '60rem',
+    small: '43rem'
+  }
 }
 
 export const responsive = {
