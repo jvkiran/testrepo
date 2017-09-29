@@ -35,7 +35,7 @@ const StyledSubscribe = styled.div`
     padding: 0.75rem 1rem;
     margin: 1px;
     padding-left: 3rem;
-    background: rgb(${colors.black});
+    background: rgb(${colors.lightGrey});
     color: rgb(${colors.white});
     border: none;
     min-width: 18rem;
@@ -51,12 +51,12 @@ const StyledSubscribe = styled.div`
 
     &:focus {
       &::placeholder {
-        color: rgba(${colors.white}, 0.3);
+        color: rgba(${colors.white}, 0.5);
       }
     }
   }
   & input::placeholder {
-    color: rgba(${colors.white}, 0.5);
+    color: rgba(${colors.white}, 0.65);
   }
   & button {
     color: rgb(${colors.white});
