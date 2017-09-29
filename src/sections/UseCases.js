@@ -50,7 +50,7 @@ class UseCases extends Component {
     activeTab: 'autonomous vehicles'
   };
   render = () => (
-    <Section id="usecases" background={colors.lightGrey} fontColor={colors.white} minHeight={650}>
+    <Section id="usecases" background={colors.grey} fontColor={colors.white} minHeight={650}>
       <ContentRow>
         <Title white>Use Cases</Title>
 

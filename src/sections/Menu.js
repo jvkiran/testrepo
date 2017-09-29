@@ -53,6 +53,7 @@ const StyledNav = styled.nav`
   & a {
     display: inline-block;
     margin-right: 20px;
+    color: rgb(${colors.white});
   }
 
   @media screen and (${responsive.sm.max}) {

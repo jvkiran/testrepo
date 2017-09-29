@@ -3,7 +3,7 @@ export const colors = {
   black: '20, 20, 20',
   dark: '48, 48, 48',
   grey: '65, 71, 78',
-  lightGrey: '53, 58, 64',
+  lightGrey: '139, 152, 169',
   darkGrey: '23, 25, 26',
   darkPurple: '20, 17, 39',
   purple: '123, 17, 115',
@@ -32,7 +32,7 @@ export const fonts = {
     quote: 'Courier New, serif'
   },
   lineHeight: {
-    base: '1.55',
+    base: '1.5',
     title: '1.25'
   },
   fontWeight: {
@@ -156,7 +156,7 @@ export const globalStyles = `
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: rgb(${colors.softPink});
     transition: ${transitions.short};
   }
 

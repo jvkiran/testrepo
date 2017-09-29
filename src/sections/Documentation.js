@@ -10,6 +10,10 @@ import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
 import { colors, fonts, responsive, layout } from '../styles';
 
+const StyledDownload = styled(Button) `
+  margin-left: auto;
+`;
+
 const StyledWhitepaper = styled(Cell)`
   border-radius: 2px;
   margin: 1rem;
@@ -25,6 +29,9 @@ const StyledWhitepaper = styled(Cell)`
       font-size: ${fonts.size.large};
     }
   }
+  ${StyledDownload} {
+    margin-right: auto;
+  }
   @media screen and (${responsive.sm.max}) {
     margin: 0;
   }
@@ -38,10 +45,6 @@ const StyledTitle = styled(Title)`
   }
 `;
 
-const StyledDownload = styled(Button)`
-  margin-left: auto;
-`;
-
 const StyledIntro = styled(Paragraph)`
   font-weight: 600;
   margin-bottom: .75rem;
@@ -51,9 +54,31 @@ const StyledAbstract = styled(Paragraph)`
   margin-bottom: 1.5rem;
 `;
 
+const StyledComments = styled(Paragraph)`
+  color: rgb(${colors.lightGrey});
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+`;
+
 const StyledRow = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  &:first-child {
+    margin-top: 2rem;
+  }
+
+  a {
+    display: block;
+    text-transform: uppercase;
+    color: rgb(${colors.pink});
+    margin-top: -.5rem;
+  }
+
+  h3 {
+    margin-bottom: .75rem;
+  }
 
   @media screen and (${responsive.md.min}) {
     margin-left: 4rem;
@@ -79,6 +104,9 @@ const Documentation = () => (
           <a href="https://google.com">
             <StyledDownload>Download</StyledDownload>
           </a>
+          <StyledComments>
+            Have a comment or sugestions? Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+          </StyledComments>
         </StyledWhitepaper>
         <Cell width={1 / 2}>
           <StyledRow>
@@ -88,7 +116,7 @@ const Documentation = () => (
               exchangers and buyers of data interact with each other. We also cover the technology stack involved.
             </StyledAbstract>
             <a href="https://google.com">
-              <StyledDownload>Download</StyledDownload>
+              Download
             </a>
           </StyledRow>
           <StyledRow>
@@ -99,7 +127,7 @@ const Documentation = () => (
               connect data suppliers and consumers.
             </StyledAbstract>
             <a href="https://google.com">
-              <StyledDownload>Download</StyledDownload>
+              Download
             </a>
           </StyledRow>
         </Cell>
