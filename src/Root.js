@@ -21,17 +21,18 @@ class Root extends Component {
   state = {
     modal: ''
   };
+  toggleModal = (modal = '') => this.setState({ modal });
   render = () => (
     <StyledRoot>
       <Menu />
       <Welcome />
-      <Project />
+      <Project toggleModal={this.toggleModal} />
       <Documentation />
       <Data />
       <UseCases />
-      <Team />
+      <Team toggleModal={this.toggleModal} />
       <Footer />
-      <Modal modal={this.state.modal} />
+      <Modal modal={this.state.modal} toggle={this.toggleModal} />
     </StyledRoot>
   );
 }

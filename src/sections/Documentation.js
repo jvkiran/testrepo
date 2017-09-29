@@ -10,9 +10,7 @@ import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
 import { colors, fonts, responsive } from '../styles';
 
-const StyledDownload = styled(Button) `
-  margin-left: auto;
-`;
+const StyledDownload = styled(Button)`margin-left: auto;`;
 
 const StyledWhitepaper = styled(Cell)`
   border-radius: 2px;
@@ -22,9 +20,9 @@ const StyledWhitepaper = styled(Cell)`
   color: rgb(${colors.grey});
   hyphens: auto;
   ${SubTitle} {
-    opacity: .5;
+    opacity: 0.5;
     margin-top: 2rem;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
     @media screen and (${responsive.sm.max}) {
       font-size: ${fonts.size.large};
     }
@@ -47,12 +45,10 @@ const StyledTitle = styled(Title)`
 
 const StyledIntro = styled(Paragraph)`
   font-weight: 600;
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 `;
 
-const StyledAbstract = styled(Paragraph)`
-  margin-bottom: 1.5rem;
-`;
+const StyledAbstract = styled(Paragraph)`margin-bottom: 1.5rem;`;
 
 const StyledComments = styled(Paragraph)`
   color: rgb(${colors.lightGrey});
@@ -73,11 +69,11 @@ const StyledRow = styled.div`
     display: block;
     text-transform: uppercase;
     color: rgb(${colors.pink});
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
   }
 
   h3 {
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
 
   @media screen and (${responsive.md.min}) {
@@ -95,17 +91,22 @@ const Documentation = () => (
           <StyledTitle>Whitepaper</StyledTitle>
           <SubTitle>Abstract</SubTitle>
           <StyledIntro>
-            This paper presents a decentralized data marketplace protocol and network called Ocean, on which data marketplaces can be built.
+            This paper presents a decentralized data marketplace protocol and network called Ocean, on which data
+            marketplaces can be built.
           </StyledIntro>
           <StyledAbstract>
-            The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups
-            have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves.
+            The world has recognized the value of data, but it’s been very difficult to establish a price for the data
+            (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts
+            of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial
+            intelligence (AI), but lack the data to make their AI models perform. To address this problem, data
+            marketplaces have emerged, but they are silos themselves.
           </StyledAbstract>
           <a href="https://google.com">
             <StyledDownload>Download</StyledDownload>
           </a>
           <StyledComments>
-            Have a comment or suggestions? Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+            Have a comment or suggestions? <br />
+            Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
           </StyledComments>
         </StyledWhitepaper>
         <Cell width={1 / 2}>
@@ -115,9 +116,7 @@ const Documentation = () => (
               A quick introduction to the Ocean Protocol and how it should function. We explain how the suppliers,
               exchangers and buyers of data interact with each other. We also cover the technology stack involved.
             </StyledAbstract>
-            <a href="https://google.com">
-              Download
-            </a>
+            <a href="https://google.com">Download</a>
           </StyledRow>
           <StyledRow>
             <SubTitle>Manifesto</SubTitle>
@@ -126,9 +125,7 @@ const Documentation = () => (
               potential. Conversely, data consumers like AI startups are starving for data. Data marketplaces can
               connect data suppliers and consumers.
             </StyledAbstract>
-            <a href="https://google.com">
-              Download
-            </a>
+            <a href="https://google.com">Download</a>
           </StyledRow>
         </Cell>
       </Grid>

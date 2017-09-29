@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import jsonp from 'jsonp';
-import emailIcon from '../assets/misc/email-icon.svg';
+import emailWhite from '../assets/misc/email-white.svg';
 import Button from './Button';
 import { colors, responsive, transitions, fonts } from '../styles';
 
@@ -150,7 +150,7 @@ class SubscribeForm extends React.Component {
     const { status } = this.state;
     return (
       <StyledSubscribe maxWidth={maxWidth} {...props}>
-        <img src={emailIcon} alt="email" />
+        <img src={emailWhite} alt="email" />
         <form action={action} method="post" noValidate>
           <div>
             <input

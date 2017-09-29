@@ -1,15 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import emailIcon from '../assets/misc/email-icon.svg';
-import { colors, fonts, responsive, transitions } from '../styles';
+import emailGrey from '../assets/misc/email-grey.svg';
+import { colors, fonts, transitions } from '../styles';
 
 const StyledInputWrapper = styled.div`
   border-radius: 2px;
   position: relative;
   width: 100%;
   padding: 1px;
+  margin: 1rem 0;
   background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
+
+  & img {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    height: 1rem;
+    opacity: 0.7;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -26,12 +35,6 @@ const StyledInput = styled.input`
   box-shadow: none;
   transition: ${transitions.short};
 
-  @media screen and (${responsive.sm.max}) {
-    text-align: center;
-    width: 100%;
-    min-width: 0;
-  }
-
   &::placeholder {
     color: rgba(${colors.black}, 0.5);
   }
@@ -43,19 +46,23 @@ const StyledInput = styled.input`
   }
 `;
 
-const Input = ({ icon, ...props }) => (
+const StyledTextarea = StyledInput.withComponent('textarea');
+
+const Input = ({ icon, type, ...props }) => (
   <StyledInputWrapper>
-    {icon && <img src={emailIcon} alt="email" />}
-    <StyledInput icon={icon} {...props} />
+    {icon && <img src={emailGrey} alt="email" />}
+    {type === 'textarea' ? <StyledTextarea icon={icon} {...props} /> : <StyledInput icon={icon} {...props} />}
   </StyledInputWrapper>
 );
 
 Input.propTypes = {
-  icon: PropTypes.bool
+  icon: PropTypes.bool,
+  type: PropTypes.string
 };
 
 Input.defaultProps = {
-  icon: false
+  icon: false,
+  type: 'text'
 };
 
 export default Input;

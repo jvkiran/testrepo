@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
@@ -48,6 +49,13 @@ const StyledCard = styled.div`
   box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
   border: 1px solid rgba(${colors.black}, 0.07);
   transition: ${transitions.base};
+  color: rgb(${colors.grey});
+  display: block;
+  padding: 2.5rem;
+  cursor: pointer;
+  @media screen and (${responsive.md.max}) {
+    padding: 1.5rem;
+  }
   @media screen and (${responsive.sm.max}) {
     width: 100%;
     &:first-child {
@@ -66,14 +74,6 @@ const StyledCard = styled.div`
     box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
     transform: none;
     transition: none;
-  }
-  a {
-    color: rgb(${colors.grey});
-    display: block;
-    padding: 2.5rem;
-    @media screen and (${responsive.md.max}) {
-      padding: 1.5rem;
-    }
   }
   h4 {
     margin-top: 0;
@@ -102,8 +102,8 @@ const StyledCard = styled.div`
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 6px;
-    left: calc(100% + 12px);
+    top: 4px;
+    left: calc(100% + 10px);
     background: url(${arrow}) no-repeat;
   }
   &:first-child {
@@ -148,32 +148,28 @@ const StyledDataDots = styled.div`
   }
 `;
 
-const Project = () => (
-  <Section id="project">
+const Project = ({ toggleModal, ...props }) => (
+  <Section id="project" {...props}>
     <ContentRow>
       <Title>
         Ocean protocol <br />unlocks data
       </Title>
 
       <StyledData width={1}>
-        <StyledCard>
-          <a href="">
-            <h4>Data Owners</h4>
-            <p>Unlock your data and earn through the Ocean protocol.</p>
-            <button>SELL DATA</button>
-          </a>
+        <StyledCard onClick={() => toggleModal('sell')}>
+          <h4>Data Owners</h4>
+          <p>Unlock your data and earn through the Ocean protocol.</p>
+          <button>SELL DATA</button>
         </StyledCard>
         <StyledDataTransfer>
           <StyledDataDots img={dataDotsLeft} />
           <StyledDataDots img={dataDotsRight} />
           <Pulse />
         </StyledDataTransfer>
-        <StyledCard>
-          <a href="">
-            <h4>Data Customers</h4>
-            <p>Buy data to power your algorithms.</p>
-            <button>BUY DATA</button>
-          </a>
+        <StyledCard onClick={() => toggleModal('buy')}>
+          <h4>Data Customers</h4>
+          <p>Buy data to power your algorithms.</p>
+          <button>BUY DATA</button>
         </StyledCard>
       </StyledData>
       <Grid wrap>
@@ -198,5 +194,9 @@ const Project = () => (
     </ContentRow>
   </Section>
 );
+
+Project.propTypes = {
+  toggleModal: PropTypes.func.isRequired
+};
 
 export default Project;

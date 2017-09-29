@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
@@ -213,7 +214,7 @@ const StyledButton = styled(Button)`
   }
 `;
 
-const Team = () => (
+const Team = ({ toggleModal, ...props }) => (
   <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
@@ -306,31 +307,17 @@ const Team = () => (
         <StyledLine />
 
         <StyledActions>
-          <a
-            href=""
-            target="_blank" // eslint-disable-line
-            rel="noopener"
-          >
-            <StyledButton>I have data</StyledButton>
-          </a>
-          <a
-            href=""
-            target="_blank" // eslint-disable-line
-            rel="noopener"
-          >
-            <StyledButton>Join the community</StyledButton>
-          </a>
-          <a
-            href=""
-            target="_blank" // eslint-disable-line
-            rel="noopener"
-          >
-            <StyledButton>I want data</StyledButton>
-          </a>
+          <StyledButton onClick={() => toggleModal('sell')}>I have data</StyledButton>
+          <StyledButton onClick={() => toggleModal('contribute')}>Join the community</StyledButton>
+          <StyledButton onClick={() => toggleModal('buy')}>I want data</StyledButton>
         </StyledActions>
       </ContentRow>
     </StyledWrapper>
   </Section>
 );
+
+Team.propTypes = {
+  toggleModal: PropTypes.func.isRequired
+};
 
 export default Team;
