@@ -6,6 +6,7 @@ import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
+import wavesStatic from '../assets/misc/waves.png';
 import { colors, responsive, fonts, layout } from '../styles';
 
 const StyledHero = styled(Section)`
@@ -31,6 +32,15 @@ const StyledHeroContent = styled.div`
 
 const StyledWaves = styled.div`
   z-index: 0;
+
+  background: none;
+
+  @media screen  and (${responsive.sm.max}) {
+    background: url(${wavesStatic}) no-repeat;
+    background-size: cover;
+    background-position-y: 5rem;
+    background-position-x: -5rem;
+  }
 
   &,
   #background {
