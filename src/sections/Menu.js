@@ -7,14 +7,16 @@ import { colors, responsive, transitions, layout } from '../styles';
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
-  width: ${({ fixed }) => (fixed ? `calc(100% - (${layout.pageFrame} * 2))` : '100%')};
+  width: calc(100% - (${layout.pageFrame} * 2));
   position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
   top: ${({ fixed }) => (fixed ? '0' : 'auto')};
-  left: ${({ fixed }) => (fixed ? `${layout.pageFrame}` : 'auto')};
-  right: ${({ fixed }) => (fixed ? `${layout.pageFrame}` : 'auto')};
-  padding: ${({ fixed }) => (fixed ? '10px 20px' : '20px')};
+  left: ${layout.pageFrame};
+  right: ${layout.pageFrame};
+  margin: ${({ fixed }) => (fixed ? '-100px 0' : '10px 0')};
+  transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
+  padding: 10px 20px;
   z-index: 5;
-  transition: ${transitions.long};
+  transition: transform 0.3s ease-in-out;
 `;
 
 const StyledContainer = styled.div`
