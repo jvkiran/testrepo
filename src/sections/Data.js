@@ -12,9 +12,28 @@ import dataLocked from '../assets/graphics/data-locked.svg';
 import dataUnavailable from '../assets/graphics/data-unavailable.svg';
 import { responsive } from '../styles';
 
+const StyledGrid = styled(Grid)`@media screen and (${responsive.sm.max}) {margin-top: 4rem;}`;
+
+const StyledFirstGrid = styled(StyledGrid)`align-items: flex-end;`;
+
+const StyledSecondGrid = styled(StyledGrid)`
+  align-items: center;
+  @media screen and (${responsive.sm.min}) {
+    margin: 4rem 0;
+  }
+`;
+
 const StyledUnalyzed = styled.img`
   width: auto;
   height: 100%;
+  @media screen and (${responsive.sm.min}) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
   @media screen and (${responsive.sm.max}) {
     padding: 1rem 3rem;
   }
@@ -22,6 +41,14 @@ const StyledUnalyzed = styled.img`
 
 const StyledLocked = styled.img`
   padding: 3rem 6rem 0 0;
+  @media screen and (${responsive.sm.min}) {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+  }
   @media screen and (${responsive.sm.max}) {
     padding: 0 2rem;
   }
@@ -40,7 +67,7 @@ const Data = () => (
     <ContentRow>
       <Title>Only 1% of collected data is analyzed</Title>
 
-      <Grid left>
+      <StyledFirstGrid left>
         <Cell center width={1 / 3}>
           <StyledUnalyzed src={dataUnanalyzed} alt="data unanalyzed" />
         </Cell>
@@ -51,9 +78,9 @@ const Data = () => (
             vital to daily life for consumers, governments, and businesses alike.
           </Paragraph>
         </Cell>
-      </Grid>
+      </StyledFirstGrid>
 
-      <Grid>
+      <StyledSecondGrid>
         <Cell center width={1 / 3}>
           <StyledLocked src={dataLocked} alt="data locked" />
         </Cell>
@@ -64,9 +91,9 @@ const Data = () => (
             every organization safely and securely, value can spread and be shared.{' '}
           </Paragraph>
         </Cell>
-      </Grid>
+      </StyledSecondGrid>
 
-      <Grid wrap textCenter>
+      <StyledGrid wrap textCenter>
         <Cell width={1}>
           <SubTitle>Data is widely available but owned by few</SubTitle>
         </Cell>
@@ -79,7 +106,7 @@ const Data = () => (
             and most startups are starving for data.
           </Paragraph>
         </Cell>
-      </Grid>
+      </StyledGrid>
     </ContentRow>
   </Section>
 );
