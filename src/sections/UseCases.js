@@ -52,7 +52,7 @@ class UseCases extends Component {
   render = () => (
     <Section id="usecases" background={colors.lightGrey} fontColor={colors.white} minHeight={650}>
       <ContentRow>
-        <Title>Use Cases</Title>
+        <Title white>Use Cases</Title>
 
         <StyledTabs>
           {Object.keys(useCases).map(tab => (

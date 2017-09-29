@@ -17,7 +17,7 @@ const StyledButton = styled.button`
   font-weight: ${fonts.fontWeight.title};
   line-height: 1.38;
   text-transform: uppercase;
-  margin: 20px 0;
+  margin: 0;
   border-radius: 5px;
   transition: ${transitions.short};
   color: rgb(${colors.white});

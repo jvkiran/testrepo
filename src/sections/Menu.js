@@ -9,7 +9,7 @@ const StyledMenu = styled.div`
   background: rgb(${colors.black});
   transition: transform 0.3s ease-in-out;
   transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
-  padding: 10px 20px;
+  padding: .75rem 1rem;
   z-index: 5;
   @media screen and (${responsive.sm.min}) {
     position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
@@ -17,7 +17,8 @@ const StyledMenu = styled.div`
     top: ${({ fixed }) => (fixed ? '0' : 'auto')};
     left: ${layout.pageFrame};
     right: ${layout.pageFrame};
-    margin: ${({ fixed }) => (fixed ? '-100px 0' : '10px 0')};
+    margin: ${({ fixed }) => (fixed ? '-100px 0' : '1.5rem 0 0 0')};
+    border-top: ${({ fixed }) => (fixed ? `${layout.pageFrame} solid #fff` : '0')};
   }
   @media screen and (${responsive.sm.max}) {
     position: absolute;
@@ -37,7 +38,7 @@ const StyledContainer = styled.div`
 `;
 
 const StyledLogo = styled.div`
-  height: 44px;
+  height: 60px;
   z-index: 10;
   margin-left: 20px;
   & img {

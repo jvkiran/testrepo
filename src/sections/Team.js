@@ -220,7 +220,7 @@ const Team = () => (
   <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
-        <StyledTitle>The People Building The Ocean Protocol</StyledTitle>
+        <StyledTitle white>The People Building The Ocean Protocol</StyledTitle>
       </ContentRow>
 
       <ContentRow narrow>

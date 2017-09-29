@@ -86,13 +86,14 @@ const StyledWaves = styled.div`
 
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
-  margin-top: 10rem;
+  margin-top: 15%;
   margin-bottom: 1.5rem;
   text-align: center;
+  color: #fff;
 
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 0.5rem;
   }
 `;
