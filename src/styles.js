@@ -2,8 +2,8 @@ export const colors = {
   white: '255, 255, 255',
   black: '20, 20, 20',
   dark: '48, 48, 48',
-  grey: '38, 41, 45',
-  lightGrey: '53, 58, 64',
+  grey: '65, 71, 78',
+  lightGrey: '139, 152, 169',
   darkGrey: '23, 25, 26',
   darkPurple: '20, 17, 39',
   purple: '123, 17, 115',
@@ -19,7 +19,7 @@ export const fonts = {
     base: '1rem',
     large: '1.25rem',
     small: '.85rem',
-    h1: '3.2rem',
+    h1: '3rem',
     h2: '2.7rem',
     h3: '2rem',
     h4: '1.5rem',
@@ -32,7 +32,7 @@ export const fonts = {
     quote: 'Courier New, serif'
   },
   lineHeight: {
-    base: '1.65',
+    base: '1.5',
     title: '1.25'
   },
   fontWeight: {
@@ -48,7 +48,7 @@ export const transitions = {
 };
 
 export const layout = {
-  pageFrame: '1rem',
+  pageFrame: '.75rem',
   maxWidth: {
     wide: '80rem',
     base: '60rem',
@@ -156,7 +156,7 @@ export const globalStyles = `
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: rgb(${colors.softPink});
     transition: ${transitions.short};
   }
 
@@ -175,7 +175,7 @@ export const globalStyles = `
 
   h1, h2, h3, h4, h5 {
       font-family: ${fonts.family.title};
-      color: inherit;
+      color: rgb(${colors.black});
       line-height: ${fonts.lineHeight.title};
       font-weight: ${fonts.fontWeight.title};
   }
@@ -194,6 +194,10 @@ export const globalStyles = `
 
   h4 {
     font-size: ${fonts.size.h4}
+  }
+
+  h5 {
+    font-size: ${fonts.size.h5}
   }
 
   .dimmed {

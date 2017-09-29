@@ -36,7 +36,8 @@ const StyledLine = styled.div`
   margin-bottom: 4rem;
   border-bottom: 1px solid rgba(${colors.white}, 0.25);
   @media screen and (${responsive.sm.max}) {
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -69,7 +70,7 @@ const StyledMember = styled.div`
 
   & > img {
     margin: 0;
-    border-radius: 0.2rem;
+    border-radius: 50%;
     max-width: 100%;
     height: auto;
     filter: grayscale(100%);
@@ -106,7 +107,7 @@ const StyledProfileWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 15px;
+  padding: 1rem;
   & > img {
     position: absolute;
     width: 20px;
@@ -129,12 +130,13 @@ const StyledProfileWrapper = styled.div`
 
 const StyledName = styled.h3`
   font-size: ${fonts.size.base};
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0.05rem;
   color: rgb(${colors.dark});
 `;
 
 const StyledRole = styled.h4`
-  font-size: ${fonts.size.base};
+  font-size: ${fonts.size.small};
   margin: 0;
   color: rgb(${colors.dark});
   opacity: 0.5;
@@ -142,12 +144,17 @@ const StyledRole = styled.h4`
 
 const StyledBio = styled.p`
   font-size: ${fonts.size.small};
+  line-height: ${fonts.lineHeight.title};
   color: rgb(${colors.dark});
 `;
 
 const StyledLinks = styled.div`
   display: flex;
   margin-top: 1rem;
+
+  &:empty {
+    display: none;
+  }
 `;
 
 const StyledIcon = styled.a`
@@ -162,7 +169,7 @@ const StyledIcon = styled.a`
 `;
 
 const StyledCompanies = styled.div`
-  margin-top: 2rem;
+  margin: 4rem 0 0 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
@@ -210,7 +217,7 @@ const Team = () => (
   <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
-        <StyledTitle>The People Building The Ocean Protocol</StyledTitle>
+        <StyledTitle white>The People Building The Ocean Protocol</StyledTitle>
       </ContentRow>
 
       <ContentRow narrow>
@@ -231,7 +238,7 @@ const Team = () => (
                 <StyledProfileWrapper idx={idx}>
                   <StyledName>{member.name}</StyledName>
                   <StyledRole>{member.role}</StyledRole>
-                  <StyledBio>{member.bio}</StyledBio>
+                  {!!member.bio && <StyledBio>{member.bio}</StyledBio>}
                   <StyledLinks>
                     {!!member.linkedin && (
                       <StyledIcon

@@ -14,7 +14,7 @@ const StyledSection = styled.div`
 const StyledColumn = styled.div`
   width: 100%;
   min-height: ${({ minHeight }) => (minHeight ? `${minHeight}px` : 'auto')};
-  padding: 6rem ${layout.pageFrame};
+  padding: 6rem calc(${layout.pageFrame} * 2);
   position: relative;
   display: flex;
   color ${({ fontColor }) => `rgb(${fontColor})`};

@@ -1,207 +1,45 @@
 [
   {
-    "name": "Cristina Pon",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "cristinapon",
-    "linkedin": "cristinapon",
-    "image": "cristina"
-  },
-  {
     "name": "Bruce Pon",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "CEO",
+    "role": "CEO · BigchainDB",
     "twitter": "BrucePon",
     "linkedin": "ponbruce",
     "image": "bruce"
   },
   {
-    "name": "Oana Ionescu",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "linkedin": "oanavoicu",
-    "image": ""
-  },
-  {
-    "name": "Matthias Kretschmann",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Design & Development",
-    "twitter": "kremalicious",
-    "github": "kremalicious",
-    "image": ""
-  },
-  {
-    "name": "Wojciech Hupert",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Design",
-    "twitter": "wojciechhupert",
-    "linkedin": "wojciechhupert",
-    "image": "wojciech"
-  },
-  {
     "name": "Trent McConaghy",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "CTO",
+    "role": "CTO · BigchainDB",
     "twitter": "trentmc0",
     "github": "trentmc",
     "linkedin": "trentmc",
     "image": "trent"
   },
   {
-    "name": "Sylvain Bellmare",
+    "name": "Masha McConaghy",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "sbellem",
-    "github": "sbellem",
-    "linkedin": "sylvainbellemare",
-    "image": ""
-  },
-  {
-    "name": "Tim Daubenschütz",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "TimDaub",
-    "github": "TimDaub",
-    "image": ""
-  },
-  {
-    "name": "Dimitri De Jonghe",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "DimitriDeJonghe",
-    "github": "diminator",
-    "linkedin": "dimitridejonghe",
-    "image": "dimi"
-  },
-  {
-    "name": "Gautam Dhameja",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
-    "twitter": "",
-    "linkedin": "",
-    "image": "gautam"
-  },
-  {
-    "name": "Jernej Pregelj",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "",
-    "linkedin": "",
-    "image": "jernej"
-  },
-  {
-    "name": "Ahmed Muawia Khan",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "",
-    "linkedin": "",
-    "image": ""
-  },
-  {
-    "name": "Rodolphe Marques",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "rodmar_",
-    "github": "r-marques",
-    "linkedin": "rodolphemarques",
-    "image": "rodolphe"
-  },
-  {
-    "name": "Alberto Granzotto",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "vrde",
-    "github": "vrde",
-    "image": ""
-  },
-  {
-    "name": "Morgan Sutherland",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
-    "twitter": "",
-    "github": "",
-    "image": ""
-  },
-  {
-    "name": "Troy McConaghy",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "TroyMc",
-    "image": "troy"
+    "role": "CMO · BigchainDB",
+    "linkedin": "mashamc",
+    "image": "masha"
   },
   {
     "name": "Gregory McMullen",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "CPO",
+    "role": "CPO · BigchainDB & IPDB",
     "twitter": "gmcmullen",
     "linkedin": "gregmcm",
     "image": "greg"
   },
   {
-    "name": "Masha McConaghy",
+    "name": "Chirdeep Chhabra",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "CMO",
-    "linkedin": "mashamc",
-    "image": "masha"
-  },
-  {
-    "name": "Kamal Ved",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
+    "role": "· Dex",
     "twitter": "",
     "linkedin": "",
-    "image": "kamal"
-  },
-  {
-    "name": "Richard",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "",
-    "linkedin": "",
-    "image": ""
-  },
-  {
-    "name": "Charlie",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "",
-    "linkedin": "",
-    "image": ""
-  },
-  {
-    "name": "Sarah Vallon",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Marketing",
-    "twitter": "",
-    "linkedin": "",
-    "image": "sarah"
-  },
-  {
-    "name": "Daniel Lustig",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Happiness Manager",
-    "linkedin": "daniel-lustig-852a408a",
-    "image": "daniel"
-  },
-  {
-    "name": "Katarzyna Kazimierczak",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Operations Manager",
-    "linkedin": "katarzyna-kazimierczak",
-    "image": "kasia"
-  },
-  {
-    "name": "Shahbay Nazir",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "DevOps Engineer",
-    "github": "shahbazn",
-    "linkedin": "shahbaz-nazir-84766451",
-    "twitter": "shahbaz_nazir",
-    "image": ""
+    "image": "chirdeep"
   },
   {
     "name": "Don Gossen",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "",
     "twitter": "",
     "linkedin": "",
@@ -209,34 +47,170 @@
   },
   {
     "name": "Daryl Arnold",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
+    "role": "· Dex",
     "twitter": "",
     "linkedin": "",
     "image": "daryl"
   },
   {
-    "name": "Chirdeep Chhabra",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
-    "twitter": "",
-    "linkedin": "",
-    "image": "chirdeep"
-  },
-  {
     "name": "Dinh Xuan Nhat",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
+    "role": "· Dex",
     "twitter": "",
     "linkedin": "",
     "image": "dinh"
   },
   {
     "name": "Timothy Ley",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "",
+    "role": "· Dex",
     "twitter": "",
     "linkedin": "",
     "image": "timothy"
+  },
+  {
+    "name": "Cristina Pon",
+    "role": "Marketing · BigchainDB",
+    "twitter": "cristinapon",
+    "linkedin": "cristinapon",
+    "image": "cristina"
+  },
+  {
+    "name": "Oana Ionescu",
+    "role": "Marketing · BigchainDB",
+    "linkedin": "oanavoicu",
+    "image": ""
+  },
+  {
+    "name": "Matthias Kretschmann",
+    "role": "Designer & Engineer · BigchainDB & IPDB",
+    "twitter": "kremalicious",
+    "github": "kremalicious",
+    "image": ""
+  },
+  {
+    "name": "Wojciech Hupert",
+    "role": "Designer · BigchainDB & IPDB",
+    "twitter": "wojciechhupert",
+    "linkedin": "wojciechhupert",
+    "image": "wojciech"
+  },
+  {
+    "name": "Sylvain Bellmare",
+    "role": "Engineer · BigchainDB",
+    "twitter": "sbellem",
+    "github": "sbellem",
+    "linkedin": "sylvainbellemare",
+    "image": ""
+  },
+  {
+    "name": "Tim Daubenschütz",
+    "role": "Product Manager · BigchainDB",
+    "twitter": "TimDaub",
+    "github": "TimDaub",
+    "image": ""
+  },
+  {
+    "name": "Dimitri De Jonghe",
+    "role": "Application Director · BigchainDB",
+    "twitter": "DimitriDeJonghe",
+    "github": "diminator",
+    "linkedin": "dimitridejonghe",
+    "image": "dimi"
+  },
+  {
+    "name": "Gautam Dhameja",
+    "role": "Application Engineer · BigchainDB",
+    "twitter": "",
+    "linkedin": "",
+    "image": "gautam"
+  },
+  {
+    "name": "Jernej Pregelj",
+    "role": "Application Engineer · BigchainDB",
+    "twitter": "",
+    "linkedin": "",
+    "image": "jernej"
+  },
+  {
+    "name": "Muawia Khan",
+    "role": "DevOps Engineer · BigchainDB & IPDB",
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
+  },
+  {
+    "name": "Shahbay Nazir",
+    "role": "DevOps Engineer · BigchainDB & IPDB",
+    "github": "shahbazn",
+    "linkedin": "shahbaz-nazir-84766451",
+    "twitter": "shahbaz_nazir",
+    "image": ""
+  },
+  {
+    "name": "Rodolphe Marques",
+    "role": "Protocols · BigchainDB",
+    "twitter": "rodmar_",
+    "github": "r-marques",
+    "linkedin": "rodolphemarques",
+    "image": "rodolphe"
+  },
+  {
+    "name": "Alberto Granzotto",
+    "role": "Engineer · BigchainDB",
+    "twitter": "vrde",
+    "github": "vrde",
+    "image": ""
+  },
+  {
+    "name": "Morgan Sutherland",
+    "role": "Engineer · IPDB",
+    "twitter": "",
+    "github": "",
+    "image": ""
+  },
+  {
+    "name": "Sarah Vallon",
+    "role": "Marketing · BigchainDB",
+    "twitter": "",
+    "linkedin": "",
+    "image": "sarah"
+  },
+  {
+    "name": "Troy McConaghy",
+    "role": "Engineer · BigchainDB & IPDB",
+    "twitter": "TroyMc",
+    "image": "troy"
+  },
+  {
+    "name": "Kamal Ved",
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": "kamal"
+  },
+  {
+    "name": "Richard",
+    "role": "Marketing · Balance",
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
+  },
+  {
+    "name": "Charlie",
+    "role": "Marketing · Balance",
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
+  },
+  {
+    "name": "Daniel Lustig",
+    "role": "Happiness Manager · BigchainDB",
+    "linkedin": "daniel-lustig-852a408a",
+    "image": "daniel"
+  },
+  {
+    "name": "Katarzyna Kazimierczak",
+    "role": "Operations Manager · BigchainDB",
+    "linkedin": "katarzyna-kazimierczak",
+    "image": "kasia"
   }
 ]

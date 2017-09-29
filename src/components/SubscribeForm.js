@@ -41,7 +41,7 @@ const StyledSubscribe = styled.div`
     padding: 0.75rem 1rem;
     margin: 1px;
     padding-left: 3rem;
-    background: rgb(${colors.lightGrey});
+    background: rgb(${colors.darkGrey});
     color: rgb(${colors.white});
     border: none;
     min-width: 18rem;

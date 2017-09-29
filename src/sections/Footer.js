@@ -45,11 +45,11 @@ const StyledSocialLinks = styled.div`
 `;
 
 const Footer = () => (
-  <Section id="footer" background={colors.lightGrey} fontColor={colors.white}>
+  <Section id="footer" background={colors.grey} fontColor={colors.white}>
     <ContentRow>
       <Grid>
         <Cell width={1 / 2}>
-          <Title>Get Involved</Title>
+          <Title white>Get Involved</Title>
           <SubscribeForm maxWidth={28} />
           <StyledActions>
             <StyledSocialLinks>
@@ -72,7 +72,7 @@ const Footer = () => (
           </StyledActions>
         </Cell>
         <Cell width={1 / 2}>
-          <Title>About</Title>
+          <Title white>About</Title>
           <Paragraph>
             Ocean Protocol Foundation. Ocean is supported by a Singapore based non-profit foundation, whose mandate is
             to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem
