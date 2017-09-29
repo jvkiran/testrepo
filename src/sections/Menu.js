@@ -104,7 +104,7 @@ const MenuItems = [
   },
   {
     name: 'Blog',
-    href: '#blog'
+    href: 'https://blog.oceanprotocol.com/'
   }
 ];
 
@@ -145,10 +145,11 @@ class Menu extends Component {
     this.setState({ active: !this.state.active });
   };
   onSmoothScroll = e => {
-    e.preventDefault();
-    if (this.state.active) this.toggleMobileMenu();
-    // const href = e.target.getAttribute('href');
-    smoothScroll(e);
+    if (e.target.getAttribute('href').indexOf('#') !== -1) {
+      e.preventDefault();
+      if (this.state.active) this.toggleMobileMenu();
+      smoothScroll(e);
+    }
   };
 
   componentWillUnmount() {
