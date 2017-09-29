@@ -32,7 +32,7 @@ const StyledUnalyzed = styled.img`
 
 const StyledFirstGrid = styled(StyledGrid)`
   align-items: flex-end;
-  margin-top: 8rem;
+  margin-top: 7rem;
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
@@ -41,11 +41,12 @@ const StyledFirstGrid = styled(StyledGrid)`
 const StyledLocked = styled.img`
   max-height: 300px;
   @media screen and (${responsive.sm.min}) {
-    max-width: 300px;
+    max-width: 320px;
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
+    transform: scale(1.2) translateX(2rem);
   }
   @media screen and (${responsive.sm.max}) {
     padding: 0 2rem;
@@ -55,7 +56,7 @@ const StyledLocked = styled.img`
 const StyledSecondGrid = styled(StyledGrid)`
   align-items: center;
   @media screen and (${responsive.sm.min}) {
-    margin: 10rem 0;
+    margin: 8rem 0;
   }
   @media screen and (${responsive.sm.max}) {
     text-align: center;
@@ -63,7 +64,6 @@ const StyledSecondGrid = styled(StyledGrid)`
 `;
 
 const StyledUnavailable = styled.img`
-  margin: 3rem 0;
   max-height: 300px;
   @media screen and (${responsive.sm.max}) {
     width: 300% !important;
@@ -75,11 +75,6 @@ const StyledUnavailable = styled.img`
 
 const StyledThirdGrid = styled(StyledGrid)`
   margin-bottom: 4rem;
-  @media screen and (${responsive.sm.max}) {
-    & > div:nth-child(2) {
-      order: -1;
-    }
-  }
 `;
 
 const Data = () => (
@@ -114,17 +109,15 @@ const Data = () => (
       </StyledSecondGrid>
 
       <StyledThirdGrid wrap textCenter>
-        <Cell width={1}>
-          <SubTitle>Data is widely available but owned by few</SubTitle>
-        </Cell>
-        <Cell center width={1}>
-          <StyledUnavailable src={dataUnavailable} alt="data unavailable" />
-        </Cell>
         <Cell width={1} maxWidth="narrow">
+          <SubTitle>Data is widely available but owned by few</SubTitle>
           <Paragraph>
             Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data
             and most startups are starving for data.
           </Paragraph>
+        </Cell>
+        <Cell center width={1}>
+          <StyledUnavailable src={dataUnavailable} alt="data unavailable" />
         </Cell>
       </StyledThirdGrid>
     </ContentRow>

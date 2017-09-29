@@ -87,7 +87,7 @@ const StyledProfile = styled.div`
   left: calc(-150px + 50%);
   bottom: 115%;
   position: absolute;
-  z-index: 0;
+  z-index: 5;
   background: rgb(${colors.white});
   color: rgb(${colors.dark});
   box-shadow: 2px 2px 27px 2px rgba(0, 0, 0, 0.11), 2px 2px 5px 2px rgba(0, 0, 0, 0.39);

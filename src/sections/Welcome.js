@@ -96,6 +96,11 @@ const StyledTagline = styled(Title)`
     margin-top: 6rem;
     margin-bottom: 0.5rem;
   }
+
+  @media screen and (${responsive.md.min}) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 `;
 
 const SParagraph = styled(Paragraph)`
@@ -104,7 +109,7 @@ const SParagraph = styled(Paragraph)`
 `;
 
 const StyledPoweredBy = styled.div`
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 4rem;
   font-size: ${fonts.size.small};
   font-weight: ${fonts.fontWeight.title};
