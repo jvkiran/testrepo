@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors } from '../styles';
+import { colors, responsive } from '../styles';
 
 const StyledHamburger = styled.button`
+  display: none;
+  z-index: 10;
   padding: 15px 15px;
-  display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -16,6 +18,9 @@ const StyledHamburger = styled.button`
   border: 0;
   margin: 0;
   overflow: visible;
+  @media screen and (${responsive.sm.max}) {
+    display: block;
+  }
 `;
 
 const StyledHamburgerBox = styled.span`
@@ -73,17 +78,16 @@ const StyledHamburgerInner = styled.span`
   }
 `;
 
-class Hamburger extends Component {
-  state = {
-    active: false
-  };
-  render = () => (
-    <StyledHamburger onClick={() => this.setState({ active: !this.state.active })} type="button">
-      <StyledHamburgerBox>
-        <StyledHamburgerInner active={this.state.active} />
-      </StyledHamburgerBox>
-    </StyledHamburger>
-  );
-}
+const Hamburger = ({ active, ...props }) => (
+  <StyledHamburger {...props}>
+    <StyledHamburgerBox>
+      <StyledHamburgerInner active={active} />
+    </StyledHamburgerBox>
+  </StyledHamburger>
+);
+
+Hamburger.propTypes = {
+  active: PropTypes.bool.isRequired
+};
 
 export default Hamburger;

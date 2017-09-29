@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import smoothScroll from 'smoothscroll';
+import smoothScroll from '../lib/smoothScroll';
 import oceanLogo from '../assets/logos/ocean-logo.svg';
 import Hamburger from '../components/Hamburger';
 import { colors, responsive, transitions, layout } from '../styles';
@@ -45,14 +45,6 @@ const StyledNav = styled.nav`
 
   @media screen and (${responsive.sm.max}) {
     display: none;
-  }
-`;
-
-const StyledMobileToggle = styled.div`
-  display: none;
-  z-index: 10;
-  @media screen and (${responsive.sm.max}) {
-    display: block;
   }
 `;
 
@@ -122,6 +114,14 @@ class Menu extends Component {
       }
     }
   };
+  toggleMobileMenu = () => this.setState({ active: !this.state.active });
+  onSmoothScroll = e => {
+    e.preventDefault();
+    if (this.state.active) this.toggleMobileMenu();
+    // const href = e.target.getAttribute('href');
+    smoothScroll(e);
+  };
+
   componentWillUnmount() {
     document.removeEventListener('scroll', this.toggleFixedMenu);
   }
@@ -135,17 +135,15 @@ class Menu extends Component {
         </StyledLogo>
         <StyledNav>
           {MenuItems.map(item => (
-            <a key={item.name} onClick={smoothScroll} href={item.href}>
+            <a key={item.name} onClick={this.onSmoothScroll} href={item.href}>
               {item.name}
             </a>
           ))}
         </StyledNav>
-        <StyledMobileToggle onClick={() => this.setState({ active: !this.state.active })}>
-          <Hamburger />
-        </StyledMobileToggle>
+        <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
         <StyledMobileNav active={this.state.active}>
           {MenuItems.map(item => (
-            <a key={item.name} onClick={smoothScroll} href={item.href}>
+            <a key={item.name} onClick={this.onSmoothScroll} href={item.href}>
               {item.name}
             </a>
           ))}

@@ -9,6 +9,7 @@ import dexLogo from '../assets/logos/dex.svg';
 import IPDBLogo from '../assets/logos/ipdb.svg';
 import buttonLinkedIn from '../assets/buttons/linkedin.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
+import buttonGithub from '../assets/buttons/github.svg';
 import arrow from '../assets/misc/arrow.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
@@ -216,6 +217,15 @@ const Team = () => (
                         <img src={buttonLinkedIn} alt="linkedin" />
                       </StyledIcon>
                     )}
+                    {!!member.github && (
+                      <StyledIcon
+                        href={`https://www.github.com/${member.github}`}
+                        target="_blank" //eslint-disable-line
+                        rel="noopener"
+                      >
+                        <img src={buttonGithub} alt="github" />
+                      </StyledIcon>
+                    )}
                     {!!member.twitter && (
                       <StyledIcon
                         href={`https://www.twitter.com/${member.twitter}`}
@@ -262,7 +272,7 @@ const Team = () => (
 
       <ContentRow>
         <StyledLine />
-        
+
         <StyledActions>
           <a
             href=""

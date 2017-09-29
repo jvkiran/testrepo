@@ -19,6 +19,9 @@ const StyledHero = styled(Section)`
     min-height: auto;
     position: static;
   }
+  @media screen and (${responsive.sm.max}) {
+    min-height: 100vh;
+  }
 `;
 
 const StyledHeroContent = styled.div`
