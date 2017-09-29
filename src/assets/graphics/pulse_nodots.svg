@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="626" height="169" viewBox="0 0 626 169">
+  <defs>
+    <linearGradient id="pulse_nodots-a" x1="82.497%" x2="45.787%" y1="50%" y2="50%">
+      <stop offset="0%" stop-color="#FFF" stop-opacity=".171"/>
+      <stop offset="100%" stop-color="#FFF"/>
+    </linearGradient>
+    <circle id="pulse_nodots-c" cx="308" cy="84" r="34"/>
+    <filter id="pulse_nodots-b" width="185.3%" height="185.3%" x="-42.6%" y="-36.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="9"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.05 0"/>
+    </filter>
+    <linearGradient id="pulse_nodots-d" x1="2.509%" x2="97.245%" y1="50%" y2="50%">
+      <stop offset="0%" stop-color="#7B1173"/>
+      <stop offset="100%" stop-color="#F6388A"/>
+    </linearGradient>
+    <polygon id="pulse_nodots-e" points="0 32.832 0 .331 20.781 .331 20.781 32.832"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+    <rect width="176" height="112" x=".617" y="21.363" fill="url(#pulse_nodots-a)"/>
+    <rect width="185.93" height="112" x="440" y="21.363" fill="url(#pulse_nodots-a)" transform="rotate(180 532.965 77.363)"/>
+    <use fill="#000" filter="url(#pulse_nodots-b)" xlink:href="#pulse_nodots-c"/>
+    <use fill="#FFF" xlink:href="#pulse_nodots-c"/>
+    <circle cx="308" cy="84" r="45" stroke="url(#pulse_nodots-d)" opacity=".5"/>
+    <circle cx="308.5" cy="83.5" r="50.5" stroke="url(#pulse_nodots-d)" opacity=".5"/>
+    <circle cx="308" cy="84" r="56" stroke="url(#pulse_nodots-d)" opacity=".4"/>
+    <circle cx="308" cy="83" r="62" stroke="url(#pulse_nodots-d)" opacity=".4"/>
+    <circle cx="308" cy="83" r="69" stroke="url(#pulse_nodots-d)" opacity=".3"/>
+    <circle cx="308" cy="83" r="76" stroke="url(#pulse_nodots-d)" opacity=".2"/>
+    <circle cx="307.5" cy="83.5" r="83.5" stroke="url(#pulse_nodots-d)" opacity=".1"/>
+    <g transform="translate(297 65)">
+      <g transform="translate(0 .084)">
+        <mask id="pulse_nodots-f" fill="#fff">
+          <use xlink:href="#pulse_nodots-e"/>
+        </mask>
+        <path fill="#000" d="M17.912117,30.2137102 L2.95071998,30.2137102 C2.78448223,30.2137102 2.61824449,30.0890319 2.61824449,29.8812347 L2.61824449,17.5380821 C2.61824449,17.3718444 2.74292279,17.2056066 2.95071998,17.2056066 L17.912117,17.2056066 C18.0783548,17.2056066 18.2445925,17.3302849 18.2445925,17.5380821 L18.2445925,29.8812347 C18.2445925,30.0474724 18.0783548,30.2137102 17.912117,30.2137102 M18.8679841,14.6289216 L5.90143995,14.6289216 C5.52740502,14.6289216 5.23648897,14.3380055 5.23648897,13.9639706 L5.23648897,8.27032782 C5.23648897,5.48584559 7.39757966,3.07539828 10.1820619,2.95071998 C13.1743413,2.78448223 15.626348,5.19492953 15.626348,8.14564951 L15.626348,10.6807751 C15.626348,11.3457261 16.1250613,11.9691176 16.7900123,12.0106771 C17.5796415,12.093796 18.2030331,11.4704044 18.2030331,10.7223346 L18.2030331,8.31188725 C18.2030331,3.94814645 14.6289216,0.249356618 10.2651808,0.33247549 C6.0676777,0.415594363 2.61824449,3.86502757 2.61824449,8.10409007 L2.61824449,13.9639706 C2.61824449,14.3380055 2.32732843,14.6289216 1.9532935,14.6289216 C0.872748162,14.6289216 0,15.5016697 0,16.5822151 L0,30.8786612 C0,31.9592065 0.872748162,32.8319547 1.9532935,32.8319547 L18.8264246,32.8319547 C19.90697,32.8319547 20.7797181,31.9592065 20.7797181,30.8786612 L20.7797181,16.5822151 C20.8212776,15.5016697 19.9485294,14.6289216 18.8679841,14.6289216" mask="url(#pulse_nodots-f)" opacity=".113"/>
+      </g>
+      <path fill="#000" d="M10.4314185,21.1967255 L10.4314185,21.1967255 C9.72490809,21.1967255 9.14307598,21.7785576 9.14307598,22.485068 L9.14307598,26.3916551 L11.719761,26.3916551 L11.719761,22.485068 C11.719761,21.7785576 11.1379289,21.1967255 10.4314185,21.1967255" opacity=".113"/>
+    </g>
+  </g>
+</svg>

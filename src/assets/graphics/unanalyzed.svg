@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="274" height="351" viewBox="0 0 274 351">
+  <g fill="none" fill-rule="evenodd" transform="translate(1 -10)">
+    <circle cx="136" cy="224" r="136" fill="#FFF" fill-opacity=".104" stroke="#E2E2E2" stroke-width="2"/>
+    <circle cx="110" cy="285" r="3" fill="#1A46FC"/>
+    <text fill="#FFF" font-family=".AppleSystemUIFont" font-size="13">
+      <tspan x="77" y="13">UN-ANALYZED DATA</tspan>
+    </text>
+    <circle cx="136" cy="224" r="136" fill="#FFF" fill-opacity=".104" stroke="#131212" stroke-width="2"/>
+    <circle cx="110" cy="285" r="3" fill="#C92A82"/>
+    <path stroke="#131212" stroke-linecap="square" d="M133.597321,116.42663 L133.597321,32.1289062"/>
+  </g>
+</svg>
