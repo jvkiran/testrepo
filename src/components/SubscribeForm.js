@@ -55,14 +55,15 @@ const StyledSubscribe = styled.div`
       min-width: 0;
     }
 
+    &::placeholder {
+      color: rgba(${colors.white}, 0.65);
+    }
+
     &:focus {
       &::placeholder {
         color: rgba(${colors.white}, 0.5);
       }
     }
-  }
-  & input::placeholder {
-    color: rgba(${colors.white}, 0.65);
   }
   & button {
     color: rgb(${colors.white});

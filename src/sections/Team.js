@@ -162,16 +162,11 @@ const StyledIcon = styled.a`
 `;
 
 const StyledCompanies = styled.div`
-  margin: 2rem 0;
+  margin-top: 2rem;
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
-
-  @media screen and (${responsive.sm.max}) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
 `;
 
 const StyledCompanyLogo = styled.a`
