@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import smoothScroll from '../lib/smoothScroll';
 import oceanLogo from '../assets/logos/ocean-logo.svg';
 import Hamburger from '../components/Hamburger';
-import { colors, responsive, transitions, layout } from '../styles';
+import { colors, fonts, responsive, transitions, layout } from '../styles';
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
@@ -52,8 +52,15 @@ const StyledNav = styled.nav`
   color: rgb(${colors.white});
   & a {
     display: inline-block;
-    margin-right: 20px;
-    color: rgb(${colors.white});
+    margin-right: 2rem;
+    color: rgba(${colors.white}, .8);
+    font-family: ${fonts.family.button};
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: rgba(${colors.white}, 1);
+    }
   }
 
   @media screen and (${responsive.sm.max}) {

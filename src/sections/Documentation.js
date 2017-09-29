@@ -8,7 +8,7 @@ import Button from '../components/Button';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
-import { colors, fonts, responsive, layout } from '../styles';
+import { colors, fonts, responsive } from '../styles';
 
 const StyledDownload = styled(Button) `
   margin-left: auto;
