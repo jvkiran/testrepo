@@ -24,9 +24,9 @@ const STab = styled(Button)`
 
 const StyledTabs = styled.div`
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem 0;
   @media screen and (${responsive.sm.max}) {
-    margin-top: 0;
+    margin: 0;
     flex-direction: column;
   }
 `;

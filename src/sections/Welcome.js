@@ -103,6 +103,7 @@ const StyledPoweredBy = styled.div`
   margin-top: 4rem;
   margin-bottom: 4rem;
   font-size: ${fonts.size.small};
+  font-weight: ${fonts.fontWeight.title};
   text-transform: uppercase;
   text-align: center;
 

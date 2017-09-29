@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       camera.position.z = 10000;
 
       scene = new THREE.Scene();
-      scene.background = new THREE.Color(0x121212);
+      scene.background = new THREE.Color(0x141414);
 
       particles = [];
 

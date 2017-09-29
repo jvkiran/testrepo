@@ -10,7 +10,7 @@ import IPDBLogo from '../assets/logos/ipdb.svg';
 import buttonLinkedIn from '../assets/buttons/linkedin.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
 import buttonGithub from '../assets/buttons/github.svg';
-import arrow from '../assets/misc/arrow.svg';
+import triangle from '../assets/misc/triangle.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
 import { colors, fonts, responsive, layout, transitions } from '../styles';
@@ -241,7 +241,7 @@ const Team = () => (
                       </StyledIcon>
                     )}
                   </StyledLinks>
-                  <img src={arrow} alt="arrow" />
+                  <img src={triangle} alt="triangle" />
                 </StyledProfileWrapper>
               </StyledProfile>
             </StyledMember>

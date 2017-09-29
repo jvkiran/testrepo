@@ -37,8 +37,8 @@ const StyledTitle = styled(Title)`
   }
 `;
 
-const SDownload = styled(Button)`
-  float: right;
+const StyledDownload = styled(Button)`
+  margin-left: auto;
   box-shadow: 0px 4px 30px 0px rgb(0, 0, 0);
 `;
 
@@ -64,7 +64,7 @@ const Documentation = () => (
             address this problem, data marketplaces have emerged, but they are silos themselves.
           </Paragraph>
           <a href="https://google.com">
-            <SDownload>Download</SDownload>
+            <StyledDownload>Download</StyledDownload>
           </a>
         </StyledWhitepaper>
         <Cell width={1 / 2}>
@@ -77,7 +77,7 @@ const Documentation = () => (
               </Paragraph>
             </StyledAbstract>
             <a href="https://google.com">
-              <SDownload>Download</SDownload>
+              <StyledDownload>Download</StyledDownload>
             </a>
           </StyledRow>
           <StyledRow>
@@ -90,7 +90,7 @@ const Documentation = () => (
               </Paragraph>
             </StyledAbstract>
             <a href="https://google.com">
-              <SDownload>Download</SDownload>
+              <StyledDownload>Download</StyledDownload>
             </a>
           </StyledRow>
         </Cell>

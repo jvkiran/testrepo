@@ -15,9 +15,12 @@ const StyledSubscribe = styled.div`
   & img {
     position: absolute;
     left: 1rem;
-    top: 1rem;
+    top: calc(50% - 0.5rem);
     height: 1rem;
     opacity: 0.7;
+    @media screen and (${responsive.sm.max}) {
+      top: 1rem;
+    }
   }
 
   & div {
