@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import Title from '../components/Title';
 import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
+import Button from '../components/Button';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import IPDBLogo from '../assets/logos/ipdb.svg';
@@ -171,13 +172,15 @@ const StyledActions = styled.div`
   }
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled(Button)`
   background: rgb(${colors.white});
   color: rgb(${colors.dark});
   border-radius: 2px;
   text-transform: uppercase;
   padding: 1rem 2rem;
   margin: 1rem;
+  font-family: ${fonts.family.base};
+  font-weight: ${fonts.fontWeight.base};
   box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
   @media screen and (${responsive.sm.max}) {
     width: 100%;

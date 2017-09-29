@@ -9,8 +9,11 @@ import { colors, responsive, transitions, fonts } from '../styles';
 const StyledSubscribe = styled.div`
   position: relative;
   max-width: ${({ maxWidth }) => `${maxWidth}rem`};
-  margin: 0 auto;
   width: 100%;
+
+  @media screen and (${responsive.sm.max}) {
+    margin: 0 auto;
+  }
 
   & img {
     position: absolute;

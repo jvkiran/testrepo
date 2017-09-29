@@ -155,17 +155,17 @@ const Project = () => (
         </StyledCard>
       </StyledData>
       <Grid center wrap>
-        <Cell width={1 / 3}>
+        <Cell width={2 / 5}>
           <SubTitle>WHY OCEAN PROTOCOL</SubTitle>
           <Paragraph>
             Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with privacy,
             security, control, transparency and compliance.
           </Paragraph>
         </Cell>
-        <Cell width={1 / 3}>
+        <Cell width={1 / 5}>
           <div />
         </Cell>
-        <Cell width={1 / 3}>
+        <Cell width={2 / 5}>
           <SubTitle>HOW OCEAN WORKS</SubTitle>
           <Paragraph>
             Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to

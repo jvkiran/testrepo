@@ -32,13 +32,13 @@ const StyledUnalyzed = styled.img`
 
 const StyledFirstGrid = styled(StyledGrid)`
   align-items: flex-end;
+  margin-top: 8rem;
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
 `;
 
 const StyledLocked = styled.img`
-  padding: 3rem 6rem 0 0;
   max-height: 300px;
   @media screen and (${responsive.sm.min}) {
     max-width: 300px;
@@ -55,7 +55,7 @@ const StyledLocked = styled.img`
 const StyledSecondGrid = styled(StyledGrid)`
   align-items: center;
   @media screen and (${responsive.sm.min}) {
-    margin: 4rem 0;
+    margin: 10rem 0;
   }
   @media screen and (${responsive.sm.max}) {
     text-align: center;
@@ -74,6 +74,7 @@ const StyledUnavailable = styled.img`
 `;
 
 const StyledThirdGrid = styled(StyledGrid)`
+  margin-bottom: 4rem;
   @media screen and (${responsive.sm.max}) {
     & > div:nth-child(2) {
       order: -1;
