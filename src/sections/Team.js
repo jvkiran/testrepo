@@ -22,9 +22,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 
-const StyledTitle = styled(Title)`
-  margin-bottom: 2rem;
-`;
+const StyledTitle = styled(Title)`margin-bottom: 2rem;`;
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: 0;
@@ -70,7 +68,7 @@ const StyledMember = styled.div`
 
   & > img {
     margin: 0;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     max-width: 100%;
     height: auto;
     filter: grayscale(100%);
@@ -116,7 +114,7 @@ const StyledRole = styled.h4`
   font-size: ${fonts.size.base};
   margin: 0;
   color: rgb(${colors.dark});
-  opacity: .5;
+  opacity: 0.5;
 `;
 
 const StyledBio = styled.p`
@@ -168,6 +166,9 @@ const StyledCompanyLogo = styled.a`
 const StyledActions = styled.div`
   display: flex;
   justify-content: center;
+  @media screen and (${responsive.sm.max}) {
+    flex-direction: column;
+  }
 `;
 
 const StyledButton = styled.button`
@@ -175,11 +176,13 @@ const StyledButton = styled.button`
   color: rgb(${colors.dark});
   border-radius: 2px;
   text-transform: uppercase;
-  padding: 15px 30px;
-  margin: 15px;
+  padding: 1rem 2rem;
+  margin: 1rem;
   box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
   @media screen and (${responsive.sm.max}) {
-    padding: 15px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
   }
 `;
 

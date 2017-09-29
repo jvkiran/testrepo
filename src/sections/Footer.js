@@ -12,6 +12,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import buttonSlack from '../assets/buttons/slack.svg';
 import buttonTelegram from '../assets/buttons/telegram.svg';
 import buttonReddit from '../assets/buttons/reddit.svg';
+import { responsive } from '../styles';
 
 const StyledStrong = styled.span`
   font-weight: 600;
@@ -34,10 +35,14 @@ const StyledSocialLinks = styled.div`
     width: calc(2.5rem + 4px);
     height: calc(2.5rem + 4px);
   }
+  @media screen and (${responsive.sm.max}) {
+    width: 100%;
+    justify-content: space-around;
+  }
 `;
 
 const Footer = () => (
-  <Section id="Footer">
+  <Section id="footer">
     <ContentRow>
       <Grid>
         <Cell width={1 / 2}>
@@ -66,8 +71,8 @@ const Footer = () => (
         <Cell width={1 / 2}>
           <Title>About</Title>
           <Paragraph>
-            Ocean Protocol Foundation. Ocean is supported by a Singapore based non-profit foundation, whose mandate is to
-            ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem
+            Ocean Protocol Foundation. Ocean is supported by a Singapore based non-profit foundation, whose mandate is
+            to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem
             growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
           <Paragraph>

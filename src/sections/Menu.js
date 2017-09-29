@@ -117,7 +117,14 @@ class Menu extends Component {
     document.addEventListener('scroll', this.toggleFixedMenu);
   }
   toggleFixedMenu = () => {
-    const pageFrame = Number(layout.pageFrame.replace('rem', '')) * Number(window.getComputedStyle(document.getElementsByTagName('html')[0]).getPropertyValue('font-size').replace('px',''))
+    const pageFrame =
+      Number(layout.pageFrame.replace('rem', '')) *
+      Number(
+        window
+          .getComputedStyle(document.getElementsByTagName('html')[0])
+          .getPropertyValue('font-size')
+          .replace('px', '')
+      );
     if (window.innerWidth > 640) {
       if (window.scrollY >= window.innerHeight - pageFrame && !this.state.fixed) {
         this.setState({ fixed: true });
@@ -128,14 +135,14 @@ class Menu extends Component {
   };
   toggleMobileScroll = () => {
     if (this.state.active) {
-      document.getElementsByTagName('html')[0].style.overflow = 'auto'
+      document.getElementsByTagName('html')[0].style.overflow = 'auto';
     } else {
-      document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
     }
-  }
+  };
   toggleMobileMenu = () => {
-    this.toggleMobileScroll()
-    this.setState({ active: !this.state.active })
+    this.toggleMobileScroll();
+    this.setState({ active: !this.state.active });
   };
   onSmoothScroll = e => {
     e.preventDefault();

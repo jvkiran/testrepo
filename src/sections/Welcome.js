@@ -35,7 +35,7 @@ const StyledWaves = styled.div`
 
   background: none;
 
-  @media screen  and (${responsive.sm.max}) {
+  @media screen and (${responsive.sm.max}) {
     background: url(${wavesStatic}) no-repeat;
     background-size: cover;
     background-position-y: 5rem;
@@ -73,11 +73,7 @@ const StyledWaves = styled.div`
         left: 0;
         right: 0;
         position: absolute;
-        background: linear-gradient(
-          to bottom,
-          rgba(${colors.black}, 1) 20%,
-          rgba(${colors.black}, 0) 60%
-        );
+        background: linear-gradient(to bottom, rgba(${colors.black}, 1) 20%, rgba(${colors.black}, 0) 60%);
         z-index: 1;
       }
     }
@@ -129,7 +125,7 @@ const StyledPoweredBy = styled.div`
 `;
 
 const Welcome = () => (
-  <StyledHero id="Welcome" viewport fontColor={colors.white}>
+  <StyledHero id="welcome" viewport fontColor={colors.white}>
     <StyledHeroContent>
       <ContentRow>
         <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>

@@ -15,12 +15,15 @@ import { responsive } from '../styles';
 const StyledUnalyzed = styled.img`
   width: auto;
   height: 100%;
+  @media screen and (${responsive.sm.max}) {
+    padding: 1rem 3rem;
+  }
 `;
 
 const StyledLocked = styled.img`
   padding: 3rem 6rem 0 0;
   @media screen and (${responsive.sm.max}) {
-    padding: 3rem;
+    padding: 0 2rem;
   }
 `;
 
@@ -44,10 +47,8 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
           <Paragraph>
-            From power grids and water systems to healthcare, mobile devices, manufacturing, and logistics, the growth of
-            data creation is remarkable for its volume and criticality. Where once data was primarily a side-effect of
-            successful business operations, today it is a vital element in the smooth operation of all aspects of daily
-            life for consumers, governments, and businesses alike.
+            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is
+            vital to daily life for consumers, governments, and businesses alike.
           </Paragraph>
         </Cell>
       </Grid>
@@ -59,9 +60,8 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
           <Paragraph>
-            Leading organizations see that data can be a strategic asset. PwC estimated that revenue from commercializing
-            financial data could be worth $300 Billion annually by 2018. A Capgemini survey supports the PwC finding,
-            where a majority of respondents, 61% acknowledge that big data is now a driver of revenues in its own right.
+            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from
+            every organization safely and securely, value can spread and be shared.{' '}
           </Paragraph>
         </Cell>
       </Grid>
@@ -75,7 +75,8 @@ const Data = () => (
         </Cell>
         <Cell width={1} maxWidth="narrow">
           <Paragraph>
-            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
+            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data
+            and most startups are starving for data.
           </Paragraph>
         </Cell>
       </Grid>

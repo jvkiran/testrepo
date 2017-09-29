@@ -3,11 +3,12 @@
     "description":
       "We (at BigchainDB) started working with Toyota Research Institute (TRI) in early 2017 for self-driving cars. The accident rate of self-driving cars reduces with higher model accuracy. Models get more accurate with more data. TRI had calculated that it needed 500 billion to 1 trillion miles driven in order to get models that were sufficiently accurate for production deployment of self-driving cars (and this is on top of orders of magnitude more miles driven in world simulators). TRI saw that each automaker faced similar challenges; and that it would be prohibitively expensive for each automaker on its own to generate that much data. So why not pool the data, via a data marketplace?"
   },
-  "medical research": {
+  "healthcare": {
     "description":
-      "There will be text here I promise, there is always some text here. Sure we could put some Lorem Ipsum but thats so 2000s lets make the difference and break the pattern, ok enough back to work"
+      "Medical experts around the world are working to find a cure for Parkinson’s Disease. But national privacy laws prevent patient data sharing, hindering progress. The human cost is unimaginable. So National Neuroscience Institute of Singapore, a group of Munich-based Hospitals and ConnectedLife are working with Ocean Protocol on methods for safe data sharing that complies with national privacy and data transmission laws, so cures can be found, faster."
   },
   "government": {
-    "description": "Thought I was done? Never!"
+    "description":
+      "Singapore aims to be the most advanced nation on earth using data. With a government-wide mandate to unlock data and share it, ministries and private industry are able to gain insights on improving the quality of life in the city state. Ocean Protocol will be the backbone for data sharing within the government and towards industry. Singapore will provide the data governance and regulatory oversight, giving industry confidence and security to share data."
   }
 }

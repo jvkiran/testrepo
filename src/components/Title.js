@@ -12,6 +12,7 @@ const Title = styled.h1`
   text-align: center;
 
   @media screen and (${responsive.sm.max}) {
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
 `;

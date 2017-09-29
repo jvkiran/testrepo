@@ -15,6 +15,11 @@ const STab = styled(Button)`
   margin: 0 20px 1rem 0;
   color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
   background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
+  @media screen and (${responsive.sm.max}) {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
 `;
 
 const StyledTabs = styled.div`
@@ -31,7 +36,7 @@ const StyledPartner = styled.div`
   & img {
     width: 100%;
   }
-`
+`;
 
 class UseCases extends Component {
   state = {
@@ -51,9 +56,10 @@ class UseCases extends Component {
         </StyledTabs>
 
         <Grid left>
-          <Cell width={1 / 2}>
+          <Cell width={1 / 2} style={{ order: 2 }}>
             <Paragraph>
-              “But one mile in the blizzard is fungible with other miles in blizzards. So the system must account for both fungible and non-fungible data.”
+              “But one mile in the blizzard is fungible with other miles in blizzards. So the system must account for
+              both fungible and non-fungible data.”
             </Paragraph>
             <StyledPartner>
               <img src={toyota} alt="draft" />
