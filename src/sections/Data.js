@@ -10,6 +10,7 @@ import Paragraph from '../components/Paragraph';
 import dataUnanalyzed from '../assets/graphics/data-unanalyzed.svg';
 import dataLocked from '../assets/graphics/data-locked.svg';
 import dataUnavailable from '../assets/graphics/data-unavailable.svg';
+import { responsive } from '../styles';
 
 const StyledUnalyzed = styled.img`
   width: auto;
@@ -18,10 +19,17 @@ const StyledUnalyzed = styled.img`
 
 const StyledLocked = styled.img`
   padding: 3rem 6rem 0 0;
+  @media screen and (${responsive.sm.max}) {
+    padding: 3rem;
+  }
 `;
 
 const StyledUnavailable = styled.img`
   margin: 3rem 0;
+  @media screen and (${responsive.sm.max}) {
+    width: 300% !important;
+    margin-left: -100%;
+  }
 `;
 
 const Data = () => (

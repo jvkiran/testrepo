@@ -27,6 +27,14 @@ const Grid = styled.div`
       order: 1;
       padding-left: 0;
     }
+    & > div:nth-child(3) {
+      order: 2;
+      padding-left: 0;
+    }
+    & > div:nth-child(4) {
+      order: 3;
+      padding-left: 0;
+    }
   }
 `;
 

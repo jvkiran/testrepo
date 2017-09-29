@@ -178,6 +178,9 @@ const StyledButton = styled.button`
   padding: 15px 30px;
   margin: 15px;
   box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
+  @media screen and (${responsive.sm.max}) {
+    padding: 15px;
+  }
 `;
 
 const Team = () => (
