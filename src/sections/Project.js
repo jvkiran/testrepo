@@ -15,7 +15,7 @@ const Project = () => (
 
       <Grid center left>
         <Cell width={2 / 3}>
-          <img style={{ width: '100%' }} src={DraftOne} alt="draft" />
+          <img  src={DraftOne} alt="draft" />
         </Cell>
         <Cell width={1 / 3}>
           <SubTitle>A protocol to create data exchange marketplaces</SubTitle>

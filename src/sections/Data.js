@@ -17,7 +17,7 @@ const Data = () => (
 
       <Grid center>
         <Cell width={1 / 3}>
-          <img style={{ width: '100%' }} src={DraftTwo} alt="draft" />
+          <img  src={DraftTwo} alt="draft" />
         </Cell>
         <Cell width={2 / 3}>
           <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
@@ -32,7 +32,7 @@ const Data = () => (
 
       <Grid center left>
         <Cell width={1 / 3}>
-          <img style={{ width: '100%' }} src={DraftThree} alt="draft" />
+          <img  src={DraftThree} alt="draft" />
         </Cell>
         <Cell width={2 / 3}>
           <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
@@ -46,7 +46,7 @@ const Data = () => (
 
       <Grid center>
         <Cell width={1 / 3}>
-          <img style={{ width: '100%' }} src={DraftFour} alt="draft" />
+          <img  src={DraftFour} alt="draft" />
         </Cell>
         <Cell width={2 / 3}>
           <SubTitle>A free market for data allows AI to become democratic</SubTitle>

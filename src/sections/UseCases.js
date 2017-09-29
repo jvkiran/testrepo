@@ -45,7 +45,7 @@ class UseCases extends Component {
 
         <Grid left>
           <Cell width={1 / 2}>
-            <img style={{ width: '100%' }} src={DraftFive} alt="draft" />
+            <img  src={DraftFive} alt="draft" />
           </Cell>
           <Cell width={1 / 2}>
             <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
