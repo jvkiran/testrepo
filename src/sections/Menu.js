@@ -7,12 +7,12 @@ import { colors, responsive, transitions, layout } from '../styles';
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
-  width: ${({ fixed }) => (fixed ? `calc(100 % - ${layout.pageFrame } * 2)` : '100%')};
+  width: ${({ fixed }) => (fixed ? `calc(100% - (${layout.pageFrame} * 2))` : '100%')};
   position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
   top: ${({ fixed }) => (fixed ? '0' : 'auto')};
   left: ${({ fixed }) => (fixed ? `${layout.pageFrame}` : 'auto')};
   right: ${({ fixed }) => (fixed ? `${layout.pageFrame}` : 'auto')};
-  padding: ${({ fixed }) => (fixed ? '10px 40px' : '20px')};
+  padding: ${({ fixed }) => (fixed ? '10px 20px' : '20px')};
   z-index: 5;
   transition: ${transitions.long};
 `;
@@ -28,6 +28,7 @@ const StyledContainer = styled.div`
 const StyledLogo = styled.div`
   height: 44px;
   z-index: 10;
+  margin-left: 20px;
   & img {
     height: 100%;
   }
