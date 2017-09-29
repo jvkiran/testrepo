@@ -76,6 +76,9 @@ const Footer = () => (
             growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
           <Paragraph>
+            Ocean Protocol name and the Ocean Protocol logos are registered trademarks of the Ocean Protocol Foundation.
+          </Paragraph>
+          <Paragraph>
             <StyledStrong>DISCLAIMER:</StyledStrong> This site may contain forward-looking statements, subject to risks
             and uncertainties that could cause the actual results to differ materially.
           </Paragraph>
