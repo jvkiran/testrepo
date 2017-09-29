@@ -153,7 +153,7 @@ const StyledCompanies = styled.div`
 
 const StyledCompanyLogo = styled.a`
   display: inline-block;
-  margin-right: 2rem;
+  margin: 0 1rem;
   img {
     height: 2rem;
 

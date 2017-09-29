@@ -12,7 +12,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg';
 import buttonSlack from '../assets/buttons/slack.svg';
 import buttonTelegram from '../assets/buttons/telegram.svg';
 import buttonReddit from '../assets/buttons/reddit.svg';
-import { responsive } from '../styles';
+import { colors, responsive } from '../styles';
 
 const StyledStrong = styled.span`
   font-weight: 600;
@@ -29,6 +29,9 @@ const StyledSocialLinks = styled.div`
   display: flex;
   & a {
     margin-right: 20px;
+    @media screen and (${responsive.sm.max}) {
+      margin: 0 10px;
+    }
   }
   & img {
     border-radius: 2px;
@@ -37,12 +40,12 @@ const StyledSocialLinks = styled.div`
   }
   @media screen and (${responsive.sm.max}) {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
   }
 `;
 
 const Footer = () => (
-  <Section id="footer">
+  <Section id="footer" background={colors.lightGrey} fontColor={colors.white}>
     <ContentRow>
       <Grid>
         <Cell width={1 / 2}>
