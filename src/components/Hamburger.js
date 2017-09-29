@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { colors, responsive } from '../styles';
+import { colors, responsive, layout } from '../styles';
 
 const StyledHamburger = styled.button`
   display: none;
   z-index: 10;
-  padding: 15px 15px;
+  padding: ${layout.pageFrame};
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -24,7 +24,7 @@ const StyledHamburger = styled.button`
 `;
 
 const StyledHamburgerBox = styled.span`
-  width: 40px;
+  width: 30px;
   height: 24px;
   display: inline-block;
   position: relative;

@@ -17,6 +17,12 @@ const StyledMenu = styled.div`
   padding: 10px 20px;
   z-index: 5;
   transition: transform 0.3s ease-in-out;
+  @media screen and (${responsive.sm.max}) {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
 `;
 
 const StyledContainer = styled.div`
@@ -54,10 +60,10 @@ const StyledMobileNav = styled.div`
   background: rgb(${colors.black});
   position: fixed;
   display: none;
+  height: ${({ active }) => (active ? '100vh' : '0')};
+  width: 100vw;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
   z-index: 1;
   flex-direction: column;
   justify-content: center;
