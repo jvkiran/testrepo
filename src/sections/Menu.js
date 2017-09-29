@@ -7,17 +7,20 @@ import { colors, responsive, transitions, layout } from '../styles';
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
-  width: calc(100% - (${layout.pageFrame} * 2));
-  position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
-  top: ${({ fixed }) => (fixed ? '0' : 'auto')};
-  left: ${layout.pageFrame};
-  right: ${layout.pageFrame};
-  margin: ${({ fixed }) => (fixed ? '-100px 0' : '10px 0')};
+  transition: transform 0.3s ease-in-out;
   transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
   padding: 10px 20px;
   z-index: 5;
-  transition: transform 0.3s ease-in-out;
+  @media screen and (${responsive.sm.min}) {
+    position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
+    width: calc(100% - (${layout.pageFrame} * 2));
+    top: ${({ fixed }) => (fixed ? '0' : 'auto')};
+    left: ${layout.pageFrame};
+    right: ${layout.pageFrame};
+    margin: ${({ fixed }) => (fixed ? '-100px 0' : '10px 0')};
+  }
   @media screen and (${responsive.sm.max}) {
+    position: absolute;
     width: 100%;
     left: 0;
     right: 0;
