@@ -11,7 +11,7 @@ import Paragraph from '../components/Paragraph';
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg';
 import dataDotsRight from '../assets/graphics/data-dots-right.svg';
 import arrow from '../assets/misc/arrow.svg';
-import { colors, responsive } from '../styles';
+import { colors, responsive, transitions } from '../styles';
 
 const slideRight = keyframes`
   0% {
@@ -42,16 +42,12 @@ const StyledData = styled.div`
 
 const StyledCard = styled.div`
   background: rgb(${colors.white});
-  padding: 2.5rem;
-  padding-left: 3rem;
   margin: 2rem;
   border-radius: 2px;
-  width: 25%;
+  width: 30%;
   box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
   border: 1px solid rgba(${colors.black}, 0.07);
-  @media screen and (${responsive.md.max}) {
-    padding: 1.5rem;
-  }
+  transition: ${transitions.base};
   @media screen and (${responsive.sm.max}) {
     width: 100%;
     &:first-child {
@@ -61,11 +57,27 @@ const StyledCard = styled.div`
       margin-top: 10rem;
     }
   }
-  & p:first-child {
-    font-weight: 600;
+  &:hover,
+  &:focus {
+    transform: translate3d(0, -0.05rem, 0);
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
   }
-  & p:nth-child(2) {
-    opacity: 0.7;
+  &:active {
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
+    transform: none;
+    transition: none;
+  }
+  a {
+    color: rgb(${colors.grey});
+    display: block;
+    padding: 2.5rem;
+    @media screen and (${responsive.md.max}) {
+      padding: 1.5rem;
+    }
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
   & button {
     border: none;
@@ -93,6 +105,16 @@ const StyledCard = styled.div`
     top: 6px;
     left: calc(100% + 12px);
     background: url(${arrow}) no-repeat;
+  }
+  &:first-child {
+    button {
+      color: rgb(${colors.purple});
+    }
+  }
+  &:last-child {
+    button {
+      color: rgb(${colors.softPink});
+    }
   }
 `;
 
@@ -135,9 +157,9 @@ const Project = () => (
 
       <StyledData width={1}>
         <StyledCard>
-          <p>Data Owners</p>
-          <p>Unlock your data and earn through the Ocean protocol</p>
           <a href="">
+            <h4>Data Owners</h4>
+            <p>Unlock your data and earn through the Ocean protocol.</p>
             <button>SELL DATA</button>
           </a>
         </StyledCard>
@@ -147,16 +169,16 @@ const Project = () => (
           <Pulse />
         </StyledDataTransfer>
         <StyledCard>
-          <p>Data Customers</p>
-          <p>Buy data to power  your algorithms</p>
           <a href="">
+            <h4>Data Customers</h4>
+            <p>Buy data to power your algorithms.</p>
             <button>BUY DATA</button>
           </a>
         </StyledCard>
       </StyledData>
-      <Grid center wrap>
+      <Grid wrap>
         <Cell width={2 / 5}>
-          <SubTitle>WHY OCEAN PROTOCOL</SubTitle>
+          <SubTitle>Why Ocean Protocol</SubTitle>
           <Paragraph>
             Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with privacy,
             security, control, transparency and compliance.
@@ -166,7 +188,7 @@ const Project = () => (
           <div />
         </Cell>
         <Cell width={2 / 5}>
-          <SubTitle>HOW OCEAN WORKS</SubTitle>
+          <SubTitle>How Ocean Works</SubTitle>
           <Paragraph>
             Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to
             build services on top.

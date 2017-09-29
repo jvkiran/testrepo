@@ -98,7 +98,10 @@ const StyledTagline = styled(Title)`
   }
 `;
 
-const SParagraph = styled(Paragraph)`text-align: center;`;
+const SParagraph = styled(Paragraph)`
+  text-align: center;
+  font-size: ${fonts.size.large};
+`;
 
 const StyledPoweredBy = styled.div`
   margin-top: 4rem;
