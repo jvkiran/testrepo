@@ -51,7 +51,8 @@ export const layout = {
   maxWidth: {
     wide: '80rem',
     base: '60rem',
-    small: '40rem'
+    small: '40rem',
+    narrow: '20rem'
   }
 };
 

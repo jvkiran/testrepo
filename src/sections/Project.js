@@ -6,22 +6,31 @@ import Cell from '../components/Cell';
 import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
-import DraftOne from '../assets/drafts/draft-1.png';
+import pulseStatic from '../assets/graphics/pulse-static.svg';
 
 const Project = () => (
   <Section id="project">
     <ContentRow>
       <Title>Ocean protocol <br />unlocks data</Title>
 
-      <Grid center left>
-        <Cell width={2 / 3}>
-          <img  src={DraftOne} alt="draft" />
+      <Grid center wrap>
+        <Cell width={1}>
+          <img src={pulseStatic} alt="draft" />
         </Cell>
         <Cell width={1 / 3}>
-          <SubTitle>A protocol to create data exchange marketplaces</SubTitle>
+        <SubTitle>WHY OCEAN PROTOCOL</SubTitle>
+        <Paragraph>
+          Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with privacy, security, control, transparency and compliance.   
+
+        </Paragraph>
+        </Cell>
+        <Cell width={1 / 3}>
+          <div />
+        </Cell>
+        <Cell width={1/ 3}>
+          <SubTitle>HOW OCEAN WORKS</SubTitle>
           <Paragraph>
-            Ocean is a global, decentralized data exchange protocol that makes data available for everyone - with trust,
-            privacy, security, compliance and transparency - allowing data providers to find data consumers.
+            Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to build services on top. 
           </Paragraph>
         </Cell>
       </Grid>

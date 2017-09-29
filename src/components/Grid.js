@@ -4,6 +4,8 @@ import { responsive } from '../styles';
 const Grid = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: ${({ wrap }) => (wrap ? 'wrap' : 'nowrap')};
+  text-align: ${({ textCenter }) => (textCenter ? 'center' : 'left')};
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
   & > div {
     justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};

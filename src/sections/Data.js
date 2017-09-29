@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
@@ -6,20 +7,33 @@ import Cell from '../components/Cell';
 import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
-import DraftTwo from '../assets/drafts/draft-2.png';
-import DraftThree from '../assets/drafts/draft-3.png';
-import DraftFour from '../assets/drafts/draft-4.png';
+import dataUnanalyzed from '../assets/graphics/data-unanalyzed.svg';
+import dataLocked from '../assets/graphics/data-locked.svg';
+import dataUnavailable from '../assets/graphics/data-unavailable.svg';
+
+const StyledUnalyzed = styled.img`
+  width: auto;
+  height: 100%;
+`;
+
+const StyledLocked = styled.img`
+  padding: 3rem 6rem 0 0;
+`;
+
+const StyledUnavailable = styled.img`
+  margin: 3rem 0;
+`;
 
 const Data = () => (
   <Section id="data">
     <ContentRow>
       <Title>Only 1% of collected data is analyzed</Title>
 
-      <Grid center>
-        <Cell width={1 / 3}>
-          <img  src={DraftTwo} alt="draft" />
+      <Grid left>
+        <Cell center width={1 / 3}>
+          <StyledUnalyzed src={dataUnanalyzed} alt="data unanalyzed" />
         </Cell>
-        <Cell width={2 / 3}>
+        <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
           <Paragraph>
             From power grids and water systems to healthcare, mobile devices, manufacturing, and logistics, the growth of
@@ -30,11 +44,11 @@ const Data = () => (
         </Cell>
       </Grid>
 
-      <Grid center left>
-        <Cell width={1 / 3}>
-          <img  src={DraftThree} alt="draft" />
+      <Grid>
+        <Cell center width={1 / 3}>
+          <StyledLocked src={dataLocked} alt="data locked" />
         </Cell>
-        <Cell width={2 / 3}>
+        <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
           <Paragraph>
             Leading organizations see that data can be a strategic asset. PwC estimated that revenue from commercializing
@@ -44,18 +58,16 @@ const Data = () => (
         </Cell>
       </Grid>
 
-      <Grid center>
-        <Cell width={1 / 3}>
-          <img  src={DraftFour} alt="draft" />
+      <Grid wrap textCenter>
+        <Cell width={1}>
+          <SubTitle>Data is widely available but owned by few</SubTitle>
         </Cell>
-        <Cell width={2 / 3}>
-          <SubTitle>A free market for data allows AI to become democratic</SubTitle>
+        <Cell center width={1}>
+          <StyledUnavailable src={dataUnavailable} alt="data unavailable" />
+        </Cell>
+        <Cell width={1} maxWidth="narrow">
           <Paragraph>
-            Without data, the AI models are not accurate. With no accuracy, the AI model is unusable. The winners so far
-            have been companies with vast data resources and internal AI expertise, like Google and Facebook.
-          </Paragraph>
-          <Paragraph>
-            The stark reality is that most startups are drowning in algorithms but starving for data.
+            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
           </Paragraph>
         </Cell>
       </Grid>

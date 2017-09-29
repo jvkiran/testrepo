@@ -7,7 +7,7 @@ import Button from '../components/Button';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
-import DraftFive from '../assets/drafts/draft-5.png';
+import toyota from '../assets/logos/toyota.png';
 import useCases from '../data/useCases.json';
 import { colors, responsive } from '../styles';
 
@@ -25,6 +25,13 @@ const StyledTabs = styled.div`
     flex-direction: column;
   }
 `;
+
+const StyledPartner = styled.div`
+  width: 50px;
+  & img {
+    width: 100%;
+  }
+`
 
 class UseCases extends Component {
   state = {
@@ -45,7 +52,12 @@ class UseCases extends Component {
 
         <Grid left>
           <Cell width={1 / 2}>
-            <img  src={DraftFive} alt="draft" />
+            <Paragraph>
+              “But one mile in the blizzard is fungible with other miles in blizzards. So the system must account for both fungible and non-fungible data.”
+            </Paragraph>
+            <StyledPartner>
+              <img src={toyota} alt="draft" />
+            </StyledPartner>
           </Cell>
           <Cell width={1 / 2}>
             <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
