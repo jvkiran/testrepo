@@ -108,10 +108,11 @@ class Menu extends Component {
     document.addEventListener('scroll', this.toggleFixedMenu);
   }
   toggleFixedMenu = () => {
+    const pageFrame = Number(layout.pageFrame.replace('rem', '')) * Number(window.getComputedStyle(document.getElementsByTagName('html')[0]).getPropertyValue('font-size').replace('px',''))
     if (window.innerWidth > 640) {
-      if (window.scrollY >= window.innerHeight && !this.state.fixed) {
+      if (window.scrollY >= window.innerHeight - pageFrame && !this.state.fixed) {
         this.setState({ fixed: true });
-      } else if (window.scrollY < window.innerHeight && this.state.fixed) {
+      } else if (window.scrollY < window.innerHeight - pageFrame && this.state.fixed) {
         this.setState({ fixed: false });
       }
     }
