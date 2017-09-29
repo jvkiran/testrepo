@@ -19,17 +19,8 @@
     "name": "Oana Ionescu",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Marketing",
-    "twitter": "",
-    "linkedin": "",
+    "linkedin": "oanavoicu",
     "image": ""
-  },
-  {
-    "name": "Cristina Vulpe",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Design",
-    "twitter": "",
-    "linkedin": "",
-    "image": "cristinaV"
   },
   {
     "name": "Matthias Kretschmann",
@@ -116,15 +107,6 @@
     "image": "rodolphe"
   },
   {
-    "name": "Krish Iyer",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Development",
-    "twitter": "krish7919",
-    "github": "krish7919",
-    "linkedin": "krish7919",
-    "image": ""
-  },
-  {
     "name": "Alberto Granzotto",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "Development",
@@ -197,9 +179,9 @@
   {
     "name": "Daniel Lustig",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "Administrative Assistant",
+    "role": "Happiness Manager",
     "linkedin": "daniel-lustig-852a408a",
-    "image": "one"
+    "image": "daniel"
   },
   {
     "name": "Katarzyna Kazimierczak",
@@ -209,12 +191,21 @@
     "image": "kasia"
   },
   {
+    "name": "Shahbay Nazir",
+    "bio": "Calculated gravity assited trajectories between Earth and Mars",
+    "role": "DevOps Engineer",
+    "github": "shahbazn",
+    "linkedin": "shahbaz-nazir-84766451",
+    "twitter": "shahbaz_nazir",
+    "image": ""
+  },
+  {
     "name": "Don Gossen",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "",
     "twitter": "",
     "linkedin": "",
-    "image": "three"
+    "image": ""
   },
   {
     "name": "Daryl Arnold",
