@@ -114,7 +114,17 @@ class Menu extends Component {
       }
     }
   };
-  toggleMobileMenu = () => this.setState({ active: !this.state.active });
+  toggleMobileScroll = () => {
+    if (this.state.active) {
+      document.getElementsByTagName('html')[0].style.overflow = 'auto'
+    } else {
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+    }
+  }
+  toggleMobileMenu = () => {
+    this.toggleMobileScroll()
+    this.setState({ active: !this.state.active })
+  };
   onSmoothScroll = e => {
     e.preventDefault();
     if (this.state.active) this.toggleMobileMenu();
