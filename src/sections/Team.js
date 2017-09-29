@@ -89,6 +89,17 @@ const StyledProfile = styled.div`
   background: rgb(${colors.white});
   color: rgb(${colors.dark});
   box-shadow: 2px 2px 27px 2px rgba(0, 0, 0, 0.11), 2px 2px 5px 2px rgba(0, 0, 0, 0.39);
+  @media screen and (${responsive.sm.max}) {
+    left: ${({ idx }) => {
+      if (idx === 0 || idx % 3 === 0) {
+        return 'calc(-150px + 50% + 25vw + 1rem)';
+      } else if ((idx + 1) % 3 === 0) {
+        return 'calc(-150px + 50% - 25vw - 1rem)';
+      } else {
+        return 'calc(-150px + 50%)';
+      }
+    }};
+  }
 `;
 
 const StyledProfileWrapper = styled.div`
@@ -102,6 +113,17 @@ const StyledProfileWrapper = styled.div`
     bottom: -14px;
     z-index: -1;
     left: calc(50% - (20px / 2));
+    @media screen and (${responsive.sm.max}) {
+      left: ${({ idx }) => {
+        if (idx === 0 || idx % 3 === 0) {
+          return 'calc(50% - (20px / 2) - 25vw - 1rem)';
+        } else if ((idx + 1) % 3 === 0) {
+          return 'calc(50% - (20px / 2) + 25vw + 1rem)';
+        } else {
+          return 'calc(50% - (20px / 2))';
+        }
+      }};
+    }
   }
 `;
 
@@ -207,11 +229,11 @@ const Team = () => (
       <ContentRow>
         <StyledLine />
         <StyledTeam>
-          {team.map(member => (
+          {team.map((member, idx) => (
             <StyledMember key={member.name}>
               <img src={teamImg[member.image]} alt={member.name} />
-              <StyledProfile>
-                <StyledProfileWrapper>
+              <StyledProfile idx={idx}>
+                <StyledProfileWrapper idx={idx}>
                   <StyledName>{member.name}</StyledName>
                   <StyledRole>{member.role}</StyledRole>
                   <StyledBio>{member.bio}</StyledBio>
