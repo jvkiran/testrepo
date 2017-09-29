@@ -7,6 +7,7 @@ const SubTitle = styled.h3`
   line-height: ${fonts.lineHeight.title};
   font-size: ${fonts.size.h4};
   color: inherit;
+  margin-top: 0;
 `;
 
 export default SubTitle;

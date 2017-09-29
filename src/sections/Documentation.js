@@ -62,11 +62,11 @@ const StyledComments = styled(Paragraph)`
 `;
 
 const StyledRow = styled.div`
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 
   &:first-child {
-    margin-top: 2rem;
+    margin-top: 4.15rem;
   }
 
   a {
@@ -105,7 +105,7 @@ const Documentation = () => (
             <StyledDownload>Download</StyledDownload>
           </a>
           <StyledComments>
-            Have a comment or sugestions? Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+            Have a comment or suggestions? Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
           </StyledComments>
         </StyledWhitepaper>
         <Cell width={1 / 2}>
