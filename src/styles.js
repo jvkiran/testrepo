@@ -28,7 +28,8 @@ export const fonts = {
   family: {
     base: '-apple-system, sans-serif',
     title: '"Sharp Sans", sans-serif',
-    button: '"Sharp Sans", sans-serif'
+    button: '"Sharp Sans", sans-serif',
+    quote: 'Courier New, serif'
   },
   lineHeight: {
     base: '1.65',

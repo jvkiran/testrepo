@@ -9,7 +9,7 @@ import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
 import toyota from '../assets/logos/toyota.png';
 import useCases from '../data/useCases.json';
-import { colors, responsive } from '../styles';
+import { colors, fonts, responsive } from '../styles';
 
 const STab = styled(Button)`
   margin: 0 20px 1rem 0;
@@ -31,13 +31,20 @@ const StyledTabs = styled.div`
   }
 `;
 
-const StyledPartner = styled.div`
-  width: 50px;
+const StyledQuote = styled(Paragraph)`
+  padding: 2rem;
+  font-size: 1.25rem;
+  font-family: ${fonts.family.quote};
+  @media screen and (${responsive.sm.min}) {
+    padding-top: 0;
+  }
   & img {
-    width: 100%;
+    width: 60px;
+    margin-right: 1rem;
+    display: block;
+    margin-left: auto;
   }
 `;
-
 class UseCases extends Component {
   state = {
     activeTab: 'autonomous vehicles'
@@ -57,13 +64,11 @@ class UseCases extends Component {
 
         <Grid left>
           <Cell width={1 / 2} style={{ order: 2 }}>
-            <Paragraph>
+            <StyledQuote>
               “But one mile in the blizzard is fungible with other miles in blizzards. So the system must account for
               both fungible and non-fungible data.”
-            </Paragraph>
-            <StyledPartner>
               <img src={toyota} alt="draft" />
-            </StyledPartner>
+            </StyledQuote>
           </Cell>
           <Cell width={1 / 2}>
             <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
