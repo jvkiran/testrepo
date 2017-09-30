@@ -9,7 +9,7 @@ const StyledMenu = styled.div`
   background: rgb(${colors.black});
   transition: transform 0.3s ease-in-out;
   transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   z-index: 5;
   @media screen and (${responsive.sm.min}) {
     position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
@@ -53,7 +53,7 @@ const StyledNav = styled.nav`
   & a {
     display: inline-block;
     margin-right: 2rem;
-    color: rgba(${colors.white}, .8);
+    color: rgba(${colors.white}, 0.8);
     font-family: ${fonts.family.button};
 
     &:hover,
@@ -113,7 +113,7 @@ const MenuItems = [
   },
   {
     name: 'Blog',
-    href: 'https://blog.oceanprotocol.com/'
+    href: '#blog'
   }
 ];
 

@@ -7,6 +7,7 @@ import Data from './sections/Data';
 import UseCases from './sections/UseCases';
 import Documentation from './sections/Documentation';
 import Team from './sections/Team';
+import Blog from './sections/Blog';
 import Footer from './sections/Footer';
 import Modal from './sections/Modal';
 
@@ -31,6 +32,7 @@ class Root extends Component {
       <Data />
       <UseCases />
       <Team toggleModal={this.toggleModal} />
+      <Blog />
       <Footer />
       <Modal modal={this.state.modal} toggle={this.toggleModal} />
     </StyledRoot>

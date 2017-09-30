@@ -17,6 +17,12 @@ const Grid = styled.div`
   & > div:nth-child(2) {
     padding-left: ${({ left }) => (left ? 0 : '20px')};
   }
+  & > div:nth-child(3) {
+    padding-left: ${({ left }) => (left ? 0 : '20px')};
+  }
+  & > div:nth-child(4) {
+    padding-left: ${({ left }) => (left ? 0 : '20px')};
+  }
   @media screen and (${responsive.sm.max}) {
     flex-direction: column;
     & > div:first-child {
