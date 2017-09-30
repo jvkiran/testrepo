@@ -30,10 +30,12 @@ const StyledHeader = styled.div`
 
 const StyledContent = styled.div`
   width: 100%;
-  height: 250px;
   padding: 0 2rem;
   @media screen and (${responsive.sm.max}) {
     padding: 0 1rem;
+  }
+  @media screen and (${responsive.sm.min}) {
+    min-height: 250px;
   }
 `;
 
@@ -74,7 +76,7 @@ class Blog extends Component {
     <Section id="blog" minHeight={850}>
       <ContentRow>
         <Title>Learn more about Ocean Protocol</Title>
-        <Grid center>
+        <Grid>
           {this.state.fetching ? (
             <Spinner />
           ) : (
