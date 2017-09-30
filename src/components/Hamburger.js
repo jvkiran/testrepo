@@ -33,7 +33,7 @@ const StyledHamburgerBox = styled.span`
 const StyledHamburgerInner = styled.span`
   width: 30px;
   height: 3px;
-  background-color: rgb(${colors.white});
+  background-color: rgba(${colors.white}, 0.8);
   border-radius: 5px;
   position: absolute;
   display: block;
@@ -50,7 +50,7 @@ const StyledHamburgerInner = styled.span`
   &::after {
     width: 30px;
     height: 3px;
-    background-color: rgb(${colors.white});
+    background-color: rgba(${colors.white}, 0.8);
     border-radius: 5px;
     position: absolute;
     transition-property: transform;

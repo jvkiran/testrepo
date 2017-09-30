@@ -85,6 +85,8 @@ const StyledMobileNav = styled.div`
   transition: ${transitions.long};
   & a {
     margin: 0.5rem 0;
+    color: rgba(${colors.white}, 0.8);
+    font-family: ${fonts.family.button};
   }
   @media screen and (${responsive.sm.max}) {
     display: flex;
