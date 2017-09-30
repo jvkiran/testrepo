@@ -14,18 +14,12 @@ const StyledDownload = styled(Button)`margin-left: auto;`;
 
 const StyledWhitepaper = styled(Cell)`
   border-radius: 2px;
-  margin: 1rem;
   padding: 2rem !important;
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
-  ${SubTitle} {
-    opacity: 0.5;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    @media screen and (${responsive.sm.max}) {
-      font-size: ${fonts.size.large};
-    }
+  ${Title} {
+    margin-bottom: 2rem;
   }
   ${StyledDownload} {
     margin-right: auto;
@@ -45,15 +39,17 @@ const StyledTitle = styled(Title)`
 
 const StyledIntro = styled(Paragraph)`
   font-weight: 600;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 `;
 
-const StyledAbstract = styled(Paragraph)`margin-bottom: 1.5rem;`;
+const StyledAbstract = styled(Paragraph)`
+  margin-bottom: 2rem;
+`;
 
 const StyledComments = styled(Paragraph)`
   color: rgb(${colors.lightGrey});
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0;
 `;
 
@@ -62,7 +58,7 @@ const StyledRow = styled.div`
   margin-bottom: 1rem;
 
   &:first-child {
-    margin-top: 4.15rem;
+    margin-top: 3rem;
   }
 
   a {
@@ -70,10 +66,6 @@ const StyledRow = styled.div`
     text-transform: uppercase;
     color: rgb(${colors.pink});
     margin-top: -0.5rem;
-  }
-
-  h3 {
-    margin-bottom: 0.75rem;
   }
 
   @media screen and (${responsive.md.min}) {
@@ -89,7 +81,6 @@ const Documentation = () => (
       <Grid>
         <StyledWhitepaper center width={1 / 2}>
           <StyledTitle>Whitepaper</StyledTitle>
-          <SubTitle>Abstract</SubTitle>
           <StyledIntro>
             This paper presents a decentralized data marketplace protocol and network called Ocean, on which data
             marketplaces can be built.

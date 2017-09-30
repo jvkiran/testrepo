@@ -14,6 +14,7 @@ const Title = styled.h1`
   @media screen and (${responsive.sm.max}) {
     margin-top: 2rem;
     margin-bottom: 2rem;
+    font-size: ${fonts.size.h2};
   }
 `;
 

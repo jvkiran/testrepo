@@ -128,11 +128,24 @@ export const globalStyles = `
     font-size: ${fonts.size.base};
     line-height: ${fonts.lineHeight.base};
     font-weight: ${fonts.fontWeight.base};
+    position: relative;
   }
 
   @media screen and (${responsive.sm.min}) {
     body {
       padding: ${layout.pageFrame};
+      padding-bottom: 0;
+      padding-top: ${layout.pageFrame};
+
+      &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0; right: 0; top: 0;
+        background: rgb(${colors.white});
+        height: ${layout.pageFrame};
+        z-index: 10;
+      }
     }
   }
 
@@ -171,7 +184,6 @@ export const globalStyles = `
     transform: none;
     transition: none;
   }
-
 
   h1, h2, h3, h4, h5 {
       font-family: ${fonts.family.title};

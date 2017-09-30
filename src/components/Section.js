@@ -8,7 +8,11 @@ const StyledSection = styled.div`
   background: ${({ background }) => (background ? `rgb(${background})` : 'none')};
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
   margin: 0;
-  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media screen and (${responsive.sm.min}) {
+    margin-bottom: ${layout.pageFrame};
+  }
 `;
 
 const StyledColumn = styled.div`
