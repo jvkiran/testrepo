@@ -6,10 +6,10 @@ import ContentRow from '../components/ContentRow';
 import Grid from '../components/Grid';
 import Cell from '../components/Cell';
 import Spinner from '../components/Spinner';
-import { colors } from '../styles';
+import { colors, responsive } from '../styles';
 
 const StyledCard = styled.div`
-  margin: 1rem;
+  margin: 1rem 0;
   width: 100%;
   height: 100%;
   background: rgb(${colors.white});
@@ -30,6 +30,9 @@ const StyledContent = styled.div`
   width: 100%;
   height: 250px;
   padding: 0 2rem;
+  @media screen and (${responsive.sm.max}) {
+    padding: 0 1rem;
+  }
 `;
 
 const StyledTitle = styled.h1`font-size: 1.5rem;`;
