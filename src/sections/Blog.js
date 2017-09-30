@@ -6,7 +6,7 @@ import ContentRow from '../components/ContentRow';
 import Grid from '../components/Grid';
 import Cell from '../components/Cell';
 import Spinner from '../components/Spinner';
-import { colors, responsive } from '../styles';
+import { colors, fonts, responsive } from '../styles';
 
 const StyledCard = styled.div`
   margin: 1rem 0;
@@ -15,6 +15,8 @@ const StyledCard = styled.div`
   background: rgb(${colors.white});
   border-radius: 2px;
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
+  color: rgb(${colors.grey});
+  border-radius: 2px;
 `;
 
 const StyledHeader = styled.div`
@@ -35,9 +37,20 @@ const StyledContent = styled.div`
   }
 `;
 
-const StyledTitle = styled.h1`font-size: 1.5rem;`;
+const StyledAction = styled.div`
+  text-align: center;
+  margin-top: 4rem;
 
-const StyledSubtitle = styled.p`font-size: 1rem;`;
+  a {
+    text-transform: uppercase;
+    font-family: ${fonts.family.button};
+    display: inline-block;
+  }
+`;
+
+const StyledTitle = styled.h1`font-size: ${fonts.size.h4};`;
+
+const StyledSubtitle = styled.p`font-size: ${fonts.size.base};`;
 
 class Blog extends Component {
   state = {
@@ -84,6 +97,15 @@ class Blog extends Component {
             ))
           )}
         </Grid>
+        <StyledAction>
+          <a
+            href="https://blog.oceanprotocol.com"
+            target="_blank" // eslint-disable-line
+            rel="noopener"
+          >
+          Go to Blog
+          </a>
+        </StyledAction>
       </ContentRow>
     </Section>
   );

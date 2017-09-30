@@ -64,7 +64,7 @@ const StyledRow = styled.div`
   a {
     display: block;
     text-transform: uppercase;
-    color: rgb(${colors.pink});
+    font-family: ${fonts.family.button};
     margin-top: -0.5rem;
   }
 
