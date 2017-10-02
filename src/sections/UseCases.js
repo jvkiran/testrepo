@@ -7,9 +7,8 @@ import Button from '../components/Button';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
-import toyota from '../assets/logos/toyota.png';
 import useCases from '../data/useCases.json';
-import { colors, fonts, responsive } from '../styles';
+import { colors, responsive } from '../styles';
 
 const STab = styled(Button)`
   margin: 0 20px 1rem 0;
@@ -27,29 +26,6 @@ const STab = styled(Button)`
   }
 `;
 
-const StyledTabs = styled.div`
-  display: flex;
-  margin: 1rem 0;
-  @media screen and (${responsive.sm.max}) {
-    margin: 0;
-    flex-direction: column;
-  }
-`;
-
-const StyledQuote = styled(Paragraph)`
-  padding: 2rem;
-  font-size: 1.25rem;
-  font-family: ${fonts.family.quote};
-  @media screen and (${responsive.sm.min}) {
-    padding-top: 0;
-  }
-  & img {
-    width: 60px;
-    margin-right: 1rem;
-    display: block;
-    margin-left: auto;
-  }
-`;
 class UseCases extends Component {
   state = {
     activeTab: 'autonomous vehicles'
@@ -58,22 +34,13 @@ class UseCases extends Component {
     <Section id="usecases" background={colors.grey} fontColor={colors.white} minHeight={650}>
       <ContentRow>
         <Title white>Use Cases</Title>
-
-        <StyledTabs>
-          {Object.keys(useCases).map(tab => (
-            <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
-              {tab}
-            </STab>
-          ))}
-        </StyledTabs>
-
-        <Grid left>
-          <Cell width={1 / 2} style={{ order: 2 }}>
-            <StyledQuote>
-              “But one mile in the blizzard is fungible with other miles in blizzards. So the system must account for
-              both fungible and non-fungible data.”
-              <img src={toyota} alt="draft" />
-            </StyledQuote>
+        <Grid>
+          <Cell width={1 / 2}>
+            {Object.keys(useCases).map(tab => (
+              <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
+                {tab}
+              </STab>
+            ))}
           </Cell>
           <Cell width={1 / 2}>
             <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
