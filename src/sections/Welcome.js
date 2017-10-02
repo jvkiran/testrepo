@@ -138,7 +138,7 @@ const StyledPoweredBy = styled.div`
   }
   & a {
     display: inline-block;
-    margin-right: 2rem;
+    width: 5rem;
   }
   & img {
     height: 1rem;
