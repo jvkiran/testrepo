@@ -30,7 +30,6 @@ const StyledButton = styled.button`
     box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.1);
   }
   &:active {
-    background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
     transition: none;
     transform: none;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);

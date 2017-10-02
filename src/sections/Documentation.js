@@ -26,6 +26,7 @@ const StyledWhitepaper = styled(Cell)`
   }
   @media screen and (${responsive.sm.max}) {
     margin: 0;
+    padding: 2rem 1.25rem !important;
   }
 `;
 
@@ -42,9 +43,7 @@ const StyledIntro = styled(Paragraph)`
   margin-bottom: 1rem;
 `;
 
-const StyledAbstract = styled(Paragraph)`
-  margin-bottom: 2rem;
-`;
+const StyledAbstract = styled(Paragraph)`margin-bottom: 2rem;`;
 
 const StyledComments = styled(Paragraph)`
   color: rgb(${colors.lightGrey});

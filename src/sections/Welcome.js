@@ -91,21 +91,33 @@ const StyledTagline = styled(Title)`
   text-align: center;
   color: #fff;
 
-  @media screen and (${responsive.sm.max}) {
-    font-size: ${fonts.size.h3};
-    margin-top: 6rem;
-    margin-bottom: 0.5rem;
-  }
-
   @media screen and (${responsive.md.min}) {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  media screen and (${responsive.md.max}) {
+    font-size: ${fonts.size.h2};
+  }
+
+  @media screen and (${responsive.sm.max}) {
+    font-size: ${fonts.size.h3};
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  @media screen and (${responsive.smHeight.max}) {
+    font-size: ${fonts.size.h4};
   }
 `;
 
 const SParagraph = styled(Paragraph)`
   text-align: center;
   font-size: ${fonts.size.large};
+  @media screen and (${responsive.sm.max}) {
+    font-size: ${fonts.size.base};
+    margin-bottom: 1rem;
+  }
 `;
 
 const StyledPoweredBy = styled.div`
@@ -117,8 +129,8 @@ const StyledPoweredBy = styled.div`
   text-align: center;
 
   @media screen and (${responsive.sm.max}) {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   & p {
     margin: 0;

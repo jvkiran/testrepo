@@ -4,7 +4,7 @@ import Section from '../components/Section';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
 import Cell from '../components/Cell';
-import Title from '../components/Title';
+import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
 import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/buttons/medium.svg';
@@ -30,7 +30,7 @@ const StyledSocialLinks = styled.div`
   & a {
     margin-right: 20px;
     @media screen and (${responsive.sm.max}) {
-      margin: 0 10px;
+      margin: 0;
     }
   }
   & img {
@@ -40,7 +40,7 @@ const StyledSocialLinks = styled.div`
   }
   @media screen and (${responsive.sm.max}) {
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 
@@ -49,7 +49,7 @@ const Footer = () => (
     <ContentRow>
       <Grid>
         <Cell width={1 / 2}>
-          <Title white>Get Involved</Title>
+          <SubTitle white>Get Involved</SubTitle>
           <SubscribeForm maxWidth={28} />
           <StyledActions>
             <StyledSocialLinks>
@@ -72,7 +72,7 @@ const Footer = () => (
           </StyledActions>
         </Cell>
         <Cell width={1 / 2}>
-          <Title white>About</Title>
+          <SubTitle white>About</SubTitle>
           <Paragraph>
             Ocean Protocol Foundation. Ocean is supported by a Singapore based non-profit foundation, whose mandate is
             to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem

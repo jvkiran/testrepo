@@ -43,6 +43,10 @@ const StyledAction = styled.div`
   text-align: center;
   margin-top: 4rem;
 
+  @media screen and (${responsive.sm.max}) {
+    margin-top: 2rem;
+  }
+
   a {
     text-transform: uppercase;
     font-family: ${fonts.family.button};
@@ -105,7 +109,7 @@ class Blog extends Component {
             target="_blank" // eslint-disable-line
             rel="noopener"
           >
-          Go to Blog
+            Go to Blog
           </a>
         </StyledAction>
       </ContentRow>

@@ -19,7 +19,7 @@ export const fonts = {
     base: '1rem',
     large: '1.25rem',
     small: '.85rem',
-    h1: '3rem',
+    h1: '3.6rem',
     h2: '2.7rem',
     h3: '2rem',
     h4: '1.5rem',
@@ -58,6 +58,10 @@ export const layout = {
 };
 
 export const responsive = {
+  smHeight: {
+    min: 'min-height: 599px',
+    max: 'max-height: 600px'
+  },
   xs: {
     min: 'min-width: 419px',
     max: 'max-width: 420px'

@@ -28,6 +28,7 @@ const StyledCard = styled.div`
   padding: 6rem;
   width: 100%;
   max-width: 640px;
+  border-radius: 2px;
   position: relative;
   background: rgb(${colors.white});
   @media screen and (${responsive.sm.max}) {
