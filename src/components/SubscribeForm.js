@@ -76,6 +76,12 @@ const StyledSubscribe = styled.div`
     transition: ${transitions.short};
     cursor: pointer;
 
+    &:active,
+    &:hover,
+    &:focus {
+      background: transparent;
+    }
+
     @media screen and (hover: hover) {
       &:hover,
       &:focus {
@@ -91,7 +97,6 @@ const StyledMessage = styled.p`
   text-align: center;
   margin-top: 0.25rem;
   font-size: 0.7rem;
-  color: auto;
 `;
 
 class SubscribeForm extends React.Component {
@@ -99,7 +104,7 @@ class SubscribeForm extends React.Component {
     super(props, ...args);
     this.state = {
       status: null,
-      msg: null
+      message: null
     };
   }
   onSubmit = e => {
@@ -116,7 +121,7 @@ class SubscribeForm extends React.Component {
     this.setState(
       {
         status: 'sending',
-        msg: null
+        message: null
       },
       () =>
         jsonp(
@@ -128,17 +133,17 @@ class SubscribeForm extends React.Component {
             if (err) {
               this.setState({
                 status: 'error',
-                msg: err
+                message: err
               });
             } else if (data.result !== 'success') {
               this.setState({
                 status: 'error',
-                msg: data.msg
+                message: data.msg
               });
             } else {
               this.setState({
                 status: 'success',
-                msg: data.msg
+                message: data.msg
               });
             }
           }

@@ -15,6 +15,11 @@ const STab = styled(Button)`
   margin: 0 20px 1rem 0;
   color: ${({ active }) => (active ? `rgb(${colors.grey})` : `rgb(${colors.white})`)};
   background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
+  &:active,
+  &:hover,
+  &:focus {
+    background: ${({ active }) => (active ? `rgb(${colors.white})` : `rgba(${colors.white}, 0.1)`)};
+  }
   @media screen and (${responsive.sm.max}) {
     margin: 0;
     margin-bottom: 1rem;

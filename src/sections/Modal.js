@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import jsonp from 'jsonp';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import cross from '../assets/misc/cross.svg';
@@ -72,22 +73,34 @@ const forms = {
   ]
 };
 
-const Modal = ({ modal, toggle, ...props }) => (
-  <StyledLightbox show={!!modal} {...props}>
-    <StyledCard>
-      <StyledClose src={cross} alt="close" onClick={() => toggle()} />
-      {!!modal && (
-        <form>
-          <Input type="text" placeholder={forms[modal][0]} />
-          <Input type="email" icon placeholder={forms[modal][1]} />
-          <Input type="text" placeholder={forms[modal][2]} />
-          <Input type="textarea" rows="6" placeholder={forms[modal][3]} />
-          <Button type="submit">{forms[modal][4]}</Button>
-        </form>
-      )}
-    </StyledCard>
-  </StyledLightbox>
-);
+class Modal extends Component {
+  state = {
+    fetching: false,
+    message: ''
+  };
+  onSubmit = e => {
+    e.preventDefault();
+  };
+  render() {
+    const { modal, toggle, ...props } = this.props;
+    return (
+      <StyledLightbox show={!!modal} {...props}>
+        <StyledCard>
+          <StyledClose src={cross} alt="close" onClick={() => toggle()} />
+          {!!modal && (
+            <form onSubmit={this.onSubmit}>
+              <Input type="text" placeholder={forms[modal][0]} />
+              <Input type="email" icon placeholder={forms[modal][1]} />
+              <Input type="text" placeholder={forms[modal][2]} />
+              <Input type="textarea" rows="6" placeholder={forms[modal][3]} />
+              <Button type="submit">{forms[modal][4]}</Button>
+            </form>
+          )}
+        </StyledCard>
+      </StyledLightbox>
+    );
+  }
+}
 
 Modal.propTypes = {
   modal: PropTypes.string.isRequired,

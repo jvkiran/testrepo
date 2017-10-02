@@ -207,6 +207,11 @@ const StyledButton = styled(Button)`
   font-family: ${fonts.family.base};
   font-weight: ${fonts.fontWeight.base};
   box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
+  &:active,
+  &:hover,
+  &:focus {
+    background: rgb(${colors.white});
+  }
   @media screen and (${responsive.sm.max}) {
     width: 100%;
     margin: 0;

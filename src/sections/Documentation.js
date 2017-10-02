@@ -68,6 +68,7 @@ const StyledRow = styled.div`
   }
 
   @media screen and (${responsive.md.min}) {
+    margin-top: 2rem;
     margin-left: 4rem;
   }
 `;

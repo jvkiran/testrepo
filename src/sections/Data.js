@@ -26,7 +26,11 @@ const StyledUnalyzed = styled.img`
     height: 100%;
   }
   @media screen and (${responsive.sm.max}) {
-    padding: 1rem 3rem;
+    padding: 0 4rem;
+    max-height: 80vw;
+  }
+  @media screen and (${responsive.smHeight.max}) {
+    padding: 0 2rem;
   }
 `;
 
@@ -50,6 +54,7 @@ const StyledLocked = styled.img`
   }
   @media screen and (${responsive.sm.max}) {
     padding: 0 2rem;
+    max-height: 40vw;
   }
 `;
 
@@ -73,9 +78,7 @@ const StyledUnavailable = styled.img`
   }
 `;
 
-const StyledThirdGrid = styled(StyledGrid)`
-  margin-bottom: 4rem;
-`;
+const StyledThirdGrid = styled(StyledGrid)`margin-bottom: 4rem;`;
 
 const Data = () => (
   <Section id="data">
