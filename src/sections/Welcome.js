@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
