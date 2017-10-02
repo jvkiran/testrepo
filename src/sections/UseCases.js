@@ -35,14 +35,14 @@ class UseCases extends Component {
       <ContentRow>
         <Title white>Use Cases</Title>
         <Grid>
-          <Cell width={1 / 2}>
+          <Cell width={1 / 3}>
             {Object.keys(useCases).map(tab => (
               <STab key={tab} active={this.state.activeTab === tab} onClick={() => this.setState({ activeTab: tab })}>
                 {tab}
               </STab>
             ))}
           </Cell>
-          <Cell width={1 / 2}>
+          <Cell width={2 / 3}>
             <Paragraph>{useCases[this.state.activeTab].description}</Paragraph>
           </Cell>
         </Grid>
