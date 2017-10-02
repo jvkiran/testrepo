@@ -218,13 +218,12 @@ const Team = ({ toggleModal, ...props }) => (
   <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
     <StyledWrapper>
       <ContentRow>
-        <StyledTitle white>The People Building The Ocean Protocol</StyledTitle>
+        <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
       </ContentRow>
 
       <ContentRow narrow>
         <StyledParagraph>
-          The Ocean team combines a deep background in big data, blockchain, artificial intelligence and data exchanges,
-          with real-world business experience as entrepreneurs, designers and technologists who have started over 20
+          The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20
           companies.
         </StyledParagraph>
       </ContentRow>
@@ -307,9 +306,7 @@ const Team = ({ toggleModal, ...props }) => (
         <StyledLine />
 
         <StyledActions>
-          <StyledButton onClick={() => toggleModal('sell')}>I have data</StyledButton>
           <StyledButton onClick={() => toggleModal('contribute')}>Join the community</StyledButton>
-          <StyledButton onClick={() => toggleModal('buy')}>I want data</StyledButton>
         </StyledActions>
       </ContentRow>
     </StyledWrapper>

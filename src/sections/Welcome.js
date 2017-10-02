@@ -86,7 +86,7 @@ const StyledWaves = styled.div`
 
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
-  margin-top: 15%;
+  margin-top: 20%;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #fff;
@@ -101,11 +101,6 @@ const StyledTagline = styled(Title)`
     margin-left: 2rem;
     margin-right: 2rem;
   }
-`;
-
-const SParagraph = styled(Paragraph)`
-  text-align: center;
-  font-size: ${fonts.size.large};
 `;
 
 const StyledPoweredBy = styled.div`
@@ -141,10 +136,6 @@ const Welcome = () => (
         <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
       </ContentRow>
       <ContentRow narrow>
-        <SParagraph>
-          Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-          consumers of valuable datasets, while providing open access for developers to build services.
-        </SParagraph>
         <StyledPoweredBy>
           <p>Powered by</p>
           <a
