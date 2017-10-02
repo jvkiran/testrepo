@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import emailGrey from '../assets/misc/email-grey.svg';
@@ -48,20 +48,46 @@ const StyledInput = styled.input`
 
 const StyledTextarea = StyledInput.withComponent('textarea');
 
-const Input = ({ icon, type, ...props }) => (
-  <StyledInputWrapper>
-    {icon && <img src={emailGrey} alt="email" />}
-    {type === 'textarea' ? <StyledTextarea icon={icon} {...props} /> : <StyledInput icon={icon} {...props} />}
-  </StyledInputWrapper>
-);
+const StyledCharacterCount = styled.p`
+  position: absolute;
+  opacity: 0.7;
+  font-size: ${fonts.size.small};
+  margin: 0;
+  right: 0;
+`;
+
+class Input extends Component {
+  state = {
+    input: ''
+  };
+  onChange = ({ target }) => {
+    console.log(target.value);
+    if (this.props.maxLength && target.value.length > this.props.maxLength) return;
+    this.setState({ input: target.value });
+  };
+  render() {
+    const { maxLength, icon, type, ...props } = this.props;
+    return (
+      <StyledInputWrapper>
+        {type === 'email' && <img src={emailGrey} alt="email" />}
+        {type === 'textarea' ? (
+          <StyledTextarea value={this.state.input} onChange={this.onChange} icon={type === 'email'} {...props} />
+        ) : (
+          <StyledInput value={this.state.input} onChange={this.onChange} icon={type === 'email'} {...props} />
+        )}
+        {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
+      </StyledInputWrapper>
+    );
+  }
+}
 
 Input.propTypes = {
-  icon: PropTypes.bool,
+  maxLength: PropTypes.number,
   type: PropTypes.string
 };
 
 Input.defaultProps = {
-  icon: false,
+  maxLength: 0,
   type: 'text'
 };
 

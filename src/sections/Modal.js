@@ -49,27 +49,41 @@ const StyledClose = styled.img`
   }
 `;
 
+const StyledMessage = styled.p`
+  position: absolute;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  width: calc(100% - 12rem);
+  @media screen and (${responsive.sm.max}) {
+    width: calc(100% - 2rem);
+  }
+`;
+
 const forms = {
   buy: [
     'Your Name',
     'type@youremail.com',
     'Company Name',
     'Tell us why you would like to buy data',
-    'Join the Data Customers'
+    'Join the Data Customers',
+    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
   ],
   sell: [
     'Your Name',
     'type@youremail.com',
     'Company Name',
     'Tell us why you would like to sell data',
-    'Join the Data Owners'
+    'Join the Data Owners',
+    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
   ],
   contribute: [
     'Your Name',
     'type@youremail.com',
     'Your Role',
     'Tell us how you would like to contribute',
-    'Join the Ocean Community'
+    'Join the Ocean Community',
+    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71'
   ]
 };
 
@@ -80,6 +94,80 @@ class Modal extends Component {
   };
   onSubmit = e => {
     e.preventDefault();
+    let name, email, company, message, url;
+    if (!this.name.state.input || this.name.state.input.length < 3) {
+      this.setState({
+        message: 'Please check the name'
+      });
+      return;
+    } else {
+      name = encodeURIComponent(this.name.state.input);
+    }
+
+    if (!this.email.state.input || this.email.state.input.length < 5 || this.email.state.input.indexOf('@') === -1) {
+      this.setState({
+        message: 'Please check the email'
+      });
+      return;
+    } else {
+      email = encodeURIComponent(this.email.state.input);
+    }
+
+    if (!this.company.state.input || this.company.state.input.length < 3) {
+      this.setState({
+        message: 'Please check the company'
+      });
+      return;
+    } else {
+      company = encodeURIComponent(this.company.state.input);
+    }
+
+    if (!this.message.state.input || this.message.state.input.length < 3) {
+      this.setState({
+        message: 'Please check the message'
+      });
+      return;
+    } else {
+      message = encodeURIComponent(this.message.state.input);
+    }
+
+    if (this.props.modal === 'contribute') {
+      url = `${forms[this.props.modal][5]}&NAME=${name}&EMAIL=${email}&ROLE=${company}&MESSAGE=${message}`;
+    } else {
+      url = `${forms[this.props.modal][5]}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}`;
+    }
+
+    this.setState(
+      {
+        fetching: true,
+        message: ''
+      },
+      () =>
+        jsonp(
+          url,
+          {
+            param: 'c'
+          },
+          (err, data) => {
+            if (err) {
+              this.setState({
+                fetching: false,
+                message: err
+              });
+            } else if (data.result !== 'success') {
+              this.setState({
+                fetching: false,
+                message: data.msg
+              });
+            } else {
+              this.setState({
+                fetching: false,
+                message: data.msg
+              });
+            }
+          }
+        )
+    );
   };
   render() {
     const { modal, toggle, ...props } = this.props;
@@ -89,11 +177,18 @@ class Modal extends Component {
           <StyledClose src={cross} alt="close" onClick={() => toggle()} />
           {!!modal && (
             <form onSubmit={this.onSubmit}>
-              <Input type="text" placeholder={forms[modal][0]} />
-              <Input type="email" icon placeholder={forms[modal][1]} />
-              <Input type="text" placeholder={forms[modal][2]} />
-              <Input type="textarea" rows="6" placeholder={forms[modal][3]} />
+              <Input ref={node => (this.name = node)} type="text" placeholder={forms[modal][0]} />
+              <Input type="email" ref={node => (this.email = node)} placeholder={forms[modal][1]} />
+              <Input ref={node => (this.company = node)} type="text" placeholder={forms[modal][2]} />
+              <Input
+                ref={node => (this.message = node)}
+                type="textarea"
+                maxLength={255}
+                rows="6"
+                placeholder={forms[modal][3]}
+              />
               <Button type="submit">{forms[modal][4]}</Button>
+              {!!this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
             </form>
           )}
         </StyledCard>
