@@ -102,6 +102,13 @@ class Modal extends Component {
     fetching: false,
     message: ''
   };
+  componentDidUpdate() {
+    if (!this.props.modal) {
+      document.getElementsByTagName('html')[0].style.overflow = 'auto';
+    } else {
+      document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    }
+  }
   onSubmit = e => {
     e.preventDefault();
     let name, email, company, message, url;
