@@ -25,15 +25,6 @@ const StyledSubscribe = styled.div`
       top: 1rem;
     }
   }
-
-  & div {
-    display: flex;
-    border-radius: 2px;
-    background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
-    @media screen and (${responsive.sm.max}) {
-      flex-wrap: wrap;
-    }
-  }
   & input {
     outline: none;
     margin: 0;
@@ -88,6 +79,15 @@ const StyledSubscribe = styled.div`
         opacity: 0.85;
       }
     }
+  }
+`;
+
+const StyledSubscribeWrapper = styled.div`
+  display: flex;
+  border-radius: 2px;
+  background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
+  @media screen and (${responsive.sm.max}) {
+    flex-wrap: wrap;
   }
 `;
 
@@ -157,7 +157,7 @@ class SubscribeForm extends React.Component {
       <StyledSubscribe maxWidth={maxWidth} {...props}>
         <img src={emailWhite} alt="email" />
         <form action={action} method="post" noValidate>
-          <div>
+          <StyledSubscribeWrapper>
             <input
               ref={node => (this.input = node)}
               type="email"
@@ -173,7 +173,7 @@ class SubscribeForm extends React.Component {
             >
               {btnLabel}
             </Button>
-          </div>
+          </StyledSubscribeWrapper>
           {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
           {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
           {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: error }} />}

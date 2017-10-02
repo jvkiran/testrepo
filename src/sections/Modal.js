@@ -187,7 +187,9 @@ class Modal extends Component {
                 rows="6"
                 placeholder={forms[modal][3]}
               />
-              <Button type="submit">{forms[modal][4]}</Button>
+              <Button fetching={this.state.fetching} type="submit">
+                {forms[modal][4]}
+              </Button>
               {!!this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
             </form>
           )}

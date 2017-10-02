@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Spinner from '../components/Spinner';
 import { colors, fonts, transitions } from '../styles';
 
 const StyledButton = styled.button`
@@ -9,6 +10,7 @@ const StyledButton = styled.button`
   font: inherit;
   cursor: pointer;
   outline: inherit;
+  position: relative;
   display: block;
   width: fit-content;
   padding: 15px 35px;
@@ -38,10 +40,18 @@ const StyledButton = styled.button`
   }
 `;
 
-const Button = ({ children, ...props }) => <StyledButton {...props}>{children}</StyledButton>;
+const StyledChildren = styled.div`opacity: ${({ fetching }) => (fetching ? 0 : 1)};`;
+
+const Button = ({ fetching, children, ...props }) => (
+  <StyledButton {...props}>
+    {fetching && <Spinner white />}
+    <StyledChildren fetching={fetching}>{children}</StyledChildren>
+  </StyledButton>
+);
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  fetching: PropTypes.bool.isRequired
 };
 
 export default Button;

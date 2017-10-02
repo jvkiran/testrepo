@@ -42,6 +42,9 @@ const StyledContent = styled.div`
 const StyledAction = styled.div`
   text-align: center;
   margin-top: 4rem;
+  opacity: ${({ fetching }) => (fetching ? 0 : 1)};
+  pointer-events: ${({ fetching }) => (fetching ? 'none' : 'auto')};
+  visibility: ${({ fetching }) => (fetching ? 'hidden' : 'visible')};
 
   @media screen and (${responsive.sm.max}) {
     margin-top: 2rem;
@@ -77,14 +80,14 @@ class Blog extends Component {
       .catch({ fething: false });
   };
   render = () => (
-    <Section id="blog" minHeight={850}>
+    <Section id="blog" minHeight={930}>
       <ContentRow>
         <Title>Learn more about Ocean Protocol</Title>
-        <Grid>
-          {this.state.fetching ? (
-            <Spinner />
-          ) : (
-            this.state.posts.map(post => (
+        {this.state.fetching ? (
+          <Spinner />
+        ) : (
+          <Grid>
+            {this.state.posts.map(post => (
               <Cell key={post.id} width={1 / 3}>
                 <a
                   href={post.postUrl}
@@ -100,10 +103,10 @@ class Blog extends Component {
                   </StyledCard>
                 </a>
               </Cell>
-            ))
-          )}
-        </Grid>
-        <StyledAction>
+            ))}
+          </Grid>
+        )}
+        <StyledAction fetching={this.state.fetching}>
           <a
             href="https://blog.oceanprotocol.com"
             target="_blank" // eslint-disable-line
