@@ -24,10 +24,20 @@ const StyledLightbox = styled.div`
   visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 `;
 
+const StyledHitbox = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+`;
+
 const StyledCard = styled.div`
   margin: 1rem;
   padding: 6rem;
   width: 100%;
+  z-index: 2;
   max-width: 640px;
   border-radius: 2px;
   position: relative;
@@ -173,6 +183,7 @@ class Modal extends Component {
     const { modal, toggle, ...props } = this.props;
     return (
       <StyledLightbox show={!!modal} {...props}>
+        <StyledHitbox onClick={() => toggle()} />
         <StyledCard>
           <StyledClose src={cross} alt="close" onClick={() => toggle()} />
           {!!modal && (
