@@ -53,19 +53,39 @@ const Footer = () => (
           <SubscribeForm maxWidth={28} />
           <StyledActions>
             <StyledSocialLinks>
-              <a href="medium.com">
+              <a
+                href="https://blog.oceanprotocol.com/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
                 <img src={buttonMedium} alt="Medium" />
               </a>
-              <a href="twitter.com">
+              <a
+                href="https://blog.oceanprotocol.com/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
                 <img src={buttonTwitter} alt="Twitter" />
               </a>
-              <a href="slack.com">
+              <a
+                href="https://blog.oceanprotocol.com/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
                 <img src={buttonSlack} alt="Slack" />
               </a>
-              <a href="telegram.org">
+              <a
+                href="https://blog.oceanprotocol.com/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
                 <img src={buttonTelegram} alt="Slack" />
               </a>
-              <a href="reddit.com">
+              <a
+                href="https://blog.oceanprotocol.com/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
                 <img src={buttonReddit} alt="Slack" />
               </a>
             </StyledSocialLinks>
