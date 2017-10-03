@@ -75,16 +75,16 @@ const forms = {
     'Your Name',
     'type@youremail.com',
     'Company Name',
-    'Tell us why you would like to buy data',
-    'Join the Data Customers',
+    'Tell us why you would like to get data',
+    'Join the Data Consumers',
     '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
   ],
   sell: [
     'Your Name',
     'type@youremail.com',
     'Company Name',
-    'Tell us why you would like to sell data',
-    'Join the Data Owners',
+    'Tell us why you would like to publish data',
+    'Join the Data Providers',
     '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
   ],
   contribute: [

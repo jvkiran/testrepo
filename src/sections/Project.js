@@ -92,6 +92,7 @@ const StyledCard = styled.div`
     background: transparent;
     width: fit-content;
     position: relative;
+    text-transform: uppercase;
     @media screen and (${responsive.md.max}) {
       margin-top: 1.5rem;
     }
@@ -156,14 +157,14 @@ const Project = ({ toggleModal, ...props }) => (
   <Section id="project" {...props}>
     <ContentRow>
       <Title>
-        Ocean protocol <br />unlocks data
+        Ocean Protocol <br />unlocks data
       </Title>
 
       <StyledData width={1}>
         <StyledCard onClick={() => toggleModal('sell')}>
-          <h4>Data Owners</h4>
-          <p>Unlock your data and earn through the Ocean protocol.</p>
-          <button>SELL DATA</button>
+          <h4>Data Providers</h4>
+          <p>Unlock your data and earn revenue.</p>
+          <button>Publish Data</button>
         </StyledCard>
         <StyledDataTransfer>
           <StyledDataDots img={dataDotsLeft} />
@@ -171,14 +172,14 @@ const Project = ({ toggleModal, ...props }) => (
           <Pulse />
         </StyledDataTransfer>
         <StyledCard onClick={() => toggleModal('buy')}>
-          <h4>Data Customers</h4>
-          <p>Buy data to power your algorithms.</p>
-          <button>BUY DATA</button>
+          <h4>Data Consumers</h4>
+          <p>Discover and buy data.</p>
+          <button>Get Data</button>
         </StyledCard>
       </StyledData>
       <Grid wrap>
         <Cell width={2 / 5}>
-          <SubTitle>Why Ocean Protocol</SubTitle>
+          <SubTitle>What is Ocean Protocol?</SubTitle>
           <Paragraph>
             Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with privacy,
             security, control, transparency and compliance.
