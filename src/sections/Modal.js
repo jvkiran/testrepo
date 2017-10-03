@@ -71,30 +71,30 @@ const StyledMessage = styled.p`
 `;
 
 const forms = {
-  buy: [
-    'Your Name',
-    'type@youremail.com',
-    'Company Name',
-    'Tell us why you would like to get data',
-    'Join the Data Consumers',
-    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
-  ],
-  sell: [
-    'Your Name',
-    'type@youremail.com',
-    'Company Name',
-    'Tell us why you would like to publish data',
-    'Join the Data Providers',
-    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
-  ],
-  contribute: [
-    'Your Name',
-    'type@youremail.com',
-    'Your Role',
-    'Tell us how you would like to contribute',
-    'Join the Ocean Community',
-    '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71'
-  ]
+  buy: {
+    name: 'Your Name',
+    email: 'type@youremail.com',
+    business: 'Company Name',
+    message: 'Tell us why you would like to get data',
+    button: 'Join the Data Consumers',
+    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
+  },
+  sell: {
+    name: 'Your Name',
+    email: 'type@youremail.com',
+    business: 'Company Name',
+    message: 'Tell us why you would like to publish data',
+    button: 'Join the Data Providers',
+    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
+  },
+  contribute: {
+    name: 'Your Name',
+    email: 'type@youremail.com',
+    business: 'Your Role',
+    message: 'Tell us how you would like to contribute',
+    button: 'Join the Ocean Community',
+    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71'
+  }
 };
 
 class Modal extends Component {
@@ -130,13 +130,13 @@ class Modal extends Component {
       email = encodeURIComponent(this.email.state.input);
     }
 
-    if (!this.company.state.input || this.company.state.input.length < 3) {
+    if (!this.business.state.input || this.business.state.input.length < 3) {
       this.setState({
         message: 'Please check the company'
       });
       return;
     } else {
-      company = encodeURIComponent(this.company.state.input);
+      company = encodeURIComponent(this.business.state.input);
     }
 
     if (!this.message.state.input || this.message.state.input.length < 3) {
@@ -149,9 +149,9 @@ class Modal extends Component {
     }
 
     if (this.props.modal === 'contribute') {
-      url = `${forms[this.props.modal][5]}&NAME=${name}&EMAIL=${email}&ROLE=${company}&MESSAGE=${message}`;
+      url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&ROLE=${company}&MESSAGE=${message}`;
     } else {
-      url = `${forms[this.props.modal][5]}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}`;
+      url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}`;
     }
 
     this.setState(
@@ -195,18 +195,18 @@ class Modal extends Component {
           <StyledClose src={cross} alt="close" onClick={() => toggle()} />
           {!!modal && (
             <form onSubmit={this.onSubmit}>
-              <Input ref={node => (this.name = node)} type="text" placeholder={forms[modal][0]} />
-              <Input type="email" ref={node => (this.email = node)} placeholder={forms[modal][1]} />
-              <Input ref={node => (this.company = node)} type="text" placeholder={forms[modal][2]} />
+              <Input ref={node => (this.name = node)} type="text" placeholder={forms[modal].name} />
+              <Input type="email" ref={node => (this.email = node)} placeholder={forms[modal].email} />
+              <Input ref={node => (this.business = node)} type="text" placeholder={forms[modal].business} />
               <Input
                 ref={node => (this.message = node)}
                 type="textarea"
                 maxLength={255}
                 rows="6"
-                placeholder={forms[modal][3]}
+                placeholder={forms[modal].message}
               />
               <Button fetching={this.state.fetching} type="submit">
-                {forms[modal][4]}
+                {forms[modal].button}
               </Button>
               {!!this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
             </form>
