@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { responsive, layout } from '../styles';
 
-const StyledSection = styled.div`
+const StyledSection = styled.section`
   width: 100%;
   background: ${({ background }) => (background ? `rgb(${background})` : 'none')};
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};

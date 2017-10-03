@@ -46,6 +46,12 @@ const StyledLogo = styled.div`
   }
 `;
 
+const StyledMenuItem = styled.a`
+  transition: ${transitions.base};
+  color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, 0.7)`)};
+  font-family: ${fonts.family.button};
+`;
+
 const StyledNav = styled.nav`
   text-transform: uppercase;
   text-align: right;
@@ -53,8 +59,6 @@ const StyledNav = styled.nav`
   & a {
     display: inline-block;
     margin-right: 2rem;
-    color: rgba(${colors.white}, 0.8);
-    font-family: ${fonts.family.button};
 
     &:hover,
     &:focus,
@@ -85,8 +89,6 @@ const StyledMobileNav = styled.div`
   transition: ${transitions.long};
   & a {
     margin: 0.5rem 0;
-    color: rgba(${colors.white}, 0.8);
-    font-family: ${fonts.family.button};
   }
   @media screen and (${responsive.sm.max}) {
     display: flex;
@@ -122,11 +124,40 @@ const MenuItems = [
 class Menu extends Component {
   state = {
     active: false,
-    fixed: false
+    fixed: false,
+    sections: {},
+    current: ''
   };
   componentDidMount() {
+    this.mapSectionsTop();
     document.addEventListener('scroll', this.toggleFixedMenu);
+    document.addEventListener('scroll', this.highlightCurrent);
   }
+  mapSectionsTop = () => {
+    const sectionNodes = document.getElementsByTagName('section');
+    let sections = {};
+    for (var i = 0; i < sectionNodes.length; i++) {
+      const sectionId = sectionNodes[i].id;
+      sections[sectionId] = document.getElementById(sectionId).getBoundingClientRect().top + window.scrollY;
+    }
+    this.setState({ sections });
+    this.highlightCurrent();
+  };
+  highlightCurrent = () => {
+    const currentTop = window.scrollY;
+    const currentBottom = window.scrollY + window.innerHeight / 2;
+    const sectionIds = Object.keys(this.state.sections);
+    for (var i = 0; i < sectionIds.length; i++) {
+      const id = sectionIds[i];
+      if (this.state.sections[id] > currentTop && this.state.sections[id] < currentBottom) {
+        if (this.state.current !== id) {
+          this.setState({ current: id });
+          console.log(id);
+        }
+        break;
+      }
+    }
+  };
   toggleFixedMenu = () => {
     const pageFrame =
       Number(layout.pageFrame.replace('rem', '')) *
@@ -165,6 +196,7 @@ class Menu extends Component {
 
   componentWillUnmount() {
     document.removeEventListener('scroll', this.toggleFixedMenu);
+    document.removeEventListener('scroll', this.highlightCurrent);
   }
   render = () => (
     <StyledMenu fixed={this.state.fixed}>
@@ -176,17 +208,27 @@ class Menu extends Component {
         </StyledLogo>
         <StyledNav>
           {MenuItems.map(item => (
-            <a key={item.name} onClick={this.onSmoothScroll} href={item.href}>
+            <StyledMenuItem
+              key={item.name}
+              current={item.href.replace('#', '') === this.state.current}
+              onClick={this.onSmoothScroll}
+              href={item.href}
+            >
               {item.name}
-            </a>
+            </StyledMenuItem>
           ))}
         </StyledNav>
         <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
         <StyledMobileNav active={this.state.active}>
           {MenuItems.map(item => (
-            <a key={item.name} onClick={this.onSmoothScroll} href={item.href}>
+            <StyledMenuItem
+              key={item.name}
+              current={item.href.replace('#', '') === this.state.current}
+              onClick={this.onSmoothScroll}
+              href={item.href}
+            >
               {item.name}
-            </a>
+            </StyledMenuItem>
           ))}
         </StyledMobileNav>
       </StyledContainer>
