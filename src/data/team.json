@@ -17,20 +17,6 @@
     "image": "trent"
   },
   {
-    "name": "Masha McConaghy",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "CMO · BigchainDB",
-    "linkedin": "mashamc",
-    "image": "masha"
-  },
-  {
-    "name": "Gregory McMullen",
-    "role": "CPO · BigchainDB & IPDB",
-    "twitter": "gmcmullen",
-    "linkedin": "gregmcm",
-    "image": "greg"
-  },
-  {
     "name": "Chirdeep Chhabra",
     "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "· Dex",
@@ -39,18 +25,18 @@
     "image": "chirdeep"
   },
   {
-    "name": "Don Gossen",
-    "role": "",
-    "twitter": "",
-    "linkedin": "",
-    "image": ""
-  },
-  {
     "name": "Daryl Arnold",
     "role": "· Dex",
     "twitter": "",
     "linkedin": "",
     "image": "daryl"
+  },
+  {
+    "name": "Don Gossen",
+    "role": "",
+    "twitter": "",
+    "linkedin": "",
+    "image": ""
   },
   {
     "name": "Dinh Xuan Nhat",
@@ -85,6 +71,20 @@
     "twitter": "kremalicious",
     "github": "kremalicious",
     "image": ""
+  },
+  {
+    "name": "Masha McConaghy",
+    "bio": "Calculated gravity assited trajectories between Earth and Mars",
+    "role": "CMO · BigchainDB",
+    "linkedin": "mashamc",
+    "image": "masha"
+  },
+  {
+    "name": "Gregory McMullen",
+    "role": "CPO · BigchainDB & IPDB",
+    "twitter": "gmcmullen",
+    "linkedin": "gregmcm",
+    "image": "greg"
   },
   {
     "name": "Wojciech Hupert",
@@ -133,9 +133,9 @@
   {
     "name": "Muawia Khan",
     "role": "DevOps Engineer · BigchainDB & IPDB",
-    "twitter": "",
-    "linkedin": "",
-    "image": ""
+    "twitter": "mobykhn",
+    "linkedin": "muawiakhan",
+    "image": "muawia"
   },
   {
     "name": "Shahbay Nazir",
