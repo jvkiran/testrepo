@@ -126,7 +126,8 @@ class Menu extends Component {
     active: false,
     fixed: false,
     sections: {},
-    current: ''
+    current: '',
+    lastScroll: window.scrollY
   };
   componentDidMount() {
     this.mapSectionsTop();
@@ -138,18 +139,34 @@ class Menu extends Component {
     let sections = {};
     for (var i = 0; i < sectionNodes.length; i++) {
       const sectionId = sectionNodes[i].id;
-      sections[sectionId] = document.getElementById(sectionId).getBoundingClientRect().top + window.scrollY;
+      sections[sectionId] = {
+        top: document.getElementById(sectionId).getBoundingClientRect().top + window.scrollY,
+        bottom: document.getElementById(sectionId).getBoundingClientRect().bottom + window.scrollY
+      };
     }
     this.setState({ sections });
     this.highlightCurrent();
   };
   highlightCurrent = () => {
-    const currentTop = window.scrollY;
-    const currentBottom = window.scrollY + window.innerHeight / 2;
+    let range = [];
+    let scrollDown = this.state.lastScroll > window.scrollY;
+    if (scrollDown) {
+      range[0] = window.scrollY + window.innerHeight * 0;
+      range[1] = window.scrollY + window.innerHeight * 0.5;
+    } else {
+      range[0] = window.scrollY + window.innerHeight * 0.5;
+      range[1] = window.scrollY + window.innerHeight * 1;
+    }
     const sectionIds = Object.keys(this.state.sections);
     for (var i = 0; i < sectionIds.length; i++) {
       const id = sectionIds[i];
-      if (this.state.sections[id] > currentTop && this.state.sections[id] < currentBottom) {
+      let inView;
+      if (scrollDown) {
+        inView = this.state.sections[id].top > range[0] && this.state.sections[id].top < range[1];
+      } else {
+        inView = this.state.sections[id].bottom > range[0] && this.state.sections[id].bottom < range[1];
+      }
+      if (inView) {
         if (this.state.current !== id) {
           this.setState({ current: id });
           console.log(id);
