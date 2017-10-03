@@ -51,7 +51,11 @@ const Button = ({ fetching, children, ...props }) => (
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  fetching: PropTypes.bool.isRequired
+  fetching: PropTypes.bool
+};
+
+Button.defaultProps = {
+  fetching: false
 };
 
 export default Button;
