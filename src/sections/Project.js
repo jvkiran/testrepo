@@ -164,7 +164,7 @@ const Project = ({ toggleModal, ...props }) => (
         <StyledCard onClick={() => toggleModal('sell')}>
           <h4>Data Providers</h4>
           <p>Unlock your data and earn revenue.</p>
-          <button>Publish Data</button>
+          <button>Publish data</button>
         </StyledCard>
         <StyledDataTransfer>
           <StyledDataDots img={dataDotsLeft} />
@@ -174,7 +174,7 @@ const Project = ({ toggleModal, ...props }) => (
         <StyledCard onClick={() => toggleModal('buy')}>
           <h4>Data Consumers</h4>
           <p>Discover and buy data.</p>
-          <button>Get Data</button>
+          <button>Get data</button>
         </StyledCard>
       </StyledData>
       <Grid wrap>

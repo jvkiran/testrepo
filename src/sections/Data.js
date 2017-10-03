@@ -10,7 +10,14 @@ import Paragraph from '../components/Paragraph';
 import dataUnanalyzed from '../assets/graphics/data-unanalyzed.svg';
 import dataLocked from '../assets/graphics/data-locked.svg';
 import dataUnavailable from '../assets/graphics/data-unavailable.svg';
-import { responsive } from '../styles';
+import { responsive, fonts } from '../styles';
+
+const StyledSubTitle = styled(Title)`
+  font-size: ${fonts.size.h3};
+  @media screen and (${responsive.sm.max}) {
+    font-size: ${fonts.size.h4};
+  }
+`;
 
 const StyledGrid = styled(Grid)`@media screen and (${responsive.sm.max}) {margin-top: 6rem;}`;
 
@@ -83,7 +90,9 @@ const StyledThirdGrid = styled(StyledGrid)`margin-bottom: 4rem;`;
 const Data = () => (
   <Section id="data">
     <ContentRow>
-      <Title>Only 1% of collected data is analyzed</Title>
+      <Title>Why Ocean Protocol?</Title>
+
+      <StyledSubTitle>Only 1% of data is analyzed</StyledSubTitle>
 
       <StyledFirstGrid left>
         <Cell center width={1 / 3}>
@@ -92,8 +101,7 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
           <Paragraph>
-            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is
-            vital to daily life for consumers, governments, and businesses alike.
+            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is vital to daily life for consumers, governments, and businesses alike.
           </Paragraph>
         </Cell>
       </StyledFirstGrid>
@@ -105,8 +113,7 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
           <Paragraph>
-            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from
-            every organization safely and securely, value can spread and be shared.{' '}
+            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from every organization safely and securely, value can spread and be shared.{' '}
           </Paragraph>
         </Cell>
       </StyledSecondGrid>
@@ -115,8 +122,7 @@ const Data = () => (
         <Cell width={1} maxWidth="narrow">
           <SubTitle>Data is widely available but owned by few</SubTitle>
           <Paragraph>
-            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data
-            and most startups are starving for data.
+            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
           </Paragraph>
         </Cell>
         <Cell center width={1}>

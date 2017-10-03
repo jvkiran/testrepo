@@ -102,7 +102,7 @@ const MenuItems = [
     href: '#project'
   },
   {
-    name: 'Whitepaper',
+    name: 'Primer',
     href: '#documentation'
   },
   {
