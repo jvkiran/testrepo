@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
@@ -86,7 +85,7 @@ const StyledWaves = styled.div`
 
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
-  margin-top: 15%;
+  margin-top: 20%;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #fff;
@@ -108,15 +107,6 @@ const StyledTagline = styled(Title)`
 
   @media screen and (${responsive.smHeight.max}) {
     font-size: ${fonts.size.h4};
-  }
-`;
-
-const SParagraph = styled(Paragraph)`
-  text-align: center;
-  font-size: ${fonts.size.large};
-  @media screen and (${responsive.sm.max}) {
-    font-size: ${fonts.size.base};
-    margin-bottom: 1rem;
   }
 `;
 
@@ -153,10 +143,6 @@ const Welcome = () => (
         <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
       </ContentRow>
       <ContentRow narrow>
-        <SParagraph>
-          Ocean allows data to be shared and sold in a safe, secure and transparent manner. Connecting providers and
-          consumers of valuable datasets, while providing open access for developers to build services.
-        </SParagraph>
         <StyledPoweredBy>
           <p>Powered by</p>
           <a
