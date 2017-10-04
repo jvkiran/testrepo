@@ -1,7 +1,7 @@
 /* global THREE */
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (!('ontouchstart' in window && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 800)) {
+  if (!(Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 768)) {
     var SEPARATION = 100,
       AMOUNTX = 100,
       AMOUNTY = 70;
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var container;
 
-    var show = window.innerWidth >= 640 && window.innerHeight >= 600;
+    var show = window.innerWidth >= 768 && window.innerHeight >= 500;
 
     var particles,
       particle,
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onWindowResize() {
-      if (window.innerWidth >= 640 && window.innerHeight >= 600) {
+      if (window.innerWidth >= 768 && window.innerHeight >= 500) {
         if (!show) {
           show = true;
           animate();

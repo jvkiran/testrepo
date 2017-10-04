@@ -101,7 +101,7 @@ const StyledTagline = styled(Title)`
 
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
-    margin-top: 4rem;
+    margin-top: 8rem;
     margin-bottom: 0.5rem;
   }
 
