@@ -108,6 +108,10 @@ const MenuItems = [
     href: '#documentation'
   },
   {
+    name: 'Why Ocean?',
+    href: '#why'
+  },
+  {
     name: 'Team',
     href: '#team'
   },

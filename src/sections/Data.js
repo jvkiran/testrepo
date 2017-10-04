@@ -93,7 +93,7 @@ const StyledThirdGrid = styled(StyledGrid)`
 `;
 
 const Data = () => (
-  <Section id="data">
+  <Section id="why">
     <ContentRow>
       <Title>Why Ocean Protocol?</Title>
 
