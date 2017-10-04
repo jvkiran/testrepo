@@ -4,7 +4,6 @@ import Menu from './sections/Menu';
 import Welcome from './sections/Welcome';
 import Project from './sections/Project';
 import Data from './sections/Data';
-import UseCases from './sections/UseCases';
 import Documentation from './sections/Documentation';
 import Team from './sections/Team';
 import Blog from './sections/Blog';
@@ -30,7 +29,6 @@ class Root extends Component {
       <Project toggleModal={this.toggleModal} />
       <Documentation />
       <Data />
-      <UseCases />
       <Team toggleModal={this.toggleModal} />
       <Blog />
       <Footer />

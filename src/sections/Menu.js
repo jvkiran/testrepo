@@ -108,10 +108,6 @@ const MenuItems = [
     href: '#documentation'
   },
   {
-    name: 'Use Cases',
-    href: '#usecases'
-  },
-  {
     name: 'Team',
     href: '#team'
   },
