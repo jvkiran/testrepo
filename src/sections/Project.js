@@ -1,3 +1,5 @@
+/* global ga */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
@@ -153,52 +155,62 @@ const StyledDataDots = styled.div`
   }
 `;
 
-const Project = ({ toggleModal, ...props }) => (
-  <Section id="project" {...props}>
-    <ContentRow>
-      <Title>
-        Ocean Protocol <br />unlocks data
-      </Title>
+const Project = ({ toggleModal, ...props }) => {
+  const _toggleModal = modal => {
+    if (modal === 'buy') {
+      ga('send', 'event', 'customer', 'click', 'intro_card', true);
+    } else if (modal === 'sell') {
+      ga('send', 'event', 'owner', 'click', 'intro_card', true);
+    }
+    toggleModal(modal);
+  };
+  return (
+    <Section id="project" {...props}>
+      <ContentRow>
+        <Title>
+          Ocean Protocol <br />unlocks data
+        </Title>
 
-      <StyledData width={1}>
-        <StyledCard onClick={() => toggleModal('sell')}>
-          <h4>Data Providers</h4>
-          <p>Unlock your data and earn revenue.</p>
-          <button>Publish data</button>
-        </StyledCard>
-        <StyledDataTransfer>
-          <StyledDataDots img={dataDotsLeft} />
-          <StyledDataDots img={dataDotsRight} />
-          <Pulse />
-        </StyledDataTransfer>
-        <StyledCard onClick={() => toggleModal('buy')}>
-          <h4>Data Consumers</h4>
-          <p>Discover and buy data.</p>
-          <button>Get data</button>
-        </StyledCard>
-      </StyledData>
-      <Grid wrap>
-        <Cell width={2 / 5}>
-          <SubTitle>What is Ocean Protocol?</SubTitle>
-          <Paragraph>
-            Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with privacy,
-            security, control, transparency and compliance.
-          </Paragraph>
-        </Cell>
-        <Cell width={1 / 5}>
-          <div />
-        </Cell>
-        <Cell width={2 / 5}>
-          <SubTitle>How Ocean Works</SubTitle>
-          <Paragraph>
-            Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to
-            build services on top.
-          </Paragraph>
-        </Cell>
-      </Grid>
-    </ContentRow>
-  </Section>
-);
+        <StyledData width={1}>
+          <StyledCard onClick={() => _toggleModal('sell')}>
+            <h4>Data Providers</h4>
+            <p>Unlock your data and earn revenue.</p>
+            <button>Publish data</button>
+          </StyledCard>
+          <StyledDataTransfer>
+            <StyledDataDots img={dataDotsLeft} />
+            <StyledDataDots img={dataDotsRight} />
+            <Pulse />
+          </StyledDataTransfer>
+          <StyledCard onClick={() => _toggleModal('buy')}>
+            <h4>Data Consumers</h4>
+            <p>Discover and buy data.</p>
+            <button>Get data</button>
+          </StyledCard>
+        </StyledData>
+        <Grid wrap>
+          <Cell width={2 / 5}>
+            <SubTitle>What is Ocean Protocol?</SubTitle>
+            <Paragraph>
+              Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with
+              privacy, security, control, transparency and compliance.
+            </Paragraph>
+          </Cell>
+          <Cell width={1 / 5}>
+            <div />
+          </Cell>
+          <Cell width={2 / 5}>
+            <SubTitle>How Ocean Works</SubTitle>
+            <Paragraph>
+              Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to
+              build services on top.
+            </Paragraph>
+          </Cell>
+        </Grid>
+      </ContentRow>
+    </Section>
+  );
+};
 
 Project.propTypes = {
   toggleModal: PropTypes.func.isRequired

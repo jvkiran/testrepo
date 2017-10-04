@@ -169,7 +169,6 @@ class Menu extends Component {
       if (inView) {
         if (this.state.current !== id) {
           this.setState({ current: id });
-          console.log(id);
         }
         break;
       }

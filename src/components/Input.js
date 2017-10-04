@@ -61,7 +61,6 @@ class Input extends Component {
     input: ''
   };
   onChange = ({ target }) => {
-    console.log(target.value);
     if (this.props.maxLength && target.value.length > this.props.maxLength) return;
     this.setState({ input: target.value });
   };
