@@ -61,32 +61,11 @@ const Footer = () => (
                 <img src={buttonMedium} alt="Medium" />
               </a>
               <a
-                href="https://blog.oceanprotocol.com/"
+                href="https://twitter.com/oceanprotocol"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
                 <img src={buttonTwitter} alt="Twitter" />
-              </a>
-              <a
-                href="https://blog.oceanprotocol.com/"
-                target="_blank" //eslint-disable-line
-                rel="noopener"
-              >
-                <img src={buttonSlack} alt="Slack" />
-              </a>
-              <a
-                href="https://blog.oceanprotocol.com/"
-                target="_blank" //eslint-disable-line
-                rel="noopener"
-              >
-                <img src={buttonTelegram} alt="Slack" />
-              </a>
-              <a
-                href="https://blog.oceanprotocol.com/"
-                target="_blank" //eslint-disable-line
-                rel="noopener"
-              >
-                <img src={buttonReddit} alt="Slack" />
               </a>
             </StyledSocialLinks>
           </StyledActions>
