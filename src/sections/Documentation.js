@@ -88,11 +88,7 @@ const Documentation = () => (
             marketplaces can be built.
           </StyledIntro>
           <StyledAbstract>
-            The world has recognized the value of data, but it’s been very difficult to establish a price for the data
-            (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts
-            of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial
-            intelligence (AI), but lack the data to make their AI models perform. To address this problem, data
-            marketplaces have emerged, but they are silos themselves.
+            The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves.
           </StyledAbstract>
           <a href="https://google.com">
             <StyledDownload onClick={() => ga('send', 'event', 'whitepaper', 'download', 'button', true)}>
@@ -106,11 +102,9 @@ const Documentation = () => (
         </StyledWhitepaper>
         <Cell width={1 / 2}>
           <StyledRow>
-            <SubTitle>Manifesto</SubTitle>
+            <SubTitle>Mission statement</SubTitle>
             <StyledAbstract>
-              Data producers like enterprises have tremendous data assets but don't know how to unlock the data's
-              potential. Conversely, data consumers like AI startups are starving for data. Data marketplaces can
-              connect data suppliers and consumers.
+              Data producers like enterprises have tremendous data assets but don't know how to unlock the data's potential. Conversely, data consumers like AI startups are starving for data. Data marketplaces can connect data suppliers and consumers.
             </StyledAbstract>
             <a href="https://google.com" onClick={() => ga('send', 'event', 'manifesto', 'download', 'button', true)}>
               Download
