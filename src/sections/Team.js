@@ -143,12 +143,6 @@ const StyledRole = styled.h4`
   opacity: 0.5;
 `;
 
-const StyledBio = styled.p`
-  font-size: ${fonts.size.small};
-  line-height: ${fonts.lineHeight.title};
-  color: rgb(${colors.dark});
-`;
-
 const StyledLinks = styled.div`
   display: flex;
   margin-top: 1rem;
@@ -244,7 +238,6 @@ const Team = ({ toggleModal, ...props }) => (
                 <StyledProfileWrapper idx={idx}>
                   <StyledName>{member.name}</StyledName>
                   <StyledRole>{member.role}</StyledRole>
-                  {!!member.bio && <StyledBio>{member.bio}</StyledBio>}
                   <StyledLinks>
                     {!!member.linkedin && (
                       <StyledIcon

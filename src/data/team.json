@@ -1,7 +1,6 @@
 [
   {
     "name": "Bruce Pon",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "CEO · BigchainDB",
     "twitter": "BrucePon",
     "linkedin": "ponbruce",
@@ -9,7 +8,6 @@
   },
   {
     "name": "Trent McConaghy",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
     "role": "CTO · BigchainDB",
     "twitter": "trentmc0",
     "github": "trentmc",
@@ -18,38 +16,35 @@
   },
   {
     "name": "Chirdeep Chhabra",
-    "bio": "Calculated gravity assited trajectories between Earth and Mars",
-    "role": "· Dex",
-    "twitter": "",
-    "linkedin": "",
+    "role": "CEO · Dex",
+    "twitter": "chirdeep",
+    "linkedin": "chirdeep",
     "image": "chirdeep"
   },
   {
     "name": "Daryl Arnold",
-    "role": "· Dex",
-    "twitter": "",
-    "linkedin": "",
+    "role": "Chairman · Dex",
+    "twitter": "darylarnold",
+    "linkedin": "darylarnold",
     "image": "daryl"
   },
   {
     "name": "Don Gossen",
-    "role": "",
+    "role": "· BigchainDB",
     "twitter": "",
     "linkedin": "",
-    "image": ""
+    "image": "don"
   },
   {
     "name": "Dinh Xuan Nhat",
-    "role": "· Dex",
-    "twitter": "",
-    "linkedin": "",
+    "role": "Engineer · Dex",
+    "linkedin": "nhatdx",
     "image": "dinh"
   },
   {
     "name": "Timothy Ley",
-    "role": "· Dex",
-    "twitter": "",
-    "linkedin": "",
+    "role": "Data Analyst · Dex",
+    "linkedin": "timothyleymingde",
     "image": "timothy"
   },
   {
@@ -63,7 +58,7 @@
     "name": "Oana Ionescu",
     "role": "Marketing · BigchainDB",
     "linkedin": "oanavoicu",
-    "image": ""
+    "image": "oana"
   },
   {
     "name": "Matthias Kretschmann",
@@ -99,11 +94,11 @@
     "twitter": "sbellem",
     "github": "sbellem",
     "linkedin": "sylvainbellemare",
-    "image": ""
+    "image": "sylvain"
   },
   {
     "name": "Tim Daubenschütz",
-    "role": "Product Manager · BigchainDB",
+    "role": "VP Engineering · BigchainDB",
     "twitter": "TimDaub",
     "github": "TimDaub",
     "image": ""
@@ -119,15 +114,15 @@
   {
     "name": "Gautam Dhameja",
     "role": "Application Engineer · BigchainDB",
-    "twitter": "",
-    "linkedin": "",
+    "twitter": "gautamdhameja",
+    "linkedin": "gautamdhameja",
     "image": "gautam"
   },
   {
     "name": "Jernej Pregelj",
     "role": "Application Engineer · BigchainDB",
-    "twitter": "",
-    "linkedin": "",
+    "twitter": "jernejpregelj",
+    "linkedin": "jernej-pregelj",
     "image": "jernej"
   },
   {
@@ -143,7 +138,7 @@
     "github": "shahbazn",
     "linkedin": "shahbaz-nazir-84766451",
     "twitter": "shahbaz_nazir",
-    "image": ""
+    "image": "shahbaz"
   },
   {
     "name": "Rodolphe Marques",
@@ -163,15 +158,14 @@
   {
     "name": "Morgan Sutherland",
     "role": "Engineer · IPDB",
-    "twitter": "",
-    "github": "",
-    "image": ""
+    "twitter": "msutherl",
+    "linkedin": "morgansutherland",
+    "image": "morgan"
   },
   {
     "name": "Sarah Vallon",
-    "role": "Marketing · BigchainDB",
-    "twitter": "",
-    "linkedin": "",
+    "role": "Digital Communications · BigchainDB",
+    "linkedin": "sarah-jean-vallon-b4603a65",
     "image": "sarah"
   },
   {
@@ -182,9 +176,8 @@
   },
   {
     "name": "Kamal Ved",
-    "role": "",
-    "twitter": "",
-    "linkedin": "",
+    "role": "Business Development · BigchainDB",
+    "linkedin": "kamalved",
     "image": "kamal"
   },
   {
