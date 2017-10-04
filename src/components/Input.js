@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import emailGrey from '../assets/misc/email-grey.svg';
 import { colors, fonts, transitions } from '../styles';
 
 const StyledInputWrapper = styled.div`
@@ -65,14 +64,13 @@ class Input extends Component {
     this.setState({ input: target.value });
   };
   render() {
-    const { maxLength, icon, type, ...props } = this.props;
+    const { maxLength, type, ...props } = this.props;
     return (
       <StyledInputWrapper>
-        {type === 'email' && <img src={emailGrey} alt="email" />}
         {type === 'textarea' ? (
-          <StyledTextarea value={this.state.input} onChange={this.onChange} icon={type === 'email'} {...props} />
+          <StyledTextarea value={this.state.input} onChange={this.onChange} {...props} />
         ) : (
-          <StyledInput value={this.state.input} onChange={this.onChange} icon={type === 'email'} {...props} />
+          <StyledInput value={this.state.input} onChange={this.onChange} {...props} />
         )}
         {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
       </StyledInputWrapper>

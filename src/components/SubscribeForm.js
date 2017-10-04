@@ -195,7 +195,7 @@ SubscribeForm.propTypes = {
 SubscribeForm.defaultProps = {
   maxWidth: 34,
   inputPlaceholder: 'your@email.com',
-  btnLabel: 'Join us',
+  btnLabel: 'Subscribe',
   sending: 'Sending...',
   success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
   error: 'Oops, something went wrong. Would you mind trying again?'

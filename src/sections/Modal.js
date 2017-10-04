@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import jsonp from 'jsonp';
 import Input from '../components/Input';
 import Button from '../components/Button';
+import SubTitle from '../components/SubTitle';
 import cross from '../assets/misc/cross.svg';
-import { colors, transitions, responsive } from '../styles';
+import { colors, fonts, transitions, responsive } from '../styles';
 
 const StyledLightbox = styled.div`
   background: rgba(${colors.black}, 0.7);
@@ -36,6 +37,7 @@ const StyledHitbox = styled.div`
 const StyledCard = styled.div`
   margin: 1rem;
   padding: 6rem;
+  padding-top: 5rem;
   width: 100%;
   z-index: 2;
   max-width: 640px;
@@ -63,36 +65,40 @@ const StyledMessage = styled.p`
   position: absolute;
   text-align: center;
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: ${fonts.size.small};
   width: calc(100% - 12rem);
+  color: rgb(${colors.red});
   @media screen and (${responsive.sm.max}) {
     width: calc(100% - 2rem);
   }
 `;
 
 const forms = {
-  buy: {
-    name: 'Your Name',
-    email: 'type@youremail.com',
-    business: 'Company Name',
-    message: 'Tell us why you would like to get data',
-    button: 'Join the Data Consumers',
-    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
-  },
   sell: {
+    title: 'Join the Data Providers',
     name: 'Your Name',
-    email: 'type@youremail.com',
-    business: 'Company Name',
+    email: 'Your Email',
+    business: 'Your Company Name',
     message: 'Tell us why you would like to publish data',
-    button: 'Join the Data Providers',
+    button: 'Submit',
     baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
   },
-  contribute: {
+  buy: {
+    title: 'Join the Data Consumers',
     name: 'Your Name',
-    email: 'type@youremail.com',
+    email: 'Your Email',
+    business: 'Your Company Name',
+    message: 'Tell us why you would like to get data',
+    button: 'Submit',
+    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
+  },
+  contribute: {
+    title: 'Ocean Protocol newsletter',
+    name: 'Your Name',
+    email: 'Your Email',
     business: 'Your Role',
     message: 'Tell us how you would like to contribute',
-    button: 'Join the Ocean Community',
+    button: 'Subscribe',
     baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71'
   }
 };
@@ -192,6 +198,9 @@ class Modal extends Component {
       <StyledLightbox show={!!modal} {...props}>
         <StyledHitbox onClick={() => toggle()} />
         <StyledCard>
+          {modal && (
+            <SubTitle>{forms[modal].title}</SubTitle>
+          )}
           <StyledClose src={cross} alt="close" onClick={() => toggle()} />
           {!!modal && (
             <form onSubmit={this.onSubmit}>
