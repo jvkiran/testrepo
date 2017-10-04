@@ -9,15 +9,7 @@ import Paragraph from '../components/Paragraph';
 import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
-import buttonSlack from '../assets/buttons/slack.svg';
-import buttonTelegram from '../assets/buttons/telegram.svg';
-import buttonReddit from '../assets/buttons/reddit.svg';
 import { colors, responsive } from '../styles';
-
-const StyledStrong = styled.span`
-  font-weight: 600;
-  text-transform: uppercase;
-`;
 
 const StyledActions = styled.div`
   width: 100%;
@@ -25,13 +17,18 @@ const StyledActions = styled.div`
   display: flex;
 `;
 
+const StyledCopyright = styled(Paragraph)`
+  opacity: .5;
+  margin-top: 3rem;
+  @media screen and (${responsive.sm.min}) {
+    margin-bottom: -2rem;
+  }
+`;
+
 const StyledSocialLinks = styled.div`
   display: flex;
   & a {
-    margin-right: 20px;
-    @media screen and (${responsive.sm.max}) {
-      margin: 0;
-    }
+    margin-right: 1rem;
   }
   & img {
     border-radius: 2px;
@@ -40,7 +37,6 @@ const StyledSocialLinks = styled.div`
   }
   @media screen and (${responsive.sm.max}) {
     width: 100%;
-    justify-content: space-between;
   }
 `;
 
@@ -73,20 +69,16 @@ const Footer = () => (
         <Cell width={1 / 2}>
           <SubTitle white>About</SubTitle>
           <Paragraph>
-            Ocean Protocol Foundation. Ocean is supported by a Singapore based non-profit foundation, whose mandate is
-            to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem
-            growth and take measures to ensure that the platform becomes ever more decentralized with time.
-          </Paragraph>
-          <Paragraph>
-            Ocean Protocol name and the Ocean Protocol logos are registered trademarks of the Ocean Protocol Foundation.
-          </Paragraph>
-          <Paragraph>
-            <StyledStrong>DISCLAIMER:</StyledStrong> This site may contain forward-looking statements, subject to risks
-            and uncertainties that could cause the actual results to differ materially.
+            Ocean is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
         </Cell>
       </Grid>
     </ContentRow>
+    <ContentRow>
+      <StyledCopyright>
+        <small>&copy; {(new Date().getFullYear())} Ocean Protocol Foundation - All Rights Reserved</small>
+      </StyledCopyright>
+    </ContentRow >
   </Section>
 );
 
