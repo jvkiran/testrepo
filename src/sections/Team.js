@@ -278,21 +278,21 @@ const Team = ({ toggleModal, ...props }) => (
       <ContentRow narrow>
         <StyledCompanies>
           <StyledCompanyLogo
-            href="https://www.bigchaindb.com/"
+            href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
             target="_blank" // eslint-disable-line
             rel="noopener"
           >
             <img src={bigchainDBLogo} alt="BigchainDB" />
           </StyledCompanyLogo>
           <StyledCompanyLogo
-            href="https://www.dex.sg/"
+            href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
             target="_blank" // eslint-disable-line
             rel="noopener"
           >
             <img src={dexLogo} alt="Dex" />
           </StyledCompanyLogo>
           <StyledCompanyLogo
-            href="https://ipdb.io/"
+            href="https://ipdb.io/?utm_source=oceanprotocol&utm_medium=logo"
             target="_blank" // eslint-disable-line
             rel="noopener"
           >
