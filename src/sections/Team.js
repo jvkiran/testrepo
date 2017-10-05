@@ -292,7 +292,7 @@ const Team = ({ toggleModal, ...props }) => (
             <img src={dexLogo} alt="Dex" />
           </StyledCompanyLogo>
           <StyledCompanyLogo
-            href="https://ipdb.foundation/"
+            href="https://ipdb.io/"
             target="_blank" // eslint-disable-line
             rel="noopener"
           >
@@ -305,7 +305,7 @@ const Team = ({ toggleModal, ...props }) => (
         <StyledLine />
 
         <StyledActions>
-          <StyledButton onClick={() => toggleModal('contribute')}>Join as a contributor</StyledButton>
+          <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
         </StyledActions>
       </ContentRow>
     </StyledWrapper>
