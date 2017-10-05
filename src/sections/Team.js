@@ -305,7 +305,7 @@ const Team = ({ toggleModal, ...props }) => (
         <StyledLine />
 
         <StyledActions>
-          <StyledButton onClick={() => toggleModal('contribute')}>Join the community</StyledButton>
+          <StyledButton onClick={() => toggleModal('contribute')}>Join as a contributor</StyledButton>
         </StyledActions>
       </ContentRow>
     </StyledWrapper>

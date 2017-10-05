@@ -157,10 +157,10 @@ const StyledDataDots = styled.div`
 
 const Project = ({ toggleModal, ...props }) => {
   const _toggleModal = modal => {
-    if (modal === 'buy') {
-      ga('send', 'event', 'customer', 'click', 'intro_card', true);
-    } else if (modal === 'sell') {
-      ga('send', 'event', 'owner', 'click', 'intro_card', true);
+    if (modal === 'consumer') {
+      ga('send', 'event', 'consumer', 'click', 'intro_card', true);
+    } else if (modal === 'provider') {
+      ga('send', 'event', 'provider', 'click', 'intro_card', true);
     }
     toggleModal(modal);
   };
@@ -172,7 +172,7 @@ const Project = ({ toggleModal, ...props }) => {
         </Title>
 
         <StyledData width={1}>
-          <StyledCard onClick={() => _toggleModal('sell')}>
+          <StyledCard onClick={() => _toggleModal('provider')}>
             <h4>Data Providers</h4>
             <p>Unlock your data and earn revenue.</p>
             <button>Publish data</button>
@@ -182,7 +182,7 @@ const Project = ({ toggleModal, ...props }) => {
             <StyledDataDots img={dataDotsRight} />
             <Pulse />
           </StyledDataTransfer>
-          <StyledCard onClick={() => _toggleModal('buy')}>
+          <StyledCard onClick={() => _toggleModal('consumer')}>
             <h4>Data Consumers</h4>
             <p>Discover and buy data.</p>
             <button>Get data</button>

@@ -74,7 +74,7 @@ const StyledMessage = styled.p`
 `;
 
 const forms = {
-  sell: {
+  provider: {
     title: 'Join the Data Providers',
     name: 'Your Name',
     email: 'Your Email',
@@ -83,7 +83,7 @@ const forms = {
     button: 'Submit',
     baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
   },
-  buy: {
+  consumer: {
     title: 'Join the Data Consumers',
     name: 'Your Name',
     email: 'Your Email',
@@ -92,14 +92,14 @@ const forms = {
     button: 'Submit',
     baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
   },
-  contribute: {
-    title: 'Ocean Protocol newsletter',
+  contributor: {
+    title: 'Join as a Contributor',
     name: 'Your Name',
     email: 'Your Email',
     business: 'Your Role',
     message: 'Tell us how you would like to contribute',
-    button: 'Subscribe',
-    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71'
+    button: 'Submit',
+    baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=6500840fdf'
   }
 };
 
@@ -154,7 +154,7 @@ class Modal extends Component {
       message = encodeURIComponent(this.message.state.input);
     }
 
-    if (this.props.modal === 'contribute') {
+    if (this.props.modal === 'contributor') {
       url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&ROLE=${company}&MESSAGE=${message}`;
     } else {
       url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}`;
