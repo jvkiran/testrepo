@@ -11,9 +11,18 @@ import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
 import { colors, responsive } from '../styles';
 
+const StyledSubTitle = styled.h5`
+  color: #fff;
+  opacity: .5;
+  margin-bottom: 1rem;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+`;
+
 const StyledActions = styled.div`
   width: 100%;
-  margin-top: 2rem;
   display: flex;
 `;
 
@@ -40,13 +49,24 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
+const StyledContact = styled(Paragraph)`
+  text-align: right;
+
+  .address {
+    opacity: .5;
+  }
+`;
+
 const Footer = () => (
   <Section id="footer" background={colors.grey} fontColor={colors.white}>
     <ContentRow>
       <Grid>
         <Cell width={1 / 2}>
           <SubTitle white>Get Involved</SubTitle>
+          <StyledSubTitle>Newsletter</StyledSubTitle>
           <SubscribeForm maxWidth={28} />
+
+          <StyledSubTitle>Follow</StyledSubTitle>
           <StyledActions>
             <StyledSocialLinks>
               <a
@@ -69,8 +89,25 @@ const Footer = () => (
         <Cell width={1 / 2}>
           <SubTitle white>About</SubTitle>
           <Paragraph>
-            Ocean is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
+            Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
+          <StyledContact>
+            <Grid>
+              <Cell width={1 / 2}>
+                <strong>Ocean Protocol Foundation</strong>
+                <a href="mailto:info@oceanprotocol.com">info@oceanprotocol.com</a>
+              </Cell>
+
+              <Cell width={1 / 2}>
+                <div class="address">
+                  Mapletree Business Center<br />
+                  20 Pasir Panjang Rd<br />
+                  Singapore, 117439<br />
+                  Singapore
+                </div>
+              </Cell>
+            </Grid>
+          </StyledContact>
         </Cell>
       </Grid>
     </ContentRow>
