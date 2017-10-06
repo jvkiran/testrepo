@@ -13,6 +13,11 @@
     "image": "trent"
   },
   {
+    "name": "Masha McConaghy",
+    "linkedin": "mashamc",
+    "image": "masha"
+  },
+  {
     "name": "Chirdeep Chhabra",
     "twitter": "chirdeep",
     "linkedin": "chirdeep",
@@ -55,11 +60,6 @@
     "twitter": "kremalicious",
     "github": "kremalicious",
     "image": "matthias"
-  },
-  {
-    "name": "Masha McConaghy",
-    "linkedin": "mashamc",
-    "image": "masha"
   },
   {
     "name": "Gregory McMullen",
@@ -151,17 +151,6 @@
     "name": "Kamal Ved",
     "linkedin": "kamalved",
     "image": "kamal"
-  },
-  {
-    "name": "Richard Burton",
-    "twitter": "ricburton",
-    "image": ""
-  },
-  {
-    "name": "Charlie Ellington",
-    "twitter": "charliellington",
-    "linkedin": "charlie-ellington-10a93527",
-    "image": "charlie"
   },
   {
     "name": "Daniel Lustig",
