@@ -106,6 +106,7 @@ const forms = {
 class Modal extends Component {
   state = {
     fetching: false,
+    sent: false,
     message: ''
   };
   componentDidUpdate() {
@@ -113,6 +114,15 @@ class Modal extends Component {
       document.getElementsByTagName('html')[0].style.overflow = 'auto';
     } else {
       document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+    }
+  }
+  componentWillReceiveProps(newProps, newState) {
+    if (!newProps.modal) {
+      this.setState({
+        fetching: false,
+        sent: false,
+        message: ''
+      });
     }
   }
   onSubmit = e => {
@@ -185,6 +195,7 @@ class Modal extends Component {
             } else {
               this.setState({
                 fetching: false,
+                sent: true,
                 message: data.msg
               });
             }
@@ -198,27 +209,31 @@ class Modal extends Component {
       <StyledLightbox show={!!modal} {...props}>
         <StyledHitbox onClick={() => toggle()} />
         <StyledCard>
-          {modal && (
-            <SubTitle>{forms[modal].title}</SubTitle>
-          )}
           <StyledClose src={cross} alt="close" onClick={() => toggle()} />
           {!!modal && (
-            <form onSubmit={this.onSubmit}>
-              <Input ref={node => (this.name = node)} type="text" placeholder={forms[modal].name} />
-              <Input type="email" ref={node => (this.email = node)} placeholder={forms[modal].email} />
-              <Input ref={node => (this.business = node)} type="text" placeholder={forms[modal].business} />
-              <Input
-                ref={node => (this.message = node)}
-                type="textarea"
-                maxLength={255}
-                rows="6"
-                placeholder={forms[modal].message}
-              />
-              <Button fetching={this.state.fetching} type="submit">
-                {forms[modal].button}
-              </Button>
-              {!!this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
-            </form>
+            <div>
+              <SubTitle>{forms[modal].title}</SubTitle>
+              {this.state.sent ? (
+                <div>{this.state.message}</div>
+              ) : (
+                <form onSubmit={this.onSubmit}>
+                  <Input ref={node => (this.name = node)} type="text" placeholder={forms[modal].name} />
+                  <Input type="email" ref={node => (this.email = node)} placeholder={forms[modal].email} />
+                  <Input ref={node => (this.business = node)} type="text" placeholder={forms[modal].business} />
+                  <Input
+                    ref={node => (this.message = node)}
+                    type="textarea"
+                    maxLength={255}
+                    rows="6"
+                    placeholder={forms[modal].message}
+                  />
+                  <Button fetching={this.state.fetching} type="submit">
+                    {forms[modal].button}
+                  </Button>
+                  {!!this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
+                </form>
+              )}
+            </div>
           )}
         </StyledCard>
       </StyledLightbox>

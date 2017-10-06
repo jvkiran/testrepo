@@ -43,7 +43,7 @@ const StyledButton = styled.button`
 const StyledChildren = styled.div`opacity: ${({ fetching }) => (fetching ? 0 : 1)};`;
 
 const Button = ({ fetching, children, ...props }) => (
-  <StyledButton {...props}>
+  <StyledButton disabled={fetching} {...props}>
     {fetching && <Spinner white />}
     <StyledChildren fetching={fetching}>{children}</StyledChildren>
   </StyledButton>
