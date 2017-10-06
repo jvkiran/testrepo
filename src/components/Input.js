@@ -68,9 +68,9 @@ class Input extends Component {
     return (
       <StyledInputWrapper>
         {type === 'textarea' ? (
-          <StyledTextarea value={this.state.input} onChange={this.onChange} {...props} />
+          <StyledTextarea type={type} value={this.state.input} onChange={this.onChange} {...props} />
         ) : (
-          <StyledInput value={this.state.input} onChange={this.onChange} {...props} />
+          <StyledInput type={type} value={this.state.input} onChange={this.onChange} {...props} />
         )}
         {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
       </StyledInputWrapper>
