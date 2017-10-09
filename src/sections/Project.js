@@ -190,17 +190,16 @@ const Project = ({ toggleModal, ...props }) => {
         </StyledData>
         <Grid wrap>
           <Cell width={2 / 5}>
-            <SubTitle>What is Ocean Protocol?</SubTitle>
+            <h4>What is Ocean Protocol?</h4>
             <Paragraph>
-              Ocean Protocol is a decentralized data sharing protocol that makes data available for everyone with
-              privacy, security, control, transparency and compliance.
+              Ocean Protocol is a decentralized data exchange protocol that makes data available for everyone with privacy, security, control, transparency and compliance.
             </Paragraph>
           </Cell>
           <Cell width={1 / 5}>
             <div />
           </Cell>
           <Cell width={2 / 5}>
-            <SubTitle>How Ocean Works</SubTitle>
+            <h4>How Ocean Protocol Works</h4>
             <Paragraph>
               Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to
               build services on top.

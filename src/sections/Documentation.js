@@ -59,7 +59,7 @@ const StyledRow = styled.div`
   margin-bottom: 1rem;
 
   &:first-child {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 
   a {
@@ -82,10 +82,9 @@ const Documentation = () => (
 
       <Grid>
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Whitepaper Primer</StyledTitle>
+          <StyledTitle>Technical brief</StyledTitle>
           <StyledIntro>
-            This paper presents a decentralized data marketplace protocol and network called Ocean, on which data
-            marketplaces can be built.
+            This paper presents a decentralized data marketplace protocol and network called Ocean Protocol, on which data marketplaces can be built.
           </StyledIntro>
           <StyledAbstract>
             The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves.
@@ -104,7 +103,9 @@ const Documentation = () => (
           <StyledRow>
             <SubTitle>Mission statement</SubTitle>
             <StyledAbstract>
-              Data producers like enterprises have tremendous data assets but don't know how to unlock the data's potential. Conversely, data consumers like AI startups are starving for data. Data marketplaces can connect data suppliers and consumers.
+              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive datasets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+              
+              Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
             </StyledAbstract>
             <a href="https://google.com" onClick={() => ga('send', 'event', 'manifesto', 'download', 'button', true)}>
               Download
