@@ -18,6 +18,7 @@ import matthias from './matthias.jpg';
 import morgan from './morgan.jpg';
 import muawia from './muawia.jpg';
 import oana from './oana.jpg';
+import ricardo from './ricardo.jpg';
 import rodolphe from './rodolphe.jpg';
 import sarah from './sarah.jpg';
 import shahbaz from './shahbaz.jpg';
@@ -49,6 +50,7 @@ export default {
   morgan,
   muawia,
   oana,
+  ricardo,
   rodolphe,
   sarah,
   shahbaz,
