@@ -11,7 +11,7 @@ const StyledSubscribe = styled.div`
   max-width: ${({ maxWidth }) => `${maxWidth}rem`};
   width: 100%;
 
-  @media screen and (${responsive.sm.max}) {
+  @media screen and (${responsive.md.max}) {
     margin: 0 auto;
   }
 
@@ -21,7 +21,7 @@ const StyledSubscribe = styled.div`
     top: calc(50% - 0.5rem);
     height: 1rem;
     opacity: 0.7;
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
       top: 1rem;
     }
   }
@@ -40,7 +40,7 @@ const StyledSubscribe = styled.div`
     box-shadow: none;
     transition: ${transitions.short};
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
       text-align: center;
       width: 100%;
       min-width: 0;
@@ -86,7 +86,7 @@ const StyledSubscribeWrapper = styled.div`
   display: flex;
   border-radius: 2px;
   background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
-  @media screen and (${responsive.sm.max}) {
+  @media screen and (${responsive.md.max}) {
     flex-wrap: wrap;
   }
 `;

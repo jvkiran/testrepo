@@ -87,14 +87,14 @@ const Footer = () => (
           </StyledActions>
         </Cell>
         <Cell width={1 / 2}>
-          <SubTitle white>About</SubTitle>
+          <SubTitle white>Ocean Protocol Foundation</SubTitle>
           <Paragraph>
             Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
           <StyledContact>
             <Grid>
               <Cell width={1 / 2}>
-                <strong>Ocean Protocol Foundation</strong>
+                <a href="https://oceanprotocol.com">oceanprotocol.com</a>
                 <a href="mailto:info@oceanprotocol.com">info@oceanprotocol.com</a>
               </Cell>
 

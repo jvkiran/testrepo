@@ -26,9 +26,9 @@ export const fonts = {
     h5: '1.125rem'
   },
   family: {
-    base: '-apple-system, sans-serif',
-    title: '"Sharp Sans", sans-serif',
-    button: '"Sharp Sans", sans-serif',
+    base: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+    title: '"Sharp Sans", Helvetica, Arial, sans-serif',
+    button: '"Sharp Sans", Helvetica, Arial, sans-serif',
     quote: 'Courier New, serif'
   },
   lineHeight: {
@@ -68,7 +68,7 @@ export const responsive = {
   },
   sm: {
     min: 'min-width: 649px',
-    max: 'max-width: 640px'
+    max: 'max-width: 650px'
   },
   md: {
     min: 'min-width: 799px',
@@ -89,22 +89,6 @@ export const globalStyles = `
     font-stretch: normal;
   }
 
-  @font-face {
-    font-family: 'GT Pressura Mono';
-    src: url('../fonts/GT-Pressura-Mono-Bold.otf');
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-  }
-
-  @font-face {
-    font-family: 'GT Pressura Mono';
-    src: url('../fonts/GT-Pressura-Mono-Regular.otf');
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-  }
-
   *,
   *:before,
   *:after {
@@ -119,7 +103,6 @@ export const globalStyles = `
 
   html {
     font-size: ${fonts.size.root};
-    position: relative;
   }
 
   body {
@@ -214,9 +197,5 @@ export const globalStyles = `
 
   h5 {
     font-size: ${fonts.size.h5}
-  }
-
-  .dimmed {
-      opacity: .5;
   }
 `;
