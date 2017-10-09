@@ -9,7 +9,6 @@ import ContentRow from '../components/ContentRow';
 import Pulse from '../components/Pulse';
 import Cell from '../components/Cell';
 import Title from '../components/Title';
-import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg';
 import dataDotsRight from '../assets/graphics/data-dots-right.svg';
