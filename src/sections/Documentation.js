@@ -25,6 +25,14 @@ const StyledWhitepaper = styled(Cell)`
   }
   ${StyledDownload} {
     margin-right: auto;
+
+    span {
+      font-family: ${fonts.family.base};
+      font-size: ${fonts.size.small};
+      font-weight: ${fonts.fontWeight.base};
+      opacity: .5;
+      margin-left: .3rem;
+    }
   }
   @media screen and (${responsive.sm.max}) {
     margin: 0;
@@ -82,16 +90,16 @@ const Documentation = () => (
 
       <Grid>
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Technical brief</StyledTitle>
+          <StyledTitle>Technical Primer</StyledTitle>
           <StyledIntro>
             This paper presents a decentralized data marketplace protocol and network called Ocean Protocol, on which data marketplaces can be built.
           </StyledIntro>
           <StyledAbstract>
             The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves.
           </StyledAbstract>
-          <a href="https://google.com">
-            <StyledDownload onClick={() => ga('send', 'event', 'whitepaper', 'download', 'button', true)}>
-              Download
+          <a href="./techprimer.pdf" download="Ocean Protocol Tech Primer">
+            <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
+              Download <span>pdf</span>
             </StyledDownload>
           </a>
           <StyledComments>

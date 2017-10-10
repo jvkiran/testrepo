@@ -104,7 +104,7 @@ const MenuItems = [
     href: '#project'
   },
   {
-    name: 'Brief',
+    name: 'Primer',
     href: '#documentation'
   },
   {
