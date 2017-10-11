@@ -10,9 +10,11 @@ import dinh from './dinh.jpg';
 import don from './don.jpg';
 import gautam from './gautam.jpg';
 import greg from './greg.jpg';
+import julian from './julian.jpg';
 import jernej from './jernej.jpg';
 import kamal from './kamal.jpg';
 import kasia from './kasia.jpg';
+import manuel from './manuel.jpg';
 import masha from './masha.jpg';
 import matthias from './matthias.jpg';
 import morgan from './morgan.jpg';
@@ -43,8 +45,10 @@ export default {
   gautam,
   greg,
   jernej,
+  julian,
   kamal,
   kasia,
+  manuel,
   masha,
   matthias,
   morgan,
