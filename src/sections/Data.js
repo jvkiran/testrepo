@@ -19,12 +19,22 @@ const StyledSubTitle = styled(Title)`
   }
 `;
 
-const StyledGrid = styled(Grid)`@media screen and (${responsive.sm.max}) {margin-top: 6rem;}`;
+const StyledGrid = styled(Grid)`
+  margin-top: 6rem;
+
+  @media screen and (${responsive.sm.min}) {
+    margin-top: 10rem;
+  }
+
+  p { margin-bottom: 0; }
+`;
 
 const StyledUnalyzed = styled.img`
   width: auto;
   height: 100%;
   max-height: 300px;
+  transform: scale(1.4);
+  padding: 0 4rem;
   @media screen and (${responsive.sm.min}) {
     max-width: 300px;
     padding: 0;
@@ -33,7 +43,6 @@ const StyledUnalyzed = styled.img`
     height: 100%;
   }
   @media screen and (${responsive.sm.max}) {
-    padding: 0 4rem;
     max-height: 80vw;
   }
   @media screen and (${responsive.smHeight.max}) {
@@ -42,10 +51,9 @@ const StyledUnalyzed = styled.img`
 `;
 
 const StyledFirstGrid = styled(StyledGrid)`
-  align-items: flex-end;
-  margin-top: 7rem;
   @media screen and (${responsive.sm.max}) {
     text-align: center;
+    margin-top: 0;
   }
 `;
 
@@ -57,7 +65,6 @@ const StyledLocked = styled.img`
     margin: 0;
     width: 100%;
     height: 100%;
-    transform: scale(1.2) translateX(2rem);
   }
   @media screen and (${responsive.sm.max}) {
     padding: 0 2rem;
@@ -67,9 +74,6 @@ const StyledLocked = styled.img`
 
 const StyledSecondGrid = styled(StyledGrid)`
   align-items: center;
-  @media screen and (${responsive.sm.min}) {
-    margin: 8rem 0;
-  }
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
@@ -78,9 +82,9 @@ const StyledSecondGrid = styled(StyledGrid)`
 const StyledUnavailable = styled.img`
   max-height: 300px;
   @media screen and (${responsive.sm.max}) {
-    width: 300% !important;
+    width: 200% !important;
     margin: 0;
-    margin-left: -100%;
+    margin-left: -50%;
     margin-bottom: 1rem;
   }
 `;
@@ -89,6 +93,10 @@ const StyledThirdGrid = styled(StyledGrid)`
   margin-bottom: 4rem;
   & > div:nth-child(2) {
     padding-left: 0;
+  }
+
+  p {
+    margin-bottom: 2rem;
   }
 `;
 
@@ -106,8 +114,7 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
           <Paragraph>
-            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is
-            vital to daily life for consumers, governments, and businesses alike.
+            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is vital to daily life for consumers, governments, and businesses alike.
           </Paragraph>
         </Cell>
       </StyledFirstGrid>
@@ -119,8 +126,7 @@ const Data = () => (
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
           <Paragraph>
-            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from
-            every organization safely and securely, value can spread and be shared.{' '}
+            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from every organization safely and securely, value can spread and be shared.
           </Paragraph>
         </Cell>
       </StyledSecondGrid>
@@ -129,8 +135,7 @@ const Data = () => (
         <Cell width={1} maxWidth="narrow">
           <SubTitle>Data is widely available but owned by few</SubTitle>
           <Paragraph>
-            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data
-            and most startups are starving for data.
+            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
           </Paragraph>
         </Cell>
         <Cell center width={1}>

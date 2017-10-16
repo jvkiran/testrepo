@@ -1,55 +1,139 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="250" viewBox="0 0 414 250">
-  <defs>
-    <polygon id="data-locked-a" points="0 29.825 0 .301 18.882 .301 18.882 29.825"/>
-    <polygon id="data-locked-c" points="0 29.825 0 .301 18.882 .301 18.882 29.825"/>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
-    <circle cx="123.5" cy="123.5" r="123.5" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#E2E2E2" stroke-width="1.82"/>
-    <circle cx="123.5" cy="123.5" r="123.5" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
-    <g transform="translate(164)">
-      <ellipse cx="123.57" cy="123.546" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#E2E2E2" stroke-width="1.82" rx="123.57" ry="123.546"/>
-      <g transform="translate(24.532 109.088)">
-        <mask id="data-locked-b" fill="#fff">
-          <use xlink:href="#data-locked-a"/>
-        </mask>
-        <path fill="#393A3A" fill-rule="nonzero" d="M16.2750226,-8.89010944 L2.6810362,-8.89010944 C2.52999191,-8.89010944 2.37894762,-9.00337032 2.37894762,-9.19213846 L2.37894762,-20.4049657 C2.37894762,-20.5559802 2.49223084,-20.7069947 2.6810362,-20.7069947 L16.2750226,-20.7069947 C16.4260669,-20.7069947 16.5771112,-20.5937338 16.5771112,-20.4049657 L16.5771112,-9.19213846 C16.5771112,-9.04112395 16.4260669,-8.89010944 16.2750226,-8.89010944 M17.1435273,-23.0477196 L5.36207241,-23.0477196 C5.02222275,-23.0477196 4.75789524,-23.311995 4.75789524,-23.6517776 L4.75789524,-28.8240245 C4.75789524,-31.3535176 6.72147105,-33.5432279 9.25146296,-33.6564888 C11.9702602,-33.8075033 14.1981636,-31.617793 14.1981636,-28.9372854 L14.1981636,-24.8174644 C14.1981636,-24.2134063 14.6512964,-23.6471019 15.2554736,-23.6093483 C15.972934,-23.533841 16.5393501,-24.1001454 16.5393501,-24.7797107 L16.5393501,-28.7862709 C16.5393501,-32.7504018 13.2918978,-36.1104746 9.32698511,-36.0349673 C5.5131167,-35.9594601 2.37894762,-32.825909 2.37894762,-28.9750391 L2.37894762,-23.6517776 C2.37894762,-23.311995 2.1146201,-23.0477196 1.77477045,-23.0477196 C0.792982539,-23.0477196 0,-22.2548934 0,-21.2732991 L0,-8.28605141 C0,-7.3044571 0.792982539,-6.51163093 1.77477045,-6.51163093 L17.1057662,-6.51163093 C18.0875541,-6.51163093 18.8805366,-7.3044571 18.8805366,-8.28605141 L18.8805366,-21.2732991 C18.9182977,-22.2548934 18.1253152,-23.0477196 17.1435273,-23.0477196" mask="url(#data-locked-b)"/>
-        <g>
-          <mask id="data-locked-d" fill="#fff">
-            <use xlink:href="#data-locked-c"/>
-          </mask>
-          <polyline fill="#393A3A" fill-rule="nonzero" points="14.2 -27.202 14.2 -22.481 16.537 -22.481 16.537 -27.202" mask="url(#data-locked-d)"/>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="414" height="320" viewBox="0 0 414 320">
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(9 17)">
+      <g transform="translate(360)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
       </g>
-      <ellipse cx="123.57" cy="123.546" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2" rx="123.57" ry="123.546"/>
-      <g fill="#7B1173" fill-rule="nonzero" transform="translate(87 23)">
-        <ellipse cx="79.468" cy="187.948" rx="5.645" ry="5.644"/>
-        <ellipse cx="42.258" cy="6.219" rx="5.645" ry="5.644"/>
-        <ellipse cx="29.479" cy="73.769" rx="5.645" ry="5.644"/>
-        <ellipse cx="76.823" cy="117.171" rx="3.908" ry="3.908"/>
-        <ellipse cx="86.823" cy="67.171" rx="3.908" ry="3.908"/>
-        <ellipse cx="4.134" cy="189.845" rx="3.908" ry="3.908"/>
-        <ellipse cx="12.312" cy="19.255" rx="3.908" ry="3.908"/>
-        <ellipse cx="31.211" cy="153.21" rx="5.211" ry="5.21"/>
-        <ellipse cx="103.172" cy="131.706" rx="3.908" ry="3.908"/>
-        <ellipse cx="84.011" cy="24.432" rx="5.645" ry="5.644"/>
-        <ellipse cx="129.522" cy="94.982" rx="3.908" ry="3.908"/>
+      <g transform="translate(300)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
       </g>
-      <path fill="#000" d="M44.488,133.984 C45.3840045,133.952 46.2159962,133.752002 46.984,133.384 C47.7520038,133.015998 48.4239971,132.528003 49,131.92 C49.5760029,131.311997 50.0239984,130.600004 50.344,129.784 C50.6640016,128.967996 50.824,128.080005 50.824,127.12 C50.824,126.639998 50.7600006,126.144003 50.632,125.632 C50.5039994,125.119997 50.2880015,124.624002 49.984,124.144 C49.6799985,123.663998 49.2480028,123.216002 48.688,122.8 C48.1279972,122.383998 47.4160043,122.016002 46.552,121.696 L44.488,120.928 L44.488,133.984 Z M42.184,104.032 C41.4159962,104.160001 40.6880034,104.399998 40,104.752 C39.3119966,105.104002 38.7040026,105.559997 38.176,106.12 C37.6479974,106.680003 37.2240016,107.335996 36.904,108.088 C36.5839984,108.840004 36.424,109.663996 36.424,110.56 C36.424,112.256008 36.8719955,113.535996 37.768,114.4 C38.6640045,115.264004 39.8639925,115.967997 41.368,116.512 L42.184,116.8 L42.184,104.032 Z M42.184,136.576 C41.3199957,136.576 40.4400045,136.472001 39.544,136.264 C38.6479955,136.055999 37.7760042,135.736002 36.928,135.304 C36.0799958,134.871998 35.2880037,134.344003 34.552,133.72 C33.8159963,133.095997 33.1600029,132.368004 32.584,131.536 L35.32,129.664 C36.0880038,130.976007 37.0799939,132.007996 38.296,132.76 C39.5120061,133.512004 40.8079931,133.92 42.184,133.984 L42.184,120.064 L38.776,118.816 C37.5919941,118.399998 36.6400036,117.840004 35.92,117.136 C35.1999964,116.431996 34.640002,115.696004 34.24,114.928 C33.839998,114.159996 33.5760006,113.408004 33.448,112.672 C33.3199994,111.935996 33.256,111.296003 33.256,110.752 C33.256,109.407993 33.5199974,108.184006 34.048,107.08 C34.5760026,105.975994 35.2719957,105.024004 36.136,104.224 C37.0000043,103.423996 37.9599947,102.784002 39.016,102.304 C40.0720053,101.823998 41.1279947,101.536 42.184,101.44 L42.184,98.224 L44.488,98.224 L44.488,101.44 C45.288004,101.44 46.087996,101.495999 46.888,101.608 C47.688004,101.720001 48.4639962,101.935998 49.216,102.256 C49.9680038,102.576002 50.6879966,103.015997 51.376,103.576 C52.0640034,104.136003 52.7279968,104.847996 53.368,105.712 L50.728,107.632 C49.9919963,106.479994 49.0560057,105.592003 47.92,104.968 C46.7839943,104.343997 45.6400058,104.032 44.488,104.032 L44.488,117.568 L47.848,118.72 C48.5520035,118.976001 49.2719963,119.327998 50.008,119.776 C50.7440037,120.224002 51.407997,120.791997 52,121.48 C52.592003,122.168003 53.0719982,122.991995 53.44,123.952 C53.8080018,124.912005 53.992,126.031994 53.992,127.312 C53.992,128.688007 53.7280026,129.927994 53.2,131.032 C52.6719974,132.136006 51.9680044,133.087996 51.088,133.888 C50.2079956,134.688004 49.1920058,135.319998 48.04,135.784 C46.8879942,136.248002 45.7040061,136.512 44.488,136.576 L44.488,139.792 L42.184,139.792 L42.184,136.576 Z" opacity=".433"/>
+      <g transform="translate(240)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(360 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(300 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(240 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(360 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(300 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(240 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(360 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(360 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(300 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(300 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(240 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(240 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+      <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      <g transform="translate(180 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <circle cx="18" cy="18" r="12" fill="#7B1173" fill-rule="nonzero" transform="translate(120 60)"/>
+      <g transform="translate(60 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(0 60)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(180 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <circle cx="18" cy="18" r="12" fill="#FF4092" fill-rule="nonzero" transform="translate(120 120)"/>
+      <g transform="translate(60 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(0 120)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(180 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(180 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(120 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(120 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(60 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(60 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(0 180)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
+      <g transform="translate(0 239)">
+        <circle cx="18" cy="18" r="18" fill="#FFF" fill-opacity=".104" fill-rule="nonzero" stroke="#131212" stroke-width="2"/>
+        <circle cx="18" cy="18" r="12" fill="#E2E2E2" fill-rule="nonzero"/>
+      </g>
     </g>
-    <circle cx="49.5" cy="145.5" r="5.5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="67.5" cy="200.5" r="5.5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="140.5" cy="209.5" r="5.5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="76" cy="129" r="4" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="57" cy="93" r="4" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="120.5" cy="99.5" r="5.5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="59.5" cy="46.5" r="5.5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="112" cy="182" r="4" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="97" cy="42" r="4" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="148" cy="42" r="5" fill="#F6388A" fill-rule="nonzero"/>
-    <circle cx="116" cy="133" r="5" fill="#F6388A" fill-rule="nonzero"/>
-    <polyline stroke="#7B1173" stroke-linecap="square" points="263.447 43.5 280.716 96.489 283.248 175.896 255.822 211.889"/>
-    <polyline stroke="#7B1173" points="379.641 118.119 337.684 90.199 335.219 48.85 281.795 95.6"/>
-    <polyline stroke="#7B1173" points="330.402 211.266 282.775 176.166 327.654 138.895 355.119 154.691"/>
-    <path stroke="#7B1173" d="M280.703125,97.078125 L293.5,29.5"/>
+    <path stroke="#141414" stroke-linecap="square" d="M147,107.496377 L147,142.503571"/>
   </g>
 </svg>
