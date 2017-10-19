@@ -90,15 +90,15 @@ const Documentation = () => (
 
       <Grid>
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Ecosystem Brief</StyledTitle>
+          <StyledTitle>Technical Primer</StyledTitle>
           <StyledIntro>
-            This paper presents a decentralized data marketplace protocol and network called Ocean Protocol, on which data marketplaces can be built.
+            This technical primer presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
           </StyledIntro>
           <StyledAbstract>
-            The world has recognized the value of data, but it’s been very difficult to establish a price for the data (especially non-fungible data) while reconciling privacy concerns. Many enterprises have tremendous amounts of data, but have difficulty exploiting it. Conversely, many startups have deep expertise in artificial intelligence (AI), but lack the data to make their AI models perform. To address this problem, data marketplaces have emerged, but they are silos themselves.
+            Modern society runs on data. Modern artificial intelligence extracts value from that data. However, the power of both data*AI is siloed. The goal of Ocean Protocol is to liberate data, and open it up to AI, thereby distributing the power of data*AI. This liberation will be driven by asset tokenization propelled by blockchain. Like streams to an ocean, Ocean Protocol is the confluence of Blockchain with AI.
           </StyledAbstract>
-          <a href="./ecosystembrief.pdf" download="Ocean Protocol Ecosystem Brief">
-            <StyledDownload onClick={() => ga('send', 'event', 'ecosystembrief', 'download', 'button', true)}>
+          <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
+            <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
               Download <span>pdf</span>
             </StyledDownload>
           </a>

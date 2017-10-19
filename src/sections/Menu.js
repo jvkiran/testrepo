@@ -104,7 +104,7 @@ const MenuItems = [
     href: '#project'
   },
   {
-    name: 'Ecosystem Brief',
+    name: 'Tech Primer',
     href: '#documentation'
   },
   {

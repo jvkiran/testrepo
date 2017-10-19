@@ -100,8 +100,9 @@ const Footer = () => (
 
               <Cell width={1 / 2}>
                 <div class="address">
-                  Mapletree Business Center<br />
+                  Mapletree Business City<br />
                   20 Pasir Panjang Rd<br />
+                  East Wing #03-22/24<br />
                   Singapore, 117439<br />
                   Singapore
                 </div>
