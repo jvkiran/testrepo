@@ -84,7 +84,7 @@ const StyledCard = styled.div`
     border: none;
     padding: 0;
     font-family: ${fonts.family.button};
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
     outline: inherit;
     display: block;
@@ -104,7 +104,7 @@ const StyledCard = styled.div`
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 4px;
+    top: 0;
     left: calc(100% + 10px);
     background: url(${arrow}) no-repeat;
   }

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { fonts, responsive } from '../styles';
+import { colors, fonts, responsive } from '../styles';
 
 const SubTitle = styled.h3`
   font-family: ${fonts.family.title};
   font-weight: ${fonts.fontWeight.title};
   line-height: ${fonts.lineHeight.title};
   font-size: ${fonts.size.h3};
-  color: inherit;
+  color: ${({ white }) => (white ? `#fff` : `${colors.black }`)};
   margin-top: 0;
   @media screen and (${responsive.sm.max}) {
     margin-top: 1.25rem;

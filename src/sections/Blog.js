@@ -35,7 +35,7 @@ const StyledContent = styled.div`
     padding: 0 1rem;
   }
   @media screen and (${responsive.sm.min}) {
-    min-height: 250px;
+    min-height: 260px;
   }
 `;
 

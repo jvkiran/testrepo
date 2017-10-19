@@ -108,7 +108,7 @@ const Documentation = () => (
         </StyledWhitepaper>
         <Cell width={1 / 2}>
           <StyledRow>
-            <SubTitle>Mission Statement</SubTitle>
+            <SubTitle white>Mission Statement</SubTitle>
             <StyledAbstract>
               Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive datasets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
               

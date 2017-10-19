@@ -95,7 +95,6 @@ const Footer = () => (
             <Grid>
               <Cell width={1 / 2}>
                 <a href="https://oceanprotocol.com">oceanprotocol.com</a>
-                <a href="mailto:info@oceanprotocol.com">info@oceanprotocol.com</a>
               </Cell>
 
               <Cell width={1 / 2}>

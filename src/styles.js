@@ -28,7 +28,7 @@ export const fonts = {
   family: {
     base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
     title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
-    button: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
+    button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
     quote: 'Courier New, serif'
   },
   lineHeight: {
@@ -108,6 +108,15 @@ export const globalStyles = `
     font-stretch: normal;
   }
 
+  @font-face {
+    font-family: 'Sharp Sans Extrabold';
+    src: url('../fonts/SharpSans-Extrabold.woff2') format('woff2'),
+         url('../fonts/SharpSans-Extrabold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
   *,
   *:before,
   *:after {
@@ -127,7 +136,7 @@ export const globalStyles = `
   body {
     background: rgb(${colors.white});
     font-family: ${fonts.family.base};
-    color: rgb(${colors.grey});
+    color: rgb(${colors.dark});
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
