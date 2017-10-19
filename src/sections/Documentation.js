@@ -49,7 +49,6 @@ const StyledTitle = styled(Title)`
 `;
 
 const StyledIntro = styled(Paragraph)`
-  font-weight: 600;
   margin-bottom: 1rem;
 `;
 

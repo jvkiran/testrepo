@@ -13,7 +13,7 @@ import Paragraph from '../components/Paragraph';
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg';
 import dataDotsRight from '../assets/graphics/data-dots-right.svg';
 import arrow from '../assets/misc/arrow.svg';
-import { colors, responsive, transitions } from '../styles';
+import { colors, fonts, responsive, transitions } from '../styles';
 
 const slideRight = keyframes`
   0% {
@@ -83,13 +83,13 @@ const StyledCard = styled.div`
   & button {
     border: none;
     padding: 0;
-    font: inherit;
+    font-family: ${fonts.family.button};
+    font-size: 1.1rem;
     cursor: pointer;
     outline: inherit;
     display: block;
     color: inherit;
     margin-top: 2.5rem;
-    font-weight: 600;
     background: transparent;
     width: fit-content;
     position: relative;

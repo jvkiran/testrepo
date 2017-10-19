@@ -198,8 +198,7 @@ const StyledButton = styled(Button)`
   text-transform: uppercase;
   padding: 1rem 2rem;
   margin: 1rem;
-  font-family: ${fonts.family.base};
-  font-weight: ${fonts.fontWeight.base};
+  font-family: ${fonts.family.button};
   box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
   &:active,
   &:hover,

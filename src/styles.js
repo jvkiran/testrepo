@@ -15,28 +15,28 @@ export const colors = {
 
 export const fonts = {
   size: {
-    root: '16px',
+    root: '15px',
     base: '1rem',
     large: '1.25rem',
     small: '.85rem',
-    h1: '3.6rem',
+    h1: '3.4rem',
     h2: '2.7rem',
     h3: '2rem',
     h4: '1.5rem',
     h5: '1.125rem'
   },
   family: {
-    base: '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
-    title: '"Sharp Sans", Helvetica, Arial, sans-serif',
-    button: '"Sharp Sans", Helvetica, Arial, sans-serif',
+    base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+    title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
+    button: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
     quote: 'Courier New, serif'
   },
   lineHeight: {
-    base: '1.5',
+    base: '1.65',
     title: '1.25'
   },
   fontWeight: {
-    base: '400',
+    base: '500',
     title: '600'
   }
 };
@@ -82,8 +82,27 @@ export const responsive = {
 
 export const globalStyles = `
   @font-face {
-    font-family: 'Sharp Sans';
-    src: url('../fonts/SharpSansDispNo1-Bold.otf');
+    font-family: 'Sharp Sans Display';
+    src: url('../fonts/SharpSansDispNo1-Bold.woff2') format('woff2'),
+         url('../fonts/SharpSansDispNo1-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: 'Sharp Sans Medium';
+    src: url('../fonts/SharpSans-Medium.woff2') format('woff2'),
+         url('../fonts/SharpSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+  }
+
+  @font-face {
+    font-family: 'Sharp Sans Bold';
+    src: url('../fonts/SharpSans-Bold.woff2') format('woff2'),
+         url('../fonts/SharpSans-Bold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -170,6 +189,10 @@ export const globalStyles = `
     text-decoration: none;
     transform: none;
     transition: none;
+  }
+
+  strong {
+    font-family: "Sharp Sans Bold";
   }
 
   h1, h2, h3, h4, h5 {

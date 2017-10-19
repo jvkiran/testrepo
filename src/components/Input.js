@@ -25,6 +25,7 @@ const StyledInput = styled.input`
   outline: none;
   margin: 0;
   font-size: ${fonts.size.base};
+  font-family: ${fonts.family.base};
   padding: 0.75rem 1rem;
   padding-left: ${({ icon }) => (icon ? '3rem' : '1rem')};
   background: rgb(${colors.white});
