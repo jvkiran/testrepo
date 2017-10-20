@@ -93,7 +93,7 @@ const StyledRow = styled.div`
  `;
 
 const Documentation = () => (
-  <Section id="documentation" background={colors.black} fontColor={colors.white}>
+  <Section id="papers" background={colors.black} fontColor={colors.white}>
     <ContentRow>
       <Title white>Learn how Ocean Protocol works</Title>
 

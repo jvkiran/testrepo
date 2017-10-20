@@ -105,7 +105,7 @@ const MenuItems = [
   },
   {
     name: 'Papers',
-    href: '#documentation'
+    href: '#papers'
   },
   {
     name: 'Why Ocean?',

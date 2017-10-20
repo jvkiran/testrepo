@@ -4,7 +4,7 @@ import Menu from './sections/Menu';
 import Welcome from './sections/Welcome';
 import Project from './sections/Project';
 import Data from './sections/Data';
-import Documentation from './sections/Documentation';
+import Papers from './sections/Papers';
 import Team from './sections/Team';
 import Blog from './sections/Blog';
 import Footer from './sections/Footer';
@@ -27,7 +27,7 @@ class Root extends Component {
       <Menu />
       <Welcome />
       <Project toggleModal={this.toggleModal} />
-      <Documentation />
+      <Papers />
       <Data />
       <Team toggleModal={this.toggleModal} />
       <Blog />
