@@ -20,6 +20,21 @@ const StyledWhitepaper = styled(Cell)`
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
+  @media screen and (${responsive.sm.min}) {
+      min-height: 540px;
+  }
+  &:first-child {
+    margin-bottom: 2rem;
+
+    @media screen and (${responsive.sm.min}) {
+      margin-right: 2rem;
+    }
+  }
+  &:last-child {
+    @media screen and (${responsive.sm.min}) {
+      margin-left: 2rem;
+    }
+  }
   ${Title} {
     margin-bottom: 2rem;
   }
@@ -66,7 +81,7 @@ const StyledComments = styled(Paragraph)`
 `;
 
 const StyledRow = styled.div`
-   margin-top: 3rem;
+   margin-top: 4rem;
    margin-bottom: 0;
  
    a {
@@ -74,11 +89,6 @@ const StyledRow = styled.div`
      text-transform: uppercase;
      font-family: ${fonts.family.button};
      margin-top: -0.5rem;
-   }
- 
-   @media screen and (${responsive.md.min}) {
-     margin-top: 2rem;
-     margin-left: 4rem;
    }
  `;
 
@@ -94,9 +104,7 @@ const Documentation = () => (
             This technical primer presents a short introduction to Ocean Protocol.
           </StyledIntro>
           <StyledAbstract>
-            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.<br /><br />
-
-            This document is a primer; we are developing a whitepaper that covers key technical topics more thoroughly.
+            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
           </StyledAbstract>
           <StyledFooter>
             <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
@@ -110,17 +118,39 @@ const Documentation = () => (
             </StyledComments>
           </StyledFooter>
         </StyledWhitepaper>
-        <Cell width={1 / 2}>
-          <StyledRow>
-            <SubTitle white>Mission Statement</SubTitle>
-            <StyledAbstract>
-              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
-              Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+        <StyledWhitepaper center width={1 / 2}>
+          <StyledTitle>Marketplace Framework</StyledTitle>
+          <StyledIntro>
+            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+          </StyledIntro>
+          <StyledAbstract>
+            It is complementary to the technical primer for Ocean Protocol.
           </StyledAbstract>
-          </StyledRow>
-        </Cell>
+          <StyledFooter>
+            <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
+              <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
+                Download <span>pdf</span>
+              </StyledDownload>
+            </a>
+            <StyledComments>
+              Have a comment or suggestions? <br />
+              Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+            </StyledComments>
+          </StyledFooter>
+        </StyledWhitepaper>
       </Grid>
+
+      <Cell width={1 / 2}>
+        <StyledRow>
+          <SubTitle white center>Mission Statement</SubTitle>
+          <StyledAbstract>
+            Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+
+            Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+          </StyledAbstract>
+        </StyledRow>
+      </Cell>
     </ContentRow>
   </Section>
 );
