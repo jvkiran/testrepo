@@ -135,7 +135,7 @@ const Data = () => (
         <Cell width={1} maxWidth="narrow">
           <SubTitle>Data is widely available but owned by few</SubTitle>
           <Paragraph>
-            Data is critical to ensuring that advances in AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
+            Data is critical to ensuring that advances in Data Analytics and AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
           </Paragraph>
         </Cell>
         <Cell center width={1}>

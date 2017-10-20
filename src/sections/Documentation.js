@@ -109,7 +109,7 @@ const Documentation = () => (
           <StyledRow>
             <SubTitle white>Mission Statement</SubTitle>
             <StyledAbstract>
-              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive datasets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
               
               Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
             </StyledAbstract>

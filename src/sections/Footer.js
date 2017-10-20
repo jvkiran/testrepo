@@ -87,7 +87,7 @@ const Footer = () => (
           </StyledActions>
         </Cell>
         <Cell width={1 / 2}>
-          <SubTitle white>Ocean Protocol Foundation</SubTitle>
+          <SubTitle white>Ocean Protocol Foundation Ltd</SubTitle>
           <Paragraph>
             Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
           </Paragraph>
@@ -113,7 +113,7 @@ const Footer = () => (
     </ContentRow>
     <ContentRow>
       <StyledCopyright>
-        <small>&copy; {(new Date().getFullYear())} Ocean Protocol Foundation - All Rights Reserved</small>
+        <small>&copy; {(new Date().getFullYear())} Ocean Protocol Foundation Ltd - All Rights Reserved</small>
       </StyledCopyright>
     </ContentRow >
   </Section>
