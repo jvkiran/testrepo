@@ -191,7 +191,7 @@ const Project = ({ toggleModal, ...props }) => {
           <Cell width={2 / 5}>
             <h4>What is Ocean Protocol?</h4>
             <Paragraph>
-              Ocean Protocol is a decentralized data exchange protocol that makes data available for everyone with privacy, security, control, transparency and compliance.
+              Ocean Protocol is a decentralized data exchange protocol that lets people share and monetize data while guaranteeing control, auditability, transparency and compliance to all actors involved. Data Providers and Custodians need to feel safe before they will comfortably share data and Ocean Protocol is the solution.
             </Paragraph>
           </Cell>
           <Cell width={1 / 5}>
@@ -200,8 +200,7 @@ const Project = ({ toggleModal, ...props }) => {
           <Cell width={2 / 5}>
             <h4>How Ocean Protocol Works</h4>
             <Paragraph>
-              Ocean Protocol helps marketplaces to connect data providers and data consumers and allows developers to
-              build services on top.
+              Ocean Protocol provides the underlying technical foundation that data marketplaces need to connect data providers with data consumers in a trusted environment. It nurtures a data ecosystem and community. Ocean Protocol also enables developers to create new and innovative services for leveraging data.
             </Paragraph>
           </Cell>
         </Grid>

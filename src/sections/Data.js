@@ -51,9 +51,9 @@ const StyledUnalyzed = styled.img`
 `;
 
 const StyledFirstGrid = styled(StyledGrid)`
+  margin-top: 2rem;
   @media screen and (${responsive.sm.max}) {
     text-align: center;
-    margin-top: 0;
   }
 `;
 
@@ -105,16 +105,18 @@ const Data = () => (
     <ContentRow>
       <Title>Why Ocean Protocol?</Title>
 
-      <StyledSubTitle>Only 1% of data is analyzed</StyledSubTitle>
+      <Cell width={1} maxWidth="small">
+        <StyledSubTitle>In 2016, the world produced 16 ZB of data, but only 1% was analyzed</StyledSubTitle>
+      </Cell>
 
       <StyledFirstGrid left>
         <Cell center width={1 / 3}>
           <StyledUnalyzed src={dataUnanalyzed} alt="data unanalyzed" />
         </Cell>
         <Cell width={2 / 3} maxWidth="narrow">
-          <SubTitle>Data is growing exponentially but is under-utilized</SubTitle>
+          <SubTitle>A lack of trust prevents data sharing</SubTitle>
           <Paragraph>
-            The growth of data is remarkable. Where once data was primarily a side-effect of operations, today it is vital to daily life for consumers, governments, and businesses alike.
+            Centralized data exchanges fail because they lack fair and flexible pricing mechanisms, data providers lose control over their assets, and there is a lack of transparency in how the data is used. So data remains locked up due to a lack of trust.
           </Paragraph>
         </Cell>
       </StyledFirstGrid>
@@ -124,18 +126,18 @@ const Data = () => (
           <StyledLocked src={dataLocked} alt="data locked" />
         </Cell>
         <Cell width={2 / 3} maxWidth="narrow">
-          <SubTitle>Data is immensely valuable, yet remains locked up</SubTitle>
+          <SubTitle>AI advances six times faster, when data is available</SubTitle>
           <Paragraph>
-            Everyone knows that big data could be a huge revenue driver worth billions. If data can be unlocked from every organization safely and securely, value can spread and be shared.
+            AI models have limited accuracy and usability without appropriate data. Ocean Protocol will unlock more data for AI. This should lead to more breakthroughs to help society. Ocean Protocol gives the tools to unlock the remaining 99% of untapped data.
           </Paragraph>
         </Cell>
       </StyledSecondGrid>
 
       <StyledThirdGrid wrap textCenter>
-        <Cell width={1} maxWidth="narrow">
-          <SubTitle>Data is widely available but owned by few</SubTitle>
+        <Cell width={1} maxWidth="small">
+          <SubTitle>Only a handful of companies today have both Data and AI</SubTitle>
           <Paragraph>
-            Data is critical to ensuring that advances in Data Analytics and AI are shared by everyone. AI needs massive amounts of data and most startups are starving for data.
+            AI start-ups and researchers are drowning in algorithms, but lack data. The opposite is true for many large corporations. Ocean Protocol is the bridge between these two sides. By bringing together data and AI, Ocean Protocol will unlock a trillion-dollar market for data sharing.
           </Paragraph>
         </Cell>
         <Cell center width={1}>

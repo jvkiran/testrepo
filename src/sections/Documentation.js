@@ -20,28 +20,28 @@ const StyledWhitepaper = styled(Cell)`
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
-
+  @media screen and (${responsive.sm.min}) {
+      min-height: 553px;
+  }
   &:first-child {
     margin-bottom: 2rem;
 
     @media screen and (${responsive.sm.min}) {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
   }
-
   &:last-child {
     @media screen and (${responsive.sm.min}) {
-      margin-left: 1rem;
+      margin-left: 2rem;
+      min-height: 553px;
+
+      ${StyledDownload} {
+        margin-top: 4.3rem;
+      }
     }
   }
-
   ${Title} {
     margin-bottom: 2rem;
-
-    span {
-      display: block;
-      color: rgb(${colors.lightGrey});
-    }
   }
   ${StyledDownload} {
     margin-right: auto;
@@ -60,7 +60,8 @@ const StyledWhitepaper = styled(Cell)`
 
 const StyledTitle = styled(Title)`
   margin: 0;
-  font-size: ${fonts.size.h2};
+  font-size: ${fonts.size.h3};
+  min-height: 74px;
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
   }
@@ -108,15 +109,16 @@ const Documentation = () => (
 
       <Grid>
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle><span>Technical Primer</span>Marketplace</StyledTitle>
+          <StyledTitle>Technical Primer</StyledTitle>
           <StyledIntro>
-            This technical primer presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+            This technical primer presents a short introduction to Ocean Protocol.
           </StyledIntro>
           <StyledAbstract>
-            Modern society runs on data. Modern artificial intelligence extracts value from that data. However, the power of both data*AI is siloed. The goal of Ocean Protocol is to liberate data, and open it up to AI, thereby distributing the power of data*AI. This liberation will be driven by asset tokenization propelled by blockchain. Like streams to an ocean, Ocean Protocol is the confluence of Blockchain with AI.
+            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
           </StyledAbstract>
-          <a href="./techprimer-marketplace.pdf" download="Ocean Protocol Technical Primer - Marketplace">
-            <StyledDownload onClick={() => ga('send', 'event', 'techprimer-marketplace', 'download', 'button', true)}>
+
+          <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
+            <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
               Download <span>pdf</span>
             </StyledDownload>
           </a>
@@ -127,15 +129,12 @@ const Documentation = () => (
         </StyledWhitepaper>
 
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle><span>Technical Primer</span>Network</StyledTitle>
-          <StyledIntro>
-            This technical primer presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
-        </StyledIntro>
+          <StyledTitle>Reference Marketplace Framework</StyledTitle>
           <StyledAbstract>
-            Modern society runs on data. Modern artificial intelligence extracts value from that data. However, the power of both data*AI is siloed. The goal of Ocean Protocol is to liberate data, and open it up to AI, thereby distributing the power of data*AI. This liberation will be driven by asset tokenization propelled by blockchain. Like streams to an ocean, Ocean Protocol is the confluence of Blockchain with AI.
-        </StyledAbstract>
-          <a href="./techprimer-network.pdf" download="Ocean Protocol Technical Primer - Network">
-            <StyledDownload onClick={() => ga('send', 'event', 'techprimer-network', 'download', 'button', true)}>
+            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol. It is complementary to the technical primer for Ocean Protocol.
+          </StyledAbstract>
+          <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
+            <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
               Download <span>pdf</span>
             </StyledDownload>
           </a>
@@ -144,19 +143,18 @@ const Documentation = () => (
             Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
           </StyledComments>
         </StyledWhitepaper>
-      </Grid>
-    </ContentRow>
-    <ContentRow>
-      <Cell width={2 / 3}>
-          <StyledRow>
-            <SubTitle white>Mission Statement</SubTitle>
-            <StyledAbstract>
-              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
-              Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+      </Grid>
+      <Cell width={1 / 2}>
+        <StyledRow>
+          <SubTitle white>Mission Statement</SubTitle>
+          <StyledAbstract>
+            Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+
+            Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
             </StyledAbstract>
-          </StyledRow>
-        </Cell>
+        </StyledRow>
+      </Cell>
     </ContentRow>
   </Section>
 );
