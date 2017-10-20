@@ -21,7 +21,7 @@ const StyledWhitepaper = styled(Cell)`
   color: rgb(${colors.grey});
   hyphens: auto;
   @media screen and (${responsive.sm.min}) {
-      min-height: 553px;
+      min-height: 520px;
   }
   &:first-child {
     margin-bottom: 2rem;
@@ -33,7 +33,6 @@ const StyledWhitepaper = styled(Cell)`
   &:last-child {
     @media screen and (${responsive.sm.min}) {
       margin-left: 2rem;
-      min-height: 553px;
     }
   }
   ${Title} {
@@ -57,7 +56,6 @@ const StyledWhitepaper = styled(Cell)`
 const StyledTitle = styled(Title)`
   margin: 0;
   font-size: ${fonts.size.h3};
-  min-height: 74px;
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
   }
@@ -131,7 +129,7 @@ const Documentation = () => (
         </StyledWhitepaper>
 
         <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Reference Marketplace Framework</StyledTitle>
+          <StyledTitle>Marketplace Framework</StyledTitle>
           <StyledAbstract>
             This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol. It is complementary to the technical primer for Ocean Protocol.
           </StyledAbstract>
