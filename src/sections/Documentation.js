@@ -20,21 +20,6 @@ const StyledWhitepaper = styled(Cell)`
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
-  @media screen and (${responsive.sm.min}) {
-      min-height: 520px;
-  }
-  &:first-child {
-    margin-bottom: 2rem;
-
-    @media screen and (${responsive.sm.min}) {
-      margin-right: 2rem;
-    }
-  }
-  &:last-child {
-    @media screen and (${responsive.sm.min}) {
-      margin-left: 2rem;
-    }
-  }
   ${Title} {
     margin-bottom: 2rem;
   }
@@ -84,10 +69,6 @@ const StyledRow = styled.div`
    margin-top: 3rem;
    margin-bottom: 0;
  
-   &:first-child {
-     margin-top: 2.5rem;
-   }
- 
    a {
      display: block;
      text-transform: uppercase;
@@ -97,6 +78,7 @@ const StyledRow = styled.div`
  
    @media screen and (${responsive.md.min}) {
      margin-top: 2rem;
+     margin-left: 4rem;
    }
  `;
 
@@ -126,36 +108,17 @@ const Documentation = () => (
             </StyledComments>
           </StyledFooter>
         </StyledWhitepaper>
+        <Cell width={1 / 2}>
+          <StyledRow>
+            <SubTitle white>Mission Statement</SubTitle>
+            <StyledAbstract>
+              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
-        <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Marketplace Framework</StyledTitle>
-          <StyledAbstract>
-            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol. It is complementary to the technical primer for Ocean Protocol.
+              Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
           </StyledAbstract>
-          <StyledFooter>
-            <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
-              <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
-                Download <span>pdf</span>
-              </StyledDownload>
-            </a>
-            <StyledComments>
-              Have a comment or suggestions? <br />
-              Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-            </StyledComments>
-          </StyledFooter>
-        </StyledWhitepaper>
-
+          </StyledRow>
+        </Cell>
       </Grid>
-      <Cell width={1} maxWidth="small">
-        <StyledRow>
-          <SubTitle white center>Mission Statement</SubTitle>
-          <StyledAbstract>
-            Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
-
-            Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
-          </StyledAbstract>
-        </StyledRow>
-      </Cell>
     </ContentRow>
   </Section>
 );

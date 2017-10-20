@@ -10,14 +10,7 @@ import Paragraph from '../components/Paragraph';
 import dataUnanalyzed from '../assets/graphics/data-unanalyzed.svg';
 import dataLocked from '../assets/graphics/data-locked.svg';
 import dataUnavailable from '../assets/graphics/data-unavailable.svg';
-import { responsive, fonts } from '../styles';
-
-const StyledSubTitle = styled(Title)`
-  font-size: ${fonts.size.h3};
-  @media screen and (${responsive.sm.max}) {
-    font-size: ${fonts.size.h4};
-  }
-`;
+import { responsive } from '../styles';
 
 const StyledGrid = styled(Grid)`
   margin-top: 6rem;
@@ -51,7 +44,7 @@ const StyledUnalyzed = styled.img`
 `;
 
 const StyledFirstGrid = styled(StyledGrid)`
-  margin-top: 2rem;
+  margin-top: 6rem;
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
@@ -103,10 +96,8 @@ const StyledThirdGrid = styled(StyledGrid)`
 const Data = () => (
   <Section id="why">
     <ContentRow>
-      <Title>Why Ocean Protocol?</Title>
-
       <Cell width={1} maxWidth="small">
-        <StyledSubTitle>In 2016, the world produced 16 ZB of data, but only 1% was analyzed</StyledSubTitle>
+        <Title>In 2016, the world produced 16 ZB of data, but only 1% was analyzed &mdash; this needs to change.</Title>
       </Cell>
 
       <StyledFirstGrid left>
