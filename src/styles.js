@@ -18,7 +18,7 @@ export const fonts = {
     root: '15px',
     base: '1rem',
     large: '1.25rem',
-    small: '.85rem',
+    small: '.75rem',
     h1: '3.4rem',
     h2: '2.7rem',
     h3: '2rem',

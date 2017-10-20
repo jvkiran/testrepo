@@ -111,7 +111,7 @@ const StyledTagline = styled(Title)`
 `;
 
 const StyledPoweredBy = styled.div`
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   font-size: ${fonts.size.small};
   font-weight: ${fonts.fontWeight.title};
@@ -128,11 +128,16 @@ const StyledPoweredBy = styled.div`
   }
   & a {
     display: inline-block;
-    width: 5rem;
+
+    &:first-of-type {
+      margin-left: -1rem;
+    }
   }
   & img {
-    height: 1rem;
-    margin-right: -1rem;
+    height: 1.3rem;
+    margin: 0 .5rem;
+
+    
   }
 `;
 
