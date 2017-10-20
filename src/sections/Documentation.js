@@ -27,10 +27,8 @@ const StyledWhitepaper = styled(Cell)`
     margin-right: auto;
 
     span {
-      font-family: ${fonts.family.base};
       font-size: ${fonts.size.small};
-      font-weight: ${fonts.fontWeight.base};
-      opacity: .5;
+      opacity: .7;
       margin-left: .3rem;
     }
   }
@@ -56,6 +54,7 @@ const StyledAbstract = styled(Paragraph)`margin-bottom: 2rem;`;
 
 const StyledComments = styled(Paragraph)`
   color: rgb(${colors.lightGrey});
+  font-family: ${fonts.family.button};
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 0;
