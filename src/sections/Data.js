@@ -14,6 +14,7 @@ import { responsive } from '../styles';
 
 const StyledGrid = styled(Grid)`
   margin-top: 6rem;
+  align-items: center;
 
   @media screen and (${responsive.sm.min}) {
     margin-top: 10rem;
@@ -26,7 +27,7 @@ const StyledUnalyzed = styled.img`
   width: auto;
   height: 100%;
   max-height: 300px;
-  transform: scale(1.4);
+  transform: scale(1.3);
   padding: 0 4rem;
   @media screen and (${responsive.sm.min}) {
     max-width: 300px;
@@ -51,9 +52,9 @@ const StyledFirstGrid = styled(StyledGrid)`
 `;
 
 const StyledLocked = styled.img`
-  max-height: 300px;
+  max-height: 224px;
   @media screen and (${responsive.sm.min}) {
-    max-width: 320px;
+    max-width: 300px;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -102,7 +103,7 @@ const Data = () => (
 
       <StyledFirstGrid left>
         <Cell center width={1 / 3}>
-          <StyledUnalyzed src={dataUnanalyzed} alt="data unanalyzed" />
+          <StyledLocked src={dataLocked} alt="data locked" />
         </Cell>
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>A lack of trust prevents data sharing</SubTitle>
@@ -114,7 +115,7 @@ const Data = () => (
 
       <StyledSecondGrid>
         <Cell center width={1 / 3}>
-          <StyledLocked src={dataLocked} alt="data locked" />
+          <StyledUnalyzed src={dataUnanalyzed} alt="data unanalyzed" />
         </Cell>
         <Cell width={2 / 3} maxWidth="narrow">
           <SubTitle>AI advances six times faster, when data is available</SubTitle>
