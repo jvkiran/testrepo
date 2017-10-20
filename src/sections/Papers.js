@@ -20,6 +20,18 @@ const StyledWhitepaper = styled(Cell)`
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    background: rgb(${colors.black});
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    transform: rotate(45deg);
+  }
   @media screen and (${responsive.sm.min}) {
       min-height: 540px;
   }
