@@ -1,19 +1,19 @@
 /* global THREE */
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (!('ontouchstart' in window && Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 800)) {
+  if (!(Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 768)) {
     var SEPARATION = 100,
-        AMOUNTX = 100,
-        AMOUNTY = 70;
+      AMOUNTX = 100,
+      AMOUNTY = 70;
     var camera, scene, renderer;
 
     var container;
 
-    var show = window.innerWidth >= 640 && window.innerHeight >= 600;
+    var show = window.innerWidth >= 768 && window.innerHeight >= 500;
 
     var particles,
-        particle,
-        count = 0;
+      particle,
+      count = 0;
 
     init();
     animate();
@@ -21,12 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function init() {
       container = document.createElement('div');
       container.id = 'container';
-      document.body.appendChild(container);
+      document.getElementById('background').appendChild(container);
 
       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
       camera.position.z = 10000;
 
       scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x141414);
 
       particles = [];
 
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function onWindowResize() {
-      if (window.innerWidth >= 640 && window.innerHeight >= 600) {
+      if (window.innerWidth >= 768 && window.innerHeight >= 500) {
         if (!show) {
           show = true;
           animate();

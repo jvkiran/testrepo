@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group" sketch:type="MSLayerGroup">
+            <g sketch:type="MSShapeGroup">
+                <rect id="Rectangle-path" fill="rgb(20, 20, 20)" x="0" y="0" width="55" height="55" rx="2"></rect>
+                <path d="M32.337,15.027 C32.197,14.957 32.083,15.027 32.083,15.184 L32.083,34.451 L40.489,38.669 C40.907,38.879 41.25,38.666 41.25,38.197 L41.25,19.65 C41.2504551,19.5575018 41.1985668,19.4726994 41.116,19.431 L32.337,15.026" id="Shape" fill="#fff" fill-opacity=".7"></path>
+                <path d="M22.917,29.647 L31.977,15.144 C32.0648393,15.0104811 32.2377236,14.9622443 32.382,15.031 L41.135,19.341 C41.1868435,19.3660656 41.2256021,19.4119701 41.2416233,19.4672815 C41.2576446,19.522593 41.2494208,19.5821061 41.219,19.631 L32.127,34.183 L22.917,29.647" id="Shape" fill="#fff" fill-opacity=".7"></path>
+                <path d="M14.345,15.125 C13.773,14.845 13.579,15.052 13.915,15.586 L22.695,29.579 L32.083,34.183 L22.755,19.316 C22.7151446,19.2523886 22.6583547,19.2011392 22.591,19.168 L14.345,15.125" id="Shape" fill="#fff" fill-opacity=".7"></path>
+                <path d="M22.917,38.194 C22.917,38.666 22.574,38.88 22.155,38.669 L14.258,34.689 C13.978,34.548 13.75,34.175 13.75,33.86 L13.75,15.37 C13.75,15.056 13.978,14.914 14.258,15.054 L22.804,19.361 C22.873,19.396 22.917,19.468 22.917,19.546 L22.917,38.194" id="Shape" fill="#fff"></path>
+            </g>
+        </g>
+    </g>
+</svg>
