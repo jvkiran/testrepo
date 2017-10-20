@@ -34,7 +34,7 @@ const StyledWhitepaper = styled(Cell)`
   }
   @media screen and (${responsive.sm.max}) {
     margin: 0;
-    padding: 2rem 1.25rem !important;
+    padding: 2rem !important;
   }
 `;
 
@@ -94,7 +94,9 @@ const Documentation = () => (
             This technical primer presents a short introduction to Ocean Protocol.
           </StyledIntro>
           <StyledAbstract>
-            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
+            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.<br /><br />
+
+            This document is a primer; we are developing a whitepaper that covers key technical topics more thoroughly.
           </StyledAbstract>
           <StyledFooter>
             <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">

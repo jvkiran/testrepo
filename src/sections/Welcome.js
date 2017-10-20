@@ -119,7 +119,6 @@ const StyledPoweredBy = styled.div`
   text-align: center;
 
   @media screen and (${responsive.sm.max}) {
-    margin-top: 1rem;
     margin-bottom: 1rem;
   }
   & p {

@@ -8,7 +8,7 @@ const SubTitle = styled.h3`
   font-size: ${fonts.size.h3};
   color: ${({ white }) => (white ? `#fff` : `${colors.black }`)};
   margin-top: 0;
-  text-align: ${({ center }) => (center ? `center` : `left`)};
+  text-align: ${({ center }) => (center ? `center` : `inherit`)};
   @media screen and (${responsive.sm.max}) {
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
