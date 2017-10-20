@@ -134,8 +134,8 @@ const Data = () => (
       </StyledSecondGrid>
 
       <StyledThirdGrid wrap textCenter>
-        <Cell width={1} maxWidth="small">
-          <SubTitle>Only a handful of companies today have both Data and AI</SubTitle>
+        <Cell width={1} maxWidth="narrow">
+          <SubTitle center>Only a handful of companies today have both Data and AI</SubTitle>
           <Paragraph>
             AI start-ups and researchers are drowning in algorithms, but lack data. The opposite is true for many large corporations. Ocean Protocol is the bridge between these two sides. By bringing together data and AI, Ocean Protocol will unlock a trillion-dollar market for data sharing.
           </Paragraph>

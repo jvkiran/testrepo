@@ -82,7 +82,7 @@ const StyledComments = styled(Paragraph)`
 
 const StyledRow = styled.div`
    margin-top: 3rem;
-   margin-bottom: 1rem;
+   margin-bottom: 0;
  
    &:first-child {
      margin-top: 2.5rem;
@@ -97,7 +97,6 @@ const StyledRow = styled.div`
  
    @media screen and (${responsive.md.min}) {
      margin-top: 2rem;
-     margin-left: 4rem;
    }
  `;
 
@@ -147,14 +146,14 @@ const Documentation = () => (
         </StyledWhitepaper>
 
       </Grid>
-      <Cell width={2 / 3}>
+      <Cell width={1} maxWidth="small">
         <StyledRow>
-          <SubTitle white>Mission Statement</SubTitle>
+          <SubTitle white center>Mission Statement</SubTitle>
           <StyledAbstract>
             Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
             Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
-            </StyledAbstract>
+          </StyledAbstract>
         </StyledRow>
       </Cell>
     </ContentRow>

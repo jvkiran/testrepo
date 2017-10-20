@@ -145,7 +145,7 @@ const Welcome = () => (
   <StyledHero id="welcome" viewport fontColor={colors.white}>
     <StyledHeroContent>
       <ContentRow>
-        <StyledTagline>Ocean Protocol unlocks data for AI</StyledTagline>
+        <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
       </ContentRow>
       <ContentRow narrow>
         <StyledPoweredBy>
