@@ -9,6 +9,8 @@ import Paragraph from '../components/Paragraph';
 import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
+import buttonSlack from '../assets/buttons/slack.svg';
+import buttonTelegram from '../assets/buttons/telegram.svg';
 import { colors, responsive } from '../styles';
 
 const StyledSubTitle = styled.h5`
@@ -82,6 +84,20 @@ const Footer = () => (
                 rel="noopener"
               >
                 <img src={buttonTwitter} alt="Twitter" />
+              </a>
+              <a
+                href="https://slack.oceanprotocol.com"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonSlack} alt="Slack" />
+              </a>
+              <a
+                href="https://t.me/@oceanprotocol"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonTelegram} alt="Telegram" />
               </a>
             </StyledSocialLinks>
           </StyledActions>
