@@ -11,6 +11,7 @@ import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
 import buttonSlack from '../assets/buttons/slack.svg';
 import buttonTelegram from '../assets/buttons/telegram.svg';
+import buttonLinkedin from '../assets/buttons/linkedin.svg';
 import { colors, responsive } from '../styles';
 
 const StyledSubTitle = styled.h5`
@@ -98,6 +99,13 @@ const Footer = () => (
                 rel="noopener"
               >
                 <img src={buttonTelegram} alt="Telegram" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/13429589/"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonLinkedin} alt="LinkedIn" />
               </a>
             </StyledSocialLinks>
           </StyledActions>
