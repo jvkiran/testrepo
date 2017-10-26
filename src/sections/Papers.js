@@ -35,18 +35,6 @@ const StyledWhitepaper = styled(Cell)`
   @media screen and (${responsive.sm.min}) {
       min-height: 540px;
   }
-  &:first-child {
-    margin-bottom: 2rem;
-
-    @media screen and (${responsive.sm.min}) {
-      margin-right: 2rem;
-    }
-  }
-  &:last-child {
-    @media screen and (${responsive.sm.min}) {
-      margin-left: 2rem;
-    }
-  }
   ${Title} {
     margin-bottom: 2rem;
   }

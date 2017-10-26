@@ -230,4 +230,12 @@ export const globalStyles = `
   h5 {
     font-size: ${fonts.size.h5}
   }
+
+  svg,
+  img,
+  figure,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
 `;

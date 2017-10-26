@@ -7,39 +7,34 @@ const Grid = styled.div`
   flex-wrap: ${({ wrap }) => (wrap ? 'wrap' : 'nowrap')};
   text-align: ${({ textCenter }) => (textCenter ? 'center' : 'left')};
   align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
+  margin-left: -1.5rem;
+
   & > div {
     justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
+    margin-left: 1.5rem;
   }
   & > div:first-child {
     order: ${({ left }) => (left ? 1 : 0)};
-    padding-left: ${({ left }) => (left ? '20px' : 0)};
-  }
-  & > div:nth-child(2) {
-    padding-left: ${({ left }) => (left ? 0 : '20px')};
-  }
-  & > div:nth-child(3) {
-    padding-left: ${({ left }) => (left ? 0 : '20px')};
-  }
-  & > div:nth-child(4) {
-    padding-left: ${({ left }) => (left ? 0 : '20px')};
   }
   @media screen and (${responsive.sm.max}) {
     flex-direction: column;
+    margin-left: 0;
+
+    & > div {
+      margin-left: 0;
+    }
+
     & > div:first-child {
       order: 0;
-      padding-left: 0;
     }
     & > div:nth-child(2) {
       order: 1;
-      padding-left: 0;
     }
     & > div:nth-child(3) {
       order: 2;
-      padding-left: 0;
     }
     & > div:nth-child(4) {
       order: 3;
-      padding-left: 0;
     }
   }
 `;

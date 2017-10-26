@@ -187,7 +187,7 @@ const Project = ({ toggleModal, ...props }) => {
             <button>Get data</button>
           </StyledCard>
         </StyledData>
-        <Grid wrap>
+        <Grid>
           <Cell width={2 / 5}>
             <h4>What is Ocean Protocol?</h4>
             <Paragraph>
