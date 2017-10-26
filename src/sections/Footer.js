@@ -9,6 +9,9 @@ import Paragraph from '../components/Paragraph';
 import SubscribeForm from '../components/SubscribeForm';
 import buttonMedium from '../assets/buttons/medium.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
+import buttonSlack from '../assets/buttons/slack.svg';
+import buttonTelegram from '../assets/buttons/telegram.svg';
+import buttonLinkedin from '../assets/buttons/linkedin.svg';
 import { colors, responsive } from '../styles';
 
 const StyledSubTitle = styled.h5`
@@ -71,6 +74,7 @@ const Footer = () => (
             <StyledSocialLinks>
               <a
                 href="https://blog.oceanprotocol.com/"
+                title="Blog"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
@@ -78,10 +82,35 @@ const Footer = () => (
               </a>
               <a
                 href="https://twitter.com/oceanprotocol"
+                title="Twitter"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
                 <img src={buttonTwitter} alt="Twitter" />
+              </a>
+              <a
+                href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjYyNDc0OTg3MzQ2LTdmNGYwMDlmZmRkODJiM2QwZTQ5ZGI0YjViODAwYjllMjExZjQyOWE4Zjg5NWQ3NjFhOGY0YWQwZTViZTdmNTA"
+                title="Slack"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonSlack} alt="Slack" />
+              </a>
+              <a
+                href="https://t.me/oceanprotocol"
+                title="Telegram"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonTelegram} alt="Telegram" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/13429589/"
+                title="LinkedIn"
+                target="_blank" //eslint-disable-line
+                rel="noopener"
+              >
+                <img src={buttonLinkedin} alt="LinkedIn" />
               </a>
             </StyledSocialLinks>
           </StyledActions>
