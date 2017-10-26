@@ -71,10 +71,6 @@ const StyledMember = styled.div`
   }
 `;
 
-const StyledProfile = styled.div`
-  
-`;
-
 const StyledName = styled.h3`
   font-size: ${fonts.size.base};
   color: rgb(${colors.white});
@@ -160,7 +156,7 @@ const StyledButton = styled(Button)`
 `;
 
 const Team = ({ toggleModal, ...props }) => (
-  <Section id="team" background={colors.black} fontColor={colors.white} minHeight={900} shadow>
+  <Section id="team" background={colors.black} fontColor={colors.white}>
     <StyledWrapper>
       <ContentRow>
         <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
@@ -180,38 +176,36 @@ const Team = ({ toggleModal, ...props }) => (
           {team.map((member, idx) => (
             <StyledMember key={member.name}>
               <img src={teamImg[member.image]} alt={member.name} />
-              <StyledProfile idx={idx}>
-                <StyledName>{member.name}</StyledName>
-                <StyledLinks>
-                  {!!member.linkedin && (
-                    <StyledIcon
-                      href={`https://www.linkedin.com/in/${member.linkedin}`}
-                      target="_blank" //eslint-disable-line
-                      rel="noopener"
-                    >
-                      <img src={buttonLinkedIn} alt="linkedin" />
-                    </StyledIcon>
-                  )}
-                  {!!member.github && (
-                    <StyledIcon
-                      href={`https://www.github.com/${member.github}`}
-                      target="_blank" //eslint-disable-line
-                      rel="noopener"
-                    >
-                      <img src={buttonGithub} alt="github" />
-                    </StyledIcon>
-                  )}
-                  {!!member.twitter && (
-                    <StyledIcon
-                      href={`https://www.twitter.com/${member.twitter}`}
-                      target="_blank" //eslint-disable-line
-                      rel="noopener"
-                    >
-                      <img src={buttonTwitter} alt="twitter" />
-                    </StyledIcon>
-                  )}
-                </StyledLinks>
-              </StyledProfile>
+              <StyledName>{member.name}</StyledName>
+              <StyledLinks>
+                {!!member.linkedin && (
+                  <StyledIcon
+                    href={`https://www.linkedin.com/in/${member.linkedin}`}
+                    target="_blank" //eslint-disable-line
+                    rel="noopener"
+                  >
+                    <img src={buttonLinkedIn} alt="linkedin" />
+                  </StyledIcon>
+                )}
+                {!!member.github && (
+                  <StyledIcon
+                    href={`https://www.github.com/${member.github}`}
+                    target="_blank" //eslint-disable-line
+                    rel="noopener"
+                  >
+                    <img src={buttonGithub} alt="github" />
+                  </StyledIcon>
+                )}
+                {!!member.twitter && (
+                  <StyledIcon
+                    href={`https://www.twitter.com/${member.twitter}`}
+                    target="_blank" //eslint-disable-line
+                    rel="noopener"
+                  >
+                    <img src={buttonTwitter} alt="twitter" />
+                  </StyledIcon>
+                )}
+              </StyledLinks>
             </StyledMember>
           ))}
         </StyledTeam>
