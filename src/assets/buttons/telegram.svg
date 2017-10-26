@@ -1,32 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="56px" height="55px" viewBox="0 0 56 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 16</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <linearGradient x1="66.67%" y1="16.67%" x2="41.67%" y2="75%" id="linearGradient-1">
-            <stop stop-color="#37AEE2" offset="0%"></stop>
-            <stop stop-color="#1E96C8" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="61.2346759%" y1="43.69%" x2="74.7064382%" y2="80.24%" id="linearGradient-2">
-            <stop stop-color="#EFF7FC" offset="0%"></stop>
-            <stop stop-color="#FFFFFF" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Ocean-/-Latest-Version-" transform="translate(-254.000000, -5746.000000)">
-            <g id="Footer" transform="translate(0.000000, 5497.000000)">
-                <g id="Social-Icons" transform="translate(110.000000, 249.000000)">
-                    <g id="Group-16" transform="translate(144.000000, 0.000000)">
-                        <rect id="Rectangle" fill="url(#linearGradient-1)" x="0.833333333" y="0" width="55" height="55" rx="2"></rect>
-                        <g id="Telegram" transform="translate(11.833333, 15.583333)">
-                            <path d="M11.4583333,23.6041667 C10.567425,23.6041667 10.7188125,23.2677729 10.4115458,22.4194896 L7.79166667,13.7971854 L27.9583333,1.83333333" id="Shape" fill="#C8DAEA"></path>
-                            <path d="M11.4583333,23.6041667 C12.1458333,23.6041667 12.4495937,23.28975 12.8333333,22.9166667 L16.5,19.3512917 L11.9262917,16.5932708" id="Shape" fill="#A9C9DD"></path>
-                            <path d="M11.9258333,16.5939583 L23.0083333,24.7818542 C24.2729896,25.4796438 25.1857375,25.1183625 25.50075,23.6077188 L30.0118958,2.34953125 C30.4737583,0.49781875 29.3060396,-0.34203125 28.0962,0.207235417 L1.606825,10.4214229 C-0.201322917,11.1466667 -0.19078125,12.1554354 1.2772375,12.6049229 L8.07500833,14.7266167 L23.8125708,4.79797083 C24.5555063,4.34745208 25.2373688,4.58966063 24.6777208,5.08635417" id="Shape" fill="url(#linearGradient-2)"></path>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="55" viewBox="0 0 56 55">
+  <defs>
+    <linearGradient id="telegram-a" x1="57.903%" x2="67.381%" y1="43.69%" y2="80.24%">
+      <stop offset="0%" stop-color="#F1F1F1"/>
+      <stop offset="100%" stop-color="#FFF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none">
+    <rect width="55" height="55" x=".833" fill="#141414" rx="2"/>
+    <g transform="translate(10.25 14.255)">
+      <path fill="#B0B0B0" d="M12.6288083,26.0153453 C11.6468933,26.0153453 11.8137451,25.6445887 11.4750909,24.7096528 L8.58758969,15.2065755 L30.8142924,2.02060934"/>
+      <path fill="#D8D9D9" d="M12.6288083,26.0153453 C13.3865368,26.0153453 13.7213265,25.6688107 14.1442653,25.2576168 L18.185484,21.3280368 L13.1445689,18.2882825"/>
+      <path fill="url(#telegram-a)" d="M13.1440637,18.2890402 L25.3586472,27.3133342 C26.7524888,28.0824034 27.7584744,27.684217 28.1056656,26.0192602 L33.0776274,2.58953716 C33.5866694,0.548671208 32.2996676,-0.37696993 30.9662422,0.228404628 L1.77096305,11.485977 C-0.221888163,12.2853048 -0.210269659,13.3971198 1.40770801,13.8925227 L8.89987486,16.2309487 L26.245038,5.28808618 C27.0638647,4.79154669 27.8153799,5.05849698 27.1985635,5.60592804"/>
     </g>
+  </g>
 </svg>
