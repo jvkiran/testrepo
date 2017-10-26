@@ -74,6 +74,7 @@ const Footer = () => (
             <StyledSocialLinks>
               <a
                 href="https://blog.oceanprotocol.com/"
+                title="Blog"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
@@ -81,6 +82,7 @@ const Footer = () => (
               </a>
               <a
                 href="https://twitter.com/oceanprotocol"
+                title="Twitter"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
@@ -88,6 +90,7 @@ const Footer = () => (
               </a>
               <a
                 href="https://slack.oceanprotocol.com"
+                title="Slack"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
@@ -95,6 +98,7 @@ const Footer = () => (
               </a>
               <a
                 href="https://t.me/@oceanprotocol"
+                title="Telegram"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
@@ -102,6 +106,7 @@ const Footer = () => (
               </a>
               <a
                 href="https://www.linkedin.com/company/13429589/"
+                title="LinkedIn"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
               >
