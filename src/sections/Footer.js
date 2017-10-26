@@ -89,7 +89,7 @@ const Footer = () => (
                 <img src={buttonTwitter} alt="Twitter" />
               </a>
               <a
-                href="https://slack.oceanprotocol.com"
+                href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjYyNDc0OTg3MzQ2LTdmNGYwMDlmZmRkODJiM2QwZTQ5ZGI0YjViODAwYjllMjExZjQyOWE4Zjg5NWQ3NjFhOGY0YWQwZTViZTdmNTA"
                 title="Slack"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
