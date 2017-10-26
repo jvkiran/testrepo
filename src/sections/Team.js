@@ -12,10 +12,9 @@ import IPDBLogo from '../assets/logos/ipdb.svg';
 import buttonLinkedIn from '../assets/buttons/linkedin.svg';
 import buttonTwitter from '../assets/buttons/twitter.svg';
 import buttonGithub from '../assets/buttons/github.svg';
-import triangle from '../assets/misc/triangle.svg';
 import teamImg from '../assets/team';
 import team from '../data/team.json';
-import { colors, fonts, responsive, layout, transitions } from '../styles';
+import { colors, fonts, responsive } from '../styles';
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -46,27 +45,21 @@ const StyledTeam = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-left: -${layout.pageFrame};
+  margin-left: -3rem;
 `;
 
 const StyledMember = styled.div`
   position: relative;
-  margin-left: ${layout.pageFrame};
-  margin-bottom: ${layout.pageFrame};
-  width: calc(100% / 4);
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  width: calc(100% / 2 - 3rem);
+
+  @media screen and (${responsive.xs.min}) {
+    width: calc(100% / 3 - 3rem);
+  }
 
   @media screen and (${responsive.sm.min}) {
-    width: calc(100% / 8);
-  }
-
-  @media screen and (${responsive.md.min}) {
-    width: calc(100% / 10);
-  }
-
-  &:hover > div {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
+    width: calc(100% / 5 - 3rem);
   }
 
   & > img {
@@ -79,73 +72,19 @@ const StyledMember = styled.div`
 `;
 
 const StyledProfile = styled.div`
-  transition: ${transitions.base};
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  width: 300px;
-  left: calc(-150px + 50%);
-  bottom: 115%;
-  position: absolute;
-  z-index: 5;
-  background: rgb(${colors.white});
-  color: rgb(${colors.dark});
-  box-shadow: 2px 2px 27px 2px rgba(0, 0, 0, 0.11), 2px 2px 5px 2px rgba(0, 0, 0, 0.39);
-  @media screen and (${responsive.sm.max}) {
-    left: ${({ idx }) => {
-      if (idx === 0 || idx % 3 === 0) {
-        return 'calc(-150px + 50% + 25vw + 1rem)';
-      } else if ((idx + 1) % 3 === 0) {
-        return 'calc(-150px + 50% - 25vw - 1rem)';
-      } else {
-        return 'calc(-150px + 50%)';
-      }
-    }};
-  }
-`;
-
-const StyledProfileWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  & > img {
-    position: absolute;
-    width: 20px;
-    bottom: -14px;
-    z-index: -1;
-    left: calc(50% - (20px / 2));
-    @media screen and (${responsive.sm.max}) {
-      left: ${({ idx }) => {
-        if (idx === 0 || idx % 3 === 0) {
-          return 'calc(50% - (20px / 2) - 25vw - 1rem)';
-        } else if ((idx + 1) % 3 === 0) {
-          return 'calc(50% - (20px / 2) + 25vw + 1rem)';
-        } else {
-          return 'calc(50% - (20px / 2))';
-        }
-      }};
-    }
-  }
+  
 `;
 
 const StyledName = styled.h3`
   font-size: ${fonts.size.base};
-  margin-top: 0;
-  margin-bottom: 0.05rem;
-  color: rgb(${colors.dark});
-`;
-
-const StyledRole = styled.h4`
-  font-size: ${fonts.size.small};
-  margin: 0;
-  color: rgb(${colors.dark});
-  opacity: 0.5;
+  color: rgb(${colors.white});
+  text-align: center;
+  margin-top: .75rem;
+  margin-bottom: .35rem;
 `;
 
 const StyledLinks = styled.div`
-  display: flex;
-  margin-top: 1rem;
+  text-align: center;
 
   &:empty {
     display: none;
@@ -153,10 +92,18 @@ const StyledLinks = styled.div`
 `;
 
 const StyledIcon = styled.a`
-  width: 20px;
-  height: 20px;
+  width: 1.75rem;
+  height: 1.75rem;
   border-radius: 2px;
-  margin-right: 15px;
+  display: inline-block;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+
   & img {
     width: 100%;
     height: 100%;
@@ -234,40 +181,36 @@ const Team = ({ toggleModal, ...props }) => (
             <StyledMember key={member.name}>
               <img src={teamImg[member.image]} alt={member.name} />
               <StyledProfile idx={idx}>
-                <StyledProfileWrapper idx={idx}>
-                  <StyledName>{member.name}</StyledName>
-                  <StyledRole>{member.role}</StyledRole>
-                  <StyledLinks>
-                    {!!member.linkedin && (
-                      <StyledIcon
-                        href={`https://www.linkedin.com/in/${member.linkedin}`}
-                        target="_blank" //eslint-disable-line
-                        rel="noopener"
-                      >
-                        <img src={buttonLinkedIn} alt="linkedin" />
-                      </StyledIcon>
-                    )}
-                    {!!member.github && (
-                      <StyledIcon
-                        href={`https://www.github.com/${member.github}`}
-                        target="_blank" //eslint-disable-line
-                        rel="noopener"
-                      >
-                        <img src={buttonGithub} alt="github" />
-                      </StyledIcon>
-                    )}
-                    {!!member.twitter && (
-                      <StyledIcon
-                        href={`https://www.twitter.com/${member.twitter}`}
-                        target="_blank" //eslint-disable-line
-                        rel="noopener"
-                      >
-                        <img src={buttonTwitter} alt="twitter" />
-                      </StyledIcon>
-                    )}
-                  </StyledLinks>
-                  <img src={triangle} alt="triangle" />
-                </StyledProfileWrapper>
+                <StyledName>{member.name}</StyledName>
+                <StyledLinks>
+                  {!!member.linkedin && (
+                    <StyledIcon
+                      href={`https://www.linkedin.com/in/${member.linkedin}`}
+                      target="_blank" //eslint-disable-line
+                      rel="noopener"
+                    >
+                      <img src={buttonLinkedIn} alt="linkedin" />
+                    </StyledIcon>
+                  )}
+                  {!!member.github && (
+                    <StyledIcon
+                      href={`https://www.github.com/${member.github}`}
+                      target="_blank" //eslint-disable-line
+                      rel="noopener"
+                    >
+                      <img src={buttonGithub} alt="github" />
+                    </StyledIcon>
+                  )}
+                  {!!member.twitter && (
+                    <StyledIcon
+                      href={`https://www.twitter.com/${member.twitter}`}
+                      target="_blank" //eslint-disable-line
+                      rel="noopener"
+                    >
+                      <img src={buttonTwitter} alt="twitter" />
+                    </StyledIcon>
+                  )}
+                </StyledLinks>
               </StyledProfile>
             </StyledMember>
           ))}
