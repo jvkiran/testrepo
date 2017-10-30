@@ -97,7 +97,7 @@ const Footer = () => (
                 <img src={buttonSlack} alt="Slack" />
               </a>
               <a
-                href="https://t.me/oceanprotocol"
+                href="https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg"
                 title="Telegram"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
