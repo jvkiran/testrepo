@@ -108,15 +108,6 @@ export const globalStyles = `
     font-stretch: normal;
   }
 
-  @font-face {
-    font-family: 'Sharp Sans Extrabold';
-    src: url('../fonts/SharpSans-Extrabold.woff2') format('woff2'),
-         url('../fonts/SharpSans-Extrabold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-  }
-
   *,
   *:before,
   *:after {
