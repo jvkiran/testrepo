@@ -34,18 +34,17 @@ const StyledWhitepaper = styled(Cell)`
   }
   @media screen and (${responsive.sm.min}) {
       min-height: 540px;
+
+      &:first-child {
+        margin-right: 2rem;
+      }
+      &:last-child {
+        margin-left: 2rem;
+      }
   }
   &:first-child {
     margin-bottom: 2rem;
-
-    @media screen and (${responsive.sm.min}) {
-      margin-right: 2rem;
-    }
-  }
-  &:last-child {
-    @media screen and (${responsive.sm.min}) {
-      margin-left: 2rem;
-    }
+    margin-left: 0;
   }
   ${Title} {
     margin-bottom: 2rem;
@@ -110,47 +109,50 @@ const Documentation = () => (
       <Title white>Learn how Ocean Protocol works</Title>
 
       <Grid>
-        <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Technical Primer</StyledTitle>
-          <StyledIntro>
-            This technical primer presents a short introduction to Ocean Protocol.
-          </StyledIntro>
-          <StyledAbstract>
-            Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
-          </StyledAbstract>
-          <StyledFooter>
-            <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
-              <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
-                Download <span>pdf</span>
-              </StyledDownload>
-            </a>
-            <StyledComments>
-              Have a comment or suggestions? <br />
-              Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-            </StyledComments>
-          </StyledFooter>
-        </StyledWhitepaper>
-
-        <StyledWhitepaper center width={1 / 2}>
-          <StyledTitle>Marketplace Framework</StyledTitle>
-          <StyledIntro>
-            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
-          </StyledIntro>
-          <StyledAbstract>
-            It is complementary to the technical primer for Ocean Protocol.
-          </StyledAbstract>
-          <StyledFooter>
-            <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
-              <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
-                Download <span>pdf</span>
-              </StyledDownload>
-            </a>
-            <StyledComments>
-              Have a comment or suggestions? <br />
-              Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-            </StyledComments>
-          </StyledFooter>
-        </StyledWhitepaper>
+        <Cell center width={1 / 2}>
+          <StyledWhitepaper >
+            <StyledTitle>Technical Primer</StyledTitle>
+            <StyledIntro>
+              This technical primer presents a short introduction to Ocean Protocol.
+            </StyledIntro>
+            <StyledAbstract>
+              Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
+            </StyledAbstract>
+            <StyledFooter>
+              <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
+                <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
+                  Download <span>pdf</span>
+                </StyledDownload>
+              </a>
+              <StyledComments>
+                Have a comment or suggestions? <br />
+                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+              </StyledComments>
+            </StyledFooter>
+          </StyledWhitepaper>
+        </Cell>
+        <Cell center width={1 / 2}>
+          <StyledWhitepaper>
+            <StyledTitle>Marketplace Framework</StyledTitle>
+            <StyledIntro>
+              This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+            </StyledIntro>
+            <StyledAbstract>
+              It is complementary to the technical primer for Ocean Protocol.
+            </StyledAbstract>
+            <StyledFooter>
+              <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
+                <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
+                  Download <span>pdf</span>
+                </StyledDownload>
+              </a>
+              <StyledComments>
+                Have a comment or suggestions? <br />
+                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+              </StyledComments>
+            </StyledFooter>
+          </StyledWhitepaper>
+        </Cell>
       </Grid>
 
       <Cell width={1 / 2}>

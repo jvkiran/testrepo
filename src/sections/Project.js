@@ -3,12 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
+import ReactPlayer from 'react-player';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
 import Pulse from '../components/Pulse';
 import Cell from '../components/Cell';
 import Title from '../components/Title';
+import SubTitle from '../components/SubTitle';
 import Paragraph from '../components/Paragraph';
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg';
 import dataDotsRight from '../assets/graphics/data-dots-right.svg';
@@ -44,7 +46,7 @@ const StyledData = styled.div`
 
 const StyledCard = styled.div`
   background: rgb(${colors.white});
-  margin: 2rem;
+  margin: 5%;
   border-radius: 2px;
   width: 30%;
   box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
@@ -52,7 +54,7 @@ const StyledCard = styled.div`
   transition: ${transitions.base};
   color: rgb(${colors.grey});
   display: block;
-  padding: 2.5rem;
+  padding: 2rem;
   cursor: pointer;
   @media screen and (${responsive.md.max}) {
     padding: 1.5rem;
@@ -154,6 +156,33 @@ const StyledDataDots = styled.div`
   }
 `;
 
+const StyledSubTitle = styled(SubTitle) `
+  font-size: ${fonts.size.h4};
+  text-align: center;
+`;
+
+const Video = styled.div`
+  margin-top: 4rem;
+`;
+
+const StyledReactPlayer = styled(ReactPlayer) `
+    max-width: 100%;
+    height: auto !important;
+    width: 100% !important;
+    > div {
+        position: relative;
+        height: 0 !important;
+        padding-bottom: 56.25%;
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+`;
+
 const Project = ({ toggleModal, ...props }) => {
   const _toggleModal = modal => {
     if (modal === 'consumer') {
@@ -187,9 +216,9 @@ const Project = ({ toggleModal, ...props }) => {
             <button>Get data</button>
           </StyledCard>
         </StyledData>
-        <Grid wrap>
+        <Grid>
           <Cell width={2 / 5}>
-            <h4>What is Ocean Protocol?</h4>
+            <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
             <Paragraph>
               Ocean Protocol is a decentralized data exchange protocol that lets people share and monetize data while guaranteeing control, auditability, transparency and compliance to all actors involved.
             </Paragraph>
@@ -201,7 +230,7 @@ const Project = ({ toggleModal, ...props }) => {
             <div />
           </Cell>
           <Cell width={2 / 5}>
-            <h4>How Ocean Protocol Works</h4>
+            <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
             <Paragraph>
               Ocean Protocol provides the underlying technical foundation that data marketplaces need to connect data providers with data consumers in a trusted environment. It nurtures a data ecosystem and community.
             </Paragraph>
@@ -210,6 +239,10 @@ const Project = ({ toggleModal, ...props }) => {
             </Paragraph>
           </Cell>
         </Grid>
+
+        <Video>
+          <StyledReactPlayer url='https://www.youtube.com/watch?v=FEeicvNSyk4' controls={true} config={{ youtube: { playerVars: { color: 'white' } } }} />
+        </Video>
       </ContentRow>
     </Section>
   );

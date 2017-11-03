@@ -88,7 +88,6 @@ const StyledThirdGrid = styled(StyledGrid)`
   & > div:nth-child(2) {
     padding-left: 0;
   }
-
   p {
     margin-bottom: 2rem;
   }

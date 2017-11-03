@@ -70,6 +70,7 @@ const StyledPulseLock = styled.img`
   position: absolute;
   left: -24px;
   top: -20px;
+  max-width: none;
 `;
 
 const Pulse = () => (
