@@ -241,7 +241,7 @@ const Project = ({ toggleModal, ...props }) => {
         </Grid>
 
         <Video>
-          <StyledReactPlayer url='https://www.youtube.com/watch?v=Ep3jK1bZrB8' controls={true} config={{ youtube: { playerVars: { color: 'white' } } }} />
+          <StyledReactPlayer url='https://www.youtube.com/watch?v=FEeicvNSyk4' controls={true} config={{ youtube: { playerVars: { color: 'white' } } }} />
         </Video>
       </ContentRow>
     </Section>
