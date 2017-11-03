@@ -9,7 +9,6 @@ import Team from './sections/Team';
 import Blog from './sections/Blog';
 import Footer from './sections/Footer';
 import Modal from './sections/Modal';
-import Videos from './sections/Videos';
 
 const StyledRoot = styled.div`
   width: 100%;
@@ -32,7 +31,6 @@ class Root extends Component {
       <Data />
       <Team toggleModal={this.toggleModal} />
       <Blog />
-      <Videos />
       <Footer />
       <Modal modal={this.state.modal} toggle={this.toggleModal} />
     </StyledRoot>
