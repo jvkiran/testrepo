@@ -85,6 +85,9 @@ const StyledUnavailable = styled.img`
 
 const StyledThirdGrid = styled(StyledGrid)`
   margin-bottom: 4rem;
+  & > div:nth-child(2) {
+    padding-left: 0;
+  }
   p {
     margin-bottom: 2rem;
   }
