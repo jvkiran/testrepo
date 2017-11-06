@@ -198,6 +198,7 @@ const StyledVideoThumbnail = styled.div`
     img {
       opacity: .9;
       transition: .2s ease-out;
+      border: .4rem solid #fff;
     }
 `;
 
@@ -209,7 +210,7 @@ const videoModalStyles = {
     right: 0,
     bottom: 0,
     zIndex: 20,
-    backgroundColor: `rgba(${colors.black}, .7)`
+    backgroundColor: `rgba(${colors.black}, .9)`
   },
   content: {
     padding: '0',
@@ -226,7 +227,7 @@ const videoModalStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: `rgb(${colors.black})`,
-    border: '.75rem solid #fff'
+    border: '0'
   }
 };
 
