@@ -72,18 +72,18 @@ const StyledTitle = styled(Title)`
   }
 `;
 
-const StyledIntro = styled(Paragraph)`
+const StyledIntro = styled.div`
   margin-bottom: 1rem;
 `;
 
-const StyledAbstract = styled(Paragraph)`margin-bottom: 2rem;`;
+const StyledAbstract = styled.div`margin-bottom: 2rem;`;
 
-const StyledFooter = styled(Paragraph) `
+const StyledFooter = styled.div`
   margin-bottom: 0;
   margin-top: auto;
 `;
 
-const StyledComments = styled(Paragraph)`
+const StyledComments = styled.div`
   color: rgb(${colors.lightGrey});
   font-family: ${fonts.family.button};
   text-align: center;

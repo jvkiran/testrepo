@@ -124,7 +124,7 @@ const Data = () => (
         </Cell>
       </StyledSecondGrid>
 
-      <StyledThirdGrid wrap textCenter>
+      <StyledThirdGrid wrap="true" textCenter>
         <Cell width={1} maxWidth="narrow">
           <SubTitle center>Only a handful of companies today have both Data and AI</SubTitle>
           <Paragraph>

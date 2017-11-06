@@ -52,7 +52,7 @@ const StyledSocialLinks = styled.div`
   }
 `;
 
-const StyledContact = styled(Paragraph)`
+const StyledContact = styled.div`
   text-align: right;
 
   .address {
@@ -127,7 +127,7 @@ const Footer = () => (
               </Cell>
 
               <Cell width={1 / 2}>
-                <div class="address">
+                <div className="address">
                   Mapletree Business City<br />
                   20 Pasir Panjang Rd<br />
                   East Wing #03-22/24<br />

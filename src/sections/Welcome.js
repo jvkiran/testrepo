@@ -283,7 +283,7 @@ class Welcome extends React.Component {
             </StyledPoweredBy>
 
             <StyledVideoThumbnail onClick={this.openModal}>
-              <img src={videoThumb} srcset={videoThumb2x + ' 2x, ' + videoThumb + ' 1x'} alt="Ocean Protocol Video" />
+              <img src={videoThumb} srcSet={videoThumb2x + ' 2x, ' + videoThumb + ' 1x'} alt="Ocean Protocol Video" />
             </StyledVideoThumbnail>
 
           </ContentRow>
