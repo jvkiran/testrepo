@@ -119,6 +119,10 @@ export const globalStyles = `
     padding: 0;
   }
 
+  #root {
+    overflow-x: hidden;
+  }
+
   html {
     font-size: ${fonts.size.root};
   }
