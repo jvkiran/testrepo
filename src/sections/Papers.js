@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
-import Paragraph from '../components/Paragraph';
 import Button from '../components/Button';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
