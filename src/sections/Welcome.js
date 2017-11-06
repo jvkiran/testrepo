@@ -116,16 +116,13 @@ const StyledTagline = styled(Title)`
 `;
 
 const StyledPoweredBy = styled.div`
-  margin-top: 4rem;
+  margin-top: 3rem;
   margin-bottom: 4rem;
   font-size: ${fonts.size.small};
   font-weight: ${fonts.fontWeight.title};
   text-transform: uppercase;
   text-align: center;
 
-  @media screen and (${responsive.sm.max}) {
-    margin-bottom: 1rem;
-  }
   & p {
     margin: 0;
     margin-bottom: 0.75rem;
@@ -186,11 +183,21 @@ const StyledVideoThumbnail = styled.div`
     box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.6);
     cursor: pointer;
     max-height: 180px;
+    background: rgb(${colors.black});
 
     &:hover,
     &:focus {
       transform: translate3d(0, -0.05rem, 0);
       box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.6);
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    img {
+      opacity: .9;
+      transition: .2s ease-out;
     }
 `;
 
@@ -202,9 +209,6 @@ const videoModalStyles = {
     right: 0,
     bottom: 0,
     zIndex: 20,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: `rgba(${colors.black}, .7)`
   },
   content: {
@@ -213,7 +217,8 @@ const videoModalStyles = {
     height: 'auto',
     zIndex: 2,
     maxWidth: '1080px',
-    borderRadius: '2px',
+    maxHeight: '100vh',
+    borderRadius: '0',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -221,7 +226,7 @@ const videoModalStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: `rgb(${colors.black})`,
-    border: '0'
+    border: '.75rem solid #fff'
   }
 };
 
