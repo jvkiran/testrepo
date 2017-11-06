@@ -117,7 +117,6 @@ export const globalStyles = `
   html, body, #root, #router-root {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
   }
 
   html {
@@ -228,5 +227,9 @@ export const globalStyles = `
   iframe {
     max-width: 100%;
     height: auto;
+  }
+
+  .ReactModal__Body--open {
+      overflow: hidden !important;
   }
 `;

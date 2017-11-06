@@ -3,7 +3,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
-import ReactPlayer from 'react-player';
 import Section from '../components/Section';
 import Grid from '../components/Grid';
 import ContentRow from '../components/ContentRow';
@@ -161,28 +160,6 @@ const StyledSubTitle = styled(SubTitle) `
   text-align: center;
 `;
 
-const Video = styled.div`
-  margin-top: 4rem;
-`;
-
-const StyledReactPlayer = styled(ReactPlayer) `
-    max-width: 100%;
-    height: auto !important;
-    width: 100% !important;
-    > div {
-        position: relative;
-        height: 0 !important;
-        padding-bottom: 56.25%;
-    }
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-`;
-
 const Project = ({ toggleModal, ...props }) => {
   const _toggleModal = modal => {
     if (modal === 'consumer') {
@@ -239,10 +216,6 @@ const Project = ({ toggleModal, ...props }) => {
             </Paragraph>
           </Cell>
         </Grid>
-
-        <Video>
-          <StyledReactPlayer url='https://www.youtube.com/watch?v=FEeicvNSyk4' controls={true} config={{ youtube: { playerVars: { color: 'white' } } }} />
-        </Video>
       </ContentRow>
     </Section>
   );
