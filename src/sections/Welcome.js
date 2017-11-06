@@ -9,8 +9,8 @@ import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import wavesStatic from '../assets/misc/waves.png';
 import cross from '../assets/misc/cross.svg';
-import videoThumb from '../assets/misc/video-thumb.png';
-import videoThumb2x from '../assets/misc/video-thumb@2x.png';
+import videoThumb from '../assets/misc/video-thumb.jpg';
+import videoThumb2x from '../assets/misc/video-thumb@2x.jpg';
 import { colors, responsive, fonts, layout } from '../styles';
 
 const StyledHero = styled(Section)`
