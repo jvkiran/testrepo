@@ -35,7 +35,8 @@ const StyledSubscribe = styled.div`
     background: rgb(${colors.darkGrey});
     color: rgb(${colors.white});
     border: none;
-    min-width: 18rem;
+    min-width: 15rem;
+    width: 75%;
     border-radius: 2px;
     box-shadow: none;
     transition: ${transitions.short};
@@ -63,9 +64,13 @@ const StyledSubscribe = styled.div`
     margin: 0;
     padding: 0.75rem 1rem;
     background: transparent;
-    width: 100%;
+    width: 35%;
     transition: ${transitions.short};
     cursor: pointer;
+
+    @media screen and (${responsive.md.max}) {
+      width: 100%;
+    }
 
     &:active,
     &:hover,
