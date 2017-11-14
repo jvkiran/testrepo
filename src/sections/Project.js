@@ -1,4 +1,4 @@
-/* global ga */
+/* global gtag */
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -163,9 +163,9 @@ const StyledSubTitle = styled(SubTitle) `
 const Project = ({ toggleModal, ...props }) => {
   const _toggleModal = modal => {
     if (modal === 'consumer') {
-      ga('send', 'event', 'consumer', 'click', 'intro_card', true);
+      gtag('event', 'consumer', { 'event_category': 'click', 'event_label': 'intro_card' })
     } else if (modal === 'provider') {
-      ga('send', 'event', 'provider', 'click', 'intro_card', true);
+      gtag('event', 'provider', { 'event_category': 'click', 'event_label': 'intro_card' })
     }
     toggleModal(modal);
   };
