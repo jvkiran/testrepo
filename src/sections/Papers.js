@@ -1,4 +1,4 @@
-/* global ga */
+/* global gtag */
 
 import React from 'react';
 import styled from 'styled-components';
@@ -122,7 +122,7 @@ const Documentation = () => (
             </StyledAbstract>
             <StyledFooter>
               <a href="./techprimer.pdf" download="Ocean Protocol Technical Primer">
-                <StyledDownload onClick={() => ga('send', 'event', 'techprimer', 'download', 'button', true)}>
+                <StyledDownload onClick={() => gtag('event', 'techprimer', { 'event_category': 'download', 'event_label': 'button'})}>
                   Download <span>pdf</span>
                 </StyledDownload>
               </a>
@@ -144,7 +144,7 @@ const Documentation = () => (
             </StyledAbstract>
             <StyledFooter>
               <a href="./marketplace-framework.pdf" download="Ocean Protocol Reference Marketplace Framework">
-                <StyledDownload onClick={() => ga('send', 'event', 'marketplace-framework', 'download', 'button', true)}>
+                <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
                   Download <span>pdf</span>
                 </StyledDownload>
               </a>
