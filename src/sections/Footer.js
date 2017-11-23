@@ -89,7 +89,7 @@ const Footer = () => (
                 <img src={buttonTwitter} alt="Twitter" />
               </a>
               <a
-                href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjYyNDc0OTg3MzQ2LTdmNGYwMDlmZmRkODJiM2QwZTQ5ZGI0YjViODAwYjllMjExZjQyOWE4Zjg5NWQ3NjFhOGY0YWQwZTViZTdmNTA"
+                href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ"
                 title="Slack"
                 target="_blank" //eslint-disable-line
                 rel="noopener"
