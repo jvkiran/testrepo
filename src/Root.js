@@ -28,8 +28,8 @@ class Root extends Component {
     <StyledRoot>
       <Menu />
       <Welcome />
-      <Project toggleModal={this.toggleModal} />
       <Events />
+      <Project toggleModal={this.toggleModal} />
       <Papers />
       <Data />
       <Team toggleModal={this.toggleModal} />

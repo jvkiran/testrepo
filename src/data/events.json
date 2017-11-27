@@ -1,16 +1,16 @@
 [
     {
-        "city": "Tokyo, Japan",
+        "city": "Tokyo",
         "date": "2017-11-29",
         "link": "https://www.meetup.com/Machine-Learning-Meetup-by-team-ai/events/245076515/"
     },
     {
-        "city": "Seoul, South Korea",
+        "city": "Seoul",
         "date": "2017-11-30",
         "link": "https://www.meetup.com/seoul-tech-society/events/245276201/"
     },
     {
-        "city": "Seattle, USA",
+        "city": "Seattle",
         "date": "2017-11-30",
         "link": "https://www.meetup.com/Seattle-DAML/events/245117820/"
     },
@@ -20,7 +20,7 @@
         "link": "https://www.meetup.com/meetup-group-AzJhoEEn/events/245271421/"
     },
     {
-        "city": "San Francisco, USA",
+        "city": "San Francisco",
         "date": "2017-12-05",
         "link": "http://tokensummit.com/schedule-token-summit-ii-san-francisco-december-2017/"
     }
