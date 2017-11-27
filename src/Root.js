@@ -5,6 +5,7 @@ import Welcome from './sections/Welcome';
 import Project from './sections/Project';
 import Data from './sections/Data';
 import Papers from './sections/Papers';
+import Events from './sections/Events';
 import Team from './sections/Team';
 import Blog from './sections/Blog';
 import Footer from './sections/Footer';
@@ -17,6 +18,7 @@ const StyledRoot = styled.div`
   padding: 0;
   position: relative;
 `;
+
 class Root extends Component {
   state = {
     modal: ''
@@ -27,6 +29,7 @@ class Root extends Component {
       <Menu />
       <Welcome />
       <Project toggleModal={this.toggleModal} />
+      <Events />
       <Papers />
       <Data />
       <Team toggleModal={this.toggleModal} />
