@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Moment from 'react-moment';
 import Section from '../components/Section';
 import Title from '../components/Title';
-import Paragraph from '../components/Paragraph';
 import ContentRow from '../components/ContentRow';
 import events from '../data/events.json';
 import { colors, fonts, responsive } from '../styles';
@@ -13,7 +12,6 @@ const StyledEvents = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-end;
-    margin-top: 2rem;
 
     @media screen and (${responsive.sm.min}) {
         margin-left: -1rem;
@@ -81,12 +79,6 @@ const Events = () => (
     <Section id="events" background={colors.grey} fontColor={colors.white}>
         <ContentRow>
             <StyledTitle white>Ocean Protocol <span>Roadshow</span></StyledTitle>
-        </ContentRow>
-
-        <ContentRow narrow>
-            <Paragraph>
-                Our events are cool, we have pizza, cookies, and blockchains.
-            </Paragraph>
         </ContentRow>
 
         <EventsList />
