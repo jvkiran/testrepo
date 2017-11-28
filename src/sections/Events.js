@@ -29,7 +29,7 @@ const StyledEvents = styled.div`
         text-align: center;
         margin-left: 1rem;
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 `;
 
@@ -62,23 +62,25 @@ const StyledEventCity = styled.h4`
     color: rgb(${colors.white});
 `;
 
-const StyledEventName = styled.h5`
+const StyledEventName = styled.p`
+    display: block;
     color: rgb(${colors.lightGrey});
     margin-top: -.75rem;
     margin-bottom: 1rem;
 `;
 
 const StyledEventDate = styled.h5`
-    color: rgb(${colors.lightGrey});
+    color: rgb(${colors.white});
     font-size: ${fonts.size.base};
     margin: 0;
+    opacity: .8;
 `;
 
 const StyledTitle = styled(Title) `
     margin-bottom: 2rem;
 
     span {
-        opacity: .5;
+        color: rgb(${colors.lightGrey});
     }
 `;
 
@@ -116,6 +118,19 @@ class EventsRoadshow extends Component {
 }
 
 class EventsAdditonal extends Component {
+    constructor() {
+        super();
+        this.state = {
+            showEvent: true
+        }
+    }
+
+    toggle = () => {
+        this.setState({
+            showEvent: !this.state.showEvent
+        });
+    }
+
     render() {
         events.sort(function (a, b) {
             return a.date.localeCompare(b.date);
