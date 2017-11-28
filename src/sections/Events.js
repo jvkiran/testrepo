@@ -100,6 +100,9 @@ const EventDate = (props) => {
 
 class EventsRoadshow extends Component {
     render() {
+        roadshow.sort(function (a, b) {
+            return a.date.localeCompare(b.date);
+        });
         const list = roadshow.map((event) =>
             <StyledEvent href={event.link} key={event.city}>
                 <StyledEventCity>{event.city}</StyledEventCity>
@@ -114,9 +117,12 @@ class EventsRoadshow extends Component {
 
 class EventsAdditonal extends Component {
     render() {
+        events.sort(function (a, b) {
+            return a.date.localeCompare(b.date);
+        });
         const list = events.map((event) =>
             <StyledEvent minimal href={event.link} key={event.city}>
-                <StyledEventCity minimal>{event.city}</StyledEventCity>
+                <StyledEventCity>{event.city}</StyledEventCity>
                 <StyledEventName>{event.eventName}</StyledEventName>
                 <StyledEventDate>
                     <EventDate date={event.date} />
