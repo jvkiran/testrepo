@@ -1,27 +1,26 @@
 [
     {
-        "city": "Tokyo",
-        "date": "2017-11-29",
-        "link": "https://www.meetup.com/Machine-Learning-Meetup-by-team-ai/events/245076515/"
+        "city": "Berlin",
+        "eventName": "BigchainDB / IPDB Meetup",
+        "date": "2017-12-06",
+        "link": "https://www.meetup.com/BigchainDB-IPDB-Meetup/events/243513220/"
     },
     {
-        "city": "Seoul",
-        "date": "2017-11-30",
-        "link": "https://www.meetup.com/seoul-tech-society/events/245276201/"
+        "city": "Singapore",
+        "eventName": "City.ai / Singapore",
+        "date": "2017-12-07",
+        "link": "https://singapore.city.ai"
     },
     {
-        "city": "Seattle",
-        "date": "2017-11-30",
-        "link": "https://www.meetup.com/Seattle-DAML/events/245117820/"
+        "city": "Munich",
+        "eventName": "DLD Munich",
+        "date": "2018-01-02",
+        "link": "http://dld-conference.com/DLD18"
     },
     {
-        "city": "Shanghai",
-        "date": "2017-12-02",
-        "link": "https://www.meetup.com/meetup-group-AzJhoEEn/events/245271421/"
-    },
-    {
-        "city": "San Francisco",
-        "date": "2017-12-05",
-        "link": "http://tokensummit.com/schedule-token-summit-ii-san-francisco-december-2017/"
+        "city": "Berlin",
+        "eventName": "Riseof.ai",
+        "date": "2018-05-17",
+        "link": "http://riseof.ai"
     }
 ]
