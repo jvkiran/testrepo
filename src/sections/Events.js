@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
 import ContentRow from '../components/ContentRow';
+import Paragraph from '../components/Paragraph';
 import roadshow from '../data/roadshow.json';
 import events from '../data/events.json';
 import { colors, fonts, responsive } from '../styles';
@@ -13,6 +14,7 @@ const StyledEvents = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 4rem;
 
     * {
         width: 100%;
@@ -24,8 +26,9 @@ const StyledEvents = styled.div`
     }
 
     ${SubTitle} {
+        text-align: center;
         margin-left: 1rem;
-        margin-top: 4rem;
+        margin-top: 0;
         margin-bottom: 1rem;
     }
 `;
@@ -36,7 +39,7 @@ const StyledEvent = styled.a`
     display: block;
     width: 100%;
     background: ${({ minimal }) => (minimal ? 'none' : `rgb(${colors.black})`)};
-    border: .08rem solid ${({ minimal }) => (minimal ? `rgba(${colors.black}, .3)` : `rgb(${colors.pink})`)};
+    border: ${({ minimal }) => (minimal ? `0` : `.08rem solid rgb(${colors.pink})`)};
     border-radius: .1rem;
     margin-bottom: 1rem;
 
@@ -57,7 +60,6 @@ const StyledEventCity = styled.h4`
     margin-top: 0;
     margin-bottom: 1rem;
     color: rgb(${colors.white});
-    font-size: ${({ minimal }) => (minimal ? `${fonts.size.h5}` : `${fonts.size.h4}`)};
 `;
 
 const StyledEventName = styled.h5`
@@ -72,10 +74,17 @@ const StyledEventDate = styled.h5`
     margin: 0;
 `;
 
-const StyledTitle = styled(Title)`
+const StyledTitle = styled(Title) `
+    margin-bottom: 2rem;
+
     span {
         opacity: .5;
     }
+`;
+
+const StyledParagraph = styled(Paragraph) `
+  margin-bottom: 0;
+  text-align: center;
 `;
 
 const EventDate = (props) => {
@@ -129,6 +138,10 @@ class Events extends Component {
             <Section id="events" background={colors.grey} fontColor={colors.white}>
                 <ContentRow>
                     <StyledTitle white>Ocean Protocol <span>Roadshow</span></StyledTitle>
+                </ContentRow>
+
+                <ContentRow narrow>
+                    <StyledParagraph>Meet members of our team at our own roadshow or drop by at any of the following events.</StyledParagraph>
                 </ContentRow>
 
                 <EventsRoadshow />
