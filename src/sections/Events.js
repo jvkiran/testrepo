@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import Moment from 'react-moment';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import ContentRow from '../components/ContentRow';
@@ -50,11 +49,12 @@ const StyledEventCity = styled.h4`
     color: rgb(${colors.white});
 `;
 
-const StyledEventDate = styled(Moment)`
+const StyledEventDate = styled.h5`
     color: rgb(${colors.lightGrey});
     font-size: ${fonts.size.base};
     font-family: ${fonts.family.title};
     font-weight: ${fonts.fontWeight.title};
+    margin: 0;
 `;
 
 const StyledTitle = styled(Title)`
@@ -63,12 +63,25 @@ const StyledTitle = styled(Title)`
     }
 `;
 
-class EventsList extends React.Component {
+const EventDate = (props) => {
+    const eventDate = new Date(props.date)
+    const eventDateFormatted = eventDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    })
+
+    return eventDateFormatted
+};
+
+class EventsList extends Component {
     render() {
         const list = events.map((event) =>
             <StyledEvent href={event.link} key={event.city}>
                 <StyledEventCity>{event.city}</StyledEventCity>
-                <StyledEventDate date={event.date} format="MMMM D, YYYY" />
+                <StyledEventDate>
+                    <EventDate date={event.date} />
+                </StyledEventDate>
             </StyledEvent>
         );
         return <StyledEvents>{list}</StyledEvents>
