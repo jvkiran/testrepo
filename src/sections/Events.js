@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Slider from 'react-slick';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
@@ -8,6 +9,9 @@ import Paragraph from '../components/Paragraph';
 import roadshow from '../data/roadshow.json';
 import events from '../data/events.json';
 import { colors, fonts, responsive } from '../styles';
+
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const StyledEvents = styled.div`
     display: flex;
@@ -31,6 +35,34 @@ const StyledEvents = styled.div`
         width: 100%;
         text-align: center;
         margin: 0;
+        margin-top: 2rem;
+    }
+
+    .slick-slider {
+        width: calc(100% + 4rem);
+        margin-left: -2rem;
+        margin-right: -2rem;
+    }
+
+    .slick-slide,
+    .slick-initialized .slick-slide {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+    .slick-dots {
+        button:before {
+            font-size: ${fonts.size.small};
+            opacity: .25;
+            color: rgb(${colors.white});
+        }
+        li.slick-active button:before {
+            color: rgb(${colors.white});
+        }
+        .slick-active:only-child {
+            display: none;
+        }
     }
 `;
 
@@ -56,16 +88,18 @@ const StyledEvent = styled.a`
         }
     `)};
 
+    ${({ minimal }) => (minimal ? 'flex: 0 1 50%' : null)};
+
     @media screen and (${responsive.sm.min}) {
         width: auto;
         flex: 0 1 calc(50% - 2rem);
         margin: 1rem;
     }
     @media screen and (${responsive.md.min}) {
-        flex: 0 1 calc(33% - 2rem);
+        ${({ minimal }) => (minimal ? 'flex: 0 1 calc(25% - 2rem)' : 'flex: 0 1 calc(33% - 2rem)')};
     }
     @media screen and (${responsive.lg.min}) {
-        ${({ minimal }) => (minimal ? 'flex: 0 1 calc(25% - 2rem);' : 'flex: 0 1 calc(20% - 2rem);')};
+        ${({ minimal }) => (minimal ? null : 'flex: 0 1 calc(20% - 2rem)')};
     }
 `;
 
@@ -127,14 +161,22 @@ function renderRoadshow(roadshow) {
 }
 
 function renderEvents(events, minimal) {
-    events.sort(function (a, b) {
-        return a.date.localeCompare(b.date);
-    });
-
     if (events.length > 0) {
+        events.sort(function (a, b) {
+            return a.date.localeCompare(b.date);
+        });
+
+        const groupSize = 4;
+
         return events.map((event, index) => (
             <Event key={index} event={event} minimal={minimal} />
-        ));
+        )).reduce(function (r, element, index) {
+            index % groupSize === 0 && r.push([]);
+            r[r.length - 1].push(element);
+            return r;
+        }, []).map(function (rowContent) {
+            return <div>{rowContent}</div>;
+        });
     }
     else return [];
 }
@@ -172,11 +214,22 @@ class EventsAdditonal extends Component {
     render() {
         const minimal = true
         const list = renderEvents(events, minimal);
+        const settings = {
+            dots: true,
+            infinite: false,
+            arrows: false,
+            speed: 200,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            swipeToSlide: true
+        };
 
         return (
             <StyledEvents>
                 <SubTitle white>More events</SubTitle>
-                {list}
+                <Slider {...settings}>
+                    {list}
+                </Slider>
             </StyledEvents>
         );
     }
