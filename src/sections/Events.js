@@ -24,9 +24,7 @@ const StyledEvents = styled.div`
     ${SubTitle} {
         width: 100%;
         text-align: center;
-        margin-left: 1rem;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin: 0;
     }
 `;
 
@@ -136,17 +134,24 @@ function renderEvents(events, minimal) {
 }
 
 const Event = ({ event, minimal }) => {
-    return (
-        <StyledEvent minimal={minimal} href={event.link} key={event.city}>
-            <StyledEventCity>{event.city}</StyledEventCity>
-            {!!event.eventName && (
-                <StyledEventName>{event.eventName}</StyledEventName>
-            )}
-            <StyledEventDate>
-                <EventDate date={event.date} />
-            </StyledEventDate>
-        </StyledEvent>
-    );
+    const now = new Date();
+    const past = now.setDate(now.getDate() - 3); // 3 days ago from right now
+    const eventDate = new Date(event.date);
+
+    if (eventDate > past) {
+        return (
+            <StyledEvent minimal={minimal} href={event.link} key={event.city}>
+                <StyledEventCity>{event.city}</StyledEventCity>
+                {!!event.eventName && (
+                    <StyledEventName>{event.eventName}</StyledEventName>
+                )}
+                <StyledEventDate>
+                    <EventDate date={event.date} />
+                </StyledEventDate>
+            </StyledEvent>
+        );
+    }
+    else return [];
 };
 
 class EventsRoadshow extends Component {
@@ -161,7 +166,7 @@ class EventsAdditonal extends Component {
     render() {
         const minimal = true
         const list = renderEvents(events, minimal);
-        
+
         return (
             <StyledEvents>
                 <SubTitle white>More events</SubTitle>
