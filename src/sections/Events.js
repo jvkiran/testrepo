@@ -109,50 +109,59 @@ const EventDate = (props) => {
     return eventDateFormatted
 };
 
+function renderRoadshow(roadshow) {
+    roadshow.sort(function (a, b) {
+        return a.date.localeCompare(b.date);
+    });
+
+    if (roadshow.length > 0) {
+        return roadshow.map((event, index) => (
+            <Event key={index} event={event} />
+        ));
+    }
+    else return [];
+}
+
+function renderEvents(events, minimal) {
+    events.sort(function (a, b) {
+        return a.date.localeCompare(b.date);
+    });
+
+    if (events.length > 0) {
+        return events.map((event, index) => (
+            <Event key={index} event={event} minimal={minimal} />
+        ));
+    }
+    else return [];
+}
+
+const Event = ({ event, minimal }) => {
+    return (
+        <StyledEvent minimal={minimal} href={event.link} key={event.city}>
+            <StyledEventCity>{event.city}</StyledEventCity>
+            {!!event.eventName && (
+                <StyledEventName>{event.eventName}</StyledEventName>
+            )}
+            <StyledEventDate>
+                <EventDate date={event.date} />
+            </StyledEventDate>
+        </StyledEvent>
+    );
+};
+
 class EventsRoadshow extends Component {
     render() {
-        roadshow.sort(function (a, b) {
-            return a.date.localeCompare(b.date);
-        });
-        const list = roadshow.map((event) =>
-            <StyledEvent href={event.link} key={event.city}>
-                <StyledEventCity>{event.city}</StyledEventCity>
-                <StyledEventDate>
-                    <EventDate date={event.date} />
-                </StyledEventDate>
-            </StyledEvent>
-        );
+        const list = renderRoadshow(roadshow);
+
         return <StyledEvents>{list}</StyledEvents>
     }
 }
 
 class EventsAdditonal extends Component {
-    constructor() {
-        super();
-        this.state = {
-            showEvent: true
-        }
-    }
-
-    toggle = () => {
-        this.setState({
-            showEvent: !this.state.showEvent
-        });
-    }
-
     render() {
-        events.sort(function (a, b) {
-            return a.date.localeCompare(b.date);
-        });
-        const list = events.map((event) =>
-            <StyledEvent minimal href={event.link} key={event.city}>
-                <StyledEventCity>{event.city}</StyledEventCity>
-                <StyledEventName>{event.eventName}</StyledEventName>
-                <StyledEventDate>
-                    <EventDate date={event.date} />
-                </StyledEventDate>
-            </StyledEvent>
-        );
+        const minimal = true
+        const list = renderEvents(events, minimal);
+        
         return (
             <StyledEvents>
                 <SubTitle white>More events</SubTitle>
@@ -175,7 +184,6 @@ class Events extends Component {
                 </ContentRow>
 
                 <EventsRoadshow />
-
                 <EventsAdditonal />
             </Section>
         )
