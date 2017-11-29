@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import ContentRow from '../components/ContentRow';
@@ -7,6 +7,7 @@ import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import wavesStatic from '../assets/misc/waves.png';
 import { colors, responsive, fonts, layout } from '../styles';
+import { fadeInUp } from 'react-animations';
 
 const StyledHero = styled(Section)`
   background: rgb(${colors.black});
@@ -83,12 +84,15 @@ const StyledWaves = styled.div`
   }
 `;
 
+const animation = keyframes`${fadeInUp}`;
+
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
   margin-top: 20%;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #fff;
+  animation: 1s ${animation} backwards;
 
   @media screen and (${responsive.md.min}) {
     margin-left: 2rem;
@@ -117,6 +121,7 @@ const StyledPoweredBy = styled.div`
   font-weight: ${fonts.fontWeight.title};
   text-transform: uppercase;
   text-align: center;
+  animation: 1s ${animation} .5s backwards;
 
   & p {
     margin: 0;

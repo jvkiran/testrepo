@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snapshot",
     "test": "./node_modules/eslint/bin/eslint.js {src,public} && react-scripts test --env=jsdom",
     "deploy": "./deploy.sh",
     "eject": "react-scripts eject"
@@ -14,9 +14,11 @@
     "moment": "^2.19.2",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.1.1",
     "react-moment": "^0.6.8",
     "react-scripts": "^1.0.17",
+    "react-snapshot": "^1.3.0",
     "styled-components": "^2.2.3"
   },
   "devDependencies": {

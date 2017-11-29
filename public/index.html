@@ -22,10 +22,43 @@
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <script src="scripts/vendor/three.min.js"></script>
-    <script src="scripts/vendor/Projector.js"></script>
-    <script src="scripts/vendor/CanvasRenderer.js"></script>
-    <script src="scripts/main.js"></script>
+
+    <style>
+      @font-face {
+        font-family: 'Sharp Sans Display';
+        src: url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+      }
+    
+      @font-face {
+        font-family: 'Sharp Sans Medium';
+        src: url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+      }
+    
+      @font-face {
+        font-family: 'Sharp Sans Bold';
+        src: url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff2') format('woff2'),
+        url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="%PUBLIC_URL%/scripts/vendor/three.min.js"></script>
+    <script src="%PUBLIC_URL%/scripts/vendor/Projector.js"></script>
+    <script src="%PUBLIC_URL%/scripts/vendor/CanvasRenderer.js"></script>
+    <script src="%PUBLIC_URL%/scripts/main.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60614729-11"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -33,8 +66,5 @@
       gtag('js', new Date());
       gtag('config', 'UA-60614729-11');
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
   </body>
 </html>

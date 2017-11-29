@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-snapshot';
 import { injectGlobal } from 'styled-components';
 import { globalStyles } from './styles';
 import Root from './Root';
@@ -7,4 +7,4 @@ import Root from './Root';
 // eslint-disable-next-line
 injectGlobal`${globalStyles}`;
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+render(<Root />, document.getElementById('root'));
