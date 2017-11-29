@@ -105,6 +105,10 @@ const StyledMobileNav = styled.div`
 
 const MenuItems = [
   {
+    name: 'Events',
+    href: '#events'
+  },
+  {
     name: 'Project',
     href: '#project'
   },
