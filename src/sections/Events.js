@@ -162,19 +162,28 @@ function renderRoadshow(roadshow) {
 
 function renderEvents(events, minimal) {
     if (events.length > 0) {
-        events.sort(function (a, b) {
+        const eventsFilteredSorted = events.filter((event, index) => {
+            const now = new Date();
+            const past = now.setDate(now.getDate() - 3); // 3 days ago from right now
+            const eventDate = new Date(event.date);
+
+            // first, filter out all past events
+            return eventDate > past 
+        }).sort((a, b) => {
+            // then, sort the remaining ones by date
             return a.date.localeCompare(b.date);
         });
 
         const groupSize = 4;
 
-        return events.map((event, index) => (
+        return eventsFilteredSorted.map((event, index) => (
             <Event key={index} event={event} minimal={minimal} />
-        )).reduce(function (r, element, index) {
+        )).reduce((r, element, index) => {
+            // finally, put a <div> around every 4th event for the slider
             index % groupSize === 0 && r.push([]);
             r[r.length - 1].push(element);
             return r;
-        }, []).map(function (rowContent) {
+        }, []).map((rowContent) => {
             return <div>{rowContent}</div>;
         });
     }
@@ -182,24 +191,17 @@ function renderEvents(events, minimal) {
 }
 
 const Event = ({ event, minimal }) => {
-    const now = new Date();
-    const past = now.setDate(now.getDate() - 3); // 3 days ago from right now
-    const eventDate = new Date(event.date);
-
-    if (eventDate > past) {
-        return (
-            <StyledEvent minimal={minimal} href={event.link} key={event.city}>
-                <StyledEventCity>{event.city}</StyledEventCity>
-                {!!event.eventName && (
-                    <StyledEventName>{event.eventName}</StyledEventName>
-                )}
-                <StyledEventDate>
-                    <EventDate date={event.date} />
-                </StyledEventDate>
-            </StyledEvent>
-        );
-    }
-    else return [];
+    return (
+        <StyledEvent minimal={minimal} href={event.link} key={event.city}>
+            <StyledEventCity>{event.city}</StyledEventCity>
+            {!!event.eventName && (
+                <StyledEventName>{event.eventName}</StyledEventName>
+            )}
+            <StyledEventDate>
+                <EventDate date={event.date} />
+            </StyledEventDate>
+        </StyledEvent>
+    );
 };
 
 class EventsRoadshow extends Component {
