@@ -18,7 +18,13 @@ const StyledEvents = styled.div`
 
     @media screen and (${responsive.sm.min}) {
         margin-left: -1rem;
-        margin-right: -1rem;
+        width: calc(100% + 2rem);
+    }
+
+    @media screen and (min-width: 1600px) {
+        max-width: 120rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     ${SubTitle} {
