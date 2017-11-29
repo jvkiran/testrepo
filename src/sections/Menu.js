@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import smoothScroll from '../lib/smoothScroll';
 import oceanLogo from '../assets/logos/ocean-logo.svg';
 import Hamburger from '../components/Hamburger';
 import { colors, fonts, responsive, transitions, layout } from '../styles';
+import { fadeIn } from 'react-animations';
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
@@ -52,10 +53,14 @@ const StyledMenuItem = styled.a`
   font-family: ${fonts.family.button};
 `;
 
+const animation = keyframes`${fadeIn}`;
+
 const StyledNav = styled.nav`
   text-transform: uppercase;
   text-align: right;
   color: rgb(${colors.white});
+  animation: 1s ${animation} 1.2s backwards;
+
   & a {
     display: inline-block;
     margin-right: 2rem;
