@@ -16,16 +16,13 @@ const StyledEvents = styled.div`
     align-items: flex-end;
     margin-top: 4rem;
 
-    * {
-        width: 100%;
-    }
-
     @media screen and (${responsive.sm.min}) {
         margin-left: -1rem;
         margin-right: -1rem;
     }
 
     ${SubTitle} {
+        width: 100%;
         text-align: center;
         margin-left: 1rem;
         margin-top: 0;
@@ -42,6 +39,18 @@ const StyledEvent = styled.a`
     border: ${({ minimal }) => (minimal ? `0` : `.08rem solid rgb(${colors.pink})`)};
     border-radius: .1rem;
     margin-bottom: 1rem;
+
+    ${({ minimal }) => (minimal ? null : `
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
+        }
+        &:active {
+            box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
+        }
+    `)};
 
     @media screen and (${responsive.sm.min}) {
         width: auto;
@@ -80,7 +89,7 @@ const StyledTitle = styled(Title) `
     margin-bottom: 2rem;
 
     span {
-        color: rgb(${colors.lightGrey});
+        opacity: .5;
     }
 `;
 
