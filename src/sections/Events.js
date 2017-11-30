@@ -8,6 +8,7 @@ import ContentRow from '../components/ContentRow';
 import Paragraph from '../components/Paragraph';
 import roadshow from '../data/roadshow.json';
 import events from '../data/events.json';
+import jellyfish from '../assets/graphics/jellyfish.svg';
 import { colors, fonts, responsive } from '../styles';
 
 import 'slick-carousel/slick/slick.css';
@@ -71,7 +72,7 @@ const StyledEvent = styled.a`
     text-align: center;
     display: block;
     width: 100%;
-    background: ${({ minimal }) => (minimal ? 'none' : `rgb(${colors.black})`)};
+    background: ${({ minimal }) => (minimal ? 'none' : `rgba(${colors.darkGrey}, .8)`)};
     border: ${({ minimal }) => (minimal ? `0` : `.08rem solid rgb(${colors.pink})`)};
     border-radius: .1rem;
     margin-bottom: 1rem;
@@ -237,10 +238,14 @@ class EventsAdditonal extends Component {
     }
 }
 
+const backgroundStyles = {
+    backgroundPosition: 'center center'
+}
+
 class Events extends Component {
     render() {
         return (
-            <Section id="events" background={colors.grey} fontColor={colors.white}>
+            <Section id="events" background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} style={backgroundStyles}>
                 <ContentRow>
                     <StyledTitle white>Ocean Protocol <span>Roadshow</span></StyledTitle>
                 </ContentRow>

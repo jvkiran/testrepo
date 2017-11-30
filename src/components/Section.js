@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   background-color: ${({ background }) => (background ? `rgb(${background})` : 'none')};
   background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
   background-size: contain;
+  background-repeat: no-repeat;
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
   margin: 0;
   padding-left: 1rem;
