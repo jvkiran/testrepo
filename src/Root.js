@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import Menu from './sections/Menu';
 import Welcome from './sections/Welcome';
 import Project from './sections/Project';
@@ -19,6 +20,17 @@ const StyledRoot = styled.div`
   position: relative;
 `;
 
+const Meta = () => {
+  if (window.location.hostname === 'beta.oceanprotocol.com') {
+    return (
+      <Helmet>
+        <meta name="robots" content="noindex,nofollow" />
+      </Helmet>
+    );
+  }
+  else return [];
+}
+
 class Root extends Component {
   state = {
     modal: ''
@@ -26,6 +38,7 @@ class Root extends Component {
   toggleModal = (modal = '') => this.setState({ modal });
   render = () => (
     <StyledRoot>
+      <Meta />
       <Menu />
       <Welcome />
       <Events />
