@@ -5,7 +5,10 @@ import { responsive, layout } from '../styles';
 
 const StyledSection = styled.section`
   width: 100%;
-  background: ${({ background }) => (background ? `rgb(${background})` : 'none')};
+  background-color: ${({ background }) => (background ? `rgb(${background})` : 'none')};
+  background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
+  background-size: contain;
+  background-repeat: no-repeat;
   min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
   margin: 0;
   padding-left: 1rem;
