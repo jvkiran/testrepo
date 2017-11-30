@@ -247,7 +247,7 @@ class Events extends Component {
         return (
             <Section id="events" background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} style={backgroundStyles}>
                 <ContentRow>
-                    <StyledTitle white>Ocean Protocol <span>Roadshow</span></StyledTitle>
+                    <StyledTitle white>Ocean Protocol <span>World Tour</span></StyledTitle>
                 </ContentRow>
 
                 <ContentRow narrow>
