@@ -1,3 +1,4 @@
+import './lib/polyfills';
 import React from 'react';
 import { render } from 'react-snapshot';
 import { injectGlobal } from 'styled-components';
