@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Title from '../components/Title';
-import Section from '../components/Section';
-import ContentRow from '../components/ContentRow';
-import Grid from '../components/Grid';
-import Cell from '../components/Cell';
-import Spinner from '../components/Spinner';
-import { colors, fonts, responsive } from '../styles';
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import Title from '../components/Title'
+import Section from '../components/Section'
+import ContentRow from '../components/ContentRow'
+import Grid from '../components/Grid'
+import Cell from '../components/Cell'
+import Spinner from '../components/Spinner'
+import { colors, fonts, responsive } from '../styles'
 
 const StyledCard = styled.div`
   margin: 1rem 0;
@@ -17,7 +17,7 @@ const StyledCard = styled.div`
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
   color: rgb(${colors.grey});
   border-radius: 2px;
-`;
+`
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -26,7 +26,7 @@ const StyledHeader = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-`;
+`
 
 const StyledContent = styled.div`
   width: 100%;
@@ -37,7 +37,7 @@ const StyledContent = styled.div`
   @media screen and (${responsive.sm.min}) {
     min-height: 260px;
   }
-`;
+`
 
 const StyledAction = styled.div`
   text-align: center;
@@ -55,69 +55,67 @@ const StyledAction = styled.div`
     font-family: ${fonts.family.button};
     display: inline-block;
   }
-`;
+`
 
-const StyledTitle = styled.h1`font-size: ${fonts.size.h4};`;
+const StyledTitle = styled.h1`font-size: ${fonts.size.h4};`
 
-const StyledSubtitle = styled.p`font-size: ${fonts.size.base};`;
+const StyledSubtitle = styled.p`font-size: ${fonts.size.base};`
 
 class Blog extends Component {
   state = {
-    posts: [],
-    fetching: false
+      posts: [],
+      fetching: false
   };
   componentDidMount() {
-    this.fetchPosts();
+      this.fetchPosts()
   }
   fetchPosts = () => {
-    this.setState({ fetching: true });
-    fetch('https://wt-863e332a77d038d29fa50d15961b5367-0.run.webtask.io/medium/oceanprotocol')
-      .then(res => res.json())
-      .then(posts => {
-        const lastPosts = posts.slice(0, 3);
-        this.setState({ fetching: false, posts: lastPosts });
-      })
-      .catch({ fething: false });
+      this.setState({ fetching: true })
+      fetch('https://wt-863e332a77d038d29fa50d15961b5367-0.run.webtask.io/medium/oceanprotocol')
+          .then(res => res.json())
+          .then(posts => {
+              const lastPosts = posts.slice(0, 3)
+              this.setState({ fetching: false, posts: lastPosts })
+          })
+          .catch({ fething: false })
   };
   render = () => (
-    <Section id="blog" minHeight={930}>
-      <ContentRow>
-        <Title>Learn more about Ocean Protocol</Title>
-        {this.state.fetching ? (
-          <Spinner />
-        ) : (
-          <Grid>
-            {this.state.posts.map(post => (
-              <Cell key={post.id} width={1 / 3}>
-                <a
-                  href={post.postUrl}
-                  target="_blank" // eslint-disable-line
-                  rel="noopener"
-                >
-                  <StyledCard>
-                    <StyledHeader imageUrl={post.imageUrl} />
-                    <StyledContent>
-                      <StyledTitle>{post.title}</StyledTitle>
-                      <StyledSubtitle>{post.subtitle}</StyledSubtitle>
-                    </StyledContent>
-                  </StyledCard>
-                </a>
-              </Cell>
-            ))}
-          </Grid>
-        )}
-        <StyledAction fetching={this.state.fetching}>
-          <a
-            href="https://blog.oceanprotocol.com"
-            target="_blank" // eslint-disable-line
-            rel="noopener"
-          >
+      <Section id="blog" minHeight={930}>
+          <ContentRow>
+              <Title>Learn more about Ocean Protocol</Title>
+              {this.state.fetching ? (
+                  <Spinner />
+              ) : (
+                  <Grid>
+                      {this.state.posts.map(post => (
+                          <Cell key={post.id} width={1 / 3}>
+                              <a
+                                  href={post.postUrl}
+                  rel="noopener" // eslint-disable-line
+                                  target="_blank">
+                                  <StyledCard>
+                                      <StyledHeader imageUrl={post.imageUrl} />
+                                      <StyledContent>
+                                          <StyledTitle>{post.title}</StyledTitle>
+                                          <StyledSubtitle>{post.subtitle}</StyledSubtitle>
+                                      </StyledContent>
+                                  </StyledCard>
+                              </a>
+                          </Cell>
+                      ))}
+                  </Grid>
+              )}
+              <StyledAction fetching={this.state.fetching}>
+                  <a
+                      href="https://blog.oceanprotocol.com"
+            rel="noopener" // eslint-disable-line
+                      target="_blank">
             Go to Blog
-          </a>
-        </StyledAction>
-      </ContentRow>
-    </Section>
+                  </a>
+              </StyledAction>
+          </ContentRow>
+      </Section>
   );
 }
 
-export default Blog;
+export default Blog

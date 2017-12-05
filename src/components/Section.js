@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { responsive, layout } from '../styles';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { responsive, layout } from '../styles'
 
 const StyledSection = styled.section`
   width: 100%;
@@ -16,7 +16,7 @@ const StyledSection = styled.section`
   @media screen and (${responsive.sm.min}) {
     margin-bottom: ${layout.pageFrame};
   }
-`;
+`
 
 const StyledColumn = styled.div`
   width: 100%;
@@ -29,28 +29,29 @@ const StyledColumn = styled.div`
   @media screen and (${responsive.sm.max}) {
     padding: 2rem ${layout.pageFrame};
   }
-`;
+`
 
 const Section = ({ children, viewport, fontColor, minHeight, background, ...props }) => (
-  <StyledSection viewport={viewport} background={background} {...props}>
-    <StyledColumn minHeight={minHeight} fontColor={fontColor}>
-      {children}
-    </StyledColumn>
-  </StyledSection>
-);
+    <StyledSection background={background} viewport={viewport} {...props}>
+        <StyledColumn fontColor={fontColor} minHeight={minHeight}>
+            {children}
+        </StyledColumn>
+    </StyledSection>
+)
 
 Section.propTypes = {
-  children: PropTypes.node.isRequired,
-  background: PropTypes.string,
-  fiontColor: PropTypes.string,
-  viewport: PropTypes.bool
-};
+    children: PropTypes.node.isRequired,
+    background: PropTypes.string,
+    fontColor: PropTypes.string,
+    minHeight: PropTypes.string,
+    viewport: PropTypes.bool
+}
 
 Section.defaultProps = {
-  background: '',
-  minHeight: 0,
-  fontColor: 'inherit',
-  viewport: false
-};
+    background: '',
+    minHeight: 0,
+    fontColor: 'inherit',
+    viewport: false
+}
 
-export default Section;
+export default Section

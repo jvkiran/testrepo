@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { responsive, layout } from '../styles';
+import styled from 'styled-components'
+import { responsive, layout } from '../styles'
 
 const Cell = styled.div`
   display: flex;
@@ -15,6 +15,6 @@ const Cell = styled.div`
   @media screen and (${responsive.sm.max}) {
     width: 100%;
   }
-`;
+`
 
-export default Cell;
+export default Cell

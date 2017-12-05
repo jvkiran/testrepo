@@ -1,14 +1,14 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import Section from '../components/Section';
-import Title from '../components/Title';
-import ContentRow from '../components/ContentRow';
-import SubscribeForm from '../components/SubscribeForm';
-import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
-import dexLogo from '../assets/logos/dex.svg';
-import wavesStatic from '../assets/misc/waves.png';
-import { colors, responsive, fonts, layout } from '../styles';
-import { fadeInUp } from 'react-animations';
+import React from 'react'
+import styled, { keyframes } from 'styled-components'
+import { fadeInUp } from 'react-animations'
+import Section from '../components/Section'
+import Title from '../components/Title'
+import ContentRow from '../components/ContentRow'
+import SubscribeForm from '../components/SubscribeForm'
+import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
+import dexLogo from '../assets/logos/dex.svg'
+import wavesStatic from '../assets/misc/waves.png'
+import { colors, responsive, fonts, layout } from '../styles'
 
 const StyledHero = styled(Section)`
   background: rgb(${colors.black});
@@ -24,12 +24,12 @@ const StyledHero = styled(Section)`
   @media screen and (${responsive.sm.max}) {
     min-height: 100vh;
   }
-`;
+`
 
 const StyledHeroContent = styled.div`
   position: relative;
   z-index: 2;
-`;
+`
 
 const StyledWaves = styled.div`
   z-index: 0;
@@ -83,9 +83,9 @@ const StyledWaves = styled.div`
   canvas {
     max-width: 100%;
   }
-`;
+`
 
-const animation = keyframes`${fadeInUp}`;
+const animation = keyframes`${fadeInUp}`
 
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
@@ -113,7 +113,7 @@ const StyledTagline = styled(Title)`
   @media screen and (${responsive.smHeight.max}) {
     font-size: ${fonts.size.h4};
   }
-`;
+`
 
 const StyledPoweredBy = styled.div`
   margin-top: 3rem;
@@ -139,52 +139,46 @@ const StyledPoweredBy = styled.div`
     height: 1.3rem;
     margin: 0 .5rem;
   }
-`;
+`
 
 const StyledSubscribeForm = styled(SubscribeForm) `
   max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
   animation: 1s ${animation} .8s backwards;
-`;
+`
 
-class Welcome extends React.Component {
-  render() {
-    return (
-      <StyledHero id="welcome" viewport fontColor={colors.white}>
+const Welcome = () => (
+    <StyledHero viewport fontColor={colors.white} id="welcome">
         <StyledHeroContent>
-          <ContentRow>
-            <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
-          </ContentRow>
-          <ContentRow narrow>
-            <StyledPoweredBy>
-              <p>Powered by</p>
-              <a
-                href="https://www.bigchaindb.com/"
-                target="_blank" // eslint-disable-line
-                rel="noopener"
-              >
-                <img src={bigchainDBLogo} alt="BigchainDB Logo" />
-              </a>
-              <a
-                href="https://www.dex.sg/"
-                target="_blank" // eslint-disable-line
-                rel="noopener"
-              >
-                <img src={dexLogo} alt="Dex Logo" />
-              </a>
-            </StyledPoweredBy>
+            <ContentRow>
+                <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
+            </ContentRow>
+            <ContentRow narrow>
+                <StyledPoweredBy>
+                    <p>Powered by</p>
+                    <a
+                        href="https://www.bigchaindb.com/"
+                        rel="noopener" // eslint-disable-line
+                        target="_blank">
+                        <img alt="BigchainDB Logo" src={bigchainDBLogo} />
+                    </a>
+                    <a
+                        href="https://www.dex.sg/"
+                        rel="noopener" // eslint-disable-line
+                        target="_blank">
+                        <img alt="Dex Logo" src={dexLogo} />
+                    </a>
+                </StyledPoweredBy>
 
-            <StyledSubscribeForm inputPlaceholder="Join our newsletter" />
+                <StyledSubscribeForm inputPlaceholder="Join our newsletter" />
 
-          </ContentRow>
+            </ContentRow>
         </StyledHeroContent>
         <StyledWaves>
-          <div id="background" />
+            <div id="background" />
         </StyledWaves>
-      </StyledHero>
-    );
-  };
-};
+    </StyledHero>
+)
 
-export default Welcome;
+export default Welcome

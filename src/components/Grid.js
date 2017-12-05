@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { responsive } from '../styles';
+import styled from 'styled-components'
+import { responsive } from '../styles'
 
 const Grid = styled.div`
   width: 100%;
@@ -42,6 +42,6 @@ const Grid = styled.div`
       padding-left: 0;
     }
   }
-`;
+`
 
-export default Grid;
+export default Grid

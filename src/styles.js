@@ -1,84 +1,84 @@
 export const colors = {
-  white: '255, 255, 255',
-  black: '20, 20, 20',
-  dark: '48, 48, 48',
-  grey: '65, 71, 78',
-  lightGrey: '139, 152, 169',
-  darkGrey: '23, 25, 26',
-  darkPurple: '20, 17, 39',
-  purple: '123, 17, 115',
-  pink: '246, 56, 138',
-  softPink: '218, 89, 119',
-  red: '245, 70, 89',
-  orange: '255, 72, 91'
-};
+    white: '255, 255, 255',
+    black: '20, 20, 20',
+    dark: '48, 48, 48',
+    grey: '65, 71, 78',
+    lightGrey: '139, 152, 169',
+    darkGrey: '23, 25, 26',
+    darkPurple: '20, 17, 39',
+    purple: '123, 17, 115',
+    pink: '246, 56, 138',
+    softPink: '218, 89, 119',
+    red: '245, 70, 89',
+    orange: '255, 72, 91'
+}
 
 export const fonts = {
-  size: {
-    root: '15px',
-    base: '1rem',
-    large: '1.25rem',
-    small: '.75rem',
-    h1: '3.4rem',
-    h2: '2.7rem',
-    h3: '2rem',
-    h4: '1.5rem',
-    h5: '1.125rem'
-  },
-  family: {
-    base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
-    title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
-    button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
-    quote: 'Courier New, serif'
-  },
-  lineHeight: {
-    base: '1.65',
-    title: '1.25'
-  },
-  fontWeight: {
-    base: '500',
-    title: '600'
-  }
-};
+    size: {
+        root: '15px',
+        base: '1rem',
+        large: '1.25rem',
+        small: '.75rem',
+        h1: '3.4rem',
+        h2: '2.7rem',
+        h3: '2rem',
+        h4: '1.5rem',
+        h5: '1.125rem'
+    },
+    family: {
+        base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+        title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
+        button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
+        quote: 'Courier New, serif'
+    },
+    lineHeight: {
+        base: '1.65',
+        title: '1.25'
+    },
+    fontWeight: {
+        base: '500',
+        title: '600'
+    }
+}
 
 export const transitions = {
-  short: 'all 0.1s ease-in-out',
-  base: 'all 0.2s ease-in-out',
-  long: 'all 0.3s ease-in-out'
-};
+    short: 'all 0.1s ease-in-out',
+    base: 'all 0.2s ease-in-out',
+    long: 'all 0.3s ease-in-out'
+}
 
 export const layout = {
-  pageFrame: '.75rem',
-  maxWidth: {
-    wide: '80rem',
-    base: '60rem',
-    small: '40rem',
-    narrow: '25rem'
-  }
-};
+    pageFrame: '.75rem',
+    maxWidth: {
+        wide: '80rem',
+        base: '60rem',
+        small: '40rem',
+        narrow: '25rem'
+    }
+}
 
 export const responsive = {
-  smHeight: {
-    min: 'min-height: 599px',
-    max: 'max-height: 600px'
-  },
-  xs: {
-    min: 'min-width: 419px',
-    max: 'max-width: 420px'
-  },
-  sm: {
-    min: 'min-width: 649px',
-    max: 'max-width: 650px'
-  },
-  md: {
-    min: 'min-width: 799px',
-    max: 'max-width: 800px'
-  },
-  lg: {
-    min: 'min-width: 1023px',
-    max: 'max-width: 1024px'
-  }
-};
+    smHeight: {
+        min: 'min-height: 599px',
+        max: 'max-height: 600px'
+    },
+    xs: {
+        min: 'min-width: 419px',
+        max: 'max-width: 420px'
+    },
+    sm: {
+        min: 'min-width: 649px',
+        max: 'max-width: 650px'
+    },
+    md: {
+        min: 'min-width: 799px',
+        max: 'max-width: 800px'
+    },
+    lg: {
+        min: 'min-width: 1023px',
+        max: 'max-width: 1024px'
+    }
+}
 
 export const globalStyles = `
   *,
@@ -209,4 +209,4 @@ export const globalStyles = `
   .ReactModal__Body--open {
       overflow: hidden !important;
   }
-`;
+`

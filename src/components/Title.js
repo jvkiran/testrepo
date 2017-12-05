@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { responsive, fonts, colors } from '../styles';
+import styled from 'styled-components'
+import { responsive, fonts, colors } from '../styles'
 
 const Title = styled.h1`
   font-family: ${fonts.family.title};
@@ -16,6 +16,6 @@ const Title = styled.h1`
     margin-bottom: 2rem;
     font-size: ${fonts.size.h2};
   }
-`;
+`
 
-export default Title;
+export default Title

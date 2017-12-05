@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Spinner from '../components/Spinner';
-import { colors, fonts, transitions } from '../styles';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import Spinner from '../components/Spinner'
+import { colors, fonts, transitions } from '../styles'
 
 const StyledButton = styled.button`
   border: none;
@@ -38,24 +38,24 @@ const StyledButton = styled.button`
     transform: none;
     box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
   }
-`;
+`
 
-const StyledChildren = styled.div`opacity: ${({ fetching }) => (fetching ? 0 : 1)};`;
+const StyledChildren = styled.div`opacity: ${({ fetching }) => (fetching ? 0 : 1)};`
 
 const Button = ({ fetching, children, ...props }) => (
-  <StyledButton disabled={fetching} {...props}>
-    {fetching && <Spinner white />}
-    <StyledChildren fetching={fetching}>{children}</StyledChildren>
-  </StyledButton>
-);
+    <StyledButton disabled={fetching} {...props}>
+        {fetching && <Spinner white />}
+        <StyledChildren fetching={fetching}>{children}</StyledChildren>
+    </StyledButton>
+)
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  fetching: PropTypes.bool
-};
+    children: PropTypes.node.isRequired,
+    fetching: PropTypes.bool
+}
 
 Button.defaultProps = {
-  fetching: false
-};
+    fetching: false
+}
 
-export default Button;
+export default Button
