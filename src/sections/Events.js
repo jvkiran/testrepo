@@ -6,7 +6,6 @@ import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
 import ContentRow from '../components/ContentRow';
 import Paragraph from '../components/Paragraph';
-import roadshow from '../data/roadshow.json';
 import events from '../data/events.json';
 import jellyfish from '../assets/graphics/jellyfish.svg';
 import { colors, fonts, responsive } from '../styles';
@@ -19,7 +18,6 @@ const StyledEvents = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 4rem;
 
     @media screen and (${responsive.sm.min}) {
         margin-left: -1rem;
@@ -148,19 +146,6 @@ const EventDate = (props) => {
     return eventDateFormatted
 };
 
-function renderRoadshow(roadshow) {
-    roadshow.sort(function (a, b) {
-        return a.date.localeCompare(b.date);
-    });
-
-    if (roadshow.length > 0) {
-        return roadshow.map((event, index) => (
-            <Event key={index} event={event} />
-        ));
-    }
-    else return [];
-}
-
 function renderEvents(events, minimal) {
     if (events.length > 0) {
         const eventsFilteredSorted = events.filter((event, index) => {
@@ -205,15 +190,7 @@ const Event = ({ event, minimal }) => {
     );
 };
 
-class EventsRoadshow extends Component {
-    render() {
-        const list = renderRoadshow(roadshow);
-
-        return <StyledEvents>{list}</StyledEvents>
-    }
-}
-
-class EventsAdditonal extends Component {
+class EventsList extends Component {
     render() {
         const minimal = true
         const list = renderEvents(events, minimal);
@@ -229,7 +206,6 @@ class EventsAdditonal extends Component {
 
         return (
             <StyledEvents>
-                <SubTitle white>More events</SubTitle>
                 <Slider {...settings}>
                     {list}
                 </Slider>
@@ -247,15 +223,14 @@ class Events extends Component {
         return (
             <Section id="events" background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} style={backgroundStyles}>
                 <ContentRow>
-                    <StyledTitle white>Ocean Protocol <span>World Tour</span></StyledTitle>
+                    <StyledTitle white>Events</StyledTitle>
                 </ContentRow>
 
                 <ContentRow narrow>
-                    <StyledParagraph>Meet members of our team at our own roadshow or drop by at any of the following events.</StyledParagraph>
+                    <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
                 </ContentRow>
 
-                <EventsRoadshow />
-                <EventsAdditonal />
+                <EventsList />
             </Section>
         )
     }
