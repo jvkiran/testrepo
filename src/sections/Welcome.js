@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Section from '../components/Section';
 import Title from '../components/Title';
 import ContentRow from '../components/ContentRow';
+import SubscribeForm from '../components/SubscribeForm';
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg';
 import dexLogo from '../assets/logos/dex.svg';
 import wavesStatic from '../assets/misc/waves.png';
@@ -140,6 +141,13 @@ const StyledPoweredBy = styled.div`
   }
 `;
 
+const StyledSubscribeForm = styled(SubscribeForm) `
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  animation: 1s ${animation} .8s backwards;
+`;
+
 class Welcome extends React.Component {
   render() {
     return (
@@ -166,6 +174,9 @@ class Welcome extends React.Component {
                 <img src={dexLogo} alt="Dex Logo" />
               </a>
             </StyledPoweredBy>
+
+            <StyledSubscribeForm inputPlaceholder="Join our newsletter" />
+
           </ContentRow>
         </StyledHeroContent>
         <StyledWaves>
