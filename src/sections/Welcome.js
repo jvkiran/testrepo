@@ -21,6 +21,7 @@ const StyledHero = styled(Section)`
     min-height: auto;
     position: static;
   }
+
   @media screen and (${responsive.sm.max}) {
     min-height: 100vh;
   }
@@ -33,7 +34,6 @@ const StyledHeroContent = styled.div`
 
 const StyledWaves = styled.div`
   z-index: 0;
-
   background: none;
 
   @media screen and (${responsive.sm.max}) {
@@ -44,7 +44,7 @@ const StyledWaves = styled.div`
   }
 
   &,
-  #background {
+  .waves__background {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -52,7 +52,7 @@ const StyledWaves = styled.div`
     right: 0;
   }
 
-  div#container {
+  .waves__container {
     position: absolute;
     top: 10vh;
     bottom: 0;
@@ -60,13 +60,15 @@ const StyledWaves = styled.div`
     right: 0;
     overflow: hidden;
   }
+
   @media screen and (${responsive.sm.max}) {
-    div#container {
+    .waves__container {
       display: none;
     }
   }
+
   @media screen and (max-height: 700px) {
-    div#container {
+    .waves__container {
       &:before {
         content: '';
         top: 50%;
@@ -85,7 +87,9 @@ const StyledWaves = styled.div`
   }
 `
 
-const animation = keyframes`${fadeInUp}`
+const animation = keyframes`
+  ${fadeInUp}
+`
 
 const StyledTagline = styled(Title)`
   font-size: ${fonts.size.h1};
@@ -107,7 +111,7 @@ const StyledTagline = styled(Title)`
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
     margin-top: 8rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: .5rem;
   }
 
   @media screen and (${responsive.smHeight.max}) {
@@ -126,8 +130,9 @@ const StyledPoweredBy = styled.div`
 
   & p {
     margin: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: .75rem;
   }
+
   & a {
     display: inline-block;
 
@@ -135,6 +140,7 @@ const StyledPoweredBy = styled.div`
       margin-left: -1rem;
     }
   }
+
   & img {
     height: 1.3rem;
     margin: 0 .5rem;
@@ -170,7 +176,7 @@ const Welcome = () => (
             </ContentRow>
         </StyledHeroContent>
         <StyledWaves>
-            <div id="background" />
+            <div className="waves__background" />
         </StyledWaves>
     </StyledHero>
 )

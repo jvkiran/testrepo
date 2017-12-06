@@ -8,10 +8,11 @@ import { colors, fonts, responsive, transitions, layout } from '../styles'
 
 const StyledMenu = styled.div`
   background: rgb(${colors.black});
-  transition: transform 0.3s ease-in-out;
+  transition: transform .3s ease-in-out;
   transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
   z-index: 5;
+
   @media screen and (${responsive.sm.min}) {
     position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
     width: calc(100% - (${layout.pageFrame} * 2));
@@ -21,6 +22,7 @@ const StyledMenu = styled.div`
     margin: ${({ fixed }) => (fixed ? '-100px 0' : '1.5rem 0 0 0')};
     border-top: ${({ fixed }) => (fixed ? `${layout.pageFrame} solid #fff` : '0')};
   }
+
   @media screen and (${responsive.sm.max}) {
     position: absolute;
     width: 100%;
@@ -42,6 +44,7 @@ const StyledLogo = styled.div`
   height: 60px;
   z-index: 10;
   margin-left: 20px;
+
   & img {
     height: 100%;
   }
@@ -49,32 +52,12 @@ const StyledLogo = styled.div`
 
 const StyledMenuItem = styled.a`
   transition: ${transitions.base};
-  color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, 0.7)`)};
+  color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .7)`)};
   font-family: ${fonts.family.button};
 `
 
-const animation = keyframes`${fadeIn}`
-
-const StyledNav = styled.nav`
-  text-transform: uppercase;
-  text-align: right;
-  color: rgb(${colors.white});
-  animation: 1s ${animation} 1.2s backwards;
-
-  & a {
-    display: inline-block;
-    margin-right: 2rem;
-
-    &:hover,
-    &:focus,
-    &.active {
-      color: rgba(${colors.white}, 1);
-    }
-  }
-
-  @media screen and (${responsive.sm.max}) {
-    display: none;
-  }
+const animation = keyframes`
+  ${fadeIn}
 `
 
 const StyledMobileNav = styled.div`
@@ -92,14 +75,38 @@ const StyledMobileNav = styled.div`
   padding: 2rem;
   font-size: 2rem;
   transition: ${transitions.long};
+
   & a {
-    margin: 0.5rem 0;
+    margin: .5rem 0;
   }
+
   @media screen and (${responsive.sm.max}) {
     display: flex;
     opacity: ${({ active }) => (active ? '1' : '0')};
     pointer-events: ${({ active }) => (active ? 'auto' : 'none')};
     visibility: ${({ active }) => (active ? 'visible' : 'hidden')};
+  }
+`
+
+const StyledNav = styled.nav`
+  text-transform: uppercase;
+  text-align: right;
+  color: rgb(${colors.white});
+  animation: 1s ${animation} 1.2s backwards;
+
+  & a {
+    display: inline-block;
+    margin-right: 2rem;
+
+    &:hover,
+    &:focus,
+    &.active {
+      color: rgba(${colors.white}, 1); /* stylelint-disable-line selector-no-qualifying-type */
+    }
+  }
+
+  @media screen and (${responsive.sm.max}) {
+    display: none;
   }
 `
 

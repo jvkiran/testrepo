@@ -23,7 +23,9 @@ const StyledWrapper = styled.div`
   align-items: center;
 `
 
-const StyledTitle = styled(Title)`margin-bottom: 2rem;`
+const StyledTitle = styled(Title)`
+  margin-bottom: 2rem;
+`
 
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: 0;
@@ -34,7 +36,8 @@ const StyledLine = styled.div`
   width: 100%;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  border-bottom: 1px solid rgba(${colors.white}, 0.25);
+  border-bottom: 1px solid rgba(${colors.white}, .25);
+
   @media screen and (${responsive.sm.max}) {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -96,7 +99,8 @@ const StyledIcon = styled.a`
   margin-right: .25rem;
   opacity: .5;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
@@ -117,6 +121,7 @@ const StyledCompanies = styled.div`
 const StyledCompanyLogo = styled.a`
   display: inline-block;
   margin: 0 1rem;
+
   img {
     height: 2rem;
 
@@ -129,6 +134,7 @@ const StyledCompanyLogo = styled.a`
 const StyledActions = styled.div`
   display: flex;
   justify-content: center;
+
   @media screen and (${responsive.sm.max}) {
     flex-direction: column;
   }
@@ -142,12 +148,14 @@ const StyledButton = styled(Button)`
   padding: 1rem 2rem;
   margin: 1rem;
   font-family: ${fonts.family.button};
-  box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, .5);
+
   &:active,
   &:hover,
   &:focus {
     background: rgb(${colors.white});
   }
+
   @media screen and (${responsive.sm.max}) {
     width: 100%;
     margin: 0;

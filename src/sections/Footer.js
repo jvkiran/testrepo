@@ -32,6 +32,7 @@ const StyledActions = styled.div`
 const StyledCopyright = styled(Paragraph)`
   opacity: .5;
   margin-top: 3rem;
+
   @media screen and (${responsive.sm.min}) {
     margin-bottom: -2rem;
   }
@@ -39,14 +40,17 @@ const StyledCopyright = styled(Paragraph)`
 
 const StyledSocialLinks = styled.div`
   display: flex;
+
   & a {
     margin-right: 1rem;
   }
+
   & img {
     border-radius: 2px;
     width: calc(2.5rem + 4px);
     height: calc(2.5rem + 4px);
   }
+
   @media screen and (${responsive.sm.max}) {
     width: 100%;
   }

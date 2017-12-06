@@ -4,8 +4,8 @@
     "stylelint-config-bigchaindb",
     "stylelint-config-styled-components"
   ],
-  "rules: {
-    "indentation": 2,
+  "rules": {
+    "indentation": 2
   },
   "syntax": "scss"
 }

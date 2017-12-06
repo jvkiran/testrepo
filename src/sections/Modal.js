@@ -9,7 +9,7 @@ import cross from '../assets/misc/cross.svg'
 import { colors, fonts, transitions, responsive } from '../styles'
 
 const StyledLightbox = styled.div`
-  background: rgba(${colors.black}, 0.7);
+  background: rgba(${colors.black}, .7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,6 +44,7 @@ const StyledCard = styled.div`
   border-radius: 2px;
   position: relative;
   background: rgb(${colors.white});
+
   @media screen and (${responsive.sm.max}) {
     padding: 4rem 1rem;
   }
@@ -56,8 +57,9 @@ const StyledClose = styled.img`
   height: 1.5rem;
   top: 1.5rem;
   right: 1.5rem;
+
   &:hover {
-    opacity: 0.7;
+    opacity: .7;
   }
 `
 
@@ -68,6 +70,7 @@ const StyledMessage = styled.p`
   font-size: ${fonts.size.small};
   width: calc(100% - 12rem);
   color: rgb(${colors.red});
+
   @media screen and (${responsive.sm.max}) {
     width: calc(100% - 2rem);
   }

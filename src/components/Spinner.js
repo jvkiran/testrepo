@@ -22,8 +22,7 @@ const StyledSpinnnerWrapper = styled.div`
 
 const StyledSpinner = styled.div`
   animation: ${rotate360} 1s infinite linear;
-  border: ${({ white }) =>
-        (white ? `0.25rem solid rgba(${colors.white}, 0.2)` : `0.25rem solid rgba(${colors.black}, 0.2)`)};
+  border: ${({ white }) => (white ? `0.25rem solid rgba(${colors.white}, 0.2)` : `0.25rem solid rgba(${colors.black}, 0.2)`)};
   border-radius: 50%;
   border-top-color: ${({ white }) => (white ? `rgb(${colors.white})` : `rgb(${colors.black})`)};
   height: 26px;

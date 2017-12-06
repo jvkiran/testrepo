@@ -1,6 +1,6 @@
 /* global THREE */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   if (!(Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 768)) {
     var SEPARATION = 100,
       AMOUNTX = 100,
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function init() {
       container = document.createElement('div');
-      container.id = 'container';
-      document.getElementById('background').appendChild(container);
+      container.className = 'waves__container';
+      document.getElementsByClassName('waves__background')[0].appendChild(container);
 
       camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
       camera.position.z = 10000;
@@ -107,4 +107,4 @@ document.addEventListener('DOMContentLoaded', function() {
       count += 0.1;
     }
   }
-});
+})

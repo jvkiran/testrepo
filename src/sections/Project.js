@@ -20,9 +20,11 @@ const slideRight = keyframes`
   0% {
     background-position-x: 0%;
   }
+
   33% {
     background-position-x: 223%;
   }
+
   100% {
     background-position-x: 223%;
   }
@@ -36,6 +38,7 @@ const StyledData = styled.div`
   width: 100%;
   margin-top: 0;
   margin-bottom: 4rem;
+
   @media screen and (${responsive.sm.max}) {
     flex-direction: column;
     margin-top: 2rem;
@@ -48,39 +51,47 @@ const StyledCard = styled.div`
   margin: 5%;
   border-radius: 2px;
   width: 30%;
-  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
-  border: 1px solid rgba(${colors.black}, 0.07);
+  box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .07);
+  border: 1px solid rgba(${colors.black}, .07);
   transition: ${transitions.base};
   color: rgb(${colors.grey});
   display: block;
   padding: 2rem;
   cursor: pointer;
+
   @media screen and (${responsive.md.max}) {
     padding: 1.5rem;
   }
+
   @media screen and (${responsive.sm.max}) {
     width: 100%;
+
     &:first-child {
       margin-bottom: 10rem;
     }
+
     &:nth-child(2) {
       margin-top: 10rem;
     }
   }
+
   &:hover,
   &:focus {
-    transform: translate3d(0, -0.05rem, 0);
-    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
+    transform: translate3d(0, -.05rem, 0);
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .07);
   }
+
   &:active {
-    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .07);
     transform: none;
     transition: none;
   }
+
   h4 {
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
+
   & button {
     border: none;
     padding: 0;
@@ -95,25 +106,29 @@ const StyledCard = styled.div`
     width: fit-content;
     position: relative;
     text-transform: uppercase;
+
     @media screen and (${responsive.md.max}) {
       margin-top: 1.5rem;
     }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: calc(100% + 10px);
+      background: url(${arrow}) no-repeat;
+    }
   }
-  & button::after {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 0;
-    left: calc(100% + 10px);
-    background: url(${arrow}) no-repeat;
-  }
+
   &:first-child {
     button {
       color: rgb(${colors.purple});
     }
   }
+
   &:last-child {
     button {
       color: rgb(${colors.softPink});
@@ -140,15 +155,19 @@ const StyledDataDots = styled.div`
   height: 100%;
   background: ${({ img }) => `url(${img}) repeat-x center`};
   background-position-x: 0%;
-  animation: ${slideRight} 3s ease 0s infinite;
+  animation: ${slideRight} 3s ease 0 infinite;
+
   @media screen and (${responsive.md.max}) {
     transform: rotate(180deg);
   }
+
   @media screen and (${responsive.sm.max}) {
     height: 100vw;
+
     &:first-child {
       transform: translate3d(50%, -60px, 0) rotate(-90deg);
     }
+
     &:nth-child(2) {
       transform: translate3d(-50%, 60px, 0) rotate(-90deg);
     }

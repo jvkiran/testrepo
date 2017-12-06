@@ -18,18 +18,19 @@ const StyledSubscribe = styled.div`
   & img {
     position: absolute;
     left: 1rem;
-    top: calc(50% - 0.5rem);
+    top: calc(50% - .5rem);
     height: 1rem;
-    opacity: 0.7;
+    opacity: .7;
+
     @media screen and (${responsive.md.max}) {
       top: 1rem;
     }
   }
+
   & input {
     outline: none;
-    margin: 0;
     font-size: ${fonts.size.base};
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
     margin: 1px;
     padding-left: 3rem;
     background: rgb(${colors.darkGrey});
@@ -48,21 +49,22 @@ const StyledSubscribe = styled.div`
     }
 
     &::placeholder {
-      color: rgba(${colors.white}, 0.65);
+      color: rgba(${colors.white}, .65);
     }
 
     &:focus {
       &::placeholder {
-        color: rgba(${colors.white}, 0.5);
+        color: rgba(${colors.white}, .5);
       }
     }
   }
+
   & button {
     color: rgb(${colors.white});
     font-size: ${fonts.size.base};
     text-transform: uppercase;
     margin: 0;
-    padding: 0.75rem 1rem;
+    padding: .75rem 1rem;
     background: transparent;
     width: 35%;
     transition: ${transitions.short};
@@ -81,7 +83,7 @@ const StyledSubscribe = styled.div`
     @media screen and (hover: hover) {
       &:hover,
       &:focus {
-        opacity: 0.85;
+        opacity: .85;
       }
     }
   }
@@ -91,6 +93,7 @@ const StyledSubscribeWrapper = styled.div`
   display: flex;
   border-radius: 2px;
   background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
+
   @media screen and (${responsive.md.max}) {
     flex-wrap: wrap;
   }
@@ -100,8 +103,8 @@ const StyledMessage = styled.p`
   width: 100%;
   position: absolute;
   text-align: center;
-  margin-top: 0.25rem;
-  font-size: 0.7rem;
+  margin-top: .25rem;
+  font-size: .7rem;
 `
 
 class SubscribeForm extends React.Component {

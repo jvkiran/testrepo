@@ -5,9 +5,13 @@ import { colors } from '../styles'
 
 const pulseFade = keyframes`
   0% { transform: scale(1); }
-  50% { opacity: 0.7; }
-  75% { opacity: 0.1; }
-  100% { opacity: 0; transform: scale(3); }
+  50% { opacity: .7; }
+  75% { opacity: .1; }
+
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
 `
 
 const StyledPulseContainer = styled.div`
@@ -37,13 +41,13 @@ const Circle = styled.div`
 const StyledPulseCircleZero = styled(Circle)`
   opacity: 0;
   border: 1px solid rgb(${colors.purple});
-  animation: ${pulseFade} 3s ease-in-out 0s 1;
+  animation: ${pulseFade} 3s ease-in-out 0 1;
 `
 
 const StyledPulseCircleOne = styled(Circle)`
   opacity: 0;
   border: 1px solid rgb(${colors.pink});
-  animation: ${pulseFade} 3s ease-in-out 0.75s infinite;
+  animation: ${pulseFade} 3s ease-in-out .75s infinite;
 `
 
 const StyledPulseCircleTwo = styled(Circle)`
@@ -64,7 +68,9 @@ const StyledPulseCircleFour = styled(Circle)`
   animation: ${pulseFade} 3s ease-in-out 3s infinite;
 `
 
-const StyledPulseShadow = styled(Circle)`box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);`
+const StyledPulseShadow = styled(Circle)`
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+`
 
 const StyledPulseLock = styled.img`
   position: absolute;

@@ -29,6 +29,7 @@ const StyledUnalyzed = styled.img`
   max-height: 300px;
   transform: scale(1.3);
   padding: 0 4rem;
+
   @media screen and (${responsive.sm.min}) {
     max-width: 300px;
     padding: 0;
@@ -36,9 +37,11 @@ const StyledUnalyzed = styled.img`
     width: 100%;
     height: 100%;
   }
+
   @media screen and (${responsive.sm.max}) {
     max-height: 80vw;
   }
+
   @media screen and (${responsive.smHeight.max}) {
     padding: 0 2rem;
   }
@@ -46,6 +49,7 @@ const StyledUnalyzed = styled.img`
 
 const StyledFirstGrid = styled(StyledGrid)`
   margin-top: 6rem;
+
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
@@ -53,6 +57,7 @@ const StyledFirstGrid = styled(StyledGrid)`
 
 const StyledLocked = styled.img`
   max-height: 224px;
+
   @media screen and (${responsive.sm.min}) {
     max-width: 300px;
     padding: 0;
@@ -60,6 +65,7 @@ const StyledLocked = styled.img`
     width: 100%;
     height: 100%;
   }
+
   @media screen and (${responsive.sm.max}) {
     padding: 0 2rem;
     max-height: 40vw;
@@ -68,6 +74,7 @@ const StyledLocked = styled.img`
 
 const StyledSecondGrid = styled(StyledGrid)`
   align-items: center;
+
   @media screen and (${responsive.sm.max}) {
     text-align: center;
   }
@@ -75,8 +82,9 @@ const StyledSecondGrid = styled(StyledGrid)`
 
 const StyledUnavailable = styled.img`
   max-height: 300px;
+
   @media screen and (${responsive.sm.max}) {
-    width: 200% !important;
+    width: 200% !important; /* stylelint-disable-line declaration-no-important */
     margin: 0;
     margin-left: -50%;
     margin-bottom: 1rem;
@@ -85,9 +93,11 @@ const StyledUnavailable = styled.img`
 
 const StyledThirdGrid = styled(StyledGrid)`
   margin-bottom: 4rem;
+
   & > div:nth-child(2) {
     padding-left: 0;
   }
+
   p {
     margin-bottom: 2rem;
   }

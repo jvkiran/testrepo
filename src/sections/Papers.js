@@ -12,11 +12,13 @@ import Cell from '../components/Cell'
 import SubscribeForm from '../components/SubscribeForm'
 import { colors, fonts, responsive } from '../styles'
 
-const StyledDownload = styled(Button)`margin-left: auto;`
+const StyledDownload = styled(Button)`
+  margin-left: auto;
+`
 
 const StyledWhitepaper = styled(Cell)`
   border-radius: 2px;
-  padding: 2rem 2.5rem !important;
+  padding: 2rem 2.5rem !important; /* stylelint-disable-line declaration-no-important */
   background: rgb(${colors.white});
   color: rgb(${colors.grey});
   hyphens: auto;
@@ -32,24 +34,29 @@ const StyledWhitepaper = styled(Cell)`
     top: -1.5rem;
     transform: rotate(45deg);
   }
-  @media screen and (${responsive.sm.min}) {
-      min-height: 540px;
 
-      &:first-child {
-        margin-right: 2rem;
-      }
-      &:last-child {
-        margin-left: 2rem;
-      }
+  @media screen and (${responsive.sm.min}) {
+    min-height: 540px;
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+
+    &:last-child {
+      margin-left: 2rem;
+    }
   }
+
   &:first-child {
     margin-bottom: 2rem;
     margin-left: 0;
   }
-  ${Title} {
+
+  ${Title} { /* stylelint-disable-line */
     margin-bottom: 2rem;
   }
-  ${StyledDownload} {
+
+  ${StyledDownload} { /* stylelint-disable-line */
     margin-right: auto;
 
     span {
@@ -58,15 +65,17 @@ const StyledWhitepaper = styled(Cell)`
       margin-left: .3rem;
     }
   }
+
   @media screen and (${responsive.sm.max}) {
     margin: 0;
-    padding: 2rem !important;
+    padding: 2rem !important; /* stylelint-disable-line declaration-no-important */
   }
 `
 
 const StyledTitle = styled(Title)`
   margin: 0;
   font-size: ${fonts.size.h3};
+
   @media screen and (${responsive.sm.max}) {
     font-size: ${fonts.size.h3};
   }
@@ -76,7 +85,9 @@ const StyledIntro = styled.div`
   margin-bottom: 1rem;
 `
 
-const StyledAbstract = styled.div`margin-bottom: 2rem;`
+const StyledAbstract = styled.div`
+  margin-bottom: 2rem;
+`
 
 const StyledFooter = styled.div`
   margin-bottom: 0;
@@ -101,7 +112,7 @@ const StyledRow = styled.div`
      display: block;
      text-transform: uppercase;
      font-family: ${fonts.family.button};
-     margin-top: -0.5rem;
+     margin-top: -.5rem;
    }
  `
 

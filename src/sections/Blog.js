@@ -14,9 +14,8 @@ const StyledCard = styled.div`
   height: 100%;
   background: rgb(${colors.white});
   border-radius: 2px;
-  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
+  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .07);
   color: rgb(${colors.grey});
-  border-radius: 2px;
 `
 
 const StyledHeader = styled.div`
@@ -31,9 +30,11 @@ const StyledHeader = styled.div`
 const StyledContent = styled.div`
   width: 100%;
   padding: 0 2rem;
+
   @media screen and (${responsive.sm.max}) {
     padding: 0 1rem;
   }
+
   @media screen and (${responsive.sm.min}) {
     min-height: 260px;
   }
@@ -57,9 +58,13 @@ const StyledAction = styled.div`
   }
 `
 
-const StyledTitle = styled.h1`font-size: ${fonts.size.h4};`
+const StyledTitle = styled.h1`
+  font-size: ${fonts.size.h4};
+`
 
-const StyledSubtitle = styled.p`font-size: ${fonts.size.base};`
+const StyledSubtitle = styled.p`
+  font-size: ${fonts.size.base};
+`
 
 class Blog extends Component {
   state = {

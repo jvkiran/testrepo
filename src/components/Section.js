@@ -13,6 +13,7 @@ const StyledSection = styled.section`
   margin: 0;
   padding-left: 1rem;
   padding-right: 1rem;
+
   @media screen and (${responsive.sm.min}) {
     margin-bottom: ${layout.pageFrame};
   }
@@ -24,8 +25,9 @@ const StyledColumn = styled.div`
   padding: 6rem calc(${layout.pageFrame} * 2);
   position: relative;
   display: flex;
-  color ${({ fontColor }) => `rgb(${fontColor})`};
+  color: ${({ fontColor }) => `rgb(${fontColor})`};
   flex-direction: column;
+
   @media screen and (${responsive.sm.max}) {
     padding: 2rem ${layout.pageFrame};
   }

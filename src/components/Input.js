@@ -16,7 +16,7 @@ const StyledInputWrapper = styled.div`
     left: 1rem;
     top: 1rem;
     height: 1rem;
-    opacity: 0.7;
+    opacity: .7;
   }
 `
 
@@ -26,7 +26,7 @@ const StyledInput = styled.input`
   margin: 0;
   font-size: ${fonts.size.base};
   font-family: ${fonts.family.base};
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
   padding-left: ${({ icon }) => (icon ? '3rem' : '1rem')};
   background: rgb(${colors.white});
   color: rgb(${colors.black});
@@ -36,12 +36,12 @@ const StyledInput = styled.input`
   transition: ${transitions.short};
 
   &::placeholder {
-    color: rgba(${colors.black}, 0.5);
+    color: rgba(${colors.black}, .5);
   }
 
   &:focus {
     &::placeholder {
-      color: rgba(${colors.black}, 0.3);
+      color: rgba(${colors.black}, .3);
     }
   }
 `
@@ -50,7 +50,7 @@ const StyledTextarea = StyledInput.withComponent('textarea')
 
 const StyledCharacterCount = styled.p`
   position: absolute;
-  opacity: 0.7;
+  opacity: .7;
   font-size: ${fonts.size.small};
   margin: 0;
   right: 0;
