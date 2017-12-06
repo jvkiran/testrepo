@@ -18,6 +18,7 @@ const StyledEvents = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 4rem;
 
     @media screen and (${responsive.sm.min}) {
         margin-left: -1rem;
@@ -25,6 +26,7 @@ const StyledEvents = styled.div`
     }
 
     @media screen and (min-width: 1600px) {
+        width: 100%;
         max-width: 120rem;
         margin-left: auto;
         margin-right: auto;
@@ -38,9 +40,9 @@ const StyledEvents = styled.div`
     }
 
     .slick-slider {
-        width: calc(100% + 4rem);
-        margin-left: -2rem;
-        margin-right: -2rem;
+        width: calc(100% + 3rem);
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
     }
 
     .slick-slide,
@@ -48,6 +50,8 @@ const StyledEvents = styled.div`
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .slick-dots {
@@ -63,6 +67,30 @@ const StyledEvents = styled.div`
             display: none;
         }
     }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &.slick-disabled {
+            visibility: hidden;
+        }
+
+        &:before {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
+    .slick-prev {
+        left: 1rem;
+    }
+
+    .slick-next {
+        right: 1rem;
+    }
 `;
 
 const StyledEvent = styled.a`
@@ -70,35 +98,27 @@ const StyledEvent = styled.a`
     text-align: center;
     display: block;
     width: 100%;
-    background: ${({ minimal }) => (minimal ? 'none' : `rgba(${colors.darkGrey}, .8)`)};
-    border: ${({ minimal }) => (minimal ? `0` : `.08rem solid rgb(${colors.pink})`)};
+    background: rgba(${colors.darkGrey}, .8);
+    border: .08rem solid rgb(${colors.pink});
     border-radius: .1rem;
     margin-bottom: 1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
 
-    ${({ minimal }) => (minimal ? null : `
+    &:hover,
+    &:focus {
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
+    }
+    &:active {
         box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-
-        &:hover,
-        &:focus {
-            box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
-        }
-        &:active {
-            box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-        }
-    `)};
-
-    ${({ minimal }) => (minimal ? 'flex: 0 1 50%' : null)};
+    }
 
     @media screen and (${responsive.sm.min}) {
         width: auto;
         flex: 0 1 calc(50% - 2rem);
         margin: 1rem;
     }
-    @media screen and (${responsive.md.min}) {
-        ${({ minimal }) => (minimal ? 'flex: 0 1 calc(25% - 2rem)' : 'flex: 0 1 calc(33% - 2rem)')};
-    }
     @media screen and (${responsive.lg.min}) {
-        ${({ minimal }) => (minimal ? null : 'flex: 0 1 calc(20% - 2rem)')};
+        flex: 0 1 calc(25% - 2rem);
     }
 `;
 
@@ -176,9 +196,9 @@ function renderEvents(events, minimal) {
     else return [];
 }
 
-const Event = ({ event, minimal }) => {
+const Event = ({ event }) => {
     return (
-        <StyledEvent minimal={minimal} href={event.link} key={event.city}>
+        <StyledEvent href={event.link} key={event.city}>
             <StyledEventCity>{event.city}</StyledEventCity>
             {!!event.eventName && (
                 <StyledEventName>{event.eventName}</StyledEventName>
@@ -197,7 +217,7 @@ class EventsList extends Component {
         const settings = {
             dots: true,
             infinite: false,
-            arrows: false,
+            arrows: true,
             speed: 200,
             slidesToShow: 1,
             slidesToScroll: 1,
