@@ -187,16 +187,17 @@ class SubscribeForm extends React.Component {
 }
 
 SubscribeForm.propTypes = {
+    action: PropTypes.string,
     btnLabel: PropTypes.string,
     error: PropTypes.string,
     inputPlaceholder: PropTypes.string,
     maxWidth: PropTypes.number,
     sending: PropTypes.string,
-    success: PropTypes.string,
-
+    success: PropTypes.string
 }
 
 SubscribeForm.defaultProps = {
+    action: '#',
     maxWidth: 34,
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Subscribe',

@@ -2,6 +2,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Slider from 'react-slick'
 import Section from '../components/Section'
@@ -9,7 +10,6 @@ import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Paragraph from '../components/Paragraph'
-import roadshow from '../data/roadshow.json'
 import events from '../data/events.json'
 import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, responsive } from '../styles'
@@ -97,7 +97,7 @@ const StyledEvents = styled.div`
     .slick-next {
         right: 1rem;
     }
-`;
+`
 
 const StyledEvent = styled.a`
     padding: 2rem 1rem;
@@ -172,7 +172,7 @@ const EventDate = (props) => {
     return eventDateFormatted
 }
 
-function renderEvents(events, minimal) {
+function renderEvents() {
     if (events.length > 0) {
         const eventsFilteredSorted = events.filter((event) => {
             const now = new Date()
@@ -189,42 +189,38 @@ function renderEvents(events, minimal) {
         const groupSize = 4
 
         return eventsFilteredSorted.map((event, index) => (
-            <Event event={event} key={index} minimal={minimal} />
+            <Event event={event} key={index.id} />
         )).reduce((r, element, index) => {
             // finally, put a <div> around every 4th event for the slider
-            index % groupSize === 0 && r.push([])
+            index % groupSize === 0 && r.push([]) // eslint-disable-line
             r[r.length - 1].push(element)
             return r
-        }, []).map((rowContent) => <div>{rowContent}</div>)
+        }, []).map((rowContent, index) => <div key={index.id}>{rowContent}</div>)
     } else return []
 }
 
-const Event = ({ event }) => {
-        <StyledEvent href={event.link} key={event.city}>
-            <StyledEventCity>{event.city}</StyledEventCity>
-            {!!event.eventName && (
-                <StyledEventName>{event.eventName}</StyledEventName>
-            )}
-            <StyledEventDate>
-                <EventDate date={event.date} />
-            </StyledEventDate>
+const Event = ({ event }) => (
+    <StyledEvent href={event.link} key={event.city}>
+        <StyledEventCity>{event.city}</StyledEventCity>
+        {!!event.eventName && (
+            <StyledEventName>{event.eventName}</StyledEventName>
+        )}
+        <StyledEventDate>
+            <EventDate date={event.date} />
+        </StyledEventDate>
     </StyledEvent>
-}
+)
 
-class EventsList extends Component {
-    render() {
-        const minimal = true
-    return <StyledEvents>{list}</StyledEvents>
-    }
+Event.propTypes = {
+    event: PropTypes.string.isRequired
 }
 
 const EventsList = () => {
-    const minimal = true
-    const list = renderEvents(events, minimal)
+    const list = renderEvents(events)
     const settings = {
         dots: true,
         infinite: false,
-        arrows: false,
+        arrows: true,
         speed: 200,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -233,7 +229,6 @@ const EventsList = () => {
 
     return (
         <StyledEvents>
-            <SubTitle white>More events</SubTitle>
             <Slider {...settings}>
                 {list}
             </Slider>
@@ -246,14 +241,14 @@ const backgroundStyles = {
 }
 
 const Events = () => (
-    <Section id="events" background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} style={backgroundStyles}>
-                <ContentRow>
-                    <StyledTitle white>Events</StyledTitle>
-                </ContentRow>
+    <Section background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} id="events" style={backgroundStyles}>
+        <ContentRow>
+            <StyledTitle white>Events</StyledTitle>
+        </ContentRow>
 
-                <ContentRow narrow>
-                    <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
-                </ContentRow>
+        <ContentRow narrow>
+            <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
+        </ContentRow>
 
         <EventsList />
     </Section>
