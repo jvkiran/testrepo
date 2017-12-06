@@ -157,16 +157,10 @@ const Welcome = () => (
             <ContentRow narrow>
                 <StyledPoweredBy>
                     <p>Powered by</p>
-                    <a
-                        href="https://www.bigchaindb.com/"
-                        rel="noopener" // eslint-disable-line
-                        target="_blank">
+                    <a href="https://www.bigchaindb.com/">
                         <img alt="BigchainDB Logo" src={bigchainDBLogo} />
                     </a>
-                    <a
-                        href="https://www.dex.sg/"
-                        rel="noopener" // eslint-disable-line
-                        target="_blank">
+                    <a href="https://www.dex.sg/">
                         <img alt="Dex Logo" src={dexLogo} />
                     </a>
                 </StyledPoweredBy>

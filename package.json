@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",
     "lint:js": "./node_modules/eslint/bin/eslint.js ./src",
-    "lint:css": "stylelint ./src/**/*.js",
+    "lint:css": "./node_modules/stylelint/bin/stylelint.js ./src/**/*.js",
     "test": "lint:js && lint:css && react-scripts test --env=jsdom",
     "deploy": "./deploy.sh",
     "eject": "react-scripts eject"

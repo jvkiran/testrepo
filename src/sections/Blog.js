@@ -89,10 +89,7 @@ class Blog extends Component {
                   <Grid>
                       {this.state.posts.map(post => (
                           <Cell key={post.id} width={1 / 3}>
-                              <a
-                                  href={post.postUrl}
-                  rel="noopener" // eslint-disable-line
-                                  target="_blank">
+                              <a href={post.postUrl}>
                                   <StyledCard>
                                       <StyledHeader imageUrl={post.imageUrl} />
                                       <StyledContent>
@@ -106,11 +103,8 @@ class Blog extends Component {
                   </Grid>
               )}
               <StyledAction fetching={this.state.fetching}>
-                  <a
-                      href="https://blog.oceanprotocol.com"
-            rel="noopener" // eslint-disable-line
-                      target="_blank">
-            Go to Blog
+                  <a href="https://blog.oceanprotocol.com">
+                    Go to Blog
                   </a>
               </StyledAction>
           </ContentRow>
