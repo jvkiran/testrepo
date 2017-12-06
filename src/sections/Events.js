@@ -6,7 +6,6 @@ import Title from '../components/Title';
 import SubTitle from '../components/SubTitle';
 import ContentRow from '../components/ContentRow';
 import Paragraph from '../components/Paragraph';
-import roadshow from '../data/roadshow.json';
 import events from '../data/events.json';
 import jellyfish from '../assets/graphics/jellyfish.svg';
 import { colors, fonts, responsive } from '../styles';
@@ -27,6 +26,7 @@ const StyledEvents = styled.div`
     }
 
     @media screen and (min-width: 1600px) {
+        width: 100%;
         max-width: 120rem;
         margin-left: auto;
         margin-right: auto;
@@ -40,9 +40,9 @@ const StyledEvents = styled.div`
     }
 
     .slick-slider {
-        width: calc(100% + 4rem);
-        margin-left: -2rem;
-        margin-right: -2rem;
+        width: calc(100% + 3rem);
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
     }
 
     .slick-slide,
@@ -50,6 +50,13 @@ const StyledEvents = styled.div`
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @media screen and (${responsive.sm.min}) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
     }
 
     .slick-dots {
@@ -65,6 +72,30 @@ const StyledEvents = styled.div`
             display: none;
         }
     }
+
+    .slick-prev,
+    .slick-next {
+        z-index: 2;
+        width: 1.5rem;
+        height: 1.5rem;
+
+        &.slick-disabled {
+            visibility: hidden;
+        }
+
+        &:before {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    }
+
+    .slick-prev {
+        left: 1rem;
+    }
+
+    .slick-next {
+        right: 1rem;
+    }
 `;
 
 const StyledEvent = styled.a`
@@ -72,35 +103,27 @@ const StyledEvent = styled.a`
     text-align: center;
     display: block;
     width: 100%;
-    background: ${({ minimal }) => (minimal ? 'none' : `rgba(${colors.darkGrey}, .8)`)};
-    border: ${({ minimal }) => (minimal ? `0` : `.08rem solid rgb(${colors.pink})`)};
+    background: rgba(${colors.darkGrey}, .8);
+    border: .08rem solid rgb(${colors.pink});
     border-radius: .1rem;
     margin-bottom: 1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
 
-    ${({ minimal }) => (minimal ? null : `
+    &:hover,
+    &:focus {
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
+    }
+    &:active {
         box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-
-        &:hover,
-        &:focus {
-            box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
-        }
-        &:active {
-            box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-        }
-    `)};
-
-    ${({ minimal }) => (minimal ? 'flex: 0 1 50%' : null)};
+    }
 
     @media screen and (${responsive.sm.min}) {
         width: auto;
         flex: 0 1 calc(50% - 2rem);
         margin: 1rem;
     }
-    @media screen and (${responsive.md.min}) {
-        ${({ minimal }) => (minimal ? 'flex: 0 1 calc(25% - 2rem)' : 'flex: 0 1 calc(33% - 2rem)')};
-    }
     @media screen and (${responsive.lg.min}) {
-        ${({ minimal }) => (minimal ? null : 'flex: 0 1 calc(20% - 2rem)')};
+        flex: 0 1 calc(25% - 2rem);
     }
 `;
 
@@ -148,19 +171,6 @@ const EventDate = (props) => {
     return eventDateFormatted
 };
 
-function renderRoadshow(roadshow) {
-    roadshow.sort(function (a, b) {
-        return a.date.localeCompare(b.date);
-    });
-
-    if (roadshow.length > 0) {
-        return roadshow.map((event, index) => (
-            <Event key={index} event={event} />
-        ));
-    }
-    else return [];
-}
-
 function renderEvents(events, minimal) {
     if (events.length > 0) {
         const eventsFilteredSorted = events.filter((event, index) => {
@@ -191,9 +201,9 @@ function renderEvents(events, minimal) {
     else return [];
 }
 
-const Event = ({ event, minimal }) => {
+const Event = ({ event }) => {
     return (
-        <StyledEvent minimal={minimal} href={event.link} key={event.city}>
+        <StyledEvent href={event.link} key={event.city}>
             <StyledEventCity>{event.city}</StyledEventCity>
             {!!event.eventName && (
                 <StyledEventName>{event.eventName}</StyledEventName>
@@ -205,22 +215,14 @@ const Event = ({ event, minimal }) => {
     );
 };
 
-class EventsRoadshow extends Component {
-    render() {
-        const list = renderRoadshow(roadshow);
-
-        return <StyledEvents>{list}</StyledEvents>
-    }
-}
-
-class EventsAdditonal extends Component {
+class EventsList extends Component {
     render() {
         const minimal = true
         const list = renderEvents(events, minimal);
         const settings = {
             dots: true,
             infinite: false,
-            arrows: false,
+            arrows: true,
             speed: 200,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -229,7 +231,6 @@ class EventsAdditonal extends Component {
 
         return (
             <StyledEvents>
-                <SubTitle white>More events</SubTitle>
                 <Slider {...settings}>
                     {list}
                 </Slider>
@@ -247,15 +248,14 @@ class Events extends Component {
         return (
             <Section id="events" background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} style={backgroundStyles}>
                 <ContentRow>
-                    <StyledTitle white>Ocean Protocol <span>World Tour</span></StyledTitle>
+                    <StyledTitle white>Events</StyledTitle>
                 </ContentRow>
 
                 <ContentRow narrow>
-                    <StyledParagraph>Meet members of our team at our own roadshow or drop by at any of the following events.</StyledParagraph>
+                    <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
                 </ContentRow>
 
-                <EventsRoadshow />
-                <EventsAdditonal />
+                <EventsList />
             </Section>
         )
     }
