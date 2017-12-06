@@ -50,8 +50,13 @@ const StyledEvents = styled.div`
         display: flex;
         flex-wrap: wrap;
         align-items: flex-end;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        @media screen and (${responsive.sm.min}) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
     }
 
     .slick-dots {
