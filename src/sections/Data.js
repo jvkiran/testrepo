@@ -108,7 +108,8 @@ const Data = () => (
         <ContentRow>
             <Cell maxWidth="small" width={1}>
                 <Title>In 2016, the world produced 16 ZB of data,
-                but only 1% was analyzed &mdash; this needs to change.</Title>
+                but only 1% was analyzed &mdash; this needs to change.
+                </Title>
             </Cell>
 
             <StyledFirstGrid left>

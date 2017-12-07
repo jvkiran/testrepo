@@ -33,7 +33,9 @@ const StyledColumn = styled.div`
     }
 `
 
-const Section = ({ children, viewport, fontColor, minHeight, background, ...props }) => (
+const Section = ({
+    children, viewport, fontColor, minHeight, background, ...props
+}) => (
     <StyledSection background={background} viewport={viewport} {...props}>
         <StyledColumn fontColor={fontColor} minHeight={minHeight}>
             {children}

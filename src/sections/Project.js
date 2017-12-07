@@ -174,7 +174,7 @@ const StyledDataDots = styled.div`
     }
 `
 
-const StyledSubTitle = styled(SubTitle) `
+const StyledSubTitle = styled(SubTitle)`
     font-size: ${fonts.size.h4};
     text-align: center;
 `

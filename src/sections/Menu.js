@@ -202,12 +202,10 @@ class Menu extends Component {
   toggleFixedMenu = () => {
       const pageFrame =
       Number(layout.pageFrame.replace('rem', '')) *
-      Number(
-          window
-              .getComputedStyle(document.getElementsByTagName('html')[0])
-              .getPropertyValue('font-size')
-              .replace('px', '')
-      )
+      Number(window
+          .getComputedStyle(document.getElementsByTagName('html')[0])
+          .getPropertyValue('font-size')
+          .replace('px', ''))
       if (window.innerWidth > 640) {
           if (window.scrollY >= window.innerHeight - pageFrame && !this.state.fixed) {
               this.setState({ fixed: true })

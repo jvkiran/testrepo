@@ -147,7 +147,7 @@ const StyledPoweredBy = styled.div`
     }
 `
 
-const StyledSubscribeForm = styled(SubscribeForm) `
+const StyledSubscribeForm = styled(SubscribeForm)`
     max-width: 25rem;
     margin-left: auto;
     margin-right: auto;

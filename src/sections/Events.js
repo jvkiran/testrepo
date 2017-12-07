@@ -152,13 +152,13 @@ const StyledEventDate = styled.h5`
     opacity: .8;
 `
 
-const StyledTitle = styled(Title) `
+const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
 
     span { opacity: .5; }
 `
 
-const StyledParagraph = styled(Paragraph) `
+const StyledParagraph = styled(Paragraph)`
     margin-bottom: 0;
     text-align: center;
 `
@@ -185,8 +185,7 @@ function renderEvents() {
             return eventDate > past
         }).sort((a, b) =>
             // then, sort the remaining ones by date
-            a.date.localeCompare(b.date)
-        )
+            a.date.localeCompare(b.date))
 
         const groupSize = 4
 

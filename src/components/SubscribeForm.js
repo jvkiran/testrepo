@@ -112,7 +112,7 @@ class SubscribeForm extends React.Component {
         super(props, ...args)
         this.state = {
             status: null,
-            message: null
+            message: null // eslint-disable-line react/no-unused-state
         }
     }
   onSubmit = e => {
@@ -123,13 +123,11 @@ class SubscribeForm extends React.Component {
           })
           return
       }
-      const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(
-          this.input.value
-      )}`
+      const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
       this.setState(
           {
               status: 'sending',
-              message: null
+              message: null // eslint-disable-line react/no-unused-state
           },
           () =>
               jsonp(
@@ -141,17 +139,17 @@ class SubscribeForm extends React.Component {
                       if (err) {
                           this.setState({
                               status: 'error',
-                              message: err
+                              message: err // eslint-disable-line react/no-unused-state
                           })
                       } else if (data.result !== 'success') {
                           this.setState({
                               status: 'error',
-                              message: data.msg
+                              message: data.msg // eslint-disable-line react/no-unused-state
                           })
                       } else {
                           this.setState({
                               status: 'success',
-                              message: data.msg
+                              message: data.msg // eslint-disable-line react/no-unused-state
                           })
                       }
                   }
@@ -159,7 +157,9 @@ class SubscribeForm extends React.Component {
       )
   };
   render() {
-      const { maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, ...props } = this.props
+      const {
+          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, ...props
+      } = this.props
       const { status } = this.state
       return (
           <StyledSubscribe maxWidth={maxWidth} {...props}>
