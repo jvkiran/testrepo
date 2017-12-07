@@ -8,8 +8,7 @@ import { globalStyles } from './styles'
 import Root from './Root'
 import registerServiceWorker from './registerServiceWorker'
 
-// eslint-disable-next-line
-injectGlobal`${globalStyles}`;
+injectGlobal`${globalStyles}` // eslint-disable-line
 
 render(<Root />, document.getElementById('root'))
 registerServiceWorker()

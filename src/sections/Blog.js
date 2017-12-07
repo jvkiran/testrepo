@@ -9,61 +9,61 @@ import Spinner from '../components/Spinner'
 import { colors, fonts, responsive } from '../styles'
 
 const StyledCard = styled.div`
-  margin: 1rem 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(${colors.white});
-  border-radius: 2px;
-  box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .07);
-  color: rgb(${colors.grey});
+    margin: 1rem 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(${colors.white});
+    border-radius: 2px;
+    box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .07);
+    color: rgb(${colors.grey});
 `
 
 const StyledHeader = styled.div`
-  width: 100%;
-  height: 200px;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 `
 
 const StyledContent = styled.div`
-  width: 100%;
-  padding: 0 2rem;
+    width: 100%;
+    padding: 0 2rem;
 
-  @media screen and (${responsive.sm.max}) {
-    padding: 0 1rem;
-  }
+    @media screen and (${responsive.sm.max}) {
+        padding: 0 1rem;
+    }
 
-  @media screen and (${responsive.sm.min}) {
-    min-height: 260px;
-  }
+    @media screen and (${responsive.sm.min}) {
+        min-height: 260px;
+    }
 `
 
 const StyledAction = styled.div`
-  text-align: center;
-  margin-top: 4rem;
-  opacity: ${({ fetching }) => (fetching ? 0 : 1)};
-  pointer-events: ${({ fetching }) => (fetching ? 'none' : 'auto')};
-  visibility: ${({ fetching }) => (fetching ? 'hidden' : 'visible')};
+    text-align: center;
+    margin-top: 4rem;
+    opacity: ${({ fetching }) => (fetching ? 0 : 1)};
+    pointer-events: ${({ fetching }) => (fetching ? 'none' : 'auto')};
+    visibility: ${({ fetching }) => (fetching ? 'hidden' : 'visible')};
 
-  @media screen and (${responsive.sm.max}) {
-    margin-top: 2rem;
-  }
+    @media screen and (${responsive.sm.max}) {
+        margin-top: 2rem;
+    }
 
-  a {
-    text-transform: uppercase;
-    font-family: ${fonts.family.button};
-    display: inline-block;
-  }
+    a {
+        text-transform: uppercase;
+        font-family: ${fonts.family.button};
+        display: inline-block;
+    }
 `
 
 const StyledTitle = styled.h1`
-  font-size: ${fonts.size.h4};
+    font-size: ${fonts.size.h4};
 `
 
 const StyledSubtitle = styled.p`
-  font-size: ${fonts.size.base};
+    font-size: ${fonts.size.base};
 `
 
 class Blog extends Component {

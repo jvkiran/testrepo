@@ -9,71 +9,71 @@ import cross from '../assets/misc/cross.svg'
 import { colors, fonts, transitions, responsive } from '../styles'
 
 const StyledLightbox = styled.div`
-  background: rgba(${colors.black}, .7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
-  transition: ${transitions.short};
-  opacity: ${({ show }) => (show ? '1' : '0')};
-  pointer-events: ${({ show }) => (show ? 'auto' : 'none')};
-  visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
+    background: rgba(${colors.black}, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    transition: ${transitions.short};
+    opacity: ${({ show }) => (show ? '1' : '0')};
+    pointer-events: ${({ show }) => (show ? 'auto' : 'none')};
+    visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
 `
 
 const StyledHitbox = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
 `
 
 const StyledCard = styled.div`
-  margin: 1rem;
-  padding: 6rem;
-  padding-top: 5rem;
-  width: 100%;
-  z-index: 2;
-  max-width: 640px;
-  border-radius: 2px;
-  position: relative;
-  background: rgb(${colors.white});
+    margin: 1rem;
+    padding: 6rem;
+    padding-top: 5rem;
+    width: 100%;
+    z-index: 2;
+    max-width: 640px;
+    border-radius: 2px;
+    position: relative;
+    background: rgb(${colors.white});
 
-  @media screen and (${responsive.sm.max}) {
-    padding: 4rem 1rem;
-  }
+    @media screen and (${responsive.sm.max}) {
+        padding: 4rem 1rem;
+    }
 `
 
 const StyledClose = styled.img`
-  position: absolute;
-  cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
-  top: 1.5rem;
-  right: 1.5rem;
+    position: absolute;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
 
-  &:hover {
-    opacity: .7;
-  }
+    &:hover {
+        opacity: .7;
+    }
 `
 
 const StyledMessage = styled.p`
-  position: absolute;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: ${fonts.size.small};
-  width: calc(100% - 12rem);
-  color: rgb(${colors.red});
+    position: absolute;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: ${fonts.size.small};
+    width: calc(100% - 12rem);
+    color: rgb(${colors.red});
 
-  @media screen and (${responsive.sm.max}) {
-    width: calc(100% - 2rem);
-  }
+    @media screen and (${responsive.sm.max}) {
+        width: calc(100% - 2rem);
+    }
 `
 
 const forms = {

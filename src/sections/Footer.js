@@ -15,53 +15,53 @@ import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import { colors, responsive } from '../styles'
 
 const StyledSubTitle = styled.h5`
-  color: #fff;
-  opacity: .5;
-  margin-bottom: 1rem;
+    color: #fff;
+    opacity: .5;
+    margin-bottom: 1rem;
 
-  &:first-of-type {
-    margin-top: 0;
-  }
+    &:first-of-type {
+        margin-top: 0;
+    }
 `
 
 const StyledActions = styled.div`
-  width: 100%;
-  display: flex;
+    width: 100%;
+    display: flex;
 `
 
 const StyledCopyright = styled(Paragraph)`
-  opacity: .5;
-  margin-top: 3rem;
+    opacity: .5;
+    margin-top: 3rem;
 
-  @media screen and (${responsive.sm.min}) {
-    margin-bottom: -2rem;
-  }
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: -2rem;
+    }
 `
 
 const StyledSocialLinks = styled.div`
-  display: flex;
+    display: flex;
 
-  & a {
-    margin-right: 1rem;
-  }
+    & a {
+        margin-right: 1rem;
+    }
 
-  & img {
-    border-radius: 2px;
-    width: calc(2.5rem + 4px);
-    height: calc(2.5rem + 4px);
-  }
+    & img {
+        border-radius: 2px;
+        width: calc(2.5rem + 4px);
+        height: calc(2.5rem + 4px);
+    }
 
-  @media screen and (${responsive.sm.max}) {
-    width: 100%;
-  }
+    @media screen and (${responsive.sm.max}) {
+        width: 100%;
+    }
 `
 
 const StyledContact = styled.div`
-  text-align: right;
+    text-align: right;
 
-  .address {
-    opacity: .5;
-  }
+    .address {
+        opacity: .5;
+    }
 `
 
 const Footer = () => (

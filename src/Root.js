@@ -13,11 +13,11 @@ import Footer from './sections/Footer'
 import Modal from './sections/Modal'
 
 const StyledRoot = styled.div`
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
 `
 
 const Meta = () => {

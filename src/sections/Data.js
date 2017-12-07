@@ -13,94 +13,94 @@ import dataUnavailable from '../assets/graphics/data-unavailable.svg'
 import { responsive } from '../styles'
 
 const StyledGrid = styled(Grid)`
-  margin-top: 6rem;
-  align-items: center;
+    margin-top: 6rem;
+    align-items: center;
 
-  @media screen and (${responsive.sm.min}) {
-    margin-top: 10rem;
-  }
+    @media screen and (${responsive.sm.min}) {
+        margin-top: 10rem;
+    }
 
-  p { margin-bottom: 0; }
+    p { margin-bottom: 0; }
 `
 
 const StyledUnalyzed = styled.img`
-  width: auto;
-  height: 100%;
-  max-height: 300px;
-  transform: scale(1.3);
-  padding: 0 4rem;
-
-  @media screen and (${responsive.sm.min}) {
-    max-width: 300px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
-  }
+    max-height: 300px;
+    transform: scale(1.3);
+    padding: 0 4rem;
 
-  @media screen and (${responsive.sm.max}) {
-    max-height: 80vw;
-  }
+    @media screen and (${responsive.sm.min}) {
+        max-width: 300px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-  @media screen and (${responsive.smHeight.max}) {
-    padding: 0 2rem;
-  }
+    @media screen and (${responsive.sm.max}) {
+        max-height: 80vw;
+    }
+
+    @media screen and (${responsive.smHeight.max}) {
+        padding: 0 2rem;
+    }
 `
 
 const StyledFirstGrid = styled(StyledGrid)`
-  margin-top: 6rem;
+    margin-top: 6rem;
 
-  @media screen and (${responsive.sm.max}) {
-    text-align: center;
-  }
+    @media screen and (${responsive.sm.max}) {
+        text-align: center;
+    }
 `
 
 const StyledLocked = styled.img`
-  max-height: 224px;
+    max-height: 224px;
 
-  @media screen and (${responsive.sm.min}) {
-    max-width: 300px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
+    @media screen and (${responsive.sm.min}) {
+        max-width: 300px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
 
-  @media screen and (${responsive.sm.max}) {
-    padding: 0 2rem;
-    max-height: 40vw;
-  }
+    @media screen and (${responsive.sm.max}) {
+        padding: 0 2rem;
+        max-height: 40vw;
+    }
 `
 
 const StyledSecondGrid = styled(StyledGrid)`
-  align-items: center;
+    align-items: center;
 
-  @media screen and (${responsive.sm.max}) {
-    text-align: center;
-  }
+    @media screen and (${responsive.sm.max}) {
+        text-align: center;
+    }
 `
 
 const StyledUnavailable = styled.img`
-  max-height: 300px;
+    max-height: 300px;
 
-  @media screen and (${responsive.sm.max}) {
-    width: 200% !important; /* stylelint-disable-line declaration-no-important */
-    margin: 0;
-    margin-left: -50%;
-    margin-bottom: 1rem;
-  }
+    @media screen and (${responsive.sm.max}) {
+        width: 200% !important; /* stylelint-disable-line declaration-no-important */
+        margin: 0;
+        margin-left: -50%;
+        margin-bottom: 1rem;
+    }
 `
 
 const StyledThirdGrid = styled(StyledGrid)`
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 
-  & > div:nth-child(2) {
-    padding-left: 0;
-  }
+    & > div:nth-child(2) {
+        padding-left: 0;
+    }
 
-  p {
-    margin-bottom: 2rem;
-  }
+    p {
+        margin-bottom: 2rem;
+    }
 `
 
 const Data = () => (

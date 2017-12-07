@@ -13,108 +13,108 @@ import SubscribeForm from '../components/SubscribeForm'
 import { colors, fonts, responsive } from '../styles'
 
 const StyledDownload = styled(Button)`
-  margin-left: auto;
+    margin-left: auto;
 `
 
 const StyledWhitepaper = styled(Cell)`
-  border-radius: 2px;
-  padding: 2rem 2.5rem !important; /* stylelint-disable-line declaration-no-important */
-  background: rgb(${colors.white});
-  color: rgb(${colors.grey});
-  hyphens: auto;
-  position: relative;
+    border-radius: 2px;
+    padding: 2rem 2.5rem !important; /* stylelint-disable-line declaration-no-important */
+    background: rgb(${colors.white});
+    color: rgb(${colors.grey});
+    hyphens: auto;
+    position: relative;
 
-  &:before {
-    content: '';
-    width: 3rem;
-    height: 3rem;
-    background: rgb(${colors.black});
-    position: absolute;
-    right: -1.5rem;
-    top: -1.5rem;
-    transform: rotate(45deg);
-  }
+    &:before {
+        content: '';
+        width: 3rem;
+        height: 3rem;
+        background: rgb(${colors.black});
+        position: absolute;
+        right: -1.5rem;
+        top: -1.5rem;
+        transform: rotate(45deg);
+    }
 
-  @media screen and (${responsive.sm.min}) {
-    min-height: 540px;
+    @media screen and (${responsive.sm.min}) {
+        min-height: 540px;
+
+        &:first-child {
+            margin-right: 2rem;
+        }
+
+        &:last-child {
+            margin-left: 2rem;
+        }
+    }
 
     &:first-child {
-      margin-right: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 0;
     }
 
-    &:last-child {
-      margin-left: 2rem;
+    ${Title} { /* stylelint-disable-line */
+        margin-bottom: 2rem;
     }
-  }
 
-  &:first-child {
-    margin-bottom: 2rem;
-    margin-left: 0;
-  }
+    ${StyledDownload} { /* stylelint-disable-line */
+        margin-right: auto;
 
-  ${Title} { /* stylelint-disable-line */
-    margin-bottom: 2rem;
-  }
-
-  ${StyledDownload} { /* stylelint-disable-line */
-    margin-right: auto;
-
-    span {
-      font-size: ${fonts.size.small};
-      opacity: .7;
-      margin-left: .3rem;
+        span {
+            font-size: ${fonts.size.small};
+            opacity: .7;
+            margin-left: .3rem;
+        }
     }
-  }
 
-  @media screen and (${responsive.sm.max}) {
-    margin: 0;
-    padding: 2rem !important; /* stylelint-disable-line declaration-no-important */
-  }
+    @media screen and (${responsive.sm.max}) {
+        margin: 0;
+        padding: 2rem !important; /* stylelint-disable-line declaration-no-important */
+    }
 `
 
 const StyledTitle = styled(Title)`
-  margin: 0;
-  font-size: ${fonts.size.h3};
-
-  @media screen and (${responsive.sm.max}) {
+    margin: 0;
     font-size: ${fonts.size.h3};
-  }
+
+    @media screen and (${responsive.sm.max}) {
+        font-size: ${fonts.size.h3};
+    }
 `
 
 const StyledIntro = styled.div`
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 `
 
 const StyledAbstract = styled.div`
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 `
 
 const StyledFooter = styled.div`
-  margin-bottom: 0;
-  margin-top: auto;
+    margin-bottom: 0;
+    margin-top: auto;
 `
 
 const StyledComments = styled.div`
-  color: rgb(${colors.lightGrey});
-  font-family: ${fonts.family.button};
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0;
+    color: rgb(${colors.lightGrey});
+    font-family: ${fonts.family.button};
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
 `
 
 const StyledRow = styled.div`
-   margin-top: 4rem;
-   margin-bottom: 0;
-   padding-left: 2rem;
-   padding-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 4rem;
 
-   a {
-     display: block;
-     text-transform: uppercase;
-     font-family: ${fonts.family.button};
-     margin-top: -.5rem;
-   }
- `
+    a {
+        display: block;
+        text-transform: uppercase;
+        font-family: ${fonts.family.button};
+        margin-top: -.5rem;
+    }
+`
 
 const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
