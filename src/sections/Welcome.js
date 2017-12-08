@@ -10,6 +10,8 @@ import dexLogo from '../assets/logos/dex.svg'
 import wavesStatic from '../assets/misc/waves.png'
 import { colors, responsive, fonts, layout } from '../styles'
 
+import '../waves'
+
 const StyledHero = styled(Section)`
     background: rgb(${colors.black});
     padding-top: 0;

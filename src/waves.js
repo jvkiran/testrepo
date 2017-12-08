@@ -1,5 +1,9 @@
 /* global THREE */
 
+import * as THREE from 'three/build/three' // eslint-disable-line import/no-namespace
+import './lib/Projector'
+import './lib/CanvasRenderer'
+
 document.addEventListener('DOMContentLoaded', () => {
     const SEPARATION = 100
     const AMOUNTX = 100
