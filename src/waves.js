@@ -1,5 +1,3 @@
-/* global THREE */
-
 import * as THREE from 'three/build/three' // eslint-disable-line import/no-namespace
 import './lib/Projector'
 import './lib/CanvasRenderer'
