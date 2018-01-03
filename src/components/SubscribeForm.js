@@ -111,8 +111,7 @@ class SubscribeForm extends React.Component {
     constructor(props, ...args) {
         super(props, ...args)
         this.state = {
-            status: null,
-            message: null // eslint-disable-line react/no-unused-state
+            status: null
         }
     }
   onSubmit = e => {
@@ -126,8 +125,7 @@ class SubscribeForm extends React.Component {
       const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
       this.setState(
           {
-              status: 'sending',
-              message: null // eslint-disable-line react/no-unused-state
+              status: 'sending'
           },
           () =>
               jsonp(
@@ -138,18 +136,19 @@ class SubscribeForm extends React.Component {
                   (err, data) => {
                       if (err) {
                           this.setState({
-                              status: 'error',
-                              message: err // eslint-disable-line react/no-unused-state
+                              status: 'error'
                           })
-                      } else if (data.result !== 'success') {
+                      } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
                           this.setState({
-                              status: 'error',
-                              message: data.msg // eslint-disable-line react/no-unused-state
+                              status: 'alreadySubscribed'
+                          })
+                      } else if (data.result === 'error') {
+                          this.setState({
+                              status: 'error'
                           })
                       } else {
                           this.setState({
-                              status: 'success',
-                              message: data.msg // eslint-disable-line react/no-unused-state
+                              status: 'success'
                           })
                       }
                   }
@@ -158,7 +157,7 @@ class SubscribeForm extends React.Component {
   };
   render() {
       const {
-          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, ...props
+          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, alreadySubscribed, ...props
       } = this.props
       const { status } = this.state
       return (
@@ -181,6 +180,7 @@ class SubscribeForm extends React.Component {
                       </Button>
                   </StyledSubscribeWrapper>
                   {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
+                  {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
                   {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
                   {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: error }} />}
               </form>
@@ -191,6 +191,7 @@ class SubscribeForm extends React.Component {
 
 SubscribeForm.propTypes = {
     action: PropTypes.string,
+    alreadySubscribed: PropTypes.string,
     btnLabel: PropTypes.string,
     error: PropTypes.string,
     inputPlaceholder: PropTypes.string,
@@ -201,10 +202,11 @@ SubscribeForm.propTypes = {
 
 SubscribeForm.defaultProps = {
     action: '#',
-    maxWidth: 34,
+    maxWidth: 27,
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Subscribe',
     sending: 'Sending...',
+    alreadySubscribed: 'You are already subscribed with this email. Welcome to the community!',
     success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
     error: 'Oops, something went wrong. Would you mind trying again?'
 }
