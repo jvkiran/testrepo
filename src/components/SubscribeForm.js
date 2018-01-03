@@ -141,7 +141,12 @@ class SubscribeForm extends React.Component {
                               status: 'error',
                               message: err // eslint-disable-line react/no-unused-state
                           })
-                      } else if (data.result !== 'success') {
+                      } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
+                          this.setState({
+                              status: 'alreadySubscribed',
+                              message: data.msg // eslint-disable-line react/no-unused-state
+                          })
+                      } else if (data.result === 'error') {
                           this.setState({
                               status: 'error',
                               message: data.msg // eslint-disable-line react/no-unused-state
@@ -158,7 +163,7 @@ class SubscribeForm extends React.Component {
   };
   render() {
       const {
-          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, ...props
+          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, alreadySubscribed, ...props
       } = this.props
       const { status } = this.state
       return (
@@ -181,6 +186,7 @@ class SubscribeForm extends React.Component {
                       </Button>
                   </StyledSubscribeWrapper>
                   {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
+                  {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
                   {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
                   {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: error }} />}
               </form>
@@ -191,6 +197,7 @@ class SubscribeForm extends React.Component {
 
 SubscribeForm.propTypes = {
     action: PropTypes.string,
+    alreadySubscribed: PropTypes.string,
     btnLabel: PropTypes.string,
     error: PropTypes.string,
     inputPlaceholder: PropTypes.string,
@@ -205,6 +212,7 @@ SubscribeForm.defaultProps = {
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Subscribe',
     sending: 'Sending...',
+    alreadySubscribed: 'You are already subscribed with this email. Welcome to the community!',
     success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
     error: 'Oops, something went wrong. Would you mind trying again?'
 }
