@@ -202,7 +202,7 @@ SubscribeForm.propTypes = {
 
 SubscribeForm.defaultProps = {
     action: '#',
-    maxWidth: 34,
+    maxWidth: 27,
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Subscribe',
     sending: 'Sending...',
