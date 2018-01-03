@@ -111,8 +111,7 @@ class SubscribeForm extends React.Component {
     constructor(props, ...args) {
         super(props, ...args)
         this.state = {
-            status: null,
-            message: null // eslint-disable-line react/no-unused-state
+            status: null
         }
     }
   onSubmit = e => {
@@ -126,8 +125,7 @@ class SubscribeForm extends React.Component {
       const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
       this.setState(
           {
-              status: 'sending',
-              message: null // eslint-disable-line react/no-unused-state
+              status: 'sending'
           },
           () =>
               jsonp(
@@ -138,23 +136,19 @@ class SubscribeForm extends React.Component {
                   (err, data) => {
                       if (err) {
                           this.setState({
-                              status: 'error',
-                              message: err // eslint-disable-line react/no-unused-state
+                              status: 'error'
                           })
                       } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
                           this.setState({
-                              status: 'alreadySubscribed',
-                              message: data.msg // eslint-disable-line react/no-unused-state
+                              status: 'alreadySubscribed'
                           })
                       } else if (data.result === 'error') {
                           this.setState({
-                              status: 'error',
-                              message: data.msg // eslint-disable-line react/no-unused-state
+                              status: 'error'
                           })
                       } else {
                           this.setState({
-                              status: 'success',
-                              message: data.msg // eslint-disable-line react/no-unused-state
+                              status: 'success'
                           })
                       }
                   }
