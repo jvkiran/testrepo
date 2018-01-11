@@ -8,7 +8,6 @@ import ContentRow from '../components/ContentRow'
 import Button from '../components/Button'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
 import dexLogo from '../assets/logos/dex.svg'
-import IPDBLogo from '../assets/logos/ipdb.svg'
 import buttonLinkedIn from '../assets/buttons/linkedin.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
@@ -114,13 +113,13 @@ const StyledCompanies = styled.div`
     margin: 4rem 0 0 0;
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 `
 
 const StyledCompanyLogo = styled.a`
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 2rem;
 
     img {
         height: 2rem;
@@ -229,12 +228,6 @@ const Team = ({ toggleModal }) => (
             rel="noopener" // eslint-disable-line
                         target="_blank">
                         <img alt="Dex" src={dexLogo} />
-                    </StyledCompanyLogo>
-                    <StyledCompanyLogo
-                        href="https://ipdb.io/?utm_source=oceanprotocol&utm_medium=logo"
-            rel="noopener" // eslint-disable-line
-                        target="_blank">
-                        <img alt="IPDB" src={IPDBLogo} />
                     </StyledCompanyLogo>
                 </StyledCompanies>
             </ContentRow>
