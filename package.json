@@ -2,6 +2,7 @@
   "name": "ocean-landing-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://oceanprotocol.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && react-snapshot",

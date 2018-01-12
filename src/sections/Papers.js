@@ -132,7 +132,7 @@ const Documentation = () => (
               Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
                         </StyledAbstract>
                         <StyledFooter>
-                            <a download="Ocean Protocol Technical Primer.pdf" href="./techprimer.pdf">
+                            <a download="Ocean Protocol Technical Primer.pdf" href={`${process.env.PUBLIC_URL}/techprimer.pdf`}>
                                 <StyledDownload onClick={() => gtag('event', 'techprimer', { 'event_category': 'download', 'event_label': 'button' })}>
                   Download <span>pdf</span>
                                 </StyledDownload>
@@ -154,7 +154,7 @@ const Documentation = () => (
               It is complementary to the technical primer for Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
-                            <a download="Ocean Protocol Reference Marketplace Framework.pdf" href="./marketplace-framework.pdf">
+                            <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
                                 <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
                   Download <span>pdf</span>
                                 </StyledDownload>
