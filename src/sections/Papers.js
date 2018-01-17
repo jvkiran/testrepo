@@ -148,10 +148,10 @@ const Documentation = () => (
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
-              This document presents a summary of the business model and the economic structure of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
+              This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-              It is complementary to the marketplace framework for Ocean Protocol.
+              It is complementary to the technical primer for Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
