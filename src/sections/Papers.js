@@ -148,7 +148,7 @@ const Documentation = () => (
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
-              This document presents a summary of the business model and economic structure of the Ocean Protocol.
+              This document presents a summary of the business model and the economic structure of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
                         </StyledIntro>
                         <StyledAbstract>
               It is complementary to the marketplace framework for Ocean Protocol.
