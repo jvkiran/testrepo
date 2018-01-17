@@ -122,7 +122,7 @@ const Documentation = () => (
             <Title white>Learn how Ocean Protocol works</Title>
 
             <Grid>
-                <Cell center width={1 / 2}>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper >
                         <StyledTitle>Technical Primer</StyledTitle>
                         <StyledIntro>
@@ -144,7 +144,29 @@ const Documentation = () => (
                         </StyledFooter>
                     </StyledWhitepaper>
                 </Cell>
-                <Cell center width={1 / 2}>
+                <Cell center width={1 / 3}>
+                    <StyledWhitepaper>
+                        <StyledTitle>Business Whitepaper</StyledTitle>
+                        <StyledIntro>
+              This document presents a summary of the business model and economic structure of the Ocean Protocol.
+                        </StyledIntro>
+                        <StyledAbstract>
+              It is complementary to the marketplace framework for Ocean Protocol.
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                  Download <span>pdf</span>
+                                </StyledDownload>
+                            </a>
+                            <StyledComments>
+                Have a comment or suggestions? <br />
+                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+                            </StyledComments>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </Cell>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
