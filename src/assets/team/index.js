@@ -6,10 +6,10 @@ import cristina from './cristina.jpg'
 import daniel from './daniel.jpg'
 import daryl from './daryl.jpg'
 import dimi from './dimi.jpg'
-import dinh from './dinh.jpg'
 import don from './don.jpg'
 import gautam from './gautam.jpg'
 import greg from './greg.jpg'
+import john from './john.jpg'
 import julian from './julian.jpg'
 import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
@@ -17,7 +17,6 @@ import kasia from './kasia.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
-import morgan from './morgan.jpg'
 import muawia from './muawia.jpg'
 import oana from './oana.jpg'
 import ricardo from './ricardo.jpg'
@@ -40,18 +39,17 @@ export default {
     daniel,
     daryl,
     dimi,
-    dinh,
     don,
     gautam,
     greg,
     jernej,
+    john,
     julian,
     kamal,
     kasia,
     manuel,
     masha,
     matthias,
-    morgan,
     muawia,
     oana,
     ricardo,
