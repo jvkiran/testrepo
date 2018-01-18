@@ -34,14 +34,9 @@
     "image": "don"
   },
   {
-    "name": "Dinh Xuan Nhat",
-    "linkedin": "nhatdx",
-    "image": "dinh"
-  },
-  {
-    "name": "Timothy Ley",
-    "linkedin": "timothyleymingde",
-    "image": "timothy"
+    "name": "John Enevoldsen",
+    "linkedin": "john-enevoldsen",
+    "image": "john"
   },
   {
     "name": "Cristina Pon",
@@ -53,6 +48,11 @@
     "twitter": "ODIonescu",
     "linkedin": "oanavoicu",
     "image": "oana"
+  },
+  {
+    "name": "Timothy Ley",
+    "linkedin": "timothyleymingde",
+    "image": "timothy"
   },
   {
     "name": "Matthias Kretschmann",
@@ -129,12 +129,6 @@
     "twitter": "vrde",
     "github": "vrde",
     "image": "alberto"
-  },
-  {
-    "name": "Morgan Sutherland",
-    "twitter": "msutherl",
-    "linkedin": "morgansutherland",
-    "image": "morgan"
   },
   {
     "name": "Troy McConaghy",
