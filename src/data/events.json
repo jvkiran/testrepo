@@ -34,5 +34,17 @@
         "eventName": "Riseof.ai",
         "date": "2018-05-17",
         "link": "http://riseof.ai"
+    },
+    {
+        "city": "Amsterdam",
+        "eventName": "Future of Pensions",
+        "date": "2018-02-08",
+        "link": "https://groeifabriek.com/conference/"
+    },
+    {
+        "city": "San Francisco",
+        "eventName": "Decentralized AI Summit",
+        "date": "2018-02-01",
+        "link": "https://decentralized-ai.com/"
     }
 ]
