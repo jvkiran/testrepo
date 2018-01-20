@@ -46,5 +46,11 @@
         "eventName": "Decentralized AI Summit",
         "date": "2018-02-01",
         "link": "https://decentralized-ai.com/"
+    },
+    {
+        "city": "Paris",
+        "eventName": "Ethereum Community Conference",
+        "date": "2018-03-08",
+        "link": "https://ethcc.io/"
     }
 ]
