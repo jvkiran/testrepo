@@ -52,5 +52,11 @@
         "eventName": "Ethereum Community Conference",
         "date": "2018-03-08",
         "link": "https://ethcc.io/"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "Blockchain & Data Privacy",
+        "date": "2018-01-25",
+        "link": "https://www.eventbrite.com/e/blockchain-data-privacy-tickets-41521706542"
     }
 ]
