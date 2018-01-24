@@ -2,6 +2,7 @@
   "extends": "ascribe-react",
   "rules": {
     "react/prefer-es6-class": "always",
-    "max-len": 0
+    "max-len": 0,
+    "linebreak-style": 0
   }
 }

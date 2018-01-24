@@ -86,7 +86,6 @@ const StyledUnavailable = styled.img`
     @media screen and (${responsive.sm.max}) {
         width: 200% !important; /* stylelint-disable-line declaration-no-important */
         margin: 0;
-        margin-left: -50%;
         margin-bottom: 1rem;
     }
 `

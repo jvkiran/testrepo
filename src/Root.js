@@ -9,6 +9,7 @@ import Papers from './sections/Papers'
 import Events from './sections/Events'
 import Team from './sections/Team'
 import Blog from './sections/Blog'
+import Faq from './sections/Faq'
 import Footer from './sections/Footer'
 import Modal from './sections/Modal'
 
@@ -46,6 +47,7 @@ class Root extends Component {
           <Data />
           <Team toggleModal={this.toggleModal} />
           <Blog />
+          <Faq />
           <Footer />
           <Modal modal={this.state.modal} toggle={this.toggleModal} />
       </StyledRoot>

@@ -134,6 +134,10 @@ const MenuItems = [
     {
         name: 'Blog',
         href: '#blog'
+    },
+    {
+        name: 'Faq',
+        href: '#faq'
     }
 ]
 

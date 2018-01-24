@@ -14,9 +14,11 @@ import events from '../data/events.json'
 import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, responsive } from '../styles'
 
+let elementWidth
+
 const StyledEvents = styled.div`
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/* stylelint-disable-line */
     justify-content: center;
     align-items: flex-end;
     margin-top: 4rem;
@@ -128,7 +130,8 @@ const StyledEvent = styled.a`
     }
 
     @media screen and (${responsive.lg.min}) {
-        flex: 0 1 calc(25% - 2rem);
+        flex: 0 1 calc(${props => props.flexWidth}% - 2rem);
+        margin: ${props => (props.flexWidth === 52 ? '1rem auto' : '1rem')};
     }
 `
 
@@ -187,7 +190,23 @@ function renderEvents() {
             // then, sort the remaining ones by date
             a.date.localeCompare(b.date))
 
-        const groupSize = 4
+        // Make the group size equal to the number of future events if there are less than 4
+        const groupSize = (eventsFilteredSorted.length < 4) ? eventsFilteredSorted.length : 4
+        elementWidth = groupSize
+        // Change the CSS width of each of the displaying events to a better suited one (desktop only)
+        switch (groupSize) {
+            case 1:
+                elementWidth = 52
+                break
+            case 2:
+                elementWidth = 50
+                break
+            case 3:
+                elementWidth = 33.33
+                break
+            default:
+                elementWidth = 25
+        }
 
         return eventsFilteredSorted.map((event, index) => (
             <Event event={event} key={index} /> // eslint-disable-line react/no-array-index-key
@@ -201,7 +220,7 @@ function renderEvents() {
 }
 
 const Event = ({ event }) => (
-    <StyledEvent href={event.link} key={event.city}>
+    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city}>
         <StyledEventCity>{event.city}</StyledEventCity>
         {!!event.eventName && (
             <StyledEventName>{event.eventName}</StyledEventName>

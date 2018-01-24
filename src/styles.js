@@ -74,6 +74,10 @@ export const responsive = {
         min: 'min-width: 799px',
         max: 'max-width: 800px'
     },
+    tablet: {
+        min: 'min-width: 991px',
+        max: 'max-width: 992px'
+    },
     lg: {
         min: 'min-width: 1023px',
         max: 'max-width: 1024px'

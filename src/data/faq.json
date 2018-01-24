@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Overview",
+    "questions": [
+      {
+        "question": "What is Ocean Protocol?",
+        "answer": "Ocean Protocol is a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.<br><br>Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner."
+      },
+      {
+        "question": "How does Ocean Protocol work?",
+        "answer": "Ocean Protocol is at once a business, technical, and governance framework that is interwoven together to allow data and services to be shared and sold, in a secure manner. Ocean Protocol stores metadata, links to data, provides a licensing framework and has toolsets for pricing. A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset."
+      },
+      {
+        "question": "What problem does Ocean Protocol solve?",
+        "answer": "Ocean Protocol unlocks data so it can be used productively.<br><br>The world’s data is growing exponentially yet is massively under-utilized. Most companies have tremendous amounts of data, but have difficulty exploiting it. Conversely, many others are starving for data, particularly in AI. Ocean Protocol allows data providers to share data, while maintaining control and having transparency."
+      },
+      {
+        "question": "Who are the main participants in Ocean Protocol?",
+        "answer": "The main actors in Ocean Protocol are data providers, data consumers, data marketplaces, service providers and network keepers. Data providers offer data. Data consumers obtain data for their own use. Data marketplaces connect data producers and data consumers. Service providers provision computation, storage and algorithms for sale. Network keepers support Ocean’s protocol by running nodes within the network. Please refer to our <a href=\"https://oceanprotocol.com/#papers\">Marketplace Framework<\/a> for more details."
+      }
+    ]
+  },
+  {
+    "title": "Organizational",
+    "questions": [
+      {
+        "question": "What is Ocean Protocol Foundation?",
+        "answer": "It is a Singapore based non-profit foundation. Its mandate is to ensure open access to the protocol and platform, provide long-term governance, community and ecosystem, and be a custodian of funds raised. DEX Pte Ltd and BigchainDB GmBH are the founders of Ocean Protocol Foundation Limited. "
+      },
+      {
+        "question": "What is the relationship between Ocean Protocol and DEX?",
+        "answer": "The DEX product is an apache licensed reference marketplace built on Ocean Protocol. All other data marketplaces can re-use the DEX code and logic to build marketplace products."
+      },
+      {
+        "question": "What is the relationship between Ocean Protocol and BigchainDB?",
+        "answer": "BigchainDB will develop the protocol and network for Ocean Protocol. For details about the technical architecture, refer to the <a href=\"https://oceanprotocol.com/#papers\">technical white paper<\/a>."
+      },
+      {
+        "question": "Does Ocean Protocol use BigchainDB?",
+        "answer": "BigchainDB is a persistent data store with blockchain characteristics of decentralized control, security and assets. Ocean Protocol does not use BigchainDB except as one of the many potential services to integrate into."
+      },
+      {
+        "question": "Where can I find a development roadmap?",
+        "answer": "Please refer to our <a href=\"https://oceanprotocol.com/#papers\">whitepaper<\/a> for development roadmap."
+      },
+      {
+        "question": "Is your project open sourced?",
+        "answer": "Yes. All implementations of the protocol are open source. We encourage others to build other implementations."
+      },
+      {
+        "question": "Where can I go for more information?",
+        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a>, our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> or <a href=\"https://oceanprotocol.com\">website<\/a>.<br><br> Chat with us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ\">Slack<\/a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg\">Telegram<\/a>.<br><br>Our <a href=\"https://oceanprotocol.com/#papers\">whitepaper<\/a> is a good resource for information on Ocean Protocol"
+      },
+      {
+        "question": "How can I get involved?",
+        "answer": "We value the support of our community and we are thankful for all the contributions we get at <a href=\"mailto:joinus@oceanprotocol.com\">joinus@oceanprotocol.com</a>."
+      },
+      {
+        "question": "Will there be an Ocean Protocol token launch?",
+        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a> or on our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> to stay in touch with the evolution of our project."
+      }
+    ]
+  },
+  {
+    "title": "Business",
+    "questions": [
+      {
+        "question": "Who are Ocean Protocol’s competitors?",
+        "answer": "Ocean is a protocol and network on which data marketplaces can be built to unlock data for sharing and selling. It enables data to be shared. Most other projects are decentralized / centralized marketplaces or data brokers. Ocean is complementary to both centralized & decentralized marketplaces, because it provides an additional channel for the marketplaces to publish their services. We consider projects like Enigma and Datum to be potential partners."
+      },
+      {
+        "question": "Who are Ocean’s partners and early customers?",
+        "answer": "Singapore is the lead government partner for Ocean Protocol. Singapore is supporting an 18-month development roadmap with DEX and Ocean Protocol Foundation. We are partnering up with numerous multinationals from insurance, pharma, automotive, and other industries to develop the technology and provide data.<br><br>Please refer to our token distribution document for more details."
+      },
+      {
+        "question": "What are the risks of Ocean Protocol?",
+        "answer": "There are many risks - technical, regulatory, business and financial risk. Please refer to our token distribution document for more details."
+      }
+    ]
+  }
+]

@@ -14,19 +14,6 @@ const Grid = styled.div`
 
     & > div:first-child {
         order: ${({ left }) => (left ? 1 : 0)};
-        padding-left: ${({ left }) => (left ? '20px' : 0)};
-    }
-
-    & > div:nth-child(2) {
-        padding-left: ${({ left }) => (left ? 0 : '20px')};
-    }
-
-    & > div:nth-child(3) {
-        padding-left: ${({ left }) => (left ? 0 : '20px')};
-    }
-
-    & > div:nth-child(4) {
-        padding-left: ${({ left }) => (left ? 0 : '20px')};
     }
 
     @media screen and (${responsive.sm.max}) {

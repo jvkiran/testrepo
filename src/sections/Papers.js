@@ -16,6 +16,20 @@ const StyledDownload = styled(Button)`
     margin-left: auto;
 `
 
+const FlexGrid = styled(Grid)`
+    align-items: stretch;
+
+    @media screen and (${responsive.tablet.max}) {
+        flex-direction: column;
+    }
+`
+
+const FlexCell = styled(Cell)`
+    @media screen and (${responsive.tablet.max}) {
+        width: 100%;
+    }
+`
+
 const StyledWhitepaper = styled(Cell)`
     border-radius: 2px;
     padding: 2rem 2.5rem !important; /* stylelint-disable-line declaration-no-important */
@@ -23,6 +37,7 @@ const StyledWhitepaper = styled(Cell)`
     color: rgb(${colors.grey});
     hyphens: auto;
     position: relative;
+    flex: 1 0 auto;
 
     &:before {
         content: '';
@@ -37,19 +52,16 @@ const StyledWhitepaper = styled(Cell)`
 
     @media screen and (${responsive.sm.min}) {
         min-height: 540px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 
-        &:first-child {
-            margin-right: 2rem;
-        }
-
-        &:last-child {
-            margin-left: 2rem;
-        }
+    @media screen and (${responsive.sm.min}) and (${responsive.tablet.max}) {
+        min-height: 0;
     }
 
     &:first-child {
         margin-bottom: 2rem;
-        margin-left: 0;
     }
 
     ${Title} { /* stylelint-disable-line */
@@ -121,8 +133,30 @@ const Documentation = () => (
         <ContentRow>
             <Title white>Learn how Ocean Protocol works</Title>
 
-            <Grid>
-                <Cell center width={1 / 3}>
+            <FlexGrid>
+                <FlexCell center width={1 / 3}>
+                    <StyledWhitepaper>
+                        <StyledTitle>Business Whitepaper</StyledTitle>
+                        <StyledIntro>
+                            This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
+                        </StyledIntro>
+                        <StyledAbstract>
+                            It is complementary to the technical primer for Ocean Protocol.
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                                    Download <span>pdf</span>
+                                </StyledDownload>
+                            </a>
+                            <StyledComments>
+                                Have a comment or suggestions? <br />
+                                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+                            </StyledComments>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </FlexCell>
+                <FlexCell center width={1 / 3}>
                     <StyledWhitepaper >
                         <StyledTitle>Technical Primer</StyledTitle>
                         <StyledIntro>
@@ -143,30 +177,8 @@ const Documentation = () => (
                             </StyledComments>
                         </StyledFooter>
                     </StyledWhitepaper>
-                </Cell>
-                <Cell center width={1 / 3}>
-                    <StyledWhitepaper>
-                        <StyledTitle>Business Whitepaper</StyledTitle>
-                        <StyledIntro>
-              This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
-                        </StyledIntro>
-                        <StyledAbstract>
-              It is complementary to the technical primer for Ocean Protocol.
-                        </StyledAbstract>
-                        <StyledFooter>
-                            <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
-                                <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
-                  Download <span>pdf</span>
-                                </StyledDownload>
-                            </a>
-                            <StyledComments>
-                Have a comment or suggestions? <br />
-                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-                            </StyledComments>
-                        </StyledFooter>
-                    </StyledWhitepaper>
-                </Cell>
-                <Cell center width={1 / 3}>
+                </FlexCell>
+                <FlexCell center width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
@@ -187,8 +199,8 @@ const Documentation = () => (
                             </StyledComments>
                         </StyledFooter>
                     </StyledWhitepaper>
-                </Cell>
-            </Grid>
+                </FlexCell>
+            </FlexGrid>
 
             <Grid>
                 <Cell width={1 / 2}>
