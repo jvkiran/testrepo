@@ -64,5 +64,11 @@
         "eventName": "9984 >> Meetup",
         "date": "2018-02-07",
         "link": "https://www.meetup.com/9984-Meetup/events/243513352/"
+    },
+    {
+        "city": "Singapore",
+        "eventName": "Global Conference on Integrated Care",
+        "date": "2018-02-02",
+        "link": "https://gcic2018.sg"
     }
 ]
