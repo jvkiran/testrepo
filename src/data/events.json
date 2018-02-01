@@ -70,5 +70,17 @@
         "eventName": "GCIC 2018",
         "date": "2018-02-02",
         "link": "https://gcic2018.sg"
+    },
+    {
+        "city": "Santa Fe",
+        "eventName": "Santa Fe Institute",
+        "date": "2018-01-31",
+        "link": "https://santafe.edu/events/tokens-and-complex-systems"
+    },
+    {
+        "city": "HCMC",
+        "eventName": "Vietnam Blockchain Week",
+        "date": "2018-03-07",
+        "link": "http://vietnamblockchainweek.com/"
     }
 ]
