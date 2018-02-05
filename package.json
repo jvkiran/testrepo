@@ -9,7 +9,7 @@
     "lint:js": "eslint ./{src,public}/**/*.js",
     "lint:css": "stylelint ./src/**/*.js",
     "lint": "npm run lint:js && npm run lint:css",
-    "test": "npm run lint && react-scripts test --env=jsdom",
+    "test": "npm run lint",
     "deploy": "./deploy.sh",
     "eject": "react-scripts eject",
     "precommit": "npm run lint"
