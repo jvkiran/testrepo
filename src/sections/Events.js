@@ -18,7 +18,7 @@ let elementWidth
 
 const StyledEvents = styled.div`
     display: flex;
-    flex-wrap: wrap;/* stylelint-disable-line */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-end;
     margin-top: 4rem;
@@ -52,7 +52,7 @@ const StyledEvents = styled.div`
     .slick-initialized .slick-slide {
         display: flex;
         flex-wrap: wrap;
-        align-items: flex-end;
+        align-items: stretch;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
 
