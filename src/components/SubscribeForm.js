@@ -111,7 +111,8 @@ class SubscribeForm extends React.Component {
     constructor(props, ...args) {
         super(props, ...args)
         this.state = {
-            status: null
+            status: null,
+            msg: null
         }
     }
   onSubmit = e => {
@@ -125,7 +126,8 @@ class SubscribeForm extends React.Component {
       const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
       this.setState(
           {
-              status: 'sending'
+              status: 'sending',
+              msg: null
           },
           () =>
               jsonp(
@@ -136,7 +138,8 @@ class SubscribeForm extends React.Component {
                   (err, data) => {
                       if (err) {
                           this.setState({
-                              status: 'error'
+                              status: 'error',
+                              msg: err
                           })
                       } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
                           this.setState({
@@ -144,7 +147,8 @@ class SubscribeForm extends React.Component {
                           })
                       } else if (data.result === 'error') {
                           this.setState({
-                              status: 'error'
+                              status: 'error',
+                              msg: data.msg
                           })
                       } else {
                           this.setState({
@@ -157,9 +161,9 @@ class SubscribeForm extends React.Component {
   };
   render() {
       const {
-          maxWidth, action, inputPlaceholder, btnLabel, sending, success, error, alreadySubscribed, ...props
+          maxWidth, action, inputPlaceholder, btnLabel, sending, success, alreadySubscribed, ...props
       } = this.props
-      const { status } = this.state
+      const { status, msg } = this.state
       return (
           <StyledSubscribe maxWidth={maxWidth} {...props}>
               <img alt="email" src={emailWhite} />
@@ -182,7 +186,7 @@ class SubscribeForm extends React.Component {
                   {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
                   {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
                   {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
-                  {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: error }} />}
+                  {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: msg }} />}
               </form>
           </StyledSubscribe>
       )
