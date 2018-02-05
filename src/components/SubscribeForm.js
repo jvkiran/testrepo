@@ -149,7 +149,7 @@ class SubscribeForm extends React.Component {
                       } else if (data.result === 'error') {
                           this.setState({
                               status: 'error',
-                              msg: data.m
+                              msg: data.msg
                           })
                       } else {
                           this.setState({
