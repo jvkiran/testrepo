@@ -143,8 +143,7 @@ class SubscribeForm extends React.Component {
                           })
                       } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
                           this.setState({
-                              status: 'alreadySubscribed',
-                              msg: data.msg
+                              status: 'alreadySubscribed'
                           })
                       } else if (data.result === 'error') {
                           this.setState({
