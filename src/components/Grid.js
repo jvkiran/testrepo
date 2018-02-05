@@ -6,7 +6,7 @@ const Grid = styled.div`
     display: flex;
     flex-wrap: ${({ wrap }) => (wrap ? 'wrap' : 'nowrap')};
     text-align: ${({ textCenter }) => (textCenter ? 'center' : 'left')};
-    align-items: ${({ center }) => (center ? 'center' : 'flex-start')};
+    align-items: ${({ center }) => (center ? 'center' : 'stretch')};
 
     & > div {
         justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};

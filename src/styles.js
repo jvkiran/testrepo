@@ -42,9 +42,9 @@ export const fonts = {
 }
 
 export const transitions = {
-    short: 'all 0.1s ease-in-out',
-    base: 'all 0.2s ease-in-out',
-    long: 'all 0.3s ease-in-out'
+    short: 'all .1s ease-in-out',
+    base: 'all .2s ease-in-out',
+    long: 'all .3s ease-in-out'
 }
 
 export const layout = {
@@ -162,7 +162,7 @@ export const globalStyles = `
   a:hover,
   a:focus {
     text-decoration: none;
-    transform: translate3d(0, -0.05rem, 0);
+    transform: translate3d(0, -.05rem, 0);
   }
 
   a:active {

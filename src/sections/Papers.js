@@ -16,23 +16,9 @@ const StyledDownload = styled(Button)`
     margin-left: auto;
 `
 
-const FlexGrid = styled(Grid)`
-    align-items: stretch;
-
-    @media screen and (${responsive.tablet.max}) {
-        flex-direction: column;
-    }
-`
-
-const FlexCell = styled(Cell)`
-    @media screen and (${responsive.tablet.max}) {
-        width: 100%;
-    }
-`
-
 const StyledWhitepaper = styled(Cell)`
-    border-radius: 2px;
-    padding: 2rem 2.5rem !important; /* stylelint-disable-line declaration-no-important */
+    border-radius: .2rem;
+    padding: 2rem;
     background: rgb(${colors.white});
     color: rgb(${colors.grey});
     hyphens: auto;
@@ -106,9 +92,8 @@ const StyledFooter = styled.div`
     margin-top: auto;
 `
 
-const StyledComments = styled.div`
+const StyledComments = styled.h4`
     color: rgb(${colors.lightGrey});
-    font-family: ${fonts.family.button};
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 0;
@@ -132,9 +117,11 @@ const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
         <ContentRow>
             <Title white>Learn how Ocean Protocol works</Title>
+        </ContentRow>
 
-            <FlexGrid>
-                <FlexCell center width={1 / 3}>
+        <ContentRow wide>
+            <Grid>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -149,67 +136,64 @@ const Documentation = () => (
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
-                            <StyledComments>
-                                Have a comment or suggestions? <br />
-                                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-                            </StyledComments>
                         </StyledFooter>
                     </StyledWhitepaper>
-                </FlexCell>
-                <FlexCell center width={1 / 3}>
+                </Cell>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper >
                         <StyledTitle>Technical Primer</StyledTitle>
                         <StyledIntro>
-              This technical primer presents a short introduction to Ocean Protocol.
+                This technical primer presents a short introduction to Ocean Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-              Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
+                Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Technical Primer.pdf" href={`${process.env.PUBLIC_URL}/techprimer.pdf`}>
                                 <StyledDownload onClick={() => gtag('event', 'techprimer', { 'event_category': 'download', 'event_label': 'button' })}>
-                  Download <span>pdf</span>
+                    Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
-                            <StyledComments>
-                Have a comment or suggestions? <br />
-                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-                            </StyledComments>
                         </StyledFooter>
                     </StyledWhitepaper>
-                </FlexCell>
-                <FlexCell center width={1 / 3}>
+                </Cell>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
-              This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+                This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-              It is complementary to the technical primer for Ocean Protocol.
+                It is complementary to the technical primer for Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
                                 <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
-                  Download <span>pdf</span>
+                    Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
-                            <StyledComments>
-                Have a comment or suggestions? <br />
-                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
-                            </StyledComments>
                         </StyledFooter>
                     </StyledWhitepaper>
-                </FlexCell>
-            </FlexGrid>
+                </Cell>
+            </Grid>
+        </ContentRow>
 
+        <ContentRow>
+            <StyledComments>
+                Have a comment or suggestions about any of our documents? <br />
+                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+            </StyledComments>
+        </ContentRow>
+
+        <ContentRow>
             <Grid>
                 <Cell width={1 / 2}>
                     <StyledRow>
                         <SubTitle white>Mission Statement</SubTitle>
                         <StyledAbstract>
-              Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+                Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
-              Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+                Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
                         </StyledAbstract>
                     </StyledRow>
                 </Cell>
@@ -217,7 +201,7 @@ const Documentation = () => (
                     <StyledRow>
                         <SubTitle white>Subscribe to updates</SubTitle>
                         <StyledAbstract>
-              Be the first to know when we release new papers.
+                Be the first to know when we release new papers.
                         </StyledAbstract>
                         <SubscribeForm />
                     </StyledRow>
