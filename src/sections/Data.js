@@ -19,8 +19,12 @@ const StyledSection = styled(Section)`
     }
 
     .Collapsible {
-        margin: 1rem auto 0 auto;
-        max-width: 87.5%;
+        margin-top: 1rem;
+
+        @media screen and (${responsive.sm.min}) {
+            margin: 1rem auto 0 auto;
+            max-width: 87.5%;
+        }
     }
 
     .Collapsible__contentInner {
@@ -34,6 +38,7 @@ const StyledSection = styled(Section)`
         display: block;
         font-family: ${fonts.family.title};
         font-weight: ${fonts.fontWeight.title};
+        line-height: ${fonts.lineHeight.title};
         font-size: ${fonts.size.large};
         padding-bottom: 1.5rem;
 
@@ -149,9 +154,11 @@ const StyledUnavailable = styled.img`
     max-height: 300px;
 
     @media screen and (${responsive.sm.max}) {
-        width: 200% !important; /* stylelint-disable-line declaration-no-important */
         margin: 0;
         margin-bottom: 1rem;
+        margin-left: -45vw;
+        margin-right: -45vw;
+        max-width: none;
     }
 `
 
