@@ -41,19 +41,15 @@ const StyledSection = styled(Section)`
         line-height: ${fonts.lineHeight.title};
         font-size: ${fonts.size.large};
         padding-bottom: 1.5rem;
+        text-align: center;
 
-        @media screen and (${responsive.sm.max}) {
-            text-align: center;
+        @media screen and (${responsive.sm.min}) {
+            text-align: left;
         }
 
         &:hover,
         &:focus {
-            text-decoration: none;
             color: rgb(${colors.pink});
-        }
-
-        &:active {
-            text-decoration: none;
         }
 
         &:before {
@@ -84,30 +80,6 @@ const StyledGrid = styled(Grid)`
     }
 `
 
-const StyledUnalyzed = styled.img`
-    width: auto;
-    height: 100%;
-    max-height: 300px;
-    transform: scale(1.3);
-    padding: 0 4rem;
-
-    @media screen and (${responsive.sm.min}) {
-        max-width: 300px;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        max-height: 80vw;
-    }
-
-    @media screen and (${responsive.smHeight.max}) {
-        padding: 0 2rem;
-    }
-`
-
 const StyledFirstGrid = styled(StyledGrid)`
     margin-top: 6rem;
 
@@ -117,27 +89,26 @@ const StyledFirstGrid = styled(StyledGrid)`
 `
 
 const StyledLocked = styled.img`
-    max-height: 224px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 220px;
+    height: auto;
 
     @media screen and (${responsive.sm.min}) {
-        max-width: 300px;
         padding: 0;
         margin: 0;
         width: 100%;
         height: 100%;
     }
-
-    @media screen and (${responsive.sm.max}) {
-        padding: 0 2rem;
-        max-height: 40vw;
-    }
 `
 
 const StyledSecondGrid = styled(StyledGrid)`
     align-items: center;
+    text-align: center;
 
-    @media screen and (${responsive.sm.max}) {
-        text-align: center;
+    @media screen and (${responsive.sm.min}) {
+        text-align: left;
     }
 
     + .Collapsible {
@@ -150,15 +121,18 @@ const StyledSecondGrid = styled(StyledGrid)`
     }
 `
 
-const StyledUnavailable = styled.img`
-    max-height: 300px;
+const StyledUnalyzed = styled.img`
+    width: auto;
+    height: 100%;
+    max-height: 220px;
+    margin: 0 auto;
+    padding: 0 4rem;
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.sm.min}) {
+        padding: 0;
         margin: 0;
-        margin-bottom: 1rem;
-        margin-left: -45vw;
-        margin-right: -45vw;
-        max-width: none;
+        max-height: 260px;
+        transform: scale(1.3);
     }
 `
 
@@ -170,15 +144,27 @@ const StyledThirdGrid = styled(StyledGrid)`
     }
 
     img {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
-    + .Collapsible {
-        margin-top: 0;
+    .Collapsible {
+        .Collapsible__contentInner {
+            text-align: left;
+        }
 
         .Collapsible__trigger {
             text-align: center;
         }
+    }
+`
+
+const StyledUnavailable = styled.img`
+    @media screen and (${responsive.sm.max}) {
+        margin: 0;
+        margin-bottom: 1rem;
+        margin-left: -20vw;
+        margin-right: -20vw;
+        max-width: none;
     }
 `
 
@@ -229,15 +215,15 @@ const Data = () => (
                     <SubTitle center>Only a handful of companies today have both Data and AI</SubTitle>
                     <Paragraph>AI start-ups and researchers are drowning in algorithms, but lack data. The opposite is true for many large corporations. Ocean Protocol is the bridge between these two sides. By bringing together data and AI, Ocean Protocol will unlock a trillion-dollar market for data sharing.</Paragraph>
                 </Cell>
+                <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: computer vision">
+                    <p>Our vision is to grow a massive set of data assets, all free for the planet to use. We’ve seen glimpses of the power of this.</p>
+                    <p><a href="http://www.image-net.org">ImageNet</a> is an open dataset with over 10 million tagged images—much larger than previous open image datasets. It has allowed AI researchers to train image classifiers with radically less error than before, for dozens of computer vision applications. Providing Data Commons on Ocean Protocol would benefit the whole world, providing accessible data to anyone.</p>
+                </Collapsible>
                 <Cell center width={1}>
                     <StyledUnavailable alt="data unavailable" src={dataUnavailable} />
                 </Cell>
             </StyledThirdGrid>
 
-            <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: image processing">
-                <p>Our vision is to grow a massive set of data assets, all free for the planet to use. We’ve seen glimpses of the power of this.</p>
-                <p><a href="http://www.image-net.org">ImageNet</a> is an open dataset with over 10 million tagged images–much larger than previous open image datasets. It has allowed AI researchers to train image classifiers with radically less error than before, for dozens of computer vision applications. Providing Data Commons on Ocean Protocol would benefit the whole world, providing accessible data to anyone.</p>
-            </Collapsible>
         </ContentRow>
     </StyledSection>
 )
