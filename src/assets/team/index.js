@@ -13,14 +13,12 @@ import john from './john.jpg'
 import julian from './julian.jpg'
 import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
-import kasia from './kasia.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
 import muawia from './muawia.jpg'
 import oana from './oana.jpg'
 import ricardo from './ricardo.jpg'
-import rodolphe from './rodolphe.jpg'
 import sarah from './sarah.jpg'
 import shahbaz from './shahbaz.jpg'
 import sylvain from './sylvain.jpg'
@@ -46,14 +44,12 @@ export default {
     john,
     julian,
     kamal,
-    kasia,
     manuel,
     masha,
     matthias,
     muawia,
     oana,
     ricardo,
-    rodolphe,
     sarah,
     shahbaz,
     sylvain,
