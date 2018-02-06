@@ -102,8 +102,11 @@ const StyledComments = styled.h4`
 const StyledRow = styled.div`
     margin-top: 4rem;
     margin-bottom: 0;
-    padding-left: 2rem;
-    padding-right: 4rem;
+
+    @media screen and (${responsive.sm.min}) {
+        padding-left: 2rem;
+        padding-right: 4rem;
+    }
 
     a {
         display: block;
