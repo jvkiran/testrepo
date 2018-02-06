@@ -14,6 +14,10 @@ import dataUnavailable from '../assets/graphics/data-unavailable.svg'
 import { responsive, colors, transitions, fonts } from '../styles'
 
 const StyledSection = styled(Section)`
+    p:last-child {
+        margin-bottom: 0;
+    }
+
     .Collapsible {
         margin: 1rem auto 0 auto;
         max-width: 87.5%;
@@ -21,17 +25,17 @@ const StyledSection = styled(Section)`
 
     .Collapsible__contentInner {
         border-top: 1px solid rgba(${colors.lightGrey}, .4);
-        padding-top: 1rem;
+        padding-top: 1.5rem;
     }
 
     .Collapsible__trigger {
         cursor: pointer;
-        transition: ${transitions.short};
+        transition: ${transitions.base};
         display: block;
         font-family: ${fonts.family.title};
         font-weight: ${fonts.fontWeight.title};
         font-size: ${fonts.size.large};
-        padding-bottom: 1rem;
+        padding-bottom: 1.5rem;
 
         @media screen and (${responsive.sm.max}) {
             text-align: center;
@@ -73,8 +77,6 @@ const StyledGrid = styled(Grid)`
     @media screen and (${responsive.sm.min}) {
         margin-top: 10rem;
     }
-
-    p { margin-bottom: 0; }
 `
 
 const StyledUnalyzed = styled.img`
@@ -195,8 +197,8 @@ const Data = () => (
             </StyledFirstGrid>
 
             <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: autonomous vehicles">
-                <p>A leading use case for proprietary data is autonomous (self-driving) vehicles.</p>
-                <p>The RAND Corporation calculated that 500 billion to 1 trillion miles driven are needed to get AI models accurate enough for production deployment of self-driving cars. Our collaborators at Toyota Research Institute (TRI) saw that it would be prohibitively expensive for each automaker to generate that much data on its own. The answer would be to pool data via marketplaces.</p>
+                <p>A leading use case for proprietary data is autonomous (self-driving) vehicles. The RAND Corporation calculated that 500 billion to 1 trillion miles driven are needed to get AI models accurate enough for production deployment of self-driving cars.</p>
+                <p>Our collaborators at <a href="http://www.tri.global">Toyota Research Institute (TRI)</a> saw that it would be prohibitively expensive for each automaker to generate that much data on its own. The answer would be to pool data via marketplaces.</p>
                 <p>Then the challenge is, a single data marketplace may itself be centralized: we arrive at another data silo. We need a substrate that enables many data marketplaces to emerge. This is the goal of Ocean Protocol. Critical new benefits emerge: higher liquidity for each marketplace, and organizations are directly incentivized to pool data rather than silo it.</p>
             </Collapsible>
 
@@ -211,7 +213,7 @@ const Data = () => (
             </StyledSecondGrid>
 
             <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: medical data">
-                <p>We are working with ConnectedLife, a diagnostics and wearables company, who are working with hospitals in Munich, Singapore, and Australia on a Parkinson’s research study. The goal is to build models based on patient data spanning these hospitals.</p>
+                <p>We are working with <a href="https://connectedlife.io">ConnectedLife</a>, a diagnostics and wearables company, who are working with hospitals in Munich, Singapore, and Australia on a Parkinson’s research study. The goal is to build models based on patient data spanning these hospitals.</p>
                 <p>A data marketplace makes it easier to connect the data suppliers; and it must be decentralized to avoid the siloing issue. The extra challenge here is data protection: German data protection laws prevent the Munich Hospital from transferring the raw data out of Germany.</p>
             </Collapsible>
 
@@ -227,7 +229,7 @@ const Data = () => (
 
             <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: image processing">
                 <p>Our vision is to grow a massive set of data assets, all free for the planet to use. We’ve seen glimpses of the power of this.</p>
-                <p>ImageNet is an open dataset with over 10 million tagged images–much larger than previous open image datasets. It has allowed AI researchers to train image classifiers with radically less error than before, for dozens of computer vision applications. Providing Data Commons on Ocean Protocol would benefit the whole world, providing accessible data to anyone.</p>
+                <p><a href="http://www.image-net.org">ImageNet</a> is an open dataset with over 10 million tagged images–much larger than previous open image datasets. It has allowed AI researchers to train image classifiers with radically less error than before, for dozens of computer vision applications. Providing Data Commons on Ocean Protocol would benefit the whole world, providing accessible data to anyone.</p>
             </Collapsible>
         </ContentRow>
     </StyledSection>
