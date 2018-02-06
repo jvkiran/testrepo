@@ -171,6 +171,10 @@ export const globalStyles = `
     transition: none;
   }
 
+  p {
+      margin: 0 0 1rem;
+  }
+
   strong {
     font-family: "Sharp Sans Bold";
   }
