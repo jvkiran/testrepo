@@ -212,14 +212,15 @@ const Project = ({ toggleModal, ...props }) => {
                         <button>Get data</button>
                     </StyledCard>
                 </StyledData>
+
                 <Grid>
                     <Cell width={2 / 5}>
                         <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
                         <Paragraph>
-              Ocean Protocol is a decentralized data exchange protocol that lets people share and monetize data while guaranteeing control, auditability, transparency and compliance to all actors involved.
+              Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
                         </Paragraph>
                         <Paragraph>
-              Data Providers and Custodians need to feel safe before they will comfortably share data and Ocean Protocol is the solution.
+              Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
                         </Paragraph>
                     </Cell>
                     <Cell width={1 / 5}>
@@ -228,10 +229,10 @@ const Project = ({ toggleModal, ...props }) => {
                     <Cell width={2 / 5}>
                         <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
                         <Paragraph>
-              Ocean Protocol provides the underlying technical foundation that data marketplaces need to connect data providers with data consumers in a trusted environment. It nurtures a data ecosystem and community.
+              The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.
                         </Paragraph>
                         <Paragraph>
-              Ocean Protocol also enables developers to create new and innovative services for leveraging data.
+              A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset.
                         </Paragraph>
                     </Cell>
                 </Grid>
