@@ -1,4 +1,7 @@
+import ahmed from './ahmed.jpg'
+import aitor from './aitor.jpg'
 import alberto from './alberto.jpg'
+import artur from './artur.jpg'
 import bruce from './bruce.jpg'
 import charlie from './charlie.jpg'
 import chirdeep from './chirdeep.jpg'
@@ -29,7 +32,10 @@ import troy from './troy.jpg'
 import wojciech from './wojciech.jpg'
 
 export default {
+    ahmed,
+    aitor,
     alberto,
+    artur,
     bruce,
     charlie,
     chirdeep,
