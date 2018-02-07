@@ -16,6 +16,7 @@ import john from './john.jpg'
 import julian from './julian.jpg'
 import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
+import katharina from './katharina.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
@@ -50,6 +51,7 @@ export default {
     john,
     julian,
     kamal,
+    katharina,
     manuel,
     masha,
     matthias,

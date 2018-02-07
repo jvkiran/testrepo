@@ -13,9 +13,9 @@
     "image": "trent"
   },
   {
-    "name": "Masha McConaghy",
-    "linkedin": "mashamc",
-    "image": "masha"
+    "name": "Don Gossen",
+    "linkedin": "donald-gossen-40ab96",
+    "image": "don"
   },
   {
     "name": "Chirdeep Chhabra",
@@ -29,14 +29,15 @@
     "image": "daryl"
   },
   {
-    "name": "Don Gossen",
-    "linkedin": "donald-gossen-40ab96",
-    "image": "don"
+    "name": "Dimitri De Jonghe",
+    "twitter": "DimitriDeJonghe",
+    "github": "diminator",
+    "linkedin": "dimitridejonghe",
+    "image": "dimi"
   },
   {
-    "name": "John Enevoldsen",
-    "linkedin": "john-enevoldsen",
-    "image": "john"
+    "name": "Mike Anderson",
+    "image": "mike"
   },
   {
     "name": "Cristina Pon",
@@ -50,15 +51,37 @@
     "image": "oana"
   },
   {
-    "name": "Timothy Ley",
-    "linkedin": "timothyleymingde",
-    "image": "timothy"
+    "name": "John Enevoldsen",
+    "linkedin": "john-enevoldsen",
+    "image": "john"
   },
   {
     "name": "Matthias Kretschmann",
     "twitter": "kremalicious",
     "github": "kremalicious",
     "image": "matthias"
+  },
+  {
+    "name": "Julian Leitloff",
+    "linkedin": "julian-leitloff",
+    "twitter": "julianleitloff",
+    "image": "julian"
+  },
+  {
+    "name": "Aitor Argomaniz",
+    "github": "aaitor",
+    "image": "aitor"
+  },
+  {
+    "name": "Timothy Ley",
+    "linkedin": "timothyleymingde",
+    "image": "timothy"
+  },
+  {
+    "name": "Ahmed Abdullah",
+    "github": "aabdulwahed",
+    "linkedin": "aabdulwahed",
+    "image": "ahmed"
   },
   {
     "name": "Gregory McMullen",
@@ -73,19 +96,9 @@
     "image": "wojciech"
   },
   {
-    "name": "Ahmed Abdullah",
-    "github": "aabdulwahed",
-    "linkedin": "aabdulwahed",
-    "image": "ahmed"
-  },
-  {
-    "name": "Aitor Argomaniz",
-    "github": "aaitor",
-    "image": "aitor"
-  },
-  {
-    "name": "Mike Anderson",
-    "image": "mike"
+    "name": "Masha McConaghy",
+    "linkedin": "mashamc",
+    "image": "masha"
   },
   {
     "name": "Kiran Karkera",
@@ -93,6 +106,7 @@
   },
   {
     "name": "Artur Gomer",
+    "linkedin": "arturgomer",
     "image": "artur"
   },
   {
@@ -103,17 +117,15 @@
     "image": "sylvain"
   },
   {
+    "name": "Katharina Grieß",
+    "github": "codegeschrei",
+    "image": "katharina"
+  },
+  {
     "name": "Tim Daubenschütz",
     "twitter": "TimDaub",
     "github": "TimDaub",
     "image": "tim"
-  },
-  {
-    "name": "Dimitri De Jonghe",
-    "twitter": "DimitriDeJonghe",
-    "github": "diminator",
-    "linkedin": "dimitridejonghe",
-    "image": "dimi"
   },
   {
     "name": "Gautam Dhameja",
@@ -171,11 +183,5 @@
     "linkedin": "manuel-rodr%C3%ADguez-18555a11a",
     "github": "manolodewiner",
     "image": "manuel"
-  },
-  {
-    "name": "Julian Leitloff",
-    "linkedin": "julian-leitloff",
-    "twitter": "julianleitloff",
-    "image": "julian"
   }
 ]
