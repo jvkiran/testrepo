@@ -82,5 +82,17 @@
         "eventName": "Vietnam Blockchain Week",
         "date": "2018-03-07",
         "link": "http://vietnamblockchainweek.com/"
+    },
+    {
+        "city": "Denver",
+        "eventName": "ETHDenver",
+        "date": "2018-02-16",
+        "link": "https://ethdenver.com"
+    },
+    {
+        "city": "Tokyo",
+        "eventName": "Blockchain EXE",
+        "date": "2018-03-13",
+        "link": "https://en.blockchainexe.com/"
     }
 ]
