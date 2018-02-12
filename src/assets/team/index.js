@@ -17,9 +17,11 @@ import julian from './julian.jpg'
 import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
 import katharina from './katharina.jpg'
+import kiran from './kiran.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
+import mike from './mike.jpg'
 import muawia from './muawia.jpg'
 import oana from './oana.jpg'
 import ricardo from './ricardo.jpg'
@@ -52,9 +54,11 @@ export default {
     julian,
     kamal,
     katharina,
+    kiran,
     manuel,
     masha,
     matthias,
+    mike,
     muawia,
     oana,
     ricardo,
