@@ -14,7 +14,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
 import teamImg from '../assets/team'
 import team from '../data/team.json'
-import { colors, fonts, responsive } from '../styles'
+import { colors, fonts, responsive, transitions } from '../styles'
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -56,34 +56,38 @@ const StyledTeam = styled.div`
     }
 
     .Collapsible__trigger {
-        margin-bottom: 3rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid rgba(${colors.white}, .25);
-        display: block;
-        text-align: center;
         cursor: pointer;
+        transition: ${transitions.base};
+        display: block;
+        font-family: ${fonts.family.title};
+        font-weight: ${fonts.fontWeight.title};
+        line-height: ${fonts.lineHeight.title};
+        font-size: ${fonts.size.large};
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: rgb(${colors.lightGrey});
 
-        &:before {
-            cursor: pointer;
-            position: absolute;
-            top: 30px;
-            left: calc(50% - 25px);
-            width: 50px;
-            height: 50px;
-            background: rgb(${colors.white});
-            border-radius: 5px;
-            color: rgb(${colors.black});
-            font-size: 40px;
-            line-height: 50px;
+        &:hover,
+        &:focus {
+            color: rgb(${colors.pink});
         }
 
-        &.is-closed:before {
+        &:before {
             content: '+';
+            font-size: 2.25rem;
+            line-height: 0;
+            vertical-align: middle;
+            margin-right: .5rem;
+            color: rgb(${colors.pink});
+            font-weight: ${fonts.fontWeight.base};
+            font-family: ${fonts.family.base};
+            position: relative;
         }
 
         &.is-open:before {
             content: '-';
-            line-height: 43px;
+            top: -.25rem;
         }
     }
 
