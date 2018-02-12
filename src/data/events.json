@@ -90,6 +90,12 @@
         "link": "https://ethdenver.com"
     },
     {
+        "city": "Singapore",
+        "eventName": "Ocean Meetup",
+        "date": "2018-03-05",
+        "link": "https://www.eventbrite.sg/e/ocean-protocol-a-decentralised-data-exchange-march-2018-meetup-tickets-42970029515?aff=ocean"
+    },
+    {
         "city": "Tokyo",
         "eventName": "Blockchain EXE",
         "date": "2018-03-13",
