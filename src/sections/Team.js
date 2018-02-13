@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Collapsible from 'react-collapsible'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
@@ -13,7 +14,7 @@ import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
 import teamImg from '../assets/team'
 import team from '../data/team.json'
-import { colors, fonts, responsive } from '../styles'
+import { colors, fonts, responsive, transitions } from '../styles'
 
 const StyledWrapper = styled.div`
     display: flex;
@@ -48,6 +49,54 @@ const StyledTeam = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     margin-left: -3rem;
+
+    .Collapsible {
+        margin-left: 3rem;
+        position: relative;
+    }
+
+    .Collapsible__trigger {
+        cursor: pointer;
+        transition: ${transitions.base};
+        display: block;
+        font-family: ${fonts.family.title};
+        font-weight: ${fonts.fontWeight.title};
+        line-height: ${fonts.lineHeight.title};
+        font-size: ${fonts.size.large};
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: rgb(${colors.lightGrey});
+
+        &:hover,
+        &:focus {
+            color: rgb(${colors.pink});
+        }
+
+        &:before {
+            content: '+';
+            font-size: 2.25rem;
+            line-height: 0;
+            vertical-align: middle;
+            margin-right: .5rem;
+            color: rgb(${colors.pink});
+            font-weight: ${fonts.fontWeight.base};
+            font-family: ${fonts.family.base};
+            position: relative;
+        }
+
+        &.is-open:before {
+            content: '-';
+            top: -.25rem;
+        }
+    }
+
+    .Collapsible__contentInner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: -3rem;
+    }
 `
 
 const StyledMember = styled.div`
@@ -162,6 +211,43 @@ const StyledButton = styled(Button)`
     }
 `
 
+const TeamMember = ({ member }) => (
+    <StyledMember>
+        <img alt={member.name} src={teamImg[member.image]} />
+        <StyledName>{member.name}</StyledName>
+        <StyledLinks>
+            {!!member.linkedin && (
+                <StyledIcon
+                    href={`https://www.linkedin.com/in/${member.linkedin}`}
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    <img alt="linkedin" src={buttonLinkedIn} />
+                </StyledIcon>
+            )}
+            {!!member.github && (
+                <StyledIcon
+                    href={`https://www.github.com/${member.github}`}
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    <img alt="github" src={buttonGithub} />
+                </StyledIcon>
+            )}
+            {!!member.twitter && (
+                <StyledIcon
+                    href={`https://www.twitter.com/${member.twitter}`}
+                    rel="noopener noreferrer"
+                    target="_blank">
+                    <img alt="twitter" src={buttonTwitter} />
+                </StyledIcon>
+            )}
+        </StyledLinks>
+    </StyledMember>
+)
+
+TeamMember.propTypes = {
+    member: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
+}
+
 const Team = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="team">
         <StyledWrapper>
@@ -171,47 +257,23 @@ const Team = ({ toggleModal }) => (
 
             <ContentRow narrow>
                 <StyledParagraph>
-          The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data
-          exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started
-          over 20 companies.
+          The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
                 </StyledParagraph>
             </ContentRow>
 
             <ContentRow>
                 <StyledLine />
                 <StyledTeam>
-                    {team.map((member) => (
-                        <StyledMember key={member.name}>
-                            <img alt={member.name} src={teamImg[member.image]} />
-                            <StyledName>{member.name}</StyledName>
-                            <StyledLinks>
-                                {!!member.linkedin && (
-                                    <StyledIcon
-                                        href={`https://www.linkedin.com/in/${member.linkedin}`}
-                    rel="noopener" //eslint-disable-line
-                                        target="_blank">
-                                        <img alt="linkedin" src={buttonLinkedIn} />
-                                    </StyledIcon>
-                                )}
-                                {!!member.github && (
-                                    <StyledIcon
-                                        href={`https://www.github.com/${member.github}`}
-                    rel="noopener" //eslint-disable-line
-                                        target="_blank">
-                                        <img alt="github" src={buttonGithub} />
-                                    </StyledIcon>
-                                )}
-                                {!!member.twitter && (
-                                    <StyledIcon
-                                        href={`https://www.twitter.com/${member.twitter}`}
-                    rel="noopener" //eslint-disable-line
-                                        target="_blank">
-                                        <img alt="twitter" src={buttonTwitter} />
-                                    </StyledIcon>
-                                )}
-                            </StyledLinks>
-                        </StyledMember>
+                    {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
+                        <TeamMember key={member.name} member={member} />
                     ))}
+                    {team.filter((item) => teamImg[item.image]).length >= 15 &&
+                        <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
+                            {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
+                                <TeamMember key={member.name} member={member} />
+                            ))}
+                        </Collapsible>
+                    }
                 </StyledTeam>
             </ContentRow>
 

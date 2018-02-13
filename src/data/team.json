@@ -13,9 +13,9 @@
     "image": "trent"
   },
   {
-    "name": "Masha McConaghy",
-    "linkedin": "mashamc",
-    "image": "masha"
+    "name": "Don Gossen",
+    "linkedin": "donald-gossen-40ab96",
+    "image": "don"
   },
   {
     "name": "Chirdeep Chhabra",
@@ -29,14 +29,16 @@
     "image": "daryl"
   },
   {
-    "name": "Don Gossen",
-    "linkedin": "donald-gossen-40ab96",
-    "image": "don"
+    "name": "Dimitri De Jonghe",
+    "twitter": "DimitriDeJonghe",
+    "github": "diminator",
+    "linkedin": "dimitridejonghe",
+    "image": "dimi"
   },
   {
-    "name": "John Enevoldsen",
-    "linkedin": "john-enevoldsen",
-    "image": "john"
+    "name": "Mike Anderson",
+    "github": "mikera",
+    "image": "mike"
   },
   {
     "name": "Cristina Pon",
@@ -50,15 +52,37 @@
     "image": "oana"
   },
   {
-    "name": "Timothy Ley",
-    "linkedin": "timothyleymingde",
-    "image": "timothy"
+    "name": "John Enevoldsen",
+    "linkedin": "john-enevoldsen",
+    "image": "john"
   },
   {
     "name": "Matthias Kretschmann",
     "twitter": "kremalicious",
     "github": "kremalicious",
     "image": "matthias"
+  },
+  {
+    "name": "Julian Leitloff",
+    "linkedin": "julian-leitloff",
+    "twitter": "julianleitloff",
+    "image": "julian"
+  },
+  {
+    "name": "Aitor Argomaniz",
+    "github": "aaitor",
+    "image": "aitor"
+  },
+  {
+    "name": "Timothy Ley",
+    "linkedin": "timothyleymingde",
+    "image": "timothy"
+  },
+  {
+    "name": "Ahmed Abdullah",
+    "github": "aabdulwahed",
+    "linkedin": "aabdulwahed",
+    "image": "ahmed"
   },
   {
     "name": "Gregory McMullen",
@@ -73,6 +97,23 @@
     "image": "wojciech"
   },
   {
+    "name": "Masha McConaghy",
+    "linkedin": "mashamc",
+    "image": "masha"
+  },
+  {
+    "name": "Kiran Karkera",
+    "linkedin": "karkerakiran",
+    "twitter": "kaal_daari",
+    "github": "shark8me",
+    "image": "kiran"
+  },
+  {
+    "name": "Artur Gomer",
+    "linkedin": "arturgomer",
+    "image": "artur"
+  },
+  {
     "name": "Sylvain Bellemare",
     "twitter": "sbellem",
     "github": "sbellem",
@@ -80,17 +121,15 @@
     "image": "sylvain"
   },
   {
+    "name": "Katharina Grieß",
+    "github": "codegeschrei",
+    "image": "katharina"
+  },
+  {
     "name": "Tim Daubenschütz",
     "twitter": "TimDaub",
     "github": "TimDaub",
     "image": "tim"
-  },
-  {
-    "name": "Dimitri De Jonghe",
-    "twitter": "DimitriDeJonghe",
-    "github": "diminator",
-    "linkedin": "dimitridejonghe",
-    "image": "dimi"
   },
   {
     "name": "Gautam Dhameja",
@@ -118,13 +157,6 @@
     "image": "shahbaz"
   },
   {
-    "name": "Rodolphe Marques",
-    "twitter": "rodmar_",
-    "github": "r-marques",
-    "linkedin": "rodolphemarques",
-    "image": "rodolphe"
-  },
-  {
     "name": "Alberto Granzotto",
     "twitter": "vrde",
     "github": "vrde",
@@ -146,11 +178,6 @@
     "image": "daniel"
   },
   {
-    "name": "Katarzyna Kazimierczak",
-    "linkedin": "katarzyna-kazimierczak-ll-m-65950879",
-    "image": "kasia"
-  },
-  {
     "name": "Ricardo Garcia",
     "linkedin": "ricardo-garcia-b226a6a9",
     "image": "ricardo"
@@ -160,11 +187,5 @@
     "linkedin": "manuel-rodr%C3%ADguez-18555a11a",
     "github": "manolodewiner",
     "image": "manuel"
-  },
-  {
-    "name": "Julian Leitloff",
-    "linkedin": "julian-leitloff",
-    "twitter": "julianleitloff",
-    "image": "julian"
   }
 ]

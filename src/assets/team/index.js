@@ -1,4 +1,7 @@
+import ahmed from './ahmed.jpg'
+import aitor from './aitor.jpg'
 import alberto from './alberto.jpg'
+import artur from './artur.jpg'
 import bruce from './bruce.jpg'
 import charlie from './charlie.jpg'
 import chirdeep from './chirdeep.jpg'
@@ -13,14 +16,15 @@ import john from './john.jpg'
 import julian from './julian.jpg'
 import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
-import kasia from './kasia.jpg'
+import katharina from './katharina.jpg'
+import kiran from './kiran.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
+import mike from './mike.jpg'
 import muawia from './muawia.jpg'
 import oana from './oana.jpg'
 import ricardo from './ricardo.jpg'
-import rodolphe from './rodolphe.jpg'
 import sarah from './sarah.jpg'
 import shahbaz from './shahbaz.jpg'
 import sylvain from './sylvain.jpg'
@@ -31,7 +35,10 @@ import troy from './troy.jpg'
 import wojciech from './wojciech.jpg'
 
 export default {
+    ahmed,
+    aitor,
     alberto,
+    artur,
     bruce,
     charlie,
     chirdeep,
@@ -46,14 +53,15 @@ export default {
     john,
     julian,
     kamal,
-    kasia,
+    katharina,
+    kiran,
     manuel,
     masha,
     matthias,
+    mike,
     muawia,
     oana,
     ricardo,
-    rodolphe,
     sarah,
     shahbaz,
     sylvain,
