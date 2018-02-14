@@ -8,13 +8,13 @@ import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
 import faq from '../data/faq.json'
-import { responsive } from '../styles'
+import { responsive, colors } from '../styles'
 
 const StyledLine = styled.div`
     width: 100%;
     margin-top: -6rem;
     margin-bottom: 6rem;
-    border-bottom: 1px solid #231f20;
+    border-bottom: 1px solid rgb(${colors.lightGrey});
 
     @media screen and (${responsive.sm.max}) {
         margin-top: -2rem;
@@ -41,7 +41,7 @@ const StyledFaqRow = styled.div`
 `
 
 const StyledQaA = styled.div`
-    width: calc(100% - 10px);
+    width: calc(100% - 2rem);
 `
 
 const Faq = () => (
