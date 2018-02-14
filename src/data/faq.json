@@ -16,7 +16,7 @@
       },
       {
         "question": "Who are the main participants in Ocean Protocol?",
-        "answer": "The main actors in Ocean Protocol are data providers, data consumers, data marketplaces, service providers and network keepers. Data providers offer data. Data consumers obtain data for their own use. Data marketplaces connect data producers and data consumers. Service providers provision computation, storage and algorithms for sale. Network keepers support Ocean’s protocol by running nodes within the network. Please refer to our <a href=\"https://oceanprotocol.com/#papers\">Marketplace Framework<\/a> for more details."
+        "answer": "The main actors in Ocean Protocol are data providers, data consumers, data marketplaces, service providers and network keepers. Data providers offer data. Data consumers obtain data for their own use. Data marketplaces connect data producers and data consumers. Service providers provision computation, storage and algorithms for sale. Network keepers support Ocean’s protocol by running nodes within the network. Please refer to our <a href=\"#papers\">Marketplace Framework<\/a> for more details."
       }
     ]
   },
@@ -33,7 +33,7 @@
       },
       {
         "question": "What is the relationship between Ocean Protocol and BigchainDB?",
-        "answer": "BigchainDB will develop the protocol and network for Ocean Protocol. For details about the technical architecture, refer to the <a href=\"https://oceanprotocol.com/#papers\">technical white paper<\/a>."
+        "answer": "BigchainDB will develop the protocol and network for Ocean Protocol. For details about the technical architecture, refer to the <a href=\"#papers\">technical white paper<\/a>."
       },
       {
         "question": "Does Ocean Protocol use BigchainDB?",
@@ -41,7 +41,7 @@
       },
       {
         "question": "Where can I find a development roadmap?",
-        "answer": "Please refer to our <a href=\"https://oceanprotocol.com/#papers\">whitepaper<\/a> for development roadmap."
+        "answer": "Please refer to our <a href=\"#papers\">whitepaper<\/a> for development roadmap."
       },
       {
         "question": "Is your project open sourced?",
@@ -49,7 +49,7 @@
       },
       {
         "question": "Where can I go for more information?",
-        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a>, our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> or <a href=\"https://oceanprotocol.com\">website<\/a>.<br><br> Chat with us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ\">Slack<\/a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg\">Telegram<\/a>.<br><br>Our <a href=\"https://oceanprotocol.com/#papers\">whitepaper<\/a> is a good resource for information on Ocean Protocol"
+        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a>, our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> or <a href=\"https://oceanprotocol.com\">website<\/a>.<br><br> Chat with us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ\">Slack<\/a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg\">Telegram<\/a>.<br><br>Our <a href=\"#papers\">whitepaper<\/a> is a good resource for information on Ocean Protocol"
       },
       {
         "question": "How can I get involved?",
