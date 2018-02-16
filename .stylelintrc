@@ -4,5 +4,8 @@
     "stylelint-config-bigchaindb",
     "stylelint-config-styled-components"
   ],
-  "syntax": "scss"
+  "syntax": "scss",
+  "rules": {
+      "no-descending-specificity": null
+  }
 }
