@@ -7,6 +7,7 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
 import Button from '../components/Button'
+import SocialHero from '../components/SocialHero'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
 import dexLogo from '../assets/logos/dex.svg'
 import wavesStatic from '../assets/misc/waves.png'
@@ -22,6 +23,7 @@ const StyledHero = styled(Section)`
 
     > div {
         padding-top: 2rem;
+        padding-bottom: 2rem;
         min-height: auto;
         position: static;
     }
@@ -101,7 +103,7 @@ const StyledTagline = styled(Title)`
     margin-bottom: 1.5rem;
     text-align: center;
     color: #fff;
-    animation: 1s ${animation} backwards;
+    animation: ${animation} 1s backwards;
 
     @media screen and (${responsive.md.min}) {
         margin-left: 2rem;
@@ -130,7 +132,7 @@ const StyledPoweredBy = styled.div`
     font-weight: ${fonts.fontWeight.title};
     text-transform: uppercase;
     text-align: center;
-    animation: 1s ${animation} .5s backwards;
+    animation: ${animation} 1s .5s backwards;
 
     & p {
         margin: 0;
@@ -154,7 +156,27 @@ const StyledPoweredBy = styled.div`
 const StyledButton = styled(Button)`
     margin: auto;
     padding: 1.25rem 2.7rem;
-    animation: 1.5s ${animation} .5s backwards;
+    animation: ${animation} 1s 1s backwards;
+`
+
+const StyledSocialHero = styled.aside`
+    margin-top: 3rem;
+
+    & a {
+        animation: ${animation} 1s 1.5s backwards;
+
+        &:nth-child(2) {
+            animation-delay: 1.75s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 2.25s;
+        }
+    }
 `
 
 const Welcome = () => (
@@ -181,6 +203,10 @@ const Welcome = () => (
                 </a>
 
             </ContentRow>
+
+            <StyledSocialHero>
+                <SocialHero />
+            </StyledSocialHero>
         </StyledHeroContent>
         <StyledWaves>
             <div className="waves__background" />
