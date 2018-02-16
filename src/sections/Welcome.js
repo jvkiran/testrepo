@@ -103,7 +103,7 @@ const StyledTagline = styled(Title)`
     margin-bottom: 1.5rem;
     text-align: center;
     color: #fff;
-    animation: ${animation} 1s backwards;
+    animation: ${animation} 1.5s backwards;
 
     @media screen and (${responsive.md.min}) {
         margin-left: 2rem;
@@ -132,7 +132,7 @@ const StyledPoweredBy = styled.div`
     font-weight: ${fonts.fontWeight.title};
     text-transform: uppercase;
     text-align: center;
-    animation: ${animation} 1s .5s backwards;
+    animation: ${animation} 1.5s .5s backwards;
 
     & p {
         margin: 0;
@@ -156,14 +156,14 @@ const StyledPoweredBy = styled.div`
 const StyledButton = styled(Button)`
     margin: auto;
     padding: 1.25rem 2.7rem;
-    animation: ${animation} 1s 1s backwards;
+    animation: ${animation} 1.5s 1s backwards;
 `
 
 const StyledSocialHero = styled.aside`
     margin-top: 3rem;
 
     & a {
-        animation: ${animation} 1s 1.5s backwards;
+        animation: ${animation} 1.5s 1.5s backwards;
 
         &:nth-child(2) {
             animation-delay: 1.75s;
