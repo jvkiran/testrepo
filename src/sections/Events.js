@@ -171,7 +171,8 @@ const EventDate = (props) => {
     const eventDateFormatted = eventDate.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
-        day: 'numeric'
+        day: 'numeric',
+        timeZone: 'UTC'
     })
 
     return eventDateFormatted
