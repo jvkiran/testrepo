@@ -12,11 +12,11 @@ import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonSlack from '../assets/buttons/slack.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
-import { colors, responsive } from '../styles'
+import { colors, responsive, fonts } from '../styles'
+import { company, social } from '../constants'
 
 const StyledSubTitle = styled.h5`
-    color: #fff;
-    opacity: .5;
+    color: rgb(${colors.lightGrey});
     margin-bottom: 1rem;
 
     &:first-of-type {
@@ -35,6 +35,10 @@ const StyledCopyright = styled(Paragraph)`
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: -2rem;
+    }
+
+    a {
+        color: inherit;
     }
 `
 
@@ -60,7 +64,13 @@ const StyledContact = styled.div`
     text-align: right;
 
     .address {
-        opacity: .5;
+        color: rgb(${colors.lightGrey});
+    }
+
+    .address__title {
+        font-size: ${fonts.size.h5};
+        margin-top: 0;
+        color: rgb(${colors.lightGrey});
     }
 `
 
@@ -77,37 +87,37 @@ const Footer = () => (
                     <StyledActions>
                         <StyledSocialLinks>
                             <a
-                                href="https://blog.oceanprotocol.com/"
+                                href={social.blog}
                                 rel="noopener"
-                target="_blank" //eslint-disable-line
+                                target="_blank"
                                 title="Blog">
                                 <img alt="Medium" src={buttonMedium} />
                             </a>
                             <a
-                                href="https://twitter.com/oceanprotocol"
+                                href={social.twitter}
                                 rel="noopener"
-                target="_blank" //eslint-disable-line
+                                target="_blank"
                                 title="Twitter">
                                 <img alt="Twitter" src={buttonTwitter} />
                             </a>
                             <a
-                                href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ"
+                                href={social.slack}
                                 rel="noopener"
-                target="_blank" //eslint-disable-line
+                                target="_blank"
                                 title="Slack">
                                 <img alt="Slack" src={buttonSlack} />
                             </a>
                             <a
-                                href="https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg"
+                                href={social.telegram}
                                 rel="noopener"
-                target="_blank" //eslint-disable-line
+                                target="_blank"
                                 title="Telegram">
                                 <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a
-                                href="https://www.linkedin.com/company/13429589/"
+                                href={social.linkedin}
                                 rel="noopener"
-                target="_blank" //eslint-disable-line
+                                target="_blank"
                                 title="LinkedIn">
                                 <img alt="LinkedIn" src={buttonLinkedin} />
                             </a>
@@ -115,23 +125,32 @@ const Footer = () => (
                     </StyledActions>
                 </Cell>
                 <Cell width={1 / 2}>
-                    <SubTitle white>Ocean Protocol Foundation Ltd</SubTitle>
+                    <SubTitle white>{company.name}</SubTitle>
                     <Paragraph>
             Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
                     </Paragraph>
+
                     <StyledContact>
                         <Grid>
                             <Cell width={1 / 2}>
-                                <a href="https://oceanprotocol.com">oceanprotocol.com</a>
+                                <div className="address">
+                                    <h3 className="address__title">Office {company.address.singapore.city}</h3>
+                                    {company.address.singapore.location}<br />
+                                    {company.address.singapore.street}<br />
+                                    {company.address.singapore.street_additional}<br />
+                                    {company.address.singapore.city}, {company.address.singapore.zip}<br />
+                                    {company.address.singapore.country}
+                                </div>
                             </Cell>
 
                             <Cell width={1 / 2}>
                                 <div className="address">
-                  Mapletree Business City<br />
-                  20 Pasir Panjang Rd<br />
-                  East Wing #03-22/24<br />
-                  Singapore, 117439<br />
-                  Singapore
+                                    <h3 className="address__title">Office {company.address.berlin.city}</h3>
+                                    {company.address.berlin.location}<br />
+                                    {company.address.berlin.street}<br />
+                                    {company.address.berlin.street_additional}<br />
+                                    {company.address.berlin.zip} {company.address.berlin.city}<br />
+                                    {company.address.berlin.country}
                                 </div>
                             </Cell>
                         </Grid>
@@ -141,9 +160,9 @@ const Footer = () => (
         </ContentRow>
         <ContentRow>
             <StyledCopyright>
-                <small>&copy; {(new Date().getFullYear())} Ocean Protocol Foundation Ltd - All Rights Reserved</small>
+                <small>&copy; {(new Date().getFullYear())} <a href={company.url}>{company.name}</a> &mdash; All Rights Reserved</small>
             </StyledCopyright>
-        </ContentRow >
+        </ContentRow>
     </Section>
 )
 
