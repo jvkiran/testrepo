@@ -7,6 +7,7 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Spinner from '../components/Spinner'
 import { colors, fonts, responsive } from '../styles'
+import { social } from '../constants'
 
 const PaddingCell = styled(Cell)`
     padding-left: 10px;
@@ -113,7 +114,7 @@ class Blog extends Component {
                   </Grid>
               )}
               <StyledAction fetching={this.state.fetching}>
-                  <a href="https://blog.oceanprotocol.com">
+                  <a href={social.blog}>
                     Go to Blog
                   </a>
               </StyledAction>

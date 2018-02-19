@@ -11,6 +11,7 @@ import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import SubscribeForm from '../components/SubscribeForm'
 import { colors, fonts, responsive } from '../styles'
+import { social } from '../constants'
 
 const StyledDownload = styled(Button)`
     margin-left: auto;
@@ -184,7 +185,7 @@ const Documentation = () => (
         <ContentRow>
             <StyledComments>
                 Have a comment or suggestions about any of our documents? <br />
-                Let us know <a href="https://twitter.com/oceanprotocol">@oceanprotocol</a>
+                Let us know <a href={social.twitter}>@oceanprotocol</a>
             </StyledComments>
         </ContentRow>
 

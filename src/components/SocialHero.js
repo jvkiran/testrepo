@@ -4,6 +4,7 @@ import { responsive, colors, fonts } from '../styles'
 import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonSlack from '../assets/buttons/slack.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
+import { social } from '../constants'
 
 const SocialBand = styled.aside`
     text-align: center;
@@ -38,10 +39,10 @@ const SocialBand = styled.aside`
 
 const SocialHero = () => (
     <SocialBand>
-        <a href="https://t.me/oceanprotocol" rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram News Channel</a>
-        <a href="https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg" rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram Group Chat</a>
-        <a href="https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ" rel="noopener noreferrer" target="_blank"><img alt="Slack" src={buttonSlack} />Slack</a>
-        <a href="https://twitter.com/oceanprotocol" rel="noopener noreferrer" target="_blank"><img alt="Twitter" src={buttonTwitter} />Twitter</a>
+        <a href={social.telegram_news} rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram News Channel</a>
+        <a href={social.telegram} rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram Group Chat</a>
+        <a href={social.slack} rel="noopener noreferrer" target="_blank"><img alt="Slack" src={buttonSlack} />Slack</a>
+        <a href={social.twitter} rel="noopener noreferrer" target="_blank"><img alt="Twitter" src={buttonTwitter} />Twitter</a>
     </SocialBand>
 )
 
