@@ -13,7 +13,7 @@ import dexLogo from '../assets/logos/dex.svg'
 import wavesStatic from '../assets/misc/waves.png'
 import { colors, responsive, fonts, layout } from '../styles'
 
-import '../waves'
+import Waves from '../components/Waves'
 
 const StyledHero = styled(Section)`
     background: rgb(${colors.black});
@@ -209,7 +209,7 @@ const Welcome = () => (
             </StyledSocialHero>
         </StyledHeroContent>
         <StyledWaves>
-            <div className="waves__background" />
+            <div className="waves__background" ref={node => Waves(node)} />
         </StyledWaves>
     </StyledHero>
 )

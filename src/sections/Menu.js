@@ -6,7 +6,7 @@ import oceanLogo from '../assets/logos/ocean-logo.svg'
 import Hamburger from '../components/Hamburger'
 import { colors, fonts, responsive, transitions, layout } from '../styles'
 
-const StyledMenu = styled.div`
+const StyledMenu = styled.nav`
     background: rgb(${colors.black});
     transition: transform .3s ease-in-out;
     transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
@@ -88,7 +88,7 @@ const StyledMobileNav = styled.div`
     }
 `
 
-const StyledNav = styled.nav`
+const StyledNav = styled.div`
     text-transform: uppercase;
     text-align: right;
     color: rgb(${colors.white});
@@ -205,11 +205,11 @@ class Menu extends Component {
 
   toggleFixedMenu = () => {
       const pageFrame =
-      Number(layout.pageFrame.replace('rem', '')) *
-      Number(window
-          .getComputedStyle(document.getElementsByTagName('html')[0])
-          .getPropertyValue('font-size')
-          .replace('px', ''))
+        Number(layout.pageFrame.replace('rem', '')) *
+        Number(window
+            .getComputedStyle(document.getElementsByTagName('html')[0])
+            .getPropertyValue('font-size')
+            .replace('px', ''))
       if (window.innerWidth > 640) {
           if (window.scrollY >= window.innerHeight - pageFrame && !this.state.fixed) {
               this.setState({ fixed: true })
@@ -273,7 +273,7 @@ class Menu extends Component {
               </StyledMobileNav>
           </StyledContainer>
       </StyledMenu>
-  );
+  )
 }
 
 export default Menu

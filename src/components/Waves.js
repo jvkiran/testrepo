@@ -1,8 +1,12 @@
 import * as THREE from 'three/build/three' // eslint-disable-line import/no-namespace
-import './lib/Projector'
-import './lib/CanvasRenderer'
+import '../lib/Projector'
+import '../lib/CanvasRenderer'
 
-document.addEventListener('DOMContentLoaded', () => {
+const Waves = (background) => {
+    if (!background) {
+        return
+    }
+
     const SEPARATION = 100
     const AMOUNTX = 100
     const AMOUNTY = 70
@@ -23,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function init() {
         container = document.createElement('div')
         container.className = 'waves__container'
-        document.getElementsByClassName('waves__background')[0].appendChild(container)
+        background.appendChild(container)
 
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000)
         camera.position.z = 10000
@@ -102,4 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         count += 0.1
     }
-})
+}
+
+export default Waves
