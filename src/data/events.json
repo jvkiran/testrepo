@@ -91,6 +91,12 @@
     },
     {
         "city": "Singapore",
+        "eventName": "Singapore Blockchain Summit 2018",
+        "date": "2018-02-27",
+        "link": "https://www.gbf.world/sbs"
+    },
+    {
+        "city": "Singapore",
         "eventName": "Ocean Meetup",
         "date": "2018-03-05",
         "link": "https://www.eventbrite.sg/e/ocean-protocol-a-decentralised-data-exchange-march-2018-meetup-tickets-42970029515?aff=ocean"
