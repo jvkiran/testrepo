@@ -169,7 +169,8 @@ const StyledParagraph = styled(Paragraph)`
 
 const ArchiveParagraph = styled(Paragraph)`
     color: rgb(${colors.pink});
-    margin-top: 6rem;
+    margin-top: 3rem;
+    margin-bottom: -3rem;
     text-align: center;
     cursor: pointer;
 `
@@ -198,6 +199,8 @@ const ModalOverlay = styled.div`
     background-color: rgba(${colors.black}, .9);
 `
 
+const ModalHeight = '70vh'
+
 const Modal = styled.div`
     position: absolute;
     top: 50%;
@@ -209,34 +212,39 @@ const Modal = styled.div`
     color: rgb(${colors.black});
     border-radius: .1rem;
     outline: none;
-    padding: 6rem;
+    padding: 2rem;
     height: auto;
     z-index: 2;
-    width: 60vw;
+    width: 90vw;
     max-width: 1080px;
-    max-height: 65vh;
+    max-height: ${ModalHeight};
     transform: translate(-50%, -50%);
 
-    @media screen and (${responsive.lg.max}) {
+    @media screen and (${responsive.md.min}) {
+        width: 60vw;
         padding: 3rem;
     }
 
-    @media screen and (${responsive.md.max}) {
-        padding: 2rem;
-        width: 90vw;
+    @media screen and (${responsive.lg.min}) {
+        padding: 4rem;
+    }
+
+    @media screen and (${responsive.xlg.min}) {
+        padding: 6rem;
     }
 `
 
 const OverflowDiv = styled.div`
     overflow: auto;
-    height: calc(65vh - (18.5rem + 1px));
+    height: calc(${ModalHeight} - (10.5rem + 1px));
+    padding-top: 2rem;
 
-    @media screen and (${responsive.lg.max}) {
-        height: calc(65vh - (12.5rem + 1px));
+    @media screen and (${responsive.md.min}) {
+        height: calc(${ModalHeight} - (12.5rem + 1px));
     }
 
-    @media screen and (${responsive.md.max}) {
-        height: calc(65vh - (10.5rem + 1px));
+    @media screen and (${responsive.lg.min}) {
+        height: calc(${ModalHeight} - (18.5rem + 1px));
     }
 `
 
@@ -245,29 +253,35 @@ const ArchiveTitle = styled(Paragraph)`
     font-family: ${fonts.family.title};
     border-bottom: 1px solid rgb(${colors.grey});
     padding-bottom: 2rem;
+    margin-bottom: 0;
 `
 
 const PastListing = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 1.5rem;
 
-    @media screen and (${responsive.sm.max}) {
-        flex-direction: column;
-        margin-bottom: 1.5rem;
+    @media screen and (${responsive.sm.min}) {
+        flex-direction: row;
+        margin-bottom: 0;
     }
 
     p {
-        width: calc(50% - 20px);
-        margin-bottom: 2rem;
+        width: 100%;
+        margin-bottom: .5rem;
 
-        @media screen and (${responsive.md.max}) {
+        @media screen and (${responsive.sm.min}) {
+            width: calc(50% - 20px);
             margin-bottom: 1rem;
         }
 
-        @media screen and (${responsive.sm.max}) {
-            width: 100%;
-            margin-bottom: .5rem;
+        @media screen and (${responsive.md.min}) {
+            margin-bottom: 1.5rem;
+        }
+
+        @media screen and (${responsive.xlg.min}) {
+            margin-bottom: 2rem;
         }
     }
 `
@@ -333,7 +347,7 @@ function pastEvents() {
             const past = now.setDate(now.getDate() - 3)
             const eventDate = new Date(event.date)
             return eventDate <= past
-        }).sort((a, b) => a.date.localeCompare(b.date))
+        }).sort((a, b) => b.date.localeCompare(a.date))
 
         return eventsFilteredSorted.map((event, index) => (
             <PastEvent event={event} key={index} /> // eslint-disable-line react/no-array-index-key
