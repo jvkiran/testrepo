@@ -126,6 +126,24 @@ const Documentation = () => (
         <ContentRow wide>
             <Grid>
                 <Cell center width={1 / 3}>
+                    <StyledWhitepaper >
+                        <StyledTitle>Technical Whitepaper</StyledTitle>
+                        <StyledIntro>
+                            This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.
+                        </StyledIntro>
+                        <StyledAbstract>
+                            The heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'tech-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                                    Download <span>pdf</span>
+                                </StyledDownload>
+                            </a>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </Cell>
+                <Cell center width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -138,24 +156,6 @@ const Documentation = () => (
                             <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
                                 <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
                                     Download <span>pdf</span>
-                                </StyledDownload>
-                            </a>
-                        </StyledFooter>
-                    </StyledWhitepaper>
-                </Cell>
-                <Cell center width={1 / 3}>
-                    <StyledWhitepaper >
-                        <StyledTitle>Technical Primer</StyledTitle>
-                        <StyledIntro>
-                This technical primer presents a short introduction to Ocean Protocol.
-                        </StyledIntro>
-                        <StyledAbstract>
-                Ocean is a protocol and network that incentivizes to provide a vast supply of high-quality data, for use in training artificial intelligence (AI) models. Ocean incentivizes not only high-quality  priced  data but also high-quality public or commons  data. In turn, this helps to power data marketplaces.
-                        </StyledAbstract>
-                        <StyledFooter>
-                            <a download="Ocean Protocol Technical Primer.pdf" href={`${process.env.PUBLIC_URL}/techprimer.pdf`}>
-                                <StyledDownload onClick={() => gtag('event', 'techprimer', { 'event_category': 'download', 'event_label': 'button' })}>
-                    Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
                         </StyledFooter>
