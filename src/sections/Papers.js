@@ -13,10 +13,6 @@ import SubscribeForm from '../components/SubscribeForm'
 import { colors, fonts, responsive } from '../styles'
 import { social } from '../constants'
 
-const StyledDownload = styled(Button)`
-    margin-left: auto;
-`
-
 const StyledWhitepaper = styled(Cell)`
     border-radius: .2rem;
     padding: 2rem;
@@ -51,20 +47,6 @@ const StyledWhitepaper = styled(Cell)`
         margin-bottom: 2rem;
     }
 
-    ${Title} { /* stylelint-disable-line */
-        margin-bottom: 2rem;
-    }
-
-    ${StyledDownload} { /* stylelint-disable-line */
-        margin-right: auto;
-
-        span {
-            font-size: ${fonts.size.small};
-            opacity: .7;
-            margin-left: .3rem;
-        }
-    }
-
     @media screen and (${responsive.sm.max}) {
         margin: 0;
         padding: 2rem !important; /* stylelint-disable-line declaration-no-important */
@@ -72,12 +54,10 @@ const StyledWhitepaper = styled(Cell)`
 `
 
 const StyledTitle = styled(Title)`
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
     font-size: ${fonts.size.h3};
-
-    @media screen and (${responsive.sm.max}) {
-        font-size: ${fonts.size.h3};
-    }
+    word-spacing: 100vw; /* make sure every word is on its own line */
 `
 
 const StyledIntro = styled.div`
@@ -91,6 +71,17 @@ const StyledAbstract = styled.div`
 const StyledFooter = styled.div`
     margin-bottom: 0;
     margin-top: auto;
+`
+
+const StyledDownload = styled(Button)`
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+        font-size: ${fonts.size.small};
+        opacity: .7;
+        margin-left: .3rem;
+    }
 `
 
 const StyledComments = styled.h4`
@@ -125,7 +116,7 @@ const Documentation = () => (
 
         <ContentRow wide>
             <Grid>
-                <Cell center width={1 / 3}>
+                <Cell width={1 / 3}>
                     <StyledWhitepaper >
                         <StyledTitle>Technical Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -143,7 +134,7 @@ const Documentation = () => (
                         </StyledFooter>
                     </StyledWhitepaper>
                 </Cell>
-                <Cell center width={1 / 3}>
+                <Cell width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -161,7 +152,7 @@ const Documentation = () => (
                         </StyledFooter>
                     </StyledWhitepaper>
                 </Cell>
-                <Cell center width={1 / 3}>
+                <Cell width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
