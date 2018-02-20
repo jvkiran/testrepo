@@ -12,6 +12,7 @@ import ContentRow from '../components/ContentRow'
 import Paragraph from '../components/Paragraph'
 import events from '../data/events.json'
 import jellyfish from '../assets/graphics/jellyfish.svg'
+import cross from '../assets/misc/cross.svg'
 import { colors, fonts, responsive } from '../styles'
 
 let elementWidth
@@ -166,6 +167,111 @@ const StyledParagraph = styled(Paragraph)`
     text-align: center;
 `
 
+const ArchiveParagraph = styled(Paragraph)`
+    color: rgb(${colors.pink});
+    margin-top: 6rem;
+    text-align: center;
+    cursor: pointer;
+`
+
+const StyledClose = styled.img`
+    position: absolute;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 21;
+
+    &:hover {
+        opacity: .7;
+    }
+`
+
+const ModalOverlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background-color: rgba(${colors.black}, .9);
+`
+
+const Modal = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border: 0;
+    background: rgb(${colors.white});
+    color: rgb(${colors.black});
+    border-radius: .1rem;
+    outline: none;
+    padding: 6rem;
+    height: auto;
+    z-index: 2;
+    width: 60vw;
+    max-width: 1080px;
+    max-height: 65vh;
+    transform: translate(-50%, -50%);
+
+    @media screen and (${responsive.lg.max}) {
+        padding: 3rem;
+    }
+
+    @media screen and (${responsive.md.max}) {
+        padding: 2rem;
+        width: 90vw;
+    }
+`
+
+const OverflowDiv = styled.div`
+    overflow: auto;
+    height: calc(65vh - (18.5rem + 1px));
+
+    @media screen and (${responsive.lg.max}) {
+        height: calc(65vh - (12.5rem + 1px));
+    }
+
+    @media screen and (${responsive.md.max}) {
+        height: calc(65vh - (10.5rem + 1px));
+    }
+`
+
+const ArchiveTitle = styled(Paragraph)`
+    font-size: ${fonts.size.h4};
+    font-family: ${fonts.family.title};
+    border-bottom: 1px solid rgb(${colors.grey});
+    padding-bottom: 2rem;
+`
+
+const PastListing = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media screen and (${responsive.sm.max}) {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        width: calc(50% - 20px);
+        margin-bottom: 2rem;
+
+        @media screen and (${responsive.md.max}) {
+            margin-bottom: 1rem;
+        }
+
+        @media screen and (${responsive.sm.max}) {
+            width: 100%;
+            margin-bottom: .5rem;
+        }
+    }
+`
+
 const EventDate = (props) => {
     const eventDate = new Date(props.date)
     const eventDateFormatted = eventDate.toLocaleDateString('en-US', {
@@ -220,6 +326,38 @@ function renderEvents() {
     } else return []
 }
 
+function pastEvents() {
+    if (events.length > 0) {
+        const eventsFilteredSorted = events.filter((event) => {
+            const now = new Date()
+            const past = now.setDate(now.getDate() - 3)
+            const eventDate = new Date(event.date)
+            return eventDate <= past
+        }).sort((a, b) => a.date.localeCompare(b.date))
+
+        return eventsFilteredSorted.map((event, index) => (
+            <PastEvent event={event} key={index} /> // eslint-disable-line react/no-array-index-key
+        ))
+    } else {
+        return []
+    }
+}
+
+const PastEvent = ({ event }) => (
+    <PastListing>
+        <p>
+            <EventDate date={event.date} />
+        </p>
+        <p>
+            {event.eventName}
+        </p>
+    </PastListing>
+)
+
+PastEvent.propTypes = {
+    event: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
+}
+
 const Event = ({ event }) => (
     <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city}>
         <StyledEventCity>{event.city}</StyledEventCity>
@@ -257,6 +395,46 @@ const EventsList = () => {
     )
 }
 
+class Archive extends React.Component {
+    state = {
+        modalIsOpen: false
+    }
+
+    closeModal() {
+        this.setState({ modalIsOpen: false })
+        document.getElementsByTagName('html')[0].style.overflow = 'auto'
+    }
+
+    openModal() {
+        this.setState({ modalIsOpen: true })
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+    }
+
+    render() {
+        const past = pastEvents(events)
+        return (
+            <div>
+                <ArchiveParagraph onClick={() => this.openModal()}>
+                    View Events Archive
+                </ArchiveParagraph>
+                {this.state.modalIsOpen === true &&
+                <ModalOverlay>
+                    <Modal>
+                        <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
+                        <ArchiveTitle>
+                            Events Archive
+                        </ArchiveTitle>
+                        <OverflowDiv>
+                            { past }
+                        </OverflowDiv>
+                    </Modal>
+                </ModalOverlay>
+                }
+            </div>
+        )
+    }
+}
+
 const backgroundStyles = {
     backgroundPosition: 'center center'
 }
@@ -272,6 +450,8 @@ const Events = () => (
         </ContentRow>
 
         <EventsList />
+
+        <Archive />
     </Section>
 )
 
