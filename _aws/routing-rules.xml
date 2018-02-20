@@ -1,0 +1,10 @@
+<RoutingRules>
+  <RoutingRule>
+    <Condition>
+      <KeyPrefixEquals>techprimer.pdf</KeyPrefixEquals>
+    </Condition>
+    <Redirect>
+      <ReplaceKeyPrefixWith>tech-whitepaper.pdf</ReplaceKeyPrefixWith>
+    </Redirect>
+  </RoutingRule>
+</RoutingRules>
