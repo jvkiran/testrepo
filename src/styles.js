@@ -81,6 +81,10 @@ export const responsive = {
     lg: {
         min: 'min-width: 1023px',
         max: 'max-width: 1024px'
+    },
+    xlg: {
+        min: 'min-width: 1399px',
+        max: 'max-width: 1400px'
     }
 }
 
