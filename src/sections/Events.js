@@ -363,7 +363,7 @@ const PastEvent = ({ event }) => (
             <EventDate date={event.date} />
         </p>
         <p>
-            {event.eventName}
+            {event.city}, {event.eventName}
         </p>
     </PastListing>
 )
