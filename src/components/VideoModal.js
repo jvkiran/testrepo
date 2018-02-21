@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import cross from '../assets/misc/cross.svg'
@@ -89,6 +90,7 @@ class VideoModal extends React.Component {
     closeModal() {
         this.setState({ modalIsOpen: false, source: '' })
         document.getElementsByTagName('html')[0].style.overflow = 'auto'
+        this.props.onCloseModal()
     }
 
     openModal() {
@@ -115,6 +117,10 @@ class VideoModal extends React.Component {
             </div>
         )
     }
+}
+
+VideoModal.propTypes = {
+    onCloseModal: PropTypes.func.isRequired
 }
 
 export default VideoModal
