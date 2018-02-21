@@ -66,15 +66,13 @@ const PlayButton = styled.img`
 `
 
 class DataVideo extends React.Component {
-    constructor() {
-        super()
-
-        this.state = {
-            videoUrl: ''
-        }
+    state = {
+        videoUrl: ''
     }
-    openVideo(link) {
-        this.setState({ videoUrl: link })
+
+    openVideo = (link) => this.setState({ videoUrl: link })
+    closeModal = () => {
+        this.setState({ videoUrl: '' })
     }
 
     render() {
@@ -85,7 +83,7 @@ class DataVideo extends React.Component {
                         <StyledTitle>That&apos;s why we&apos;re building <br /> Ocean Protocol</StyledTitle>
                         <PlayButton onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')} src={playIcon} />
                     </AspectRatio>
-                    <VideoModal source={this.state.videoUrl} />
+                    <VideoModal onCloseModal={this.closeModal} source={this.state.videoUrl} />
                 </StyledSection>
             </PaddingSection>
         )
