@@ -42,7 +42,7 @@ const StyledWaves = styled.div`
     z-index: 0;
     background: none;
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
         background: url(${wavesStatic}) no-repeat;
         background-size: cover;
         background-position-y: 5rem;
@@ -65,26 +65,9 @@ const StyledWaves = styled.div`
         left: 0;
         right: 0;
         overflow: hidden;
-    }
 
-    @media screen and (${responsive.sm.max}) {
-        .waves__container {
+        @media screen and (${responsive.md.max}) {
             display: none;
-        }
-    }
-
-    @media screen and (max-height: 700px) {
-        .waves__container {
-            &:before {
-                content: '';
-                top: 50%;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                position: absolute;
-                background: linear-gradient(to bottom, rgba(${colors.black}, 1) 20%, rgba(${colors.black}, 0) 60%);
-                z-index: 1;
-            }
         }
     }
 

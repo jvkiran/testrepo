@@ -14,14 +14,15 @@ const Waves = (background) => {
     let scene
     let renderer
     let container
-    let show = window.innerWidth >= 768 && window.innerHeight >= 500
+    let show = window.innerWidth >= 801 && window.innerHeight >= 500
     let particles
     let particle
     let count = 0
 
-    if (!(Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 768)) {
-        init()
-        animate()
+    init()
+    animate()
+    if (!(Math.max(document.documentElement.clientWidth, window.innerWidth || 0) < 801)) {
+        onWindowResize()
     }
 
     function init() {
@@ -67,7 +68,7 @@ const Waves = (background) => {
     }
 
     function onWindowResize() {
-        if (window.innerWidth >= 768 && window.innerHeight >= 500) {
+        if (window.innerWidth >= 801 && window.innerHeight >= 500) {
             if (!show) {
                 show = true
                 animate()
