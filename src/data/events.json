@@ -30,12 +30,6 @@
         "link": "http://dld-conference.com/DLD18"
     },
     {
-        "city": "Berlin",
-        "eventName": "Riseof.ai",
-        "date": "2018-05-17",
-        "link": "http://riseof.ai"
-    },
-    {
         "city": "Amsterdam",
         "eventName": "Future of Pensions",
         "date": "2018-02-08",
@@ -106,5 +100,83 @@
         "eventName": "Blockchain EXE",
         "date": "2018-03-13",
         "link": "https://en.blockchainexe.com/"
+    },
+    {
+        "city": "Kiev",
+        "eventName": "BlockchainUA",
+        "date": "2018-03-23",
+        "link": "https://blockchainua.com/en"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "9984 >> Meetup",
+        "date": "2018-03-28",
+        "link": "https://www.meetup.com/9984-Meetup/events/243513556/"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "Blockchain & Bitcoin Conference Germany",
+        "date": "2018-04-04",
+        "link": "https://germany.bc.events"
+    },
+    {
+        "city": "Seoul",
+        "eventName": "Boao Forum Seoul",
+        "date": "2018-04-08",
+        "link": "http://english.boaoforum.org"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "SET Tech Festival",
+        "date": "2018-04-16",
+        "link": "https://www.startup-energy-transition.com/tech-festival/"
+    },
+    {
+        "city": "Munich",
+        "eventName": "Digital Product School of UnternehmerTUM",
+        "date": "2018-05-07",
+        "link": "https://www.unternehmertum.de/digital-product-school.html?lang=en"
+    },
+    {
+        "city": "New York City",
+        "eventName": "Consensus",
+        "date": "2018-05-14",
+        "link": "https://www.coindesk.com/events/consensus-2018/"
+    },
+    {
+        "city": "Vienna",
+        "eventName": "WeAreDevs World Congress",
+        "date": "2018-05-16",
+        "link": "https://www.wearedevelopers.com/congress/"
+    },
+    {
+        "city": "Geneva",
+        "eventName": "AI for Good - Global summit",
+        "date": "2018-05-16",
+        "link": "https://www.itu.int/en/ITU-T/AI/2018/Pages/default.aspx"
+    },
+    {
+        "city": "Ann Arbor",
+        "eventName": "Genetic Programming Theory & Practice XVI",
+        "date": "2018-05-18",
+        "link": "http://gptp-workshop.com"
+    },
+    {
+        "city": "Gdansk",
+        "eventName": "Infoshare",
+        "date": "2018-05-22",
+        "link": "https://infoshare.pl"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "Tech Open Air (TOA)",
+        "date": "2018-06-20",
+        "link": "https://toa.berlin"
+    },
+    {
+        "city": "Copenhagen",
+        "eventName": "TechFestival Copenhagen",
+        "date": "2018-09-05",
+        "link": "http://techfestival.co"
     }
 ]
