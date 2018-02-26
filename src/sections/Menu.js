@@ -136,6 +136,10 @@ const MenuItems = [
         href: '#blog'
     },
     {
+        name: 'Videos',
+        href: '#video'
+    },
+    {
         name: 'Faq',
         href: '#faq'
     }
