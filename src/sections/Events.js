@@ -219,7 +219,7 @@ const ModalOverlay = styled.div`
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(${colors.black}, .9);
+    background-color: rgba(${colors.black}, .7);
 `
 
 const ModalHeight = '90vh'
@@ -268,7 +268,7 @@ const ArchiveTitle = styled(Paragraph)`
     margin-bottom: 0;
 `
 
-const PastListing = styled.div`
+const PastListing = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -282,9 +282,20 @@ const PastListing = styled.div`
         flex-direction: row;
     }
 
+    &:hover,
+    &:focus {
+        transform: none;
+        border-bottom-color: rgb(${colors.pink});
+
+        .event {
+            color: rgb(${colors.pink});
+        }
+    }
+
     p {
         width: 100%;
         margin: 0;
+        transition: .2s ease-out;
     }
 
     .city {
@@ -364,7 +375,7 @@ function pastEvents() {
 }
 
 const PastEvent = ({ event }) => (
-    <PastListing>
+    <PastListing href={event.link} target="_blank">
         <p className="date">
             <EventDate date={event.date} />
         </p>
@@ -382,7 +393,7 @@ PastEvent.propTypes = {
 }
 
 const Event = ({ event }) => (
-    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city}>
+    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city} target="_blank">
         <StyledEventCity>{event.city}</StyledEventCity>
         {!!event.eventName && (
             <StyledEventName>{event.eventName}</StyledEventName>
