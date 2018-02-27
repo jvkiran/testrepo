@@ -276,6 +276,7 @@ const PastListing = styled.div`
     padding-bottom: 1rem;
     border-bottom: .08rem solid rgba(${colors.lightGrey}, .2);
     font-family: ${fonts.family.button};
+    color: rgb(${colors.lightGrey});
 
     @media screen and (${responsive.sm.min}) {
         flex-direction: row;
@@ -286,8 +287,8 @@ const PastListing = styled.div`
         margin: 0;
     }
 
-    .date {
-        color: rgb(${colors.lightGrey});
+    .city {
+        color: rgb(${colors.white});
     }
 `
 
