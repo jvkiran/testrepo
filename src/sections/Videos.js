@@ -11,7 +11,6 @@ import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
 import videos from '../data/videos.json'
-import sectionBackground from '../assets/misc/video-section-bg.png'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
 import { colors, fonts } from '../styles'
@@ -22,10 +21,9 @@ const Background = styled.div`
     right: -1rem;
     bottom: 0;
     left: -1rem;
-    background-image: url(${sectionBackground});
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    opacity: .2;
     z-index: 0;
 `
 
@@ -36,9 +34,9 @@ const StyledTitle = styled(Title)`
 const StyledContentRow = styled(ContentRow)`
     max-width: 74rem;
     z-index: 1;
-    
+
     .slick-dots {
-        bottom: -3rem;    
+        bottom: -3rem;
 
         button:before {
             font-size: ${fonts.size.small};
@@ -46,7 +44,7 @@ const StyledContentRow = styled(ContentRow)`
             color: rgb(${colors.white});
         }
 
-        .slick-active button:before {
+        .slick-active button:before { /* stylelint-disable-line selector-max-compound-selectors */
             color: rgb(${colors.white});
         }
 
@@ -147,9 +145,9 @@ const ListContainer = styled.div`
 `
 
 const VideoThumb = styled.img`
-    padding: 0.4rem;
+    padding: .4rem;
     background: rgb(${colors.black});
-    
+
     &.active {
         background: rgb(${colors.white});
     }
@@ -177,6 +175,10 @@ class SectionContent extends Component {
         player: false
     }
 
+    componentWillMount() {
+        this.props.changeBackground(this.props.items[0].snippet.thumbnails.maxres.url)
+    }
+
     selectVideo(properties, index) {
         this.setState({
             title: properties.snippet.title,
@@ -184,6 +186,7 @@ class SectionContent extends Component {
             active: index,
             id: `https://www.youtube.com/watch?v=${properties.id}`
         })
+        this.props.changeBackground(properties.snippet.thumbnails.maxres.url)
     }
 
     openVideo() {
@@ -207,7 +210,6 @@ class SectionContent extends Component {
             SwipeToSlide: true,
             lazyLoad: true
         }
-        // const { question, answer } = this.props
         return (
             <StyledContentRow>
                 {!this.state.player ? (
@@ -241,10 +243,11 @@ class SectionContent extends Component {
 }
 
 SectionContent.propTypes = {
-    items: PropTypes.array.isRequired
+    changeBackground: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
-const VideoSlider = ({ items }) => {
+const VideoSlider = ({ items, ...changeBackground }) => {
     if (items.length === 0) {
         return (
             <Paragraph>
@@ -259,7 +262,7 @@ const VideoSlider = ({ items }) => {
         )
     } else if (items.length > 0) {
         return (
-            <SectionContent items={items} />
+            <SectionContent {...changeBackground} items={items} />
         )
     } else {
         return []
@@ -267,10 +270,11 @@ const VideoSlider = ({ items }) => {
 }
 
 VideoSlider.propTypes = {
-    items: PropTypes.array.isRequired
+    changeBackground: PropTypes.func.isRequired,
+    items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
-class Videos extends React.Component {
+class Videos extends React.Component { // eslint-disable-line react/no-multi-comp
     state = {
         ApiResponse: []
     }
@@ -309,17 +313,26 @@ class Videos extends React.Component {
 const backgroundStyles = {
     position: 'relative'
 }
-const RenderSection = ({ ApiResponse }) => {
-    return (
-        <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
-            <Background />
-            <StyledContentRow>
-                <StyledTitle white>Videos</StyledTitle>
-            </StyledContentRow>
-
-            <VideoSlider items={ApiResponse} />
-        </Section>
-    )
+class RenderSection extends Component { // eslint-disable-line react/no-multi-comp
+    state = {
+        background: ''
+    }
+    changeBackground = (newImage) => {
+        this.setState({
+            background: `url(${newImage})`
+        })
+    }
+    render() {
+        return (
+            <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
+                <Background style={{ backgroundImage: `${this.state.background}` }} />
+                <StyledContentRow>
+                    <StyledTitle white>Videos</StyledTitle>
+                </StyledContentRow>
+                <VideoSlider changeBackground={this.changeBackground} items={this.props.ApiResponse} />
+            </Section>
+        )
+    }
 }
 
 RenderSection.propTypes = {
