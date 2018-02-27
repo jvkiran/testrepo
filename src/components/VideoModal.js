@@ -19,10 +19,6 @@ const StyledClose = styled.img`
     }
 `
 
-const Video = styled.div`
-    margin-top: 0;
-`
-
 const StyledReactPlayer = styled(ReactPlayer)`
     max-width: 100%;
     height: auto !important; /* stylelint-disable-line declaration-no-important */
@@ -104,14 +100,12 @@ class VideoModal extends React.Component {
                 {this.state.modalIsOpen === true &&
                     <ModalOverlay onClick={() => this.closeModal()}>
                         <YoutubeModal>
-                            <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
-                            <Video>
-                                <StyledReactPlayer
-                                    controls
-                                    config={{ youtube: { playerVars: { color: 'white' } } }}
-                                    url={this.state.source} />
-                            </Video>
+                            <StyledReactPlayer
+                                controls
+                                config={{ youtube: { playerVars: { color: 'white' } } }}
+                                url={this.state.source} />
                         </YoutubeModal>
+                        <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
                     </ModalOverlay>
                 }
             </div>
