@@ -10,6 +10,7 @@ import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Paragraph from '../components/Paragraph'
+import Button from '../components/Button'
 import events from '../data/events.json'
 import jellyfish from '../assets/graphics/jellyfish.svg'
 import cross from '../assets/misc/cross.svg'
@@ -64,6 +65,8 @@ const StyledEvents = styled.div`
     }
 
     .slick-dots {
+        bottom: -2.5rem;
+
         button:before {
             font-size: ${fonts.size.small};
             opacity: .25;
@@ -167,12 +170,31 @@ const StyledParagraph = styled(Paragraph)`
     text-align: center;
 `
 
-const ArchiveParagraph = styled(Paragraph)`
-    color: rgb(${colors.pink});
-    margin-top: 3rem;
-    margin-bottom: -3rem;
+const ArchiveButton = styled(Button)`
     text-align: center;
     cursor: pointer;
+    margin: 5rem auto 0 auto;
+    padding: .8rem 1rem;
+    background: rgba(${colors.darkGrey}, .8);
+    border: .08rem solid rgb(${colors.pink});
+    border-radius: .1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    font-size: ${fonts.size.small};
+    color: rgb(${colors.lightGrey});
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
+        background: inherit;
+    }
+
+    &:active {
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: -3rem;
+    }
 `
 
 const StyledClose = styled.img`
@@ -184,7 +206,8 @@ const StyledClose = styled.img`
     right: 1.5rem;
     z-index: 21;
 
-    &:hover {
+    &:hover,
+    &:focus {
         opacity: .7;
     }
 `
@@ -196,10 +219,10 @@ const ModalOverlay = styled.div`
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(${colors.black}, .9);
+    background-color: rgba(${colors.black}, .7);
 `
 
-const ModalHeight = '70vh'
+const ModalHeight = '90vh'
 
 const Modal = styled.div`
     position: absolute;
@@ -207,82 +230,76 @@ const Modal = styled.div`
     left: 50%;
     right: auto;
     bottom: auto;
-    border: 0;
-    background: rgb(${colors.white});
-    color: rgb(${colors.black});
+    background: rgb(${colors.black});
+    color: rgb(${colors.white});
     border-radius: .1rem;
+    border: .08rem solid rgb(${colors.pink});
     outline: none;
     padding: 2rem;
     height: auto;
     z-index: 2;
     width: 90vw;
-    max-width: 1080px;
+    max-width: 50rem;
     max-height: ${ModalHeight};
     transform: translate(-50%, -50%);
 
     @media screen and (${responsive.md.min}) {
-        width: 60vw;
         padding: 3rem;
-    }
-
-    @media screen and (${responsive.lg.min}) {
-        padding: 4rem;
-    }
-
-    @media screen and (${responsive.xlg.min}) {
-        padding: 6rem;
     }
 `
 
 const OverflowDiv = styled.div`
     overflow: auto;
     height: calc(${ModalHeight} - (10.5rem + 1px));
-    padding-top: 2rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 
     @media screen and (${responsive.md.min}) {
         height: calc(${ModalHeight} - (12.5rem + 1px));
-    }
-
-    @media screen and (${responsive.lg.min}) {
-        height: calc(${ModalHeight} - (18.5rem + 1px));
     }
 `
 
 const ArchiveTitle = styled(Paragraph)`
     font-size: ${fonts.size.h4};
     font-family: ${fonts.family.title};
-    border-bottom: 1px solid rgb(${colors.grey});
-    padding-bottom: 2rem;
+    line-height: ${fonts.lineHeight.title};
+    border-bottom: .08rem solid rgb(${colors.lightGrey});
+    padding-bottom: 1rem;
     margin-bottom: 0;
 `
 
-const PastListing = styled.div`
+const PastListing = styled.a`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: .08rem solid rgba(${colors.lightGrey}, .2);
+    font-family: ${fonts.family.button};
+    color: rgb(${colors.lightGrey});
 
     @media screen and (${responsive.sm.min}) {
         flex-direction: row;
-        margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+        transform: none;
+        border-bottom-color: rgb(${colors.pink});
+
+        .event {
+            color: rgb(${colors.pink});
+        }
     }
 
     p {
         width: 100%;
-        margin-bottom: .5rem;
+        margin: 0;
+        transition: .2s ease-out;
+    }
 
-        @media screen and (${responsive.sm.min}) {
-            width: calc(50% - 20px);
-            margin-bottom: 1rem;
-        }
-
-        @media screen and (${responsive.md.min}) {
-            margin-bottom: 1.5rem;
-        }
-
-        @media screen and (${responsive.xlg.min}) {
-            margin-bottom: 2rem;
-        }
+    .city {
+        color: rgb(${colors.white});
     }
 `
 
@@ -358,12 +375,15 @@ function pastEvents() {
 }
 
 const PastEvent = ({ event }) => (
-    <PastListing>
-        <p>
+    <PastListing href={event.link} target="_blank">
+        <p className="date">
             <EventDate date={event.date} />
         </p>
-        <p>
-            {event.city}, {event.eventName}
+        <p className="city">
+            {event.city}
+        </p>
+        <p className="event">
+            {event.eventName}
         </p>
     </PastListing>
 )
@@ -373,7 +393,7 @@ PastEvent.propTypes = {
 }
 
 const Event = ({ event }) => (
-    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city}>
+    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city} target="_blank">
         <StyledEventCity>{event.city}</StyledEventCity>
         {!!event.eventName && (
             <StyledEventName>{event.eventName}</StyledEventName>
@@ -428,9 +448,9 @@ class Archive extends React.Component {
         const past = pastEvents(events)
         return (
             <div>
-                <ArchiveParagraph onClick={() => this.openModal()}>
+                <ArchiveButton onClick={() => this.openModal()}>
                     View Events Archive
-                </ArchiveParagraph>
+                </ArchiveButton>
                 {this.state.modalIsOpen === true &&
                 <ModalOverlay>
                     <Modal>
