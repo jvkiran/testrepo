@@ -106,12 +106,8 @@
                 "answer": "The Pre-Launch Token distribution will happen on 7th March. The Network Launch Token distribution is planned for Q1/2019 to coincide with the network launch."
             },
             {
-                "question": "How long will the whitelisting last? ",
-                "answer": "Two weeks. The whitelisting starts on February 15 at 09:00 UTC+1 and closes on March 1 at 09:00 UTC+1, however, only the first 10,000 submissions will be accepted."
-            },
-            {
                 "question": "What is the minimum and maximum individual contribution for the Ocean Token public pre-launch distribution?",
-                "answer": "The minimum contribution amount is 250€. The maximum varies depending on the number of people who submit their documents for whitelisting. If the whitelisting limit is reached at 10,000, the maximum contribution will be 1250€. You can find the detailed table in our <a href=\"https://blog.oceanprotocol.com/whitelisting-instructions-e5bd11a828cf\">whitelisting guidelines on out blog<\/a>."
+                "answer": "The minimum contribution amount is 250€, the maximum contribution is 1250€. You can find more information in our <a href=\"https://blog.oceanprotocol.com/whitelisting-instructions-e5bd11a828cf\">whitelisting guidelines on our blog<\/a>."
             },
             {
                 "question": "How much is being raised in the public Pre-Launch? ",
@@ -119,7 +115,7 @@
             },
             {
                 "question": "What will the token launch proceeds be used for?",
-                "answer": "To build the protocol, network, marketplace and ecosystem around Ocean Protocol. In particular, funds within the Foundation will be used to strike strategic partnerships with enterprise, government, and attract developers & researchers to work on the protocol and marketplace development. Please refer to our token distribution document for more details."
+                "answer": "To build the protocol, network, marketplace and ecosystem around Ocean Protocol. In particular, funds within the Foundation will be used to strike strategic partnerships with enterprises, governments, and attract developers & researchers to work on the protocol and marketplace development. Please refer to our token distribution document for more details."
             },
             {
                 "question": "What is the token distribution?",
@@ -147,7 +143,7 @@
             },
             {
                 "question": "Will there be a lockup or vesting period for Ocean Tokens acquired during the Pre-Launch?",
-                "answer": "Yes, acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from Network Launch. "
+                "answer": "Yes, acquirors that obtain Ocean Tokens in the Pre-Launch phase will be subject to a linear vesting of 6 months starting from Network Launch Token Distribution date."
             },
             {
                 "question": "Is there vesting or lockups for Founder tokens?",
@@ -155,7 +151,7 @@
             },
             {
                 "question": "When will the token issuance start?",
-                "answer": "Token issuance will start at network launch planned to for Q1/2019."
+                "answer": "Token issuance will start at Network Launch Token Distribution date, planned for Q1/2019."
             },
             {
                 "question": "Which contribution methods are accepted?",
@@ -186,16 +182,12 @@
                 "answer": "Ocean tokens can be used when the network is launched."
             },
             {
-                "question": "Is the token distribution open to US acquirors?",
-                "answer": "The Pre-Launch and Network Launch token distributions are open to accredited US and Canadian acquirors only."
-            },
-            {
                 "question": "Please explain what security measures are taken to keep my data safe.",
                 "answer": "Your data will be handled with utmost care and kept in secured servers in compliance with the strictest privacy regulations on Earth, those of the <a href=\"https://www.eugdpr.org/\">EU GDPR.<\/a>"
             },
             {
-                "question": "For how long will the token received during the public pre-launch, be locked?",
-                "answer": "Acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from Network Launch. This means that the total hold period is 18 months until an acquiror receives 100% of their Ocean tokens. This encourages long-term community members to participate and disincentives speculators."
+                "question": "For how long will the token received during the public Pre-Launch Token Distribution be locked?",
+                "answer": "Acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from the Network Launch Token Distribution date, scheduled for Q1 2019. This means that the total hold period is of about 18 months until an acquiror receives 100% of their Ocean tokens. This encourages long-term community members to participate and disincentives speculators."
             }
         ]
     }
