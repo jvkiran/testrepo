@@ -13,7 +13,7 @@ import buttonLinkedIn from '../assets/buttons/linkedin.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
 import teamImg from '../assets/team'
-import team from '../data/team.json'
+import team from '../data/team'
 import { colors, fonts, responsive, transitions } from '../styles'
 
 const StyledWrapper = styled.div`

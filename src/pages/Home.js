@@ -3,7 +3,6 @@ import Menu from '../sections/Menu'
 import Welcome from '../sections/Welcome'
 import Project from '../sections/Project'
 import Data from '../sections/Data'
-import DataVideo from '../sections/DataVideo'
 import Papers from '../sections/Papers'
 import Events from '../sections/Events'
 import Team from '../sections/Team'
@@ -24,7 +23,6 @@ class Home extends Component {
           <Welcome />
           <Events />
           <Project toggleModal={this.toggleModal} />
-          <DataVideo />
           <Papers />
           <Data />
           <Team toggleModal={this.toggleModal} />
