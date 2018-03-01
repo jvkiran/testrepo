@@ -10,10 +10,10 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
-import videos from '../data/videos.json'
+import videos from '../data/videos'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
-import { colors, fonts, responsive } from '../styles'
+import { colors, fonts, responsive, transitions } from '../styles'
 
 const Background = styled.div`
     position: absolute;
@@ -37,7 +37,7 @@ const CenterParagraph = styled(Paragraph)`
 `
 
 const StyledContentRow = styled(ContentRow)`
-    max-width: 74rem;
+    max-width: 60rem;
     margin-bottom: 2.5rem;
     z-index: 1;
 
@@ -132,7 +132,7 @@ const PlayButton = styled.img`
 const VideoContainer = styled.div`
     position: relative;
     margin: 10px;
-    border: .4rem solid rgb(${colors.black});
+    border: .4rem solid rgb(${colors.white});
     background: rgb(${colors.black});
 `
 
@@ -145,7 +145,8 @@ const StyledClose = styled.img`
     right: 1.5rem;
     z-index: 21;
 
-    &:hover {
+    &:hover,
+    &:focus {
         opacity: .7;
     }
 `
@@ -175,13 +176,34 @@ const VideoListItem = styled.div`
 `
 
 const ListContainer = styled.div`
-    color: rgb(${colors.black});
-    background: rgb(${colors.white});
+    color: rgb(${colors.lightGrey});
+    background: rgb(${colors.black});
+    border-radius: 2px;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    transition: ${transitions.short};
+    border: .08rem solid rgb(${colors.grey});
     max-width: 21.3rem;
     margin: 0 auto;
-    
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
+        transform: translate3d(0, -.05rem, 0);
+    }
+
+    &:active {
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+        transition: none;
+        transform: none;
+    }
+
+    &.active {
+        background: rgb(${colors.white});
+        color: rgb(${colors.black});
+    }
+
     @media screen and (${responsive.sm.min}) {
-        margin: 0 10px;
+        margin: 0 .5rem;
     }
 `
 
@@ -189,16 +211,16 @@ const VideoThumb = styled.img`
     padding: .4rem;
     background: rgb(${colors.black});
 
-    &.active {
+    .active {
         background: rgb(${colors.white});
     }
 `
 
 const ThumbTitle = styled(Paragraph)`
-    padding: 1.25rem;
+    padding: .5rem 1.25rem 1rem 1.25rem;
     margin: 0;
     text-align: center;
-    font-family: ${fonts.family.button};
+    font-size: ${fonts.size.small};
 
     span {
         overflow: hidden;
@@ -290,8 +312,8 @@ class SectionContent extends Component {
                 <Slider {...settings}>
                     {this.props.items.map((properties, index) => (
                         <VideoListItem key={index} onClick={() => this.selectVideo(properties, index)}> {/* eslint-disable-line react/no-array-index-key*/}
-                            <ListContainer>
-                                <VideoThumb alt="video thumbnail" className={this.state.active === index ? 'active' : ''} src={properties.snippet.thumbnails.medium.url} />
+                            <ListContainer className={this.state.active === index ? 'active' : ''}>
+                                <VideoThumb alt="video thumbnail" src={properties.snippet.thumbnails.medium.url} />
                                 <ThumbTitle><span>{properties.snippet.title}</span></ThumbTitle>
                             </ListContainer>
                         </VideoListItem>

@@ -7,7 +7,7 @@ import Section from '../components/Section'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
-import faq from '../data/faq.json'
+import faq from '../data/faq'
 
 const StyledSubTitle = styled(SubTitle)`
     flex: 0 0 100%;
