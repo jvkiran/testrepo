@@ -86,7 +86,7 @@ const StyledContentRow = styled(ContentRow)`
     .slick-next {
         right: -1.5rem;
     }
-    
+
     @media screen and (${responsive.sm.min}) {
         .slick-prev {
             left: -1.5rem;
@@ -98,11 +98,30 @@ const StyledContentRow = styled(ContentRow)`
     }
 `
 
+const HeightRow = styled.div`
+    min-height: 280px;
+
+    @media screen and (${responsive.sm.min}) {
+        min-height: 0;
+    }
+`
+
+const RatioContainer = styled.div`
+    margin: 16px;
+`
+
+const AspectRatio = styled.div`
+    position: relative;
+    height: 0 !important; /* stylelint-disable-line declaration-no-important */
+    padding-bottom: 56.25%;
+`
+
 const VideoTitle = styled.h1`
     font-size: ${fonts.size.h4};
     color: rgb(${colors.white});
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 0;
     height: calc(2 * 1.25 * 1.5rem);
     overflow: hidden;
 
@@ -294,21 +313,25 @@ class SectionContent extends Component {
         }
         return (
             <StyledContentRow>
-                {!this.state.player ? (
-                    <ContentRow>
-                        <VideoTitle>{this.state.title}</VideoTitle>
-                        <VideoDescription>{this.state.description}<span /></VideoDescription>
-                        <PlayButton onClick={() => this.openVideo(this.state.id)} src={playIcon} />
-                    </ContentRow>
-                ) : (
-                    <VideoContainer>
-                        <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
-                        <StyledReactPlayer
-                            controls
-                            config={{ youtube: { playerVars: { color: 'white' } } }}
-                            url={this.state.id} />
-                    </VideoContainer>
-                )}
+                <HeightRow>
+                    {!this.state.player ? (
+                        <RatioContainer>
+                            <AspectRatio>
+                                <VideoTitle>{this.state.title}</VideoTitle>
+                                <VideoDescription>{this.state.description}<span /></VideoDescription>
+                                <PlayButton onClick={() => this.openVideo(this.state.id)} src={playIcon} />
+                            </AspectRatio>
+                        </RatioContainer>
+                    ) : (
+                        <VideoContainer>
+                            <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
+                            <StyledReactPlayer
+                                controls
+                                config={{ youtube: { playerVars: { color: 'white' } } }}
+                                url={this.state.id} />
+                        </VideoContainer>
+                    )}
+                </HeightRow>
                 <Slider {...settings}>
                     {this.props.items.map((properties, index) => (
                         <VideoListItem key={index} onClick={() => this.selectVideo(properties, index)}> {/* eslint-disable-line react/no-array-index-key*/}
