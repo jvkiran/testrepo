@@ -8,19 +8,6 @@ import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
 import faq from '../data/faq.json'
-import { responsive, colors } from '../styles'
-
-const StyledLine = styled.div`
-    width: 100%;
-    margin-top: -6rem;
-    margin-bottom: 6rem;
-    border-bottom: 1px solid rgb(${colors.lightGrey});
-
-    @media screen and (${responsive.sm.max}) {
-        margin-top: -2rem;
-        margin-bottom: 2rem;
-    }
-`
 
 const StyledSubTitle = styled(SubTitle)`
     flex: 0 0 100%;
@@ -47,7 +34,6 @@ const StyledQaA = styled.div`
 const Faq = () => (
     <Section id="faq">
         <ContentRow>
-            <StyledLine />
             <Cell maxWidth="small" width={1}>
                 <Title>FAQ</Title>
             </Cell>

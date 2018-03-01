@@ -13,7 +13,7 @@ import ContentRow from '../components/ContentRow'
 import videos from '../data/videos.json'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
-import { colors, fonts } from '../styles'
+import { colors, fonts, responsive } from '../styles'
 
 const Background = styled.div`
     position: absolute;
@@ -23,6 +23,7 @@ const Background = styled.div`
     left: -1rem;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     opacity: .2;
     z-index: 0;
 `
@@ -31,9 +32,18 @@ const StyledTitle = styled(Title)`
     margin-bottom: 0;
 `
 
+const CenterParagraph = styled(Paragraph)`
+    text-align: center;
+`
+
 const StyledContentRow = styled(ContentRow)`
     max-width: 74rem;
+    margin-bottom: 2.5rem;
     z-index: 1;
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: 0;
+    }
 
     .slick-dots {
         bottom: -3rem;
@@ -68,6 +78,24 @@ const StyledContentRow = styled(ContentRow)`
             font-size: 1.5rem;
         }
     }
+
+    .slick-prev {
+        left: -1.5rem;
+    }
+
+    .slick-next {
+        right: -1.5rem;
+    }
+    
+    @media screen and (${responsive.sm.min}) {
+        .slick-prev {
+            left: -1.5rem;
+        }
+
+        .slick-next {
+            right: -1.5rem;
+        }
+    }
 `
 
 const VideoTitle = styled.h1`
@@ -75,6 +103,14 @@ const VideoTitle = styled.h1`
     color: rgb(${colors.white});
     text-align: center;
     margin-bottom: 2rem;
+    height: calc(2 * 1.25 * 1.5rem);
+    overflow: hidden;
+
+    @media screen and (${responsive.tablet.min}) {
+        height: calc(1 * 1.25 * 1.5rem);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 `
 
 const VideoDescription = styled(Paragraph)`
@@ -139,9 +175,14 @@ const VideoListItem = styled.div`
 `
 
 const ListContainer = styled.div`
-    margin: 0 10px;
     color: rgb(${colors.black});
     background: rgb(${colors.white});
+    max-width: 21.3rem;
+    margin: 0 auto;
+    
+    @media screen and (${responsive.sm.min}) {
+        margin: 0 10px;
+    }
 `
 
 const VideoThumb = styled.img`
@@ -168,21 +209,21 @@ const ThumbTitle = styled(Paragraph)`
 
 class SectionContent extends Component {
     state = {
-        title: this.props.items[0].snippet.title,
-        description: this.props.items[0].snippet.description,
+        title: '',
+        description: '',
         active: 0,
-        id: `https://www.youtube.com/watch?v=${this.props.items[0].id}`,
+        id: '',
         player: false
     }
 
     componentWillMount() {
-        this.props.changeBackground(this.props.items[0].snippet.thumbnails.maxres.url)
+        this.selectVideo(this.props.items[0], 0)
     }
 
     selectVideo(properties, index) {
         this.setState({
             title: properties.snippet.title,
-            description: properties.snippet.description,
+            description: properties.snippet.description.length > 400 ? `${properties.snippet.description.substring(0, 397)}...` : properties.snippet.description,
             active: index,
             id: `https://www.youtube.com/watch?v=${properties.id}`
         })
@@ -205,10 +246,29 @@ class SectionContent extends Component {
         const settings = {
             dots: true,
             infinite: false,
-            slidesToShow: 4,
-            slidesToScroll: 1,
             SwipeToSlide: true,
-            lazyLoad: true
+            lazyLoad: true,
+            slidesToScroll: 1,
+            slidesToShow: 4,
+            responsive: [{
+                breakpoint: 650,
+                settings:
+                    {
+                        slidesToShow: 1,
+                    }
+            }, {
+                breakpoint: 800,
+                settings:
+                    {
+                        slidesToShow: 2,
+                    }
+            }, {
+                breakpoint: 992,
+                settings:
+                    {
+                        slidesToShow: 3,
+                    }
+            }]
         }
         return (
             <StyledContentRow>
@@ -250,15 +310,15 @@ SectionContent.propTypes = {
 const VideoSlider = ({ items, ...changeBackground }) => {
     if (items.length === 0) {
         return (
-            <Paragraph>
-                Loading...
-            </Paragraph>
+            <CenterParagraph>
+                Getting videos...
+            </CenterParagraph>
         )
     } else if (items.noVideos) {
         return (
-            <Paragraph>
+            <CenterParagraph>
                 No videos available!
-            </Paragraph>
+            </CenterParagraph>
         )
     } else if (items.length > 0) {
         return (
@@ -292,7 +352,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
                         this.setState({
                             ApiResponse: data.items
                         })
-                    }, 2000)
+                    }, 2000) /* Demo. TODO: Remove the setTimeout function*/
                 })
         } else {
             this.setState({
