@@ -101,18 +101,25 @@ const Footer = () => (
                                 <img alt="Twitter" src={buttonTwitter} />
                             </a>
                             <a
-                                href={social.slack}
+                                href={social.telegram_news}
                                 rel="noopener"
                                 target="_blank"
-                                title="Slack">
-                                <img alt="Slack" src={buttonSlack} />
+                                title="Telegram News Channel">
+                                <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a
                                 href={social.telegram}
                                 rel="noopener"
                                 target="_blank"
-                                title="Telegram">
+                                title="Telegram Group Chat">
                                 <img alt="Telegram" src={buttonTelegram} />
+                            </a>
+                            <a
+                                href={social.slack}
+                                rel="noopener"
+                                target="_blank"
+                                title="Slack">
+                                <img alt="Slack" src={buttonSlack} />
                             </a>
                             <a
                                 href={social.linkedin}
@@ -133,24 +140,16 @@ const Footer = () => (
                     <StyledContact>
                         <Grid>
                             <Cell width={1 / 2}>
+                                <a href="https://oceanprotocol.com">oceanprotocol.com</a>
+                            </Cell>
+
+                            <Cell width={1 / 2}>
                                 <div className="address">
-                                    <h3 className="address__title">Office {company.address.singapore.city}</h3>
                                     {company.address.singapore.location}<br />
                                     {company.address.singapore.street}<br />
                                     {company.address.singapore.street_additional}<br />
                                     {company.address.singapore.city}, {company.address.singapore.zip}<br />
                                     {company.address.singapore.country}
-                                </div>
-                            </Cell>
-
-                            <Cell width={1 / 2}>
-                                <div className="address">
-                                    <h3 className="address__title">Office {company.address.berlin.city}</h3>
-                                    {company.address.berlin.location}<br />
-                                    {company.address.berlin.street}<br />
-                                    {company.address.berlin.street_additional}<br />
-                                    {company.address.berlin.zip} {company.address.berlin.city}<br />
-                                    {company.address.berlin.country}
                                 </div>
                             </Cell>
                         </Grid>
