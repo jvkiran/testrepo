@@ -9,7 +9,6 @@ import Paragraph from '../components/Paragraph'
 import SubscribeForm from '../components/SubscribeForm'
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
-import buttonSlack from '../assets/buttons/slack.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import { colors, responsive, fonts } from '../styles'
@@ -113,13 +112,6 @@ const Footer = () => (
                                 target="_blank"
                                 title="Telegram Group Chat">
                                 <img alt="Telegram" src={buttonTelegram} />
-                            </a>
-                            <a
-                                href={social.slack}
-                                rel="noopener"
-                                target="_blank"
-                                title="Slack">
-                                <img alt="Slack" src={buttonSlack} />
                             </a>
                             <a
                                 href={social.linkedin}
