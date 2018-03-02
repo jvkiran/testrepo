@@ -19,15 +19,29 @@ import { colors, fonts, responsive, transitions } from '../styles'
 
 const slideRight = keyframes`
     0% {
-        background-position-x: 0%;
+        transform: translate3d(-49px, 0, 0);
     }
 
     33% {
-        background-position-x: 223%;
+        transform: translate3d(49px, 0, 0);
     }
 
     100% {
-        background-position-x: 223%;
+        transform: translate3d(49px, 0, 0);
+    }
+`
+
+const slideBottom = keyframes`
+    0% {
+        transform: translate3d(0, -49px, 0) rotate(180deg);
+    }
+
+    33% {
+        transform: translate3d(0, 49px, 0) rotate(180deg);
+    }
+
+    100% {
+        transform: translate3d(0, 49px, 0) rotate(180deg);
     }
 `
 
@@ -154,24 +168,15 @@ const StyledDataTransfer = styled.div`
 const StyledDataDots = styled.div`
     width: 25%;
     height: 100%;
-    background: ${({ img }) => `url(${img}) repeat-x center`};
-    background-position-x: 0%;
-    animation: ${slideRight} 3s ease 0 infinite;
+    background: ${({ img }) => `url(${img}) repeat-x left`};
+    animation: ${slideRight} 3s ease-in-out 0s infinite;
 
     @media screen and (${responsive.md.max}) {
-        transform: rotate(180deg);
+        animation-name: ${slideBottom};
     }
 
     @media screen and (${responsive.sm.max}) {
         height: 100vw;
-
-        &:first-child {
-            transform: translate3d(50%, -60px, 0) rotate(-90deg);
-        }
-
-        &:nth-child(2) {
-            transform: translate3d(-50%, 60px, 0) rotate(-90deg);
-        }
     }
 `
 
