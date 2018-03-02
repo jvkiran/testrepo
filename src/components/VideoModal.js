@@ -14,7 +14,8 @@ const StyledClose = styled.img`
     right: 1.5rem;
     z-index: 21;
 
-    &:hover {
+    &:hover,
+    &:focus {
         opacity: .7;
     }
 `
@@ -56,7 +57,7 @@ const YoutubeModal = styled.div`
     right: auto;
     bottom: auto;
     border: 0;
-    background: rgb(20, 20, 20);
+    background: rgb(${colors.black});
     overflow: auto;
     border-radius: 0;
     outline: none;

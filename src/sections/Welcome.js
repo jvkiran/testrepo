@@ -1,16 +1,16 @@
-/* global gtag */
-
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { fadeInUp } from 'react-animations'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
-import Button from '../components/Button'
 import SocialHero from '../components/SocialHero'
+import VideoModal from '../components/VideoModal'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
 import dexLogo from '../assets/logos/dex.svg'
 import wavesStatic from '../assets/misc/waves.png'
+import videoThumb from '../assets/misc/video-thumb.jpg'
+import videoThumb2x from '../assets/misc/video-thumb@2x.jpg'
 import { colors, responsive, fonts, layout } from '../styles'
 
 import Waves from '../components/Waves'
@@ -82,7 +82,7 @@ const animation = keyframes`
 
 const StyledTagline = styled(Title)`
     font-size: ${fonts.size.h1};
-    margin-top: 20%;
+    margin-top: 15%;
     margin-bottom: 1.5rem;
     text-align: center;
     color: #fff;
@@ -104,7 +104,7 @@ const StyledTagline = styled(Title)`
     }
 
     @media screen and (${responsive.smHeight.max}) {
-        font-size: ${fonts.size.h4};
+        font-size: ${fonts.size.h3};
     }
 `
 
@@ -136,14 +136,38 @@ const StyledPoweredBy = styled.div`
     }
 `
 
-const StyledButton = styled(Button)`
-    margin: auto;
-    padding: 1.25rem 2.7rem;
-    animation: ${animation} 1.5s 1s backwards;
+const StyledVideoThumbnail = styled.div`
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .6);
+    cursor: pointer;
+    max-height: 180px;
+    background: rgb(${colors.black});
+    animation: ${animation} 1.75s .5s backwards;
+
+    img {
+        opacity: .9;
+        transition: .2s ease-out;
+        border: .4rem solid #fff;
+    }
+
+    &:hover,
+    &:focus {
+        transform: translate3d(0, -.05rem, 0);
+        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .6);
+
+        img {
+            opacity: 1;
+        }
+    }
 `
 
+const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
+
 const StyledSocialHero = styled.aside`
-    margin-top: 3rem;
+    margin-top: 1rem;
 
     & a {
         animation: ${animation} 1.5s 1.5s backwards;
@@ -162,39 +186,57 @@ const StyledSocialHero = styled.aside`
     }
 `
 
-const Welcome = () => (
-    <StyledHero viewport fontColor={colors.white} id="welcome">
-        <StyledHeroContent>
-            <ContentRow>
-                <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
-            </ContentRow>
-            <ContentRow narrow>
-                <StyledPoweredBy>
-                    <p>Powered by</p>
-                    <a href="https://www.bigchaindb.com/">
-                        <img alt="BigchainDB Logo" src={bigchainDBLogo} />
-                    </a>
-                    <a href="https://www.dex.sg/">
-                        <img alt="Dex Logo" src={dexLogo} />
-                    </a>
-                </StyledPoweredBy>
+class Welcome extends React.Component {
+    state = {
+        videoUrl: ''
+    }
 
-                <a href="https://token.oceanprotocol.com">
-                    <StyledButton onClick={() => gtag('event', 'whitelist', { 'event_category': 'click', 'event_label': 'button' })}>
-                        Get whitelisted for the token pre-launch
-                    </StyledButton>
-                </a>
+    openVideo = (link) => this.setState({ videoUrl: link })
 
-            </ContentRow>
+    closeModal = () => {
+        this.setState({ videoUrl: '' })
+    }
 
-            <StyledSocialHero>
-                <SocialHero />
-            </StyledSocialHero>
-        </StyledHeroContent>
-        <StyledWaves>
-            <div className="waves__background" ref={node => Waves(node)} />
-        </StyledWaves>
-    </StyledHero>
-)
+    render() {
+        return (
+            <StyledHero viewport fontColor={colors.white} id="welcome">
+                <StyledHeroContent>
+                    <ContentRow>
+                        <StyledTagline>A Decentralized Data Exchange Protocol to Unlock Data for AI</StyledTagline>
+                    </ContentRow>
+                    <ContentRow narrow>
+                        <StyledPoweredBy>
+                            <p>Powered by</p>
+                            <a href="https://www.bigchaindb.com/">
+                                <img alt="BigchainDB Logo" src={bigchainDBLogo} />
+                            </a>
+                            <a href="https://www.dex.sg/">
+                                <img alt="Dex Logo" src={dexLogo} />
+                            </a>
+                        </StyledPoweredBy>
+
+                        <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
+                            <img
+                                alt="Ocean Protocol Video"
+                                src={videoThumb}
+                                srcSet={srcSet} />
+                        </StyledVideoThumbnail>
+
+                    </ContentRow>
+
+                    <StyledSocialHero>
+                        <SocialHero />
+                    </StyledSocialHero>
+                </StyledHeroContent>
+
+                <StyledWaves>
+                    <div className="waves__background" ref={node => Waves(node)} />
+                </StyledWaves>
+
+                <VideoModal onCloseModal={this.closeModal} source={this.state.videoUrl} />
+            </StyledHero>
+        )
+    }
+}
 
 export default Welcome

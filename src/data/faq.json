@@ -1,303 +1,194 @@
 [
-  {
-    "title": "Overview",
-    "questions": [
-      {
-        "question": "What is Ocean Protocol?",
-        "answer": "Ocean Protocol is a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.<br><br>Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner."
-      },
-      {
-        "question": "How does Ocean Protocol work?",
-        "answer": "Ocean Protocol is at once a business, technical, and governance framework that is interwoven together to allow data and services to be shared and sold, in a secure manner. Ocean Protocol stores metadata, links to data, provides a licensing framework and has toolsets for pricing. A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset."
-      },
-      {
-        "question": "What problem does Ocean Protocol solve?",
-        "answer": "Ocean Protocol unlocks data so it can be used productively.<br><br>The world’s data is growing exponentially yet is massively under-utilized. Most companies have tremendous amounts of data, but have difficulty exploiting it. Conversely, many others are starving for data, particularly in AI. Ocean Protocol allows data providers to share data, while maintaining control and having transparency."
-      },
-      {
-        "question": "Who are the main participants in Ocean Protocol?",
-        "answer": "The main actors in Ocean Protocol are data providers, data consumers, data marketplaces, service providers and network keepers. Data providers offer data. Data consumers obtain data for their own use. Data marketplaces connect data producers and data consumers. Service providers provision computation, storage and algorithms for sale. Network keepers support Ocean’s protocol by running nodes within the network. Please refer to our <a href=\"#papers\">Marketplace Framework<\/a> for more details."
-      }
-    ]
-  },
-  {
-    "title": "Organizational",
-    "questions": [
-      {
-        "question": "What is Ocean Protocol Foundation?",
-        "answer": "It is a Singapore based non-profit foundation. Its mandate is to ensure open access to the protocol and platform, provide long-term governance, community and ecosystem, and be a custodian of funds raised. DEX Pte Ltd and BigchainDB GmBH are the founders of Ocean Protocol Foundation Limited. "
-      },
-      {
-        "question": "What is the relationship between Ocean Protocol and DEX?",
-        "answer": "The DEX product is an apache licensed reference marketplace built on Ocean Protocol. All other data marketplaces can re-use the DEX code and logic to build marketplace products."
-      },
-      {
-        "question": "What is the relationship between Ocean Protocol and BigchainDB?",
-        "answer": "BigchainDB will develop the protocol and network for Ocean Protocol. For details about the technical architecture, refer to the <a href=\"#papers\">technical white paper<\/a>."
-      },
-      {
-        "question": "Does Ocean Protocol use BigchainDB?",
-        "answer": "BigchainDB is a persistent data store with blockchain characteristics of decentralized control, security and assets. Ocean Protocol does not use BigchainDB except as one of the many potential services to integrate into."
-      },
-      {
-        "question": "Where can I find a development roadmap?",
-        "answer": "Please refer to our <a href=\"#papers\">whitepaper<\/a> for development roadmap."
-      },
-      {
-        "question": "Is your project open sourced?",
-        "answer": "Yes. All implementations of the protocol are open source. We encourage others to build other implementations."
-      },
-      {
-        "question": "Where can I go for more information?",
-        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a>, our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> or <a href=\"https://oceanprotocol.com\">website<\/a>.<br><br> Chat with us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ\">Slack<\/a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg\">Telegram<\/a>.<br><br>Our <a href=\"#papers\">whitepaper<\/a> is a good resource for information on Ocean Protocol"
-      },
-      {
-        "question": "How can I get involved?",
-        "answer": "We value the support of our community and we are thankful for all the contributions we get at <a href=\"mailto:joinus@oceanprotocol.com\">joinus@oceanprotocol.com</a>."
-      },
-      {
-        "question": "Will there be an Ocean Protocol token launch?",
-        "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a> or on our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> to stay in touch with the evolution of our project."
-      }
-    ]
-  },
-  {
-    "title": "Business",
-    "questions": [
-      {
-        "question": "Who are Ocean Protocol’s competitors?",
-        "answer": "Ocean is a protocol and network on which data marketplaces can be built to unlock data for sharing and selling. It enables data to be shared. Most other projects are decentralized / centralized marketplaces or data brokers. Ocean is complementary to both centralized & decentralized marketplaces, because it provides an additional channel for the marketplaces to publish their services. We consider projects like Enigma and Datum to be potential partners."
-      },
-      {
-        "question": "Who are Ocean’s partners and early customers?",
-        "answer": "Singapore is the lead government partner for Ocean Protocol. Singapore is supporting an 18-month development roadmap with DEX and Ocean Protocol Foundation. We are partnering up with numerous multinationals from insurance, pharma, automotive, and other industries to develop the technology and provide data.<br><br>Please refer to our token distribution document for more details."
-      },
-      {
-        "question": "What are the risks of Ocean Protocol?",
-        "answer": "There are many risks - technical, regulatory, business and financial risk. Please refer to our token distribution document for more details."
-      }
-    ]
-  },
-  {
-    "title": "Token and Distribution",
-    "questions": [
-        {
-            "question": "What is the role of the Ocean Token?",
-            "answer": "Ocean Tokens act as the native internal currency that is inseparable from the protocol and network. Tokens can be used to buy and sell data and services, incentivize the curation of public data and reward network keepers to maintain the network."
-        },
-        {
-            "question": "Is Ocean Token an ERC20 token?",
-            "answer": "Ocean Tokens will be issued as a native token for the Ocean network. It will not be issued as an ERC20 token."
-        },
-        {
-            "question": "What is the total supply of Ocean Tokens?",
-            "answer": "The total supply of Ocean Tokens is 1.41 Billion."
-        },
-        {
-            "question": "What are the details for the Ocean Token distribution?",
-            "answer": "Please refer to our <a href=\"#papers\">token distribution document<\/a> or <a href=\"https://blog.oceanprotocol.com\">blog<\/a> for more details.<br><br>From January 2018 onwards, Ocean Protocol Foundation will release 11.5% of Ocean Tokens to acquirers in two phases - Pre-Launch Token distribution and Network Launch Token distributions. <br><br>The Pre-Launch distribution will have both an early access for institutions (January 2018) as well as a public distribution starting on March 7th, 2018 that is open to all qualified acquirors. The overall Pre-Launch target is 18M€ in exchange for 90 million Ocean Tokens at a price of 0.20€/Ocean Token representing 6.4% of the token supply, half from institutional investors and half from the community.<br><br>The Network Launch Token distribution will be held in Q1/2019 when the network is ready. The target raise and token price are not yet set, however 5.1% of the token supply (71.5 million Ocean Tokens) will be released."
-        },
-        {
-            "question": "Why are there two public token distributions - Pre-Launch and Network Launch?",
-            "answer": "The Pre-Launch funds will be used to build the protocol, network and ecosystem. Once we’ve succeeded, then we’ve earned the right to ask the community to fund the next phase to scale the ecosystem. We believe that this is fair and accountable to the community."
-        },
-        {
-            "question": "When is the token Launch?",
-            "answer": "The Pre-Launch Token distribution will happen in the first week of March. Whitelisting begins on February 15 at 09:00 UTC+1. The Network Launch Token distribution is planned for Q1/2019 to coincide with the network launch."
-        },
-        {
-            "question": "How do we get on the whitelist for the token launch?",
-            "answer": "Go to oceanprotocol.com starting on February 15 at 09:00 UTC+1. The first 10,000 submissions will be accepted.<br><br>All acquirors will be identified and checked against standard lists for anti-money laundering, terrorism and sanctions. Once successfully verified, acquirors will be whitelisted and further instructions will follow. <br><br>Complementary information concerning the whitelist can be found in our <a href=\"https://blog.oceanprotocol.com/whitelisting-instructions-e5bd11a828cf\">blog post<\/a>."
-        },
-        {
-            "question": "How long will the whitelisting last? ",
-            "answer": "Two weeks. The whitelisting starts on February 15 at 09:00 UTC+1 and closes on March 1 at 09:00 UTC+1, however, only the first 10,000 submissions will be accepted."
-        },
-        {
-            "question": "How many people can be whitelisted? ",
-            "answer": "The number of people who will be whitelisted is 10,000."
-        },
-        {
-            "question": "What is the minimum and maximum individual contribution for the Ocean Token public pre-launch distribution?",
-            "answer": "The minimum contribution amount is 250€. The maximum varies depending on the number of people who submit their documents for whitelisting. If the whitelisting limit is reached at 10,000, the maximum contribution will be 1250€. You can find the detailed table in our <a href=\"https://blog.oceanprotocol.com/whitelisting-instructions-e5bd11a828cf\">whitelisting guidelines on out blog<\/a>."
-        },
-        {
-            "question": "How do I know that I am one of the first 10,000 on the whitelist? ",
-            "answer": "You will receive an email from us that confirms your eligibility to contribute."
-        },
-        {
-            "question": "How much is being raised in the public Pre-Launch? ",
-            "answer": "The public Pre-Launch target raise is €9M / $11M for 3.2% of the token supply."
-        },
-        {
-            "question": "What will the token launch proceeds be used for?",
-            "answer": "To build the protocol, network, marketplace and ecosystem around Ocean Protocol. In particular, funds within the Foundation will be used to strike strategic partnerships with enterprise, government, and attract developers & researchers to work on the protocol and marketplace development. Please refer to our token distribution document for more details."
-        },
-        {
-            "question": "What is the token distribution?",
-            "answer": "45% keepers, 25% acquirors,  20% founders, 10% Foundation"
-        },
-        {
-            "question": "What is the Hard cap for the Ocean Token public pre-launch Token distribution?",
-            "answer": "The hard cap is 9M€ / $11M USD."
-        },
-        {
-            "question": "Does being whitelisted guarantee that I will be able to contribute?",
-            "answer": "We expect that some contributors will not take up their entire allocation amount, so there is a good likelihood that most of the people whitelisted will be able to contribute, but this isn’t guaranteed. The individual cap is designed so that if everyone contributes the maximum amount, 72% of the whitelisted contributors will be able to contribute. <br><br>If someone contributes after the cap has already been reached, their funds will be reimbursed to the same wallet from which it came from. Also, anyone that contributes more than the individual cap will receive the excess funds back."
-        },
-        {
-            "question": "When will I receive my refund?",
-            "answer": "Any refund and the email notification regarding it will be made within 45 days of the close of the Pre-Launch Token Exchange."
-        },
-        {
-            "question": "How will I know where I stand in the whitelisting queue?",
-            "answer": "When you whitelist, if we’ve already received 10,000 submissions, the whitelisting tool will display a notification that we’ve reached the limit. We will also announce on our official channels.<br><br>We encourage you to continue to submit your documents before March 1 to gain a slot on the priority list for the network launch token exchange in Q1/2019."
-        },
-        {
-            "question": "What will happen if the hard cap is not reached?",
-            "answer": "If all whitelisted individuals are able to contribute and there is still excess capacity of tokens within the 9M€ target raise, the remaining portion of the Ocean Tokens will be saved and re-allocated for the Network Launch Token Exchange."
-        },
-        {
-            "question": "What is the token price?",
-            "answer": "The token price is 0.20€/Ocean Token during the Pre-Launch distribution. For the Network Launch distribution, the price has not yet been set."
-        },
-        {
-            "question": "Are there discounts?",
-            "answer": "There are no discounts. Everyone gets the same deal within each phase. "
-        },
-        {
-            "question": "Will there be a lockup or vesting period for Ocean Tokens acquired during the Pre-Launch?",
-            "answer": "Yes, acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from Network Launch. "
-        },
-        {
-            "question": "Is there vesting or lockups for Founder tokens?",
-            "answer": "BigchainDB, DEX and the Foundation itself receive the tokens in 6 equal tranches over 5 years, signalling our commitment to the long-term success of the protocol, network and ecosystem."
-        },
-        {
-            "question": "When will the token issuance start?",
-            "answer": "Token issuance will start at network launch planned to for Q1/2019."
-        },
-        {
-            "question": "Which contribution methods are accepted?",
-            "answer": "We accept Ethereum (ETH) only."
-        },
-        {
-            "question": "When will the exchange rate between Ethereum and Ocean token be set?",
-            "answer": "The peg between Ocean and Ethereum will be set no later than March 6 at 09:00 UTC+1."
-        },
-        {
-            "question": "How will you ensure fiat-crypto conversion?",
-            "answer": "We only accept only Ethereum (ETH) and do not provide any fiat-crypto conversion service. For that purpose you can use existing exchange platform."
-        },
-        {
-            "question": "Which wallets/addresses are compatible?",
-            "answer": "We can only accept payments made from wallets and not from exchange addresses. If you send your contribution from an exchange and any amounts need to be refunded, your ETH will be sent to an invalid address and it will be lost. Therefore we highly encourage you to send funds from a hard wallet or myetherwallet."
-        },
-        {
-            "question": "Can I use more than one Ethereum address? ",
-            "answer": "No, the Ethereum address you provide us with during the registration is the only address that we will accept. "
-        },
-        {
-            "question": "How to add Ocean Tokens to a wallet?",
-            "answer": "A complete guide about storing Ocean Tokens in your wallet will come closer to network launch. Please note that as it is a native token (and not ethereum-based or ERC20), you will not be able to store the tokens in Ethereum wallets (such as MyEthereumWallet). We will develop our own wallet by the network launch time."
-        },
-        {
-            "question": "When can I start using Ocean Tokens?",
-            "answer": "Ocean tokens can be used when the network is launched."
-        },
-        {
-            "question": "Is the token distribution open to US acquirors?",
-            "answer": "The Pre-Launch and Network Launch token distributions are open to accredited US and Canadian acquirors only."
-        }
-    ]
-},
-{
-    "title": "Application process & documentation",
-    "questions": [
-        {
-            "question": "Do I have to go through a Know Your Customer (KYC) or Anti-Money Laundering (AML) process? ",
-            "answer": "Our whitelisting process will collect all the required documentation to determine your eligibility and meet the relevant Know Your Customer (KYC) as well as Anti-Money Laundering (AML)."
-        },
-        {
-            "question": "Do you accept document proofs in a language other than English? ",
-            "answer": "We accept proof of residence documents in all languages."
-        },
-        {
-            "question": "Are there any countries banned from the Ocean token distribution?",
-            "answer": "Residents of the People’s Republic of China and North Korea are prohibited from participating.<br><br>A detailed explanation of the requirements by country is provided in <a href=\"https://blog.oceanprotocol.com/documents-you-need-to-prepare-for-the-ocean-protocol-pre-launch-distribution-whitelist-33f371e2d4f9\">our blog<\/a>."
-        },
-        {
-            "question": "Please explain what security measures are taken to keep my data safe.",
-            "answer": "Your data will be handled with utmost care and kept in secured servers in compliance with the strictest privacy regulations on Earth, those of the <a href=\"https://www.eugdpr.org/\">EU GDPR.<\/a>"
-        },
-        {
-            "question": "Will I get a confirmation email?",
-            "answer": "Yes, you will receive an email once you have submitted your details and once they have been checked against the relevant Know Your Customer (KYC) as well as Anti-Money Laundering (AML) guidelines. If further documentation is required, our team will contact you via email."
-        },
-        {
-            "question": "Who is an Accredited investor?",
-            "answer": "Accredited Investors is a term used by the US SEC and FINTRAC, the Canadian equivalent of SEC. Accredited investors include natural individuals, banks, insurance companies,  brokers and trusts.<br><br> For an individual to be an accredited investor, an annual income of at least 200,00 USD/CAD (300,000 USD/CAD together with the spouse) respectively is required, for the past two years and the current year or a net worth of 1,000,000 USD/CAD respectively excluding his/her family home.<br><br>For an entity to be an accredited investor, it must have a net worth of at least 5,000,000 USD / CAD respectively."
-        },
-        {
-            "question": "Is it possible to contribute on behalf of my company?",
-            "answer": "Yes, it is possible to contribute on behalf of your company. During the onboarding, you will be asked if you are acting on behalf of your company, please select the appropriate response. If your company is incorporated in the US or Canada, your company will have to be an accredited investor entity and the relevant Know your Customer (KYC) guidelines will apply. Please refer to <a href=\"https://blog.oceanprotocol.com/documents-you-need-to-prepare-for-the-ocean-protocol-pre-launch-distribution-whitelist-33f371e2d4f9\">our blog post<\/a> for the complementary information."
-        },
-        {
-            "question": "I have dual Citizenship and have houses and property in both the countries, which documents should I provide as address proof?",
-            "answer": "In this case, please provide the house address and its document proof as the proof of address for the country where you pay your taxes or are registered / obliged to pay taxes in."
-        },
-        {
-            "question": "I live in the USA / Canada and I am not a Accredited investor, can I still participate in the Pre-launch of Ocean token distribution?",
-            "answer": "Unfortunately not. We must abide by all local laws."
-        },
-        {
-            "question": "Can I provide a digital signature to prove investor accreditation,  or do I need to move my funds to an exchange?",
-            "answer": "In order to prove investor accreditation, you can either provide us with <br>a) an exchange statement / screenshot <br>or <br>b) list of your addresses showing an outgoing verification transaction of 0.00587345 ETH. <br><br>In case a): Please send us a screenshot / account statement of the exchange showing your name. If that is not the case, please also attach your profile that shows your name. In this case we would need some kind of connector in between, like a visible email or an account ID that shows on both screenshots. <br><br>In case b): For all addresses that you want to include, sending the addresses will be sufficient. Please make sure to include an outgoing transaction of 0.00587345 ETH for each address that you want to include. This is for us to make sure that this address is attributed to you. Ocean Protocol is happy to provide you with a different one for privacy reasons."
-        },
-        {
-            "question": "Do I need to show all my assets to prove that I am an accredited investor?",
-            "answer": "We do not need to see all of your assets, only enough to prove that your net worth exceeds the minimum threshold or that your income meets the requirements."
-        },
-        {
-            "question": "I am based in the USA, and while I have my Social Security Number (SSN) available, I do not have a physical copy of the Social Security Card (SSC) available. Do you need a photocopy of this card?",
-            "answer": "We need to see a physical document that states your Social Security number. This can be a photocopy of your SSC, a letter from the Social Security Administration that shows your SSN, or it can be a copy of a W2 which shows your SSN."
-        },
-        {
-            "question": "I just moved in my new apartment and don't have utility bills. I do have the contract signed between me and the owner though. Would that work?",
-            "answer": "For EU citizens an official contract with your name reflected on it or a city registration document (e.g. anmeldung in Germany) with your name and address on it would suffice, as long as it is less than 3 months old."
-        },
-        {
-            "question": "Can I submit a mobile phone bill as a Proof of Residence?",
-            "answer": "Only a fixed line telephone bill can be accepted as a proof of address."
-        },
-        {
-            "question": "We’ve moved house and changed addresses. How does this affect the KYC process?",
-            "answer": "This does not affect KYC process as long as you can provide valid proof of address for your new residence"
-        },
-        {
-            "question": "Why do you want all of this sensitive information from me? (Social security number, passport)",
-            "answer": "We need to collect this information for full compliance with KYC, AML and SEC laws, particularly because the crypto space is under enhanced scrutiny for money laundering."
-        },
-        {
-            "question": "Is there an encrypted way to send my SSN, for security reasons?",
-            "answer": "As part of KYC, we need to see physical proof of your SSN (either a copy of your Social Security card, a letter from the Social Security Administration, or a copy of your W2). Therefore, an encrypted copy of your SSN will not suffice."
-        },
-        {
-            "question": "For how long will the token received during the public pre-launch, be locked?",
-            "answer": "Acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from Network Launch. This means that the total hold period is 18 months until an acquiror receives 100% of their Ocean tokens. This encourages long-term community members to participate and disincentives speculators."
-        },
-        {
-            "question": "Is it possible to provide P.O. box No. as a proof of residence?",
-            "answer": "No, we cannot accept only P.O. box No. as a proof of address.  A proof of residence must have identifiable parameters such as street name / no. House No., etc. and the entire address should be reflected on your proof of address. If you live in a rural area that does not have regular street names and numbers, please provide other documentation such as your land title deed, rental contract and other materials that can help the KYC team make a determination in your favor."
-        },
-        {
-            "question": "If I’m investing on behalf the company, is it enough to provide my Proof of address only?",
-            "answer": "No, we need to have a proof of address in company’s name and another in the person’s name who is investing or acting on behalf of the company."
-        },
-        {
-            "question": "Is the front and back required for both passport & ID card?",
-            "answer": "Yes. For the ID card, both front and back are required. For passports, the front and the identification page are required."
-        }
-    ]
-}
+    {
+        "title": "Overview",
+        "questions": [
+            {
+                "question": "What is Ocean Protocol?",
+                "answer": "Ocean Protocol is a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.<br><br>Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner."
+            },
+            {
+                "question": "How does Ocean Protocol work?",
+                "answer": "Ocean Protocol is at once a business, technical, and governance framework that is interwoven together to allow data and services to be shared and sold, in a secure manner. Ocean Protocol stores metadata, links to data, provides a licensing framework and has toolsets for pricing. A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset."
+            },
+            {
+                "question": "What problem does Ocean Protocol solve?",
+                "answer": "Ocean Protocol unlocks data so it can be used productively.<br><br>The world’s data is growing exponentially yet is massively under-utilized. Most companies have tremendous amounts of data, but have difficulty exploiting it. Conversely, many others are starving for data, particularly in AI. Ocean Protocol allows data providers to share data, while maintaining control and having transparency."
+            },
+            {
+                "question": "Who are the main participants in Ocean Protocol?",
+                "answer": "The main actors in Ocean Protocol are data providers, data consumers, data marketplaces, service providers and network keepers. Data providers offer data. Data consumers obtain data for their own use. Data marketplaces connect data producers and data consumers. Service providers provision computation, storage and algorithms for sale. Network keepers support Ocean’s protocol by running nodes within the network. Please refer to our <a href=\"#papers\">Marketplace Framework<\/a> for more details."
+            }
+        ]
+    },
+    {
+        "title": "Organizational",
+        "questions": [
+            {
+                "question": "What is Ocean Protocol Foundation?",
+                "answer": "It is a Singapore based non-profit foundation. Its mandate is to ensure open access to the protocol and platform, provide long-term governance, community and ecosystem, and be a custodian of funds raised. DEX Pte Ltd and BigchainDB GmBH are the founders of Ocean Protocol Foundation Limited. "
+            },
+            {
+                "question": "What is the relationship between Ocean Protocol and DEX?",
+                "answer": "The DEX product is an apache licensed reference marketplace built on Ocean Protocol. All other data marketplaces can re-use the DEX code and logic to build marketplace products."
+            },
+            {
+                "question": "What is the relationship between Ocean Protocol and BigchainDB?",
+                "answer": "BigchainDB will develop the protocol and network for Ocean Protocol. For details about the technical architecture, refer to the <a href=\"#papers\">technical white paper<\/a>."
+            },
+            {
+                "question": "Does Ocean Protocol use BigchainDB?",
+                "answer": "BigchainDB is a persistent data store with blockchain characteristics of decentralized control, security and assets. Ocean Protocol does not use BigchainDB except as one of the many potential services to integrate into."
+            },
+            {
+                "question": "Where can I find a development roadmap?",
+                "answer": "Please refer to our <a href=\"#papers\">whitepaper<\/a> for development roadmap."
+            },
+            {
+                "question": "Is your project open sourced?",
+                "answer": "Yes. All implementations of the protocol are open source. We encourage others to build other implementations."
+            },
+            {
+                "question": "Where can I go for more information?",
+                "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a>, our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> or <a href=\"https://oceanprotocol.com\">website<\/a>.<br><br> Chat with us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ\">Slack<\/a> and <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg\">Telegram<\/a>.<br><br>Our <a href=\"#papers\">whitepaper<\/a> is a good resource for information on Ocean Protocol"
+            },
+            {
+                "question": "How can I get involved?",
+                "answer": "We value the support of our community and we are thankful for all the contributions we get at <a href=\"mailto:joinus@oceanprotocol.com\">joinus@oceanprotocol.com</a>."
+            },
+            {
+                "question": "Will there be an Ocean Protocol token launch?",
+                "answer": "Please follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/oceanprotocol\">Twitter<\/a> or on our <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://blog.oceanprotocol.com/\">blog<\/a> to stay in touch with the evolution of our project."
+            }
+        ]
+    },
+    {
+        "title": "Business",
+        "questions": [
+            {
+                "question": "Who are Ocean Protocol’s competitors?",
+                "answer": "Ocean is a protocol and network on which data marketplaces can be built to unlock data for sharing and selling. It enables data to be shared. Most other projects are decentralized / centralized marketplaces or data brokers. Ocean is complementary to both centralized & decentralized marketplaces, because it provides an additional channel for the marketplaces to publish their services. We consider projects like Enigma and Datum to be potential partners."
+            },
+            {
+                "question": "Who are Ocean’s partners and early customers?",
+                "answer": "Singapore is the lead government partner for Ocean Protocol. Singapore is supporting an 18-month development roadmap with DEX and Ocean Protocol Foundation. We are partnering up with numerous multinationals from insurance, pharma, automotive, and other industries to develop the technology and provide data.<br><br>Please refer to our token distribution document for more details."
+            },
+            {
+                "question": "What are the risks of Ocean Protocol?",
+                "answer": "There are many risks - technical, regulatory, business and financial risk. Please refer to our token distribution document for more details."
+            }
+        ]
+    },
+    {
+        "title": "Token and Distribution",
+        "questions": [
+            {
+                "question": "What is the role of the Ocean Token?",
+                "answer": "Ocean Tokens act as the native internal currency that is inseparable from the protocol and network. Tokens can be used to buy and sell data and services, incentivize the curation of public data and reward network keepers to maintain the network."
+            },
+            {
+                "question": "Is Ocean Token an ERC20 token?",
+                "answer": "Ocean Tokens will be issued as a native token for the Ocean network. It will not be issued as an ERC20 token."
+            },
+            {
+                "question": "What is the total supply of Ocean Tokens?",
+                "answer": "The total supply of Ocean Tokens is 1.41 Billion."
+            },
+            {
+                "question": "What are the details for the Ocean Token distribution?",
+                "answer": "Please refer to our <a href=\"#papers\">token distribution document<\/a> or <a href=\"https://blog.oceanprotocol.com\">blog<\/a> for more details.<br><br>From January 2018 onwards, Ocean Protocol Foundation will release 11.5% of Ocean Tokens to acquirers in two phases - Pre-Launch Token distribution and Network Launch Token distributions. <br><br>The Pre-Launch distribution will have both an early access for institutions (January 2018) as well as a public distribution starting on March 7th, 2018 that is open to all qualified acquirors. The overall Pre-Launch target is 18M€ in exchange for 90 million Ocean Tokens at a price of 0.20€/Ocean Token representing 6.4% of the token supply, half from institutional investors and half from the community.<br><br>The Network Launch Token distribution will be held in Q1/2019 when the network is ready. The target raise and token price are not yet set, however 5.1% of the token supply (71.5 million Ocean Tokens) will be released."
+            },
+            {
+                "question": "Why are there two public token distributions - Pre-Launch and Network Launch?",
+                "answer": "The Pre-Launch funds will be used to build the protocol, network and ecosystem. Once we’ve succeeded, then we’ve earned the right to ask the community to fund the next phase to scale the ecosystem. We believe that this is fair and accountable to the community."
+            },
+            {
+                "question": "When is the token Launch?",
+                "answer": "The Pre-Launch Token distribution will happen on 7th March. The Network Launch Token distribution is planned for Q1/2019 to coincide with the network launch."
+            },
+            {
+                "question": "What is the minimum and maximum individual contribution for the Ocean Token public pre-launch distribution?",
+                "answer": "The minimum contribution amount is 250€, the maximum contribution is 1250€. You can find more information in our <a href=\"https://blog.oceanprotocol.com/whitelisting-instructions-e5bd11a828cf\">whitelisting guidelines on our blog<\/a>."
+            },
+            {
+                "question": "How much is being raised in the public Pre-Launch? ",
+                "answer": "The public Pre-Launch target raise is €9M / $11M for 3.2% of the token supply."
+            },
+            {
+                "question": "What will the token launch proceeds be used for?",
+                "answer": "To build the protocol, network, marketplace and ecosystem around Ocean Protocol. In particular, funds within the Foundation will be used to strike strategic partnerships with enterprises, governments, and attract developers & researchers to work on the protocol and marketplace development. Please refer to our token distribution document for more details."
+            },
+            {
+                "question": "What is the token distribution?",
+                "answer": "45% keepers, 25% acquirors,  20% founders, 10% Foundation"
+            },
+            {
+                "question": "What is the Hard cap for the Ocean Token public pre-launch Token distribution?",
+                "answer": "The hard cap is 9M€ / $11M USD."
+            },
+            {
+                "question": "When will I receive my refund?",
+                "answer": "Any refund and the email notification regarding it will be made within 45 days of the close of the Pre-Launch Token Exchange."
+            },
+            {
+                "question": "What will happen if the hard cap is not reached?",
+                "answer": "If all whitelisted individuals are able to contribute and there is still excess capacity of tokens within the 9M€ target raise, the remaining portion of the Ocean Tokens will be saved and re-allocated for the Network Launch Token Exchange."
+            },
+            {
+                "question": "What is the token price?",
+                "answer": "The token price is 0.20€/Ocean Token during the Pre-Launch distribution. For the Network Launch distribution, the price has not yet been set."
+            },
+            {
+                "question": "Are there discounts?",
+                "answer": "There are no discounts. Everyone gets the same deal within each phase. "
+            },
+            {
+                "question": "Will there be a lockup or vesting period for Ocean Tokens acquired during the Pre-Launch?",
+                "answer": "Yes, acquirors that obtain Ocean Tokens in the Pre-Launch phase will be subject to a linear vesting of 6 months starting from Network Launch Token Distribution date."
+            },
+            {
+                "question": "Is there vesting or lockups for Founder tokens?",
+                "answer": "BigchainDB, DEX and the Foundation itself receive the tokens in 6 equal tranches over 5 years, signalling our commitment to the long-term success of the protocol, network and ecosystem."
+            },
+            {
+                "question": "When will the token issuance start?",
+                "answer": "Token issuance will start at Network Launch Token Distribution date, planned for Q1/2019."
+            },
+            {
+                "question": "Which contribution methods are accepted?",
+                "answer": "We accept Ethereum (ETH) only."
+            },
+            {
+                "question": "When will the exchange rate between Ethereum and Ocean token be set?",
+                "answer": "The peg between Ocean and Ethereum will be set no later than March 6 at 09:00 UTC+1."
+            },
+            {
+                "question": "How will you ensure fiat-crypto conversion?",
+                "answer": "We only accept only Ethereum (ETH) and do not provide any fiat-crypto conversion service. For that purpose you can use existing exchange platform."
+            },
+            {
+                "question": "Which wallets/addresses are compatible?",
+                "answer": "We can only accept payments made from wallets and not from exchange addresses. If you send your contribution from an exchange and any amounts need to be refunded, your ETH will be sent to an invalid address and it will be lost. Therefore we highly encourage you to send funds from a hard wallet or myetherwallet."
+            },
+            {
+                "question": "Can I use more than one Ethereum address? ",
+                "answer": "No, the Ethereum address you provide us with during the registration is the only address that we will accept. "
+            },
+            {
+                "question": "How to add Ocean Tokens to a wallet?",
+                "answer": "A complete guide about storing Ocean Tokens in your wallet will come closer to network launch. Please note that as it is a native token (and not ethereum-based or ERC20), you will not be able to store the tokens in Ethereum wallets (such as MyEthereumWallet). We will develop our own wallet by the network launch time."
+            },
+            {
+                "question": "When can I start using Ocean Tokens?",
+                "answer": "Ocean tokens can be used when the network is launched."
+            },
+            {
+                "question": "Please explain what security measures are taken to keep my data safe.",
+                "answer": "Your data will be handled with utmost care and kept in secured servers in compliance with the strictest privacy regulations on Earth, those of the <a href=\"https://www.eugdpr.org/\">EU GDPR.<\/a>"
+            },
+            {
+                "question": "For how long will the token received during the public Pre-Launch Token Distribution be locked?",
+                "answer": "Acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from the Network Launch Token Distribution date, scheduled for Q1 2019. This means that the total hold period is of about 18 months until an acquiror receives 100% of their Ocean tokens. This encourages long-term community members to participate and disincentives speculators."
+            }
+        ]
+    }
 ]
