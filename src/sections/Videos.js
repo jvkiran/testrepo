@@ -13,6 +13,7 @@ import ContentRow from '../components/ContentRow'
 import videos from '../data/videos'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
+import jellyfish from '../assets/misc/jelly-background.png'
 import { colors, fonts, responsive, transitions } from '../styles'
 
 const Background = styled.div`
@@ -21,6 +22,7 @@ const Background = styled.div`
     right: -1rem;
     bottom: 0;
     left: -1rem;
+    background-image: url(${jellyfish});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -268,7 +270,6 @@ class SectionContent extends Component {
             active: index,
             id: `https://www.youtube.com/watch?v=${properties.id}`
         })
-        this.props.changeBackground(properties.snippet.thumbnails.maxres.url)
     }
 
     openVideo() {
@@ -348,11 +349,10 @@ class SectionContent extends Component {
 }
 
 SectionContent.propTypes = {
-    changeBackground: PropTypes.func.isRequired,
     items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
-const VideoSlider = ({ items, ...changeBackground }) => {
+const VideoSlider = ({ items }) => {
     if (items.length === 0) {
         return (
             <CenterParagraph>
@@ -367,7 +367,7 @@ const VideoSlider = ({ items, ...changeBackground }) => {
         )
     } else if (items.length > 0) {
         return (
-            <SectionContent {...changeBackground} items={items} />
+            <SectionContent items={items} />
         )
     } else {
         return []
@@ -375,7 +375,6 @@ const VideoSlider = ({ items, ...changeBackground }) => {
 }
 
 VideoSlider.propTypes = {
-    changeBackground: PropTypes.func.isRequired,
     items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
@@ -393,11 +392,9 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
             const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${idList}&key=${ApiKey}`
             fetch(url).then((response) => response.json())
                 .then((data) => {
-                    setTimeout(() => {
-                        this.setState({
-                            ApiResponse: data.items
-                        })
-                    }, 2000) /* Demo. TODO: Remove the setTimeout function*/
+                    this.setState({
+                        ApiResponse: data.items
+                    })
                 })
         } else {
             this.setState({
@@ -418,27 +415,15 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
 const backgroundStyles = {
     position: 'relative'
 }
-class RenderSection extends Component { // eslint-disable-line react/no-multi-comp
-    state = {
-        background: ''
-    }
-    changeBackground = (newImage) => {
-        this.setState({
-            background: `url(${newImage})`
-        })
-    }
-    render() {
-        return (
-            <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
-                <Background style={{ backgroundImage: `${this.state.background}` }} />
-                <StyledContentRow>
-                    <StyledTitle white>Videos</StyledTitle>
-                </StyledContentRow>
-                <VideoSlider changeBackground={this.changeBackground} items={this.props.ApiResponse} />
-            </Section>
-        )
-    }
-}
+const RenderSection = ({ ApiResponse }) => (
+    <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
+        <Background />
+        <StyledContentRow>
+            <StyledTitle white>Videos</StyledTitle>
+        </StyledContentRow>
+        <VideoSlider items={ApiResponse} />
+    </Section>
+)
 
 RenderSection.propTypes = {
     ApiResponse: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
