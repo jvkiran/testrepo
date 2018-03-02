@@ -133,24 +133,16 @@ const Footer = () => (
                     <StyledContact>
                         <Grid>
                             <Cell width={1 / 2}>
+                                <a href="https://oceanprotocol.com">oceanprotocol.com</a>
+                            </Cell>
+
+                            <Cell width={1 / 2}>
                                 <div className="address">
-                                    <h3 className="address__title">Office {company.address.singapore.city}</h3>
                                     {company.address.singapore.location}<br />
                                     {company.address.singapore.street}<br />
                                     {company.address.singapore.street_additional}<br />
                                     {company.address.singapore.city}, {company.address.singapore.zip}<br />
                                     {company.address.singapore.country}
-                                </div>
-                            </Cell>
-
-                            <Cell width={1 / 2}>
-                                <div className="address">
-                                    <h3 className="address__title">Office {company.address.berlin.city}</h3>
-                                    {company.address.berlin.location}<br />
-                                    {company.address.berlin.street}<br />
-                                    {company.address.berlin.street_additional}<br />
-                                    {company.address.berlin.zip} {company.address.berlin.city}<br />
-                                    {company.address.berlin.country}
                                 </div>
                             </Cell>
                         </Grid>
