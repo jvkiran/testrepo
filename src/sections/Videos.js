@@ -27,12 +27,8 @@ const Background = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    opacity: .2;
+    opacity: .35;
     z-index: 0;
-`
-
-const StyledTitle = styled(Title)`
-    margin-bottom: 0;
 `
 
 const CenterParagraph = styled(Paragraph)`
@@ -110,7 +106,7 @@ const HeightRow = styled.div`
 `
 
 const RatioContainer = styled.div`
-    margin: 16px;
+    margin: 1rem;
 `
 
 const AspectRatio = styled.div`
@@ -419,7 +415,7 @@ const RenderSection = ({ ApiResponse }) => (
     <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
         <Background />
         <StyledContentRow>
-            <StyledTitle white>Videos</StyledTitle>
+            <Title white>Videos</Title>
         </StyledContentRow>
         <VideoSlider items={ApiResponse} />
     </Section>
