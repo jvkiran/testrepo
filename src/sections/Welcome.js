@@ -1,9 +1,12 @@
+/* global gtag */
+
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { fadeInUp } from 'react-animations'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
+import Button from '../components/Button'
 import SocialHero from '../components/SocialHero'
 import VideoModal from '../components/VideoModal'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
@@ -136,6 +139,12 @@ const StyledPoweredBy = styled.div`
     }
 `
 
+const StyledButton = styled(Button)`
+    margin: auto;
+    padding: 1.25rem 2.7rem;
+    animation: ${animation} 1.5s 1s backwards;
+`
+
 const StyledVideoThumbnail = styled.div`
     max-width: 280px;
     margin-left: auto;
@@ -214,6 +223,12 @@ class Welcome extends React.Component {
                                 <img alt="Dex Logo" src={dexLogo} />
                             </a>
                         </StyledPoweredBy>
+
+                        <a href="https://token.oceanprotocol.com">
+                            <StyledButton onClick={() => gtag('event', 'contribute', { 'event_category': 'click', 'event_label': 'button' })}>
+                                Participate in the Token Pre-Launch
+                            </StyledButton>
+                        </a>
 
                         <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
                             <img
