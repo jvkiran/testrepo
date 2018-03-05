@@ -15,6 +15,7 @@ import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
 import jellyfish from '../assets/misc/jelly-background.png'
 import { colors, fonts, responsive, transitions } from '../styles'
+import { apikeys } from '../constants'
 
 const Background = styled.div`
     position: absolute;
@@ -388,8 +389,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
                 video.id
             ))
 
-            const ApiKey = 'AIzaSyCneVN0OS7Ui0mH5M6gfdK--RdZn9um4_o'
-            const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${idList}&key=${ApiKey}`
+            const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${idList}&key=${apikeys.youtube}`
             fetch(url).then((response) => response.json())
                 .then((data) => {
                     this.setState({

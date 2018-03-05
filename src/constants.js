@@ -29,3 +29,7 @@ export const social = {
     'telegram': 'https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg',
     'linkedin': 'https://www.linkedin.com/company/13429589/'
 }
+
+export const apikeys = {
+    'youtube': 'AIzaSyCTDzYB0VLSuACnwc-n59famCk-aCeMm9w'
+}
