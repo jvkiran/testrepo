@@ -29,3 +29,7 @@ export const social = {
     'telegram': 'https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg',
     'linkedin': 'https://www.linkedin.com/company/13429589/'
 }
+
+export const dates = {
+    'prelaunch': '2018-03-07 08:00:00 +0000'
+}
