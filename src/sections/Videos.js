@@ -233,7 +233,7 @@ const VideoThumb = styled.img`
     padding: .4rem;
     background: rgb(${colors.black});
 
-    .active {
+    .active & {
         background: rgb(${colors.white});
     }
 `
