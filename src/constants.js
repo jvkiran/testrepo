@@ -33,3 +33,7 @@ export const social = {
 export const apikeys = {
     'youtube': 'AIzaSyCTDzYB0VLSuACnwc-n59famCk-aCeMm9w'
 }
+
+export const playlist = {
+    'youtube': 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
+}

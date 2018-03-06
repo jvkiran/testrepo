@@ -6,16 +6,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
+import smoothScroll from '../lib/smoothScroll'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
-import videos from '../data/videos'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
 import jellyfish from '../assets/misc/jelly-background.png'
 import { colors, fonts, responsive, transitions } from '../styles'
-import { apikeys } from '../constants'
+import { apikeys, playlist } from '../constants'
 
 const Background = styled.div`
     position: absolute;
@@ -99,6 +99,7 @@ const StyledContentRow = styled(ContentRow)`
 
 const HeightRow = styled.div`
     min-height: 280px;
+    position: relative;
 
     @media screen and (${responsive.sm.min}) {
         min-height: 0;
@@ -106,19 +107,51 @@ const HeightRow = styled.div`
 `
 
 const RatioContainer = styled.div`
-    margin: 1rem;
+    z-index: 2;
+    margin: .58rem;
+
+    @media screen and (${responsive.sm.max}) {
+        &.hidden {
+            display: none;
+        }
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        border: .4rem solid rgb(${colors.white});
+        padding-top: 1rem;
+    }
+
+    @media screen and (${responsive.md.min}) {
+        padding-top: 2rem;
+    }
+
+    @media screen and (${responsive.lg.min}) {
+        padding-top: 4rem;
+    }
 `
 
 const AspectRatio = styled.div`
     position: relative;
-    height: 0 !important; /* stylelint-disable-line declaration-no-important */
-    padding-bottom: 56.25%;
+
+    @media screen and (${responsive.sm.min}) {
+        padding-bottom: calc(56.25% - 1rem);
+        height: 0 !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    @media screen and (${responsive.md.min}) {
+        padding-bottom: calc(56.25% - 2rem);
+    }
+
+    @media screen and (${responsive.lg.min}) {
+        padding-bottom: calc(56.25% - 4rem);
+    }
 `
 
 const VideoTitle = styled.h1`
     font-size: ${fonts.size.h4};
     color: rgb(${colors.white});
     text-align: center;
+    padding: 0 1rem;
     margin-bottom: 2rem;
     margin-top: 0;
     height: calc(2 * 1.25 * 1.5rem);
@@ -134,9 +167,22 @@ const VideoTitle = styled.h1`
 const VideoDescription = styled(Paragraph)`
     text-align: center;
     height: calc(6rem + 6px);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     overflow: hidden;
     position: relative;
+
+    @media screen and (${responsive.sm.min}) {
+        padding: 0 1rem;
+    }
+
+    @media screen and (${responsive.md.min}) {
+        margin-bottom: 3rem;
+        padding: 0 2rem;
+    }
+
+    @media screen and (${responsive.lg.min}) {
+        padding: 0 4rem;
+    }
 `
 
 const PlayButton = styled.img`
@@ -149,9 +195,24 @@ const PlayButton = styled.img`
 
 const VideoContainer = styled.div`
     position: relative;
-    margin: 10px;
+    left: 0;
+    right: 0;
+    top: -.58rem;
+    z-index: -1;
+    margin: .58rem;
     border: .4rem solid rgb(${colors.white});
     background: rgb(${colors.black});
+    display: none;
+
+    @media screen and (${responsive.sm.min}) {
+        display: block;
+        position: absolute;
+    }
+
+    &.active {
+        z-index: 999;
+        display: block;
+    }
 `
 
 const StyledClose = styled.img`
@@ -173,6 +234,11 @@ const StyledReactPlayer = styled(ReactPlayer)`
     max-width: 100%;
     height: auto !important; /* stylelint-disable-line declaration-no-important */
     width: 100% !important; /* stylelint-disable-line declaration-no-important */
+    opacity: .35;
+
+    .active & {
+        opacity: 1;
+    }
 
     > div {
         position: relative;
@@ -265,8 +331,13 @@ class SectionContent extends Component {
             title: properties.snippet.title,
             description: properties.snippet.description.length > 400 ? `${properties.snippet.description.substring(0, 397)}...` : properties.snippet.description,
             active: index,
-            id: `https://www.youtube.com/watch?v=${properties.id}`
+            id: `https://www.youtube.com/watch?v=${properties.snippet.resourceId.videoId}`
         })
+        this.stopVideo()
+    }
+
+    scrollToVideo = () => {
+        smoothScroll(document.getElementById('videoScroll'))
     }
 
     openVideo() {
@@ -311,28 +382,27 @@ class SectionContent extends Component {
         }
         return (
             <StyledContentRow>
-                <HeightRow>
-                    {!this.state.player ? (
-                        <RatioContainer>
-                            <AspectRatio>
-                                <VideoTitle>{this.state.title}</VideoTitle>
-                                <VideoDescription>{this.state.description}<span /></VideoDescription>
-                                <PlayButton onClick={() => this.openVideo(this.state.id)} src={playIcon} />
-                            </AspectRatio>
-                        </RatioContainer>
-                    ) : (
-                        <VideoContainer>
+                <HeightRow id='videoScroll'>
+                    <RatioContainer className={this.state.player ? 'hidden' : ''}>
+                        <AspectRatio>
+                            <VideoTitle>{this.state.title}</VideoTitle>
+                            <VideoDescription>{this.state.description}<span /></VideoDescription>
+                            <PlayButton onClick={() => this.openVideo(this.state.id)} src={playIcon} />
+                        </AspectRatio>
+                    </RatioContainer>
+                    <VideoContainer className={this.state.player ? 'active' : ''}>
+                        {this.state.player &&
                             <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
-                            <StyledReactPlayer
-                                controls
-                                config={{ youtube: { playerVars: { color: 'white' } } }}
-                                url={this.state.id} />
-                        </VideoContainer>
-                    )}
+                        }
+                        <StyledReactPlayer
+                            controls
+                            config={{ youtube: { playerVars: { color: 'white', autoplay: 0 } } }}
+                            url={this.state.id} />
+                    </VideoContainer>
                 </HeightRow>
                 <Slider {...settings}>
                     {this.props.items.map((properties, index) => (
-                        <VideoListItem key={index} onClick={() => this.selectVideo(properties, index)}> {/* eslint-disable-line react/no-array-index-key*/}
+                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key*/}
                             <ListContainer className={this.state.active === index ? 'active' : ''}>
                                 <VideoThumb alt="video thumbnail" src={properties.snippet.thumbnails.medium.url} />
                                 <ThumbTitle><span>{properties.snippet.title}</span></ThumbTitle>
@@ -380,12 +450,8 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
         ApiResponse: []
     }
     componentWillMount() {
-        if (videos.length) {
-            const idList = videos.map((video) => (
-                video.id
-            ))
-
-            const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=${idList}&key=${apikeys.youtube}`
+        if (playlist.youtube) {
+            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${playlist.youtube}&key=${apikeys.youtube}`
             fetch(url).then((response) => response.json())
                 .then((data) => {
                     this.setState({
@@ -415,7 +481,7 @@ const RenderSection = ({ ApiResponse }) => (
     <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
         <Background />
         <StyledContentRow>
-            <Title white>Videos</Title>
+            <Title white id='videoScroll'>Videos</Title>
         </StyledContentRow>
         <VideoSlider items={ApiResponse} />
     </Section>
