@@ -31,5 +31,5 @@ export const social = {
 }
 
 export const dates = {
-    'prelaunch': '2018-03-07 08:00:00 +0000'
+    'prelaunch': 'Mar 07 2018 08:00:00 GMT'
 }

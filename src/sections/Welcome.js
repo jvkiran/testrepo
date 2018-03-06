@@ -15,6 +15,7 @@ import wavesStatic from '../assets/misc/waves.png'
 import videoThumb from '../assets/misc/video-thumb.jpg'
 import videoThumb2x from '../assets/misc/video-thumb@2x.jpg'
 import { colors, responsive, fonts, layout } from '../styles'
+import { dates } from '../constants'
 
 import Waves from '../components/Waves'
 
@@ -195,6 +196,30 @@ const StyledSocialHero = styled.aside`
     }
 `
 
+const HeroActions = () => {
+    const prelaunchTime = Date.parse(dates.prelaunch)
+    const currentTime = Date.now()
+
+    if (currentTime > prelaunchTime) {
+        return (
+            <a href="https://token.oceanprotocol.com">
+                <StyledButton onClick={() => gtag('event', 'contribute', { 'event_category': 'click', 'event_label': 'button' })}>
+                    Participate in the Token Pre-Launch
+                </StyledButton>
+            </a>
+        )
+    } else {
+        return (
+            <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
+                <img
+                    alt="Ocean Protocol Video"
+                    src={videoThumb}
+                    srcSet={srcSet} />
+            </StyledVideoThumbnail>
+        )
+    }
+}
+
 class Welcome extends React.Component {
     state = {
         videoUrl: ''
@@ -224,18 +249,7 @@ class Welcome extends React.Component {
                             </a>
                         </StyledPoweredBy>
 
-                        <a href="https://token.oceanprotocol.com">
-                            <StyledButton onClick={() => gtag('event', 'contribute', { 'event_category': 'click', 'event_label': 'button' })}>
-                                Participate in the Token Pre-Launch
-                            </StyledButton>
-                        </a>
-
-                        <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
-                            <img
-                                alt="Ocean Protocol Video"
-                                src={videoThumb}
-                                srcSet={srcSet} />
-                        </StyledVideoThumbnail>
+                        <HeroActions />
 
                     </ContentRow>
 
