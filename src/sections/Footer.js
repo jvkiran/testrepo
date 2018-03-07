@@ -9,8 +9,8 @@ import Paragraph from '../components/Paragraph'
 import SubscribeForm from '../components/SubscribeForm'
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
-import buttonSlack from '../assets/buttons/slack.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
+import buttonSlack from '../assets/buttons/slack.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import { colors, responsive, fonts } from '../styles'
 import { company, social } from '../constants'
@@ -119,7 +119,7 @@ const Footer = () => (
                                 rel="noopener"
                                 target="_blank"
                                 title="Slack">
-                                <img alt="Slack" src={buttonSlack} />
+                                <img alt="Telegram" src={buttonSlack} />
                             </a>
                             <a
                                 href={social.linkedin}

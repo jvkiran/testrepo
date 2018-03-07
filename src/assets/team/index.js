@@ -11,7 +11,6 @@ import daryl from './daryl.jpg'
 import dimi from './dimi.jpg'
 import don from './don.jpg'
 import gautam from './gautam.jpg'
-import greg from './greg.jpg'
 import john from './john.jpg'
 import julian from './julian.jpg'
 import jernej from './jernej.jpg'
@@ -48,7 +47,6 @@ export default {
     dimi,
     don,
     gautam,
-    greg,
     jernej,
     john,
     julian,

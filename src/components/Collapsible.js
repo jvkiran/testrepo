@@ -4,15 +4,15 @@ import styled from 'styled-components'
 import { colors, fonts } from '../styles'
 
 const StyledQaA = styled.div`
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 `
 
 const StyledQuestion = styled.div`
     font-size: ${fonts.size.base};
-    line-height: ${fonts.lineHeight.title};
     font-family: ${fonts.family.button};
-    padding-left: 30px;
+    padding-left: 1.5rem;
     cursor: pointer;
+    position: relative;
 
     &:before {
         content: '+';
@@ -20,15 +20,15 @@ const StyledQuestion = styled.div`
         font-family: ${fonts.family.base};
         font-size: ${fonts.size.h3};
         font-weight: ${fonts.fontWeight.base};
-        margin-left: -1.75rem;
-        margin-right: .75rem;
-        top: .35rem;
-        position: relative;
+        position: absolute;
+        line-height: .8;
+        left: 0;
     }
 
     &.expanded {
         &:before {
             content: '-';
+            line-height: .6;
         }
     }
 `
@@ -37,7 +37,7 @@ const StyledParagraph = styled.div`
     overflow: hidden;
     transition: .3s ease all;
     max-height: 0;
-    padding-left: 2rem;
+    padding-left: 1.5rem;
 
     &.visible {
         max-height: 1000px;

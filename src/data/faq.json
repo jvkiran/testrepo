@@ -190,5 +190,50 @@
                 "answer": "Acquirors that obtain Ocean Tokens in the Pre-Launch will be subject to a linear vesting of 6 months starting from the Network Launch Token Distribution date, scheduled for Q1 2019. This means that the total hold period is of about 18 months until an acquiror receives 100% of their Ocean tokens. This encourages long-term community members to participate and disincentives speculators."
             }
         ]
+    },
+    {
+        "title": "Contribution",
+        "questions": [
+            {
+                "question": "Will I receive the Oceans Protocol Tokens to the same wallet address that I am using for the contribution?",
+                "answer": "No, to receive the Ocean Protocol Tokens you will need an Ocean Wallet. Details on how to sign up and use it will be released closer to the Network Launch, which is scheduled for Q1 2019."
+            },
+            {
+                "question": "Where will I receive my refunds?",
+                "answer": "During the contribution process you will be asked to select a refund address. This can be the wallet address used to send the contribution or a different one. Please note that if you are sending your contribution from an Exchange, you must set another address for refunds, specifically attributed to you and for which you control the private key. Your refund address must be ERC-20 compliant."
+            },
+            {
+                "question": "What happens if I send my contribution from an Exchange? Can I send my contribution from an exchange?",
+                "answer": "Yes, you can send your contribution from an Exchange but please note that we will not be able to process any refunds to an Exchange. Your refund address must be ERC-20 compliant and specifically attributed to you. It is therefore very important that during the contribution application you complete the section about the refund address."
+            },
+            {
+                "question": "What if I do not agree with the Terms and Conditions?",
+                "answer": "Accepting the T&Cs is a pre-condition for being able to contribute. If you disagree with the Terms & Conditions, do not participate in the Pre-Launch."
+            },
+            {
+                "question": "How can I increase my contribution after sending the funds?",
+                "answer": "Unfortunately, all funds above the contribution maximum will be refunded within 45 days, so please make sure you enter the correct amount while going through the contribution process."
+            },
+            {
+                "question": "What happens if I send under the minimum cap?",
+                "answer": "In this case your contribution will be refunded in full."
+            },
+            {
+                "question": "What happens if I contribute above the individual maximum cap?",
+                "answer": "Even though the transaction will go through at the time of the contribution, we will only be able to accept from you up to the maximum cap amount. The difference will be returned to the refund address you specified during the contribution process."
+            },
+            {
+                "question": "How soon will the refund be processed?",
+                "answer": "We will refund your contribution in full within 45 days from the contribution date."
+            },
+            {
+                "question": "How much Gas should I use?",
+                "answer": "Recommended Gas amount: 100,000 | Recommended Gas Price: 60 Gwei. For a fair distribution, please try to follow our recommendations. You can always <a href=\"https://ethgasstation.info/\">check the gas price here<\/a>."
+            },
+            {
+                "question": "What if my KYC / AML application is rejected after I have contributed?",
+                "answer": "If you do not pass the KYC/AML assessment, we will email you and refund your contribution in full within 45 days from the contribution date. Our decision is final."
+            }
+        ]
     }
 ]

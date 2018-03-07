@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { responsive, colors, fonts } from '../styles'
 import buttonTelegram from '../assets/buttons/telegram.svg'
-import buttonSlack from '../assets/buttons/slack.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
+import buttonMedium from '../assets/buttons/medium.svg'
 import { social } from '../constants'
 
 const SocialBand = styled.aside`
@@ -41,8 +41,8 @@ const SocialHero = () => (
     <SocialBand>
         <a href={social.telegram_news} rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram News Channel</a>
         <a href={social.telegram} rel="noopener noreferrer" target="_blank"><img alt="Telegram" src={buttonTelegram} />Telegram Group Chat</a>
-        <a href={social.slack} rel="noopener noreferrer" target="_blank"><img alt="Slack" src={buttonSlack} />Slack</a>
         <a href={social.twitter} rel="noopener noreferrer" target="_blank"><img alt="Twitter" src={buttonTwitter} />Twitter</a>
+        <a href={social.blog} rel="noopener noreferrer" target="_blank"><img alt="Blog" src={buttonMedium} />Blog</a>
     </SocialBand>
 )
 
