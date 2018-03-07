@@ -108,7 +108,7 @@ const HeightRow = styled.div`
 
 const RatioContainer = styled.div`
     z-index: 2;
-    margin: .58rem;
+    margin: .5rem;
 
     @media screen and (${responsive.sm.max}) {
         &.hidden {
@@ -197,9 +197,9 @@ const VideoContainer = styled.div`
     position: relative;
     left: 0;
     right: 0;
-    top: -.58rem;
+    top: -.5rem;
     z-index: -1;
-    margin: .58rem;
+    margin: .5rem;
     border: .4rem solid rgb(${colors.white});
     background: rgb(${colors.black});
     display: none;
@@ -396,7 +396,8 @@ class SectionContent extends Component {
                         }
                         <StyledReactPlayer
                             controls
-                            config={{ youtube: { playerVars: { color: 'white', autoplay: 0 } } }}
+                            config={{ youtube: { playerVars: { color: 'white', autoplay: 0, start: 0 } } }}
+                            playing={this.state.player}
                             url={this.state.id} />
                     </VideoContainer>
                 </HeightRow>
