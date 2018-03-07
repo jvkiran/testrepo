@@ -10,6 +10,7 @@ import SubscribeForm from '../components/SubscribeForm'
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
+import buttonSlack from '../assets/buttons/slack.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import { colors, responsive, fonts } from '../styles'
 import { company, social } from '../constants'
@@ -105,6 +106,20 @@ const Footer = () => (
                                 target="_blank"
                                 title="Telegram News Channel">
                                 <img alt="Telegram" src={buttonTelegram} />
+                            </a>
+                            <a
+                                href={social.telegram}
+                                rel="noopener"
+                                target="_blank"
+                                title="Telegram Group Chat">
+                                <img alt="Telegram" src={buttonTelegram} />
+                            </a>
+                            <a
+                                href={social.slack}
+                                rel="noopener"
+                                target="_blank"
+                                title="Slack">
+                                <img alt="Telegram" src={buttonSlack} />
                             </a>
                             <a
                                 href={social.linkedin}

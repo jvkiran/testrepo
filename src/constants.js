@@ -26,7 +26,7 @@ export const social = {
     'twitter': 'https://twitter.com/oceanprotocol',
     'slack': 'https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ',
     'telegram_news': 'https://t.me/oceanprotocol',
-    'telegram': 'https://t.me/joinchat/GUyxrA7iV_IEfm5IjDHabg',
+    'telegram': 'https://t.me/joinchat/GUyxrE0Hi15wYUZWaSnI7A',
     'linkedin': 'https://www.linkedin.com/company/13429589/'
 }
 
