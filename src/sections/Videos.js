@@ -33,6 +33,7 @@ const Background = styled.div`
 
 const CenterParagraph = styled(Paragraph)`
     text-align: center;
+    z-index: 1;
 `
 
 const StyledContentRow = styled(ContentRow)`
@@ -433,6 +434,13 @@ const VideoSlider = ({ items }) => {
                 No videos available!
             </CenterParagraph>
         )
+    } else if (items.error) {
+        return (
+            <CenterParagraph>
+                There was a problem getting the list.<br />
+                Please try again later!
+            </CenterParagraph>
+        )
     } else if (items.length > 0) {
         return (
             <SectionContent items={items} />
@@ -443,7 +451,7 @@ const VideoSlider = ({ items }) => {
 }
 
 VideoSlider.propTypes = {
-    items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
+    items: PropTypes.any.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
 class Videos extends React.Component { // eslint-disable-line react/no-multi-comp
@@ -453,10 +461,23 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
     componentWillMount() {
         if (playlist.youtube) {
             const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${playlist.youtube}&key=${apikeys.youtube}`
-            fetch(url).then((response) => response.json())
+            fetch(url)
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json()
+                    }
+                    throw new Error('Problem getting content! Start debugging!')
+                })
                 .then((data) => {
                     this.setState({
                         ApiResponse: data.items
+                    })
+                })
+                .catch(() => {
+                    this.setState({
+                        ApiResponse: {
+                            error: true
+                        }
                     })
                 })
         } else {
@@ -489,7 +510,7 @@ const RenderSection = ({ ApiResponse }) => (
 )
 
 RenderSection.propTypes = {
-    ApiResponse: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
+    ApiResponse: PropTypes.any.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
 export default Videos
