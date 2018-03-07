@@ -107,13 +107,6 @@ const Footer = () => (
                                 <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a
-                                href={social.telegram}
-                                rel="noopener"
-                                target="_blank"
-                                title="Telegram Group Chat">
-                                <img alt="Telegram" src={buttonTelegram} />
-                            </a>
-                            <a
                                 href={social.linkedin}
                                 rel="noopener"
                                 target="_blank"

@@ -1,9 +1,12 @@
+/* global gtag */
+
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { fadeInUp } from 'react-animations'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
+import Button from '../components/Button'
 import SocialHero from '../components/SocialHero'
 import VideoModal from '../components/VideoModal'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
@@ -12,6 +15,7 @@ import wavesStatic from '../assets/misc/waves.png'
 import videoThumb from '../assets/misc/video-thumb.jpg'
 import videoThumb2x from '../assets/misc/video-thumb@2x.jpg'
 import { colors, responsive, fonts, layout } from '../styles'
+import { dates } from '../constants'
 
 import Waves from '../components/Waves'
 
@@ -136,6 +140,12 @@ const StyledPoweredBy = styled.div`
     }
 `
 
+const StyledButton = styled(Button)`
+    margin: auto;
+    padding: 1.25rem 2.7rem;
+    animation: ${animation} 1.5s 1s backwards;
+`
+
 const StyledVideoThumbnail = styled.div`
     max-width: 280px;
     margin-left: auto;
@@ -186,6 +196,30 @@ const StyledSocialHero = styled.aside`
     }
 `
 
+const HeroActions = () => {
+    const prelaunchTime = Date.parse(dates.prelaunch)
+    const currentTime = Date.now()
+
+    if (currentTime > prelaunchTime) {
+        return (
+            <a href="https://token.oceanprotocol.com">
+                <StyledButton onClick={() => gtag('event', 'contribute', { 'event_category': 'click', 'event_label': 'button' })}>
+                    Participate in the Token Pre-Launch
+                </StyledButton>
+            </a>
+        )
+    } else {
+        return (
+            <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
+                <img
+                    alt="Ocean Protocol Video"
+                    src={videoThumb}
+                    srcSet={srcSet} />
+            </StyledVideoThumbnail>
+        )
+    }
+}
+
 class Welcome extends React.Component {
     state = {
         videoUrl: ''
@@ -215,12 +249,7 @@ class Welcome extends React.Component {
                             </a>
                         </StyledPoweredBy>
 
-                        <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
-                            <img
-                                alt="Ocean Protocol Video"
-                                src={videoThumb}
-                                srcSet={srcSet} />
-                        </StyledVideoThumbnail>
+                        <HeroActions />
 
                     </ContentRow>
 
