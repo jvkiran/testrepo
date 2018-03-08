@@ -14,21 +14,24 @@ import ContentRow from '../components/ContentRow'
 import Button from '../components/Button'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
-import jellyfish from '../assets/misc/jelly-background.png'
+import jellyfish from '../assets/misc/jellyfish-background.jpg'
+import jellyfishVideoMp4 from '../assets/misc/jellyfish-background.mp4'
+import jellyfishVideoWebM from '../assets/misc/jellyfish-background.webm'
 import { colors, fonts, responsive, transitions } from '../styles'
 import { youtube } from '../constants'
 
-const Background = styled.div`
+const Background = styled.video`
     position: absolute;
-    top: 0;
-    right: -1rem;
-    bottom: 0;
-    left: -1rem;
-    background-image: url(${jellyfish});
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(${jellyfish}) no-repeat center center;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: .35;
+    opacity: .4;
     z-index: 0;
 `
 
@@ -136,11 +139,11 @@ const RatioContainer = styled.div`
     @media screen and (${responsive.sm.min}) {
         border: .4rem solid rgb(${colors.white});
         padding-top: 1rem;
-        background: rgba(${colors.darkGrey}, .65);
+        background: rgba(${colors.darkPurple}, .7);
 
         &:hover,
         &:focus {
-            background: rgba(${colors.darkGrey}, .2);
+            background: rgba(${colors.darkPurple}, .4);
             cursor: pointer;
             transform: translate3d(0, -.05rem, 0);
         }
@@ -325,7 +328,7 @@ const ThumbTitle = styled(Paragraph)`
 
         @media screen and (${responsive.sm.min}) {
             overflow: hidden;
-            height: 3.3rem;
+            height: 3.5rem;
         }
     }
 `
@@ -539,21 +542,24 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
     }
 }
 
-const backgroundStyles = {
-    position: 'relative'
-}
 const RenderSection = ({ ApiResponse }) => (
-    <Section background={colors.black} fontColor={colors.white} id="video" style={backgroundStyles}>
-        <Background />
+    <Section background={colors.black} fontColor={colors.white} id="video">
         <StyledContentRow>
             <Title white id='videoScroll'>Videos</Title>
         </StyledContentRow>
+
         <VideoSlider items={ApiResponse} />
 
-        <a href={youtube.channel} target="_blank">
-            <YouTubeButton>YouTube Channel</YouTubeButton>
-        </a>
+        <StyledContentRow>
+            <a href={youtube.channel} target="_blank">
+                <YouTubeButton>YouTube Channel</YouTubeButton>
+            </a>
+        </StyledContentRow>
 
+        <Background autoPlay loop muted playsInline poster={jellyfish}>
+            <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
+            <source src={jellyfishVideoMp4} type="video/mp4" />
+        </Background>
     </Section>
 )
 

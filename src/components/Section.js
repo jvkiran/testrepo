@@ -13,6 +13,8 @@ const StyledSection = styled.section`
     margin: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    position: relative;
+    overflow: hidden;
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: ${layout.pageFrame};
