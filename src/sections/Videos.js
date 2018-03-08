@@ -107,9 +107,19 @@ const HeightRow = styled.div`
     }
 `
 
+const PlayButton = styled.img`
+    display: block;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 4rem;
+    transition: ${transitions.base};
+`
+
 const RatioContainer = styled.div`
     z-index: 2;
     margin: .5rem;
+    transition: ${transitions.base};
 
     @media screen and (${responsive.sm.max}) {
         &.hidden {
@@ -120,6 +130,13 @@ const RatioContainer = styled.div`
     @media screen and (${responsive.sm.min}) {
         border: .4rem solid rgb(${colors.white});
         padding-top: 1rem;
+
+        &:hover,
+        &:focus {
+            background: rgba(${colors.pink}, .1);
+            cursor: pointer;
+            transform: translate3d(0, -.05rem, 0);
+        }
     }
 
     @media screen and (${responsive.md.min}) {
@@ -149,27 +166,21 @@ const AspectRatio = styled.div`
 `
 
 const VideoTitle = styled.h1`
-    font-size: ${fonts.size.h4};
+    font-size: ${fonts.size.h3};
     color: rgb(${colors.white});
     text-align: center;
     padding: 0 1rem;
     margin-bottom: 2rem;
     margin-top: 0;
-    height: calc(2 * 1.25 * 1.5rem);
-    overflow: hidden;
 
-    @media screen and (${responsive.tablet.min}) {
-        height: calc(1 * 1.25 * 1.5rem);
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    @media screen and (${responsive.md.min}) {
+        padding: 0 8rem;
     }
 `
 
 const VideoDescription = styled(Paragraph)`
     text-align: center;
-    height: calc(6rem + 6px);
     margin-bottom: 2rem;
-    overflow: hidden;
     position: relative;
 
     @media screen and (${responsive.sm.min}) {
@@ -184,14 +195,6 @@ const VideoDescription = styled(Paragraph)`
     @media screen and (${responsive.lg.min}) {
         padding: 0 4rem;
     }
-`
-
-const PlayButton = styled.img`
-    display: block;
-    cursor: pointer;
-    width: 3rem;
-    height: 3rem;
-    margin: 0 auto 4rem;
 `
 
 const VideoContainer = styled.div`
@@ -265,7 +268,7 @@ const ListContainer = styled.div`
     background: rgb(${colors.black});
     border-radius: 2px;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
-    transition: ${transitions.short};
+    transition: ${transitions.base};
     border: .08rem solid rgb(${colors.grey});
     max-width: 21.3rem;
     margin: 0 auto;
@@ -308,9 +311,12 @@ const ThumbTitle = styled(Paragraph)`
     font-size: ${fonts.size.small};
 
     span {
-        overflow: hidden;
         display: block;
-        height: 3.3rem;
+
+        @media screen and (${responsive.sm.min}) {
+            overflow: hidden;
+            height: 3.3rem;
+        }
     }
 `
 
@@ -384,11 +390,11 @@ class SectionContent extends Component {
         return (
             <StyledContentRow>
                 <HeightRow id='videoScroll'>
-                    <RatioContainer className={this.state.player ? 'hidden' : ''}>
+                    <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.id)}>
                         <AspectRatio>
                             <VideoTitle>{this.state.title}</VideoTitle>
                             <VideoDescription>{this.state.description}<span /></VideoDescription>
-                            <PlayButton onClick={() => this.openVideo(this.state.id)} src={playIcon} />
+                            <PlayButton src={playIcon} />
                         </AspectRatio>
                     </RatioContainer>
                     <VideoContainer className={this.state.player ? 'active' : ''}>
