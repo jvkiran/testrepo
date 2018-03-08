@@ -38,12 +38,16 @@ const CenterParagraph = styled(Paragraph)`
 `
 
 const StyledContentRow = styled(ContentRow)`
-    max-width: 60rem;
+    max-width: 55rem;
     margin-bottom: 2.5rem;
     z-index: 1;
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: 0;
+    }
+
+    @media screen and (${responsive.md.min}) and (min-height: 900px) {
+        max-width: 65rem;
     }
 
     .slick-dots {
@@ -121,6 +125,7 @@ const RatioContainer = styled.div`
     z-index: 2;
     margin: .5rem;
     transition: ${transitions.base};
+    overflow: hidden;
 
     @media screen and (${responsive.sm.max}) {
         &.hidden {
@@ -131,10 +136,11 @@ const RatioContainer = styled.div`
     @media screen and (${responsive.sm.min}) {
         border: .4rem solid rgb(${colors.white});
         padding-top: 1rem;
+        background: rgba(${colors.darkGrey}, .65);
 
         &:hover,
         &:focus {
-            background: rgba(${colors.pink}, .1);
+            background: rgba(${colors.darkGrey}, .2);
             cursor: pointer;
             transform: translate3d(0, -.05rem, 0);
         }
@@ -170,9 +176,12 @@ const VideoTitle = styled.h1`
     font-size: ${fonts.size.h3};
     color: rgb(${colors.white});
     text-align: center;
-    padding: 0 1rem;
     margin-bottom: 2rem;
     margin-top: 0;
+
+    @media screen and (${responsive.sm.min}) {
+        padding: 0 2rem;
+    }
 
     @media screen and (${responsive.md.min}) {
         padding: 0 8rem;
@@ -185,16 +194,16 @@ const VideoDescription = styled(Paragraph)`
     position: relative;
 
     @media screen and (${responsive.sm.min}) {
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     @media screen and (${responsive.md.min}) {
         margin-bottom: 3rem;
-        padding: 0 2rem;
+        padding: 0 3rem;
     }
 
     @media screen and (${responsive.lg.min}) {
-        padding: 0 4rem;
+        padding: 0 5rem;
     }
 `
 
