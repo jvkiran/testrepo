@@ -34,10 +34,8 @@ export const dates = {
     'prelaunch': 'Mar 07 2018 08:00:00 GMT'
 }
 
-export const apikeys = {
-    'youtube': 'AIzaSyCTDzYB0VLSuACnwc-n59famCk-aCeMm9w'
-}
-
-export const playlist = {
-    'youtube': 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
+export const youtube = {
+    'channel': 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
+    'apikey': 'AIzaSyCTDzYB0VLSuACnwc-n59famCk-aCeMm9w',
+    'playlist': 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
 }

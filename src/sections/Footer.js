@@ -12,8 +12,9 @@ import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonSlack from '../assets/buttons/slack.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
+import buttonYoutube from '../assets/buttons/youtube.svg'
 import { colors, responsive, fonts } from '../styles'
-import { company, social } from '../constants'
+import { company, social, youtube } from '../constants'
 
 const StyledSubTitle = styled.h5`
     color: rgb(${colors.lightGrey});
@@ -127,6 +128,13 @@ const Footer = () => (
                                 target="_blank"
                                 title="LinkedIn">
                                 <img alt="LinkedIn" src={buttonLinkedin} />
+                            </a>
+                            <a
+                                href={youtube.channel}
+                                rel="noopener"
+                                target="_blank"
+                                title="YouTube">
+                                <img alt="YouTube" src={buttonYoutube} />
                             </a>
                         </StyledSocialLinks>
                     </StyledActions>

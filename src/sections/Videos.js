@@ -11,11 +11,12 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
+import Button from '../components/Button'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
 import jellyfish from '../assets/misc/jelly-background.png'
 import { colors, fonts, responsive, transitions } from '../styles'
-import { apikeys, playlist } from '../constants'
+import { youtube } from '../constants'
 
 const Background = styled.div`
     position: absolute;
@@ -320,6 +321,33 @@ const ThumbTitle = styled(Paragraph)`
     }
 `
 
+const YouTubeButton = styled(Button)`
+    text-align: center;
+    cursor: pointer;
+    margin: 5rem auto 0 auto;
+    padding: .8rem 1rem;
+    background: rgba(${colors.darkGrey}, .8);
+    border: .08rem solid rgb(${colors.grey});
+    border-radius: .1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    font-size: ${fonts.size.small};
+    color: rgb(${colors.lightGrey});
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
+        background: rgba(${colors.darkGrey}, .95);
+    }
+
+    &:active {
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: -3rem;
+    }
+`
+
 class SectionContent extends Component {
     state = {
         title: '',
@@ -465,8 +493,8 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
         ApiResponse: []
     }
     componentWillMount() {
-        if (playlist.youtube) {
-            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${playlist.youtube}&key=${apikeys.youtube}`
+        if (youtube.playlist) {
+            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${youtube.playlist}&key=${youtube.apikey}`
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
@@ -512,6 +540,11 @@ const RenderSection = ({ ApiResponse }) => (
             <Title white id='videoScroll'>Videos</Title>
         </StyledContentRow>
         <VideoSlider items={ApiResponse} />
+
+        <a href={youtube.channel} target="_blank">
+            <YouTubeButton>YouTube Channel</YouTubeButton>
+        </a>
+
     </Section>
 )
 
