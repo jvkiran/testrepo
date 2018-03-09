@@ -20,7 +20,7 @@ import jellyfishVideoWebM from '../assets/misc/jellyfish-background.webm'
 import { colors, fonts, responsive, transitions } from '../styles'
 import { youtube } from '../constants'
 
-const Background = styled.video`
+const VideoBackground = styled.video`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,7 +120,7 @@ const PlayButton = styled.img`
     cursor: pointer;
     width: 3rem;
     height: 3rem;
-    margin: 0 auto 4rem;
+    margin: 0 auto;
     transition: ${transitions.base};
 `
 
@@ -139,11 +139,11 @@ const RatioContainer = styled.div`
     @media screen and (${responsive.sm.min}) {
         border: .4rem solid rgb(${colors.white});
         padding-top: 1rem;
-        background: rgba(${colors.darkPurple}, .7);
+        background: rgba(${colors.white}, .8);
 
         &:hover,
         &:focus {
-            background: rgba(${colors.darkPurple}, .4);
+            background: rgba(${colors.white}, .7);
             cursor: pointer;
             transform: translate3d(0, -.05rem, 0);
         }
@@ -177,7 +177,7 @@ const AspectRatio = styled.div`
 
 const VideoTitle = styled.h1`
     font-size: ${fonts.size.h3};
-    color: rgb(${colors.white});
+    color: rgb(${colors.black});
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 0;
@@ -187,13 +187,13 @@ const VideoTitle = styled.h1`
     }
 
     @media screen and (${responsive.md.min}) {
-        padding: 0 8rem;
+        padding: 0 6rem;
     }
 `
 
 const VideoDescription = styled(Paragraph)`
+    color: rgb(${colors.darkGrey});
     text-align: center;
-    margin-bottom: 2rem;
     position: relative;
 
     @media screen and (${responsive.sm.min}) {
@@ -201,7 +201,7 @@ const VideoDescription = styled(Paragraph)`
     }
 
     @media screen and (${responsive.md.min}) {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         padding: 0 3rem;
     }
 
@@ -251,11 +251,6 @@ const StyledReactPlayer = styled(ReactPlayer)`
     max-width: 100%;
     height: auto !important; /* stylelint-disable-line declaration-no-important */
     width: 100% !important; /* stylelint-disable-line declaration-no-important */
-    opacity: .35;
-
-    .active & {
-        opacity: 1;
-    }
 
     > div {
         position: relative;
@@ -556,10 +551,10 @@ const RenderSection = ({ ApiResponse }) => (
             </a>
         </StyledContentRow>
 
-        <Background autoPlay loop muted playsInline poster={jellyfish}>
+        <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
             <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
             <source src={jellyfishVideoMp4} type="video/mp4" />
-        </Background>
+        </VideoBackground>
     </Section>
 )
 
