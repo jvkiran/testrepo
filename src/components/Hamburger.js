@@ -19,7 +19,7 @@ const StyledHamburger = styled.button`
     margin: 0;
     overflow: visible;
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
         display: block;
     }
 `

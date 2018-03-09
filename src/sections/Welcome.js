@@ -97,7 +97,7 @@ const StyledTagline = styled(Title)`
         margin-right: 2rem;
     }
 
-    media screen and (${responsive.md.max}) {
+    @media screen and (${responsive.md.max}) {
         font-size: ${fonts.size.h2};
     }
 

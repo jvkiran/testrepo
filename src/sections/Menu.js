@@ -13,7 +13,7 @@ const StyledMenu = styled.nav`
     padding: .75rem 1rem;
     z-index: 5;
 
-    @media screen and (${responsive.sm.min}) {
+    @media screen and (${responsive.md.min}) {
         position: ${({ fixed }) => (fixed ? 'fixed' : 'absolute')};
         width: calc(100% - (${layout.pageFrame} * 2));
         top: ${({ fixed }) => (fixed ? '0' : 'auto')};
@@ -23,7 +23,7 @@ const StyledMenu = styled.nav`
         border-top: ${({ fixed }) => (fixed ? `${layout.pageFrame} solid #fff` : '0')};
     }
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
         position: absolute;
         width: 100%;
         left: 0;
@@ -80,7 +80,7 @@ const StyledMobileNav = styled.div`
         margin: .5rem 0;
     }
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
         display: flex;
         opacity: ${({ active }) => (active ? '1' : '0')};
         pointer-events: ${({ active }) => (active ? 'auto' : 'none')};
@@ -105,7 +105,7 @@ const StyledNav = styled.div`
         }
     }
 
-    @media screen and (${responsive.sm.max}) {
+    @media screen and (${responsive.md.max}) {
         display: none;
     }
 `
@@ -134,6 +134,10 @@ const MenuItems = [
     {
         name: 'Blog',
         href: '#blog'
+    },
+    {
+        name: 'Videos',
+        href: '#video'
     },
     {
         name: 'Faq',

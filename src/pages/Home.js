@@ -7,6 +7,7 @@ import Papers from '../sections/Papers'
 import Events from '../sections/Events'
 import Team from '../sections/Team'
 import Blog from '../sections/Blog'
+import Videos from '../sections/Videos'
 import Faq from '../sections/Faq'
 import Modal from '../sections/Modal'
 
@@ -27,6 +28,7 @@ class Home extends Component {
           <Data />
           <Team toggleModal={this.toggleModal} />
           <Blog />
+          <Videos />
           <Faq />
           <Modal modal={this.state.modal} toggle={this.toggleModal} />
       </Fragment>
