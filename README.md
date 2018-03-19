@@ -20,6 +20,8 @@
     - [Blog posts](#blog-posts)
     - [Videos](#videos)
 - [Development](#development)
+    - [Workflow](#workflow)
+    - [Code style](#code-style)
 - [Deployment: always be shipping](#deployment-always-be-shipping)
     - [Manual Deployment](#manual-deployment)
 
@@ -43,18 +45,58 @@ This API has a limit of 1,000,000 requests per day. Depending on our website tra
 
 ## Development
 
-The site is a single page React app, created with `create-react-app`.
+The site is a single page React app, created with [`create-react-app`](https://github.com/facebook/create-react-app).
 
 ```bash
 npm i
 npm start
 ```
 
+### Workflow
+
+Work happens only in the `oceanprotocol/site` repository, no need to fork it to your account. Following a Git feature branch workflow, always start by branching off from an updated `master`:
+
+```bash
+git checkout master
+git pull
+git branch -b feature/mycoolnewfeature
+
+# first push: publish branch and setup as remote tracking branch
+git push -u origin feature/mycoolnewfeature
+# all subsequent pushes
+git push
+```
+
+Do work in your feature branch, committing early and often. You can open a Pull Request on GitHub as early as you want to discuss further implementation on it and check it out on beta.oceanprotocol.com. Just make sure to mark it as _Work in Progress_ in the PR description and/or by applying the respective label.
+
+Make sure to rebase your branch from time to time against upstream changes. Avoid using GitHub's auto-merge button on a Pull Request to keep the Git history more clean. You can do a rebase like so:
+
+```bash
+git checkout master
+git pull
+git checkout feature/mycoolnewfeature
+git rebase master
+```
+
+Be aware that you have to force push after a rebase if you have published your branch already:
+
+```bash
+git push -f
+```
+
+Once ready, request a review of your Pull Request from a team member, fixing possible change requests. Once approved, you can merge your Pull Request and delete the branch afterwards.
+
+### Code style
+
+Code style for JavaScript and stylesheets (we're using [styled-components](https://www.styled-components.com)) is enforced before every commit. You won't be able to commit any code with linting errors present so make sure to fix all warnings before committing.
+
+Code style follows [eslint-config-ascribe](https://github.com/ascribe/javascript) and [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb).
+
 ## Deployment: always be shipping
 
 ![shipping](https://cloud.githubusercontent.com/assets/90316/26559768/e21e9724-44b1-11e7-90cf-6ef6ebb06d09.gif)
 
-The site gets built & deployed automatically via Travis. This is the preferred way of deployment, it makes sure the site is always deployed with fresh dependencies and only after a successful test & build.
+The site is hosted in a S3 bucket `oceanprotocol.com`, with DNS setup in Cloudflare. Cloudflare provides SSL certificate, among other things. The site gets built & deployed automatically via Travis which is the preferred way of deployment. It makes sure the site is always deployed with fresh dependencies and only after a successful test & build.
 
 Build & deployment happens under the following conditions on Travis:
 
