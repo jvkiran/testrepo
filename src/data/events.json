@@ -190,5 +190,11 @@
         "eventName": "TechFestival Copenhagen",
         "date": "2018-09-05",
         "link": "http://techfestival.co"
+    },
+    {
+        "city": "Hong Kong",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2018-03-20",
+        "link": "https://www.eventbrite.com/e/ocean-protocol-how-blockchain-will-unlock-data-and-revolutionize-ai-tickets-44320440631"
     }
 ]
