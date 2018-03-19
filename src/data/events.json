@@ -6,10 +6,22 @@
         "link": "http://www.tedxfrankfurt.de/"
     },
     {
-        "city": "Berlin",
-        "eventName": "BigchainDB / IPDB Meetup",
-        "date": "2017-12-06",
-        "link": "https://www.meetup.com/BigchainDB-IPDB-Meetup/events/243513220/"
+        "city": "Tokyo",
+        "eventName": "A.I. University by Team AI",
+        "date": "2017-11-29",
+        "link": "https://www.meetup.com/Machine-Learning-Meetup-by-team-ai/events/245076515/"
+    },
+    {
+        "city": "Seoul",
+        "eventName": "Seoul Tech Society",
+        "date": "2017-11-30",
+        "link": "https://www.meetup.com/seoul-tech-society/events/245276201/"
+    },
+    {
+        "city": "Shanghai",
+        "eventName": "Blockchain Centre Shanghai",
+        "date": "2017-12-02",
+        "link": "https://www.meetup.com/meetup-group-AzJhoEEn/events/245271421/"
     },
     {
         "city": "Singapore",
@@ -108,6 +120,12 @@
         "link": "https://www.meetup.com/Seoul-Crypto-Club/events/248567400/"
     },
     {
+        "city": "Hong Kong",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2018-03-20",
+        "link": "https://www.eventbrite.com/e/ocean-protocol-how-blockchain-will-unlock-data-and-revolutionize-ai-tickets-44320440631"
+    },
+    {
         "city": "Kiev",
         "eventName": "BlockchainUA",
         "date": "2018-03-23",
@@ -190,11 +208,5 @@
         "eventName": "TechFestival Copenhagen",
         "date": "2018-09-05",
         "link": "http://techfestival.co"
-    },
-    {
-        "city": "Hong Kong",
-        "eventName": "Ocean Protocol Meetup",
-        "date": "2018-03-20",
-        "link": "https://www.eventbrite.com/e/ocean-protocol-how-blockchain-will-unlock-data-and-revolutionize-ai-tickets-44320440631"
     }
 ]
