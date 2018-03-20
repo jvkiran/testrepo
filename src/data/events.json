@@ -1,5 +1,17 @@
 [
     {
+        "city": "Singapore",
+        "eventName": "All Who Like Cryptocurrency and Blockchain",
+        "date": "2017-11-02",
+        "link": "https://www.meetup.com/All-Who-Like-Cryptocurrency-and-Blockchain/events/244573036/"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "Blockchain Meetup Berlin",
+        "date": "2017-11-23",
+        "link": "https://www.meetup.com/Blockchain-Meetup-Berlin/events/243974982/"
+    },
+    {
         "city": "Frankfurt",
         "eventName": "TedX",
         "date": "2017-11-26",
@@ -16,6 +28,12 @@
         "eventName": "Seoul Tech Society",
         "date": "2017-11-30",
         "link": "https://www.meetup.com/seoul-tech-society/events/245276201/"
+    },
+    {
+        "city": "Seattle",
+        "eventName": "Seattle Data/Analytics/Machine Learning",
+        "date": "2017-11-30",
+        "link": "https://www.meetup.com/Seattle-DAML/events/245117820/"
     },
     {
         "city": "Shanghai",
