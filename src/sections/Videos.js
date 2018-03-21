@@ -12,6 +12,7 @@ import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
 import Button from '../components/Button'
+import Spinner from '../components/Spinner'
 import playIcon from '../assets/misc/play-circle.svg'
 import cross from '../assets/misc/cross.svg'
 import jellyfish from '../assets/misc/jellyfish-background.jpg'
@@ -360,7 +361,7 @@ class SectionContent extends Component {
         title: '',
         description: '',
         active: 0,
-        id: '',
+        videoUrl: '',
         player: false
     }
 
@@ -370,10 +371,10 @@ class SectionContent extends Component {
 
     selectVideo(properties, index) {
         this.setState({
-            title: properties.snippet.title,
-            description: properties.snippet.description.length > 400 ? `${properties.snippet.description.substring(0, 397)}...` : properties.snippet.description,
+            title: properties.title,
+            description: properties.description.length > 400 ? `${properties.description.substring(0, 397)}...` : properties.description,
             active: index,
-            id: `https://www.youtube.com/watch?v=${properties.snippet.resourceId.videoId}`
+            videoUrl: properties.videoUrl
         })
         this.stopVideo()
     }
@@ -425,7 +426,7 @@ class SectionContent extends Component {
         return (
             <StyledContentRow>
                 <HeightRow id='videoScroll'>
-                    <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.id)}>
+                    <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.videoUrl)}>
                         <AspectRatio>
                             <VideoTitle>{this.state.title}</VideoTitle>
                             <VideoDescription>{this.state.description}<span /></VideoDescription>
@@ -440,15 +441,15 @@ class SectionContent extends Component {
                             controls
                             config={{ youtube: { playerVars: { color: 'white', autoplay: 0, start: 0 } } }}
                             playing={this.state.player}
-                            url={this.state.id} />
+                            url={this.state.videoUrl} />
                     </VideoContainer>
                 </HeightRow>
                 <Slider {...settings}>
                     {this.props.items.map((properties, index) => (
                         <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key*/}
                             <ListContainer className={this.state.active === index ? 'active' : ''}>
-                                <VideoThumb alt="video thumbnail" src={properties.snippet.thumbnails.medium.url} />
-                                <ThumbTitle><span>{properties.snippet.title}</span></ThumbTitle>
+                                <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
+                                <ThumbTitle><span>{properties.title}</span></ThumbTitle>
                             </ListContainer>
                         </VideoListItem>
                     ))}
@@ -465,9 +466,7 @@ SectionContent.propTypes = {
 const VideoSlider = ({ items }) => {
     if (items.length === 0) {
         return (
-            <CenterParagraph>
-                Getting videos...
-            </CenterParagraph>
+            <Spinner white />
         )
     } else if (items.noVideos) {
         return (
@@ -501,7 +500,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
     }
     componentWillMount() {
         if (youtube.playlist) {
-            const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&playlistId=${youtube.playlist}&key=${youtube.apikey}`
+            const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}/${youtube.apikey}`
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
@@ -511,7 +510,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
                 })
                 .then((data) => {
                     this.setState({
-                        ApiResponse: data.items
+                        ApiResponse: data
                     })
                 })
                 .catch(() => {

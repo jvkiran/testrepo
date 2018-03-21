@@ -35,13 +35,15 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 
 ### Blog posts
 
-All displayed posts in the Blog section are sourced from our Medium publication blog.oceanprotocol.com. Website only communicates with an endpoint created by webtask.io, where the task on webtask.io communicates directly with the Medium RSS feed.
+All displayed posts in the Blog section are sourced from our Medium publication under blog.oceanprotocol.com.
+
+Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the Medium RSS feed. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
 
 ### Videos
 
-All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel. Website communicates directly with the YouTube Data API v3 setup in Google Cloud Platform.
+All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel.
 
-This API has a limit of 1,000,000 requests per day. Depending on our website traffic, this quota could make the videos section fail to load.
+Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the YouTube Data API v3 setup in Google Cloud Platform. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
 
 ## Development
 
