@@ -82,13 +82,13 @@ class Blog extends Component {
   }
   fetchPosts = () => {
       this.setState({ fetching: true })
-      fetch('https://wt-863e332a77d038d29fa50d15961b5367-0.run.webtask.io/medium/oceanprotocol')
+      fetch('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol')
           .then(res => res.json())
           .then(posts => {
               const lastPosts = posts.slice(0, 3)
               this.setState({ fetching: false, posts: lastPosts })
           })
-          .catch({ fething: false })
+          .catch({ fetching: false })
   };
   render = () => (
       <Section id="blog" minHeight={930}>
