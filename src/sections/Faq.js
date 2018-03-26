@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
+import FadeIn from '../components/FadeIn'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import Collapsible from '../components/Collapsible'
@@ -33,39 +35,43 @@ const StyledQaA = styled.div`
 
 const Faq = () => (
     <Section id="faq">
-        <ContentRow>
-            <Cell maxWidth="small" width={1}>
-                <Title>FAQ</Title>
-            </Cell>
-        </ContentRow>
+        <LazyLoad once offset={100}>
+            <FadeIn>
+                <ContentRow>
+                    <Cell maxWidth="small" width={1}>
+                        <Title>FAQ</Title>
+                    </Cell>
+                </ContentRow>
 
-        <ContentRow>
-            {faq.map((question) => (
-                <StyledFaqRow key={question.title}>
-                    <StyledSubTitle>{question.title}</StyledSubTitle>
-                    <Grid>
-                        <Cell width={1 / 2}>
-                            {question.questions.filter((item, index) => index % 2 === 0).map((questions) => (
-                                <StyledQaA key={questions.question}>
-                                    <Collapsible
-                                        answer={questions.answer}
-                                        question={questions.question} />
-                                </StyledQaA>
-                            ))}
-                        </Cell>
-                        <Cell width={1 / 2}>
-                            {question.questions.filter((item, index) => index % 2 === 1).map((questions) => (
-                                <StyledQaA key={questions.question}>
-                                    <Collapsible
-                                        answer={questions.answer}
-                                        question={questions.question} />
-                                </StyledQaA>
-                            ))}
-                        </Cell>
-                    </Grid>
-                </StyledFaqRow>
-            ))}
-        </ContentRow>
+                <ContentRow>
+                    {faq.map((question) => (
+                        <StyledFaqRow key={question.title}>
+                            <StyledSubTitle>{question.title}</StyledSubTitle>
+                            <Grid>
+                                <Cell width={1 / 2}>
+                                    {question.questions.filter((item, index) => index % 2 === 0).map((questions) => (
+                                        <StyledQaA key={questions.question}>
+                                            <Collapsible
+                                                answer={questions.answer}
+                                                question={questions.question} />
+                                        </StyledQaA>
+                                    ))}
+                                </Cell>
+                                <Cell width={1 / 2}>
+                                    {question.questions.filter((item, index) => index % 2 === 1).map((questions) => (
+                                        <StyledQaA key={questions.question}>
+                                            <Collapsible
+                                                answer={questions.answer}
+                                                question={questions.question} />
+                                        </StyledQaA>
+                                    ))}
+                                </Cell>
+                            </Grid>
+                        </StyledFaqRow>
+                    ))}
+                </ContentRow>
+            </FadeIn>
+        </LazyLoad>
     </Section>
 )
 

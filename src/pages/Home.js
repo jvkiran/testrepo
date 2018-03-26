@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import LazyLoad from 'react-lazyload'
-import FadeIn from '../components/FadeIn'
 import Menu from '../sections/Menu'
 import Welcome from '../sections/Welcome'
 import Project from '../sections/Project'
@@ -24,46 +22,14 @@ class Home extends Component {
         <Fragment>
             <Menu />
             <Welcome />
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Events />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Project toggleModal={this.toggleModal} />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Papers />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Data />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Team toggleModal={this.toggleModal} />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Blog />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Videos />
-                </FadeIn>
-            </LazyLoad>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <Faq />
-                </FadeIn>
-            </LazyLoad>
+            <Events />
+            <Project toggleModal={this.toggleModal} />
+            <Papers />
+            <Data />
+            <Team toggleModal={this.toggleModal} />
+            <Blog />
+            <Videos />
+            <Faq />
             <Modal modal={this.state.modal} toggle={this.toggleModal} />
         </Fragment>
     )

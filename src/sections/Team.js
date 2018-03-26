@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Collapsible from 'react-collapsible'
+import LazyLoad from 'react-lazyload'
+import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
@@ -250,58 +252,62 @@ TeamMember.propTypes = {
 
 const Team = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="team">
-        <StyledWrapper>
-            <ContentRow>
-                <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
-            </ContentRow>
+        <LazyLoad once offset={100}>
+            <FadeIn>
+                <StyledWrapper>
+                    <ContentRow>
+                        <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
+                    </ContentRow>
 
-            <ContentRow narrow>
-                <StyledParagraph>
+                    <ContentRow narrow>
+                        <StyledParagraph>
           The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
-                </StyledParagraph>
-            </ContentRow>
+                        </StyledParagraph>
+                    </ContentRow>
 
-            <ContentRow>
-                <StyledLine />
-                <StyledTeam>
-                    {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
-                        <TeamMember key={member.name} member={member} />
-                    ))}
-                    {team.filter((item) => teamImg[item.image]).length >= 15 &&
-                        <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
-                            {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
+                    <ContentRow>
+                        <StyledLine />
+                        <StyledTeam>
+                            {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
                                 <TeamMember key={member.name} member={member} />
                             ))}
-                        </Collapsible>
-                    }
-                </StyledTeam>
-            </ContentRow>
+                            {team.filter((item) => teamImg[item.image]).length >= 15 &&
+                            <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
+                                {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
+                                    <TeamMember key={member.name} member={member} />
+                                ))}
+                            </Collapsible>
+                            }
+                        </StyledTeam>
+                    </ContentRow>
 
-            <ContentRow narrow>
-                <StyledCompanies>
-                    <StyledCompanyLogo
-                        href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
+                    <ContentRow narrow>
+                        <StyledCompanies>
+                            <StyledCompanyLogo
+                                href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
             rel="noopener" // eslint-disable-line
-                        target="_blank">
-                        <img alt="BigchainDB" src={bigchainDBLogo} />
-                    </StyledCompanyLogo>
-                    <StyledCompanyLogo
-                        href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
+                                target="_blank">
+                                <img alt="BigchainDB" src={bigchainDBLogo} />
+                            </StyledCompanyLogo>
+                            <StyledCompanyLogo
+                                href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
             rel="noopener" // eslint-disable-line
-                        target="_blank">
-                        <img alt="Dex" src={dexLogo} />
-                    </StyledCompanyLogo>
-                </StyledCompanies>
-            </ContentRow>
+                                target="_blank">
+                                <img alt="Dex" src={dexLogo} />
+                            </StyledCompanyLogo>
+                        </StyledCompanies>
+                    </ContentRow>
 
-            <ContentRow>
-                <StyledLine />
+                    <ContentRow>
+                        <StyledLine />
 
-                <StyledActions>
-                    <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
-                </StyledActions>
-            </ContentRow>
-        </StyledWrapper>
+                        <StyledActions>
+                            <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
+                        </StyledActions>
+                    </ContentRow>
+                </StyledWrapper>
+            </FadeIn>
+        </LazyLoad>
     </Section>
 )
 

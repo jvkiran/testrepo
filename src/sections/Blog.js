@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import LazyLoad from 'react-lazyload'
 import FadeIn from '../components/FadeIn'
 import Title from '../components/Title'
 import Section from '../components/Section'
@@ -98,23 +99,25 @@ class Blog extends Component {
               {this.state.fetching ? (
                   <Spinner />
               ) : (
-                  <FadeIn>
-                      <Grid>
-                          {this.state.posts.map(post => (
-                              <PaddingCell key={post.id} width={1 / 3}>
-                                  <a href={post.postUrl}>
-                                      <StyledCard>
-                                          <StyledHeader imageUrl={post.imageUrl} />
-                                          <StyledContent>
-                                              <StyledTitle>{post.title}</StyledTitle>
-                                              <StyledSubtitle>{post.subtitle}</StyledSubtitle>
-                                          </StyledContent>
-                                      </StyledCard>
-                                  </a>
-                              </PaddingCell>
-                          ))}
-                      </Grid>
-                  </FadeIn>
+                  <LazyLoad once offset={100}>
+                      <FadeIn>
+                          <Grid>
+                              {this.state.posts.map(post => (
+                                  <PaddingCell key={post.id} width={1 / 3}>
+                                      <a href={post.postUrl}>
+                                          <StyledCard>
+                                              <StyledHeader imageUrl={post.imageUrl} />
+                                              <StyledContent>
+                                                  <StyledTitle>{post.title}</StyledTitle>
+                                                  <StyledSubtitle>{post.subtitle}</StyledSubtitle>
+                                              </StyledContent>
+                                          </StyledCard>
+                                      </a>
+                                  </PaddingCell>
+                              ))}
+                          </Grid>
+                      </FadeIn>
+                  </LazyLoad>
               )}
               <StyledAction fetching={this.state.fetching}>
                   <a href={social.blog}>
