@@ -24,42 +24,42 @@ class Home extends Component {
         <Fragment>
             <Menu />
             <Welcome />
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Events />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Project toggleModal={this.toggleModal} />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Papers />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Data />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Team toggleModal={this.toggleModal} />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Blog />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Videos />
                 </FadeIn>
             </LazyLoad>
-            <LazyLoad once height={700}>
+            <LazyLoad once offset={100}>
                 <FadeIn>
                     <Faq />
                 </FadeIn>
