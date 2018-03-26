@@ -7,6 +7,7 @@ import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
 import smoothScroll from '../lib/smoothScroll'
+import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
@@ -429,35 +430,37 @@ class SectionContent extends Component {
         }
         return (
             <StyledContentRow>
-                <HeightRow id='videoScroll'>
-                    <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.videoUrl)}>
-                        <AspectRatio>
-                            <VideoTitle>{this.state.title}</VideoTitle>
-                            <VideoDescription>{this.state.description}<span /></VideoDescription>
-                            <PlayButton src={playIcon} />
-                        </AspectRatio>
-                    </RatioContainer>
-                    <VideoContainer className={this.state.player ? 'active' : ''}>
-                        {this.state.player &&
+                <FadeIn>
+                    <HeightRow id='videoScroll'>
+                        <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.videoUrl)}>
+                            <AspectRatio>
+                                <VideoTitle>{this.state.title}</VideoTitle>
+                                <VideoDescription>{this.state.description}<span /></VideoDescription>
+                                <PlayButton src={playIcon} />
+                            </AspectRatio>
+                        </RatioContainer>
+                        <VideoContainer className={this.state.player ? 'active' : ''}>
+                            {this.state.player &&
                             <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
-                        }
-                        <StyledReactPlayer
-                            controls
-                            config={{ youtube: { playerVars: { color: 'white', autoplay: 0, start: 0 } } }}
-                            playing={this.state.player}
-                            url={this.state.videoUrl} />
-                    </VideoContainer>
-                </HeightRow>
-                <Slider {...settings}>
-                    {this.props.items.map((properties, index) => (
-                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key*/}
-                            <ListContainer className={this.state.active === index ? 'active' : ''}>
-                                <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
-                                <ThumbTitle><span>{properties.title}</span></ThumbTitle>
-                            </ListContainer>
-                        </VideoListItem>
-                    ))}
-                </Slider>
+                            }
+                            <StyledReactPlayer
+                                controls
+                                config={{ youtube: { playerVars: { color: 'white', autoplay: 0, start: 0 } } }}
+                                playing={this.state.player}
+                                url={this.state.videoUrl} />
+                        </VideoContainer>
+                    </HeightRow>
+                    <Slider {...settings}>
+                        {this.props.items.map((properties, index) => (
+                            <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key*/}
+                                <ListContainer className={this.state.active === index ? 'active' : ''}>
+                                    <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
+                                    <ThumbTitle><span>{properties.title}</span></ThumbTitle>
+                                </ListContainer>
+                            </VideoListItem>
+                        ))}
+                    </Slider>
+                </FadeIn>
             </StyledContentRow>
         )
     }
