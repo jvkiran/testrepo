@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { fadeInUp } from 'react-animations'
+import fadeInUp from 'react-animations/lib/fade-in-up'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
