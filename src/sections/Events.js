@@ -5,8 +5,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Slider from 'react-slick'
-import LazyLoad from 'react-lazyload'
-import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -483,21 +481,17 @@ const backgroundStyles = {
 
 const Events = () => (
     <Section background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} id="events" style={backgroundStyles}>
-        <LazyLoad once offset={100}>
-            <FadeIn>
-                <ContentRow>
-                    <StyledTitle white>Events</StyledTitle>
-                </ContentRow>
+        <ContentRow>
+            <StyledTitle white>Events</StyledTitle>
+        </ContentRow>
 
-                <ContentRow narrow>
-                    <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
-                </ContentRow>
+        <ContentRow narrow>
+            <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
+        </ContentRow>
 
-                <EventsList />
+        <EventsList />
 
-                <Archive />
-            </FadeIn>
-        </LazyLoad>
+        <Archive />
     </Section>
 )
 

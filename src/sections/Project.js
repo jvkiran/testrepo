@@ -3,8 +3,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import LazyLoad from 'react-lazyload'
-import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
@@ -193,55 +191,55 @@ const Project = ({ toggleModal, ...props }) => {
     }
     return (
         <Section id="project" {...props}>
-            <LazyLoad once offset={100}>
-                <FadeIn>
-                    <ContentRow>
-                        <Title>
+            <ContentRow>
+                <Title>
           Ocean Protocol <br />unlocks data
-                        </Title>
+                </Title>
 
-                        <StyledData width={1}>
-                            <StyledCard onClick={() => _toggleModal('provider')}>
-                                <h4>Data Providers</h4>
-                                <p>Unlock your data and earn revenue.</p>
-                                <button>Publish data</button>
-                            </StyledCard>
-                            <StyledDataTransfer>
-                                <StyledDataDots img={dataDotsLeft} />
-                                <StyledDataDots img={dataDotsRight} />
-                                <Pulse />
-                            </StyledDataTransfer>
-                            <StyledCard onClick={() => _toggleModal('consumer')}>
-                                <h4>Data Consumers</h4>
-                                <p>Discover and buy data.</p>
-                                <button>Get data</button>
-                            </StyledCard>
-                        </StyledData>
+                <StyledData width={1}>
+                    <StyledCard onClick={() => _toggleModal('provider')}>
+                        <h4>Data Providers</h4>
+                        <p>Unlock your data and earn revenue.</p>
+                        <button>Publish data</button>
+                    </StyledCard>
+                    <StyledDataTransfer>
+                        <StyledDataDots img={dataDotsLeft} />
+                        <StyledDataDots img={dataDotsRight} />
+                        <Pulse />
+                    </StyledDataTransfer>
+                    <StyledCard onClick={() => _toggleModal('consumer')}>
+                        <h4>Data Consumers</h4>
+                        <p>Discover and buy data.</p>
+                        <button>Get data</button>
+                    </StyledCard>
+                </StyledData>
 
-                        <Grid>
-                            <Cell width={2 / 5}>
-                                <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
-                                <Paragraph>
+                <Grid>
+                    <Cell width={2 / 5}>
+                        <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
+                        <Paragraph>
               Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
-                                </Paragraph>
-                                <Paragraph>
+                        </Paragraph>
+                        <Paragraph>
               Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
-                                </Paragraph>
-                            </Cell>
-                            <Cell width={1 / 5}>
-                                <div />
-                            </Cell>
-                            <Cell width={2 / 5}>
-                                <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
-                                <Paragraph>
+                        </Paragraph>
+                    </Cell>
+                    <Cell width={1 / 5}>
+                        <div />
+                    </Cell>
+                    <Cell width={2 / 5}>
+                        <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
+                        <Paragraph>
               The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.
-                                </Paragraph>
-                                <Paragraph>
+                        </Paragraph>
+                        <Paragraph>
               A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset.
                         </Paragraph>
                     </Cell>
                 </Grid>
             </ContentRow>
+
+
 
                 <Roadmap />
               </FadeIn>

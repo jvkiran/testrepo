@@ -2,8 +2,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import LazyLoad from 'react-lazyload'
-import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -112,103 +110,99 @@ const StyledRow = styled.div`
 
 const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
-        <LazyLoad once offset={100}>
-            <FadeIn>
-                <ContentRow>
-                    <Title white>Learn how Ocean Protocol works</Title>
-                </ContentRow>
+        <ContentRow>
+            <Title white>Learn how Ocean Protocol works</Title>
+        </ContentRow>
 
-                <ContentRow wide>
-                    <Grid>
-                        <Cell width={1 / 3}>
-                            <StyledWhitepaper >
-                                <StyledTitle>Technical Whitepaper</StyledTitle>
-                                <StyledIntro>
+        <ContentRow wide>
+            <Grid>
+                <Cell width={1 / 3}>
+                    <StyledWhitepaper >
+                        <StyledTitle>Technical Whitepaper</StyledTitle>
+                        <StyledIntro>
                             This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.
-                                </StyledIntro>
-                                <StyledAbstract>
+                        </StyledIntro>
+                        <StyledAbstract>
                             The heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.
-                                </StyledAbstract>
-                                <StyledFooter>
-                                    <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
-                                        <StyledDownload onClick={() => gtag('event', 'tech-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'tech-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
                                     Download <span>pdf</span>
-                                        </StyledDownload>
-                                    </a>
-                                </StyledFooter>
-                            </StyledWhitepaper>
-                        </Cell>
-                        <Cell width={1 / 3}>
-                            <StyledWhitepaper>
-                                <StyledTitle>Business Whitepaper</StyledTitle>
-                                <StyledIntro>
+                                </StyledDownload>
+                            </a>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </Cell>
+                <Cell width={1 / 3}>
+                    <StyledWhitepaper>
+                        <StyledTitle>Business Whitepaper</StyledTitle>
+                        <StyledIntro>
                             This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
-                                </StyledIntro>
-                                <StyledAbstract>
+                        </StyledIntro>
+                        <StyledAbstract>
                             It is complementary to the technical whitepaper for Ocean Protocol.
-                                </StyledAbstract>
-                                <StyledFooter>
-                                    <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
-                                        <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
                                     Download <span>pdf</span>
-                                        </StyledDownload>
-                                    </a>
-                                </StyledFooter>
-                            </StyledWhitepaper>
-                        </Cell>
-                        <Cell width={1 / 3}>
-                            <StyledWhitepaper>
-                                <StyledTitle>Marketplace Framework</StyledTitle>
-                                <StyledIntro>
+                                </StyledDownload>
+                            </a>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </Cell>
+                <Cell width={1 / 3}>
+                    <StyledWhitepaper>
+                        <StyledTitle>Marketplace Framework</StyledTitle>
+                        <StyledIntro>
                 This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
-                                </StyledIntro>
-                                <StyledAbstract>
+                        </StyledIntro>
+                        <StyledAbstract>
                 It is complementary to the technical whitepaper for Ocean Protocol.
-                                </StyledAbstract>
-                                <StyledFooter>
-                                    <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
-                                        <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
+                        </StyledAbstract>
+                        <StyledFooter>
+                            <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
+                                <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
                     Download <span>pdf</span>
-                                        </StyledDownload>
-                                    </a>
-                                </StyledFooter>
-                            </StyledWhitepaper>
-                        </Cell>
-                    </Grid>
-                </ContentRow>
+                                </StyledDownload>
+                            </a>
+                        </StyledFooter>
+                    </StyledWhitepaper>
+                </Cell>
+            </Grid>
+        </ContentRow>
 
-                <ContentRow>
-                    <StyledComments>
+        <ContentRow>
+            <StyledComments>
                 Have a comment or suggestions about any of our documents? <br />
                 Let us know <a href={social.twitter}>@oceanprotocol</a>
-                    </StyledComments>
-                </ContentRow>
+            </StyledComments>
+        </ContentRow>
 
-                <ContentRow>
-                    <Grid>
-                        <Cell width={1 / 2}>
-                            <StyledRow>
-                                <SubTitle white>Mission Statement</SubTitle>
-                                <StyledAbstract>
+        <ContentRow>
+            <Grid>
+                <Cell width={1 / 2}>
+                    <StyledRow>
+                        <SubTitle white>Mission Statement</SubTitle>
+                        <StyledAbstract>
                 Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
                 Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
-                                </StyledAbstract>
-                            </StyledRow>
-                        </Cell>
-                        <Cell width={1 / 2}>
-                            <StyledRow>
-                                <SubTitle white>Subscribe to updates</SubTitle>
-                                <StyledAbstract>
+                        </StyledAbstract>
+                    </StyledRow>
+                </Cell>
+                <Cell width={1 / 2}>
+                    <StyledRow>
+                        <SubTitle white>Subscribe to updates</SubTitle>
+                        <StyledAbstract>
                 Be the first to know when we release new papers.
-                                </StyledAbstract>
-                                <SubscribeForm />
-                            </StyledRow>
-                        </Cell>
-                    </Grid>
-                </ContentRow>
-            </FadeIn>
-        </LazyLoad>
+                        </StyledAbstract>
+                        <SubscribeForm />
+                    </StyledRow>
+                </Cell>
+            </Grid>
+        </ContentRow>
     </Section>
 )
 

@@ -2,7 +2,7 @@
 
 import './lib/polyfills'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { hydrate, render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { injectGlobal } from 'styled-components'
 import { globalStyles } from './styles'
@@ -11,12 +11,12 @@ import App from './App'
 
 injectGlobal`${globalStyles}` // eslint-disable-line
 
-ReactDOM.render(
-    (
-        <Router>
-            <App />
-        </Router>
-    ), document.getElementById('root')
-)
+const rootElement = document.getElementById('root')
+
+if (rootElement.hasChildNodes()) {
+    hydrate(<Router><App /></Router>, rootElement)
+} else {
+    render(<Router><App /></Router>, rootElement)
+}
 
 unregister()
