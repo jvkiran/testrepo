@@ -20,12 +20,17 @@
     {
         "title": "Network Beta",
         "date": "Q4 2018",
-        "description": "Beta test network of the Ocean Protocol"
+        "description": "Tethys beta (v0.9) test network"
     },
     {
         "title": "Network Launch",
         "date": "Q1 2019",
-        "description": "Network deployed, AI/Data/Community activated"
+        "description": "Tethys (v1.0) network deployed, AI/Data/Community activated"
+    },
+    {
+        "title": "Potamoi",
+        "date": "Q2 2019",
+        "description": "Potamoi (v2.0) network deployed"
     },
     {
         "title": "Secondary",
