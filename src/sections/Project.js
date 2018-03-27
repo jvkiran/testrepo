@@ -11,6 +11,7 @@ import Cell from '../components/Cell'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import Paragraph from '../components/Paragraph'
+import Roadmap from '../components/Roadmap'
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg'
 import dataDotsRight from '../assets/graphics/data-dots-right.svg'
 import arrow from '../assets/misc/arrow.svg'
@@ -237,6 +238,8 @@ const Project = ({ toggleModal, ...props }) => {
                     </Cell>
                 </Grid>
             </ContentRow>
+
+            <Roadmap />
         </Section>
     )
 }

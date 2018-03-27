@@ -4,6 +4,7 @@ export const colors = {
     dark: '48, 48, 48',
     grey: '65, 71, 78',
     lightGrey: '139, 152, 169',
+    dimmedGrey: '226, 226, 226',
     darkGrey: '23, 25, 26',
     darkPurple: '20, 17, 39',
     purple: '123, 17, 115',
