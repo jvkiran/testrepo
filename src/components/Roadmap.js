@@ -92,6 +92,7 @@ const Milestone = styled.div`
     margin-left: 1rem;
     border-left: .15rem solid;
     border-left-color: ${({ active }) => (active ? `rgb(${colors.pink})` : `rgb(${colors.lightGrey})`)};
+    flex: 1;
 
     @media screen and (${responsive.md.min}) {
         border-left: 0;

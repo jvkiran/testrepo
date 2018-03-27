@@ -14,7 +14,13 @@
     {
         "title": "Pre-Launch",
         "date": "March 2018",
-        "description": "Singapore, Lead Customers, Advisors"
+        "description": "Singapore, Lead Customers, Advisors",
+        "active": true
+    },
+    {
+        "title": "Network Beta",
+        "date": "Q4 2018",
+        "description": "Beta test network of the Ocean Protocol"
     },
     {
         "title": "Network Launch",
