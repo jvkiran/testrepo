@@ -127,9 +127,11 @@ const PlayButton = styled.img`
 
 const RatioContainer = styled.div`
     z-index: 2;
-    margin: .5rem;
     transition: ${transitions.base};
     overflow: hidden;
+    background: rgba(${colors.white}, .8);
+    padding: 1rem;
+    margin-bottom: 1rem;
 
     @media screen and (${responsive.sm.max}) {
         &.hidden {
@@ -139,8 +141,9 @@ const RatioContainer = styled.div`
 
     @media screen and (${responsive.sm.min}) {
         border: .4rem solid rgb(${colors.white});
+        padding: 0;
         padding-top: 1rem;
-        background: rgba(${colors.white}, .8);
+        margin: .5rem;
 
         &:hover,
         &:focus {
@@ -177,7 +180,7 @@ const AspectRatio = styled.div`
 `
 
 const VideoTitle = styled.h1`
-    font-size: ${fonts.size.h3};
+    font-size: ${fonts.size.h4};
     color: rgb(${colors.black});
     text-align: center;
     margin-bottom: 2rem;
@@ -185,6 +188,7 @@ const VideoTitle = styled.h1`
 
     @media screen and (${responsive.sm.min}) {
         padding: 0 2rem;
+        font-size: ${fonts.size.h3};
     }
 
     @media screen and (${responsive.md.min}) {
