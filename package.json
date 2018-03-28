@@ -5,7 +5,7 @@
   "homepage": "https://oceanprotocol.com",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp ./whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf",
     "lint:js": "eslint ./{src,public}/**/*.js",
     "lint:css": "stylelint ./src/**/*.js",
     "lint": "npm run lint:js && npm run lint:css",
