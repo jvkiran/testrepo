@@ -47,13 +47,19 @@ const MilestoneDate = styled.h2`
     }
 `
 
-const MilestoneDescription = styled.p`
+const MilestoneDescription = styled.ul`
     margin-top: 1rem;
     margin-bottom: 0;
+    padding-left: 1.5rem;
+    text-align: left;
+
+    li {
+        list-style-type: circle;
+    }
 
     @media screen and (${responsive.lg.min}) {
-        padding-left: .75rem;
-        padding-right: .75rem;
+        padding-left: 2rem;
+        padding-right: .5rem;
         font-size: ${fonts.size.small};
         max-width: 15rem;
         margin-left: auto;
@@ -157,7 +163,11 @@ const Milestones = roadmap.map((milestone) => (
     <Milestone active={milestone.active} className={!!milestone.active && 'active'} key={milestone.title}>
         <MilestoneTitle>{milestone.title}</MilestoneTitle>
         <MilestoneDate>{milestone.date}</MilestoneDate>
-        <MilestoneDescription>{milestone.description}</MilestoneDescription>
+        <MilestoneDescription>
+            {milestone.description.map((item) => (
+                <li key={item}>{item}</li>
+            ))}
+        </MilestoneDescription>
         <MilestoneBullet />
     </Milestone>
 ))
