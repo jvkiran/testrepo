@@ -87,10 +87,10 @@ const MilestoneBullet = styled.div`
     &:before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        left: .05rem;
+        top: .05rem;
+        width: calc(100% - .1rem);
+        height: calc(100% - .1rem);
         border-radius: 50%;
         border: .25rem solid rgb(${colors.white});
     }
