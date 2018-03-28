@@ -15,6 +15,7 @@
 ## Table of Contents
 
 - [Content](#content)
+    - [Papers](#papers)
     - [Blog posts](#blog-posts)
     - [Videos](#videos)
 - [Development](#development)
@@ -30,6 +31,12 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 - FAQ: `faq.json`
 - Events: `events.json`
 - Team: `team.json`
+
+### Papers
+
+All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
+
+An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule and automatically copied in place before deployment.
 
 ### Blog posts
 
@@ -48,6 +55,9 @@ Website only communicates with an endpoint created via webtask.io, where the tas
 The site is a single page React app, created with [`create-react-app`](https://github.com/facebook/create-react-app).
 
 ```bash
+git clone --recurse-submodules git@github.com:oceanprotocol/site.git
+cd site/
+
 npm i
 npm start
 ```
