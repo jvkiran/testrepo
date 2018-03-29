@@ -33,7 +33,7 @@ const MilestoneTitle = styled.h1`
     margin-bottom: .25rem;
 
     @media screen and (${responsive.lg.min}) {
-        margin-top: -5rem;
+        margin-top: -4.75rem;
     }
 `
 
