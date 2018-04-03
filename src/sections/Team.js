@@ -252,7 +252,7 @@ TeamMember.propTypes = {
 
 const Team = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="team">
-        <LazyLoad once offset={100}>
+        <LazyLoad once height={1620} offset={100}>
             <FadeIn>
                 <StyledWrapper>
                     <ContentRow>

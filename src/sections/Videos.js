@@ -543,7 +543,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
 
 const RenderSection = ({ ApiResponse }) => (
     <Section background={colors.black} fontColor={colors.white} id="video">
-        <LazyLoad once offset={100}>
+        <LazyLoad once height={1040} offset={100}>
             <StyledContentRow>
                 <Title white id='videoScroll'>Videos</Title>
             </StyledContentRow>

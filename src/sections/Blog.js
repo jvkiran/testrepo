@@ -99,7 +99,7 @@ class Blog extends Component {
               {this.state.fetching ? (
                   <Spinner />
               ) : (
-                  <LazyLoad once offset={100}>
+                  <LazyLoad once height={524} offset={100}>
                       <FadeIn>
                           <Grid>
                               {this.state.posts.map(post => (
