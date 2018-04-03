@@ -11,7 +11,7 @@ const StyledRoadmap = styled.article`
     background: rgb(${colors.dimmedGrey});
     margin-left: -2.5rem;
     width: calc(100% + 5rem);
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     padding-top: 5rem;
 `
 
@@ -159,10 +159,39 @@ const Milestone = styled.div`
     }
 `
 
+const DisclaimerAsterisk = styled.span`
+    display: inline-block;
+    font-size: ${fonts.size.base};
+    color: rgb(${colors.lightGrey});
+
+    &.hide {
+        display: none;
+    }
+`
+
+const Disclaimer = styled.aside`
+    color: rgb(${colors.lightGrey});
+    font-size: ${fonts.size.small};
+    margin-top: 3rem;
+    margin-right: 2rem;
+    margin-left: 2.5rem;
+    text-align: right;
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: -3.5rem;
+    }
+
+    p {
+        margin-bottom: 0;
+        max-width: 30rem;
+        display: inline-block;
+    }
+`
+
 const Milestones = roadmap.map((milestone) => (
     <Milestone active={milestone.active} className={!!milestone.active && 'active'} key={milestone.title}>
         <MilestoneTitle>{milestone.title}</MilestoneTitle>
-        <MilestoneDate>{milestone.date}</MilestoneDate>
+        <MilestoneDate>{milestone.date} <DisclaimerAsterisk className={milestone.active && 'hide'}>*</DisclaimerAsterisk></MilestoneDate>
         <MilestoneDescription>
             {milestone.description.map((item) => (
                 <li key={item}>{item}</li>
@@ -180,6 +209,9 @@ const Roadmap = () => (
         <FlexContentRow wide>
             {Milestones}
         </FlexContentRow>
+        <Disclaimer>
+            <p><DisclaimerAsterisk>*</DisclaimerAsterisk> Software is sometimes hard to predict, so there might be delays. We will update projected dates once we are closer to a milestone&#8217;s completion.</p>
+        </Disclaimer>
     </StyledRoadmap>
 )
 
