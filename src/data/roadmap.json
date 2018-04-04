@@ -1,0 +1,43 @@
+[
+    {
+        "title": "Seed",
+        "date": "November 2017",
+        "description": [
+            "Ocean Token seed distribution",
+            "Technical Primer",
+            "Marketplace Framework"
+        ],
+        "active": true
+    },
+    {
+        "title": "Whitepapers",
+        "date": "February 2018",
+        "description": [
+            "Technical Whitepaper",
+            "Business Whitepaper"
+        ],
+        "active": true
+    },
+    {
+        "title": "Pre-Launch",
+        "date": "March 2018",
+        "description": [
+            "Ocean Token pre-launch distribution",
+            "Singapore, Lead Customers, Advisors"
+        ],
+        "active": true
+    },
+    {
+        "title": "Network Beta",
+        "date": "Q4 2018",
+        "description": ["Tethys beta (v0.9) test network deployed"]
+    },
+    {
+        "title": "Network Launch",
+        "date": "Q1 2019",
+        "description": [
+            "Tethys (v1.0) network deployed",
+            "AI/Data/Community activated"
+        ]
+    }
+]
