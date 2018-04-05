@@ -504,7 +504,7 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
     }
     componentWillMount() {
         if (youtube.playlist) {
-            const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}/${youtube.apikey}`
+            const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
             fetch(url)
                 .then((response) => {
                     if (response.ok) {
