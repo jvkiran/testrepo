@@ -18,6 +18,7 @@
     - [Papers](#papers)
     - [Blog posts](#blog-posts)
     - [Videos](#videos)
+- [Forms](#forms)
 - [Development](#development)
     - [Workflow](#workflow)
     - [Code style](#code-style)
@@ -31,6 +32,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 - FAQ: `faq.json`
 - Events: `events.json`
 - Team: `team.json`
+- Roadmap: `roadmap.json`
 
 ### Papers
 
@@ -49,6 +51,19 @@ Website only communicates with an endpoint created via webtask.io, where the tas
 All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel.
 
 Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the YouTube Data API v3 setup in Google Cloud Platform. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
+
+## Forms
+
+We have the following forms on our website collecting lead data:
+
+- *Newsletter subscription*: Email
+- *Join as Data Provider*: Name, Email, Company, Comment
+- *Join as Data Consumer*: Name, Email, Company, Comment
+- *Join as Contributor*: Name, Email, Role, Comment
+
+All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
+
+Via Zapier, the Data Provider, Data Consumer, and Contributor data is synced further via into Google Sheets.
 
 ## Development
 
