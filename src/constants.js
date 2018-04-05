@@ -36,6 +36,5 @@ export const dates = {
 
 export const youtube = {
     'channel': 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
-    'apikey': 'AIzaSyCTDzYB0VLSuACnwc-n59famCk-aCeMm9w',
     'playlist': 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
 }
