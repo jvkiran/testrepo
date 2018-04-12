@@ -131,6 +131,9 @@ const StyledEvent = styled.a`
         width: auto;
         flex: 0 1 calc(50% - 2rem);
         margin: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     @media screen and (${responsive.lg.min}) {
@@ -141,15 +144,16 @@ const StyledEvent = styled.a`
 
 const StyledEventCity = styled.h4`
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
     color: rgb(${colors.white});
+    width: 100%;
+    align-self: flex-start;
 `
 
 const StyledEventName = styled.p`
     display: block;
     color: rgb(${colors.lightGrey});
-    margin-top: -.75rem;
-    margin-bottom: 1rem;
+    width: 100%;
 `
 
 const StyledEventDate = styled.h5`
@@ -157,6 +161,8 @@ const StyledEventDate = styled.h5`
     font-size: ${fonts.size.base};
     margin: 0;
     opacity: .8;
+    width: 100%;
+    align-self: flex-end;
 `
 
 const StyledTitle = styled(Title)`
