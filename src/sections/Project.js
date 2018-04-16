@@ -239,11 +239,7 @@ const Project = ({ toggleModal, ...props }) => {
                 </Grid>
             </ContentRow>
 
-
-
-                <Roadmap />
-              </FadeIn>
-            </LazyLoad>
+            <Roadmap />
         </Section>
     )
 }
