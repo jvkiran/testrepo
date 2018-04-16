@@ -1,7 +1,7 @@
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
@@ -544,22 +544,24 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
 const RenderSection = ({ ApiResponse }) => (
     <Section background={colors.black} fontColor={colors.white} id="video">
         <LazyLoad once height={1040} offset={100}>
-            <StyledContentRow>
-                <Title white id='videoScroll'>Videos</Title>
-            </StyledContentRow>
+            <Fragment>
+                <StyledContentRow>
+                    <Title white id='videoScroll'>Videos</Title>
+                </StyledContentRow>
 
-            <VideoSlider items={ApiResponse} />
+                <VideoSlider items={ApiResponse} />
 
-            <StyledContentRow>
-                <a href={youtube.channel} target="_blank">
-                    <YouTubeButton>YouTube Channel</YouTubeButton>
-                </a>
-            </StyledContentRow>
+                <StyledContentRow>
+                    <a href={youtube.channel} target="_blank">
+                        <YouTubeButton>YouTube Channel</YouTubeButton>
+                    </a>
+                </StyledContentRow>
 
-            <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
-                <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
-                <source src={jellyfishVideoMp4} type="video/mp4" />
-            </VideoBackground>
+                <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
+                    <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
+                    <source src={jellyfishVideoMp4} type="video/mp4" />
+                </VideoBackground>
+            </Fragment>
         </LazyLoad>
     </Section>
 )
