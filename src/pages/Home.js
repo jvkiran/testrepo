@@ -12,27 +12,27 @@ import Faq from '../sections/Faq'
 import Modal from '../sections/Modal'
 
 class Home extends Component {
-  state = {
-      modal: ''
-  }
+    state = {
+        modal: ''
+    }
 
-  toggleModal = (modal = '') => this.setState({ modal })
+    toggleModal = (modal = '') => this.setState({ modal })
 
-  render = () => (
-      <Fragment>
-          <Menu />
-          <Welcome />
-          <Events />
-          <Project toggleModal={this.toggleModal} />
-          <Papers />
-          <Data />
-          <Team toggleModal={this.toggleModal} />
-          <Blog />
-          <Videos />
-          <Faq />
-          <Modal modal={this.state.modal} toggle={this.toggleModal} />
-      </Fragment>
-  )
+    render = () => (
+        <Fragment>
+            <Menu />
+            <Welcome />
+            <Events />
+            <Project toggleModal={this.toggleModal} />
+            <Papers />
+            <Data />
+            <Team toggleModal={this.toggleModal} />
+            <Blog />
+            <Videos />
+            <Faq />
+            <Modal modal={this.state.modal} toggle={this.toggleModal} />
+        </Fragment>
+    )
 }
 
 export default Home

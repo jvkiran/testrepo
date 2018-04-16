@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { fadeIn } from 'react-animations'
+import fadeIn from 'react-animations/lib/fade-in'
 import oceanLogo from '../assets/logos/ocean-logo.svg'
 import { colors, fonts, transitions } from '../styles'
 

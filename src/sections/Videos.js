@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
+import LazyLoad from 'react-lazyload'
 import smoothScroll from '../lib/smoothScroll'
 import Section from '../components/Section'
 import Title from '../components/Title'
@@ -439,7 +440,7 @@ class SectionContent extends Component {
                     </RatioContainer>
                     <VideoContainer className={this.state.player ? 'active' : ''}>
                         {this.state.player &&
-                            <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
+                        <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
                         }
                         <StyledReactPlayer
                             controls
@@ -542,22 +543,24 @@ class Videos extends React.Component { // eslint-disable-line react/no-multi-com
 
 const RenderSection = ({ ApiResponse }) => (
     <Section background={colors.black} fontColor={colors.white} id="video">
-        <StyledContentRow>
-            <Title white id='videoScroll'>Videos</Title>
-        </StyledContentRow>
+        <LazyLoad once height={1040} offset={100}>
+            <StyledContentRow>
+                <Title white id='videoScroll'>Videos</Title>
+            </StyledContentRow>
 
-        <VideoSlider items={ApiResponse} />
+            <VideoSlider items={ApiResponse} />
 
-        <StyledContentRow>
-            <a href={youtube.channel} target="_blank">
-                <YouTubeButton>YouTube Channel</YouTubeButton>
-            </a>
-        </StyledContentRow>
+            <StyledContentRow>
+                <a href={youtube.channel} target="_blank">
+                    <YouTubeButton>YouTube Channel</YouTubeButton>
+                </a>
+            </StyledContentRow>
 
-        <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
-            <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
-            <source src={jellyfishVideoMp4} type="video/mp4" />
-        </VideoBackground>
+            <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
+                <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
+                <source src={jellyfishVideoMp4} type="video/mp4" />
+            </VideoBackground>
+        </LazyLoad>
     </Section>
 )
 
