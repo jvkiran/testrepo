@@ -63,7 +63,10 @@ We have the following forms on our website collecting lead data:
 
 All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
 
-Via Zapier, the Data Provider, Data Consumer, and Contributor data is synced further via into Google Sheets.
+Via Zapier, the data is synced further in real time when new submissions happen:
+
+- the Data Provider, Data Consumer, and Contributor data into Slack channel #form-submissions in real time
+- the Data Provider, Data Consumer, and Contributor data into Google Sheets
 
 ## Development
 
