@@ -15,7 +15,7 @@ import buttonGithub from '../assets/buttons/github.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
 import { colors, responsive, fonts } from '../styles'
-import { company, social, youtube } from '../constants'
+import { meta, company, social, youtube } from '../constants'
 
 const StyledSubTitle = styled.h5`
     color: rgb(${colors.lightGrey});
@@ -176,7 +176,7 @@ const Footer = () => (
         </ContentRow>
         <ContentRow>
             <StyledCopyright>
-                <small>&copy; {(new Date().getFullYear())} <a href={company.url}>{company.name}</a> &mdash; All Rights Reserved</small>
+                <small>&copy; {(new Date().getFullYear())} <a href={meta.url}>{company.name}</a> &mdash; All Rights Reserved</small>
             </StyledCopyright>
         </ContentRow>
     </Section>
