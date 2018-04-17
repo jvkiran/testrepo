@@ -34,6 +34,7 @@ const Line = styled.div`
 
 const Meta = () => (
     <Helmet>
+        <title>Terms Pre-Launch</title>
         <meta content="noindex,nofollow" name="robots" />
     </Helmet>
 )
