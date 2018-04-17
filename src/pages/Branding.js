@@ -17,6 +17,17 @@ import OceanLogoWhitePNG from '../assets/art/logo/logo-white.png'
 const pageTitle = 'Branding'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
 
+const SectionTitle = styled(SubTitle)`
+    margin-top: 4rem;
+`
+
+const SectionSubTitle = styled.h4`
+    font-size: ${fonts.size.large};
+    color: rgb(${colors.lightGrey});
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+`
+
 const Logos = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -92,14 +103,14 @@ const Branding = () => (
             </ContentRow>
 
             <ContentRow>
-                <h3>Media kit</h3>
-                <p>
+                <SectionTitle>Media kit</SectionTitle>
+                <SectionSubTitle>
                     Download our branding assets in one handy file. Sourced from
                     our{' '}
                     <a href="https://github.com/oceanprotocol/art">
                         art repository on GitHub
                     </a>.
-                </p>
+                </SectionSubTitle>
                 <Button>
                     <a download href={mediakitDownload}>
                         Download media kit (zip)
@@ -108,8 +119,8 @@ const Branding = () => (
             </ContentRow>
 
             <ContentRow>
-                <h3>Logo</h3>
-                <p>You don’t need to get our logo from Google.</p>
+                <SectionTitle>Logo</SectionTitle>
+                <SectionSubTitle>You don’t need to get our logo from Google.</SectionSubTitle>
             </ContentRow>
 
             <ContentRow narrow>
@@ -148,7 +159,7 @@ const Branding = () => (
             </ContentRow>
 
             <ContentRow>
-                <h3>Colors</h3>
+                <SectionTitle>Colors</SectionTitle>
                 <Colors>
                     {Object.entries(colors).map(color => (
                         <Color color={color[1]} key={color}>
@@ -163,7 +174,7 @@ const Branding = () => (
                     ))}
                 </Colors>
 
-                <h3>Gradients</h3>
+                <SectionTitle>Gradients</SectionTitle>
                 <Gradients>
                     {Object.entries(gradients).map(gradient => (
                         <Gradient color={gradient[1]} key={gradient}>
@@ -173,7 +184,7 @@ const Branding = () => (
                     ))}
                 </Gradients>
 
-                <h3>Typography</h3>
+                <SectionTitle>Typography</SectionTitle>
                 <h1>Sharp Sans Display No. 1 Bold</h1>
                 <h2>Sharp Sans Display No. 1 Bold</h2>
                 <h3>Sharp Sans Display No. 1 Bold</h3>
