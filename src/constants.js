@@ -24,7 +24,7 @@ export const company = {
 export const social = {
     'blog': 'https://blog.oceanprotocol.com/',
     'twitter': 'https://twitter.com/oceanprotocol',
-    'slack': 'https://join.slack.com/t/oceanprotocol/shared_invite/enQtMjc3NjM3NzcxNDMwLTg1MWI3NjRmODk5NTEyNGIwZTI1M2FkOWZkM2FmOTI1MTgzNTU3ZjcxYzY4MmM0NDA4ODFkM2M5YzczNTY5NTQ',
+    'slack': 'https://join.slack.com/t/oceanprotocol/shared_invite/enQtMzQ5MjU1MjcwODIyLWQ2MDdhZjI1N2M5MzAzZmVhMjcwYzk4NDk4N2M2MTBkYmZjOWIyZDc5NWFjMGE4OWY5MDkzZWRmNzg1MDRjZDg',
     'telegram_news': 'https://t.me/oceanprotocol',
     'telegram': 'https://t.me/joinchat/GUyxrE0Hi154D0NrlOqLFg',
     'linkedin': 'https://www.linkedin.com/company/13429589/'
