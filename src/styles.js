@@ -10,8 +10,11 @@ export const colors = {
     purple: '123, 17, 115',
     pink: '246, 56, 138',
     softPink: '218, 89, 119',
-    red: '245, 70, 89',
-    orange: '255, 72, 91'
+    red: '245, 70, 89'
+}
+
+export const gradients = {
+    main: 'linear-gradient(to bottom right, rgb(123, 17, 115) 0%, rgb(246, 56, 138) 100%)'
 }
 
 export const fonts = {
