@@ -9,11 +9,32 @@ import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import { colors, fonts, gradients, responsive } from '../styles'
-import OceanLogo from '../assets/logos/ocean-logo.svg'
-import OceanLogoDark from '../assets/logos/ocean-logo-dark.svg'
+import OceanLogo from '../assets/art/logo/logo.svg'
+import OceanLogoWhite from '../assets/art/logo/logo-white.svg'
+import OceanLogoPNG from '../assets/art/logo/logo.png'
+import OceanLogoWhitePNG from '../assets/art/logo/logo-white.png'
 
 const pageTitle = 'Branding'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
+
+const Logos = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+`
+
+const Logo = styled.div`
+    flex: 0 0 30%;
+    text-align: center;
+
+    > div {
+        border: 1px solid rgb(${colors.lightGrey});
+        border-radius: 0.2rem;
+        padding: 2rem;
+        background: ${props => (props.white ? `rgb(${colors.black})` : null)};
+        margin-bottom: .5rem;
+    }
+`
 
 const Colors = styled.div`
     display: flex;
@@ -23,7 +44,7 @@ const Colors = styled.div`
 
 const Color = styled.div`
     margin-bottom: 2%;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background: ${props => (props.color ? `rgb(${props.color})` : '')};
     text-align: center;
     color: rgb(${colors.white});
@@ -71,16 +92,62 @@ const Branding = () => (
             </ContentRow>
 
             <ContentRow>
+                <h3>Media kit</h3>
+                <p>
+                    Download our branding assets in one handy file. Sourced from
+                    our{' '}
+                    <a href="https://github.com/oceanprotocol/art">
+                        art repository on GitHub
+                    </a>.
+                </p>
                 <Button>
-                    <a download href={mediakitDownload}>Download Mediakit</a>
+                    <a download href={mediakitDownload}>
+                        Download media kit (zip)
+                    </a>
                 </Button>
             </ContentRow>
 
             <ContentRow>
                 <h3>Logo</h3>
-                <img alt="Ocean Protocol logo" src={OceanLogoDark} width="90" />
-                <img alt="Ocean Protocol logo" src={OceanLogo} width="90" />
+                <p>You don’t need to get our logo from Google.</p>
+            </ContentRow>
 
+            <ContentRow narrow>
+                <Logos>
+                    <Logo>
+                        <div>
+                            <img
+                                alt="Ocean Protocol logo"
+                                src={OceanLogo}
+                                width="90" />
+                        </div>
+                        <a download href={OceanLogo}>
+                            SVG
+                        </a>{' '}
+                        •{' '}
+                        <a download href={OceanLogoPNG}>
+                            PNG
+                        </a>
+                    </Logo>
+                    <Logo white>
+                        <div>
+                            <img
+                                alt="Ocean Protocol logo"
+                                src={OceanLogoWhite}
+                                width="90" />
+                        </div>
+                        <a download href={OceanLogoWhite}>
+                            SVG
+                        </a>{' '}
+                        •{' '}
+                        <a download href={OceanLogoWhitePNG}>
+                            PNG
+                        </a>
+                    </Logo>
+                </Logos>
+            </ContentRow>
+
+            <ContentRow>
                 <h3>Colors</h3>
                 <Colors>
                     {Object.entries(colors).map(color => (
