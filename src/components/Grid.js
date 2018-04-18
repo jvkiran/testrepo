@@ -7,6 +7,7 @@ const Grid = styled.div`
     flex-wrap: ${({ wrap }) => (wrap ? 'wrap' : 'nowrap')};
     text-align: ${({ textCenter }) => (textCenter ? 'center' : 'left')};
     align-items: ${({ center }) => (center ? 'center' : 'stretch')};
+    justify-content: ${({ center }) => (center ? 'center' : 'space-between')};
 
     & > div {
         justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
