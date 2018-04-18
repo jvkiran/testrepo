@@ -34,15 +34,19 @@ const Color = styled.div`
     @media (${responsive.sm.min}) {
         flex-basis: 32%;
     }
+`
 
-    span { display: block; }
+const ColorName = styled.h5`
+    margin: 0;
+    color: rgb(${colors.white});
+    line-height: ${fonts.lineHeight.base};
+`
 
-    .color__name {
-
-    }
-
-    .color__value {
-    }
+const ColorValue = styled.h5`
+    margin: 0;
+    color: rgba(${colors.white}, .7);
+    font-size: ${fonts.size.base};
+    line-height: ${fonts.lineHeight.base};
 `
 
 const Gradients = styled(Colors)`
@@ -60,13 +64,9 @@ const Styleguide = () => (
         <Colors>
             {Object.entries(colors).map(color => (
                 <Color color={color[1]} key={color}>
-                    <span className="color__name">${color[0]}</span>
-                    <span className="color__value">
-                    rgb({color[1]})
-                    </span>
-                    <span className="color__value">
-                    #{rgbHex(color[1])}
-                    </span>
+                    <ColorName>{color[0]}</ColorName>
+                    <ColorValue>#{rgbHex(color[1])}</ColorValue>
+                    <ColorValue>rgb({color[1]})</ColorValue>
                 </Color>
             ))}
         </Colors>
@@ -75,8 +75,8 @@ const Styleguide = () => (
         <Gradients>
             {Object.entries(gradients).map(gradient => (
                 <Gradient color={gradient[1]} key={gradient}>
-                    <span className="color__name">${gradient[0]}</span>
-                    <span className="color__value">{gradient[1]}</span>
+                    <ColorName>{gradient[0]}</ColorName>
+                    <ColorValue>{gradient[1]}</ColorValue>
                 </Gradient>
             ))}
         </Gradients>
