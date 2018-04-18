@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import rgbHex from 'rgb-hex'
+import rgbHex from '../lib/rgb-hex'
 import Header from '../sections/Header'
 import Button from '../components/Button'
 import Section from '../components/Section'
