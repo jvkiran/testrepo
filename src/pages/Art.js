@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
-import rgbHex from '../lib/rgb-hex'
+import Collapsible from 'react-collapsible'
 import Header from '../sections/Header'
 import Button from '../components/Button'
 import Section from '../components/Section'
@@ -11,7 +11,8 @@ import ContentRow from '../components/ContentRow'
 import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
-import { colors, fonts, gradients, responsive } from '../styles'
+import Styleguide from '../components/Styleguide'
+import { colors, fonts, transitions } from '../styles'
 
 // grab all assets from art submodule
 import OceanLogo from '../assets/art/logo/logo.svg'
@@ -21,7 +22,7 @@ import OceanLogoWhitePNG from '../assets/art/logo/logo-white.png'
 import OceanBanner01 from '../assets/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '../assets/art/banner/banner-ocean-02@2x.png'
 
-const pageTitle = 'Branding'
+const pageTitle = 'Art'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
 
 const StyledSubTitle = styled(SubTitle)`
@@ -30,7 +31,7 @@ const StyledSubTitle = styled(SubTitle)`
 `
 
 const SectionTitle = styled(SubTitle)`
-    margin-top: 4rem;
+    margin-top: 6rem;
 `
 
 const SectionSubTitle = styled.h4`
@@ -75,43 +76,46 @@ const Banners = styled.figure`
     }
 `
 
-const Colors = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-`
+const StyledCollapsible = styled.div`
+    margin-top: 6rem;
 
-const Color = styled.div`
-    margin-bottom: 2%;
-    padding: 1rem 2rem;
-    background: ${props => (props.color ? `rgb(${props.color})` : '')};
-    text-align: center;
-    color: rgb(${colors.white});
-    border: 1px solid rgb(${colors.lightGrey});
-    border-radius: 0.2rem;
-    flex: 0 0 49%;
-
-    @media (${responsive.sm.min}) {
-        flex-basis: 32%;
+    .Collapsible__contentInner {
+        border-top: 1px solid rgba(${colors.lightGrey}, .4);
     }
 
-    span { display: block; }
+    .Collapsible__trigger {
+        cursor: pointer;
+        transition: ${transitions.base};
+        display: block;
+        font-family: ${fonts.family.title};
+        font-weight: ${fonts.fontWeight.title};
+        line-height: ${fonts.lineHeight.title};
+        font-size: ${fonts.size.large};
+        padding-bottom: 4rem;
+        text-align: center;
 
-    .color__name {
+        &:hover,
+        &:focus {
+            color: rgb(${colors.pink});
+        }
 
+        &:before {
+            content: '+';
+            font-size: 2.25rem;
+            line-height: 0;
+            vertical-align: middle;
+            margin-right: .5rem;
+            color: rgb(${colors.pink});
+            font-weight: ${fonts.fontWeight.base};
+            font-family: ${fonts.family.base};
+            position: relative;
+        }
+
+        &.is-open:before {
+            content: '-';
+            top: -.25rem;
+        }
     }
-
-    .color__value {
-    }
-`
-
-const Gradients = styled(Colors)`
-
-`
-
-const Gradient = styled(Color)`
-    background: ${props => (props.color ? props.color : '')};
-    flex-basis: 100%;
 `
 
 const Meta = () => (
@@ -120,14 +124,17 @@ const Meta = () => (
     </Helmet>
 )
 
-const Branding = () => (
+const Art = () => (
     <Fragment>
         <Meta />
         <Header />
         <Section>
             <ContentRow narrow>
                 <Title>{pageTitle}</Title>
-                <StyledSubTitle center>All the good looking stuff</StyledSubTitle>
+                <StyledSubTitle center>All the good looking stuff for you to use.</StyledSubTitle>
+                <Paragraph center>
+                    All assets are licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+                </Paragraph>
             </ContentRow>
 
             <ContentRow>
@@ -215,49 +222,14 @@ const Branding = () => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>Colors</SectionTitle>
-                <Colors>
-                    {Object.entries(colors).map(color => (
-                        <Color color={color[1]} key={color}>
-                            <span className="color__name">${color[0]}</span>
-                            <span className="color__value">
-                                rgb({color[1]})
-                            </span>
-                            <span className="color__value">
-                                #{rgbHex(color[1])}
-                            </span>
-                        </Color>
-                    ))}
-                </Colors>
-
-                <SectionTitle>Gradients</SectionTitle>
-                <Gradients>
-                    {Object.entries(gradients).map(gradient => (
-                        <Gradient color={gradient[1]} key={gradient}>
-                            <span className="color__name">${gradient[0]}</span>
-                            <span className="color__value">{gradient[1]}</span>
-                        </Gradient>
-                    ))}
-                </Gradients>
-
-                <SectionTitle>Typography</SectionTitle>
-                <h1>Sharp Sans Display No. 1 Bold</h1>
-                <h2>Sharp Sans Display No. 1 Bold</h2>
-                <h3>Sharp Sans Display No. 1 Bold</h3>
-                <h4>Sharp Sans Display No. 1 Bold</h4>
-                <h5>Sharp Sans Display No. 1 Bold</h5>
-                <p>
-                    Sharp Sans Medium <strong>Sharp Sans Bold</strong>
-                </p>
-                <p style={{ fontSize: fonts.size.large }}>
-                    Sharp Sans Medium <strong>Sharp Sans Bold</strong>
-                </p>
-                <p style={{ fontSize: fonts.size.small }}>
-                    Sharp Sans Medium <strong>Sharp Sans Bold</strong>
-                </p>
+                <StyledCollapsible>
+                    <Collapsible easing="ease-out" transitionTime={200} trigger="Full Living Style Guide">
+                        <Styleguide />
+                    </Collapsible>
+                </StyledCollapsible>
             </ContentRow>
         </Section>
     </Fragment>
 )
 
-export default Branding
+export default Art
