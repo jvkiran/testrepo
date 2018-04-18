@@ -2,6 +2,7 @@
 	path = whitepaper
 	url = git@github.com:oceanprotocol/whitepaper.git
 	branch = master
-[submodule "art"]
+[submodule "src/assets/art"]
 	path = src/assets/art
 	url = git@github.com:oceanprotocol/art.git
+    branch = master
