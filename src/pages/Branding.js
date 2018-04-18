@@ -8,14 +8,26 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
+import Grid from '../components/Grid'
+import Cell from '../components/Cell'
+import Paragraph from '../components/Paragraph'
 import { colors, fonts, gradients, responsive } from '../styles'
+
+// grab all assets from art submodule
 import OceanLogo from '../assets/art/logo/logo.svg'
 import OceanLogoWhite from '../assets/art/logo/logo-white.svg'
 import OceanLogoPNG from '../assets/art/logo/logo.png'
 import OceanLogoWhitePNG from '../assets/art/logo/logo-white.png'
+import OceanBanner01 from '../assets/art/banner/banner-ocean-01@2x.png'
+import OceanBanner02 from '../assets/art/banner/banner-ocean-02@2x.png'
 
 const pageTitle = 'Branding'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
+
+const StyledSubTitle = styled(SubTitle)`
+    color: rgb(${colors.lightGrey});
+    margin-top: -3rem;
+`
 
 const SectionTitle = styled(SubTitle)`
     margin-top: 4rem;
@@ -24,18 +36,18 @@ const SectionTitle = styled(SubTitle)`
 const SectionSubTitle = styled.h4`
     font-size: ${fonts.size.large};
     color: rgb(${colors.lightGrey});
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     margin-top: -1rem;
 `
 
 const Logos = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 `
 
 const Logo = styled.div`
-    flex: 0 0 30%;
+    flex: 0 0 48%;
     text-align: center;
 
     > div {
@@ -44,6 +56,22 @@ const Logo = styled.div`
         padding: 2rem;
         background: ${props => (props.white ? `rgb(${colors.black})` : null)};
         margin-bottom: .5rem;
+    }
+`
+
+const Banners = styled.figure`
+    display: block;
+    margin: 0;
+
+    img {
+        margin-bottom: 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        margin-top: 2rem;
     }
 `
 
@@ -99,63 +127,91 @@ const Branding = () => (
         <Section>
             <ContentRow narrow>
                 <Title>{pageTitle}</Title>
-                <SubTitle center>All the good looking stuff</SubTitle>
+                <StyledSubTitle center>All the good looking stuff</StyledSubTitle>
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>Media kit</SectionTitle>
+                <Grid>
+                    <Cell width={1 / 2}>
+                        <SectionTitle>Logo</SectionTitle>
+                        <SectionSubTitle>
+                            You don’t need to get our logo from Google.
+                        </SectionSubTitle>
+                        <Logos>
+                            <Logo>
+                                <div>
+                                    <img
+                                        alt="Ocean Protocol logo"
+                                        src={OceanLogo}
+                                        width="90" />
+                                </div>
+                                <a download href={OceanLogo}>
+                                    SVG
+                                </a>
+                                {' • '}
+                                <a download href={OceanLogoPNG}>
+                                    PNG
+                                </a>
+                            </Logo>
+                            <Logo white>
+                                <div>
+                                    <img
+                                        alt="Ocean Protocol logo"
+                                        src={OceanLogoWhite}
+                                        width="90" />
+                                </div>
+                                <a download href={OceanLogoWhite}>
+                                    SVG
+                                </a>
+                                {' • '}
+                                <a download href={OceanLogoWhitePNG}>
+                                    PNG
+                                </a>
+                            </Logo>
+                        </Logos>
+                    </Cell>
+                    <Cell width={1 / 3}>
+                        <SectionTitle>Media kit</SectionTitle>
+                        <SectionSubTitle>
+                            Download all our assets.
+                        </SectionSubTitle>
+
+                        <Paragraph>
+                            <a download href={mediakitDownload}>
+                                <Button>Download media kit (zip)</Button>
+                            </a>
+                        </Paragraph>
+                        <Paragraph>
+                            Sourced from our{' '}
+                            <a href="https://github.com/oceanprotocol/art">
+                                art repository on GitHub
+                            </a>.
+                        </Paragraph>
+                    </Cell>
+                </Grid>
+            </ContentRow>
+
+            <ContentRow>
+                <SectionTitle>Banner</SectionTitle>
                 <SectionSubTitle>
-                    Download our branding assets in one handy file. Sourced from
-                    our{' '}
-                    <a href="https://github.com/oceanprotocol/art">
-                        art repository on GitHub
-                    </a>.
+                    Spruce up your blog posts with these Ocean Protocol banners.
                 </SectionSubTitle>
-                <Button>
-                    <a download href={mediakitDownload}>
-                        Download media kit (zip)
+
+                <Banners>
+                    <a download href={OceanBanner01}>
+                        <img
+                            alt="Ocean Protocol banner 1"
+                            src={OceanBanner01} />
+                        PNG
                     </a>
-                </Button>
-            </ContentRow>
 
-            <ContentRow>
-                <SectionTitle>Logo</SectionTitle>
-                <SectionSubTitle>You don’t need to get our logo from Google.</SectionSubTitle>
-            </ContentRow>
-
-            <ContentRow narrow>
-                <Logos>
-                    <Logo>
-                        <div>
-                            <img
-                                alt="Ocean Protocol logo"
-                                src={OceanLogo}
-                                width="90" />
-                        </div>
-                        <a download href={OceanLogo}>
-                            SVG
-                        </a>{' '}
-                        •{' '}
-                        <a download href={OceanLogoPNG}>
-                            PNG
-                        </a>
-                    </Logo>
-                    <Logo white>
-                        <div>
-                            <img
-                                alt="Ocean Protocol logo"
-                                src={OceanLogoWhite}
-                                width="90" />
-                        </div>
-                        <a download href={OceanLogoWhite}>
-                            SVG
-                        </a>{' '}
-                        •{' '}
-                        <a download href={OceanLogoWhitePNG}>
-                            PNG
-                        </a>
-                    </Logo>
-                </Logos>
+                    <a download href={OceanBanner02}>
+                        <img
+                            alt="Ocean Protocol banner 2"
+                            src={OceanBanner02} />
+                        PNG
+                    </a>
+                </Banners>
             </ContentRow>
 
             <ContentRow>
