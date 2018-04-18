@@ -12,7 +12,8 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
-import { colors, fonts, transitions } from '../styles'
+import jellyfish from '../assets/graphics/jellyfish.svg'
+import { colors, fonts, transitions, layout } from '../styles'
 
 // grab all assets from art submodule
 import OceanLogo from '../assets/art/logo/logo.svg'
@@ -24,6 +25,14 @@ import OceanBanner02 from '../assets/art/banner/banner-ocean-02@2x.png'
 
 const pageTitle = 'Art'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
+
+const HeaderArt = styled(Section)`
+    background-image: url(${jellyfish});
+    background-position: center 3rem;
+    display: flex;
+    align-items: center;
+    margin-top: ${layout.pageFrame};
+`
 
 const StyledSubTitle = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
@@ -78,6 +87,7 @@ const Banners = styled.figure`
 
 const StyledCollapsible = styled.div`
     margin-top: 6rem;
+    margin-bottom: 4rem;
 
     .Collapsible__contentInner {
         border-top: 1px solid rgba(${colors.lightGrey}, .4);
@@ -128,107 +138,106 @@ const Art = () => (
     <Fragment>
         <Meta />
         <Header />
-        <Section>
+        <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
-                <Title>{pageTitle}</Title>
+                <Title white>{pageTitle}</Title>
                 <StyledSubTitle center>All the good looking stuff for you to use.</StyledSubTitle>
                 <Paragraph center>
                     All assets are licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
                 </Paragraph>
             </ContentRow>
-
-            <ContentRow>
-                <Grid>
-                    <Cell width={1 / 2}>
-                        <SectionTitle>Logo</SectionTitle>
-                        <SectionSubTitle>
+        </HeaderArt>
+        <ContentRow>
+            <Grid>
+                <Cell width={1 / 2}>
+                    <SectionTitle>Logo</SectionTitle>
+                    <SectionSubTitle>
                             You don’t need to get our logo from Google.
-                        </SectionSubTitle>
-                        <Logos>
-                            <Logo>
-                                <div>
-                                    <img
-                                        alt="Ocean Protocol logo"
-                                        src={OceanLogo}
-                                        width="90" />
-                                </div>
-                                <a download href={OceanLogo}>
+                    </SectionSubTitle>
+                    <Logos>
+                        <Logo>
+                            <div>
+                                <img
+                                    alt="Ocean Protocol logo"
+                                    src={OceanLogo}
+                                    width="90" />
+                            </div>
+                            <a download href={OceanLogo}>
                                     SVG
-                                </a>
-                                {' • '}
-                                <a download href={OceanLogoPNG}>
-                                    PNG
-                                </a>
-                            </Logo>
-                            <Logo white>
-                                <div>
-                                    <img
-                                        alt="Ocean Protocol logo"
-                                        src={OceanLogoWhite}
-                                        width="90" />
-                                </div>
-                                <a download href={OceanLogoWhite}>
-                                    SVG
-                                </a>
-                                {' • '}
-                                <a download href={OceanLogoWhitePNG}>
-                                    PNG
-                                </a>
-                            </Logo>
-                        </Logos>
-                    </Cell>
-                    <Cell width={1 / 3}>
-                        <SectionTitle>Media kit</SectionTitle>
-                        <SectionSubTitle>
-                            Download all our assets.
-                        </SectionSubTitle>
-
-                        <Paragraph>
-                            <a download href={mediakitDownload}>
-                                <Button>Download media kit (zip)</Button>
                             </a>
-                        </Paragraph>
-                        <Paragraph>
+                            {' • '}
+                            <a download href={OceanLogoPNG}>
+                                    PNG
+                            </a>
+                        </Logo>
+                        <Logo white>
+                            <div>
+                                <img
+                                    alt="Ocean Protocol logo"
+                                    src={OceanLogoWhite}
+                                    width="90" />
+                            </div>
+                            <a download href={OceanLogoWhite}>
+                                    SVG
+                            </a>
+                            {' • '}
+                            <a download href={OceanLogoWhitePNG}>
+                                    PNG
+                            </a>
+                        </Logo>
+                    </Logos>
+                </Cell>
+                <Cell width={1 / 3}>
+                    <SectionTitle>Media kit</SectionTitle>
+                    <SectionSubTitle>
+                            Download all our assets.
+                    </SectionSubTitle>
+
+                    <Paragraph>
+                        <a download href={mediakitDownload}>
+                            <Button>Download media kit (zip)</Button>
+                        </a>
+                    </Paragraph>
+                    <Paragraph>
                             Sourced from our{' '}
-                            <a href="https://github.com/oceanprotocol/art">
+                        <a href="https://github.com/oceanprotocol/art">
                                 art repository on GitHub
-                            </a>.
-                        </Paragraph>
-                    </Cell>
-                </Grid>
-            </ContentRow>
+                        </a>.
+                    </Paragraph>
+                </Cell>
+            </Grid>
+        </ContentRow>
 
-            <ContentRow>
-                <SectionTitle>Banner</SectionTitle>
-                <SectionSubTitle>
+        <ContentRow>
+            <SectionTitle>Banner</SectionTitle>
+            <SectionSubTitle>
                     Spruce up your blog posts with these Ocean Protocol banners.
-                </SectionSubTitle>
+            </SectionSubTitle>
 
-                <Banners>
-                    <a download href={OceanBanner01}>
-                        <img
-                            alt="Ocean Protocol banner 1"
-                            src={OceanBanner01} />
+            <Banners>
+                <a download href={OceanBanner01}>
+                    <img
+                        alt="Ocean Protocol banner 1"
+                        src={OceanBanner01} />
                         PNG
-                    </a>
+                </a>
 
-                    <a download href={OceanBanner02}>
-                        <img
-                            alt="Ocean Protocol banner 2"
-                            src={OceanBanner02} />
+                <a download href={OceanBanner02}>
+                    <img
+                        alt="Ocean Protocol banner 2"
+                        src={OceanBanner02} />
                         PNG
-                    </a>
-                </Banners>
-            </ContentRow>
+                </a>
+            </Banners>
+        </ContentRow>
 
-            <ContentRow>
-                <StyledCollapsible>
-                    <Collapsible easing="ease-out" transitionTime={200} trigger="Full Living Style Guide">
-                        <Styleguide />
-                    </Collapsible>
-                </StyledCollapsible>
-            </ContentRow>
-        </Section>
+        <ContentRow>
+            <StyledCollapsible>
+                <Collapsible easing="ease-out" transitionTime={200} trigger="Full Living Style Guide">
+                    <Styleguide />
+                </Collapsible>
+            </StyledCollapsible>
+        </ContentRow>
     </Fragment>
 )
 
