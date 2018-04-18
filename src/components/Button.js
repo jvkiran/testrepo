@@ -43,11 +43,6 @@ const StyledButton = styled.button`
 
 const StyledChildren = styled.div`
     opacity: ${({ fetching }) => (fetching ? 0 : 1)};
-
-    &,
-    a {
-        color: rgb(${colors.white});
-    }
 `
 
 const Button = ({ fetching, children, ...props }) => (

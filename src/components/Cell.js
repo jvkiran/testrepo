@@ -4,10 +4,10 @@ import { responsive, layout } from '../styles'
 const Cell = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     justify-content: ${({ center }) => (center ? 'center' : 'flex-start')};
     width: ${({ width }) => `${width * 100}%`};
     max-width: ${({ maxWidth }) => (maxWidth ? `${layout.maxWidth[maxWidth]}` : 'auto')};
+    margin: ${({ maxWidth }) => (maxWidth ? '0 auto' : null)};
 
     & > img {
         width: ${({ center }) => (center ? 'auto' : '100%')};
