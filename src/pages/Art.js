@@ -162,7 +162,7 @@ const Meta = () => (
 const Art = () => (
     <Fragment>
         <Meta />
-        <Header />
+        <Header background={colors.darkPurple} />
         <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
                 <Title white>{pageTitle}</Title>
@@ -278,9 +278,11 @@ const Art = () => (
             <KeyVisuals>
                 <KeyVisual>
                     <div>
-                        <img
-                            alt="Ocean Protocol Jeyllfish Full"
-                            src={OceanJeyllyfishFull} />
+                        <LazyLoad height={370}>
+                            <img
+                                alt="Ocean Protocol Jeyllfish Full"
+                                src={OceanJeyllyfishFull} />
+                        </LazyLoad>
                     </div>
                     <a download href={OceanJeyllyfishFull}>
                         SVG
@@ -292,9 +294,11 @@ const Art = () => (
                 </KeyVisual>
                 <KeyVisual>
                     <div>
-                        <img
-                            alt="Ocean Protocol Jeyllfish Grid"
-                            src={OceanJeyllyfishGrid} />
+                        <LazyLoad height={370}>
+                            <img
+                                alt="Ocean Protocol Jeyllfish Grid"
+                                src={OceanJeyllyfishGrid} />
+                        </LazyLoad>
                     </div>
                     <a download href={OceanJeyllyfishGrid}>
                         SVG
