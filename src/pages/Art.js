@@ -241,7 +241,7 @@ const Art = () => (
 
             <Banners>
                 <a download href={OceanBanner01}>
-                    <LazyLoad height={337}>
+                    <LazyLoad once height={337}>
                         <img
                             alt="Ocean Protocol banner 1"
                             src={OceanBanner01} />
@@ -250,7 +250,7 @@ const Art = () => (
                 </a>
 
                 <a download href={OceanBanner02}>
-                    <LazyLoad height={337}>
+                    <LazyLoad once height={337}>
                         <img
                             alt="Ocean Protocol banner 2"
                             src={OceanBanner02} />
@@ -259,7 +259,7 @@ const Art = () => (
                 </a>
 
                 <a download href={OceanBanner03}>
-                    <LazyLoad height={337}>
+                    <LazyLoad once height={337}>
                         <img
                             alt="Ocean Protocol banner 3"
                             src={OceanBanner03} />
@@ -278,7 +278,7 @@ const Art = () => (
             <KeyVisuals>
                 <KeyVisual>
                     <div>
-                        <LazyLoad height={370}>
+                        <LazyLoad once height={370}>
                             <img
                                 alt="Ocean Protocol Jeyllfish Full"
                                 src={OceanJeyllyfishFull} />
@@ -294,7 +294,7 @@ const Art = () => (
                 </KeyVisual>
                 <KeyVisual>
                     <div>
-                        <LazyLoad height={370}>
+                        <LazyLoad once height={370}>
                             <img
                                 alt="Ocean Protocol Jeyllfish Grid"
                                 src={OceanJeyllyfishGrid} />

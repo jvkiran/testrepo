@@ -39,15 +39,27 @@ const Color = styled.div`
 
 const ColorName = styled.h5`
     margin: 0;
+    margin-bottom: .5rem;
     color: rgb(${colors.white});
     line-height: ${fonts.lineHeight.base};
+
+    [color="255, 255, 255"] &,
+    [color="226, 226, 226"] & {
+        color: rgb(${colors.grey});
+    }
 `
 
-const ColorValue = styled.h5`
+const ColorValue = styled.span`
     margin: 0;
+    display: block;
     color: rgba(${colors.white}, .7);
     font-size: ${fonts.size.base};
-    line-height: ${fonts.lineHeight.base};
+    font-family: ${fonts.family.code};
+
+    [color="255, 255, 255"] &,
+    [color="226, 226, 226"] & {
+        color: rgba(${colors.grey}, .7);
+    }
 `
 
 const Gradients = styled(Colors)`

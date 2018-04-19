@@ -33,7 +33,7 @@ export const fonts = {
         base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
         title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
         button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
-        quote: 'Courier New, serif'
+        code: '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace'
     },
     lineHeight: {
         base: '1.65',
