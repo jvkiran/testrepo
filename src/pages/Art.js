@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
-import Header from '../sections/Header'
+import Header from '../components/Header'
 import Button from '../components/Button'
 import Section from '../components/Section'
 import Title from '../components/Title'
@@ -270,7 +270,7 @@ const Art = () => (
         </ContentRow>
 
         <ContentRow>
-            <SectionTitle>Ocean Protocol Jellyfish</SectionTitle>
+            <SectionTitle>Jellyfish</SectionTitle>
             <SectionSubTitle>
                 Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414).
             </SectionSubTitle>

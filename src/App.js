@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Head from './components/Head'
-import Footer from './sections/Footer'
+import Footer from './components/Footer'
 import Home from './pages/Home'
 import Art from './pages/Art'
 import TermsPrelaunch from './pages/TermsPrelaunch'

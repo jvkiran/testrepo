@@ -5,7 +5,7 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import Header from '../sections/Header'
+import Header from '../components/Header'
 import { fonts, colors } from '../styles'
 
 const StyledSection = styled(Section)`
