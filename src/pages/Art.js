@@ -25,6 +25,7 @@ import OceanLogoWhitePNG from '../lib/art/logo/logo-white.png'
 import OceanBanner01 from '../lib/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '../lib/art/banner/banner-ocean-02@2x.png'
 import OceanBanner03 from '../lib/art/banner/banner-ocean-03@2x.png'
+import OceanBanner04 from '../lib/art/banner/banner-ocean-04@2x.png'
 import OceanJeyllyfishGrid from '../lib/art/jellyfish/jellyfish-grid.svg'
 import OceanJeyllyfishGridPNG from '../lib/art/jellyfish/jellyfish-grid@2x.png'
 import OceanJeyllyfishFull from '../lib/art/jellyfish/jellyfish-full.svg'
@@ -263,6 +264,15 @@ const Art = () => (
                         <img
                             alt="Ocean Protocol banner 3"
                             src={OceanBanner03} />
+                    </LazyLoad>
+                    PNG
+                </a>
+
+                <a download href={OceanBanner04}>
+                    <LazyLoad once height={337}>
+                        <img
+                            alt="Ocean Protocol banner 4"
+                            src={OceanBanner04} />
                     </LazyLoad>
                     PNG
                 </a>
