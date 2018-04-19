@@ -24,6 +24,11 @@ import OceanLogoPNG from '../lib/art/logo/logo.png'
 import OceanLogoWhitePNG from '../lib/art/logo/logo-white.png'
 import OceanBanner01 from '../lib/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '../lib/art/banner/banner-ocean-02@2x.png'
+import OceanBanner03 from '../lib/art/banner/banner-ocean-03@2x.png'
+import OceanJeyllyfishGrid from '../lib/art/jellyfish/jellyfish-grid.svg'
+import OceanJeyllyfishGridPNG from '../lib/art/jellyfish/jellyfish-grid@2x.png'
+import OceanJeyllyfishFull from '../lib/art/jellyfish/jellyfish-full.svg'
+import OceanJeyllyfishFullPNG from '../lib/art/jellyfish/jellyfish-full@2x.png'
 
 const pageTitle = 'Art'
 const mediakitDownload = `${social.github}/art/archive/master.zip`
@@ -129,6 +134,25 @@ const StyledCollapsible = styled.div`
     }
 `
 
+const KeyVisuals = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+`
+
+const KeyVisual = styled.div`
+    flex: 0 0 48%;
+    text-align: center;
+
+    > div {
+        border: 1px solid rgb(${colors.lightGrey});
+        border-radius: 0.2rem;
+        padding: 2rem;
+        margin-bottom: .5rem;
+        background: rgb(${colors.black});
+    }
+`
+
 const Meta = () => (
     <Helmet>
         <title>{pageTitle}</title>
@@ -153,7 +177,7 @@ const Art = () => (
                 <Cell width={1 / 2}>
                     <SectionTitle>Logo</SectionTitle>
                     <SectionSubTitle>
-                            You don’t need to get our logo from Google.
+                        You don’t need to get our logo from Google.
                     </SectionSubTitle>
                     <Logos>
                         <Logo>
@@ -164,11 +188,11 @@ const Art = () => (
                                     width="90" />
                             </div>
                             <a download href={OceanLogo}>
-                                    SVG
+                                SVG
                             </a>
                             {' • '}
                             <a download href={OceanLogoPNG}>
-                                    PNG
+                                PNG
                             </a>
                         </Logo>
                         <Logo white>
@@ -179,11 +203,11 @@ const Art = () => (
                                     width="90" />
                             </div>
                             <a download href={OceanLogoWhite}>
-                                    SVG
+                                SVG
                             </a>
                             {' • '}
                             <a download href={OceanLogoWhitePNG}>
-                                    PNG
+                                PNG
                             </a>
                         </Logo>
                     </Logos>
@@ -191,7 +215,7 @@ const Art = () => (
                 <Cell width={1 / 3}>
                     <SectionTitle>Media kit</SectionTitle>
                     <SectionSubTitle>
-                            Download all our assets.
+                        Download all our assets.
                     </SectionSubTitle>
 
                     <Paragraph>
@@ -202,7 +226,7 @@ const Art = () => (
                     <Paragraph>
                             Sourced from our{' '}
                         <a href="https://github.com/oceanprotocol/art">
-                                art repository on GitHub
+                            art repository on GitHub
                         </a>.
                     </Paragraph>
                 </Cell>
@@ -212,7 +236,7 @@ const Art = () => (
         <ContentRow>
             <SectionTitle>Banner</SectionTitle>
             <SectionSubTitle>
-                    Spruce up your blog posts with these Ocean Protocol banners.
+                Spruce up your blog posts with these Ocean Protocol banners.
             </SectionSubTitle>
 
             <Banners>
@@ -222,7 +246,7 @@ const Art = () => (
                             alt="Ocean Protocol banner 1"
                             src={OceanBanner01} />
                     </LazyLoad>
-                        PNG
+                    PNG
                 </a>
 
                 <a download href={OceanBanner02}>
@@ -231,9 +255,56 @@ const Art = () => (
                             alt="Ocean Protocol banner 2"
                             src={OceanBanner02} />
                     </LazyLoad>
-                        PNG
+                    PNG
+                </a>
+
+                <a download href={OceanBanner03}>
+                    <LazyLoad height={337}>
+                        <img
+                            alt="Ocean Protocol banner 3"
+                            src={OceanBanner03} />
+                    </LazyLoad>
+                    PNG
                 </a>
             </Banners>
+        </ContentRow>
+
+        <ContentRow>
+            <SectionTitle>Ocean Protocol Jellyfish</SectionTitle>
+            <SectionSubTitle>
+                Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414).
+            </SectionSubTitle>
+
+            <KeyVisuals>
+                <KeyVisual>
+                    <div>
+                        <img
+                            alt="Ocean Protocol Jeyllfish Full"
+                            src={OceanJeyllyfishFull} />
+                    </div>
+                    <a download href={OceanJeyllyfishFull}>
+                        SVG
+                    </a>
+                    {' • '}
+                    <a download href={OceanJeyllyfishFullPNG}>
+                        PNG
+                    </a>
+                </KeyVisual>
+                <KeyVisual>
+                    <div>
+                        <img
+                            alt="Ocean Protocol Jeyllfish Grid"
+                            src={OceanJeyllyfishGrid} />
+                    </div>
+                    <a download href={OceanJeyllyfishGrid}>
+                        SVG
+                    </a>
+                    {' • '}
+                    <a download href={OceanJeyllyfishGridPNG}>
+                        PNG
+                    </a>
+                </KeyVisual>
+            </KeyVisuals>
         </ContentRow>
 
         <ContentRow>
