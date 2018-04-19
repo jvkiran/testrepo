@@ -11,6 +11,7 @@ import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonSlack from '../assets/buttons/slack.svg'
+import buttonGithub from '../assets/buttons/github.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
 import { colors, responsive, fonts } from '../styles'
@@ -45,9 +46,10 @@ const StyledCopyright = styled(Paragraph)`
 
 const StyledSocialLinks = styled.div`
     display: flex;
+    justify-content: space-between;
 
     & a {
-        margin-right: 1rem;
+        margin-right: .75rem;
     }
 
     & img {
@@ -123,11 +125,11 @@ const Footer = () => (
                                 <img alt="Telegram" src={buttonSlack} />
                             </a>
                             <a
-                                href={social.linkedin}
+                                href={social.github}
                                 rel="noopener"
                                 target="_blank"
-                                title="LinkedIn">
-                                <img alt="LinkedIn" src={buttonLinkedin} />
+                                title="GitHub">
+                                <img alt="GitHub" src={buttonGithub} />
                             </a>
                             <a
                                 href={youtube.channel}
@@ -135,6 +137,13 @@ const Footer = () => (
                                 target="_blank"
                                 title="YouTube">
                                 <img alt="YouTube" src={buttonYoutube} />
+                            </a>
+                            <a
+                                href={social.linkedin}
+                                rel="noopener"
+                                target="_blank"
+                                title="LinkedIn">
+                                <img alt="LinkedIn" src={buttonLinkedin} />
                             </a>
                         </StyledSocialLinks>
                     </StyledActions>
