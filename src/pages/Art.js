@@ -15,6 +15,7 @@ import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
 import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, transitions, layout } from '../styles'
+import { social } from '../constants'
 
 // grab all assets from art submodule
 import OceanLogo from '../lib/art/logo/logo.svg'
@@ -25,7 +26,7 @@ import OceanBanner01 from '../lib/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '../lib/art/banner/banner-ocean-02@2x.png'
 
 const pageTitle = 'Art'
-const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'
+const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 const HeaderArt = styled(Section)`
     background-image: url(${jellyfish});
