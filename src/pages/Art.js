@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Collapsible from 'react-collapsible'
+import LazyLoad from 'react-lazyload'
 import Header from '../sections/Header'
 import Button from '../components/Button'
 import Section from '../components/Section'
@@ -74,7 +75,6 @@ const Banners = styled.figure`
     margin: 0;
 
     img {
-        margin-bottom: 0.5rem;
         border-radius: 0.2rem;
     }
 
@@ -216,16 +216,20 @@ const Art = () => (
 
             <Banners>
                 <a download href={OceanBanner01}>
-                    <img
-                        alt="Ocean Protocol banner 1"
-                        src={OceanBanner01} />
+                    <LazyLoad height={337}>
+                        <img
+                            alt="Ocean Protocol banner 1"
+                            src={OceanBanner01} />
+                    </LazyLoad>
                         PNG
                 </a>
 
                 <a download href={OceanBanner02}>
-                    <img
-                        alt="Ocean Protocol banner 2"
-                        src={OceanBanner02} />
+                    <LazyLoad height={337}>
+                        <img
+                            alt="Ocean Protocol banner 2"
+                            src={OceanBanner02} />
+                    </LazyLoad>
                         PNG
                 </a>
             </Banners>
