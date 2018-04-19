@@ -38,7 +38,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 
 All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
 
-An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule and automatically copied in place before deployment.
+An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule  in `src/lib/whitepaper` and automatically copied in place before deployment.
 
 ### Blog posts
 
