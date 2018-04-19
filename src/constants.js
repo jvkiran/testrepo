@@ -27,7 +27,8 @@ export const social = {
     'slack': 'https://join.slack.com/t/oceanprotocol/shared_invite/enQtMzQ5MjU1MjcwODIyLWQ2MDdhZjI1N2M5MzAzZmVhMjcwYzk4NDk4N2M2MTBkYmZjOWIyZDc5NWFjMGE4OWY5MDkzZWRmNzg1MDRjZDg',
     'telegram_news': 'https://t.me/oceanprotocol',
     'telegram': 'https://t.me/joinchat/GUyxrE0Hi154D0NrlOqLFg',
-    'linkedin': 'https://www.linkedin.com/company/13429589/'
+    'linkedin': 'https://www.linkedin.com/company/13429589/',
+    'github': 'https://github.com/oceanprotocol'
 }
 
 export const dates = {
