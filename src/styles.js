@@ -14,7 +14,7 @@ export const colors = {
 }
 
 export const gradients = {
-    main: 'linear-gradient(to bottom right, rgb(123, 17, 115) 0%, rgb(246, 56, 138) 100%)'
+    main: `linear-gradient(to bottom right, rgb(${colors.purple}) 0%, rgb(${colors.pink}) 100%)`
 }
 
 export const fonts = {

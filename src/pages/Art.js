@@ -16,12 +16,12 @@ import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, transitions, layout } from '../styles'
 
 // grab all assets from art submodule
-import OceanLogo from '../assets/art/logo/logo.svg'
-import OceanLogoWhite from '../assets/art/logo/logo-white.svg'
-import OceanLogoPNG from '../assets/art/logo/logo.png'
-import OceanLogoWhitePNG from '../assets/art/logo/logo-white.png'
-import OceanBanner01 from '../assets/art/banner/banner-ocean-01@2x.png'
-import OceanBanner02 from '../assets/art/banner/banner-ocean-02@2x.png'
+import OceanLogo from '../lib/art/logo/logo.svg'
+import OceanLogoWhite from '../lib/art/logo/logo-white.svg'
+import OceanLogoPNG from '../lib/art/logo/logo.png'
+import OceanLogoWhitePNG from '../lib/art/logo/logo-white.png'
+import OceanBanner01 from '../lib/art/banner/banner-ocean-01@2x.png'
+import OceanBanner02 from '../lib/art/banner/banner-ocean-02@2x.png'
 
 const pageTitle = 'Art'
 const mediakitDownload = 'https://github.com/oceanprotocol/art/archive/master.zip'

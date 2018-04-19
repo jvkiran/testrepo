@@ -1,11 +1,11 @@
 {
-  "name": "ocean-landing-page",
+  "name": "oceanprotocol-site",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://oceanprotocol.com",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp ./whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf",
+    "build": "react-scripts build && cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf",
     "lint:js": "eslint ./{src,public}/**/*.js",
     "lint:css": "stylelint ./src/**/*.js",
     "lint": "npm run lint:js && npm run lint:css",
