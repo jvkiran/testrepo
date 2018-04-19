@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import rgbHex from '../lib/rgb-hex'
 import SubTitle from '../components/SubTitle'
+import Button from '../components/Button'
 import { colors, fonts, gradients, responsive } from '../styles'
 
 const SectionTitle = styled(SubTitle)`
@@ -85,20 +86,35 @@ const Styleguide = () => (
         <SectionSubTitle>
             Our branding typefaces are <a href="https://sharptype.co/typefaces/sharp-sans/#features">Sharp Sans Medium/Bold</a> & <a href="https://sharptype.co/typefaces/sharp-sans-display-no1/">Sharp Sans Display No. 1 Bold</a>.
         </SectionSubTitle>
+
         <h1>Sharp Sans Display No. 1 Bold</h1>
-        <h2>Sharp Sans Display No. 1 Bold</h2>
-        <h3>Sharp Sans Display No. 1 Bold</h3>
-        <h4>Sharp Sans Display No. 1 Bold</h4>
-        <h5>Sharp Sans Display No. 1 Bold</h5>
-        <p>
-        Sharp Sans Medium <strong>Sharp Sans Bold</strong>
+        <p style={{ fontSize: fonts.size.large }}>
+            Sharp Sans Medium
         </p>
         <p style={{ fontSize: fonts.size.large }}>
-        Sharp Sans Medium <strong>Sharp Sans Bold</strong>
+            <strong>Sharp Sans Bold</strong>
+        </p>
+
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+
+        <p>
+            Body text and <strong>bold body text</strong>.
+        </p>
+        <p style={{ fontSize: fonts.size.large }}>
+            Large body text and <strong>large bold body text</strong>.
         </p>
         <p style={{ fontSize: fonts.size.small }}>
-        Sharp Sans Medium <strong>Sharp Sans Bold</strong>
+            Small body text and <strong>small bold body text</strong>.
         </p>
+
+        <SectionTitle>Buttons</SectionTitle>
+        <Button>
+            Click me like one of your french buttons
+        </Button>
     </Fragment>
 )
 
