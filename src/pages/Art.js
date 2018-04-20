@@ -173,161 +173,164 @@ const Art = () => (
                 </Paragraph>
             </ContentRow>
         </HeaderArt>
-        <ContentRow>
-            <Grid>
-                <Cell width={1 / 2}>
-                    <SectionTitle>Logo</SectionTitle>
-                    <SectionSubTitle>
-                        You don’t need to get our logo from Google.
-                    </SectionSubTitle>
-                    <Logos>
-                        <Logo>
-                            <div>
-                                <img
-                                    alt="Ocean Protocol logo"
-                                    src={OceanLogo}
-                                    width="90" />
-                            </div>
-                            <a download href={OceanLogo}>
-                                SVG
-                            </a>
-                            {' • '}
-                            <a download href={OceanLogoPNG}>
-                                PNG
-                            </a>
-                        </Logo>
-                        <Logo white>
-                            <div>
-                                <img
-                                    alt="Ocean Protocol logo"
-                                    src={OceanLogoWhite}
-                                    width="90" />
-                            </div>
-                            <a download href={OceanLogoWhite}>
-                                SVG
-                            </a>
-                            {' • '}
-                            <a download href={OceanLogoWhitePNG}>
-                                PNG
-                            </a>
-                        </Logo>
-                    </Logos>
-                </Cell>
-                <Cell width={1 / 3}>
-                    <SectionTitle>Media kit</SectionTitle>
-                    <SectionSubTitle>
-                        Download all our assets.
-                    </SectionSubTitle>
 
-                    <Paragraph>
-                        <a download href={mediakitDownload}>
-                            <Button>Download media kit (zip)</Button>
-                        </a>
-                    </Paragraph>
-                    <Paragraph>
+        <Section>
+            <ContentRow>
+                <Grid>
+                    <Cell smallGutter width={1 / 2}>
+                        <SectionTitle>Logo</SectionTitle>
+                        <SectionSubTitle>
+                            You don’t need to get our logo from Google.
+                        </SectionSubTitle>
+                        <Logos>
+                            <Logo>
+                                <div>
+                                    <img
+                                        alt="Ocean Protocol logo"
+                                        src={OceanLogo}
+                                        width="90" />
+                                </div>
+                                <a download href={OceanLogo}>
+                                    SVG
+                                </a>
+                                {' • '}
+                                <a download href={OceanLogoPNG}>
+                                    PNG
+                                </a>
+                            </Logo>
+                            <Logo white>
+                                <div>
+                                    <img
+                                        alt="Ocean Protocol logo"
+                                        src={OceanLogoWhite}
+                                        width="90" />
+                                </div>
+                                <a download href={OceanLogoWhite}>
+                                    SVG
+                                </a>
+                                {' • '}
+                                <a download href={OceanLogoWhitePNG}>
+                                    PNG
+                                </a>
+                            </Logo>
+                        </Logos>
+                    </Cell>
+                    <Cell smallGutter width={1 / 3}>
+                        <SectionTitle>Media kit</SectionTitle>
+                        <SectionSubTitle>
+                            Download all our assets.
+                        </SectionSubTitle>
+
+                        <Paragraph>
+                            <a download href={mediakitDownload}>
+                                <Button>Download media kit (zip)</Button>
+                            </a>
+                        </Paragraph>
+                        <Paragraph>
                             Sourced from our{' '}
-                        <a href="https://github.com/oceanprotocol/art">
-                            art repository on GitHub
-                        </a>.
-                    </Paragraph>
-                </Cell>
-            </Grid>
-        </ContentRow>
+                            <a href="https://github.com/oceanprotocol/art">
+                                art repository on GitHub
+                            </a>.
+                        </Paragraph>
+                    </Cell>
+                </Grid>
+            </ContentRow>
 
-        <ContentRow>
-            <SectionTitle>Banner</SectionTitle>
-            <SectionSubTitle>
-                Spruce up your blog posts with these Ocean Protocol banners.
-            </SectionSubTitle>
+            <ContentRow>
+                <SectionTitle>Banner</SectionTitle>
+                <SectionSubTitle>
+                    Spruce up your blog posts with these Ocean Protocol banners.
+                </SectionSubTitle>
 
-            <Banners>
-                <a download href={OceanBanner01}>
-                    <LazyLoad once height={337}>
-                        <img
-                            alt="Ocean Protocol banner 1"
-                            src={OceanBanner01} />
-                    </LazyLoad>
-                    PNG
-                </a>
-
-                <a download href={OceanBanner02}>
-                    <LazyLoad once height={337}>
-                        <img
-                            alt="Ocean Protocol banner 2"
-                            src={OceanBanner02} />
-                    </LazyLoad>
-                    PNG
-                </a>
-
-                <a download href={OceanBanner03}>
-                    <LazyLoad once height={337}>
-                        <img
-                            alt="Ocean Protocol banner 3"
-                            src={OceanBanner03} />
-                    </LazyLoad>
-                    PNG
-                </a>
-
-                <a download href={OceanBanner04}>
-                    <LazyLoad once height={337}>
-                        <img
-                            alt="Ocean Protocol banner 4"
-                            src={OceanBanner04} />
-                    </LazyLoad>
-                    PNG
-                </a>
-            </Banners>
-        </ContentRow>
-
-        <ContentRow>
-            <SectionTitle>Jellyfish</SectionTitle>
-            <SectionSubTitle>
-                Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414).
-            </SectionSubTitle>
-
-            <KeyVisuals>
-                <KeyVisual>
-                    <div>
-                        <LazyLoad once height={370}>
+                <Banners>
+                    <a download href={OceanBanner01}>
+                        <LazyLoad once height={337}>
                             <img
-                                alt="Ocean Protocol Jeyllfish Full"
-                                src={OceanJeyllyfishFull} />
+                                alt="Ocean Protocol banner 1"
+                                src={OceanBanner01} />
                         </LazyLoad>
-                    </div>
-                    <a download href={OceanJeyllyfishFull}>
-                        SVG
-                    </a>
-                    {' • '}
-                    <a download href={OceanJeyllyfishFullPNG}>
                         PNG
                     </a>
-                </KeyVisual>
-                <KeyVisual>
-                    <div>
-                        <LazyLoad once height={370}>
+
+                    <a download href={OceanBanner02}>
+                        <LazyLoad once height={337}>
                             <img
-                                alt="Ocean Protocol Jeyllfish Grid"
-                                src={OceanJeyllyfishGrid} />
+                                alt="Ocean Protocol banner 2"
+                                src={OceanBanner02} />
                         </LazyLoad>
-                    </div>
-                    <a download href={OceanJeyllyfishGrid}>
-                        SVG
-                    </a>
-                    {' • '}
-                    <a download href={OceanJeyllyfishGridPNG}>
                         PNG
                     </a>
-                </KeyVisual>
-            </KeyVisuals>
-        </ContentRow>
 
-        <ContentRow>
-            <StyledCollapsible>
-                <Collapsible easing="ease-out" transitionTime={200} trigger="Full Living Style Guide">
-                    <Styleguide />
-                </Collapsible>
-            </StyledCollapsible>
-        </ContentRow>
+                    <a download href={OceanBanner03}>
+                        <LazyLoad once height={337}>
+                            <img
+                                alt="Ocean Protocol banner 3"
+                                src={OceanBanner03} />
+                        </LazyLoad>
+                        PNG
+                    </a>
+
+                    <a download href={OceanBanner04}>
+                        <LazyLoad once height={337}>
+                            <img
+                                alt="Ocean Protocol banner 4"
+                                src={OceanBanner04} />
+                        </LazyLoad>
+                        PNG
+                    </a>
+                </Banners>
+            </ContentRow>
+
+            <ContentRow>
+                <SectionTitle>Jellyfish</SectionTitle>
+                <SectionSubTitle>
+                    Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414).
+                </SectionSubTitle>
+
+                <KeyVisuals>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370}>
+                                <img
+                                    alt="Ocean Protocol Jeyllfish Full"
+                                    src={OceanJeyllyfishFull} />
+                            </LazyLoad>
+                        </div>
+                        <a download href={OceanJeyllyfishFull}>
+                            SVG
+                        </a>
+                        {' • '}
+                        <a download href={OceanJeyllyfishFullPNG}>
+                            PNG
+                        </a>
+                    </KeyVisual>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370}>
+                                <img
+                                    alt="Ocean Protocol Jeyllfish Grid"
+                                    src={OceanJeyllyfishGrid} />
+                            </LazyLoad>
+                        </div>
+                        <a download href={OceanJeyllyfishGrid}>
+                            SVG
+                        </a>
+                        {' • '}
+                        <a download href={OceanJeyllyfishGridPNG}>
+                            PNG
+                        </a>
+                    </KeyVisual>
+                </KeyVisuals>
+            </ContentRow>
+
+            <ContentRow>
+                <StyledCollapsible>
+                    <Collapsible easing="ease-out" transitionTime={200} trigger="Full Living Style Guide">
+                        <Styleguide />
+                    </Collapsible>
+                </StyledCollapsible>
+            </ContentRow>
+        </Section>
     </Fragment>
 )
 

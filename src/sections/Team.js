@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
-import FadeIn from '../components/FadeIn'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
@@ -17,13 +16,6 @@ import buttonGithub from '../assets/buttons/github.svg'
 import teamImg from '../assets/team'
 import team from '../data/team'
 import { colors, fonts, responsive, transitions } from '../styles'
-
-const StyledWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-`
 
 const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
@@ -50,10 +42,10 @@ const StyledTeam = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: -3rem;
+    margin-left: -2rem;
 
     .Collapsible {
-        margin-left: 3rem;
+        margin-left: 2rem;
         position: relative;
     }
 
@@ -97,13 +89,13 @@ const StyledTeam = styled.div`
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-left: -3rem;
+        margin-left: -2rem;
     }
 `
 
 const StyledMember = styled.div`
     position: relative;
-    margin-left: 3rem;
+    margin-left: 2rem;
     margin-bottom: 2rem;
     width: calc(100% / 2 - 3rem);
 
@@ -111,7 +103,11 @@ const StyledMember = styled.div`
         width: calc(100% / 3 - 3rem);
     }
 
-    @media screen and (${responsive.sm.min}) {
+    @media screen and (${responsive.md.min}) {
+        width: calc(100% / 4 - 3rem);
+    }
+
+    @media screen and (${responsive.lg.min}) {
         width: calc(100% / 5 - 3rem);
     }
 
@@ -215,7 +211,9 @@ const StyledButton = styled(Button)`
 
 const TeamMember = ({ member }) => (
     <StyledMember>
-        <img alt={member.name} src={teamImg[member.image]} />
+        <LazyLoad once height={110} offset={100}>
+            <img alt={member.name} src={teamImg[member.image]} />
+        </LazyLoad>
         <StyledName>{member.name}</StyledName>
         <StyledLinks>
             {!!member.linkedin && (
@@ -252,62 +250,56 @@ TeamMember.propTypes = {
 
 const Team = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="team">
-        <LazyLoad once height={1620} offset={100}>
-            <FadeIn>
-                <StyledWrapper>
-                    <ContentRow>
-                        <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
-                    </ContentRow>
+        <ContentRow>
+            <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
+        </ContentRow>
 
-                    <ContentRow narrow>
-                        <StyledParagraph>
+        <ContentRow narrow>
+            <StyledParagraph>
           The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
-                        </StyledParagraph>
-                    </ContentRow>
+            </StyledParagraph>
+        </ContentRow>
 
-                    <ContentRow>
-                        <StyledLine />
-                        <StyledTeam>
-                            {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
-                                <TeamMember key={member.name} member={member} />
-                            ))}
-                            {team.filter((item) => teamImg[item.image]).length >= 15 &&
-                            <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
-                                {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
-                                    <TeamMember key={member.name} member={member} />
-                                ))}
-                            </Collapsible>
-                            }
-                        </StyledTeam>
-                    </ContentRow>
+        <ContentRow>
+            <StyledLine />
+            <StyledTeam>
+                {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
+                    <TeamMember key={member.name} member={member} />
+                ))}
+                {team.filter((item) => teamImg[item.image]).length >= 15 &&
+                <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
+                    {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
+                        <TeamMember key={member.name} member={member} />
+                    ))}
+                </Collapsible>
+                }
+            </StyledTeam>
+        </ContentRow>
 
-                    <ContentRow narrow>
-                        <StyledCompanies>
-                            <StyledCompanyLogo
-                                href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
+        <ContentRow narrow>
+            <StyledCompanies>
+                <StyledCompanyLogo
+                    href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
             rel="noopener" // eslint-disable-line
-                                target="_blank">
-                                <img alt="BigchainDB" src={bigchainDBLogo} />
-                            </StyledCompanyLogo>
-                            <StyledCompanyLogo
-                                href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
+                    target="_blank">
+                    <img alt="BigchainDB" src={bigchainDBLogo} />
+                </StyledCompanyLogo>
+                <StyledCompanyLogo
+                    href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
             rel="noopener" // eslint-disable-line
-                                target="_blank">
-                                <img alt="Dex" src={dexLogo} />
-                            </StyledCompanyLogo>
-                        </StyledCompanies>
-                    </ContentRow>
+                    target="_blank">
+                    <img alt="Dex" src={dexLogo} />
+                </StyledCompanyLogo>
+            </StyledCompanies>
+        </ContentRow>
 
-                    <ContentRow>
-                        <StyledLine />
+        <ContentRow>
+            <StyledLine />
 
-                        <StyledActions>
-                            <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
-                        </StyledActions>
-                    </ContentRow>
-                </StyledWrapper>
-            </FadeIn>
-        </LazyLoad>
+            <StyledActions>
+                <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
+            </StyledActions>
+        </ContentRow>
     </Section>
 )
 

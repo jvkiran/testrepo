@@ -43,7 +43,6 @@ const CenterParagraph = styled(Paragraph)`
 `
 
 const StyledContentRow = styled(ContentRow)`
-    max-width: 55rem;
     margin-bottom: 2.5rem;
     z-index: 1;
 

@@ -156,11 +156,11 @@ const Footer = () => (
 
                     <StyledContact>
                         <Grid>
-                            <Cell width={1 / 2}>
+                            <Cell smallGutter width={1 / 2}>
                                 <a href="https://oceanprotocol.com">oceanprotocol.com</a>
                             </Cell>
 
-                            <Cell width={1 / 2}>
+                            <Cell smallGutter width={1 / 2}>
                                 <div className="address">
                                     {company.address.singapore.location}<br />
                                     {company.address.singapore.street}<br />
