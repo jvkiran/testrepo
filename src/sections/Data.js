@@ -18,10 +18,6 @@ const StyledSection = styled(Section)`
         margin-bottom: 0;
     }
 
-    .Collapsible {
-
-    }
-
     .Collapsible__contentInner {
         border-top: 1px solid rgba(${colors.lightGrey}, .4);
         padding-top: 1.5rem;
@@ -76,8 +72,10 @@ const StyledGrid = styled(Grid)`
 
 const StyledFirstGrid = styled(StyledGrid)`
     text-align: center;
+    margin-top: 3rem;
 
     @media screen and (${responsive.sm.min}) {
+        margin-top: 6rem;
         text-align: left;
 
         > div:first-child {
@@ -96,7 +94,6 @@ const StyledLocked = styled.img`
     @media screen and (${responsive.sm.min}) {
         padding: 0;
         margin: 0;
-        margin-top: 2rem;
         width: 100%;
         height: 100%;
         transform: scale(1.2);
@@ -145,8 +142,8 @@ const StyledThirdGrid = styled(StyledGrid)`
 
 const StyledUnavailable = styled.img`
         margin-bottom: 2rem;
-        margin-left: -5rem;
-        margin-right: -5rem;
+        margin-left: -10rem;
+        margin-right: -10rem;
         max-width: none;
 `
 
@@ -182,7 +179,7 @@ const Data = () => (
             </StyledFirstGrid>
 
             <StyledSecondGrid>
-                <Cell center width={1 / 3}>
+                <Cell width={1 / 3}>
                     <StyledUnalyzed alt="data unanalyzed" src={dataUnanalyzed} />
                 </Cell>
                 <Cell width={2 / 3}>

@@ -48,7 +48,7 @@ const StyledSubTitle = styled(SubTitle)`
 `
 
 const SectionTitle = styled(SubTitle)`
-    margin-top: 6rem;
+    margin-top: 8rem;
 `
 
 const SectionSubTitle = styled.h4`
@@ -154,6 +154,10 @@ const KeyVisual = styled.div`
     }
 `
 
+const StyledFirstContentRow = styled(ContentRow)`
+    margin-top: -6rem;
+`
+
 const Meta = () => (
     <Helmet>
         <title>{pageTitle}</title>
@@ -175,7 +179,7 @@ const Art = () => (
         </HeaderArt>
 
         <Section>
-            <ContentRow>
+            <StyledFirstContentRow>
                 <Grid>
                     <Cell smallGutter width={1 / 2}>
                         <SectionTitle>Logo</SectionTitle>
@@ -234,7 +238,7 @@ const Art = () => (
                         </Paragraph>
                     </Cell>
                 </Grid>
-            </ContentRow>
+            </StyledFirstContentRow>
 
             <ContentRow>
                 <SectionTitle>Banner</SectionTitle>

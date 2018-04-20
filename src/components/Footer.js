@@ -64,10 +64,9 @@ const StyledSocialLinks = styled.div`
 `
 
 const StyledContact = styled.div`
-    text-align: right;
-
     .address {
         color: rgb(${colors.lightGrey});
+        text-align: right;
     }
 
     .address__title {
@@ -81,7 +80,7 @@ const Footer = () => (
     <Section background={colors.grey} fontColor={colors.white} id="footer">
         <ContentRow>
             <Grid>
-                <Cell width={1 / 2}>
+                <Cell smallGutter width={1 / 2}>
                     <SubTitle white>Get Involved</SubTitle>
                     <StyledSubTitle>Newsletter</StyledSubTitle>
                     <SubscribeForm maxWidth={28} />
@@ -148,7 +147,7 @@ const Footer = () => (
                         </StyledSocialLinks>
                     </StyledActions>
                 </Cell>
-                <Cell width={1 / 2}>
+                <Cell smallGutter width={1 / 2}>
                     <SubTitle white>{company.name}</SubTitle>
                     <Paragraph>
             Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
