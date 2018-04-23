@@ -4,7 +4,7 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import jellyfish from '../assets/graphics/jellyfish.svg'
+import OceanJeyllyfishBack from '../lib/art/jellyfish/jellyfish-back.svg'
 import { colors, fonts } from '../styles'
 import artJson from '../data/art'
 
@@ -38,7 +38,7 @@ const StyledSubTitle = styled(SubTitle)`
 `
 
 const Art = () => (
-    <StyledSection background={colors.darkPurple} backgroundImage={jellyfish} id="art">
+    <StyledSection background={colors.darkPurple} backgroundImage={OceanJeyllyfishBack} id="art">
         <a href="/art">
             <ContentRow>
                 <StyledTitle white>{artJson[0].header.title}</StyledTitle>

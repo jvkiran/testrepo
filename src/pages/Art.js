@@ -13,7 +13,6 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
-import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, transitions, layout } from '../styles'
 import { social } from '../constants'
 import artJson from '../data/art'
@@ -27,6 +26,7 @@ import OceanBanner01 from '../lib/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '../lib/art/banner/banner-ocean-02@2x.png'
 import OceanBanner03 from '../lib/art/banner/banner-ocean-03@2x.png'
 import OceanBanner04 from '../lib/art/banner/banner-ocean-04@2x.png'
+import OceanJeyllyfishBack from '../lib/art/jellyfish/jellyfish-back.svg'
 import OceanJeyllyfishGrid from '../lib/art/jellyfish/jellyfish-grid.svg'
 import OceanJeyllyfishGridPNG from '../lib/art/jellyfish/jellyfish-grid@2x.png'
 import OceanJeyllyfishFull from '../lib/art/jellyfish/jellyfish-full.svg'
@@ -36,7 +36,7 @@ const art = artJson[0]
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 const HeaderArt = styled(Section)`
-    background-image: url(${jellyfish});
+    background-image: url(${OceanJeyllyfishBack});
     background-position: center 3rem;
     display: flex;
     align-items: center;
