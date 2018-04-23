@@ -19,29 +19,29 @@ import { colors, fonts, responsive, transitions } from '../styles'
 
 const slideRight = keyframes`
     0% {
-        transform: translate3d(-49px, 0, 0);
+        transform: translate3d(-30%, 0, 0);
     }
 
     33% {
-        transform: translate3d(49px, 0, 0);
+        transform: translate3d(30%, 0, 0);
     }
 
     100% {
-        transform: translate3d(49px, 0, 0);
+        transform: translate3d(30%, 0, 0);
     }
 `
 
-const slideBottom = keyframes`
+const slideRightLarge = keyframes`
     0% {
-        transform: translate3d(0, -49px, 0) rotate(180deg);
+        transform: translate3d(-21%, 0, 0);
     }
 
     33% {
-        transform: translate3d(0, 49px, 0) rotate(180deg);
+        transform: translate3d(20%, 0, 0);
     }
 
     100% {
-        transform: translate3d(0, 49px, 0) rotate(180deg);
+        transform: translate3d(20%, 0, 0);
     }
 `
 
@@ -163,20 +163,30 @@ const StyledDataTransfer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: rotate(90deg);
+
+    .pulse {
+        transform: rotate(-90deg);
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        &,
+        .pulse {
+            transform: none;
+        }
+    }
 `
 
 const StyledDataDots = styled.div`
-    width: 25%;
-    height: 100%;
+    width: 40%;
+    height: 100vw;
     background: ${({ img }) => `url(${img}) repeat-x left`};
     animation: ${slideRight} 3s ease-in-out 0s infinite;
 
-    @media screen and (${responsive.md.max}) {
-        animation-name: ${slideBottom};
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        height: 100vw;
+    @media screen and (${responsive.sm.min}) {
+        width: 20%;
+        height: 100%;
+        animation-name: ${slideRightLarge};
     }
 `
 
@@ -210,7 +220,7 @@ const Project = ({ toggleModal, ...props }) => {
                     <StyledDataTransfer>
                         <StyledDataDots img={dataDotsLeft} />
                         <StyledDataDots img={dataDotsRight} />
-                        <Pulse />
+                        <Pulse className="pulse" />
                     </StyledDataTransfer>
                     <StyledCard onClick={() => _toggleModal('consumer')}>
                         <h4>Data Consumers</h4>

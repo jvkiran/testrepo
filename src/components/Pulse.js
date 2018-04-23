@@ -79,8 +79,8 @@ const StyledPulseLock = styled.img`
     max-width: none;
 `
 
-const Pulse = () => (
-    <StyledPulseContainer>
+const Pulse = props => (
+    <StyledPulseContainer {...props}>
         <StyledPulseWrapper>
             <StyledPulseCircleZero />
             <StyledPulseCircleOne />
