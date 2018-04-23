@@ -191,7 +191,9 @@ const Art = () => (
             <ContentRow narrow>
                 <StyledTitle white>{art.header.title}</StyledTitle>
                 <StyledSubTitle center>{art.header.tagline}</StyledSubTitle>
-                <Paragraph center dangerouslySetInnerHTML={{ __html: art.header.text }} />
+                <Paragraph
+                    center
+                    dangerouslySetInnerHTML={{ __html: art.header.text }} />
             </ContentRow>
         </HeaderArt>
 
@@ -244,15 +246,11 @@ const Art = () => (
 
                         <Paragraph>
                             <a download href={mediakitDownload}>
-                                <Button>Download media kit (zip)</Button>
+                                <Button>{art.mediakit.button}</Button>
                             </a>
                         </Paragraph>
-                        <Paragraph>
-                            Sourced from our{' '}
-                            <a href="https://github.com/oceanprotocol/art">
-                                art repository on GitHub
-                            </a>.
-                        </Paragraph>
+                        <Paragraph
+                            dangerouslySetInnerHTML={{ __html: art.mediakit.text }} />
                     </Cell>
                 </Grid>
             </StyledFirstContentRow>

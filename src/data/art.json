@@ -10,7 +10,9 @@
     },
     "mediakit": {
         "title": "Media kit",
-        "description": "Download all our assets."
+        "description": "Download all our assets.",
+        "button": "Download media kit (zip)",
+        "text": "Sourced from our <a href=\"https://github.com/oceanprotocol/art\">art repository on GitHub<\/a>."
     },
     "banner": {
         "title": "Banner",
