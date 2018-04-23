@@ -40,6 +40,16 @@ const HeaderArt = styled(Section)`
     display: flex;
     align-items: center;
     margin-top: ${layout.pageFrame};
+
+    a {
+        color: inherit;
+        border-bottom: 1px solid rgba(${colors.white}, .2);
+
+        &:hover,
+        &:focus {
+            border-bottom-color: rgba(${colors.white}, .4);
+        }
+    }
 `
 
 const StyledSubTitle = styled(SubTitle)`
@@ -248,7 +258,7 @@ const Art = () => (
 
                 <Banners>
                     <a download href={OceanBanner01}>
-                        <LazyLoad once height={337}>
+                        <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 1"
                                 src={OceanBanner01} />
@@ -257,7 +267,7 @@ const Art = () => (
                     </a>
 
                     <a download href={OceanBanner02}>
-                        <LazyLoad once height={337}>
+                        <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 2"
                                 src={OceanBanner02} />
@@ -266,7 +276,7 @@ const Art = () => (
                     </a>
 
                     <a download href={OceanBanner03}>
-                        <LazyLoad once height={337}>
+                        <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 3"
                                 src={OceanBanner03} />
@@ -275,7 +285,7 @@ const Art = () => (
                     </a>
 
                     <a download href={OceanBanner04}>
-                        <LazyLoad once height={337}>
+                        <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 4"
                                 src={OceanBanner04} />
@@ -294,7 +304,7 @@ const Art = () => (
                 <KeyVisuals>
                     <KeyVisual>
                         <div>
-                            <LazyLoad once height={370}>
+                            <LazyLoad once height={370} offset={100}>
                                 <img
                                     alt="Ocean Protocol Jeyllfish Full"
                                     src={OceanJeyllyfishFull} />
@@ -310,7 +320,7 @@ const Art = () => (
                     </KeyVisual>
                     <KeyVisual>
                         <div>
-                            <LazyLoad once height={370}>
+                            <LazyLoad once height={370} offset={100}>
                                 <img
                                     alt="Ocean Protocol Jeyllfish Grid"
                                     src={OceanJeyllyfishGrid} />
