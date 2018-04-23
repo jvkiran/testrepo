@@ -3,17 +3,15 @@ import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
 import Section from '../components/Section'
 import Title from '../components/Title'
+import Waves from '../components/Waves'
 import ContentRow from '../components/ContentRow'
 import SocialHero from '../components/SocialHero'
 import VideoModal from '../components/VideoModal'
 import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
 import dexLogo from '../assets/logos/dex.svg'
-import wavesStatic from '../assets/misc/waves.png'
 import videoThumb from '../assets/misc/video-thumb.jpg'
 import videoThumb2x from '../assets/misc/video-thumb@2x.jpg'
 import { colors, responsive, fonts, layout } from '../styles'
-
-import Waves from '../components/Waves'
 
 const StyledHero = styled(Section)`
     background: rgb(${colors.black});
@@ -36,44 +34,6 @@ const StyledHero = styled(Section)`
 const StyledHeroContent = styled.div`
     position: relative;
     z-index: 2;
-`
-
-const StyledWaves = styled.div`
-    z-index: 0;
-    background: none;
-
-    @media screen and (${responsive.md.max}) {
-        background: url(${wavesStatic}) no-repeat;
-        background-size: cover;
-        background-position-y: 5rem;
-        background-position-x: -5rem;
-    }
-
-    &,
-    .waves__background {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    .waves__container {
-        position: absolute;
-        top: 10vh;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        overflow: hidden;
-
-        @media screen and (${responsive.md.max}) {
-            display: none;
-        }
-    }
-
-    canvas {
-        max-width: 100%;
-    }
 `
 
 const animation = keyframes`
@@ -229,9 +189,7 @@ class Welcome extends React.Component {
                     </StyledSocialHero>
                 </StyledHeroContent>
 
-                <StyledWaves>
-                    <div className="waves__background" ref={node => Waves(node)} />
-                </StyledWaves>
+                <Waves />
 
                 <VideoModal onCloseModal={this.closeModal} source={this.state.videoUrl} />
             </StyledHero>
