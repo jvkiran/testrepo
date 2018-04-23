@@ -5,7 +5,8 @@ import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import jellyfish from '../assets/graphics/jellyfish.svg'
-import { colors } from '../styles'
+import { colors, fonts } from '../styles'
+import artJson from '../data/art'
 
 const StyledSection = styled(Section)`
     &,
@@ -24,9 +25,15 @@ const StyledSection = styled(Section)`
     }
 `
 
+const StyledTitle = styled(Title)`
+    font-size: ${fonts.size.h2};
+    margin-bottom: 1rem;
+    margin-top: 0;
+`
+
 const StyledSubTitle = styled(SubTitle)`
+    font-size: ${fonts.size.h4};
     color: rgb(${colors.lightGrey});
-    margin-top: -3rem;
     margin-bottom: 0;
 `
 
@@ -34,8 +41,8 @@ const Art = () => (
     <StyledSection background={colors.darkPurple} backgroundImage={jellyfish} id="art">
         <a href="/art">
             <ContentRow>
-                <Title white>Art</Title>
-                <StyledSubTitle center white>All the good looking stuff for you to use.</StyledSubTitle>
+                <StyledTitle white>{artJson[0].header.title}</StyledTitle>
+                <StyledSubTitle center white>{artJson[0].header.tagline}</StyledSubTitle>
             </ContentRow>
         </a>
     </StyledSection>

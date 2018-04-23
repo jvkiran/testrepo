@@ -160,7 +160,7 @@ const Data = () => (
         </ContentRow>
 
         <StyledContentRow>
-            <StyledFirstGrid left wrap>
+            <StyledFirstGrid left>
                 <Cell width={1 / 3}>
                     <StyledLocked alt="data locked" src={dataLocked} />
                 </Cell>
@@ -198,7 +198,7 @@ const Data = () => (
         </StyledContentRow>
 
         <ContentRow narrow>
-            <StyledThirdGrid textCenter wrap="true">
+            <StyledThirdGrid textCenter>
                 <Cell center width={1}>
                     <SubTitle center>Only a handful of companies today have both Data and AI</SubTitle>
                 </Cell>

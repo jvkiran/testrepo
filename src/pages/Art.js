@@ -16,6 +16,7 @@ import Styleguide from '../components/Styleguide'
 import jellyfish from '../assets/graphics/jellyfish.svg'
 import { colors, fonts, transitions, layout } from '../styles'
 import { social } from '../constants'
+import artJson from '../data/art'
 
 // grab all assets from art submodule
 import OceanLogo from '../lib/art/logo/logo.svg'
@@ -31,7 +32,7 @@ import OceanJeyllyfishGridPNG from '../lib/art/jellyfish/jellyfish-grid@2x.png'
 import OceanJeyllyfishFull from '../lib/art/jellyfish/jellyfish-full.svg'
 import OceanJeyllyfishFullPNG from '../lib/art/jellyfish/jellyfish-full@2x.png'
 
-const pageTitle = 'Art'
+const art = artJson[0]
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 const HeaderArt = styled(Section)`
@@ -40,6 +41,10 @@ const HeaderArt = styled(Section)`
     display: flex;
     align-items: center;
     margin-top: ${layout.pageFrame};
+
+    p {
+        margin-bottom: 0;
+    }
 
     a {
         color: inherit;
@@ -52,9 +57,13 @@ const HeaderArt = styled(Section)`
     }
 `
 
+const StyledTitle = styled(Title)`
+    margin-bottom: 1rem;
+    margin-top: 0;
+`
+
 const StyledSubTitle = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    margin-top: -3rem;
 `
 
 const SectionTitle = styled(SubTitle)`
@@ -170,7 +179,7 @@ const StyledFirstContentRow = styled(ContentRow)`
 
 const Meta = () => (
     <Helmet>
-        <title>{pageTitle}</title>
+        <title>{art.header.title}</title>
     </Helmet>
 )
 
@@ -180,11 +189,9 @@ const Art = () => (
         <Header background={colors.darkPurple} />
         <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
-                <Title white>{pageTitle}</Title>
-                <StyledSubTitle center>All the good looking stuff for you to use.</StyledSubTitle>
-                <Paragraph center>
-                    All assets are licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-                </Paragraph>
+                <StyledTitle white>{art.header.title}</StyledTitle>
+                <StyledSubTitle center>{art.header.tagline}</StyledSubTitle>
+                <Paragraph center dangerouslySetInnerHTML={{ __html: art.header.text }} />
             </ContentRow>
         </HeaderArt>
 
@@ -192,9 +199,9 @@ const Art = () => (
             <StyledFirstContentRow>
                 <Grid>
                     <Cell smallGutter width={1 / 2}>
-                        <SectionTitle>Logo</SectionTitle>
+                        <SectionTitle>{art.logo.title}</SectionTitle>
                         <SectionSubTitle>
-                            You don’t need to get our logo from Google.
+                            {art.logo.description}
                         </SectionSubTitle>
                         <Logos>
                             <Logo>
@@ -230,9 +237,9 @@ const Art = () => (
                         </Logos>
                     </Cell>
                     <Cell smallGutter width={1 / 3}>
-                        <SectionTitle>Media kit</SectionTitle>
+                        <SectionTitle>{art.mediakit.title}</SectionTitle>
                         <SectionSubTitle>
-                            Download all our assets.
+                            {art.mediakit.description}
                         </SectionSubTitle>
 
                         <Paragraph>
@@ -251,9 +258,9 @@ const Art = () => (
             </StyledFirstContentRow>
 
             <ContentRow>
-                <SectionTitle>Banner</SectionTitle>
+                <SectionTitle>{art.banner.title}</SectionTitle>
                 <SectionSubTitle>
-                    Spruce up your blog posts with these Ocean Protocol banners.
+                    {art.banner.description}
                 </SectionSubTitle>
 
                 <Banners>
@@ -296,9 +303,9 @@ const Art = () => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>Jellyfish</SectionTitle>
+                <SectionTitle>{art.jellyfish.title}</SectionTitle>
                 <SectionSubTitle>
-                    Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414).
+                    {art.jellyfish.description}
                 </SectionSubTitle>
 
                 <KeyVisuals>
