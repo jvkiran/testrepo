@@ -126,9 +126,8 @@ const StyledCollapsible = styled.div`
         font-family: ${fonts.family.title};
         font-weight: ${fonts.fontWeight.title};
         line-height: ${fonts.lineHeight.title};
-        font-size: ${fonts.size.large};
+        font-size: ${fonts.size.h3};
         padding-bottom: 4rem;
-        text-align: center;
 
         &:hover,
         &:focus {
@@ -137,7 +136,7 @@ const StyledCollapsible = styled.div`
 
         &:before {
             content: '+';
-            font-size: 2.25rem;
+            font-size: 2.5rem;
             line-height: 0;
             vertical-align: middle;
             margin-right: .5rem;
@@ -145,11 +144,12 @@ const StyledCollapsible = styled.div`
             font-weight: ${fonts.fontWeight.base};
             font-family: ${fonts.family.base};
             position: relative;
+            top: -.2rem;
         }
 
         &.is-open:before {
             content: '-';
-            top: -.25rem;
+            top: -.4rem;
         }
     }
 `
