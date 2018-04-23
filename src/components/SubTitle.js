@@ -6,7 +6,7 @@ const SubTitle = styled.h3`
     font-weight: ${fonts.fontWeight.title};
     line-height: ${fonts.lineHeight.title};
     font-size: ${fonts.size.h3};
-    color: ${({ white }) => (white ? '#fff' : `${colors.black}`)};
+    color: ${({ white }) => (white ? `rgb(${colors.white})` : `rgb(${colors.black})`)};
     margin-top: 0;
     text-align: ${({ center }) => (center ? 'center' : 'inherit')};
 

@@ -10,8 +10,11 @@ export const colors = {
     purple: '123, 17, 115',
     pink: '246, 56, 138',
     softPink: '218, 89, 119',
-    red: '245, 70, 89',
-    orange: '255, 72, 91'
+    red: '245, 70, 89'
+}
+
+export const gradients = {
+    main: `linear-gradient(to bottom right, rgb(${colors.purple}) 0%, rgb(${colors.pink}) 100%)`
 }
 
 export const fonts = {
@@ -30,7 +33,7 @@ export const fonts = {
         base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
         title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
         button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
-        quote: 'Courier New, serif'
+        code: '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace'
     },
     lineHeight: {
         base: '1.65',

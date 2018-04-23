@@ -12,7 +12,7 @@ import ContentRow from '../components/ContentRow'
 import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
 import events from '../data/events'
-import jellyfish from '../assets/graphics/jellyfish.svg'
+import OceanJeyllyfishBack from '../lib/art/jellyfish/jellyfish-back.svg'
 import cross from '../assets/misc/cross.svg'
 import { colors, fonts, responsive } from '../styles'
 
@@ -480,7 +480,7 @@ const backgroundStyles = {
 }
 
 const Events = () => (
-    <Section background={colors.black} backgroundImage={jellyfish} fontColor={colors.white} id="events" style={backgroundStyles}>
+    <Section background={colors.black} backgroundImage={OceanJeyllyfishBack} fontColor={colors.white} id="events" style={backgroundStyles}>
         <ContentRow>
             <StyledTitle white>Events</StyledTitle>
         </ContentRow>

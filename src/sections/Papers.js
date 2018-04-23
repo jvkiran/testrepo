@@ -35,8 +35,6 @@ const StyledWhitepaper = styled(Cell)`
 
     @media screen and (${responsive.sm.min}) {
         min-height: 540px;
-        margin-left: 1rem;
-        margin-right: 1rem;
     }
 
     @media screen and (${responsive.sm.min}) and (${responsive.tablet.max}) {
@@ -95,11 +93,6 @@ const StyledRow = styled.div`
     margin-top: 4rem;
     margin-bottom: 0;
 
-    @media screen and (${responsive.sm.min}) {
-        padding-left: 2rem;
-        padding-right: 4rem;
-    }
-
     a {
         display: block;
         text-transform: uppercase;
@@ -116,7 +109,7 @@ const Documentation = () => (
 
         <ContentRow wide>
             <Grid>
-                <Cell width={1 / 3}>
+                <Cell smallGutter width={1 / 3}>
                     <StyledWhitepaper >
                         <StyledTitle>Technical Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -134,7 +127,7 @@ const Documentation = () => (
                         </StyledFooter>
                     </StyledWhitepaper>
                 </Cell>
-                <Cell width={1 / 3}>
+                <Cell smallGutter width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
@@ -152,7 +145,7 @@ const Documentation = () => (
                         </StyledFooter>
                     </StyledWhitepaper>
                 </Cell>
-                <Cell width={1 / 3}>
+                <Cell smallGutter width={1 / 3}>
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>

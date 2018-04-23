@@ -1,0 +1,25 @@
+[{
+    "header": {
+        "title": "Art",
+        "tagline": "All the good looking stuff for you to use.",
+        "text": "All assets are licensed under a <a href=\"http: //creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution-ShareAlike 4.0 International License<\/a>."
+    },
+    "logo": {
+        "title": "Logo",
+        "description": "You don’t need to get our logo from Google."
+    },
+    "mediakit": {
+        "title": "Media kit",
+        "description": "Download all our assets.",
+        "button": "Download media kit (zip)",
+        "text": "Sourced from our <a href=\"https://github.com/oceanprotocol/art\">art repository on GitHub<\/a>."
+    },
+    "banner": {
+        "title": "Banner",
+        "description": "Spruce up your blog posts with these Ocean Protocol banners."
+    },
+    "jellyfish": {
+        "title": "Jellyfish",
+        "description": "Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414)."
+    }
+}]

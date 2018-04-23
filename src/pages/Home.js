@@ -10,6 +10,7 @@ import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Faq from '../sections/Faq'
 import Modal from '../sections/Modal'
+import Art from '../sections/Art'
 
 class Home extends Component {
     state = {
@@ -30,6 +31,7 @@ class Home extends Component {
             <Blog />
             <Videos />
             <Faq />
+            <Art />
             <Modal modal={this.state.modal} toggle={this.toggleModal} />
         </Fragment>
     )

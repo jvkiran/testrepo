@@ -1,11 +1,11 @@
 {
-  "name": "ocean-landing-page",
+  "name": "oceanprotocol-site",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://oceanprotocol.com",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && cp ./whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf",
+    "build": "react-scripts build && cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf",
     "lint:js": "eslint ./{src,public}/**/*.js",
     "lint:css": "stylelint ./src/**/*.js",
     "lint": "npm run lint:js && npm run lint:css",
@@ -17,10 +17,10 @@
   "dependencies": {
     "jsonp": "^0.2.1",
     "prop-types": "^15.6.0",
-    "react": "^16.3.1",
+    "react": "^16.3.2",
     "react-animations": "^1.0.0",
-    "react-collapsible": "^2.0.4",
-    "react-dom": "^16.3.1",
+    "react-collapsible": "^2.1.0",
+    "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
     "react-player": "^1.4.0",
@@ -29,7 +29,7 @@
     "react-slick": "0.22.3",
     "react-transition-group": "^2.2.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^3.2.5",
+    "styled-components": "^3.2.6",
     "styled-transition-group": "^1.0.0",
     "three": "^0.91.0"
   },

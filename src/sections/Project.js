@@ -215,7 +215,7 @@ const Project = ({ toggleModal, ...props }) => {
                 </StyledData>
 
                 <Grid>
-                    <Cell width={2 / 5}>
+                    <Cell width={1 / 2}>
                         <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
                         <Paragraph>
               Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
@@ -224,10 +224,7 @@ const Project = ({ toggleModal, ...props }) => {
               Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
                         </Paragraph>
                     </Cell>
-                    <Cell width={1 / 5}>
-                        <div />
-                    </Cell>
-                    <Cell width={2 / 5}>
+                    <Cell width={1 / 2}>
                         <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
                         <Paragraph>
               The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.

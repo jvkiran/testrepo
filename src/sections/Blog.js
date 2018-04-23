@@ -11,11 +11,6 @@ import Spinner from '../components/Spinner'
 import { colors, fonts, responsive } from '../styles'
 import { social } from '../constants'
 
-const PaddingCell = styled(Cell)`
-    padding-left: 10px;
-    padding-right: 10px;
-`
-
 const StyledCard = styled.div`
     margin: 1rem 0;
     width: 100%;
@@ -103,7 +98,7 @@ class Blog extends Component {
                       <FadeIn>
                           <Grid>
                               {this.state.posts.map(post => (
-                                  <PaddingCell key={post.id} width={1 / 3}>
+                                  <Cell smallGutter key={post.id} width={1 / 3}>
                                       <a href={post.postUrl}>
                                           <StyledCard>
                                               <StyledHeader imageUrl={post.imageUrl} />
@@ -113,7 +108,7 @@ class Blog extends Component {
                                               </StyledContent>
                                           </StyledCard>
                                       </a>
-                                  </PaddingCell>
+                                  </Cell>
                               ))}
                           </Grid>
                       </FadeIn>

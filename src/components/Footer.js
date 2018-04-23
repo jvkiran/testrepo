@@ -15,7 +15,7 @@ import buttonGithub from '../assets/buttons/github.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
 import { colors, responsive, fonts } from '../styles'
-import { company, social, youtube } from '../constants'
+import { meta, company, social, youtube } from '../constants'
 
 const StyledSubTitle = styled.h5`
     color: rgb(${colors.lightGrey});
@@ -64,10 +64,9 @@ const StyledSocialLinks = styled.div`
 `
 
 const StyledContact = styled.div`
-    text-align: right;
-
     .address {
         color: rgb(${colors.lightGrey});
+        text-align: right;
     }
 
     .address__title {
@@ -81,7 +80,7 @@ const Footer = () => (
     <Section background={colors.grey} fontColor={colors.white} id="footer">
         <ContentRow>
             <Grid>
-                <Cell width={1 / 2}>
+                <Cell smallGutter width={1 / 2}>
                     <SubTitle white>Get Involved</SubTitle>
                     <StyledSubTitle>Newsletter</StyledSubTitle>
                     <SubscribeForm maxWidth={28} />
@@ -148,7 +147,7 @@ const Footer = () => (
                         </StyledSocialLinks>
                     </StyledActions>
                 </Cell>
-                <Cell width={1 / 2}>
+                <Cell smallGutter width={1 / 2}>
                     <SubTitle white>{company.name}</SubTitle>
                     <Paragraph>
             Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
@@ -156,11 +155,11 @@ const Footer = () => (
 
                     <StyledContact>
                         <Grid>
-                            <Cell width={1 / 2}>
+                            <Cell smallGutter width={1 / 2}>
                                 <a href="https://oceanprotocol.com">oceanprotocol.com</a>
                             </Cell>
 
-                            <Cell width={1 / 2}>
+                            <Cell smallGutter width={1 / 2}>
                                 <div className="address">
                                     {company.address.singapore.location}<br />
                                     {company.address.singapore.street}<br />
@@ -176,7 +175,7 @@ const Footer = () => (
         </ContentRow>
         <ContentRow>
             <StyledCopyright>
-                <small>&copy; {(new Date().getFullYear())} <a href={company.url}>{company.name}</a> &mdash; All Rights Reserved</small>
+                <small>&copy; {(new Date().getFullYear())} <a href={meta.url}>{company.name}</a> &mdash; All Rights Reserved</small>
             </StyledCopyright>
         </ContentRow>
     </Section>
