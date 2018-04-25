@@ -6,6 +6,8 @@ import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
+import Grid from '../components/Grid'
+import Cell from '../components/Cell'
 import Button from '../components/Button'
 import Team from '../components/Team'
 import Advisors from '../components/Advisors'
@@ -18,13 +20,15 @@ const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
 `
 
-const StyledSubTitle = styled(SubTitle)`
-    padding-bottom: 2rem;
-`
-
 const StyledParagraph = styled(Paragraph)`
-    margin-bottom: 0;
-    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: 4rem;
+    color: rgb(${colors.dimmedGrey});
+
+    &.intro {
+        margin-bottom: 0;
+        font-size: ${fonts.size.h5};
+    }
 `
 
 const StyledLine = styled.div`
@@ -99,14 +103,29 @@ const People = ({ toggleModal }) => (
         </ContentRow>
 
         <ContentRow narrow>
-            <StyledParagraph>
-          The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
+            <StyledParagraph center className="intro">
+                We need a fresh new intro text here talking about both person groups, core team and advisors, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
             </StyledParagraph>
         </ContentRow>
 
         <ContentRow>
+
             <StyledLine />
-            <StyledSubTitle center white>Core team</StyledSubTitle>
+
+        </ContentRow>
+
+        <ContentRow>
+            <Grid>
+                <Cell width={1 / 4}>
+                    <SubTitle white id="team">Core team</SubTitle>
+                </Cell>
+                <Cell width={3 / 4}>
+                    <StyledParagraph>
+                        The Ocean Protocol core team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
+                    </StyledParagraph>
+                </Cell>
+            </Grid>
+
             <Team />
         </ContentRow>
 
@@ -129,7 +148,17 @@ const People = ({ toggleModal }) => (
 
         <ContentRow>
             <StyledLine />
-            <StyledSubTitle center white>Advisors</StyledSubTitle>
+
+            <Grid>
+                <Cell width={1 / 4}>
+                    <SubTitle white id="advisors">Advisors</SubTitle>
+                </Cell>
+                <Cell width={3 / 4}>
+                    <StyledParagraph>
+                        The Ocean Protocol advisors...
+                    </StyledParagraph>
+                </Cell>
+            </Grid>
             <Advisors />
         </ContentRow>
 
