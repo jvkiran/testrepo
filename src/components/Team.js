@@ -2,10 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
-import Section from '../components/Section'
-import ContentRow from '../components/ContentRow'
-import bigchainDBLogo from '../assets/logos/bigchain-db.svg'
-import dexLogo from '../assets/logos/dex.svg'
 import buttonLinkedIn from '../assets/buttons/linkedin.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
@@ -66,22 +62,17 @@ TeamMember.propTypes = {
     member: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
-const Team = ({ toggleModal }) => (
-    <Section background={colors.black} fontColor={colors.white} id="team">
-        <ContentRow>
-            <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
-        </ContentRow>
-
-        <ContentRow narrow>
+const Team = () => (
+    <StyledTeam>
+        {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
+            <TeamMember key={member.name} member={member} />
+        ))}
+        {team.filter((item) => teamImg[item.image]).length >= 15 &&
             <StyledParagraph>
                 The Ocean Protocol team combines a deep background in big data, blockchain, artificial intelligence and data exchanges, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
             </StyledParagraph>
         </ContentRow>
-
-        <ContentRow>
-            <StyledLine />
-            <StyledTeam>
-                {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
+                {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
                     <TeamMember key={member.name} member={member} />
                 ))}
                 {team.filter((item) => teamImg[item.image]).length >= 15 &&
@@ -89,10 +80,8 @@ const Team = ({ toggleModal }) => (
                         {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
                             <TeamMember key={member.name} member={member} />
                         ))}
-                    </Collapsible>
-                }
-            </StyledTeam>
-        </ContentRow>
+            </Collapsible>
+        }
 
         <ContentRow narrow>
             <StyledCompanies>
@@ -118,11 +107,7 @@ const Team = ({ toggleModal }) => (
                 <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
             </StyledActions>
         </ContentRow>
-    </Section>
+    </StyledTeam>
 )
-
-Team.propTypes = {
-    toggleModal: PropTypes.func.isRequired
-}
 
 export default Team
