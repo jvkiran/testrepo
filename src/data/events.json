@@ -298,16 +298,34 @@
         "link": "https://www.itu.int/en/ITU-T/AI/2018/Pages/default.aspx"
     },
     {
+        "city": "Sofia",
+        "eventName": "Big Data Value Meet-Up",
+        "date": "2018-05-16",
+        "link": "https://www.eventbrite.es/e/big-data-value-meet-up-sofia-tickets-45188829004"
+    },
+    {
         "city": "Ann Arbor",
         "eventName": "Genetic Programming Theory & Practice XVI",
         "date": "2018-05-18",
         "link": "http://gptp-workshop.com"
     },
     {
+        "city": "Cardiff",
+        "eventName": "Digital Festival",
+        "date": "2018-05-21",
+        "link": "http://www.digital-festival.co.uk/events/digital-festival/agenda-cb9e948458e2445bb59b0f7e5654d773.aspx"
+    },
+    {
         "city": "Gdansk",
         "eventName": "Infoshare",
         "date": "2018-05-22",
         "link": "https://infoshare.pl"
+    },
+    {
+        "city": "London",
+        "eventName": "Blockchain, IoT & Machine Learning in Oil & Gas Conference",
+        "date": "2018-05-22",
+        "link": "https://www.iotinoilandgas-europe18.com/home"
     },
     {
         "city": "Berlin",
