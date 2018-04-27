@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
+import FadeIn from '../components/FadeIn'
 import buttonLinkedIn from '../assets/buttons/linkedin.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import advisorsImg from '../assets/advisors'
@@ -132,11 +133,13 @@ const Icon = styled.a`
 const Advisor = ({ advisor }) => (
     <StyledAdvisor>
         <QuoteWrap>
-            <LazyLoad once height={188} offset={100}>
-                <Photo>
-                    <img alt={advisor.name} src={advisorsImg[advisor.image]} />
-                </Photo>
-            </LazyLoad>
+            <Photo>
+                <LazyLoad once height={188} offset={100}>
+                    <FadeIn>
+                        <img alt={advisor.name} src={advisorsImg[advisor.image]} />
+                    </FadeIn>
+                </LazyLoad>
+            </Photo>
             <Quote>
                 {!!advisor.quote && (
                     advisor.quote

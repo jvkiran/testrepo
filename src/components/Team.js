@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
+import FadeIn from '../components/FadeIn'
 import buttonLinkedIn from '../assets/buttons/linkedin.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonGithub from '../assets/buttons/github.svg'
@@ -25,9 +26,13 @@ import {
 
 const Member = ({ member }) => (
     <StyledMember>
-        <LazyLoad once height={110} offset={100}>
-            <img alt={member.name} src={teamImg[member.image]} />
-        </LazyLoad>
+        <Photo>
+            <LazyLoad once height={141} offset={100}>
+                <FadeIn>
+                    <img alt={member.name} src={teamImg[member.image]} />
+                </FadeIn>
+            </LazyLoad>
+        </Photo>
         <Name>{member.name}</Name>
         <Links>
             {!!member.linkedin && (

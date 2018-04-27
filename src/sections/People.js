@@ -21,12 +21,12 @@ const StyledTitle = styled(Title)`
 `
 
 const StyledParagraph = styled(Paragraph)`
-    margin-top: .5rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
     color: rgb(${colors.dimmedGrey});
 
     &.intro {
-        margin-bottom: 0;
+        margin: 0;
         font-size: ${fonts.size.h5};
     }
 `
