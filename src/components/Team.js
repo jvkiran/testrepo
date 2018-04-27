@@ -23,49 +23,49 @@ import {
     StyledButton
 } from './Team.css'
 
-const TeamMember = ({ member }) => (
+const Member = ({ member }) => (
     <StyledMember>
         <LazyLoad once height={110} offset={100}>
             <img alt={member.name} src={teamImg[member.image]} />
         </LazyLoad>
-        <StyledName>{member.name}</StyledName>
-        <StyledLinks>
+        <Name>{member.name}</Name>
+        <Links>
             {!!member.linkedin && (
-                <StyledIcon
+                <Icon
                     href={`https://www.linkedin.com/in/${member.linkedin}`}
                     rel="noopener noreferrer"
                     target="_blank">
                     <img alt="linkedin" src={buttonLinkedIn} />
-                </StyledIcon>
+                </Icon>
             )}
             {!!member.github && (
-                <StyledIcon
+                <Icon
                     href={`https://www.github.com/${member.github}`}
                     rel="noopener noreferrer"
                     target="_blank">
                     <img alt="github" src={buttonGithub} />
-                </StyledIcon>
+                </Icon>
             )}
             {!!member.twitter && (
-                <StyledIcon
+                <Icon
                     href={`https://www.twitter.com/${member.twitter}`}
                     rel="noopener noreferrer"
                     target="_blank">
                     <img alt="twitter" src={buttonTwitter} />
-                </StyledIcon>
+                </Icon>
             )}
-        </StyledLinks>
+        </Links>
     </StyledMember>
 )
 
-TeamMember.propTypes = {
+Member.propTypes = {
     member: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
 const Team = () => (
     <StyledTeam>
         {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
-            <TeamMember key={member.name} member={member} />
+            <Member key={member.name} member={member} />
         ))}
         {team.filter((item) => teamImg[item.image]).length >= 15 &&
             <StyledParagraph>
@@ -73,7 +73,7 @@ const Team = () => (
             </StyledParagraph>
         </ContentRow>
                 {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
-                    <TeamMember key={member.name} member={member} />
+                    <Member key={member.name} member={member} />
                 ))}
                 {team.filter((item) => teamImg[item.image]).length >= 15 &&
                     <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">

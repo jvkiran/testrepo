@@ -34,7 +34,7 @@ const StyledAdvisor = styled.div`
     }
 `
 
-const StyledName = styled.h3`
+const Name = styled.h3`
     font-size: ${fonts.size.base};
     color: rgb(${colors.white});
     text-align: center;
@@ -42,12 +42,12 @@ const StyledName = styled.h3`
     margin-bottom: .35rem;
 `
 
-const StyledPosition = styled(StyledName)`
+const Position = styled(Name)`
     color: rgb(${colors.lightGrey});
     margin-top: 0;
 `
 
-const StyledLinks = styled.div`
+const Links = styled.div`
     text-align: center;
 
     &:empty {
@@ -55,7 +55,7 @@ const StyledLinks = styled.div`
     }
 `
 
-const StyledIcon = styled.a`
+const Icon = styled.a`
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 2px;
@@ -80,26 +80,27 @@ const Advisor = ({ advisor }) => (
         <LazyLoad once height={110} offset={100}>
             <img alt={advisor.name} src={advisorsImg[advisor.image]} />
         </LazyLoad>
-        <StyledName>{advisor.name}</StyledName>
-        <StyledPosition>{advisor.position}</StyledPosition>
-        <StyledLinks>
+        <Name>{advisor.name}</Name>
+        <Position>{advisor.position}</Position>
+        <Links>
             {!!advisor.linkedin && (
-                <StyledIcon
+                <Icon
                     href={`https://www.linkedin.com/in/${advisor.linkedin}`}
                     rel="noopener noreferrer"
                     target="_blank">
                     <img alt="linkedin" src={buttonLinkedIn} />
-                </StyledIcon>
+                </Icon>
             )}
             {!!advisor.twitter && (
-                <StyledIcon
+                <Icon
                     href={`https://www.twitter.com/${advisor.twitter}`}
                     rel="noopener noreferrer"
                     target="_blank">
                     <img alt="twitter" src={buttonTwitter} />
-                </StyledIcon>
+                </Icon>
             )}
-        </StyledLinks>
+        </Links>
+
     </StyledAdvisor>
 )
 
