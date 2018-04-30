@@ -22,6 +22,10 @@ const StyledAdvisor = styled.div`
     margin-bottom: 2rem;
     width: calc(100% / 2 - 3rem);
 
+    @media screen and (${responsive.sm.min}) {
+        width: calc(100% / 3 - 3rem);
+    }
+
     @media screen and (${responsive.md.min}) {
         width: calc(100% / 4 - 3rem);
     }

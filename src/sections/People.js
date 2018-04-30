@@ -31,11 +31,13 @@ const StyledParagraph = styled(Paragraph)`
     }
 `
 
-const StyledLine = styled.div`
+const Line = styled.hr`
     width: 100%;
+    height: 1px;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    border-bottom: 1px solid rgba(${colors.white}, .25);
+    border: 0;
+    background: rgba(${colors.white}, .25);
 
     @media screen and (${responsive.sm.max}) {
         margin-top: 2rem;
@@ -44,7 +46,7 @@ const StyledLine = styled.div`
 `
 
 const StyledCompanies = styled.div`
-    margin: 4rem 0 0 0;
+    margin: 3rem 0 0 0;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -57,10 +59,6 @@ const StyledCompanyLogo = styled.a`
 
     img {
         height: 2rem;
-
-        @media screen and (${responsive.sm.max}) {
-            height: 1rem;
-        }
     }
 `
 
@@ -109,12 +107,8 @@ const People = ({ toggleModal }) => (
         </ContentRow>
 
         <ContentRow>
+            <Line />
 
-            <StyledLine />
-
-        </ContentRow>
-
-        <ContentRow>
             <Grid>
                 <Cell width={1 / 4}>
                     <SubTitle white id="team">Core team</SubTitle>
@@ -147,7 +141,7 @@ const People = ({ toggleModal }) => (
         </ContentRow>
 
         <ContentRow>
-            <StyledLine />
+            <Line />
 
             <Grid>
                 <Cell width={1 / 4}>
@@ -163,7 +157,7 @@ const People = ({ toggleModal }) => (
         </ContentRow>
 
         <ContentRow>
-            <StyledLine />
+            <Line />
 
             <StyledActions>
                 <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
