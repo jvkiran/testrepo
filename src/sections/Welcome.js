@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
+// import LazyLoad from 'react-lazyload'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Waves from '../components/Waves'
@@ -18,6 +19,7 @@ const StyledHero = styled(Section)`
     padding-top: 0;
     min-height: calc(100vh - (${layout.pageFrame} * 2));
     position: relative;
+    overflow: hidden;
 
     > div {
         padding-top: 2rem;
