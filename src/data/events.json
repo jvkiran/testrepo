@@ -215,6 +215,7 @@
         "city": "Singapore",
         "eventName": "De/Centralize 2018",
         "date": "2018-04-05",
+        "date_end": "2018-04-06",
         "link": "https://www.decentralize.sg"
     },
     {
@@ -251,7 +252,8 @@
     {
         "city": "Geneva",
         "eventName": "31st UN/CEFACT Forum",
-        "date": "2018-04-24",
+        "date": "2018-04-23",
+        "date_end": "2018-04-27",
         "link": "http://www.unece.org/31stuncefactforum.html"
     },
     {
@@ -283,18 +285,21 @@
         "city": "New York City",
         "eventName": "Consensus",
         "date": "2018-05-14",
+        "date_end": "2018-05-16",
         "link": "https://www.coindesk.com/events/consensus-2018/"
     },
     {
         "city": "Vienna",
         "eventName": "WeAreDevs World Congress",
         "date": "2018-05-16",
+        "date_end": "2018-05-18",
         "link": "https://www.wearedevelopers.com/congress/"
     },
     {
         "city": "Geneva",
         "eventName": "AI for Good - Global summit",
-        "date": "2018-05-16",
+        "date": "2018-05-15",
+        "date_end": "2018-05-17",
         "link": "https://www.itu.int/en/ITU-T/AI/2018/Pages/default.aspx"
     },
     {
@@ -306,37 +311,43 @@
     {
         "city": "Ann Arbor",
         "eventName": "Genetic Programming Theory & Practice XVI",
-        "date": "2018-05-18",
+        "date": "2018-05-17",
+        "date_end": "2018-05-20",
         "link": "http://gptp-workshop.com"
     },
     {
         "city": "Cardiff",
         "eventName": "Digital Festival",
         "date": "2018-05-21",
+        "date_end": "2018-05-22",
         "link": "http://www.digital-festival.co.uk/events/digital-festival/agenda-cb9e948458e2445bb59b0f7e5654d773.aspx"
     },
     {
         "city": "Gdansk",
         "eventName": "Infoshare",
         "date": "2018-05-22",
+        "date_end": "2018-05-23",
         "link": "https://infoshare.pl"
     },
     {
         "city": "London",
         "eventName": "Blockchain, IoT & Machine Learning in Oil & Gas Conference",
         "date": "2018-05-22",
+        "date_end": "2018-05-23",
         "link": "https://www.iotinoilandgas-europe18.com/home"
     },
     {
         "city": "Berlin",
         "eventName": "Tech Open Air (TOA)",
-        "date": "2018-06-20",
+        "date": "2018-06-19",
+        "date_end": "2018-06-22",
         "link": "https://toa.berlin"
     },
     {
         "city": "Copenhagen",
         "eventName": "TechFestival Copenhagen",
         "date": "2018-09-05",
+        "date_end": "2018-09-10",
         "link": "http://techfestival.co"
     }
 ]

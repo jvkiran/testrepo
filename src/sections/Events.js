@@ -309,8 +309,8 @@ const PastListing = styled.a`
     }
 `
 
-const EventDate = (props) => {
-    const eventDate = new Date(props.date)
+const EventDate = ({ date, dateEnd }) => {
+    const eventDate = new Date(date)
     const eventDateFormatted = eventDate.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -318,7 +318,29 @@ const EventDate = (props) => {
         timeZone: 'UTC'
     })
 
-    return eventDateFormatted
+    if (dateEnd) {
+        const eventDateEnd = new Date(dateEnd)
+        const eventDateFormattedYear = eventDate.toLocaleDateString('en-US', {
+            year: 'numeric',
+            timeZone: 'UTC'
+        })
+        const eventDateFormattedMonth = eventDate.toLocaleDateString('en-US', {
+            month: 'long',
+            timeZone: 'UTC'
+        })
+        const eventDateFormattedDay = eventDate.toLocaleDateString('en-US', {
+            day: 'numeric',
+            timeZone: 'UTC'
+        })
+        const eventDateEndFormattedDay = eventDateEnd.toLocaleDateString('en-US', {
+            day: 'numeric',
+            timeZone: 'UTC'
+        })
+
+        return `${eventDateFormattedMonth} ${eventDateFormattedDay}–${eventDateEndFormattedDay}, ${eventDateFormattedYear}`
+    } else {
+        return eventDateFormatted
+    }
 }
 
 function renderEvents() {
@@ -383,7 +405,7 @@ function pastEvents() {
 const PastEvent = ({ event }) => (
     <PastListing href={event.link} target="_blank">
         <p className="date">
-            <EventDate date={event.date} />
+            <EventDate date={event.date} dateEnd={event.date_end} />
         </p>
         <p className="city">
             {event.city}
@@ -405,7 +427,7 @@ const Event = ({ event }) => (
             <StyledEventName>{event.eventName}</StyledEventName>
         )}
         <StyledEventDate>
-            <EventDate date={event.date} />
+            <EventDate date={event.date} dateEnd={event.date_end} />
         </StyledEventDate>
     </StyledEvent>
 )
