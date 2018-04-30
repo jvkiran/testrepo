@@ -6,7 +6,7 @@ import oceanLogo from '../lib/art/logo/logo-white.svg'
 import { colors, fonts, transitions } from '../styles'
 
 const StyledHeader = styled.header`
-    background-color: ${({ background }) => (background ? `rgb(${background})` : `rgb(${colors.black})`)};
+    background-color: ${({ background }) => `rgb(${background})`};
     transition: transform .3s ease-in-out;
     transform: none;
     padding: .75rem 1rem;
@@ -78,7 +78,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-    background: `rgb(${colors.black})`,
+    background: colors.black
 }
 
 export default Header
