@@ -117,6 +117,8 @@ const StyledMember = styled.div`
         max-width: 100%;
         height: auto;
         filter: grayscale(100%);
+        min-height: 141px;
+        background: rgb(${colors.lightGrey});
     }
 `
 
@@ -263,12 +265,12 @@ const Team = ({ toggleModal }) => (
         <ContentRow>
             <StyledLine />
             <StyledTeam>
-                {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
+                {team.filter((item, index) => index < 15).map((member) => (
                     <TeamMember key={member.name} member={member} />
                 ))}
-                {team.filter((item) => teamImg[item.image]).length >= 15 &&
+                {team.filter((item, index) => index >= 15) &&
                 <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
-                    {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
+                    {team.filter((item, index) => index >= 15).map((member) => (
                         <TeamMember key={member.name} member={member} />
                     ))}
                 </Collapsible>
