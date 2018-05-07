@@ -44,25 +44,29 @@ class Waves extends Component {
         this.state = {
             count: 0,
             width: windowWidth,
-            height: windowHeight
+            height: windowHeight,
+            running: false
         }
 
-        this.start = this.start.bind(this)
-        this.stop = this.stop.bind(this)
         this.animate = this.animate.bind(this)
         this.handleResize = this.handleResize.bind(this)
         this.handleVisibility = this.handleVisibility.bind(this)
     }
 
     componentDidMount() {
-        if (isDesktop) {
-            this.init()
-        }
         window.addEventListener('resize', this.handleResize, false)
     }
 
     componentWillUnmount() {
-        this.stop()
+        this.destroy()
+    }
+
+    handleVisibility(isVisible) {
+        if (isDesktop && isVisible) {
+            this.init()
+        } else {
+            this.destroy()
+        }
     }
 
     init() {
@@ -128,39 +132,30 @@ class Waves extends Component {
             height: this.mount.clientHeight
         })
 
-        if (this.state.width >= 800) {
+        if (this.state.running && this.state.width >= 800) {
             if (this.camera && this.renderer) {
                 this.camera.aspect = this.state.width / this.state.height
                 this.camera.updateProjectionMatrix()
                 this.renderer.setSize(this.state.width, this.state.height)
             }
-        } else {
-            this.stop()
-        }
-    }
-
-    handleVisibility(isVisible) {
-        if (isVisible) {
+        } else if (this.state.running === false && this.state.width >= 800) {
             this.init()
-            console.log('visible')
         } else {
-            this.stop()
-            console.log('invisible')
+            this.destroy()
         }
     }
 
     start() {
-        if (!this.frameId) {
-            this.frameId = requestAnimationFrame(this.animate)
-        }
+        this.frameId = requestAnimationFrame(this.animate)
     }
 
-    stop() {
+    destroy() {
         cancelAnimationFrame(this.frameId)
         if (this.renderer && this.mount) {
             this.mount.removeChild(this.renderer.domElement)
         }
         window.removeEventListener('resize', this.handleResize)
+        this.setState({ running: false })
     }
 
     animate() {
@@ -169,6 +164,7 @@ class Waves extends Component {
         }))
         this.frameId = window.requestAnimationFrame(this.animate)
         this.moveParticles()
+        this.setState({ running: true })
     }
 
     render() {

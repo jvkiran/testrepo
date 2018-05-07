@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
-// import LazyLoad from 'react-lazyload'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Waves from '../components/Waves'
