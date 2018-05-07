@@ -20,6 +20,7 @@
     - [Videos](#videos)
 - [Forms](#forms)
 - [Development](#development)
+    - [Environment variables](#environment-variables)
     - [Workflow](#workflow)
     - [Code style](#code-style)
 - [Deployment: always be shipping](#deployment-always-be-shipping)
@@ -72,13 +73,27 @@ Via Zapier, the data is synced further in real time when new submissions happen:
 
 The site is a single page React app, created with [`create-react-app`](https://github.com/facebook/create-react-app).
 
+To start development, clone this repo, install all dependencies, and start the development server:
+
 ```bash
 git clone --recurse-submodules git@github.com:oceanprotocol/site.git
 cd site/
 
+# copy and move environment variables file in place
+mv .env.example .env
+
 npm i
 npm start
 ```
+
+### Environment variables
+
+A `.env` file is used to inject environment variables during local development. We're using `create-react-app` so all variables need to be prefixed with `REACT_APP_` to get picked up.
+
+Environment Variable | Usage
+---------|---------
+`REACT_APP_ANIMATE_WAVES` | Set to `false` to stop the waves from executing, saving your laptop battery.
+`REACT_APP_ANIMATE_PROJECT` | Set to `false` to disable the Project data dots animation. Takes away some stress from your GPU, saving your laptop battery.
 
 ### Workflow
 

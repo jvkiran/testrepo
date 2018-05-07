@@ -36,6 +36,7 @@ let particle
 const windowWidth = window.innerWidth
 const windowHeight = window.innerHeight
 const isDesktop = windowWidth >= 800
+const shouldAnimate = process.env.REACT_APP_ANIMATE_WAVES
 
 class Waves extends Component {
     constructor(props) {
@@ -62,6 +63,10 @@ class Waves extends Component {
     }
 
     handleVisibility(isVisible) {
+        if (process.env.NODE_ENV !== 'production') {
+            if (shouldAnimate !== 'true') return
+        }
+
         if (isDesktop && isVisible) {
             this.init()
         } else {
@@ -131,6 +136,10 @@ class Waves extends Component {
             width: this.mount.clientWidth,
             height: this.mount.clientHeight
         })
+
+        if (process.env.NODE_ENV !== 'production') {
+            if (shouldAnimate !== 'true') return
+        }
 
         if (this.state.running && this.state.width >= 800) {
             if (this.camera && this.renderer) {

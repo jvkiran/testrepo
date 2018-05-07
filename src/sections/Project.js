@@ -181,7 +181,7 @@ const StyledDataDots = styled.div`
     width: 40%;
     height: 100vw;
     background: ${({ img }) => `url(${img}) repeat-x left`};
-    animation: ${slideRight} 3s ease-in-out 0s infinite;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${slideRight} 3s ease-in-out 0s infinite` : null)};
 
     @media screen and (${responsive.sm.min}) {
         width: 20%;
@@ -196,6 +196,14 @@ const StyledSubTitle = styled(SubTitle)`
 `
 
 const Project = ({ toggleModal, ...props }) => {
+    const isProduction = process.env.NODE_ENV === 'production'
+    let shouldAnimate
+    if (isProduction) {
+        shouldAnimate = true
+    } else {
+        shouldAnimate = process.env.REACT_APP_ANIMATE_PROJECT === 'true'
+    }
+
     const _toggleModal = modal => {
         if (modal === 'consumer') {
             gtag('event', 'consumer', { 'event_category': 'click', 'event_label': 'intro_card' })
@@ -218,9 +226,9 @@ const Project = ({ toggleModal, ...props }) => {
                         <button>Publish data</button>
                     </StyledCard>
                     <StyledDataTransfer>
-                        <StyledDataDots img={dataDotsLeft} />
-                        <StyledDataDots img={dataDotsRight} />
-                        <Pulse className="pulse" />
+                        <StyledDataDots img={dataDotsLeft} shouldAnimate={shouldAnimate} />
+                        <StyledDataDots img={dataDotsRight} shouldAnimate={shouldAnimate} />
+                        <Pulse className="pulse" shouldAnimate={shouldAnimate} />
                     </StyledDataTransfer>
                     <StyledCard onClick={() => _toggleModal('consumer')}>
                         <h4>Data Consumers</h4>
