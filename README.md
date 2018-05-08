@@ -15,6 +15,7 @@
 ## Table of Contents
 
 - [Content](#content)
+    - [Events](#events)
     - [Papers](#papers)
     - [Blog posts](#blog-posts)
     - [Videos](#videos)
