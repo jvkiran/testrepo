@@ -19,15 +19,29 @@ import { colors, fonts, responsive, transitions } from '../styles'
 
 const slideRight = keyframes`
     0% {
-        background-position-x: 0%;
+        transform: translate3d(-30%, 0, 0);
     }
 
     33% {
-        background-position-x: 223%;
+        transform: translate3d(30%, 0, 0);
     }
 
     100% {
-        background-position-x: 223%;
+        transform: translate3d(30%, 0, 0);
+    }
+`
+
+const slideRightLarge = keyframes`
+    0% {
+        transform: translate3d(-21%, 0, 0);
+    }
+
+    33% {
+        transform: translate3d(20%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(20%, 0, 0);
     }
 `
 
@@ -149,29 +163,30 @@ const StyledDataTransfer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: rotate(90deg);
+
+    .pulse {
+        transform: rotate(-90deg);
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        &,
+        .pulse {
+            transform: none;
+        }
+    }
 `
 
 const StyledDataDots = styled.div`
-    width: 25%;
-    height: 100%;
-    background: ${({ img }) => `url(${img}) repeat-x center`};
-    background-position-x: 0%;
-    animation: ${slideRight} 3s ease 0 infinite;
+    width: 40%;
+    height: 100vw;
+    background: ${({ img }) => `url(${img}) repeat-x left`};
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${slideRight} 3s ease-in-out 0s infinite` : null)};
 
-    @media screen and (${responsive.md.max}) {
-        transform: rotate(180deg);
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        height: 100vw;
-
-        &:first-child {
-            transform: translate3d(50%, -60px, 0) rotate(-90deg);
-        }
-
-        &:nth-child(2) {
-            transform: translate3d(-50%, 60px, 0) rotate(-90deg);
-        }
+    @media screen and (${responsive.sm.min}) {
+        width: 20%;
+        height: 100%;
+        animation-name: ${slideRightLarge};
     }
 `
 
@@ -181,6 +196,14 @@ const StyledSubTitle = styled(SubTitle)`
 `
 
 const Project = ({ toggleModal, ...props }) => {
+    const isProduction = process.env.NODE_ENV === 'production'
+    let shouldAnimate
+    if (isProduction) {
+        shouldAnimate = true
+    } else {
+        shouldAnimate = process.env.REACT_APP_ANIMATE_PROJECT === 'true'
+    }
+
     const _toggleModal = modal => {
         if (modal === 'consumer') {
             gtag('event', 'consumer', { 'event_category': 'click', 'event_label': 'intro_card' })
@@ -203,9 +226,9 @@ const Project = ({ toggleModal, ...props }) => {
                         <button>Publish data</button>
                     </StyledCard>
                     <StyledDataTransfer>
-                        <StyledDataDots img={dataDotsLeft} />
-                        <StyledDataDots img={dataDotsRight} />
-                        <Pulse />
+                        <StyledDataDots img={dataDotsLeft} shouldAnimate={shouldAnimate} />
+                        <StyledDataDots img={dataDotsRight} shouldAnimate={shouldAnimate} />
+                        <Pulse className="pulse" shouldAnimate={shouldAnimate} />
                     </StyledDataTransfer>
                     <StyledCard onClick={() => _toggleModal('consumer')}>
                         <h4>Data Consumers</h4>

@@ -41,31 +41,31 @@ const Circle = styled.div`
 const StyledPulseCircleZero = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${pulseFade} 3s ease-in-out 0 1;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 0 1` : null)};
 `
 
 const StyledPulseCircleOne = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
-    animation: ${pulseFade} 3s ease-in-out .75s infinite;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out .75s infinite` : null)};
 `
 
 const StyledPulseCircleTwo = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${pulseFade} 3s ease-in-out 1.5s infinite;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 1.5s infinite` : null)};
 `
 
 const StyledPulseCircleThree = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
-    animation: ${pulseFade} 3s ease-in-out 2.25s infinite;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 2.25s infinite` : null)};
 `
 
 const StyledPulseCircleFour = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${pulseFade} 3s ease-in-out 3s infinite;
+    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 3s infinite` : null)};
 `
 
 const StyledPulseShadow = styled(Circle)`
@@ -79,14 +79,14 @@ const StyledPulseLock = styled.img`
     max-width: none;
 `
 
-const Pulse = () => (
-    <StyledPulseContainer>
+const Pulse = props => (
+    <StyledPulseContainer {...props}>
         <StyledPulseWrapper>
-            <StyledPulseCircleZero />
-            <StyledPulseCircleOne />
-            <StyledPulseCircleTwo />
-            <StyledPulseCircleThree />
-            <StyledPulseCircleFour />
+            <StyledPulseCircleZero {...props} />
+            <StyledPulseCircleOne {...props} />
+            <StyledPulseCircleTwo {...props} />
+            <StyledPulseCircleThree {...props} />
+            <StyledPulseCircleFour {...props} />
             <StyledPulseShadow />
             <StyledPulseLock alt="pulse" src={pulseLock} />
         </StyledPulseWrapper>
