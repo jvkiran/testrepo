@@ -25,6 +25,7 @@ const StyledWaves = styled.div`
         width: 100%;
         top: 10vh;
         z-index: 1;
+        transition: opacity .3s ease-out;
     }
 `
 
@@ -114,6 +115,7 @@ class Waves extends Component {
         this.camera = camera
         this.renderer = renderer
 
+        this.renderer.domElement.style.opacity = '0'
         this.mount.appendChild(this.renderer.domElement)
         this.start()
     }
@@ -129,6 +131,7 @@ class Waves extends Component {
             }
         }
         this.renderer.render(this.scene, this.camera)
+        this.renderer.domElement.style.opacity = '1'
     }
 
     handleResize() {
