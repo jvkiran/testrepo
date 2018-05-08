@@ -31,10 +31,11 @@
 
 Most copy is mixed within the HTML and JSX markup in the files under `src/sections/`. The following content has been isolated in json data files in the `src/data/` directory and can be edited there:
 
-- FAQ: `faq.json`
-- Events: `events.json`
-- Team: `team.json`
-- Roadmap: `roadmap.json`
+- Events: [`events.json`](src/data/events.json)
+- Team: [`team.json`](src/data/team.json)
+- Art: [`art.json`](src/data/art.json)
+- FAQ: [`faq.json`](src/data/faq.json)
+- Roadmap: [`roadmap.json`](src/data/roadmap.json)
 
 ### Events
 
@@ -42,7 +43,7 @@ Events can be added to the events section on the front page by editing the [`src
 
 On the events section, all events are automatically sorted chronologically by the `date` value, and past events are put into the archive modal. So the order of the events in the `events.json` file doesn't matter.
 
-### `date` & `date_end`
+#### `date` & `date_end`
 
 When adding a multi-day event, don't use the full event range but only the date one of the team members is actually present at an event. This is usually just one day, e.g. when giving a talk. Only add the optional `date_end` when our presence at an event is confirmed for multiple days.
 
