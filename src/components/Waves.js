@@ -164,16 +164,19 @@ class Waves extends Component {
             this.mount.removeChild(this.renderer.domElement)
         }
         window.removeEventListener('resize', this.handleResize)
-        this.setState({ running: false })
+        this.setState({
+            count: 0,
+            running: false
+        })
     }
 
     animate() {
-        this.setState((prevState) => ({
-            count: prevState.count + 0.05
-        }))
         this.frameId = window.requestAnimationFrame(this.animate)
         this.moveParticles()
-        this.setState({ running: true })
+        this.setState(prevState => ({
+            count: prevState.count + 0.05,
+            running: true
+        }))
     }
 
     render() {
