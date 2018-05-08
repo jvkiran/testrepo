@@ -35,6 +35,17 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 - Team: `team.json`
 - Roadmap: `roadmap.json`
 
+### Events
+
+Events can be added to the events section on the front page by editing the [`src/data/events.json`](src/data/events.json) file, and committing the result in a new Pull Request. 
+
+On the events section, all events are automatically sorted chronologically by the `date` value, and past events are put into the archive modal. So the order of the events in the `events.json` file doesn't matter.
+
+### `date` & `date_end`
+
+When adding a multi-day event, don't use the full event range but only the date one of the team members is actually present at an event. This is usually just one day, e.g. when giving a talk. Only add the optional `date_end` when our presence at an event is confirmed for multiple days.
+
+
 ### Papers
 
 All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
