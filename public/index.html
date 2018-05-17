@@ -163,6 +163,7 @@
         new CookiesEuBanner(function () {
             (function (window) {
                 const hostname = window && window.location && window.location.hostname
+                const isLive = hostname === 'oceanprotocol.com'
 
                 // Google Analytics async snippet
                 // http://goo.gl/3FPNDx
@@ -173,7 +174,7 @@
                     s = d.getElementsByTagName('script')[0]
                 g.async = true
 
-                if (hostname === 'oceanprotocol.com') {
+                if (isLive) {
                     g.src = 'https://www.google-analytics.com/analytics.js'
                 } else {
                     g.src = 'https://www.google-analytics.com/analytics_debug.js'
@@ -183,7 +184,7 @@
                 // Create the GA tracker
                 ga('create', 'UA-60614729-11', 'auto')
 
-                if (hostname === 'oceanprotocol.com') {
+                if (!isLive) {
                     // In non-production mode, simply log GA hits to the console.
                     // Note, tasks must be set before sending the first hit
                     ga(function (tracker) {
