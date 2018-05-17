@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#141414">
@@ -23,42 +24,43 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
     <style>
-      @font-face {
-        font-family: 'Sharp Sans Display';
-        src: url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff2') format('woff2'),
-        url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
-        font-stretch: normal;
-      }
+        @font-face {
+            font-family: 'Sharp Sans Display';
+            src: url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff2') format('woff2'),
+            url('%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+        }
 
-      @font-face {
-        font-family: 'Sharp Sans Medium';
-        src: url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff2') format('woff2'),
-        url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff') format('woff');
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-      }
+        @font-face {
+            font-family: 'Sharp Sans Medium';
+            src: url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff2') format('woff2'),
+            url('%PUBLIC_URL%/fonts/SharpSans-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+        }
 
-      @font-face {
-        font-family: 'Sharp Sans Bold';
-        src: url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff2') format('woff2'),
-        url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
-        font-stretch: normal;
-      }
+        @font-face {
+            font-family: 'Sharp Sans Bold';
+            src: url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff2') format('woff2'),
+            url('%PUBLIC_URL%/fonts/SharpSans-Bold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+        }
 
-      .loader {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: calc(50vh - 15px);
-      }
+        .loader {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: calc(50vh - 15px);
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
@@ -67,12 +69,56 @@
         <img class="loader" src="%PUBLIC_URL%/loader.svg" width="30" height="30" />
     </div>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60614729-11"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'UA-60614729-11');
+        (function (window) {
+            const hostname = window && window.location && window.location.hostname
+
+            // Google Analytics async snippet
+            // http://goo.gl/3FPNDx
+            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }
+            ga.l = +new Date
+            var d = document,
+                g = d.createElement('script'),
+                s = d.getElementsByTagName('script')[0]
+            g.async = true
+
+            if (hostname === 'oceanprotocol.com') {
+                g.src = 'https://www.google-analytics.com/analytics.js'
+            } else {
+                g.src = 'https://www.google-analytics.com/analytics_debug.js'
+            }
+            s.parentNode.insertBefore(g, s)
+
+            // Create the GA tracker
+            ga('create', 'UA-60614729-11', 'auto')
+
+            if (hostname === 'oceanprotocol.com') {
+                // In non-production mode, simply log GA hits to the console.
+                // Note, tasks must be set before sending the first hit
+                ga(function (tracker) {
+                    tracker.set('sendHitTask', function () {
+                        // Throw to stop subsequent tasks.
+                        throw 'Abort tracking in non-production environments.'
+                    })
+                })
+            }
+
+            // IP Anonymization
+            ga('set', 'anonymizeIp', true)
+
+            // Send initial pageview
+            ga('send', 'pageview')
+
+            // Track uncaught errors
+            window.onerror = function (message, url, line, col) {
+                var desc = message + ' (line: ' + line + ', url: ' + url + ', col: ' + col + ')';
+                ga('send', 'exception', {
+                    exDescription: 'window.onerror: ' + desc,
+                    exFatal: false
+                })
+            }
+        }(window))
     </script>
-  </body>
+</body>
+
 </html>

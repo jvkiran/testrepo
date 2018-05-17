@@ -1,4 +1,4 @@
-/* global gtag */
+/* global ga */
 
 import React from 'react'
 import styled from 'styled-components'
@@ -120,7 +120,8 @@ const Documentation = () => (
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
-                                <StyledDownload onClick={() => gtag('event', 'tech-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                                <StyledDownload
+                                    onClick={() => ga('send', 'event', 'download', 'tech-whitepaper', 'button')}>
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
@@ -138,7 +139,8 @@ const Documentation = () => (
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
-                                <StyledDownload onClick={() => gtag('event', 'business-whitepaper', { 'event_category': 'download', 'event_label': 'button' })}>
+                                <StyledDownload
+                                    onClick={() => ga('send', 'event', 'download', 'business-whitepaper', 'button')}>
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
@@ -149,15 +151,16 @@ const Documentation = () => (
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
-                This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+                            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-                It is complementary to the technical whitepaper for Ocean Protocol.
+                            It is complementary to the technical whitepaper for Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
                             <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
-                                <StyledDownload onClick={() => gtag('event', 'marketplace-framework', { 'event_category': 'download', 'event_label': 'button' })}>
-                    Download <span>pdf</span>
+                                <StyledDownload
+                                    onClick={() => ga('send', 'event', 'download', 'marketplace-framework', 'button')}>
+                                    Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
                         </StyledFooter>
@@ -179,9 +182,9 @@ const Documentation = () => (
                     <StyledRow>
                         <SubTitle white>Mission Statement</SubTitle>
                         <StyledAbstract>
-                Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
+                            Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
 
-                Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+                            Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
                         </StyledAbstract>
                     </StyledRow>
                 </Cell>
@@ -189,7 +192,7 @@ const Documentation = () => (
                     <StyledRow>
                         <SubTitle white>Subscribe to updates</SubTitle>
                         <StyledAbstract>
-                Be the first to know when we release new papers.
+                            Be the first to know when we release new papers.
                         </StyledAbstract>
                         <SubscribeForm />
                     </StyledRow>

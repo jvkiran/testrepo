@@ -1,4 +1,4 @@
-/* global gtag */
+/* global ga */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -206,9 +206,9 @@ const Project = ({ toggleModal, ...props }) => {
 
     const _toggleModal = modal => {
         if (modal === 'consumer') {
-            gtag('event', 'consumer', { 'event_category': 'click', 'event_label': 'intro_card' })
+            ga('send', 'event', 'click', 'consumer', 'intro_card')
         } else if (modal === 'provider') {
-            gtag('event', 'provider', { 'event_category': 'click', 'event_label': 'intro_card' })
+            ga('send', 'event', 'click', 'provider', 'intro_card')
         }
         toggleModal(modal)
     }
@@ -216,7 +216,7 @@ const Project = ({ toggleModal, ...props }) => {
         <Section id="project" {...props}>
             <ContentRow>
                 <Title>
-          Ocean Protocol <br />unlocks data
+                    Ocean Protocol <br />unlocks data
                 </Title>
 
                 <StyledData width={1}>
@@ -241,19 +241,19 @@ const Project = ({ toggleModal, ...props }) => {
                     <Cell width={1 / 2}>
                         <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
                         <Paragraph>
-              Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
+                            Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
                         </Paragraph>
                         <Paragraph>
-              Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
+                            Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
                         </Paragraph>
                     </Cell>
                     <Cell width={1 / 2}>
                         <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
                         <Paragraph>
-              The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.
+                            The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.
                         </Paragraph>
                         <Paragraph>
-              A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset.
+                            A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset.
                         </Paragraph>
                     </Cell>
                 </Grid>
