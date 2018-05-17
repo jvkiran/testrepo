@@ -8,7 +8,7 @@ const ContentRow = styled.div`
     margin: 0 auto;
 
     @media screen and (${responsive.sm.min}) {
-        padding: 0;;
+        padding: 0;
     }
 `
 /* eslint-enable no-nested-ternary */

@@ -29,7 +29,7 @@ const Color = styled.div`
     text-align: center;
     color: rgb(${colors.white});
     border: 1px solid rgb(${colors.lightGrey});
-    border-radius: 0.2rem;
+    border-radius: .2rem;
     flex: 0 0 49%;
 
     @media (${responsive.sm.min}) {
@@ -43,8 +43,8 @@ const ColorName = styled.h5`
     color: rgb(${colors.white});
     line-height: ${fonts.lineHeight.base};
 
-    [color="255, 255, 255"] &,
-    [color="226, 226, 226"] & {
+    [color='255, 255, 255'] &,
+    [color='226, 226, 226'] & {
         color: rgb(${colors.grey});
     }
 `
@@ -56,15 +56,13 @@ const ColorValue = styled.span`
     font-size: ${fonts.size.base};
     font-family: ${fonts.family.code};
 
-    [color="255, 255, 255"] &,
-    [color="226, 226, 226"] & {
+    [color='255, 255, 255'] &,
+    [color='226, 226, 226'] & {
         color: rgba(${colors.grey}, .7);
     }
 `
 
-const Gradients = styled(Colors)`
-
-`
+const Gradients = styled(Colors)``
 
 const Gradient = styled(Color)`
     background: ${props => (props.color ? props.color : '')};
@@ -96,13 +94,18 @@ const Styleguide = () => (
 
         <SectionTitle>Typography</SectionTitle>
         <SectionSubTitle>
-            Our branding typefaces are <a href="https://sharptype.co/typefaces/sharp-sans/#features">Sharp Sans Medium/Bold</a> & <a href="https://sharptype.co/typefaces/sharp-sans-display-no1/">Sharp Sans Display No. 1 Bold</a>.
+            Our branding typefaces are{' '}
+            <a href="https://sharptype.co/typefaces/sharp-sans/#features">
+                Sharp Sans Medium/Bold
+            </a>{' '}
+            &{' '}
+            <a href="https://sharptype.co/typefaces/sharp-sans-display-no1/">
+                Sharp Sans Display No. 1 Bold
+            </a>.
         </SectionSubTitle>
 
         <h1>Sharp Sans Display No. 1 Bold</h1>
-        <p style={{ fontSize: fonts.size.large }}>
-            Sharp Sans Medium
-        </p>
+        <p style={{ fontSize: fonts.size.large }}>Sharp Sans Medium</p>
         <p style={{ fontSize: fonts.size.large }}>
             <strong>Sharp Sans Bold</strong>
         </p>
@@ -124,9 +127,7 @@ const Styleguide = () => (
         </p>
 
         <SectionTitle>Buttons</SectionTitle>
-        <Button>
-            Click me like one of your french buttons
-        </Button>
+        <Button>Click me like one of your french buttons</Button>
     </Fragment>
 )
 
