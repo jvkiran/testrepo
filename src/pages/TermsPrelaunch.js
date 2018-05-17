@@ -390,29 +390,29 @@ const TermsPrelaunch = () => (
                 <p>To fulfil the contract, we contracted data processors that are obligated to fully comply with our directives and that may only process your personal data to the extent that we are allowed to do so and only for the given purposes herein.</p>
 
                 <p>Data processor Fractal:<br />
-Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“<strong>Fractal</strong>”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
+                    Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“<strong>Fractal</strong>”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
                 </p>
 
                 <p>Data processor Heroku:<br />
-To store your personal data, we are working together with “<strong>Heroku</strong>”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
+                    To store your personal data, we are working together with “<strong>Heroku</strong>”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
                 </p>
 
                 <p>For further information, please see <a href="https://www.heroku.com/policy/security">Heroku’s data security explanations</a> as well as <a href="https://www.salesforce.com/company/privacy/">Heroku’s Privacy Policy</a>.</p>
 
                 <p>Data processor AWS:<br />
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
+                    To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
                 </p>
 
                 <p>For further information, please see <a href="https://aws.amazon.com/privacy/?nc1=h_ls">AWS’s Privacy Policy</a>.</p>
 
                 <p>Data processor CS Compliance:<br />
-To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“<strong>CS Compliance</strong>”). CS Compliance [processes your data in compliance with the German data privacy regulations.
+                    To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“<strong>CS Compliance</strong>”). CS Compliance [processes your data in compliance with the German data privacy regulations.
                 </p>
 
                 <p>For further information, please email CS Compliance’s Privacy Policy contact info@cs-compliance-service.de </p>
 
                 <p>Data processor LexisNexis:<br />
-To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“<strong>LexisNexis</strong>”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
+                    To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“<strong>LexisNexis</strong>”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
                 </p>
 
                 <p>For further information, please see <a href="https://www.lexisnexis.com/en-us/privacy/default.page">LexisNexis’ Privacy Policy</a>.</p>
@@ -503,34 +503,34 @@ To process your personal data, we are also using CDDS AML Risk API, a service pr
                     <li>we have a legitimate interest in carrying out the Processing for the purpose of managing, operating or promoting our business, and that legitimate interest is not overridden by your interests, fundamental rights, or freedoms.</li>
                 </ul>
 
-                <p>When we are involving third party Processors into the performance of our services and contractual obligations and such involvement requires the sharing of Personal Data, we have entered with our third party Processors into data processing agreements according to Art. 28 of the European General Data Protection Regulation (“<strong>GDPR</strong>”) and, as far as required, further appropriate safeguards according to Art. 46 – 49 GDPR. The list of third party Processors to which we disclose your Personal Data can be requested by e-mail to <a href="mailto:privacy@oceanprotocol.com">privacy@oceanprotocol.com</a>.</p>
+                <p>When we are involving third party Processors into the performance of our services and contractual obligations and such involvement requires the sharing of Personal Data, we have entered with our third party Processors into data processing agreements according to Art. 28 of the European General Data Protection Regulation (“<strong>GDPR</strong>”) and, as far as required, further appropriate safeguards according to Art. 46 – 49 GDPR. The list of third party Processors to which we disclose your Personal Data can be requested by e-mail to <a href="mailto:gdpr@oceanprotocol.com">gdpr@oceanprotocol.com</a>.</p>
 
                 <p>Specifically we can already name the following Processors:</p>
 
                 <p>Data processor Fractal:<br />
-Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“Fractal”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
+                    Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“Fractal”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
                 </p>
 
                 <p>Data processor Heroku:<br />
-To store your personal data, we are working together with “Heroku”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
+                    To store your personal data, we are working together with “Heroku”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
                 </p>
 
                 <p>For further information, please see Heroku’s data security explanations https://www.heroku.com/policy/security as well as Heroku’s Privacy Policy: https://www.salesforce.com/company/privacy/</p>
 
                 <p>Data processor AWS:<br />
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
+                    To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
                 </p>
 
                 <p>For further information, please see AWS’s Privacy Policy: https://aws.amazon.com/privacy/?nc1=h_ls.</p>
 
                 <p>Data processor CS Compliance:<br />
-To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“CS Compliance”). CS Compliance [processes your data in compliance with the German data privacy regulations.
+                    To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“CS Compliance”). CS Compliance [processes your data in compliance with the German data privacy regulations.
                 </p>
 
                 <p>For further information, please email CS Compliance’s Privacy Policy contact person : Kai Petersen at kai.petersen@cs-compliance-service.de.</p>
 
                 <p>Data processor LexisNexis:<br />
-To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“LexisNexis”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
+                    To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“LexisNexis”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
                 </p>
 
                 <p>For further information, please see LexisNexis’ Privacy Policy: https://www.lexisnexis.com/en-us/privacy/default.page</p>
@@ -542,7 +542,7 @@ To process your personal data, we are also using CDDS AML Risk API, a service pr
                 <p>The categories of such Non-Processors are:</p>
                 <ul>
                     <li>banks, credit agencies and other financial and/or payment service providers</li>
-                    <li>our group affiliates (list of which can be found requested by email: privacy@oceanprotocol.com)</li>
+                    <li>our group affiliates (list of which can be found requested by email: gdpr@oceanprotocol.com)</li>
                     <li>other holders or users of Ocean Tokens</li>
                     <li>IT-service providers</li>
                 </ul>
@@ -566,7 +566,7 @@ To process your personal data, we are also using CDDS AML Risk API, a service pr
 
                 <p>Any consent is provided freely. If you give your consent, you have the right to withdraw your consent at any time. The withdrawal of consent does not affect the lawfulness of Processing based on consent before its withdrawal. After your withdrawal we will stop to Process your Personal Data, including storage. This paragraph is only relevant for Processing that is entirely voluntary – it does not apply for Processing that is necessary or obligatory in any way.</p>
 
-                <p>To withdraw your consent, please send us an e-mail to <a href="mailto:privacy@oceanprotocol.com">privacy@oceanprotocol.com</a> or a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road #03-22/24, Mapletree Business City, Singapore 117439. </p>
+                <p>To withdraw your consent, please send us an e-mail to <a href="mailto:gdpr@oceanprotocol.com">gdpr@oceanprotocol.com</a> or a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road #03-22/24, Mapletree Business City, Singapore 117439. </p>
 
                 <h2>Cookies</h2>
 
@@ -610,7 +610,7 @@ To process your personal data, we are also using CDDS AML Risk API, a service pr
 
                 <p>Our data privacy officer you can contact is as follows:</p>
 
-                <p><a href="mailto:privacy@oceanprotocol.com">privacy@oceanprotocol.com</a></p>
+                <p><a href="mailto:gdpr@oceanprotocol.com">gdpr@oceanprotocol.com</a></p>
 
                 <p>We may process your data on behalf of a contract partner of yours (e.g. internet-shop, vendor, seller, service provider). In this case, the privacy policy of your partner applies. Please contact your contract partner for more information.</p>
 
@@ -641,7 +641,7 @@ To process your personal data, we are also using CDDS AML Risk API, a service pr
 
                 <p>Please note that you will receive an email where we request you to click on a confirmation link in order to confirm that you are the owner of the e-mail address you provided to us for marketing communication.</p>
 
-                <p>You may view, withdraw and (re-)give your declaration of consent at any time by sending an e-mail to the provider of this Service <a href="mailto:privacy@oceanprotocol.com">privacy@oceanprotocol.com</a>. To withdraw your consent, you may also contact us under the address published in the footer of the e-mail/imprint/legal notice.</p>
+                <p>You may view, withdraw and (re-)give your declaration of consent at any time by sending an e-mail to the provider of this Service <a href="mailto:gdpr@oceanprotocol.com">gdpr@oceanprotocol.com</a>. To withdraw your consent, you may also contact us under the address published in the footer of the e-mail/imprint/legal notice.</p>
 
                 <p><strong>Mapletree Business City</strong>
                     <strong>20 Pasir Panjang Rd</strong>
