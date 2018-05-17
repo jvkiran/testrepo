@@ -57,6 +57,83 @@
             margin-right: auto;
             margin-top: calc(50vh - 15px);
         }
+
+        .cookies {
+            position: fixed;
+            bottom: 1rem;
+            z-index: 10;
+            color: #41474e;
+            background: rgba(255, 255, 255, .7);
+            -webkit-backdrop-filter: saturate(150%) blur(10px);
+            backdrop-filter: saturate(150%) blur(10px);
+            font-size: .7rem;
+            padding: .5rem 1rem;
+            text-align: center;
+            max-width: 38rem;
+            border-radius: 2px;
+            opacity: 0;
+            transition: opacity .5s ease-out;
+            transition-delay: 2s;
+        }
+
+        .cookies button {
+            cursor: pointer;
+            border: 0;
+            box-shadow: none;
+            border-radius: 2px;
+            padding: .5rem;
+            transition: background .2s ease-out;
+        }
+
+        .cookies button:first-child:hover {
+            background: #f6388a;
+        }
+
+        .cookies button:first-child {
+            background: #141414;
+            color: #fff;
+        }
+
+        .cookies button:last-child {
+            background: none;
+        }
+
+        .cookies a {
+            color: #41474e;
+            box-shadow: 0 1px 0 #41474e;
+        }
+
+        @media (min-width: 38rem) {
+            .cookies {
+                left: 50%;
+                margin-left: -18rem;
+                text-align: left;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .cookies p {
+                margin: 0;
+            }
+
+            .cookies p:first-child {
+                flex: 0 0 75%;
+            }
+
+            .cookies p:last-child {
+                flex: 0 0 22%;
+                text-align: right;
+            }
+
+            .cookies button:last-child {
+                padding-right: 0;
+            }
+
+            .cookies[style='display: block;'] {
+                display: flex !important;
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -69,55 +146,70 @@
         <img class="loader" src="%PUBLIC_URL%/loader.svg" width="30" height="30" />
     </div>
 
+    <div class="cookies" id="cookies-eu-banner" style="display: none;">
+        <p>
+            By continuing your visit to this site, you accept the use of cookies from Google Analytics so we can improve the site for
+            you.
+            <a href="/privacy/" id="cookies-eu-more">Read more</a>
+        </p>
+        <p>
+            <button id="cookies-eu-accept">Accept</button>
+            <button id="cookies-eu-reject">Reject</button>
+        </p>
+    </div>
+
+    <script src="%PUBLIC_URL%/cookies-eu-banner.min.js"></script>
     <script>
-        (function (window) {
-            const hostname = window && window.location && window.location.hostname
+        new CookiesEuBanner(function () {
+            (function (window) {
+                const hostname = window && window.location && window.location.hostname
 
-            // Google Analytics async snippet
-            // http://goo.gl/3FPNDx
-            window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }
-            ga.l = +new Date
-            var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0]
-            g.async = true
+                // Google Analytics async snippet
+                // http://goo.gl/3FPNDx
+                window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }
+                ga.l = +new Date
+                var d = document,
+                    g = d.createElement('script'),
+                    s = d.getElementsByTagName('script')[0]
+                g.async = true
 
-            if (hostname === 'oceanprotocol.com') {
-                g.src = 'https://www.google-analytics.com/analytics.js'
-            } else {
-                g.src = 'https://www.google-analytics.com/analytics_debug.js'
-            }
-            s.parentNode.insertBefore(g, s)
+                if (hostname === 'oceanprotocol.com') {
+                    g.src = 'https://www.google-analytics.com/analytics.js'
+                } else {
+                    g.src = 'https://www.google-analytics.com/analytics_debug.js'
+                }
+                s.parentNode.insertBefore(g, s)
 
-            // Create the GA tracker
-            ga('create', 'UA-60614729-11', 'auto')
+                // Create the GA tracker
+                ga('create', 'UA-60614729-11', 'auto')
 
-            if (hostname === 'oceanprotocol.com') {
-                // In non-production mode, simply log GA hits to the console.
-                // Note, tasks must be set before sending the first hit
-                ga(function (tracker) {
-                    tracker.set('sendHitTask', function () {
-                        // Throw to stop subsequent tasks.
-                        throw 'Abort tracking in non-production environments.'
+                if (hostname === 'oceanprotocol.com') {
+                    // In non-production mode, simply log GA hits to the console.
+                    // Note, tasks must be set before sending the first hit
+                    ga(function (tracker) {
+                        tracker.set('sendHitTask', function () {
+                            // Throw to stop subsequent tasks.
+                            throw 'Abort tracking in non-production environments.'
+                        })
                     })
-                })
-            }
+                }
 
-            // IP Anonymization
-            ga('set', 'anonymizeIp', true)
+                // IP Anonymization
+                ga('set', 'anonymizeIp', true)
 
-            // Send initial pageview
-            ga('send', 'pageview')
+                // Send initial pageview
+                ga('send', 'pageview')
 
-            // Track uncaught errors
-            window.onerror = function (message, url, line, col) {
-                var desc = message + ' (line: ' + line + ', url: ' + url + ', col: ' + col + ')';
-                ga('send', 'exception', {
-                    exDescription: 'window.onerror: ' + desc,
-                    exFatal: false
-                })
-            }
-        }(window))
+                // Track uncaught errors
+                window.onerror = function (message, url, line, col) {
+                    var desc = message + ' (line: ' + line + ', url: ' + url + ', col: ' + col + ')';
+                    ga('send', 'exception', {
+                        exDescription: 'window.onerror: ' + desc,
+                        exFatal: false
+                    })
+                }
+            }(window))
+        })
     </script>
 </body>
 
