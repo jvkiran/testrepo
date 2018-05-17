@@ -5,3 +5,4 @@ build
 yarn.lock
 .idea
 .env
+public/cookies-eu-banner.min.js
