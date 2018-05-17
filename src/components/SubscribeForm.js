@@ -112,6 +112,10 @@ const StyledMessage = styled.p`
     text-align: center;
     margin-top: .25rem;
     font-size: .7rem;
+    background: rgba(${colors.lightGrey}, .95);
+    color: rgb(${colors.white});
+    border-radius: 2px;
+    padding: .3rem;
 `
 
 const Gdpr = styled.div`
