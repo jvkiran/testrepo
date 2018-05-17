@@ -136,7 +136,7 @@ class SubscribeForm extends React.Component {
             })
             return
         }
-        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
+        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}&${gdpr.flag}`
         this.setState(
             {
                 status: 'sending',
