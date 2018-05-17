@@ -92,13 +92,6 @@ const StyledComments = styled.h4`
 const StyledRow = styled.div`
     margin-top: 4rem;
     margin-bottom: 0;
-
-    a {
-        display: block;
-        text-transform: uppercase;
-        font-family: ${fonts.family.button};
-        margin-top: -.5rem;
-    }
 `
 
 const Documentation = () => (

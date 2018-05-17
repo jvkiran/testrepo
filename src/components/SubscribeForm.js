@@ -5,6 +5,9 @@ import jsonp from 'jsonp'
 import emailWhite from '../assets/misc/email-white.svg'
 import Button from './Button'
 import { colors, responsive, transitions, fonts } from '../styles'
+import gdprJson from '../data/gdpr'
+
+const gdpr = gdprJson[0]
 
 const StyledSubscribe = styled.div`
     position: relative;
@@ -25,6 +28,10 @@ const StyledSubscribe = styled.div`
         @media screen and (${responsive.md.max}) {
             top: 1rem;
         }
+    }
+
+    & form {
+        position: relative;
     }
 
     & input {
@@ -107,6 +114,12 @@ const StyledMessage = styled.p`
     font-size: .7rem;
 `
 
+const Gdpr = styled.div`
+    margin-top: 1rem;
+    font-size: ${fonts.size.small};
+    color: rgb(${colors.dimmedGrey});
+`
+
 class SubscribeForm extends React.Component {
     constructor(props, ...args) {
         super(props, ...args)
@@ -115,82 +128,85 @@ class SubscribeForm extends React.Component {
             msg: null
         }
     }
-  onSubmit = e => {
-      e.preventDefault()
-      if (!this.input.value || this.input.value.length < 5 || this.input.value.indexOf('@') === -1) {
-          this.setState({
-              status: 'error'
-          })
-          return
-      }
-      const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
-      this.setState(
-          {
-              status: 'sending',
-              msg: null
-          },
-          () =>
-              jsonp(
-                  url,
-                  {
-                      param: 'c'
-                  },
-                  (err, data) => {
-                      if (err) {
-                          this.setState({
-                              status: 'error',
-                              msg: err
-                          })
-                      } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
-                          this.setState({
-                              status: 'alreadySubscribed'
-                          })
-                      } else if (data.result === 'error') {
-                          this.setState({
-                              status: 'error',
-                              msg: data.msg
-                          })
-                      } else {
-                          this.setState({
-                              status: 'success'
-                          })
-                      }
-                  }
-              )
-      )
-  };
-  render() {
-      const {
-          maxWidth, action, inputPlaceholder, btnLabel, sending, success, alreadySubscribed, ...props
-      } = this.props
-      const { status, msg } = this.state
-      return (
-          <StyledSubscribe maxWidth={maxWidth} {...props}>
-              <img alt="email" src={emailWhite} />
-              <form noValidate action={action} method="post">
-                  <StyledSubscribeWrapper>
-                      <input
-                          required
-                          defaultValue=""
-                          name="EMAIL"
-                          placeholder={inputPlaceholder}
-                          ref={node => (this.input = node)} //eslint-disable-line
-                          type="email" />
-                      <Button
-                          disabled={this.state.status === 'sending' || this.state.status === 'success'}
-                          onClick={this.onSubmit}
-                          type="submit">
-                          {btnLabel}
-                      </Button>
-                  </StyledSubscribeWrapper>
-                  {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
-                  {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
-                  {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
-                  {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: msg }} />}
-              </form>
-          </StyledSubscribe>
-      )
-  }
+    onSubmit = e => {
+        e.preventDefault()
+        if (!this.input.value || this.input.value.length < 5 || this.input.value.indexOf('@') === -1) {
+            this.setState({
+                status: 'error'
+            })
+            return
+        }
+        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}`
+        this.setState(
+            {
+                status: 'sending',
+                msg: null
+            },
+            () =>
+                jsonp(
+                    url,
+                    {
+                        param: 'c'
+                    },
+                    (err, data) => {
+                        if (err) {
+                            this.setState({
+                                status: 'error',
+                                msg: err
+                            })
+                        } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
+                            this.setState({
+                                status: 'alreadySubscribed'
+                            })
+                        } else if (data.result === 'error') {
+                            this.setState({
+                                status: 'error',
+                                msg: data.msg
+                            })
+                        } else {
+                            this.setState({
+                                status: 'success'
+                            })
+                        }
+                    }
+                )
+        )
+    }
+
+    render() {
+        const {
+            maxWidth, action, inputPlaceholder, btnLabel, sending, success, alreadySubscribed, ...props
+        } = this.props
+        const { status, msg } = this.state
+
+        return (
+            <StyledSubscribe maxWidth={maxWidth} {...props}>
+                <form noValidate action={action} method="post">
+                    <img alt="email" src={emailWhite} />
+                    <StyledSubscribeWrapper>
+                        <input
+                            required
+                            defaultValue=""
+                            name="EMAIL"
+                            placeholder={inputPlaceholder}
+                            ref={node => (this.input = node)} //eslint-disable-line
+                            type="email" />
+                        <Button
+                            disabled={this.state.status === 'sending' || this.state.status === 'success'}
+                            onClick={this.onSubmit}
+                            type="submit">
+                            {btnLabel}
+                        </Button>
+                    </StyledSubscribeWrapper>
+                    {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
+                    {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
+                    {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
+                    {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: msg }} />}
+                </form>
+                <Gdpr dangerouslySetInnerHTML={{ __html: gdpr.forms.newsletter }} />
+            </StyledSubscribe>
+        )
+    }
 }
 
 SubscribeForm.propTypes = {
