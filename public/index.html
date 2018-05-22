@@ -211,6 +211,22 @@
                 }
             }(window))
         })
+
+        // accept banner after 10s
+        const banner = document.getElementById('cookies-eu-banner')
+        const acceptButton = document.getElementById('cookies-eu-accept')
+
+        let timer
+        function acceptBannerAfterSomeTime() {
+            window.clearTimeout(timer)
+            timer = window.setTimeout(function() {
+                acceptButton.click()
+            }, 10000)
+        }
+
+        if (banner.style.display === 'block') {
+            acceptBannerAfterSomeTime()
+        }
     </script>
 </body>
 
