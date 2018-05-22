@@ -309,6 +309,18 @@
         "link": "https://www.andleuven.com/en/program/summit/blockchain-in-future-city-life"
     },
     {
+        "city": "New York",
+        "eventName": "Token Engineering Global",
+        "date": "2018-05-13",
+        "link": "https://www.meetup.com/Token-Engineering-Global/events/250176403/"
+    },
+    {
+        "city": "New York",
+        "eventName": "Women on the Block",
+        "date": "2018-05-13",
+        "link": "https://www.womenontheblock.io"
+    },
+    {
         "city": "Sofia",
         "eventName": "Big Data Value Meet-Up",
         "date": "2018-05-16",
@@ -353,6 +365,12 @@
         "eventName": "Tech Open Air (TOA)",
         "date": "2018-06-20",
         "link": "https://toa.berlin"
+    },
+    {
+        "city": "Hamburg",
+        "eventName": "AI Meetup",
+        "date": "2018-06-22",
+        "link": "https://www.meetup.com/meetupai-Hamburg/events/250445910/"
     },
     {
         "city": "Copenhagen",
