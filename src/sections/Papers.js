@@ -114,7 +114,7 @@ const Documentation = () => (
                         <StyledFooter>
                             <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
                                 <StyledDownload
-                                    onClick={() => ga('send', 'event', 'download', 'tech-whitepaper', 'button')}>
+                                    onClick={() => window.ga && ga('send', 'event', 'download', 'tech-whitepaper', 'button')}>
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
@@ -133,7 +133,7 @@ const Documentation = () => (
                         <StyledFooter>
                             <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
                                 <StyledDownload
-                                    onClick={() => ga('send', 'event', 'download', 'business-whitepaper', 'button')}>
+                                    onClick={() => window.ga && ga('send', 'event', 'download', 'business-whitepaper', 'button')}>
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>
@@ -152,7 +152,7 @@ const Documentation = () => (
                         <StyledFooter>
                             <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
                                 <StyledDownload
-                                    onClick={() => ga('send', 'event', 'download', 'marketplace-framework', 'button')}>
+                                    onClick={() => window.ga && ga('send', 'event', 'download', 'marketplace-framework', 'button')}>
                                     Download <span>pdf</span>
                                 </StyledDownload>
                             </a>

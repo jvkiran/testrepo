@@ -205,9 +205,9 @@ const Project = ({ toggleModal, ...props }) => {
     }
 
     const _toggleModal = modal => {
-        if (modal === 'consumer') {
+        if (modal === 'consumer' && window.ga) {
             ga('send', 'event', 'click', 'consumer', 'intro_card')
-        } else if (modal === 'provider') {
+        } else if (modal === 'provider' && window.ga) {
             ga('send', 'event', 'click', 'provider', 'intro_card')
         }
         toggleModal(modal)
