@@ -121,7 +121,7 @@ const StyledMessage = styled.p`
 const Gdpr = styled.div`
     margin-top: 1rem;
     font-size: ${fonts.size.small};
-    color: rgb(${colors.dimmedGrey});
+    color: rgba(${colors.dimmedGrey}, .7);
 `
 
 class SubscribeForm extends React.Component {
