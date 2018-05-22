@@ -34,7 +34,8 @@ export const social = {
     'telegram_news': 'https://t.me/oceanprotocol',
     'telegram': 'https://t.me/joinchat/GUyxrE0Hi154D0NrlOqLFg',
     'linkedin': 'https://www.linkedin.com/company/13429589/',
-    'github': 'https://github.com/oceanprotocol'
+    'github': 'https://github.com/oceanprotocol',
+    'reddit': 'https://www.reddit.com/r/oceanprotocol/'
 }
 
 export const dates = {

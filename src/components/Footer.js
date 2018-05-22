@@ -14,6 +14,7 @@ import buttonSlack from '../assets/buttons/slack.svg'
 import buttonGithub from '../assets/buttons/github.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
+import buttonReddit from '../assets/buttons/reddit.svg'
 import { colors, responsive, fonts } from '../styles'
 import { meta, company, social, youtube } from '../constants'
 
@@ -131,6 +132,13 @@ const Footer = () => (
                                 <img alt="GitHub" src={buttonGithub} />
                             </a>
                             <a
+                                href={social.reddit}
+                                rel="noopener"
+                                target="_blank"
+                                title="Reddit">
+                                <img alt="Reddit" src={buttonReddit} />
+                            </a>
+                            <a
                                 href={youtube.channel}
                                 rel="noopener"
                                 target="_blank"
@@ -150,7 +158,7 @@ const Footer = () => (
                 <Cell smallGutter width={1 / 2}>
                     <SubTitle white>{company.name}</SubTitle>
                     <Paragraph>
-            Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
+                        Ocean Protocol is supported by a Singapore based non-profit foundation, whose mandate is to ensure open access to the protocol and platform, provide data governance, encourage the network ecosystem growth and take measures to ensure that the platform becomes ever more decentralized with time.
                     </Paragraph>
 
                     <StyledContact>
