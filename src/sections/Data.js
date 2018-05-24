@@ -141,10 +141,10 @@ const StyledThirdGrid = styled(StyledGrid)`
 `
 
 const StyledUnavailable = styled.img`
-        margin-bottom: 2rem;
-        margin-left: -10rem;
-        margin-right: -10rem;
-        max-width: none;
+    margin-bottom: 2rem;
+    margin-left: -10rem;
+    margin-right: -10rem;
+    max-width: none;
 `
 
 const StyledContentRow = styled(ContentRow)`
@@ -167,7 +167,7 @@ const Data = () => (
                 <Cell width={2 / 3}>
                     <SubTitle>A lack of trust prevents data sharing</SubTitle>
                     <Paragraph>
-            Centralized data exchanges fail because they lack fair and flexible pricing mechanisms, data providers lose control over their assets, and there is a lack of transparency in how the data is used. So data remains locked up due to a lack of trust.
+                        Centralized data exchanges fail because they lack fair and flexible pricing mechanisms, data providers lose control over their assets, and there is a lack of transparency in how the data is used. So data remains locked up due to a lack of trust.
                     </Paragraph>
 
                     <Collapsible easing="ease-out" transitionTime={200} trigger="Use case: autonomous vehicles">

@@ -89,7 +89,7 @@ const Logo = styled.div`
 
     > div {
         border: 1px solid rgb(${colors.lightGrey});
-        border-radius: 0.2rem;
+        border-radius: .2rem;
         padding: 2rem;
         background: ${props => (props.white ? `rgb(${colors.black})` : null)};
         margin-bottom: .5rem;
@@ -101,7 +101,7 @@ const Banners = styled.figure`
     margin: 0;
 
     img {
-        border-radius: 0.2rem;
+        border-radius: .2rem;
     }
 
     a {
@@ -166,7 +166,7 @@ const KeyVisual = styled.div`
 
     > div {
         border: 1px solid rgb(${colors.lightGrey});
-        border-radius: 0.2rem;
+        border-radius: .2rem;
         padding: 2rem;
         margin-bottom: .5rem;
         background: rgb(${colors.black});
