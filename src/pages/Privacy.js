@@ -89,7 +89,7 @@ class Privacy extends Component {
                         {this.state.fetching ? (
                             <Spinner />
                         ) : (
-                            <Markdown source={this.state.text} />
+                            <Markdown options={{ breaks: true, linkify: true }} source={this.state.text} />
                         )}
                     </StyledContent>
                 </StyledSection>
