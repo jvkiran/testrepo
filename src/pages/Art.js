@@ -1,3 +1,5 @@
+/* global ga */
+
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -183,6 +185,12 @@ const Meta = () => (
     </Helmet>
 )
 
+function GaEvent(artasset) {
+    if (window.ga) {
+        ga('send', 'event', 'artdownload', artasset, 'link')
+    }
+}
+
 const Art = () => (
     <Fragment>
         <Meta />
@@ -213,11 +221,11 @@ const Art = () => (
                                         src={OceanLogo}
                                         width="90" />
                                 </div>
-                                <a download href={OceanLogo}>
+                                <a download href={OceanLogo} onClick={() => GaEvent('Ocean Logo')}>
                                     SVG
                                 </a>
                                 {' • '}
-                                <a download href={OceanLogoPNG}>
+                                <a download href={OceanLogoPNG} onClick={() => GaEvent('Ocean Logo')}>
                                     PNG
                                 </a>
                             </Logo>
@@ -228,11 +236,11 @@ const Art = () => (
                                         src={OceanLogoWhite}
                                         width="90" />
                                 </div>
-                                <a download href={OceanLogoWhite}>
+                                <a download href={OceanLogoWhite} onClick={() => GaEvent('Ocean Logo White')}>
                                     SVG
                                 </a>
                                 {' • '}
-                                <a download href={OceanLogoWhitePNG}>
+                                <a download href={OceanLogoWhitePNG} onClick={() => GaEvent('Ocean Logo White')}>
                                     PNG
                                 </a>
                             </Logo>
@@ -245,7 +253,7 @@ const Art = () => (
                         </SectionSubTitle>
 
                         <Paragraph>
-                            <a download href={mediakitDownload}>
+                            <a download href={mediakitDownload} onClick={() => GaEvent('Mediakit')}>
                                 <Button>{art.mediakit.button}</Button>
                             </a>
                         </Paragraph>
@@ -262,7 +270,7 @@ const Art = () => (
                 </SectionSubTitle>
 
                 <Banners>
-                    <a download href={OceanBanner01}>
+                    <a download href={OceanBanner01} onClick={() => GaEvent('Ocean Banner 01')}>
                         <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 1"
@@ -271,7 +279,7 @@ const Art = () => (
                         PNG
                     </a>
 
-                    <a download href={OceanBanner02}>
+                    <a download href={OceanBanner02} onClick={() => GaEvent('Ocean Banner 02')}>
                         <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 2"
@@ -280,7 +288,7 @@ const Art = () => (
                         PNG
                     </a>
 
-                    <a download href={OceanBanner03}>
+                    <a download href={OceanBanner03} onClick={() => GaEvent('Ocean Banner 03')}>
                         <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 3"
@@ -289,7 +297,7 @@ const Art = () => (
                         PNG
                     </a>
 
-                    <a download href={OceanBanner04}>
+                    <a download href={OceanBanner04} onClick={() => GaEvent('Ocean Banner 04')}>
                         <LazyLoad once height={337} offset={100}>
                             <img
                                 alt="Ocean Protocol banner 4"
@@ -315,11 +323,11 @@ const Art = () => (
                                     src={OceanJeyllyfishFull} />
                             </LazyLoad>
                         </div>
-                        <a download href={OceanJeyllyfishFull}>
+                        <a download href={OceanJeyllyfishFull} onClick={() => GaEvent('Jellyfish Full')}>
                             SVG
                         </a>
                         {' • '}
-                        <a download href={OceanJeyllyfishFullPNG}>
+                        <a download href={OceanJeyllyfishFullPNG} onClick={() => GaEvent('Jellyfish Full')}>
                             PNG
                         </a>
                     </KeyVisual>
@@ -331,11 +339,11 @@ const Art = () => (
                                     src={OceanJeyllyfishGrid} />
                             </LazyLoad>
                         </div>
-                        <a download href={OceanJeyllyfishGrid}>
+                        <a download href={OceanJeyllyfishGrid} onClick={() => GaEvent('Jellyfish Grid')}>
                             SVG
                         </a>
                         {' • '}
-                        <a download href={OceanJeyllyfishGridPNG}>
+                        <a download href={OceanJeyllyfishGridPNG} onClick={() => GaEvent('Jellyfish Grid')}>
                             PNG
                         </a>
                     </KeyVisual>
