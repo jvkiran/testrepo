@@ -63,10 +63,10 @@
     "image": "matthias"
   },
   {
-    "name": "Julian Leitloff",
-    "linkedin": "julian-leitloff",
-    "twitter": "julianleitloff",
-    "image": "julian"
+    "name": "Ahmed Abdullah",
+    "github": "aabdulwahed",
+    "linkedin": "aabdulwahed",
+    "image": "ahmed"
   },
   {
     "name": "Aitor Argomaniz",
@@ -74,21 +74,19 @@
     "image": "aitor"
   },
   {
+    "name": "Emily Richards",
+    "linkedin": "emily-richards-148357160",
+    "image": "emily"
+  },
+  {
+    "name": "Sheridan Johns",
+    "linkedin": "sheridanjohnsiv",
+    "image": "sheridan"
+  },
+  {
     "name": "Timothy Ley",
     "linkedin": "timothyleymingde",
     "image": "timothy"
-  },
-  {
-    "name": "Ahmed Abdullah",
-    "github": "aabdulwahed",
-    "linkedin": "aabdulwahed",
-    "image": "ahmed"
-  },
-  {
-    "name": "Wojciech Hupert",
-    "twitter": "wojciechhupert",
-    "linkedin": "wojciechhupert",
-    "image": "wojciech"
   },
   {
     "name": "Masha McConaghy",
@@ -108,11 +106,27 @@
     "image": "artur"
   },
   {
-    "name": "Sylvain Bellemare",
-    "twitter": "sbellem",
-    "github": "sbellem",
-    "linkedin": "sylvainbellemare",
-    "image": "sylvain"
+    "name": "Fang Gong",
+    "linkedin": "fang-gong-65413712",
+    "twitter": "gongf05",
+    "github": "gongf05",
+    "image": "fang"
+  },
+  {
+    "name": "Malte Sielski",
+    "linkedin": "malte-sielski-198991ab",
+    "twitter": "malte_slk",
+    "image": "malte"
+  },
+  {
+    "name": "Kamal Ved",
+    "linkedin": "kamalved",
+    "image": "kamal"
+  },
+  {
+    "name": "Chalid Mannaa",
+    "linkedin": "cmannaa",
+    "image": "chalid"
   },
   {
     "name": "Katharina Grieß",
@@ -162,14 +176,9 @@
     "image": "troy"
   },
   {
-    "name": "Kamal Ved",
-    "linkedin": "kamalved",
-    "image": "kamal"
-  },
-  {
-    "name": "Daniel Lustig",
-    "linkedin": "daniel-lustig-852a408a",
-    "image": "daniel"
+    "name": "Sarah-Jean Vallon",
+    "linkedin": "sarah-jean-vallon-b4603a65",
+    "image": "sarah"
   },
   {
     "name": "Ricardo Garcia",
@@ -181,5 +190,32 @@
     "linkedin": "manuel-rodr%C3%ADguez-18555a11a",
     "github": "manolodewiner",
     "image": "manuel"
+  },
+  {
+    "name": "Vanshdeep Singh",
+    "github": "kansi",
+    "linkedin": "vanshdeep-singh",
+    "image": "vanshdeep"
+  },
+  {
+    "name": "Daniel Lustig",
+    "linkedin": "daniel-lustig-852a408a",
+    "image": "daniel"
+  },
+  {
+    "name": "Samer Sallam",
+    "github": "ssallam",
+    "linkedin": "samer-sallam-0968644",
+    "image": "samer"
+  },
+  {
+    "name": "Lev Berman",
+    "github": "ldmberman",
+    "image": "lev"
+  },
+  {
+    "name": "Henry YP Ho",
+    "github": "henryyp",
+    "image": "henry"
   }
 ]

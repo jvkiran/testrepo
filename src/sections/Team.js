@@ -117,6 +117,8 @@ const StyledMember = styled.div`
         max-width: 100%;
         height: auto;
         filter: grayscale(100%);
+        min-height: 141px;
+        background: rgb(${colors.lightGrey});
     }
 `
 
