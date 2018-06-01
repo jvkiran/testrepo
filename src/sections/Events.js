@@ -52,15 +52,18 @@ const StyledEvents = styled.div`
 
     .slick-slide,
     .slick-initialized .slick-slide {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
 
         @media screen and (${responsive.sm.min}) {
             padding-left: 3rem;
             padding-right: 3rem;
+        }
+
+        > div > div { /* stylelint-disable-line */
+            display: flex !important; /* stylelint-disable-line */
+            flex-wrap: wrap;
+            align-items: stretch;
         }
     }
 
