@@ -64,7 +64,7 @@ const Quote = styled.p`
     padding: .75rem 1rem;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .2);
     opacity: 0;
-    transform: translate(0,-50%) scale(0);
+    transform: translate(0, -50%) scale(0);
     transform-origin: center;
     transition: .2s ease-out;
 
@@ -86,9 +86,9 @@ const QuoteWrap = styled.div`
 
     &:hover,
     &:focus {
-        ${Quote} {
+        ${Quote} { /* stylelint-disable-line */
             opacity: 1;
-            transform: translate(0,-50%) scale(1);
+            transform: translate(0, -50%) scale(1);
         }
     }
 `
