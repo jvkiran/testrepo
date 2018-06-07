@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Section from '../components/Section'
@@ -46,19 +46,33 @@ const Meta = () => (
     </Helmet>
 )
 
-const Newsletter = () => (
-    <Fragment>
-        <Meta />
-        <Header />
-        <StyledSection background={colors.black} fontColor={colors.white}>
-            <ContentRow>
-                <Title white>{title}</Title>
-                <SubTitle>{description}</SubTitle>
-            </ContentRow>
+/* eslint-disable class-methods-use-this */
+class Newsletter extends Component {
+    componentDidMount() {
+        document.body.classList.add('page--newsletter')
+    }
 
-            <StyledSubscribeForm />
-        </StyledSection>
-    </Fragment>
-)
+    componentWillUnmount() {
+        document.body.classList.remove('page--newsletter')
+    }
+
+    render() {
+        return (
+            <Fragment>
+                <Meta />
+                <Header />
+                <StyledSection background={colors.black} fontColor={colors.white}>
+                    <ContentRow>
+                        <Title white>{title}</Title>
+                        <SubTitle>{description}</SubTitle>
+                    </ContentRow>
+
+                    <StyledSubscribeForm />
+                </StyledSection>
+            </Fragment>
+        )
+    }
+}
+/* eslint-enable class-methods-use-this */
 
 export default Newsletter

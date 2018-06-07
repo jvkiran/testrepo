@@ -25,6 +25,12 @@ const StyledSubTitle = styled.h5`
     &:first-of-type {
         margin-top: 0;
     }
+
+    .page--newsletter & {
+        &:first-of-type {
+            display: none;
+        }
+    }
 `
 
 const StyledActions = styled.div`
@@ -77,14 +83,22 @@ const StyledContact = styled.div`
     }
 `
 
+const StyledSubscribeForm = styled(SubscribeForm)`
+    .page--newsletter & {
+        display: none;
+    }
+`
+
+
 const Footer = () => (
     <Section background={colors.grey} fontColor={colors.white} id="footer">
         <ContentRow>
             <Grid>
                 <Cell smallGutter width={1 / 2}>
                     <SubTitle white>Get Involved</SubTitle>
+
                     <StyledSubTitle>Newsletter</StyledSubTitle>
-                    <SubscribeForm maxWidth={28} />
+                    <StyledSubscribeForm maxWidth={28} />
 
                     <StyledSubTitle>Follow</StyledSubTitle>
                     <StyledActions>
