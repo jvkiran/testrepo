@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import OceanJeyllyfishBack from 'oceanprotocol-art/jellyfish/jellyfish-back.svg'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import OceanJeyllyfishBack from '../lib/art/jellyfish/jellyfish-back.svg'
 import { colors, fonts } from '../styles'
 import artJson from '../data/art'
 
