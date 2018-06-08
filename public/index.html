@@ -138,10 +138,6 @@
 </head>
 
 <body>
-    <noscript>
-        You need to enable JavaScript to run this app.
-    </noscript>
-
     <div id="root">
         <img class="loader" src="%PUBLIC_URL%/loader.svg" width="30" height="30" />
     </div>
@@ -219,7 +215,7 @@
         let timer
         function acceptBannerAfterSomeTime() {
             window.clearTimeout(timer)
-            timer = window.setTimeout(function() {
+            timer = window.setTimeout(function () {
                 acceptButton.click()
             }, 10000)
         }
