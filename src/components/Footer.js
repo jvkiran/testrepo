@@ -105,64 +105,46 @@ const Footer = () => (
                         <StyledSocialLinks>
                             <a
                                 href={social.blog}
-                                rel="noopener"
-                                target="_blank"
                                 title="Blog">
                                 <img alt="Medium" src={buttonMedium} />
                             </a>
                             <a
                                 href={social.twitter}
-                                rel="noopener"
-                                target="_blank"
                                 title="Twitter">
                                 <img alt="Twitter" src={buttonTwitter} />
                             </a>
                             <a
                                 href={social.telegram_news}
-                                rel="noopener"
-                                target="_blank"
                                 title="Telegram News Channel">
                                 <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a
                                 href={social.telegram}
-                                rel="noopener"
-                                target="_blank"
                                 title="Telegram Group Chat">
                                 <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a
                                 href={social.slack}
-                                rel="noopener"
-                                target="_blank"
                                 title="Slack">
                                 <img alt="Telegram" src={buttonSlack} />
                             </a>
                             <a
                                 href={social.github}
-                                rel="noopener"
-                                target="_blank"
                                 title="GitHub">
                                 <img alt="GitHub" src={buttonGithub} />
                             </a>
                             <a
                                 href={social.reddit}
-                                rel="noopener"
-                                target="_blank"
                                 title="Reddit">
                                 <img alt="Reddit" src={buttonReddit} />
                             </a>
                             <a
                                 href={youtube.channel}
-                                rel="noopener"
-                                target="_blank"
                                 title="YouTube">
                                 <img alt="YouTube" src={buttonYoutube} />
                             </a>
                             <a
                                 href={social.linkedin}
-                                rel="noopener"
-                                target="_blank"
                                 title="LinkedIn">
                                 <img alt="LinkedIn" src={buttonLinkedin} />
                             </a>

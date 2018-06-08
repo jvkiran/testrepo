@@ -1,12 +1,13 @@
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
-
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
 import LazyLoad from 'react-lazyload'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 import smoothScroll from '../lib/smoothScroll'
 import Section from '../components/Section'
 import Title from '../components/Title'
@@ -361,16 +362,24 @@ const YouTubeButton = styled(Button)`
 `
 
 class SectionContent extends Component {
-    state = {
-        title: '',
-        description: '',
-        active: 0,
-        videoUrl: '',
-        player: false
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            title: '',
+            description: '',
+            active: 0,
+            videoUrl: '',
+            player: false
+        }
     }
 
     componentWillMount() {
         this.selectVideo(this.props.items[0], 0)
+    }
+
+    componentWillUnmount() {
+        this.stopVideo()
     }
 
     selectVideo(properties, index) {
@@ -410,21 +419,21 @@ class SectionContent extends Component {
             responsive: [{
                 breakpoint: 650,
                 settings:
-                    {
-                        slidesToShow: 1,
-                    }
+                {
+                    slidesToShow: 1,
+                }
             }, {
                 breakpoint: 800,
                 settings:
-                    {
-                        slidesToShow: 2,
-                    }
+                {
+                    slidesToShow: 2,
+                }
             }, {
                 breakpoint: 992,
                 settings:
-                    {
-                        slidesToShow: 3,
-                    }
+                {
+                    slidesToShow: 3,
+                }
             }]
         }
         return (
@@ -439,7 +448,7 @@ class SectionContent extends Component {
                     </RatioContainer>
                     <VideoContainer className={this.state.player ? 'active' : ''}>
                         {this.state.player &&
-                        <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
+                            <StyledClose alt="close" onClick={() => this.stopVideo()} src={cross} />
                         }
                         <StyledReactPlayer
                             controls
@@ -498,10 +507,15 @@ VideoSlider.propTypes = {
     items: PropTypes.any.isRequired // eslint-disable-line react/forbid-prop-types
 }
 
-class Videos extends React.Component { // eslint-disable-line react/no-multi-comp
-    state = {
-        ApiResponse: []
+class Videos extends Component { // eslint-disable-line react/no-multi-comp
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            ApiResponse: []
+        }
     }
+
     componentWillMount() {
         if (youtube.playlist) {
             const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
@@ -551,7 +565,7 @@ const RenderSection = ({ ApiResponse }) => (
                 <VideoSlider items={ApiResponse} />
 
                 <StyledContentRow>
-                    <a href={youtube.channel} target="_blank">
+                    <a href={youtube.channel}>
                         <YouTubeButton>YouTube Channel</YouTubeButton>
                     </a>
                 </StyledContentRow>
