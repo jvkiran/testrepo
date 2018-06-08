@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import fadeIn from 'react-animations/lib/fade-in'
-import oceanLogo from '../lib/art/logo/logo-white.svg'
+import oceanLogo from 'oceanprotocol-art/logo/logo-white.svg'
 import { colors, fonts, transitions } from '../styles'
 
 const StyledHeader = styled.header`

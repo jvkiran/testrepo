@@ -5,6 +5,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Slider from 'react-slick'
+
+import OceanJeyllyfishBack from 'oceanprotocol-art/jellyfish/jellyfish-back.svg'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -12,7 +14,6 @@ import ContentRow from '../components/ContentRow'
 import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
 import events from '../data/events'
-import OceanJeyllyfishBack from '../lib/art/jellyfish/jellyfish-back.svg'
 import cross from '../assets/misc/cross.svg'
 import { colors, fonts, responsive } from '../styles'
 
@@ -483,17 +484,17 @@ class Archive extends React.Component {
                     View Events Archive
                 </ArchiveButton>
                 {this.state.modalIsOpen === true &&
-                <ModalOverlay>
-                    <Modal>
-                        <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
-                        <ArchiveTitle>
-                            Events Archive
-                        </ArchiveTitle>
-                        <OverflowDiv>
-                            { past }
-                        </OverflowDiv>
-                    </Modal>
-                </ModalOverlay>
+                    <ModalOverlay>
+                        <Modal>
+                            <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
+                            <ArchiveTitle>
+                                Events Archive
+                            </ArchiveTitle>
+                            <OverflowDiv>
+                                {past}
+                            </OverflowDiv>
+                        </Modal>
+                    </ModalOverlay>
                 }
             </div>
         )
