@@ -16,7 +16,7 @@
     "postbuild": "react-snap"
   },
   "dependencies": {
-    "cookies-eu-banner": "^1.2.10",
+    "cookies-eu-banner": "^1.2.14",
     "jsonp": "^0.2.1",
     "oceanprotocol-art": "^1.0.0",
     "prop-types": "^15.6.0",
