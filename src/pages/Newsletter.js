@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import SEO from '../components/SEO'
 import Section from '../components/Section'
@@ -54,6 +55,7 @@ class Newsletter extends Component {
             <Fragment>
                 <SEO
                     description={description}
+                    path={this.props.location.pathname}
                     title={title} />
                 <Header />
                 <StyledSection background={colors.black} fontColor={colors.white}>
@@ -69,5 +71,9 @@ class Newsletter extends Component {
     }
 }
 /* eslint-enable class-methods-use-this */
+
+Newsletter.propTypes = {
+    location: PropTypes.object.isRequired, // eslint-disable-line
+}
 
 export default Newsletter

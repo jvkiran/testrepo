@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Markdown from 'react-remarkable'
 import Section from '../components/Section'
@@ -54,6 +55,7 @@ class Privacy extends Component {
             fetching: false
         }
     }
+
     componentDidMount() {
         this.fetchPrivacyPolicy()
     }
@@ -73,6 +75,7 @@ class Privacy extends Component {
             <Fragment>
                 <SEO
                     description={description}
+                    path={this.props.location.pathname}
                     title={title} />
                 <Header />
                 <StyledSection>
@@ -92,6 +95,10 @@ class Privacy extends Component {
             </Fragment>
         )
     }
+}
+
+Privacy.propTypes = {
+    location: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default Privacy
