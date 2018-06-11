@@ -7,7 +7,7 @@ import { meta } from '../../src/constants'
 const SEO = ({
     title, description, image, path
 }) => {
-    const url = `${meta.url}${path}`
+    const url = `${meta.url}${path}/`
 
     return (
         <Helmet
