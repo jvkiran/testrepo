@@ -1,5 +1,5 @@
 import React, { Fragment, Component } from 'react'
-import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Markdown from 'react-remarkable'
 import Section from '../components/Section'
@@ -8,6 +8,8 @@ import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Header from '../components/Header'
 import Spinner from '../components/Spinner'
+import SEO from '../components/SEO'
+
 import { fonts, colors } from '../styles'
 
 import privacy from '../data/privacy.md'
@@ -41,16 +43,6 @@ const StyledContent = styled(ContentRow)`
     }
 `
 
-const title = 'Privacy Policy'
-const description = 'Privacy Policy for the use of oceanprotocol.com.'
-
-const Meta = () => (
-    <Helmet>
-        <title>{title}</title>
-        <meta content={description} name="description" />
-    </Helmet>
-)
-
 class Privacy extends Component {
     constructor(props) {
         super(props)
@@ -60,6 +52,7 @@ class Privacy extends Component {
             fetching: false
         }
     }
+
     componentDidMount() {
         this.fetchPrivacyPolicy()
     }
@@ -75,9 +68,15 @@ class Privacy extends Component {
     }
 
     render() {
+        const title = 'Privacy Policy'
+        const description = 'Privacy Policy for the use of oceanprotocol.com.'
+
         return (
             <Fragment>
-                <Meta />
+                <SEO
+                    description={description}
+                    path={this.props.location.pathname}
+                    title={title} />
                 <Header />
                 <StyledSection>
                     <ContentRow>
@@ -96,6 +95,10 @@ class Privacy extends Component {
             </Fragment>
         )
     }
+}
+
+Privacy.propTypes = {
+    location: PropTypes.object.isRequired, // eslint-disable-line
 }
 
 export default Privacy

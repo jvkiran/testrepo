@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import SEO from '../components/SEO'
 import Menu from '../sections/Menu'
 import Welcome from '../sections/Welcome'
 import Project from '../sections/Project'
@@ -13,14 +14,19 @@ import Modal from '../sections/Modal'
 import Art from '../sections/Art'
 
 class Home extends Component {
-    state = {
-        modal: ''
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            modal: ''
+        }
     }
 
     toggleModal = (modal = '') => this.setState({ modal })
 
     render = () => (
         <Fragment>
+            <SEO />
             <Menu />
             <Welcome />
             <Events />

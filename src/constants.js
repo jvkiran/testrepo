@@ -2,7 +2,8 @@ export const meta = {
     'title': 'Ocean Protocol',
     'tagline': 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
     'description': 'Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements.',
-    'url': 'https://oceanprotocol.com'
+    'url': 'https://oceanprotocol.com',
+    'image': '/twitter_card.png'
 }
 
 export const company = {

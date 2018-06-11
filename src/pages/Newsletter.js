@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import SEO from '../components/SEO'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -36,16 +37,6 @@ const StyledSubscribeForm = styled(SubscribeForm)`
     max-width: 30rem;
 `
 
-const title = 'Newsletter'
-const description = 'Subscribe to be the first to know about updates.'
-
-const Meta = () => (
-    <Helmet>
-        <title>{title}</title>
-        <meta content={description} name="description" />
-    </Helmet>
-)
-
 /* eslint-disable class-methods-use-this */
 class Newsletter extends Component {
     componentDidMount() {
@@ -57,9 +48,15 @@ class Newsletter extends Component {
     }
 
     render() {
+        const title = 'Newsletter'
+        const description = 'Subscribe to be the first to know about updates.'
+
         return (
             <Fragment>
-                <Meta />
+                <SEO
+                    description={description}
+                    path={this.props.location.pathname}
+                    title={title} />
                 <Header />
                 <StyledSection background={colors.black} fontColor={colors.white}>
                     <ContentRow>
@@ -74,5 +71,9 @@ class Newsletter extends Component {
     }
 }
 /* eslint-enable class-methods-use-this */
+
+Newsletter.propTypes = {
+    location: PropTypes.object.isRequired, // eslint-disable-line
+}
 
 export default Newsletter
