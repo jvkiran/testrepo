@@ -43,9 +43,6 @@ const StyledContent = styled(ContentRow)`
     }
 `
 
-const title = 'Privacy Policy'
-const description = 'Privacy Policy for the use of oceanprotocol.com.'
-
 class Privacy extends Component {
     constructor(props) {
         super(props)
@@ -71,6 +68,9 @@ class Privacy extends Component {
     }
 
     render() {
+        const title = 'Privacy Policy'
+        const description = 'Privacy Policy for the use of oceanprotocol.com.'
+
         return (
             <Fragment>
                 <SEO

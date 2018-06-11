@@ -37,9 +37,6 @@ const StyledSubscribeForm = styled(SubscribeForm)`
     max-width: 30rem;
 `
 
-const title = 'Newsletter'
-const description = 'Subscribe to be the first to know about updates.'
-
 /* eslint-disable class-methods-use-this */
 class Newsletter extends Component {
     componentDidMount() {
@@ -51,6 +48,9 @@ class Newsletter extends Component {
     }
 
     render() {
+        const title = 'Newsletter'
+        const description = 'Subscribe to be the first to know about updates.'
+
         return (
             <Fragment>
                 <SEO

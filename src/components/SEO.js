@@ -35,9 +35,6 @@ const SEO = ({
             <meta content={title} name="twitter:title" />
             <meta content={description} name="twitter:description" />
             <meta content={`${meta.url}${image}`} name="twitter:image" />
-
-            {/* Prevent search engine indexing of staging environments */}
-            {window.location.hostname !== 'oceanprotocol.com' && <meta content="noindex,nofollow" name="robots" />}
         </Helmet>
     )
 }
