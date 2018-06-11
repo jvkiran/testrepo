@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import SEO from '../components/SEO'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -39,13 +39,6 @@ const StyledSubscribeForm = styled(SubscribeForm)`
 const title = 'Newsletter'
 const description = 'Subscribe to be the first to know about updates.'
 
-const Meta = () => (
-    <Helmet>
-        <title>{title}</title>
-        <meta content={description} name="description" />
-    </Helmet>
-)
-
 /* eslint-disable class-methods-use-this */
 class Newsletter extends Component {
     componentDidMount() {
@@ -59,7 +52,9 @@ class Newsletter extends Component {
     render() {
         return (
             <Fragment>
-                <Meta />
+                <SEO
+                    description={description}
+                    title={title} />
                 <Header />
                 <StyledSection background={colors.black} fontColor={colors.white}>
                     <ContentRow>

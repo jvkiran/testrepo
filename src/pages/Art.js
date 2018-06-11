@@ -1,7 +1,7 @@
 /* global ga */
 
 import React, { Fragment } from 'react'
-import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
@@ -31,6 +31,8 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
+import SEO from '../components/SEO'
+
 import { colors, fonts, transitions, layout } from '../styles'
 import { social } from '../constants'
 import artJson from '../data/art'
@@ -180,21 +182,19 @@ const StyledFirstContentRow = styled(ContentRow)`
     margin-top: -6rem;
 `
 
-const Meta = () => (
-    <Helmet>
-        <title>{art.header.title}</title>
-    </Helmet>
-)
-
 function GaEvent(artasset) {
     if (window.ga) {
         ga('send', 'event', 'artdownload', artasset, 'link')
     }
 }
 
-const Art = () => (
+const Art = ({ location }) => (
     <Fragment>
-        <Meta />
+        <SEO
+            description={art.header.tagline}
+            image={OceanBanner01}
+            path={location.pathname}
+            title={art.header.title} />
         <Header background={colors.darkPurple} />
         <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
@@ -361,5 +361,9 @@ const Art = () => (
         </Section>
     </Fragment>
 )
+
+Art.propTypes = {
+    location: PropTypes.object.isRequired, // eslint-disable-line
+}
 
 export default Art

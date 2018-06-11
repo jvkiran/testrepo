@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react'
-import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Markdown from 'react-remarkable'
 import Section from '../components/Section'
@@ -8,6 +7,8 @@ import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Header from '../components/Header'
 import Spinner from '../components/Spinner'
+import SEO from '../components/SEO'
+
 import { fonts, colors } from '../styles'
 
 import privacy from '../data/privacy.md'
@@ -44,13 +45,6 @@ const StyledContent = styled(ContentRow)`
 const title = 'Privacy Policy'
 const description = 'Privacy Policy for the use of oceanprotocol.com.'
 
-const Meta = () => (
-    <Helmet>
-        <title>{title}</title>
-        <meta content={description} name="description" />
-    </Helmet>
-)
-
 class Privacy extends Component {
     constructor(props) {
         super(props)
@@ -77,7 +71,9 @@ class Privacy extends Component {
     render() {
         return (
             <Fragment>
-                <Meta />
+                <SEO
+                    description={description}
+                    title={title} />
                 <Header />
                 <StyledSection>
                     <ContentRow>

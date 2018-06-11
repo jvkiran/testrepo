@@ -39,7 +39,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 
 ### Events
 
-Events can be added to the events section on the front page by editing the [`src/data/events.json`](src/data/events.json) file, and committing the result in a new Pull Request. 
+Events can be added to the events section on the front page by editing the [`src/data/events.json`](src/data/events.json) file, and committing the result in a new Pull Request.
 
 On the events section, all events are automatically sorted chronologically by the `date` value, and past events are put into the archive modal. So the order of the events in the `events.json` file doesn't matter.
 
