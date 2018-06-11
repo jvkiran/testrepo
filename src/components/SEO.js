@@ -43,10 +43,10 @@ const SEO = ({
 }
 
 SEO.propTypes = {
-    title: PropTypes.string.isRequired,
     description: PropTypes.string,
     image: PropTypes.string,
     path: PropTypes.string,
+    title: PropTypes.string, // eslint-disable-line
 }
 
 SEO.defaultProps = {

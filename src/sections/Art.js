@@ -40,7 +40,7 @@ const StyledSubTitle = styled(SubTitle)`
 
 const Art = () => (
     <StyledSection background={colors.darkPurple} backgroundImage={OceanJeyllyfishBack} id="art">
-        <a href="/art">
+        <a href="/art/">
             <ContentRow>
                 <StyledTitle white>{artJson[0].header.title}</StyledTitle>
                 <StyledSubTitle center white>{artJson[0].header.tagline}</StyledSubTitle>

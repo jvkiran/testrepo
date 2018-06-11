@@ -12,10 +12,10 @@ const App = () => (
     <Fragment>
         <Switch>
             <Route exact component={Home} path="/" />
-            <Route exact component={Art} path="/art" />
-            <Route exact component={Privacy} path="/privacy" />
-            <Route exact component={TermsPrelaunch} path="/terms-prelaunch" />
-            <Route exact component={Newsletter} path="/newsletter" />
+            <Route exact component={Art} path="/art/" />
+            <Route exact component={Privacy} path="/privacy/" />
+            <Route exact component={TermsPrelaunch} path="/terms-prelaunch/" />
+            <Route exact component={Newsletter} path="/newsletter/" />
             <Route component={NotFound} path="*" />
         </Switch>
         <Footer />
