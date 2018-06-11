@@ -7,7 +7,7 @@ import { meta } from '../../src/constants'
 const SEO = ({
     title, description, image, path
 }) => {
-    const url = `${meta.url}${path}/`
+    const url = `${meta.url}${path}`
 
     return (
         <Helmet
@@ -46,13 +46,14 @@ SEO.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     path: PropTypes.string,
-    title: PropTypes.string, // eslint-disable-line
+    title: PropTypes.string,
 }
 
 SEO.defaultProps = {
     description: meta.description,
     image: meta.image,
     path: '',
+    title: `${meta.title} — ${meta.tagline}`,
 }
 
 export default SEO
