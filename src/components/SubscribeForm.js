@@ -111,11 +111,17 @@ const StyledMessage = styled.p`
     position: absolute;
     text-align: center;
     margin-top: .25rem;
-    font-size: .7rem;
+    font-size: .8rem;
     background: rgba(${colors.lightGrey}, .95);
     color: rgb(${colors.white});
     border-radius: 2px;
     padding: .3rem;
+
+    a {
+        color: rgb(${colors.white});
+        text-decoration: underline;
+        font-family: ${fonts.family.button};
+    }
 `
 
 const Gdpr = styled.div`
@@ -158,10 +164,6 @@ class SubscribeForm extends React.Component {
                                 status: 'error',
                                 msg: err
                             })
-                        } else if (data.result === 'error' && data.msg.includes('is already subscribed')) {
-                            this.setState({
-                                status: 'alreadySubscribed'
-                            })
                         } else if (data.result === 'error') {
                             this.setState({
                                 status: 'error',
@@ -179,7 +181,7 @@ class SubscribeForm extends React.Component {
 
     render() {
         const {
-            maxWidth, action, inputPlaceholder, btnLabel, sending, success, alreadySubscribed, ...props
+            maxWidth, action, inputPlaceholder, btnLabel, sending, success, ...props
         } = this.props
         const { status, msg } = this.state
 
@@ -203,7 +205,6 @@ class SubscribeForm extends React.Component {
                         </Button>
                     </StyledSubscribeWrapper>
                     {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
-                    {status === 'alreadySubscribed' && <StyledMessage dangerouslySetInnerHTML={{ __html: alreadySubscribed }} />}
                     {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
                     {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: msg }} />}
                 </form>
@@ -215,7 +216,6 @@ class SubscribeForm extends React.Component {
 
 SubscribeForm.propTypes = {
     action: PropTypes.string,
-    alreadySubscribed: PropTypes.string,
     btnLabel: PropTypes.string,
     error: PropTypes.string,
     inputPlaceholder: PropTypes.string,
@@ -230,7 +230,6 @@ SubscribeForm.defaultProps = {
     inputPlaceholder: 'your@email.com',
     btnLabel: 'Subscribe',
     sending: 'Sending...',
-    alreadySubscribed: 'You are already subscribed with this email. Welcome to the community!',
     success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
     error: 'Oops, something went wrong. Would you mind trying again?'
 }
