@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Slider from 'react-slick'
 
-import OceanJeyllyfishBack from 'oceanprotocol-art/jellyfish/jellyfish-back.svg'
+import OceanJeyllyfishBack from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
