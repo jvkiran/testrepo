@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import fadeIn from 'react-animations/lib/fade-in'
-import oceanLogo from 'oceanprotocol-art/logo/logo-white.svg'
+import oceanLogo from '@oceanprotocol/art/logo/logo-white.svg'
 import smoothScroll from '../lib/smoothScroll'
 import Hamburger from '../components/Hamburger'
 import { colors, fonts, responsive, transitions, layout } from '../styles'
