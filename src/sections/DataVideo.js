@@ -66,14 +66,16 @@ const PlayButton = styled.img`
 `
 
 class DataVideo extends React.Component {
-    state = {
-        videoUrl: ''
+    constructor(props) {
+        super(props)
+        this.state = {
+            videoUrl: ''
+        }
     }
 
-    openVideo = (link) => this.setState({ videoUrl: link })
-    closeModal = () => {
-        this.setState({ videoUrl: '' })
-    }
+    openVideo(link) { this.setState({ videoUrl: link }) }
+
+    closeModal() { this.setState({ videoUrl: '' }) }
 
     render() {
         return (

@@ -69,5 +69,4 @@ const Faq = () => (
     </Section>
 )
 
-
 export default Faq

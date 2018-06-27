@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
 import Section from '../components/Section'
@@ -147,16 +147,20 @@ const StyledSocialHero = styled.aside`
     }
 `
 
-class Welcome extends React.Component {
-    state = {
-        videoUrl: ''
+class Welcome extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            videoUrl: ''
+        }
+
+        this.closeModal = this.closeModal.bind(this)
     }
 
-    openVideo = (link) => this.setState({ videoUrl: link })
+    openVideo(link) { this.setState({ videoUrl: link }) }
 
-    closeModal = () => {
-        this.setState({ videoUrl: '' })
-    }
+    closeModal() { this.setState({ videoUrl: '' }) }
 
     render() {
         return (

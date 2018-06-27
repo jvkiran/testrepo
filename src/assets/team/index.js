@@ -71,5 +71,5 @@ export default {
     timothy,
     trent,
     troy,
-    vanshdeep,
+    vanshdeep
 }

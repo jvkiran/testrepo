@@ -133,12 +133,16 @@ const Gdpr = styled.div`
 class SubscribeForm extends React.Component {
     constructor(props, ...args) {
         super(props, ...args)
+
         this.state = {
             status: null,
             msg: null
         }
+
+        this.onSubmit = this.onSubmit.bind(this)
     }
-    onSubmit = e => {
+
+    onSubmit(e) {
         e.preventDefault()
         if (!this.input.value || this.input.value.length < 5 || this.input.value.indexOf('@') === -1) {
             this.setState({

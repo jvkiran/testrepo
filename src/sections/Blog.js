@@ -1,3 +1,5 @@
+/* global fetch */
+
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
@@ -70,58 +72,66 @@ const StyledSubtitle = styled.p`
 `
 
 class Blog extends Component {
-  state = {
-      posts: [],
-      fetching: false
-  };
-  componentDidMount() {
-      this.fetchPosts()
-  }
-  fetchPosts = () => {
-      this.setState({ fetching: true })
-      fetch('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol')
-          .then(res => res.json())
-          .then(posts => {
-              const lastPosts = posts.slice(0, 3)
-              this.setState({ fetching: false, posts: lastPosts })
-          })
-          .catch({ fetching: false })
-  };
-  render = () => (
-      <Section id="blog" minHeight={930}>
-          <ContentRow>
-              <Title>Learn more about Ocean Protocol</Title>
-              {this.state.fetching ? (
-                  <Spinner />
-              ) : (
-                  <LazyLoad once height={524} offset={100}>
-                      <FadeIn>
-                          <Grid>
-                              {this.state.posts.map(post => (
-                                  <Cell smallGutter key={post.id} width={1 / 3}>
-                                      <a href={post.postUrl}>
-                                          <StyledCard>
-                                              <StyledHeader imageUrl={post.imageUrl} />
-                                              <StyledContent>
-                                                  <StyledTitle>{post.title}</StyledTitle>
-                                                  <StyledSubtitle>{post.subtitle}</StyledSubtitle>
-                                              </StyledContent>
-                                          </StyledCard>
-                                      </a>
-                                  </Cell>
-                              ))}
-                          </Grid>
-                      </FadeIn>
-                  </LazyLoad>
-              )}
-              <StyledAction fetching={this.state.fetching}>
-                  <a href={social.blog}>
+    constructor(props) {
+        super(props)
+        this.state = {
+            posts: [],
+            fetching: false
+        }
+    }
+
+    componentDidMount() {
+        this.fetchPosts()
+    }
+
+    fetchPosts() {
+        this.setState({ fetching: true })
+        fetch('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol')
+            .then(res => res.json())
+            .then(posts => {
+                const lastPosts = posts.slice(0, 3)
+                this.setState({ fetching: false, posts: lastPosts })
+            })
+            .catch({ fetching: false })
+    }
+
+    render() {
+        return (
+            <Section id="blog" minHeight={930}>
+                <ContentRow>
+                    <Title>Learn more about Ocean Protocol</Title>
+                    {this.state.fetching ? (
+                        <Spinner />
+                    ) : (
+                        <LazyLoad once height={524} offset={100}>
+                            <FadeIn>
+                                <Grid>
+                                    {this.state.posts.map(post => (
+                                        <Cell smallGutter key={post.id} width={1 / 3}>
+                                            <a href={post.postUrl}>
+                                                <StyledCard>
+                                                    <StyledHeader imageUrl={post.imageUrl} />
+                                                    <StyledContent>
+                                                        <StyledTitle>{post.title}</StyledTitle>
+                                                        <StyledSubtitle>{post.subtitle}</StyledSubtitle>
+                                                    </StyledContent>
+                                                </StyledCard>
+                                            </a>
+                                        </Cell>
+                                    ))}
+                                </Grid>
+                            </FadeIn>
+                        </LazyLoad>
+                    )}
+                    <StyledAction fetching={this.state.fetching}>
+                        <a href={social.blog}>
                     Go to Blog
-                  </a>
-              </StyledAction>
-          </ContentRow>
-      </Section>
-  );
+                        </a>
+                    </StyledAction>
+                </ContentRow>
+            </Section>
+        )
+    }
 }
 
 export default Blog

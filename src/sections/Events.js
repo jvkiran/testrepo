@@ -462,8 +462,12 @@ const EventsList = () => {
 }
 
 class Archive extends React.Component {
-    state = {
-        modalIsOpen: false
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            modalIsOpen: false
+        }
     }
 
     closeModal() {
