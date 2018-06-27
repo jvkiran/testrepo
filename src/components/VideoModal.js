@@ -72,9 +72,13 @@ const YoutubeModal = styled.div`
 `
 
 class VideoModal extends React.Component {
-    state = {
-        modalIsOpen: false,
-        source: ''
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            modalIsOpen: false,
+            source: ''
+        }
     }
 
     componentWillReceiveProps(newProps) {

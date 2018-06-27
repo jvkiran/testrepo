@@ -74,7 +74,7 @@ const Header = ({ background }) => (
 )
 
 Header.propTypes = {
-    background: PropTypes.string,
+    background: PropTypes.string
 }
 
 Header.defaultProps = {

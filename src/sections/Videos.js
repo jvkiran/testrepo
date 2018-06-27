@@ -1,3 +1,5 @@
+/* global fetch */
+
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -392,7 +394,7 @@ class SectionContent extends Component {
         this.stopVideo()
     }
 
-    scrollToVideo = () => {
+    scrollToVideo() {
         smoothScroll(document.getElementById('videoScroll'))
     }
 
@@ -420,25 +422,25 @@ class SectionContent extends Component {
                 breakpoint: 650,
                 settings:
                 {
-                    slidesToShow: 1,
+                    slidesToShow: 1
                 }
             }, {
                 breakpoint: 800,
                 settings:
                 {
-                    slidesToShow: 2,
+                    slidesToShow: 2
                 }
             }, {
                 breakpoint: 992,
                 settings:
                 {
-                    slidesToShow: 3,
+                    slidesToShow: 3
                 }
             }]
         }
         return (
             <StyledContentRow>
-                <HeightRow id='videoScroll'>
+                <HeightRow id="videoScroll">
                     <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.videoUrl)}>
                         <AspectRatio>
                             <VideoTitle>{this.state.title}</VideoTitle>
@@ -459,7 +461,7 @@ class SectionContent extends Component {
                 </HeightRow>
                 <Slider {...settings}>
                     {this.props.items.map((properties, index) => (
-                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key*/}
+                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key */}
                             <ListContainer className={this.state.active === index ? 'active' : ''}>
                                 <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
                                 <ThumbTitle><span>{properties.title}</span></ThumbTitle>
@@ -559,7 +561,7 @@ const RenderSection = ({ ApiResponse }) => (
         <LazyLoad once unmountIfInvisible height={1040} offset={100}>
             <Fragment>
                 <StyledContentRow>
-                    <Title white id='videoScroll'>Videos</Title>
+                    <Title white id="videoScroll">Videos</Title>
                 </StyledContentRow>
 
                 <VideoSlider items={ApiResponse} />

@@ -20,27 +20,33 @@ class Home extends Component {
         this.state = {
             modal: ''
         }
+
+        this.toggleModal = this.toggleModal.bind(this)
     }
 
-    toggleModal = (modal = '') => this.setState({ modal })
+    toggleModal(modal = '') {
+        this.setState({ modal })
+    }
 
-    render = () => (
-        <Fragment>
-            <SEO />
-            <Menu />
-            <Welcome />
-            <Events />
-            <Project toggleModal={this.toggleModal} />
-            <Papers />
-            <Data />
-            <Team toggleModal={this.toggleModal} />
-            <Blog />
-            <Videos />
-            <Faq />
-            <Art />
-            <Modal modal={this.state.modal} toggle={this.toggleModal} />
-        </Fragment>
-    )
+    render() {
+        return (
+            <Fragment>
+                <SEO />
+                <Menu />
+                <Welcome />
+                <Events />
+                <Project toggleModal={this.toggleModal} />
+                <Papers />
+                <Data />
+                <Team toggleModal={this.toggleModal} />
+                <Blog />
+                <Videos />
+                <Faq />
+                <Art />
+                <Modal modal={this.state.modal} toggle={this.toggleModal} />
+            </Fragment>
+        )
+    }
 }
 
 export default Home

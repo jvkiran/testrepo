@@ -1,3 +1,5 @@
+/* global requestAnimationFrame, cancelAnimationFrame */
+
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import VisibilitySensor from 'react-visibility-sensor'

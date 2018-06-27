@@ -57,26 +57,35 @@ const StyledCharacterCount = styled.p`
 `
 
 class Input extends Component {
-  state = {
-      input: ''
-  };
-  onChange = ({ target }) => {
-      if (this.props.maxLength && target.value.length > this.props.maxLength) return
-      this.setState({ input: target.value })
-  };
-  render() {
-      const { maxLength, type, ...props } = this.props
-      return (
-          <StyledInputWrapper>
-              {type === 'textarea' ? (
-                  <StyledTextarea onChange={this.onChange} type={type} value={this.state.input} {...props} />
-              ) : (
-                  <StyledInput onChange={this.onChange} type={type} value={this.state.input} {...props} />
-              )}
-              {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
-          </StyledInputWrapper>
-      )
-  }
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            input: ''
+        }
+
+        this.onChange = this.onChange.bind(this)
+    }
+
+    onChange({ target }) {
+        if (this.props.maxLength && target.value.length > this.props.maxLength) return
+        this.setState({ input: target.value })
+    }
+
+    render() {
+        const { maxLength, type, ...props } = this.props
+
+        return (
+            <StyledInputWrapper>
+                {type === 'textarea' ? (
+                    <StyledTextarea onChange={this.onChange} type={type} value={this.state.input} {...props} />
+                ) : (
+                    <StyledInput onChange={this.onChange} type={type} value={this.state.input} {...props} />
+                )}
+                {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
+            </StyledInputWrapper>
+        )
+    }
 }
 
 Input.propTypes = {

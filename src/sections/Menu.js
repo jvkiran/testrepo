@@ -146,12 +146,20 @@ const MenuItems = [
 ]
 
 class Menu extends Component {
-    state = {
-        active: false,
-        fixed: false,
-        sections: {},
-        current: '',
-        lastScroll: window.scrollY
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            active: false,
+            fixed: false,
+            sections: {},
+            current: '',
+            lastScroll: window.scrollY
+        }
+
+        this.mapSectionsTop = this.mapSectionsTop.bind(this)
+        this.toggleFixedMenu = this.toggleFixedMenu.bind(this)
+        this.highlightCurrent = this.highlightCurrent.bind(this)
     }
 
     componentDidMount() {
@@ -165,7 +173,7 @@ class Menu extends Component {
         document.removeEventListener('scroll', this.highlightCurrent)
     }
 
-    mapSectionsTop = () => {
+    mapSectionsTop() {
         const sectionNodes = document.getElementsByTagName('section')
         const sections = {}
         for (let i = 0; i < sectionNodes.length; i++) {
@@ -179,7 +187,7 @@ class Menu extends Component {
         this.highlightCurrent()
     }
 
-    highlightCurrent = () => {
+    highlightCurrent() {
         const range = []
         const scrollDown = this.state.lastScroll > window.scrollY
         if (scrollDown) {
@@ -207,7 +215,7 @@ class Menu extends Component {
         }
     }
 
-    toggleFixedMenu = () => {
+    toggleFixedMenu() {
         const pageFrame =
             Number(layout.pageFrame.replace('rem', '')) *
             Number(window
@@ -223,7 +231,7 @@ class Menu extends Component {
         }
     }
 
-    toggleMobileScroll = () => {
+    toggleMobileScroll() {
         if (this.state.active) {
             document.getElementsByTagName('html')[0].style.overflow = 'auto'
         } else {
@@ -231,12 +239,12 @@ class Menu extends Component {
         }
     }
 
-    toggleMobileMenu = () => {
+    toggleMobileMenu() {
         this.toggleMobileScroll()
         this.setState({ active: !this.state.active })
     }
 
-    onSmoothScroll = e => {
+    onSmoothScroll(e) {
         if (e.target.getAttribute('href').indexOf('#') !== -1) {
             e.preventDefault()
             if (this.state.active) this.toggleMobileMenu()
@@ -244,40 +252,42 @@ class Menu extends Component {
         }
     }
 
-    render = () => (
-        <StyledMenu fixed={this.state.fixed}>
-            <StyledContainer>
-                <StyledLogo>
-                    <a href="/">
-                        <img alt="Ocean" src={oceanLogo} />
-                    </a>
-                </StyledLogo>
-                <StyledNav>
-                    {MenuItems.map(item => (
-                        <StyledMenuItem
-                            current={item.href.replace('#', '') === this.state.current}
-                            href={item.href}
-                            key={item.name}
-                            onClick={this.onSmoothScroll}>
-                            {item.name}
-                        </StyledMenuItem>
-                    ))}
-                </StyledNav>
-                <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
-                <StyledMobileNav active={this.state.active}>
-                    {MenuItems.map(item => (
-                        <StyledMenuItem
-                            current={item.href.replace('#', '') === this.state.current}
-                            href={item.href}
-                            key={item.name}
-                            onClick={this.onSmoothScroll}>
-                            {item.name}
-                        </StyledMenuItem>
-                    ))}
-                </StyledMobileNav>
-            </StyledContainer>
-        </StyledMenu>
-    )
+    render() {
+        return (
+            <StyledMenu fixed={this.state.fixed}>
+                <StyledContainer>
+                    <StyledLogo>
+                        <a href="/">
+                            <img alt="Ocean" src={oceanLogo} />
+                        </a>
+                    </StyledLogo>
+                    <StyledNav>
+                        {MenuItems.map(item => (
+                            <StyledMenuItem
+                                current={item.href.replace('#', '') === this.state.current}
+                                href={item.href}
+                                key={item.name}
+                                onClick={this.onSmoothScroll}>
+                                {item.name}
+                            </StyledMenuItem>
+                        ))}
+                    </StyledNav>
+                    <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
+                    <StyledMobileNav active={this.state.active}>
+                        {MenuItems.map(item => (
+                            <StyledMenuItem
+                                current={item.href.replace('#', '') === this.state.current}
+                                href={item.href}
+                                key={item.name}
+                                onClick={this.onSmoothScroll}>
+                                {item.name}
+                            </StyledMenuItem>
+                        ))}
+                    </StyledMobileNav>
+                </StyledContainer>
+            </StyledMenu>
+        )
+    }
 }
 
 export default Menu

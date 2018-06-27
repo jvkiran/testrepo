@@ -115,10 +115,16 @@ const forms = {
 }
 
 class Modal extends Component {
-    state = {
-        fetching: false,
-        sent: false,
-        message: ''
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            fetching: false,
+            sent: false,
+            message: ''
+        }
+
+        this.onSubmit = this.onSubmit.bind(this)
     }
 
     componentWillReceiveProps(newProps) {
@@ -139,8 +145,9 @@ class Modal extends Component {
         }
     }
 
-    onSubmit = e => {
+    onSubmit(e) {
         e.preventDefault()
+
         let name
         let email
         let company
@@ -221,9 +228,11 @@ class Modal extends Component {
                     }
                 )
         )
-    };
+    }
+
     render() {
         const { modal, toggle, ...props } = this.props
+
         return (
             <StyledLightbox show={!!modal} {...props}>
                 <StyledHitbox onClick={() => toggle()} />

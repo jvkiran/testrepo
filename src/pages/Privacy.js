@@ -1,3 +1,5 @@
+/* global fetch */
+
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
@@ -57,7 +59,7 @@ class Privacy extends Component {
         this.fetchPrivacyPolicy()
     }
 
-    fetchPrivacyPolicy = () => {
+    fetchPrivacyPolicy() {
         this.setState({ fetching: true })
         fetch(privacy)
             .then(response => response.text())

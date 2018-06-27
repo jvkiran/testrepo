@@ -43,14 +43,14 @@ SEO.propTypes = {
     description: PropTypes.string,
     image: PropTypes.string,
     path: PropTypes.string,
-    title: PropTypes.string,
+    title: PropTypes.string
 }
 
 SEO.defaultProps = {
     description: meta.description,
     image: meta.image,
     path: '',
-    title: `${meta.title} — ${meta.tagline}`,
+    title: `${meta.title} — ${meta.tagline}`
 }
 
 export default SEO

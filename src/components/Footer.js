@@ -89,7 +89,6 @@ const StyledSubscribeForm = styled(SubscribeForm)`
     }
 `
 
-
 const Footer = () => (
     <Section background={colors.grey} fontColor={colors.white} id="footer">
         <ContentRow>
