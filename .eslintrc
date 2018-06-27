@@ -1,10 +1,6 @@
 {
-  "extends": ["standard", "standard-react"],
-  "rules": {
-    "indent": [2, 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-    "space-before-function-paren": [2, { "anonymous": "always", "named": "never" }],
-    "jsx-quotes": ["error", "prefer-double"],
-    "react/jsx-indent": [2, 4],
-    "react/jsx-indent-props": [2, 4]
-  }
+    "extends": [
+        "oceanprotocol",
+        "oceanprotocol/react"
+    ]
 }
