@@ -403,7 +403,14 @@
         "date": "2018-07-04",
         "link": "https://www.eventbrite.com/e/privacy-night-with-ocean-protocol-enigma-web-3-foundation-tickets-47112623124"
     },
-   {
+  {
+      "city": "Berlin",
+        "eventName": "PyData Berlin 2018",
+        "date": "2018-07-06",
+        "date_end": "2018-07-08",
+        "link": "https://pydata.org/berlin2018/"
+    },
+  {
         "city": "Malta",
         "eventName": "JERICO-NEXT",
         "date": "2018-07-10",
@@ -415,5 +422,13 @@
         "date": "2018-09-05",
         "date_end": "2018-09-10",
         "link": "http://techfestival.co"
+    },
+  {
+        "city": "Berlin",
+        "eventName": "ETHBerlin",
+        "date": "2018-07-09",
+        "date_end": "2018-09-09",
+        "link": "https://twitter.com/ETHBerlin"
     }
+ 
 ]
