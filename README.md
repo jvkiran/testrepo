@@ -155,7 +155,7 @@ git push
 
 Do work in your feature branch, committing early and often. You can open a Pull Request on GitHub as early as you want to discuss further implementation on it and check it out on beta.oceanprotocol.com. Just make sure to mark it as _Work in Progress_ in the PR description and/or by applying the respective label.
 
-Make sure to rebase your branch from time to time against upstream changes. Avoid using GitHub's auto-merge button on a Pull Request to keep the Git history more clean. You can do a rebase like so:
+Make sure to rebase your branch from time to time against `master` upstream changes. Avoid using GitHub's auto-merge button on a Pull Request to keep the Git history more clean. You can do a rebase like so:
 
 ```bash
 git checkout master
@@ -174,9 +174,12 @@ Once ready, request a review of your Pull Request from a team member, fixing pos
 
 ### Code style
 
-Code style for JavaScript and stylesheets (we're using [styled-components](https://www.styled-components.com)) is enforced before every commit. You won't be able to commit any code with linting errors present so make sure to fix all warnings before committing.
+Code style for JavaScript and style sheets (we're using [styled-components](https://www.styled-components.com)) is enforced before every commit. You won't be able to commit any code with linting errors present so make sure to fix all warnings before committing.
 
-Code style follows [eslint-config-ascribe](https://github.com/ascribe/javascript) and [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb).
+Code style follows:
+
+- [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
+- [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 
 ## Deployment: always be shipping
 
