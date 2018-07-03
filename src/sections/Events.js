@@ -322,6 +322,7 @@ const EventDate = ({ date, dateEnd }) => {
         timeZone: 'UTC'
     })
 
+    // handle multi-day events
     if (dateEnd) {
         const eventDateEnd = new Date(dateEnd)
         const eventDateFormattedYear = eventDate.toLocaleDateString('en-US', {
@@ -329,6 +330,10 @@ const EventDate = ({ date, dateEnd }) => {
             timeZone: 'UTC'
         })
         const eventDateFormattedMonth = eventDate.toLocaleDateString('en-US', {
+            month: 'long',
+            timeZone: 'UTC'
+        })
+        const eventDateEndFormattedMonth = eventDateEnd.toLocaleDateString('en-US', {
             month: 'long',
             timeZone: 'UTC'
         })
@@ -341,10 +346,15 @@ const EventDate = ({ date, dateEnd }) => {
             timeZone: 'UTC'
         })
 
+        // handle multi-day events across multiple months
+        if (eventDateFormattedMonth !== eventDateEndFormattedMonth) {
+            return `${eventDateFormattedMonth} ${eventDateFormattedDay}–${eventDateEndFormattedMonth} ${eventDateEndFormattedDay}, ${eventDateFormattedYear}`
+        }
+
         return `${eventDateFormattedMonth} ${eventDateFormattedDay}–${eventDateEndFormattedDay}, ${eventDateFormattedYear}`
-    } else {
-        return eventDateFormatted
     }
+
+    return eventDateFormatted
 }
 
 function renderEvents() {
@@ -379,13 +389,13 @@ function renderEvents() {
         }
 
         return eventsFilteredSorted.map((event, index) => (
-            <Event event={event} key={index} /> // eslint-disable-line react/no-array-index-key
+            <Event event={event} key={index} />
         )).reduce((r, element, index) => {
             // finally, put a <div> around every 4th event for the slider
-            index % groupSize === 0 && r.push([]) // eslint-disable-line
+            index % groupSize === 0 && r.push([])
             r[r.length - 1].push(element)
             return r
-        }, []).map((rowContent, index) => <div key={index}>{rowContent}</div>) // eslint-disable-line react/no-array-index-key
+        }, []).map((rowContent, index) => <div key={index}>{rowContent}</div>)
     } else return []
 }
 
@@ -399,7 +409,7 @@ function pastEvents() {
         }).sort((a, b) => b.date.localeCompare(a.date))
 
         return eventsFilteredSorted.map((event, index) => (
-            <PastEvent event={event} key={index} /> // eslint-disable-line react/no-array-index-key
+            <PastEvent event={event} key={index} />
         ))
     } else {
         return []
@@ -421,7 +431,7 @@ const PastEvent = ({ event }) => (
 )
 
 PastEvent.propTypes = {
-    event: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
+    event: PropTypes.object.isRequired
 }
 
 const Event = ({ event }) => (
@@ -437,7 +447,7 @@ const Event = ({ event }) => (
 )
 
 Event.propTypes = {
-    event: PropTypes.object.isRequired // eslint-disable-line react/forbid-prop-types
+    event: PropTypes.object.isRequired
 }
 
 const EventsList = () => {
