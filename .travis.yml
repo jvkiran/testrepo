@@ -1,8 +1,6 @@
 language: node_js
 node_js: node
 
-# will run `npm install` automatically
-
 # Handle git submodules on our own
 # Will only work for public submodules
 git:
@@ -14,8 +12,8 @@ before_install:
   - git submodule update --init --recursive
   - sudo apt-get -qq update
   - sudo apt-get install python python-pip
-  - pip install --user awscli
-  - export PATH=$PATH:$HOME/.local/bin
+
+# will run `npm install` automatically here
 
 script:
   - npm run test
