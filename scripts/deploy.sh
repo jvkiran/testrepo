@@ -6,6 +6,9 @@ AWS_S3_BUCKET="oceanprotocol.com"
 AWS_S3_BUCKET_BETA="beta.oceanprotocol.com"
 
 function s3sync {
+    pip install --user awscli
+    export PATH=$PATH:$HOME/.local/bin
+
     # long caching for everything, except html & pdf files
     aws s3 sync ./build s3://"$1" --exclude "*.html" --exclude "*.pdf" --cache-control max-age=31536000,public --delete --acl public-read
 
