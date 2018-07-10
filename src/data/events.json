@@ -429,6 +429,12 @@
         "date_end": "2018-08-02",
         "link": "https://decentralizedweb.net/"
     },
+      {
+        "city": "Helsinki",
+        "eventName": "MyData2018",
+        "date": "2018-08-31",
+        "link": "https://mydata2018.org"
+    },
     {
         "city": "Copenhagen",
         "eventName": "TechFestival Copenhagen",
