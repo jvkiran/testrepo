@@ -422,12 +422,12 @@
         "date": "2018-07-10",
         "link": "http://marine.copernicus.eu/jerico-next-malta-summer-school-2018-july-9-14-operational-oceanography-blue-growth/"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Token Engineering Workshop - DAPPCON",
         "date": "2018-07-19",
-        "link":
-            "https://www.dappcon.io/#speakers"
+        "link": "https://www.dappcon.io/#speakers"
+    },
     {
         "city": "San Francisco",
         "eventName": "Decentralized Web Summit 2018",
@@ -435,7 +435,7 @@
         "date_end": "2018-08-02",
         "link": "https://decentralizedweb.net/"
     },
-      {
+    {
         "city": "Helsinki",
         "eventName": "MyData2018",
         "date": "2018-08-31",
@@ -455,7 +455,7 @@
         "date_end": "2018-09-09",
         "link": "https://twitter.com/ETHBerlin"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Web3 Summit",
         "date": "2018-10-22",
