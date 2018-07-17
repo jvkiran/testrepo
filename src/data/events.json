@@ -434,6 +434,25 @@
         "date": "2018-07-20",
         "link": "https://www.dappcon.io/#speakers"
     },
+      {
+        "city": "Munich",
+        "eventName": "Blockchained Mobility Hackathon",
+        "date": "2018-07-20",
+        "date_end": "2018-07-22",
+        "link": "https://www.meetup.com/munichblockchain/events/249980691/"
+    },  
+     {
+        "city": "Berlin",
+        "eventName": "Blockchain Visionaire Summit",
+        "date": "2018-07-23",
+        "link": "https://www.eventbrite.com/e/blockchain-visionnaire-summit-tickets-45876075577"
+    },
+     {
+        "city": "Singapore",
+        "eventName": "Personal Data Protection Seminar",
+        "date": "2018-07-25",
+        "link": "https://www.pdpc.gov.sg/PDP-SEMINAR-2018/Personal-Data-Protection-Seminar-2018"
+    },
     {
         "city": "San Francisco",
         "eventName": "Decentralized Web Summit 2018",
