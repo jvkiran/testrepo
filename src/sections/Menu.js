@@ -156,10 +156,6 @@ class Menu extends Component {
             current: '',
             lastScroll: window.scrollY
         }
-
-        this.mapSectionsTop = this.mapSectionsTop.bind(this)
-        this.toggleFixedMenu = this.toggleFixedMenu.bind(this)
-        this.highlightCurrent = this.highlightCurrent.bind(this)
     }
 
     componentDidMount() {
@@ -173,7 +169,7 @@ class Menu extends Component {
         document.removeEventListener('scroll', this.highlightCurrent)
     }
 
-    mapSectionsTop() {
+    mapSectionsTop = () => {
         const sectionNodes = document.getElementsByTagName('section')
         const sections = {}
         for (let i = 0; i < sectionNodes.length; i++) {
@@ -187,7 +183,7 @@ class Menu extends Component {
         this.highlightCurrent()
     }
 
-    highlightCurrent() {
+    highlightCurrent = () => {
         const range = []
         const scrollDown = this.state.lastScroll > window.scrollY
         if (scrollDown) {
@@ -215,7 +211,7 @@ class Menu extends Component {
         }
     }
 
-    toggleFixedMenu() {
+    toggleFixedMenu = () => {
         const pageFrame =
             Number(layout.pageFrame.replace('rem', '')) *
             Number(window
@@ -231,7 +227,7 @@ class Menu extends Component {
         }
     }
 
-    toggleMobileScroll() {
+    toggleMobileScroll = () => {
         if (this.state.active) {
             document.getElementsByTagName('html')[0].style.overflow = 'auto'
         } else {
@@ -239,12 +235,12 @@ class Menu extends Component {
         }
     }
 
-    toggleMobileMenu() {
+    toggleMobileMenu = () => {
         this.toggleMobileScroll()
         this.setState({ active: !this.state.active })
     }
 
-    onSmoothScroll(e) {
+    onSmoothScroll = (e) => {
         if (e.target.getAttribute('href').indexOf('#') !== -1) {
             e.preventDefault()
             if (this.state.active) this.toggleMobileMenu()
