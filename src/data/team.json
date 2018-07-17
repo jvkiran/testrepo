@@ -37,7 +37,8 @@
   },
   {
     "name": "Mike Anderson",
-    "github": "mikera",
+    "linkedin": "mike-anderson-7a9412",
+    "twitter": "mikera",
     "image": "mike"
   },
   {
@@ -101,9 +102,10 @@
     "image": "kiran"
   },
   {
-    "name": "Artur Gomer",
-    "linkedin": "arturgomer",
-    "image": "artur"
+    "name": "Samer Sallam",
+    "github": "ssallam",
+    "linkedin": "samer-sallam-0968644",
+    "image": "samer"
   },
   {
     "name": "Fang Gong",
@@ -119,6 +121,52 @@
     "image": "malte"
   },
   {
+    "name": "Patty Lee",
+    "linkedin": "pattyleeworldtrainer",
+    "image": "patty"
+  },
+  {
+    "name": "Alessandra Albano",
+    "linkedin": "alessandraalbano",
+    "image": "alessandra"
+  },
+  {
+    "name": "Chris Lee",
+    "linkedin": "chris-lee-3aa44938",
+    "image": "chris"
+  },
+  {
+    "name": "Irene Lopez De Vallejo",
+    "linkedin": "irenelopezdevallejo",
+    "twitter": "ILdeV",
+    "image": "irene"
+  },
+  {
+    "name": "Paul Galwas",
+    "linkedin": "paul-galwas-9236b9",
+    "image": "paul"
+  },
+  {
+    "name": "Yvonn Ong",
+    "linkedin": "yvonn-ong",
+    "image": "yvonn"
+  },
+  {
+    "name": "Aishwarya Nari",
+    "linkedin": "aishwarya-v-r",
+    "image": "aishwarya"
+  },
+  {
+    "name": "Kyriakos Zannikos",
+    "linkedin": "kyriakoszannikos",
+    "image": "kyriakos"
+  },
+  {
+    "name": "Sami Jaaskelainen",
+    "linkedin": "sami-jääskeläinen-74a8381",
+    "image": "sami"
+  },
+  {
     "name": "Kamal Ved",
     "linkedin": "kamalved",
     "image": "kamal"
@@ -127,6 +175,11 @@
     "name": "Chalid Mannaa",
     "linkedin": "cmannaa",
     "image": "chalid"
+  },
+  {
+    "name": "Artur Gomer",
+    "linkedin": "arturgomer",
+    "image": "artur"
   },
   {
     "name": "Katharina Grieß",
@@ -201,12 +254,6 @@
     "name": "Daniel Lustig",
     "linkedin": "daniel-lustig-852a408a",
     "image": "daniel"
-  },
-  {
-    "name": "Samer Sallam",
-    "github": "ssallam",
-    "linkedin": "samer-sallam-0968644",
-    "image": "samer"
   },
   {
     "name": "Lev Berman",
