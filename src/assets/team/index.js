@@ -22,6 +22,7 @@ import jernej from './jernej.jpg'
 import kamal from './kamal.jpg'
 import katharina from './katharina.jpg'
 import kiran from './kiran.jpg'
+import kyriakos from './kyriakos.jpg'
 import malte from './malte.jpg'
 import manuel from './manuel.jpg'
 import masha from './masha.jpg'
@@ -68,6 +69,7 @@ export default {
     kamal,
     katharina,
     kiran,
+    kyriakos,
     malte,
     manuel,
     masha,
