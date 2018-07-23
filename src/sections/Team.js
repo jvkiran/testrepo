@@ -265,15 +265,12 @@ const Team = ({ toggleModal }) => (
         <ContentRow>
             <StyledLine />
             <StyledTeam>
-                {/* {team.filter((item) => teamImg[item.image]) */}
-                {team.filter((item, index) => index < 15).map((member) => (
+                {team.filter((item) => teamImg[item.image]).filter((item, index) => index < 15).map((member) => (
                     <TeamMember key={member.name} member={member} />
                 ))}
-                {/* {team.filter((item) => teamImg[item.image]).length >= 15 && */}
-                {team.length >= 15 &&
+                {team.filter((item) => teamImg[item.image]).length >= 15 &&
                 <Collapsible easing="ease-out" transitionTime={200} trigger="See the entire team">
-                    {/* {team.filter((item) => teamImg[item.image]) */}
-                    {team.filter((item, index) => index >= 15).map((member) => (
+                    {team.filter((item) => teamImg[item.image]).filter((item, index) => index >= 15).map((member) => (
                         <TeamMember key={member.name} member={member} />
                     ))}
                 </Collapsible>
