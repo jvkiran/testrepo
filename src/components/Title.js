@@ -10,6 +10,7 @@ const Title = styled.h1`
     margin-bottom: 4rem;
     text-align: center;
     color: ${({ white }) => (white ? `rgb(${colors.white})` : `rgb(${colors.black})`)};
+    white-space: pre-line;
 
     @media screen and (${responsive.sm.max}) {
         margin-top: 2rem;

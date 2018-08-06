@@ -17,6 +17,32 @@ import dataDotsRight from '../assets/graphics/data-dots-right.svg'
 import arrow from '../assets/misc/arrow.svg'
 import { colors, fonts, responsive, transitions } from '../styles'
 
+const content = {
+    'title': 'Ocean Protocol \nunlocks data',
+    'cards': [
+        {
+            'title': 'Data Providers',
+            'text': 'Unlock your data and earn revenue.',
+            'action': 'Publish data'
+        },
+        {
+            'title': 'Data Consumers',
+            'text': 'Discover and buy data.',
+            'action': 'Get data'
+        }
+    ],
+    'about': [
+        {
+            'title': 'What is Ocean Protocol?',
+            'text': 'Ocean Protocol is an ecosystem for sharing data and services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.\n\nOcean Protocol helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.'
+        },
+        {
+            'title': 'How Ocean Protocol Works',
+            'text': 'The Ocean Protocol is an ecosystem of data assets and services. Assets are data and algorithms. Services are the integration, processing, computation and storage. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and providing a licensing framework with pricing.\n\nAny data marketplace can hook into Ocean Protocol to provide “last mile” services, connecting data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace and the data owner controls each dataset.'
+        }
+    ]
+}
+
 const slideRight = keyframes`
     0% {
         transform: translate3d(-30%, 0, 0);
@@ -198,6 +224,7 @@ const StyledSubTitle = styled(SubTitle)`
 const Project = ({ toggleModal, ...props }) => {
     const isProduction = process.env.NODE_ENV === 'production'
     let shouldAnimate
+
     if (isProduction) {
         shouldAnimate = true
     } else {
@@ -212,18 +239,17 @@ const Project = ({ toggleModal, ...props }) => {
         }
         toggleModal(modal)
     }
+
     return (
         <Section id="project" {...props}>
             <ContentRow>
-                <Title>
-                    Ocean Protocol <br />unlocks data
-                </Title>
+                <Title>{content.title}</Title>
 
                 <StyledData width={1}>
                     <StyledCard onClick={() => _toggleModal('provider')}>
-                        <h4>Data Providers</h4>
-                        <p>Unlock your data and earn revenue.</p>
-                        <button>Publish data</button>
+                        <h4>{content.cards[0].title}</h4>
+                        <p>{content.cards[0].text}</p>
+                        <button>{content.cards[0].action}</button>
                     </StyledCard>
                     <StyledDataTransfer>
                         <StyledDataDots img={dataDotsLeft} shouldAnimate={shouldAnimate} />
@@ -231,31 +257,21 @@ const Project = ({ toggleModal, ...props }) => {
                         <Pulse className="pulse" shouldAnimate={shouldAnimate} />
                     </StyledDataTransfer>
                     <StyledCard onClick={() => _toggleModal('consumer')}>
-                        <h4>Data Consumers</h4>
-                        <p>Discover and buy data.</p>
-                        <button>Get data</button>
+                        <h4>{content.cards[1].title}</h4>
+                        <p>{content.cards[1].text}</p>
+                        <button>{content.cards[1].action}</button>
                     </StyledCard>
                 </StyledData>
 
                 <Grid>
-                    <Cell width={1 / 2}>
-                        <StyledSubTitle>What is Ocean Protocol?</StyledSubTitle>
-                        <Paragraph>
-                            Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.
-                        </Paragraph>
-                        <Paragraph>
-                            Ocean helps to unlock data, particularly for AI. It is designed for scale and uses blockchain technology that allows data to be shared and sold in a safe, secure and transparent manner.
-                        </Paragraph>
-                    </Cell>
-                    <Cell width={1 / 2}>
-                        <StyledSubTitle>How Ocean Protocol Works</StyledSubTitle>
-                        <Paragraph>
-                            The Ocean Protocol is an ecosystem composed of data assets and services, where assets are represented by data and algorithms, and services are represented by integration, processing and persistence mechanisms. Ocean Protocol facilitates discovery by storing and promoting metadata, linking assets and services, and provides a licensing framework that has toolsets for pricing.
-                        </Paragraph>
-                        <Paragraph>
-                            A multitude of data marketplaces can hook into Ocean Protocol to provide “last mile” services to connect data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace. The data owner controls each dataset.
-                        </Paragraph>
-                    </Cell>
+                    {content.about.map((aboutBlock) => (
+                        <Cell width={1 / 2}>
+                            <StyledSubTitle>{aboutBlock.title}</StyledSubTitle>
+                            <Paragraph>
+                                {aboutBlock.text}
+                            </Paragraph>
+                        </Cell>
+                    ))}
                 </Grid>
             </ContentRow>
 
