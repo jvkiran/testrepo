@@ -466,6 +466,12 @@
         "date": "2018-08-01",
         "link": "http://datanatives.io"
     },
+        {
+        "city": "Singapore",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2018-08-16",
+        "link": "https://www.eventbrite.sg/e/empowering-blockchain-for-smart-living-ocean-protocol-blockchain-exe-tickets-48791815634"
+    },
     {
         "city": "Helsinki",
         "eventName": "MyData2018",
