@@ -505,6 +505,13 @@
         "date": "2018-10-22",
         "date_end": "2018-10-24",
         "link": "http://web3summit.com"
+    },
+      {
+        "city": "London",
+        "eventName": "Crypto Challenge Forum",
+        "date": "2018-10-28",
+        "date_end": "2018-10-30",
+        "link": "http://www.cc-forum.com"
     }
  
 ]
