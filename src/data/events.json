@@ -490,6 +490,12 @@
         "date": "2018-08-31",
         "link": "https://mydata2018.org"
     },
+            {
+        "city": "Berlin",
+        "eventName": "IFA+ Summit",
+        "date": "2018-09-02",
+        "link": "https://b2b.ifa-berlin.com"
+    }, 
      {
         "city": "Barnsley",
         "eventName": "The ABC of IoT",
