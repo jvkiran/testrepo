@@ -36,7 +36,8 @@ export const social = {
     'telegram': 'https://t.me/joinchat/GUyxrE0Hi154D0NrlOqLFg',
     'linkedin': 'https://www.linkedin.com/company/13429589/',
     'github': 'https://github.com/oceanprotocol',
-    'reddit': 'https://www.reddit.com/r/oceanprotocol/'
+    'reddit': 'https://www.reddit.com/r/oceanprotocol/',
+    'gitter': 'https://gitter.im/oceanprotocol/Lobby'
 }
 
 export const dates = {
