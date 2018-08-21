@@ -15,6 +15,7 @@ import buttonGithub from '../assets/buttons/github.svg'
 import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
 import buttonReddit from '../assets/buttons/reddit.svg'
+import buttonGitter from '../assets/buttons/gitter.svg'
 import { colors, responsive, fonts } from '../styles'
 import { meta, company, social, youtube } from '../constants'
 
@@ -131,6 +132,11 @@ const Footer = () => (
                                 href={social.github}
                                 title="GitHub">
                                 <img alt="GitHub" src={buttonGithub} />
+                            </a>
+                            <a
+                                href={social.gitter}
+                                title="GitHub">
+                                <img alt="Gitter" src={buttonGitter} />
                             </a>
                             <a
                                 href={social.reddit}

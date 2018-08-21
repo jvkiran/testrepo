@@ -144,6 +144,10 @@ const StyledSocialHero = styled.aside`
         &:nth-child(4) {
             animation-delay: 2.25s;
         }
+
+        &:nth-child(5) {
+            animation-delay: 2.5s;
+        }
     }
 `
 
