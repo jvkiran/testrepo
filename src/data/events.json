@@ -522,6 +522,12 @@
         "date": "2018-09-06",
         "link": "https://www.dezentral.io"
     },   
+        {
+        "city": "Berlin",
+        "eventName": "Token Engineering Workshop",
+        "date": "2018-9-06",
+        "link": "https://www.meetup.com/Token-Engineering/events/253174971/"
+    },
     {
         "city": "Berlin",
         "eventName": "ETHBerlin",
