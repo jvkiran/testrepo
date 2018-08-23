@@ -539,9 +539,15 @@
           {
         "city": "Berlin",
         "eventName": "PropTech Berlin",
-        "date": "2018-09-013",
+        "date": "2018-09-13",
         "link": "https://futureproptech.de/en"
     }, 
+      {
+        "city": "The Hague",
+        "eventName": "Future of Trust Summit",
+        "date": "2018-09-25",
+        "link": "https://futureoftrust.eu/#home"
+    },
   
     {
         "city": "Berlin",
