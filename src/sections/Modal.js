@@ -127,7 +127,7 @@ class Modal extends Component {
         this.onSubmit = this.onSubmit.bind(this)
     }
 
-    componentWillReceiveProps(newProps) {
+    componentWillReceiveProps(newProps) { // eslint-disable-line react/no-deprecated
         if (!newProps.modal) {
             this.setState({
                 fetching: false,

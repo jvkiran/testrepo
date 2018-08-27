@@ -3,5 +3,8 @@
     "extends": [
         "oceanprotocol",
         "oceanprotocol/react"
-    ]
+    ],
+    "rules": {
+        "security/detect-object-injection": 0
+    }
 }

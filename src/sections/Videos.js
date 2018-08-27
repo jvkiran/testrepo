@@ -376,7 +376,7 @@ class SectionContent extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.selectVideo(this.props.items[0], 0)
     }
 
@@ -518,7 +518,7 @@ class Videos extends Component { // eslint-disable-line react/no-multi-comp
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (youtube.playlist) {
             const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
             fetch(url)
