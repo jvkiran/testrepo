@@ -535,26 +535,31 @@
         "date_end": "2018-09-09",
         "link": "https://twitter.com/ETHBerlin"
     },
-      {
+    {
+        "city": "Berlin",
+        "eventName": "Decentralized Stack. Developers Meetup.",
+        "date": "2018-09-10",
+        "link": "https://www.eventbrite.com/e/decentralized-stack-developers-meetup-tickets-48775875958"
+    },
+    {
         "city": "London",
         "eventName": "Blockchain World Summit 2018",
         "date": "2018-09-12",
         "date_end": "2018-09-13",
         "link": "https://blockchainworldsummit.co"
     },
-          {
+    {
         "city": "Berlin",
         "eventName": "PropTech Berlin",
         "date": "2018-09-13",
         "link": "https://futureproptech.de/en"
     }, 
-      {
+    {
         "city": "The Hague",
         "eventName": "Future of Trust Summit",
         "date": "2018-09-25",
         "link": "https://futureoftrust.eu/#home"
     },
-  
     {
         "city": "Berlin",
         "eventName": "Web3 Summit",
@@ -562,24 +567,23 @@
         "date_end": "2018-10-24",
         "link": "http://web3summit.com"
     },
-      {
+    {
         "city": "Singapore",
         "eventName": "Crypto Expo Asia",
         "date": "2017-10-26",
         "link": "https://singapore.cryptoexpo.asia"
     },
-      {
+    {
         "city": "London",
         "eventName": "Crypto Challenge Forum",
         "date": "2018-10-28",
         "date_end": "2018-10-30",
         "link": "http://www.cc-forum.com"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Data Natives",
         "date": "2018-11-22",
         "link": "http://datanatives.io"
     }
- 
 ]
