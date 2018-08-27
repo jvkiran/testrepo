@@ -248,21 +248,25 @@ class Modal extends Component {
                                     <Input
                                         placeholder={forms[modal].name}
                                             ref={node => (this.name = node)} // eslint-disable-line
-                                        type="text" />
+                                        type="text"
+                                        aria-albel={forms[modal].name} />
                                     <Input
                                         placeholder={forms[modal].email}
                                             ref={node => (this.email = node)} // eslint-disable-line
-                                        type="email" />
+                                        type="email"
+                                        aria-albel={forms[modal].email} />
                                     <Input
                                         placeholder={forms[modal].business}
                                             ref={node => (this.business = node)} // eslint-disable-line
-                                        type="text" />
+                                        type="text"
+                                        aria-albel={forms[modal].business} />
                                     <Input
                                         maxLength={255}
                                         placeholder={forms[modal].message}
                                             ref={node => (this.message = node)} // eslint-disable-line
                                         rows="6"
-                                        type="textarea" />
+                                        type="textarea"
+                                        aria-albel={forms[modal].message} />
                                     <Button fetching={this.state.fetching} type="submit">
                                         {forms[modal].button}
                                     </Button>
