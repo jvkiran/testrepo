@@ -265,7 +265,7 @@ const Project = ({ toggleModal, ...props }) => {
 
                 <Grid>
                     {content.about.map((aboutBlock) => (
-                        <Cell width={1 / 2}>
+                        <Cell key={aboutBlock.title} width={1 / 2}>
                             <StyledSubTitle>{aboutBlock.title}</StyledSubTitle>
                             <Paragraph>
                                 {aboutBlock.text}

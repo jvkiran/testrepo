@@ -9,7 +9,7 @@ import './lib/polyfills'
 import { globalStyles } from './styles'
 import App from './App'
 
-injectGlobal`${globalStyles}` // eslint-disable-line
+injectGlobal`${globalStyles}`
 
 it('renders without crashing', () => {
     const div = document.createElement('div')

@@ -85,7 +85,7 @@ const StyledHamburgerInner = styled.span`
 `
 
 const Hamburger = ({ active, ...props }) => (
-    <StyledHamburger {...props}>
+    <StyledHamburger aria-label="Open menu" {...props}>
         <StyledHamburgerBox>
             <StyledHamburgerInner active={active} />
         </StyledHamburgerBox>

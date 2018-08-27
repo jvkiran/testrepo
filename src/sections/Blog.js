@@ -1,8 +1,7 @@
-/* global fetch */
-
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
+import fetch from 'isomorphic-fetch'
 import FadeIn from '../components/FadeIn'
 import Title from '../components/Title'
 import Section from '../components/Section'
@@ -71,9 +70,10 @@ const StyledSubtitle = styled.p`
     font-size: ${fonts.size.base};
 `
 
-class Blog extends Component {
+class Blog extends PureComponent {
     constructor(props) {
         super(props)
+
         this.state = {
             posts: [],
             fetching: false
@@ -86,27 +86,30 @@ class Blog extends Component {
 
     fetchPosts() {
         this.setState({ fetching: true })
+
         fetch('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol')
             .then(res => res.json())
             .then(posts => {
                 const lastPosts = posts.slice(0, 3)
                 this.setState({ fetching: false, posts: lastPosts })
             })
-            .catch({ fetching: false })
+            .catch(this.setState({ fetching: false }))
     }
 
     render() {
+        const { posts, fetching } = this.state
+
         return (
             <Section id="blog" minHeight={930}>
                 <ContentRow>
                     <Title>Learn more about Ocean Protocol</Title>
-                    {this.state.fetching ? (
+                    {fetching ? (
                         <Spinner />
                     ) : (
                         <LazyLoad once height={524} offset={100}>
                             <FadeIn>
                                 <Grid>
-                                    {this.state.posts.map(post => (
+                                    {posts.map(post => (
                                         <Cell smallGutter key={post.id} width={1 / 3}>
                                             <a href={post.postUrl}>
                                                 <StyledCard>
@@ -123,9 +126,9 @@ class Blog extends Component {
                             </FadeIn>
                         </LazyLoad>
                     )}
-                    <StyledAction fetching={this.state.fetching}>
+                    <StyledAction fetching={fetching}>
                         <a href={social.blog}>
-                    Go to Blog
+                            Go to Blog
                         </a>
                     </StyledAction>
                 </ContentRow>

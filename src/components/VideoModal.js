@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+import Helmet from 'react-helmet'
 import cross from '../assets/misc/cross.svg'
 import { colors } from '../styles'
 
@@ -71,55 +72,33 @@ const YoutubeModal = styled.div`
     transform: translate(-50%, -50%);
 `
 
-class VideoModal extends React.Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            modalIsOpen: false,
-            source: ''
-        }
+const VideoModal = ({ onCloseModal, modalIsOpen, source }) => {
+    if (!modalIsOpen) {
+        return null
     }
 
-    componentWillReceiveProps(newProps) {
-        if (newProps.source) {
-            this.setState({ source: newProps.source })
-            this.openModal()
-        }
-    }
-
-    closeModal() {
-        this.setState({ modalIsOpen: false, source: '' })
-        document.getElementsByTagName('html')[0].style.overflow = 'auto'
-        this.props.onCloseModal()
-    }
-
-    openModal() {
-        this.setState({ modalIsOpen: true })
-        document.getElementsByTagName('html')[0].style.overflow = 'hidden'
-    }
-
-    render() {
-        return (
-            <div>
-                {this.state.modalIsOpen === true &&
-                    <ModalOverlay onClick={() => this.closeModal()}>
-                        <YoutubeModal>
-                            <StyledReactPlayer
-                                controls
-                                config={{ youtube: { playerVars: { color: 'white' } } }}
-                                url={this.state.source} />
-                        </YoutubeModal>
-                        <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
-                    </ModalOverlay>
-                }
-            </div>
-        )
-    }
+    return (
+        <Fragment>
+            <Helmet>
+                <html style={{ overflow: 'hidden' }} />
+            </Helmet>
+            <ModalOverlay onClick={() => onCloseModal()}>
+                <YoutubeModal>
+                    <StyledReactPlayer
+                        controls
+                        config={{ youtube: { playerVars: { color: 'white' } } }}
+                        url={source} />
+                </YoutubeModal>
+                <StyledClose alt="close" onClick={() => onCloseModal()} src={cross} />
+            </ModalOverlay>
+        </Fragment>
+    )
 }
 
 VideoModal.propTypes = {
-    onCloseModal: PropTypes.func.isRequired
+    onCloseModal: PropTypes.func.isRequired,
+    modalIsOpen: PropTypes.bool.isRequired,
+    source: PropTypes.string.isRequired
 }
 
 export default VideoModal

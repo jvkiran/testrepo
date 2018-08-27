@@ -200,7 +200,8 @@ class SubscribeForm extends React.Component {
                             name="EMAIL"
                             placeholder={inputPlaceholder}
                             ref={node => (this.input = node)} //eslint-disable-line
-                            type="email" />
+                            type="email"
+                            aria-label="Your Email" />
                         <Button
                             disabled={this.state.status === 'sending' || this.state.status === 'success'}
                             onClick={this.onSubmit}
