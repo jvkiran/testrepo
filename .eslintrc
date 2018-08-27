@@ -4,7 +4,9 @@
         "oceanprotocol",
         "oceanprotocol/react"
     ],
-    "rules": {
-        "security/detect-object-injection": 0
+    "settings": {
+        "react": {
+            "version": "16.4"
+        }
     }
 }
