@@ -459,12 +459,54 @@
         "date": "2018-07-31",
         "date_end": "2018-08-02",
         "link": "https://decentralizedweb.net/"
+    },   
+  {
+        "city": "Berlin",
+        "eventName": "Meetup.ai",
+        "date": "2018-08-01",
+        "link": "http://datanatives.io"
+    },
+       {
+        "city": "Berlin",
+        "eventName": "Nature 2.0 Meetup",
+        "date": "2018-08-15",
+        "link": "https://www.meetup.com/9984-Meetup/events/252836524/"
+    },
+        {
+        "city": "Singapore",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2018-08-16",
+        "link": "https://www.eventbrite.sg/e/empowering-blockchain-for-smart-living-ocean-protocol-blockchain-exe-tickets-48791815634"
+    },
+    {
+        "city": "Braunschweig",
+        "eventName": "WebMontag",
+        "date": "2018-08-20",
+        "link": "http://webmontag.de/location/braunschweig/index"
+    },
+    {
+        "city": "Singapore",
+        "eventName": "Blockchain Summit Singapore 2018",
+        "date": "2018-08-28",
+        "link": "https://blockchainsummitsingapore.com"
     },
     {
         "city": "Helsinki",
         "eventName": "MyData2018",
-        "date": "2018-08-31",
+        "date": "2018-08-29",
         "link": "https://mydata2018.org"
+    },
+            {
+        "city": "Berlin",
+        "eventName": "IFA+ Summit",
+        "date": "2018-09-02",
+        "link": "https://b2b.ifa-berlin.com"
+    }, 
+     {
+        "city": "Barnsley",
+        "eventName": "The ABC of IoT",
+        "date": "2018-09-04",
+        "link": "https://www.eventbrite.co.uk/e/the-abc-of-iot-artificial-intelligence-blockchain-and-other-cool-tech-tickets-47846928451?aff=ebapi"
     },
     {
         "city": "Copenhagen",
@@ -472,6 +514,25 @@
         "date": "2018-09-05",
         "date_end": "2018-09-10",
         "link": "http://techfestival.co"
+    },
+      {
+        "city": "Berlin",
+        "eventName": "Berlin Blockchain Week",
+        "date": "2018-09-05",
+        "date_end": "2018-09-11",
+        "link": "https://github.com/ledgerz/berlinblockchainweek/blob/master/BBWP/Info/Factsheet.md"
+    },
+        {
+        "city": "Berlin",
+        "eventName": "Dezentral 2018",
+        "date": "2018-09-06",
+        "link": "https://www.dezentral.io"
+    },   
+        {
+        "city": "Berlin",
+        "eventName": "Token Engineering Workshop",
+        "date": "2018-9-06",
+        "link": "https://www.meetup.com/Token-Engineering/events/253174971/"
     },
     {
         "city": "Berlin",
@@ -482,10 +543,53 @@
     },
     {
         "city": "Berlin",
+        "eventName": "Decentralized Stack. Developers Meetup.",
+        "date": "2018-09-10",
+        "link": "https://www.eventbrite.com/e/decentralized-stack-developers-meetup-tickets-48775875958"
+    },
+    {
+        "city": "London",
+        "eventName": "Blockchain World Summit 2018",
+        "date": "2018-09-12",
+        "date_end": "2018-09-13",
+        "link": "https://blockchainworldsummit.co"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "PropTech Berlin",
+        "date": "2018-09-13",
+        "link": "https://futureproptech.de/en"
+    }, 
+    {
+        "city": "The Hague",
+        "eventName": "Future of Trust Summit",
+        "date": "2018-09-25",
+        "link": "https://futureoftrust.eu/#home"
+    },
+    {
+        "city": "Berlin",
         "eventName": "Web3 Summit",
         "date": "2018-10-22",
         "date_end": "2018-10-24",
         "link": "http://web3summit.com"
+    },
+    {
+        "city": "Singapore",
+        "eventName": "Crypto Expo Asia",
+        "date": "2017-10-26",
+        "link": "https://singapore.cryptoexpo.asia"
+    },
+    {
+        "city": "London",
+        "eventName": "Crypto Challenge Forum",
+        "date": "2018-10-28",
+        "date_end": "2018-10-30",
+        "link": "http://www.cc-forum.com"
+    },
+    {
+        "city": "Berlin",
+        "eventName": "Data Natives",
+        "date": "2018-11-22",
+        "link": "http://datanatives.io"
     }
- 
 ]

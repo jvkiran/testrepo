@@ -1,11 +1,10 @@
-/* global fetch */
-
-import React, { Component, Fragment } from 'react'
+import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import Slider from 'react-slick'
 import LazyLoad from 'react-lazyload'
+import fetch from 'isomorphic-fetch'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -363,7 +362,7 @@ const YouTubeButton = styled(Button)`
     }
 `
 
-class SectionContent extends Component {
+class SectionContent extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -376,8 +375,8 @@ class SectionContent extends Component {
         }
     }
 
-    componentWillMount() {
-        this.selectVideo(this.props.items[0], 0)
+    componentDidMount() {
+        this.selectVideo(this.props.ApiResponse[0], 0)
     }
 
     componentWillUnmount() {
@@ -438,6 +437,9 @@ class SectionContent extends Component {
                 }
             }]
         }
+
+        const { ApiResponse } = this.props
+
         return (
             <StyledContentRow>
                 <HeightRow id="videoScroll">
@@ -460,8 +462,8 @@ class SectionContent extends Component {
                     </VideoContainer>
                 </HeightRow>
                 <Slider {...settings}>
-                    {this.props.items.map((properties, index) => (
-                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}> {/* eslint-disable-line react/no-array-index-key */}
+                    {ApiResponse.map((properties, index) => (
+                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}>
                             <ListContainer className={this.state.active === index ? 'active' : ''}>
                                 <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
                                 <ThumbTitle><span>{properties.title}</span></ThumbTitle>
@@ -475,41 +477,10 @@ class SectionContent extends Component {
 }
 
 SectionContent.propTypes = {
-    items: PropTypes.array.isRequired // eslint-disable-line react/forbid-prop-types
+    ApiResponse: PropTypes.array.isRequired
 }
 
-const VideoSlider = ({ items }) => {
-    if (items.length === 0) {
-        return (
-            <Spinner white />
-        )
-    } else if (items.noVideos) {
-        return (
-            <CenterParagraph>
-                No videos available!
-            </CenterParagraph>
-        )
-    } else if (items.error) {
-        return (
-            <CenterParagraph>
-                There was a problem getting the list.<br />
-                Please try again later!
-            </CenterParagraph>
-        )
-    } else if (items.length > 0) {
-        return (
-            <SectionContent items={items} />
-        )
-    } else {
-        return []
-    }
-}
-
-VideoSlider.propTypes = {
-    items: PropTypes.any.isRequired // eslint-disable-line react/forbid-prop-types
-}
-
-class Videos extends Component { // eslint-disable-line react/no-multi-comp
+class VideoSlider extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -518,53 +489,62 @@ class Videos extends Component { // eslint-disable-line react/no-multi-comp
         }
     }
 
-    componentWillMount() {
-        if (youtube.playlist) {
-            const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
-            fetch(url)
-                .then((response) => {
-                    if (response.ok) {
-                        return response.json()
-                    }
-                    throw new Error('Problem getting content! Start debugging!')
-                })
-                .then((data) => {
-                    this.setState({
-                        ApiResponse: data
-                    })
-                })
-                .catch(() => {
-                    this.setState({
-                        ApiResponse: {
-                            error: true
-                        }
-                    })
-                })
-        } else {
-            this.setState({
-                ApiResponse: {
-                    noVideos: true
+    componentDidMount() {
+        const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
+        fetch(url)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
                 }
+                throw new Error('Problem getting content! Start debugging!')
             })
-        }
+            .then(data => {
+                this.setState({
+                    ApiResponse: data
+                })
+            })
+            .catch(() => {
+                this.setState({
+                    ApiResponse: {
+                        error: true
+                    }
+                })
+            })
     }
 
     render() {
-        return (
-            <RenderSection ApiResponse={this.state.ApiResponse} />
-        )
+        const { ApiResponse } = this.state
+
+        if (ApiResponse.length === 0) {
+            return (
+                <Spinner white />
+            )
+        } else if (ApiResponse.error) {
+            return (
+                <CenterParagraph>
+                    There was a problem getting the list.<br />
+                    Please try again later!
+                </CenterParagraph>
+            )
+        } else if (ApiResponse.length > 0) {
+            return (
+                <SectionContent ApiResponse={ApiResponse} />
+            )
+        } else {
+            return []
+        }
     }
 }
 
-const RenderSection = ({ ApiResponse }) => (
-    <Section background={colors.black} fontColor={colors.white} id="video">
+const Videos = () => (
+    <Section minHeight={1040} background={colors.black} fontColor={colors.white} id="video">
         <LazyLoad once unmountIfInvisible height={1040} offset={100}>
             <Fragment>
                 <StyledContentRow>
                     <Title white id="videoScroll">Videos</Title>
                 </StyledContentRow>
 
-                <VideoSlider items={ApiResponse} />
+                <VideoSlider />
 
                 <StyledContentRow>
                     <a href={youtube.channel}>
@@ -580,9 +560,5 @@ const RenderSection = ({ ApiResponse }) => (
         </LazyLoad>
     </Section>
 )
-
-RenderSection.propTypes = {
-    ApiResponse: PropTypes.any.isRequired // eslint-disable-line react/forbid-prop-types
-}
 
 export default Videos

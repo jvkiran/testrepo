@@ -127,7 +127,7 @@ class Modal extends Component {
         this.onSubmit = this.onSubmit.bind(this)
     }
 
-    componentWillReceiveProps(newProps) {
+    componentWillReceiveProps(newProps) { // eslint-disable-line react/no-deprecated
         if (!newProps.modal) {
             this.setState({
                 fetching: false,
@@ -248,21 +248,25 @@ class Modal extends Component {
                                     <Input
                                         placeholder={forms[modal].name}
                                             ref={node => (this.name = node)} // eslint-disable-line
-                                        type="text" />
+                                        type="text"
+                                        aria-label={forms[modal].name} />
                                     <Input
                                         placeholder={forms[modal].email}
                                             ref={node => (this.email = node)} // eslint-disable-line
-                                        type="email" />
+                                        type="email"
+                                        aria-label={forms[modal].email} />
                                     <Input
                                         placeholder={forms[modal].business}
                                             ref={node => (this.business = node)} // eslint-disable-line
-                                        type="text" />
+                                        type="text"
+                                        aria-label={forms[modal].business} />
                                     <Input
                                         maxLength={255}
                                         placeholder={forms[modal].message}
                                             ref={node => (this.message = node)} // eslint-disable-line
                                         rows="6"
-                                        type="textarea" />
+                                        type="textarea"
+                                        aria-label={forms[modal].message} />
                                     <Button fetching={this.state.fetching} type="submit">
                                         {forms[modal].button}
                                     </Button>

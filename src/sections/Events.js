@@ -417,7 +417,7 @@ function pastEvents() {
 }
 
 const PastEvent = ({ event }) => (
-    <PastListing href={event.link} target="_blank">
+    <PastListing href={event.link} target="_blank" rel="noopener">
         <p className="date">
             <EventDate date={event.date} dateEnd={event.date_end} />
         </p>
@@ -435,7 +435,7 @@ PastEvent.propTypes = {
 }
 
 const Event = ({ event }) => (
-    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city} target="_blank">
+    <StyledEvent flexWidth={elementWidth} href={event.link} key={event.city} target="_blank" rel="noopener">
         <StyledEventCity>{event.city}</StyledEventCity>
         {!!event.eventName && (
             <StyledEventName>{event.eventName}</StyledEventName>

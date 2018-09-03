@@ -144,6 +144,10 @@ const StyledSocialHero = styled.aside`
         &:nth-child(4) {
             animation-delay: 2.25s;
         }
+
+        &:nth-child(5) {
+            animation-delay: 2.5s;
+        }
     }
 `
 
@@ -152,15 +156,17 @@ class Welcome extends Component {
         super(props)
 
         this.state = {
-            videoUrl: ''
+            videoUrl: '',
+            modalIsOpen: false
         }
-
-        this.closeModal = this.closeModal.bind(this)
     }
 
-    openVideo(link) { this.setState({ videoUrl: link }) }
-
-    closeModal() { this.setState({ videoUrl: '' }) }
+    toggleModal = () => {
+        this.setState({
+            modalIsOpen: !this.state.modalIsOpen,
+            videoUrl: 'https://www.youtube.com/watch?v=FEeicvNSyk4'
+        })
+    }
 
     render() {
         return (
@@ -180,7 +186,7 @@ class Welcome extends Component {
                             </a>
                         </StyledPoweredBy>
 
-                        <StyledVideoThumbnail onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')}>
+                        <StyledVideoThumbnail onClick={() => this.toggleModal()}>
                             <img
                                 alt="Ocean Protocol Video"
                                 src={videoThumb}
@@ -196,7 +202,7 @@ class Welcome extends Component {
 
                 <Waves />
 
-                <VideoModal onCloseModal={this.closeModal} source={this.state.videoUrl} />
+                <VideoModal modalIsOpen={this.state.modalIsOpen} onCloseModal={this.toggleModal} source={this.state.videoUrl} />
             </StyledHero>
         )
     }
