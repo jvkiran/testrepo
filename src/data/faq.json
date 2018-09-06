@@ -86,10 +86,6 @@
         "answer": "Ocean Tokens act as the native internal currency that is inseparable from the protocol and network. Tokens can be used to buy and sell data and services, incentivize the curation of public data and reward network keepers to maintain the network."
       },
       {
-        "question": "Is Ocean Token an ERC20 token?",
-        "answer": "Ocean Tokens will be issued as a native token for the Ocean network. It will not be issued as an ERC20 token."
-      },
-      {
         "question": "What is the total supply of Ocean Tokens?",
         "answer": "The total supply of Ocean Tokens is 1.41 Billion."
       },
