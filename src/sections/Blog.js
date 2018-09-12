@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import LazyLoad from 'react-lazyload'
-import fetch from 'isomorphic-fetch'
+import axios from 'axios'
 import FadeIn from '../components/FadeIn'
 import Title from '../components/Title'
 import Section from '../components/Section'
@@ -70,30 +70,37 @@ const StyledSubtitle = styled.p`
     font-size: ${fonts.size.base};
 `
 
-class Blog extends PureComponent {
-    constructor(props) {
-        super(props)
+export default class Blog extends PureComponent {
+    signal = axios.CancelToken.source()
 
-        this.state = {
-            posts: [],
-            fetching: false
-        }
+    state = {
+        posts: [],
+        fetching: false
     }
 
     componentDidMount() {
         this.fetchPosts()
     }
 
-    fetchPosts() {
-        this.setState({ fetching: true })
+    componentWillUnmount() {
+        this.signal.cancel()
+    }
 
-        fetch('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol')
-            .then(res => res.json())
-            .then(posts => {
-                const lastPosts = posts.slice(0, 3)
-                this.setState({ fetching: false, posts: lastPosts })
+    fetchPosts = async () => {
+        try {
+            this.setState({ fetching: true })
+            const response = await axios.get('https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol', {
+                cancelToken: this.signal.token
             })
-            .catch(this.setState({ fetching: false }))
+            const lastPosts = response.data.slice(0, 3)
+            this.setState({ fetching: false, posts: lastPosts })
+        } catch (err) {
+            if (axios.isCancel(err)) {
+                return null
+            } else {
+                this.setState({ fetching: false })
+            }
+        }
     }
 
     render() {
@@ -136,5 +143,3 @@ class Blog extends PureComponent {
         )
     }
 }
-
-export default Blog
