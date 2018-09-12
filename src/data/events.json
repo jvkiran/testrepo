@@ -558,6 +558,12 @@
         "eventName": "KOOP- Blockchain Fest '18",
         "date": "2018-09-18",
         "link": "https://blockchainfest.ist"
+    },    
+  {
+        "city": "Singapore",
+        "eventName": "The AI Summit Singapore",
+        "date": "2018-09-19",
+        "link": "https://tmt.knect365.com/ai-summit-singapore/"
     },
       {
         "city": "Singapore",
@@ -571,6 +577,18 @@
         "date": "2018-09-25",
         "link": "https://futureoftrust.eu/#home"
     },
+     {
+        "city": "Berlin",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2018-09-25",
+        "link": "https://www.meetup.com/9984-Meetup/events/254548640/"
+    },
+      {
+        "city": "Albuquerque",
+        "eventName": "MOBI Americas Community Meeting",
+        "date": "2018-010-12",
+        "link": "https://go.dlt.mobi/events/NM/"
+    },
     {
         "city": "Berlin",
         "eventName": "Web3 Summit",
@@ -581,7 +599,7 @@
     {
         "city": "Singapore",
         "eventName": "Crypto Expo Asia",
-        "date": "2017-10-26",
+        "date": "2018-10-26",
         "link": "https://singapore.cryptoexpo.asia"
     },
     {
