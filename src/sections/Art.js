@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 import OceanJeyllyfishBack from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
@@ -40,12 +41,12 @@ const StyledSubTitle = styled(SubTitle)`
 
 const Art = () => (
     <StyledSection background={colors.darkPurple} backgroundImage={OceanJeyllyfishBack} id="art">
-        <a href="/art/">
+        <Link to="/art/">
             <ContentRow>
                 <StyledTitle white>{artJson[0].header.title}</StyledTitle>
                 <StyledSubTitle center white>{artJson[0].header.tagline}</StyledSubTitle>
             </ContentRow>
-        </a>
+        </Link>
     </StyledSection>
 )
 
