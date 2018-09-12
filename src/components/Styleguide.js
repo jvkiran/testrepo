@@ -62,7 +62,9 @@ const ColorValue = styled.span`
     }
 `
 
+/* stylelint-disable block-no-empty */
 const Gradients = styled(Colors)``
+/* stylelint-enable block-no-empty */
 
 const Gradient = styled(Color)`
     background: ${props => (props.color ? props.color : '')};

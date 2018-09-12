@@ -6,7 +6,6 @@
   ],
   "syntax": "scss",
   "rules": {
-      "no-descending-specificity": null,
-      "block-no-empty": null
+      "no-descending-specificity": null
   }
 }
