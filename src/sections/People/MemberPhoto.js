@@ -5,8 +5,8 @@ import FadeIn from '../../components/FadeIn'
 import teamImg from '../../assets/team'
 import { Photo } from './MemberPhoto.css'
 
-const MemberPhoto = ({ member }) => (
-    <Photo>
+const MemberPhoto = ({ member, ...props }) => (
+    <Photo {...props}>
         <LazyLoad once height={141} offset={100}>
             <FadeIn>
                 <img alt={member.name} src={teamImg[member.image]} />

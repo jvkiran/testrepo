@@ -15,9 +15,12 @@ export const StyledMember = styled.div`
         width: calc(100% / 4 - 3rem);
     }
 
-    @media screen and (${responsive.lg.min}) {
-        width: calc(100% / 5 - 3rem);
-    }
+    /* stylelint-disable-next-line */
+    ${({ advisor }) => !advisor && (
+        `@media screen and (${responsive.lg.min}) {
+            width: calc(100% / 5 - 3rem);
+        }`
+    )};
 
     & > img {
         margin: 0;
@@ -36,6 +39,11 @@ export const Name = styled.h3`
     text-align: center;
     margin-top: .75rem;
     margin-bottom: .35rem;
+`
+
+export const Position = styled(Name)`
+    color: rgb(${colors.lightGrey});
+    margin-top: 0;
 `
 
 export const Quote = styled.p`
@@ -80,9 +88,4 @@ export const QuoteWrap = styled.div`
             transform: translate(0, -50%) scale(1);
         }
     }
-`
-
-export const Position = styled(Name)`
-    color: rgb(${colors.lightGrey});
-    margin-top: 0;
 `
