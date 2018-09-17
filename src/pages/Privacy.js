@@ -2,57 +2,24 @@
 
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import Markdown from 'react-remarkable'
-import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Header from '../components/Header'
 import Spinner from '../components/Spinner'
 import SEO from '../components/SEO'
-
-import { fonts, colors } from '../styles'
-
 import privacy from '../data/privacy.md'
+import { StyledSection, StyledContent } from './Privacy.css'
 
-const StyledSection = styled(Section)`
-    ${ContentRow} { /* stylelint-disable-line */
-        max-width: 45rem;
+export default class Privacy extends Component {
+    state = {
+        text: '',
+        fetching: false
     }
 
-    ${Title} { /* stylelint-disable-line */
-        margin-bottom: 1rem;
-    }
-
-    ${SubTitle} { /* stylelint-disable-line */
-        color: rgb(${colors.lightGrey});
-        margin-bottom: 3rem;
-    }
-`
-
-const StyledContent = styled(ContentRow)`
-    & h1 {
-        font-size: ${fonts.size.h3};
-    }
-
-    & h2 {
-        font-size: ${fonts.size.h4};
-    }
-
-    & h3 {
-        font-size: ${fonts.size.h5};
-    }
-`
-
-class Privacy extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            text: '',
-            fetching: false
-        }
+    static propTypes = {
+        location: PropTypes.object.isRequired
     }
 
     componentDidMount() {
@@ -98,9 +65,3 @@ class Privacy extends Component {
         )
     }
 }
-
-Privacy.propTypes = {
-    location: PropTypes.object.isRequired, // eslint-disable-line
-}
-
-export default Privacy

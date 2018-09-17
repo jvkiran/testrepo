@@ -1,18 +1,5 @@
 import React from 'react'
-import transition from 'styled-transition-group'
-
-const timeout = 300
-
-const FadeInAnimation = transition.div`
-    &:appear {
-        opacity: .01;
-    }
-
-    &:appear-active {
-        opacity: 1;
-        transition: ${timeout}ms ease-in-out;
-    }
-`
+import { FadeInAnimation, timeout } from './FadeIn.css'
 
 const FadeIn = (props) => (
     <FadeInAnimation
