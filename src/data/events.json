@@ -226,7 +226,7 @@
     },
     {
         "city": "Hong Kong",
-        "eventName": "Token Economy - Silicon Valley HK Symposium",
+        "eventName": "Token Economy — Silicon Valley HK Symposium",
         "date": "2018-04-08",
         "link":
             "https://www.eventbrite.com/e/token-economy-silicon-valley-hk-symposium-tickets-44768380431#"
@@ -297,7 +297,7 @@
     },
     {
         "city": "Geneva",
-        "eventName": "AI for Good - Global summit",
+        "eventName": "AI for Good — Global summit",
         "date": "2018-05-15",
         "date_end": "2018-05-17",
         "link": "https://www.itu.int/en/ITU-T/AI/2018/Pages/default.aspx"
@@ -424,7 +424,7 @@
     },
     {
         "city": "Berlin",
-        "eventName": "Token Engineering Workshop - DAPPCON",
+        "eventName": "Token Engineering Workshop — DAPPCON",
         "date": "2018-07-19",
         "link": "https://www.dappcon.io/#speakers"
     },
@@ -555,13 +555,13 @@
     }, 
       {
         "city": "Istanbul",
-        "eventName": "KOOP- Blockchain Fest '18",
+        "eventName": "KOOP — Blockchain Fest '18",
         "date": "2018-09-18",
         "link": "https://blockchainfest.ist"
     },  
       {
         "city": "Brussels",
-        "eventName": "BDVA- Data for AI",
+        "eventName": "BDVA — Data for AI",
         "date": "2018-09-18",
         "link": "http://www.bdva.eu/node/1097"
     },
