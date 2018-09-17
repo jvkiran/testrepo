@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
@@ -9,6 +9,7 @@ import { StyledSection, StyledButton } from './NotFound.css'
 
 const Meta = () => (
     <Helmet>
+        <title>404 - Not Found</title>
         <meta content="noindex,nofollow" name="robots" />
     </Helmet>
 )
@@ -21,9 +22,9 @@ const NotFound = () => (
             <ContentRow>
                 <Title>Oops, that did not work</Title>
                 <SubTitle>Pardon us, the page you requested is not here.</SubTitle>
-                <NavLink to="/">
+                <Link to="/">
                     <StyledButton>Go to homepage</StyledButton>
-                </NavLink>
+                </Link>
             </ContentRow>
         </StyledSection>
     </Fragment>
