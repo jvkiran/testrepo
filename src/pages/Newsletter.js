@@ -1,44 +1,18 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import SEO from '../components/SEO'
-import Section from '../components/Section'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Header from '../components/Header'
-import SubscribeForm from '../components/SubscribeForm'
 import { colors } from '../styles'
+import { StyledSection, StyledSubscribeForm } from './Newsletter.css'
 
-const StyledSection = styled(Section)`
-    min-height: 87vh;
-    display: flex;
-    align-items: center;
-
-    ${ContentRow} { /* stylelint-disable-line */
-        max-width: 45rem;
+export default class Newsletter extends Component {
+    static propTypes = {
+        location: PropTypes.object.isRequired
     }
 
-    ${Title} { /* stylelint-disable-line */
-        margin-bottom: 1rem;
-        margin-top: -4rem;
-    }
-
-    ${SubTitle} { /* stylelint-disable-line */
-        color: rgb(${colors.lightGrey});
-        margin-bottom: 6rem;
-        text-align: center;
-    }
-`
-
-const StyledSubscribeForm = styled(SubscribeForm)`
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 30rem;
-`
-
-/* eslint-disable class-methods-use-this */
-class Newsletter extends Component {
     componentDidMount() {
         document.body.classList.add('page--newsletter')
     }
@@ -70,10 +44,3 @@ class Newsletter extends Component {
         )
     }
 }
-/* eslint-enable class-methods-use-this */
-
-Newsletter.propTypes = {
-    location: PropTypes.object.isRequired, // eslint-disable-line
-}
-
-export default Newsletter

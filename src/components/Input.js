@@ -1,73 +1,26 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { colors, fonts, transitions } from '../styles'
+import {
+    StyledInputWrapper,
+    StyledInput,
+    StyledTextarea,
+    StyledCharacterCount
+} from './Input.css'
 
-const StyledInputWrapper = styled.div`
-    border-radius: 2px;
-    position: relative;
-    width: 100%;
-    padding: 1px;
-    margin: 1rem 0;
-    background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
+export default class Input extends Component {
+    state = { input: '' }
 
-    & img {
-        position: absolute;
-        left: 1rem;
-        top: 1rem;
-        height: 1rem;
-        opacity: .7;
-    }
-`
-
-const StyledInput = styled.input`
-    width: 100%;
-    outline: none;
-    margin: 0;
-    font-size: ${fonts.size.base};
-    font-family: ${fonts.family.base};
-    padding: .75rem 1rem;
-    padding-left: ${({ icon }) => (icon ? '3rem' : '1rem')};
-    background: rgb(${colors.white});
-    color: rgb(${colors.black});
-    border: none;
-    border-radius: 2px;
-    box-shadow: none;
-    transition: ${transitions.short};
-
-    &::placeholder {
-        color: rgba(${colors.black}, .5);
+    static propTypes = {
+        maxLength: PropTypes.number,
+        type: PropTypes.string
     }
 
-    &:focus {
-        &::placeholder {
-            color: rgba(${colors.black}, .3);
-        }
-    }
-`
-
-const StyledTextarea = StyledInput.withComponent('textarea')
-
-const StyledCharacterCount = styled.p`
-    position: absolute;
-    opacity: .7;
-    font-size: ${fonts.size.small};
-    margin: 0;
-    right: 0;
-`
-
-class Input extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            input: ''
-        }
-
-        this.onChange = this.onChange.bind(this)
+    static defaultProps = {
+        maxLength: 0,
+        type: 'text'
     }
 
-    onChange({ target }) {
+    onChange = ({ target }) => {
         if (this.props.maxLength && target.value.length > this.props.maxLength) return
         this.setState({ input: target.value })
     }
@@ -87,15 +40,3 @@ class Input extends Component {
         )
     }
 }
-
-Input.propTypes = {
-    maxLength: PropTypes.number,
-    type: PropTypes.string
-}
-
-Input.defaultProps = {
-    maxLength: 0,
-    type: 'text'
-}
-
-export default Input

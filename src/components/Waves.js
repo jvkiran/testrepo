@@ -1,35 +1,11 @@
 /* global requestAnimationFrame, cancelAnimationFrame */
 
 import React, { Component } from 'react'
-import styled from 'styled-components'
 import VisibilitySensor from 'react-visibility-sensor'
-import * as THREE from 'three/build/three' // eslint-disable-line import/no-namespace
+import * as THREE from 'three/build/three'
 import '../lib/Projector'
 import '../lib/CanvasRenderer'
-import wavesStatic from '../assets/misc/waves.png'
-
-const StyledWaves = styled.div`
-    background: url(${wavesStatic}) no-repeat center bottom;
-    background-size: cover;
-
-    &,
-    > div,
-    canvas {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    canvas {
-        max-width: 100%;
-        width: 100%;
-        top: 10vh;
-        z-index: 1;
-        transition: opacity .3s ease-out;
-    }
-`
+import { StyledWaves } from './Waves.css'
 
 const SEPARATION = 100
 const AMOUNTX = 60
@@ -41,20 +17,12 @@ const windowHeight = window.innerHeight
 const isDesktop = windowWidth >= 800
 const shouldAnimate = process.env.REACT_APP_ANIMATE_WAVES
 
-class Waves extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            count: 0,
-            width: windowWidth,
-            height: windowHeight,
-            running: false
-        }
-
-        this.animate = this.animate.bind(this)
-        this.handleResize = this.handleResize.bind(this)
-        this.handleVisibility = this.handleVisibility.bind(this)
+export default class Waves extends Component {
+    state = {
+        count: 0,
+        width: windowWidth,
+        height: windowHeight,
+        running: false
     }
 
     componentDidMount() {
@@ -65,7 +33,7 @@ class Waves extends Component {
         this.destroy()
     }
 
-    handleVisibility(isVisible) {
+    handleVisibility = isVisible => {
         if (process.env.NODE_ENV !== 'production') {
             if (shouldAnimate !== 'true') return
         }
@@ -136,7 +104,7 @@ class Waves extends Component {
         this.renderer.domElement.style.opacity = '1'
     }
 
-    handleResize() {
+    handleResize = () => {
         this.setState({
             width: this.mount.clientWidth,
             height: this.mount.clientHeight
@@ -175,7 +143,7 @@ class Waves extends Component {
         })
     }
 
-    animate() {
+    animate = () => {
         this.frameId = window.requestAnimationFrame(this.animate)
         this.moveParticles()
         this.setState(prevState => ({
@@ -194,5 +162,3 @@ class Waves extends Component {
         )
     }
 }
-
-export default Waves

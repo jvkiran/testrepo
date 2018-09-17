@@ -13,18 +13,10 @@ import Faq from '../sections/Faq'
 import Modal from '../sections/Modal'
 import Art from '../sections/Art'
 
-class Home extends Component {
-    constructor(props) {
-        super(props)
+export default class Home extends Component {
+    state = { modal: '' }
 
-        this.state = {
-            modal: ''
-        }
-
-        this.toggleModal = this.toggleModal.bind(this)
-    }
-
-    toggleModal(modal = '') {
+    toggleModal = (modal = '') => {
         this.setState({ modal })
     }
 
@@ -48,5 +40,3 @@ class Home extends Component {
         )
     }
 }
-
-export default Home
