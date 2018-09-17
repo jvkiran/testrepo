@@ -6,7 +6,7 @@ import Project from '../sections/Project'
 import Data from '../sections/Data'
 import Papers from '../sections/Papers'
 import Events from '../sections/Events'
-import People from '../sections/People'
+import People from '../sections/People/People'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Faq from '../sections/Faq'
@@ -20,21 +20,21 @@ export default class Home extends Component {
 
     render() {
         return (
-        <Fragment>
-            <SEO />
-            <Menu />
-            <Welcome />
-            <Events />
-            <Project toggleModal={this.toggleModal} />
-            <Papers />
-            <Data />
-            <People toggleModal={this.toggleModal} />
-            <Blog />
-            <Videos />
-            <Faq />
-            <Art />
-            <Modal modal={this.state.modal} toggle={this.toggleModal} />
-        </Fragment>
-    )
+            <Fragment>
+                <SEO />
+                <Menu />
+                <Welcome />
+                <Events />
+                <Project toggleModal={this.toggleModal} />
+                <Papers />
+                <Data />
+                <People toggleModal={this.toggleModal} />
+                <Blog />
+                <Videos />
+                <Faq />
+                <Art />
+                <Modal modal={this.state.modal} toggle={this.toggleModal} />
+            </Fragment>
+        )
     }
 }
