@@ -558,7 +558,13 @@
         "eventName": "KOOP- Blockchain Fest '18",
         "date": "2018-09-18",
         "link": "https://blockchainfest.ist"
-    },    
+    },  
+      {
+        "city": "Brussels",
+        "eventName": "BDVA- Data for AI",
+        "date": "2018-09-18",
+        "link": "http://www.bdva.eu/node/1097"
+    },
   {
         "city": "Singapore",
         "eventName": "The AI Summit Singapore",
@@ -571,11 +577,23 @@
         "date": "2018-09-19",
         "link": "https://tmt.knect365.com/techxlr8-asia/"
     },
+      {
+        "city": "Singapore",
+        "eventName": "Singapore Week of Innovation and Technology",
+        "date": "2018-09-19",
+        "link": "http://www.switchsg.org"
+    },
     {
         "city": "The Hague",
         "eventName": "Future of Trust Summit",
         "date": "2018-09-25",
         "link": "https://futureoftrust.eu/#home"
+    },
+      {
+        "city": "Madrid",
+        "eventName": "Cotec",
+        "date": "2018-09-25",
+        "link": "http://cotec.es"
     },
      {
         "city": "Berlin",
@@ -586,7 +604,7 @@
       {
         "city": "Albuquerque",
         "eventName": "MOBI Americas Community Meeting",
-        "date": "2018-010-12",
+        "date": "2018-10-12",
         "link": "https://go.dlt.mobi/events/NM/"
     },
     {
