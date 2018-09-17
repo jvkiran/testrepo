@@ -1,12 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import Section from '../components/Section'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import SubTitle from '../components/SubTitle'
 import Paragraph from '../components/Paragraph'
-import SubscribeForm from '../components/SubscribeForm'
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonTelegram from '../assets/buttons/telegram.svg'
@@ -16,79 +14,16 @@ import buttonLinkedin from '../assets/buttons/linkedin.svg'
 import buttonYoutube from '../assets/buttons/youtube.svg'
 import buttonReddit from '../assets/buttons/reddit.svg'
 import buttonGitter from '../assets/buttons/gitter.svg'
-import { colors, responsive, fonts } from '../styles'
+import { colors } from '../styles'
 import { meta, company, social, youtube } from '../constants'
-
-const StyledSubTitle = styled.h5`
-    color: rgb(${colors.lightGrey});
-    margin-bottom: 1rem;
-
-    &:first-of-type {
-        margin-top: 0;
-    }
-
-    .page--newsletter & {
-        &:first-of-type {
-            display: none;
-        }
-    }
-`
-
-const StyledActions = styled.div`
-    width: 100%;
-    display: flex;
-`
-
-const StyledCopyright = styled(Paragraph)`
-    opacity: .5;
-    margin-top: 3rem;
-
-    @media screen and (${responsive.sm.min}) {
-        margin-bottom: -2rem;
-    }
-
-    a {
-        color: inherit;
-    }
-`
-
-const StyledSocialLinks = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    & a {
-        margin-right: .75rem;
-    }
-
-    & img {
-        border-radius: 2px;
-        width: calc(2.5rem + 4px);
-        height: calc(2.5rem + 4px);
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        width: 100%;
-    }
-`
-
-const StyledContact = styled.div`
-    .address {
-        color: rgb(${colors.lightGrey});
-        text-align: right;
-    }
-
-    .address__title {
-        font-size: ${fonts.size.h5};
-        margin-top: 0;
-        color: rgb(${colors.lightGrey});
-    }
-`
-
-const StyledSubscribeForm = styled(SubscribeForm)`
-    .page--newsletter & {
-        display: none;
-    }
-`
+import {
+    StyledSubTitle,
+    StyledActions,
+    StyledCopyright,
+    StyledSocialLinks,
+    StyledContact,
+    StyledSubscribeForm
+} from './Footer.css'
 
 const Footer = () => (
     <Section background={colors.grey} fontColor={colors.white} id="footer">

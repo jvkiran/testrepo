@@ -1,75 +1,17 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import rgbHex from '../lib/rgb-hex'
-import SubTitle from '../components/SubTitle'
 import Button from '../components/Button'
-import { colors, fonts, gradients, responsive } from '../styles'
-
-const SectionTitle = styled(SubTitle)`
-    margin-top: 6rem;
-`
-
-const SectionSubTitle = styled.h4`
-    font-size: ${fonts.size.large};
-    color: rgb(${colors.lightGrey});
-    margin-bottom: 3rem;
-    margin-top: -1rem;
-`
-
-const Colors = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-`
-
-const Color = styled.div`
-    margin-bottom: 2%;
-    padding: 1rem 2rem;
-    background: ${props => (props.color ? `rgb(${props.color})` : '')};
-    text-align: center;
-    color: rgb(${colors.white});
-    border: 1px solid rgb(${colors.lightGrey});
-    border-radius: .2rem;
-    flex: 0 0 49%;
-
-    @media (${responsive.sm.min}) {
-        flex-basis: 32%;
-    }
-`
-
-const ColorName = styled.h5`
-    margin: 0;
-    margin-bottom: .5rem;
-    color: rgb(${colors.white});
-    line-height: ${fonts.lineHeight.base};
-
-    [color='255, 255, 255'] &,
-    [color='226, 226, 226'] & {
-        color: rgb(${colors.grey});
-    }
-`
-
-const ColorValue = styled.span`
-    margin: 0;
-    display: block;
-    color: rgba(${colors.white}, .7);
-    font-size: ${fonts.size.base};
-    font-family: ${fonts.family.code};
-
-    [color='255, 255, 255'] &,
-    [color='226, 226, 226'] & {
-        color: rgba(${colors.grey}, .7);
-    }
-`
-
-/* stylelint-disable block-no-empty */
-const Gradients = styled(Colors)``
-/* stylelint-enable block-no-empty */
-
-const Gradient = styled(Color)`
-    background: ${props => (props.color ? props.color : '')};
-    flex-basis: 100%;
-`
+import { colors, fonts, gradients } from '../styles'
+import {
+    Colors,
+    Color,
+    ColorName,
+    ColorValue,
+    SectionTitle,
+    Gradients,
+    Gradient,
+    SectionSubTitle
+} from './Styleguide.css'
 
 const Styleguide = () => (
     <Fragment>
