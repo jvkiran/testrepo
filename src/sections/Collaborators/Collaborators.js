@@ -11,15 +11,20 @@ import {
     StyledLine
 } from './Collaborators.css'
 
+const content = {
+    'title': 'The companies \ntrusting Ocean Protocol',
+    'intro': `We work closely with our collaborators to iterate on Ocean Protocol... Oh right. I forgot about the battle. Why would I want to know that? You've got all this money. How come you always dress like you're doing your laundry? We'll go deliver this crate like professionals, and then we'll go home. Subjugated, yet honored. Bender, I didn't know you liked cooking. That's so cute.`
+}
+
 const Collaborators = () => (
     <Section background={colors.darkPurple} fontColor={colors.white} id="collaborators">
         <ContentRow>
-            <Title white>Collaborators</Title>
+            <Title white>{content.title}</Title>
         </ContentRow>
 
         <ContentRow narrow>
             <StyledParagraph>
-                Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators Collaborators
+                {content.intro}
             </StyledParagraph>
         </ContentRow>
 
@@ -27,8 +32,8 @@ const Collaborators = () => (
             <StyledLine />
             <StyledGrid center textCenter>
                 {collaborators.map(collaborator => {
-                    const { name, image, link } = collaborator
-                    return <Collaborator key={name} name={name} image={image} link={link} />
+                    const { name, logo, link } = collaborator
+                    return <Collaborator key={name} name={name} logo={logo} link={link} />
                 })}
             </StyledGrid>
         </ContentRow>

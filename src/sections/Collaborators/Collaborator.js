@@ -5,33 +5,35 @@ import {
     StyledCollaborator
 } from './Collaborator.css'
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1)
-}
+// generated SVG component names have first letter capitalized,
+// while original SVG file names are all lowercased.
+// Use this helper function to work around that
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1)
 
-const Logo = ({ image, ...props }) => {
-    if (Logos.hasOwnProperty(capitalizeFirstLetter(image))) {
-        let LogoComponent = Logos[capitalizeFirstLetter(image)]
-        return <LogoComponent key={capitalizeFirstLetter(image)} {...props} />
+// iterate over the Logos index and output correct logo component
+// by checking against the 'logo' value from ./data/collaborators.json
+const Logo = ({ logo, ...props }) => {
+    if (Logos.hasOwnProperty(capitalizeFirstLetter(logo))) {
+        let LogoComponent = Logos[capitalizeFirstLetter(logo)]
+        return <LogoComponent key={capitalizeFirstLetter(logo)} {...props} />
     } else {
         return null
     }
 }
 
-const Contributor = ({ name, image, link, ...props }) => (
+const Contributor = ({ name, logo, link, ...props }) => (
     <StyledCollaborator>
         {
             link
-                ? <a href={link}><Logo image={image} className={image} /></a>
-                : <Logo image={image} className={image} />
+                ? <a href={link}><Logo logo={logo} className={logo} /></a>
+                : <Logo logo={logo} className={logo} />
         }
-
     </StyledCollaborator>
 )
 
 Contributor.propTypes = {
     name: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    logo: PropTypes.string.isRequired,
     link: PropTypes.string
 }
 

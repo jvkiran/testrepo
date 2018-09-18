@@ -18,6 +18,8 @@
      - [Papers](#papers)
      - [Blog posts](#blog-posts)
      - [Videos](#videos)
+     - [Collaborators](#collaborators)
+        - [Logo](#logo)
   - [Forms](#forms)
   - [SEO](#seo)
   - [Development](#development)
@@ -40,6 +42,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 - Events: [`events.json`](src/data/events.json)
 - Team: [`team.json`](src/data/team.json)
 - Advisors: [`advisors.json`](src/data/advisors.json)
+- Collaborators: [`collaborators.json`](src/data/collaborators.json)
 - Art: [`art.json`](src/data/art.json)
 - FAQ: [`faq.json`](src/data/faq.json)
 - Roadmap: [`roadmap.json`](src/data/roadmap.json)
@@ -71,6 +74,16 @@ Website only communicates with an endpoint created via webtask.io, where the tas
 All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel.
 
 Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the YouTube Data API v3 setup in Google Cloud Platform. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
+
+### Collaborators
+
+All displayed collaborators are sourced from the [`src/data/collaborators.json`](src/data/collaborators.json) file.
+
+For every collaborator `name` and `logo` are required, `link` is optional. Here, `logo` refers to the filename of the SVG asset.
+
+#### Logo
+
+A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS. While all SVGs are automatically cleaned up thorugh [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
 
 ## Forms
 
