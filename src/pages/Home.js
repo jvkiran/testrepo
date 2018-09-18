@@ -7,6 +7,7 @@ import Data from '../sections/Data'
 import Papers from '../sections/Papers'
 import Events from '../sections/Events'
 import People from '../sections/People/People'
+import Contributors from '../sections/Contributors/Contributors'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Faq from '../sections/Faq'
@@ -37,6 +38,7 @@ export default class Home extends Component {
                 <Papers />
                 <Data />
                 <People toggleModal={this.toggleModal} />
+                <Contributors />
                 <Blog />
                 <Videos />
                 <Faq />
