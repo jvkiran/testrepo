@@ -1,6 +1,10 @@
 import styled from 'styled-components'
+import Grid from '../../components/Grid'
 import Paragraph from '../../components/Paragraph'
 import { colors, responsive } from '../../styles'
+
+export const StyledGrid = styled(Grid)`
+`
 
 export const StyledParagraph = styled(Paragraph)`
     margin-bottom: 0;

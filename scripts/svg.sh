@@ -11,9 +11,15 @@ set -e
 SRC='./src/assets'
 OUT='./src/components/svg'
 
+SVGO_OPTIONS='{"removeUselessStrokeAndFill": true, "removeAttrs": {"attrs": "(stroke|fill)"}}'
+
 printf "Creating SVG components...\\n\\n"
 
 # Usage: svgr [-d out-dir] [src-dir]
-./node_modules/@svgr/cli/bin/svgr --icon -d $OUT $SRC
+./node_modules/@svgr/cli/bin/svgr \
+    --icon \
+    --svgo-config "$SVGO_OPTIONS" \
+    -d \
+    $OUT $SRC
 
 printf "\\n🎉 Successfully created SVG components\\n\\n"
