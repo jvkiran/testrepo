@@ -83,7 +83,13 @@ For every collaborator `name` and `logo` are required, `link` is optional. Here,
 
 #### Logo
 
-A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS. While all SVGs are automatically cleaned up thorugh [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
+A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS.
+
+Logo file then needs to be imported and exported from the [`./src/sections/Collaborators/Logos.js`](./src/sections/Collaborators/Logos.js) file.
+
+_ToDo: remove the need to manually import the logo file._
+
+While all SVGs are automatically cleaned up thorugh [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
 
 ## Forms
 
