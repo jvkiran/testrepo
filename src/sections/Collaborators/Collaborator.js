@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Logos from './Logos'
 import {
-    StyledCollaborator
+    StyledCollaborator,
+    StyledDescription,
+    StyledCollaboratorWrap
 } from './Collaborator.css'
 
 // generated SVG component names have first letter capitalized,
@@ -21,20 +23,20 @@ const Logo = ({ logo, ...props }) => {
     }
 }
 
-const Contributor = ({ name, logo, link, ...props }) => (
+const Collaborator = ({ name, logo, link, description }) => (
     <StyledCollaborator>
-        {
-            link
-                ? <a href={link}><Logo logo={logo} className={logo} /></a>
-                : <Logo logo={logo} className={logo} />
-        }
+        <StyledCollaboratorWrap href={link}>
+            <Logo logo={logo} className={logo} title={name} />
+            {description && <StyledDescription>{description}</StyledDescription>}
+        </StyledCollaboratorWrap>
     </StyledCollaborator>
 )
 
-Contributor.propTypes = {
+Collaborator.propTypes = {
     name: PropTypes.string.isRequired,
     logo: PropTypes.string.isRequired,
-    link: PropTypes.string
+    link: PropTypes.string.isRequired,
+    description: PropTypes.string
 }
 
-export default Contributor
+export default Collaborator

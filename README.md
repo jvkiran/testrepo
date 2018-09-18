@@ -79,7 +79,7 @@ Website only communicates with an endpoint created via webtask.io, where the tas
 
 All displayed collaborators are sourced from the [`src/data/collaborators.json`](src/data/collaborators.json) file.
 
-For every collaborator `name` and `logo` are required, `link` is optional. Here, `logo` refers to the filename of the SVG asset.
+For every collaborator `name`, `logo` and `link` are required, while `description` is optional. Here, `logo` refers to the filename of the SVG asset.
 
 #### Logo
 
@@ -89,7 +89,7 @@ Logo file then needs to be imported and exported from the [`./src/sections/Colla
 
 _ToDo: remove the need to manually import the logo file._
 
-While all SVGs are automatically cleaned up thorugh [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
+While all SVGs are automatically cleaned up through [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
 
 ## Forms
 

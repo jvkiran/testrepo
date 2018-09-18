@@ -32,8 +32,8 @@ const Collaborators = () => (
             <StyledLine />
             <StyledGrid center textCenter>
                 {collaborators.map(collaborator => {
-                    const { name, logo, link } = collaborator
-                    return <Collaborator key={name} name={name} logo={logo} link={link} />
+                    const { name, logo, link, description } = collaborator
+                    return <Collaborator key={name} name={name} logo={logo} link={link} description={description} />
                 })}
             </StyledGrid>
         </ContentRow>
