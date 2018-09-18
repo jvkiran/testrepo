@@ -6,11 +6,9 @@
 [![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 
----
 
 [**Live**](https://oceanprotocol.com) | [**Beta**](https://beta.oceanprotocol.com)
 
----
 
 ## Table of Contents
 
@@ -26,11 +24,14 @@
      - [Environment variables](#environment-variables)
      - [Workflow](#workflow)
      - [Code style](#code-style)
+     - [SVG assets](#svg-assets)
   - [Deployment: always be shipping](#deployment-always-be-shipping)
      - [Manual Deployment](#manual-deployment)
   - [Data Collection &amp; Cookies](#data-collection-cookies)
      - [Cookie Banner](#cookie-banner)
      - [Google Analytics](#google-analytics)
+
+---
 
 ## Content
 
@@ -186,6 +187,18 @@ Code style follows:
 
 - [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 - [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+
+### SVG assets
+
+All SVG assets under `src/assets/` will be converted to React components before every build. Makes use of `SVGR` so SVG assets can be imported like so:
+
+```js
+import Logo from './components/svg/Logo'
+
+<Logo />
+```
+
+That's done with a simple bash script under [`scripts/svg.sh`](scripts/svg.sh).
 
 ## Deployment: always be shipping
 
