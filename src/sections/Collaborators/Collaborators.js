@@ -12,7 +12,7 @@ import {
 } from './Collaborators.css'
 
 const Collaborators = () => (
-    <Section background={colors.black} fontColor={colors.white} id="Collaborators">
+    <Section background={colors.darkPurple} fontColor={colors.white} id="collaborators">
         <ContentRow>
             <Title white>Collaborators</Title>
         </ContentRow>
