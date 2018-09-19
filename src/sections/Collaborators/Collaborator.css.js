@@ -41,7 +41,7 @@ export const StyledDescription = styled.span`
     margin-left: -40%;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .2);
     opacity: 0;
-    transform: scale(0);
+    transform: translate3d(0, 0, 0) scale(0);
     transform-origin: center;
     transition: .25s ease-out;
     width: 200%;
@@ -69,6 +69,7 @@ export const StyledCollaboratorWrap = styled.a`
     &:focus {
         background: rgba(${colors.white}, .95);
         transform: translate3d(0, -.5rem, 0);
+        z-index: 3;
 
         svg {
             fill: rgb(${colors.black});
@@ -76,7 +77,7 @@ export const StyledCollaboratorWrap = styled.a`
 
         ${StyledDescription} {/* stylelint-disable-line */
             opacity: 1;
-            transform: translate(0, 5rem) scale(1);
+            transform: translate3d(0, 5rem, 0) scale(1);
         }
     }
 `
