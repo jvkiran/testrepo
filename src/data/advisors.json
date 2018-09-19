@@ -1,34 +1,10 @@
 [
-    {
-        "name": "Bruce Pon",
-        "position": "CEO, Acme Inc.",
-        "twitter": "BrucePon",
-        "linkedin": "ponbruce",
-        "image": "bruce",
-        "quote": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    },
-    {
-        "name": "Trent McConaghy",
-        "position": "Advisor",
-        "twitter": "BrucePon",
-        "linkedin": "ponbruce",
-        "image": "bruce",
-        "quote": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries."
-    },
-    {
-        "name": "Don Gossen",
-        "position": "Advisor",
-        "twitter": "BrucePon",
-        "linkedin": "ponbruce",
-        "image": "bruce",
-        "quote": "When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-    },
-    {
-        "name": "Chirdeep Chhabra",
-        "position": "Advisor",
-        "twitter": "BrucePon",
-        "linkedin": "ponbruce",
-        "image": "bruce",
-        "quote": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
-    }
+  {
+    "name": "Meltem Demirors",
+    "position": "Chief Strategy Officer at CoinShares, Head of CS Treasury",
+    "twitter": "Melt_Dem",
+    "linkedin": "meltdem",
+    "image": "meltem",
+    "quote": "From 2015 until now, Meltem has provided strong guidance on our fundraising and go-to-market strategies. As we moved from ascribe.io to BigchainDB and now to Ocean Protocol, her wisdom has been invaluable."
+  }
 ]
