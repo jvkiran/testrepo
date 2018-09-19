@@ -1,9 +1,13 @@
 import Bigchaindb from '../../components/svg/logos/Bigchaindb'
 import Dex from '../../components/svg/logos/Dex'
+import Mattereum from '../../components/svg/logos/Mattereum'
+import Weeve from '../../components/svg/logos/Weeve'
 
 export default {
     Bigchaindb,
-    Dex
+    Dex,
+    Mattereum,
+    Weeve
 }
 
 // import contributors from '../../data/contributors.json'
