@@ -18,7 +18,7 @@ const Member = ({ member, advisor }) => {
             {member && <MemberPhoto member={item} />}
             {advisor && (
                 <QuoteWrap>
-                    <MemberPhoto member={item} actionable />
+                    <MemberPhoto member={item} actionable advisor />
                     <Quote>{!!item.quote && item.quote}</Quote>
                 </QuoteWrap>
             )}
