@@ -13,7 +13,7 @@ import {
 
 const content = {
     'title': 'The companies \ntrusting Ocean Protocol',
-    'intro': `We work closely with our collaborators to iterate on the network's underlying technology. The following projects either have an agreement with Ocean Protocol or are actively working on integrating their project with Ocean Protocol. You've got all this money. How come you always dress like you're doing your laundry? We'll go deliver this crate like professionals, and then we'll go home. Subjugated, yet honored. Bender, I didn't know you liked cooking. That's so cute.`
+    'intro': `We work closely with our collaborators to iterate on the network's underlying technology. The following projects either have an agreement with Ocean Protocol or are actively working on integrating their project with Ocean Protocol.`
 }
 
 const Collaborators = () => (
