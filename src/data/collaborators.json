@@ -14,19 +14,17 @@
   {
     "name": "Web3 Foundation",
     "logo": "web3foundation",
-    "description": "We work closely with the Web3 Foundation... I was having the most wonderful dream. Except you were there, and you were there, and you were there!",
+    "description": "We work closely with the Web3 Foundation...",
     "link": "https://web3.foundation"
   },
   {
     "name": "Aragon",
     "logo": "aragon",
-    "description": "I was having the most wonderful dream. Except you were there, and you were there, and you were there!",
     "link": "https://aragon.org"
   },
   {
     "name": "Innogy",
     "logo": "innogy",
-    "description": "I was having the most wonderful dream. Except you were there, and you were there, and you were there!",
     "link": "https://www.innogy.com"
   },
   {
@@ -42,15 +40,33 @@
     "link": "https://truebit.io"
   },
   {
-    "name": "BigchainDB",
-    "logo": "bigchaindb",
-    "description": "We're rescuing ya. And from now on you're all named Bender Jr. It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years.",
-    "link": "https://www.bigchaindb.com"
+    "name": "Fitchain",
+    "logo": "fitchain",
+    "description": "Fitchain allows organizations to publish their business challenges and connect to data scientists who effectively work on a solution.",
+    "link": "https://fitchain.io"
   },
   {
-    "name": "DEX",
-    "logo": "dex",
-    "description": "Stop! Don't shoot fire stick in space canoe! Cause explosive decompression! I'm Santa Claus! Shinier than yours, meatbag. We'll need to have a look inside you with this camera. Oh sure! Blame the wizards!",
-    "link": "https://www.dex.sg"
+    "name": "Digital Catapult",
+    "logo": "digitalcatapult",
+    "description": "Digital Catapult is the UK's leading advanced digital technology innovation center.",
+    "link": "https://www.digicatapult.org.uk"
+  },
+  {
+    "name": "Enigma",
+    "logo": "enigma",
+    "description": "Enigma is using groundbreaking privacy technologies to build the first platform for scalable, end-to-end decentralized applications.",
+    "link": "https://enigma.co"
+  },
+  {
+    "name": "IBM Watson AI XPRIZE®",
+    "logo": "xprize",
+    "description": "Ocean Protocol will help bring data and information to the IBM Watson AI XPRIZE® participants.",
+    "link": "https://ai.xprize.org/"
+  },
+  {
+    "name": "Anaconda",
+    "logo": "anaconda",
+    "description": "The most popular Python data science platform.",
+    "link": "https://www.anaconda.com"
   }
 ]
