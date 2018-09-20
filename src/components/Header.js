@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
 import { colors } from '../styles'
 import {

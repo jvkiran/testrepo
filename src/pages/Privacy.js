@@ -12,6 +12,9 @@ import SEO from '../components/SEO'
 import privacy from '../data/privacy.md'
 import { StyledSection, StyledContent } from './Privacy.css'
 
+const title = 'Privacy Policy'
+const description = 'Privacy Policy for the use of oceanprotocol.com.'
+
 export default class Privacy extends Component {
     state = {
         text: '',
@@ -37,9 +40,6 @@ export default class Privacy extends Component {
     }
 
     render() {
-        const title = 'Privacy Policy'
-        const description = 'Privacy Policy for the use of oceanprotocol.com.'
-
         return (
             <Fragment>
                 <SEO

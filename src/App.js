@@ -4,6 +4,7 @@ import ScrollToRouteTop from './components/ScrollToRouteTop'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Art from './pages/Art'
+import Faq from './pages/Faq'
 import Privacy from './pages/Privacy'
 import TermsPrelaunch from './pages/TermsPrelaunch'
 import NotFound from './pages/NotFound'
@@ -13,6 +14,7 @@ const Routes = () => (
     <Switch>
         <Route exact component={Home} path="/" />
         <Route component={Art} path="/art" />
+            <Route exact component={Faq} path="/faq" />
         <Route component={Privacy} path="/privacy" />
         <Route component={TermsPrelaunch} path="/terms-prelaunch" />
         <Route component={Newsletter} path="/newsletter" />

@@ -1,8 +1,22 @@
 import styled from 'styled-components'
+import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
+import Section from '../components/Section'
+import { colors } from '../styles'
 
 export const StyledSubTitle = styled(SubTitle)`
     flex: 0 0 100%;
+`
+
+export const StyledSection = styled(Section)`
+    ${Title} { /* stylelint-disable-line */
+        margin-bottom: 1rem;
+    }
+
+    ${SubTitle} { /* stylelint-disable-line */
+        color: rgb(${colors.lightGrey});
+        margin-bottom: 3rem;
+    }
 `
 
 export const StyledFaqRow = styled.div`

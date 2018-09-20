@@ -68,10 +68,6 @@ const MenuItems = [
     {
         name: 'Videos',
         href: '#video'
-    },
-    {
-        name: 'Faq',
-        href: '#faq'
     }
 ]
 
