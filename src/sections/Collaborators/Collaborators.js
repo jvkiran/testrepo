@@ -31,15 +31,14 @@ const Collaborators = () => (
         <ContentRow wide>
             <StyledLine />
             <StyledGrid center textCenter>
-                {collaborators.map(collaborator => {
-                    // TODO: remove this hack once we have all logos only once on page
-                    const random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
-                    const { name, logo, link, description } = collaborator
-                    return <Collaborator key={`${name}-${random}`} name={name} logo={logo} link={link} description={description} />
-                })}
+                {collaborators
+                    .sort(() => 0.5 - Math.random())
+                    .map(collaborator => {
+                        const { name, logo, link, description } = collaborator
+                        return <Collaborator key={name} name={name} logo={logo} link={link} description={description} />
+                    })}
             </StyledGrid>
         </ContentRow>
-
     </Section>
 )
 

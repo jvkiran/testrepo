@@ -16,12 +16,10 @@ const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + strin
 // by checking against the 'logo' value from ./data/collaborators.json
 const Logo = ({ logo, ...props }) => {
     const logoComponentName = capitalizeFirstLetter(logo)
-    // TODO: remove this hack once we have all logos only once on page
-    const random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15)
 
     if (Logos.hasOwnProperty(logoComponentName)) {
         let LogoComponent = Logos[logoComponentName]
-        return <LogoComponent key={`${Logos[logoComponentName]}-${random}`} {...props} />
+        return <LogoComponent key={Logos[logoComponentName]} {...props} />
     } else {
         return null
     }
