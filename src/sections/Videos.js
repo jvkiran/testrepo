@@ -191,7 +191,7 @@ class VideoSlider extends PureComponent {
 
         if (ApiResponse.length === 0) {
             return (
-                <Spinner white />
+                <Spinner />
             )
         } else if (ApiResponse.error) {
             return (
