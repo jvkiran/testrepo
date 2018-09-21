@@ -25,20 +25,22 @@ const Logo = ({ logo, ...props }) => {
     }
 }
 
-const Collaborator = ({ name, logo, link, description }) => (
-    <StyledCollaborator>
-        <StyledCollaboratorWrap href={link}>
-            <Logo logo={logo} className={logo} title={name} />
-            {description && <StyledDescription>{description}</StyledDescription>}
-        </StyledCollaboratorWrap>
-    </StyledCollaborator>
-)
+const Collaborator = ({ collaborator }) => {
+    const { name, logo, link, description } = collaborator
+    return (
+        <StyledCollaborator>
+            <StyledCollaboratorWrap href={link}>
+                <Logo logo={logo} className={logo} title={name} />
+                {description && (
+                    <StyledDescription>{description}</StyledDescription>
+                )}
+            </StyledCollaboratorWrap>
+        </StyledCollaborator>
+    )
+}
 
 Collaborator.propTypes = {
-    name: PropTypes.string.isRequired,
-    logo: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    description: PropTypes.string
+    collaborator: PropTypes.object.isRequired
 }
 
 export default Collaborator

@@ -6,6 +6,7 @@ export const StyledCollaborator = styled.figure`
     margin: 0;
     display: block;
     padding: 1rem;
+    position: relative;
 
     @media screen and (${responsive.xs.min}) {
         flex-basis: 33.33333333%;

@@ -13,7 +13,8 @@
     "svg": "./scripts/svg.sh",
     "deploy": "./scripts/deploy.sh",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap"
+    "postbuild": "react-snap",
+    "ssr": "npm run build && serve -s build/"
   },
   "dependencies": {
     "@oceanprotocol/art": "^1.0.2",
