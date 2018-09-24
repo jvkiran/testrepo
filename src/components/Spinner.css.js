@@ -1,9 +1,30 @@
 import styled, { keyframes } from 'styled-components'
 import { colors } from '../styles'
 
+export const StyledSpinner = styled.div`
+    position: relative;
+    text-align: center;
+    margin-bottom: 1rem;
+
+    &:before {
+        content: '';
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+        margin-left: -10px;
+        border-radius: 50%;
+        border: 2px solid rgb(${colors.purple});
+        border-top-color: rgb(${colors.violet});
+        animation: rotate360 .6s linear infinite;
+    }
+`
+
 export const rotate360 = keyframes`
-    from { transform: rotate(0deg) translateZ(0); }
-    to { transform: rotate(360deg) translateZ(0); }
+    to { transform: rotate(360deg); }
 `
 
 export const StyledSpinnnerWrapper = styled.div`
@@ -17,14 +38,4 @@ export const StyledSpinnnerWrapper = styled.div`
     right: 0;
     bottom: 0;
     z-index: 100;
-`
-
-export const StyledSpinner = styled.div`
-    animation: ${rotate360} 1s infinite linear;
-    border: ${({ white }) => (white ? `0.25rem solid rgba(${colors.white}, 0.2)` : `0.25rem solid rgba(${colors.black}, 0.2)`)};
-    border-radius: 50%;
-    border-top-color: ${({ white }) => (white ? `rgb(${colors.white})` : `rgb(${colors.black})`)};
-    height: 26px;
-    width: 26px;
-    margin: 20px;
 `

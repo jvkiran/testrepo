@@ -5,7 +5,7 @@ import { Container, Children } from './Button.css'
 
 const Button = ({ fetching, children, ...props }) => (
     <Container disabled={fetching} {...props}>
-        {fetching && <Spinner white />}
+        {fetching && <Spinner />}
         <Children fetching={fetching}>{children}</Children>
     </Container>
 )
