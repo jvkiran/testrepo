@@ -615,6 +615,19 @@
         "link": "http://sfblockchainweek.io"
     },
       {
+        "city": "Bratislava",
+        "eventName": "Paralelna Polis Meetup",
+        "date": "2018-10-10",
+        "link": "https://paralelnapolis.sk/homepage/"
+    },
+     {
+        "city": "Vienna",
+        "eventName": "Wexelerate Meetup",
+        "date": "2018-10-11",
+        "link": "https://www.wexelerate.com"
+    },
+  
+      {
         "city": "Amsterdam",
         "eventName": "World Summit AI",
         "date": "2018-10-10",
@@ -646,6 +659,13 @@
         "date": "2018-10-28",
         "date_end": "2018-10-30",
         "link": "http://www.cc-forum.com"
+    },
+      {
+        "city": "Berlin",
+        "eventName": "Blockchain for Science",
+        "date": "2018-11-05",
+        "date_end": "2018-11-06",
+        "link": "https://www.blockchainforsciencecon.com"
     },
     {
         "city": "Berlin",
