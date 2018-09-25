@@ -601,6 +601,26 @@
         "date": "2018-09-25",
         "link": "https://www.meetup.com/9984-Meetup/events/254548640/"
     },
+       {
+        "city": "London",
+        "eventName": "Trustless Ecosystems Meetup",
+        "date": "2018-10-04",
+        "link": "https://www.meetup.com/Trustless-Ecosystems/events/tfmzxpyxnbhc/"
+    },
+      {
+        "city": "San Francisco",
+        "eventName": "SF Blockchain Week",
+        "date": "2018-10-05",
+        "date_end": "2018-10-12",
+        "link": "http://sfblockchainweek.io"
+    },
+      {
+        "city": "Amsterdam",
+        "eventName": "World Summit AI",
+        "date": "2018-10-10",
+        "date_end": "2018-10-11",
+        "link": "https://worldsummit.ai"
+    },
       {
         "city": "Albuquerque",
         "eventName": "MOBI Americas Community Meeting",
