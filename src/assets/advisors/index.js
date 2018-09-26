@@ -1,7 +1,7 @@
-import bruce from './bruce.jpg'
+import carsten from './carsten.jpg'
 import meltem from './meltem.jpg'
 
 export default {
-    bruce,
+    carsten,
     meltem
 }
