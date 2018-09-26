@@ -5,37 +5,27 @@ export const StyledMember = styled.div`
     position: relative;
     margin-left: 2rem;
     margin-bottom: 2rem;
-    width: calc(100% / 2 - 3rem);
+    flex: 0 0 calc(100% / 2 - 3rem);
 
     @media screen and (${responsive.xs.min}) {
-        width: calc(100% / 3 - 3rem);
+        flex-basis: calc(100% / 3 - 3rem);
     }
 
     @media screen and (${responsive.md.min}) {
-        width: calc(100% / 4 - 3rem);
+        flex-basis: calc(100% / 4 - 3rem);
     }
 
-    /* stylelint-disable-next-line */
-    ${({ advisor }) => !advisor && (
+     /* stylelint-disable-next-line */
+     ${({ member }) => member && (
         `@media screen and (${responsive.lg.min}) {
-            width: calc(100% / 5 - 3rem);
+            flex-basis: calc(100% / 5 - 3rem);
         }`
     )};
-
-    & > img {
-        margin: 0;
-        border-radius: 50%;
-        max-width: 100%;
-        height: auto;
-        filter: grayscale(100%);
-        min-height: 141px;
-        background: rgb(${colors.lightGrey});
-    }
 `
 
 export const Name = styled.h3`
     font-size: ${fonts.size.base};
-    color: rgb(${colors.white});
+    color: ${({ empty }) => empty ? `rgb(${colors.grey})` : `rgb(${colors.white})`};
     text-align: center;
     margin-top: .75rem;
     margin-bottom: .35rem;

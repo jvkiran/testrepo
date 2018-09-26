@@ -34,27 +34,6 @@ export const Line = styled.div`
     }
 `
 
-export const Companies = styled.div`
-    margin: 4rem 0 0 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-`
-
-export const CompanyLogo = styled.a`
-    display: inline-block;
-    margin: 0 2rem;
-
-    img {
-        height: 2rem;
-
-        @media screen and (${responsive.sm.max}) {
-            height: 1rem;
-        }
-    }
-`
-
 export const Actions = styled.div`
     display: flex;
     justify-content: center;

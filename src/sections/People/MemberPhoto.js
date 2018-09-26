@@ -5,15 +5,27 @@ import FadeIn from '../../components/FadeIn'
 import teamImg from '../../assets/team'
 import advisorsImg from '../../assets/advisors'
 import { Photo } from './MemberPhoto.css'
+import jellyfish from '@oceanprotocol/art/jellyfish/jellyfish-grid.svg'
 
-const MemberPhoto = ({ member, advisor, ...props }) => {
-    const src = advisor ? advisorsImg[member.image] : teamImg[member.image]
+const MemberPhoto = ({ member, advisor, empty, ...props }) => {
+    let src
+
+    if (advisor) {
+        src = advisorsImg[member.image]
+    } else if (empty) {
+        src = jellyfish
+    } else {
+        src = teamImg[member.image]
+    }
 
     return (
         <Photo {...props}>
             <LazyLoad once height={141} offset={100}>
                 <FadeIn>
-                    <img alt={member.name} src={src} />
+                    {empty
+                        ? <img alt={'Coming soon...'} src={src} />
+                        : <img alt={member.name} src={src} />
+                    }
                 </FadeIn>
             </LazyLoad>
         </Photo>
@@ -21,8 +33,9 @@ const MemberPhoto = ({ member, advisor, ...props }) => {
 }
 
 MemberPhoto.propTypes = {
-    member: PropTypes.object.isRequired,
-    advisor: PropTypes.bool
+    member: PropTypes.object,
+    advisor: PropTypes.bool,
+    empty: PropTypes.bool
 }
 
 export default MemberPhoto

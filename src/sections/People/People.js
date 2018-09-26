@@ -7,15 +7,11 @@ import ContentRow from '../../components/ContentRow'
 import Cell from '../../components/Cell'
 import Team from './Team'
 import Advisors from './Advisors'
-import bigchainDBLogo from '../../assets/logos/bigchain-db.svg'
-import dexLogo from '../../assets/logos/dex.svg'
 import { colors } from '../../styles'
 import {
     StyledTitle,
     StyledSubTitle,
     StyledParagraph,
-    Companies,
-    CompanyLogo,
     Actions,
     StyledButton,
     Line,
@@ -49,23 +45,6 @@ const People = ({ toggleModal }) => (
             </SubHeader>
 
             <Team />
-        </ContentRow>
-
-        <ContentRow narrow>
-            <Companies>
-                <CompanyLogo
-                    href="https://www.bigchaindb.com/?utm_source=oceanprotocol&utm_medium=logo"
-                    rel="noopener"
-                    target="_blank">
-                    <img alt="BigchainDB" src={bigchainDBLogo} />
-                </CompanyLogo>
-                <CompanyLogo
-                    href="https://www.dex.sg/?utm_source=oceanprotocol&utm_medium=logo"
-                    rel="noopener"
-                    target="_blank">
-                    <img alt="Dex" src={dexLogo} />
-                </CompanyLogo>
-            </Companies>
         </ContentRow>
 
         <ContentRow>

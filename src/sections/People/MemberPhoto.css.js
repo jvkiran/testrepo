@@ -17,6 +17,5 @@ export const Photo = styled.figure`
         height: auto;
         filter: grayscale(100%);
         min-height: 141px;
-        background: rgb(${colors.lightGrey});
     }
 `
