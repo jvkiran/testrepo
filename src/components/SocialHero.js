@@ -4,6 +4,7 @@ import buttonGitter from '../assets/buttons/gitter.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonGitcoin from '../assets/buttons/gitcoin.svg'
+import buttonGithub from '../assets/buttons/github.svg'
 import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
 
@@ -23,6 +24,11 @@ const actions = [
         name: 'Telegram Group Chat',
         link: social.telegram,
         icon: buttonTelegram
+    },
+    {
+        name: 'GitHub',
+        link: social.github,
+        icon: buttonGithub
     },
     {
         name: 'Gitter',

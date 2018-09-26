@@ -121,5 +121,9 @@ export const StyledSocialHero = styled.aside`
         &:nth-child(6) {
             animation-delay: 2.25s;
         }
+
+        &:nth-child(7) {
+            animation-delay: 2.5s;
+        }
     }
 `
