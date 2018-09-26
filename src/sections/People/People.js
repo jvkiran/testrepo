@@ -21,7 +21,7 @@ const People = () => (
 
         <ContentRow narrow>
             <StyledParagraph center className="intro">
-                We need a fresh new intro text here talking about both person groups, core team and advisors, with real-world business experience as entrepreneurs, designers and technologists who have started over 20 companies.
+                Ocean is being built by a diverse ecosystem of contributors who share a common vision of unlocking data for AI. Our Core Team and Advisors have converged from many different countries, industries, and backgrounds to collaborate on kickstarting a New Data Economy.
             </StyledParagraph>
         </ContentRow>
 
