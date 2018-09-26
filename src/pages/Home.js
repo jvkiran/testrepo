@@ -28,7 +28,7 @@ export default class Home extends Component {
                 <Project toggleModal={this.toggleModal} />
                 <Papers />
                 <Data />
-                <People toggleModal={this.toggleModal} />
+                <People />
                 <Blog />
                 <Videos />
                 <Faq />

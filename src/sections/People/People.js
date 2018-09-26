@@ -1,9 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Section from '../../components/Section'
-
 import ContentRow from '../../components/ContentRow'
-
 import Cell from '../../components/Cell'
 import Team from './Team'
 import Advisors from './Advisors'
@@ -12,13 +9,11 @@ import {
     StyledTitle,
     StyledSubTitle,
     StyledParagraph,
-    Actions,
-    StyledButton,
     Line,
     SubHeader
 } from './People.css'
 
-const People = ({ toggleModal }) => (
+const People = () => (
     <Section background={colors.black} fontColor={colors.white} id="people">
         <ContentRow>
             <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
@@ -62,19 +57,7 @@ const People = ({ toggleModal }) => (
             </SubHeader>
             <Advisors />
         </ContentRow>
-
-        <ContentRow>
-            <Line />
-
-            <Actions>
-                <StyledButton onClick={() => toggleModal('contributor')}>Join as a contributor</StyledButton>
-            </Actions>
-        </ContentRow>
     </Section>
 )
-
-People.propTypes = {
-    toggleModal: PropTypes.func.isRequired
-}
 
 export default People
