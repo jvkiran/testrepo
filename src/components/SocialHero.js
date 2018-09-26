@@ -3,6 +3,7 @@ import buttonTelegram from '../assets/buttons/telegram.svg'
 import buttonGitter from '../assets/buttons/gitter.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
 import buttonMedium from '../assets/buttons/medium.svg'
+import buttonGitcoin from '../assets/buttons/gitcoin.svg'
 import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
 
@@ -10,7 +11,7 @@ const actions = [
     {
         name: 'Gitcoin Bounties',
         link: social.gitcoin,
-        icon: buttonTelegram,
+        icon: buttonGitcoin,
         important: true
     },
     {

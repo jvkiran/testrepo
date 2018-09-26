@@ -9,11 +9,16 @@ export const SocialLink = styled.a`
     display: inline-block;
     padding: .5rem 1rem;
     margin: .25rem 0;
+    margin-left: .5rem;
     color: rgb(${colors.dimmedGrey});
     font-size: ${fonts.size.small};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
-    background: ${({ important }) => important ? `rgba(${colors.purple}, .9)` : `rgba(${colors.black}, .8)`};
+    background: ${({ important }) => important ? `rgba(${colors.purple}, .9)` : `rgba(${colors.darkPurple}, .8)`};
+
+    &:first-child {
+        margin-left: 0;
+    }
 
     &:hover,
     &:focus {

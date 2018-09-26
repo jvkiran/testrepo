@@ -27,8 +27,10 @@ export const StyledHero = styled(Section)`
 export const StyledHeroContent = styled.div`
     position: relative;
     z-index: 2;
+    margin-top: 8rem;
 
     @media screen and (${responsive.sm.min}) {
+        margin-top: 0;
         display: flex;
         align-items: center;
         justify-content: center;
