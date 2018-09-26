@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Title from '../../components/Title'
+import SubTitle from '../../components/SubTitle'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import Grid from '../../components/Grid'
@@ -7,6 +8,10 @@ import { colors, fonts, responsive } from '../../styles'
 
 export const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
+`
+
+export const StyledSubTitle = styled(SubTitle)`
+    margin-top: -.5rem;
 `
 
 export const StyledParagraph = styled(Paragraph)`

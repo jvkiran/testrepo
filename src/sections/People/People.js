@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Section from '../../components/Section'
-import SubTitle from '../../components/SubTitle'
+
 import ContentRow from '../../components/ContentRow'
 
 import Cell from '../../components/Cell'
@@ -12,6 +12,7 @@ import dexLogo from '../../assets/logos/dex.svg'
 import { colors } from '../../styles'
 import {
     StyledTitle,
+    StyledSubTitle,
     StyledParagraph,
     Companies,
     CompanyLogo,
@@ -38,7 +39,7 @@ const People = ({ toggleModal }) => (
 
             <SubHeader>
                 <Cell width={1 / 4}>
-                    <SubTitle white id="team">Core team</SubTitle>
+                    <StyledSubTitle white id="team">Core team</StyledSubTitle>
                 </Cell>
                 <Cell width={3 / 4}>
                     <StyledParagraph>
@@ -72,11 +73,11 @@ const People = ({ toggleModal }) => (
 
             <SubHeader>
                 <Cell width={1 / 4}>
-                    <SubTitle white id="advisors">Advisors</SubTitle>
+                    <StyledSubTitle white id="advisors">Advisors</StyledSubTitle>
                 </Cell>
                 <Cell width={3 / 4}>
                     <StyledParagraph>
-                        The Ocean Protocol advisors...
+                        Our advisors are a group of truly world-class and talented thinkers and doers who are bringing their capabilities and expertise to help launch a Data Economy around Ocean. All the advisors are leaders in their space and their experience spans the range of industries that need to grapple with the disruptive power of data, AI and blockchain.
                     </StyledParagraph>
                 </Cell>
             </SubHeader>
