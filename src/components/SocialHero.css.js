@@ -1,26 +1,23 @@
 import styled from 'styled-components'
-import { responsive, colors, fonts } from '../styles'
+import { colors, fonts } from '../styles'
 
 export const SocialBand = styled.aside`
-    text-align: center;
+    margin-top: 2rem;
+`
 
-    & a {
-        display: inline-block;
-        padding: 1rem;
-        margin: .25rem 0;
-        color: rgba(${colors.lightGrey}, .9);
-        font-size: ${fonts.size.small};
-        font-family: ${fonts.family.button};
-        font-weight: ${fonts.fontWeight.title};
-        background: rgba(${colors.black}, .6);
+export const SocialLink = styled.a`
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin: .25rem 0;
+    color: rgb(${colors.dimmedGrey});
+    font-size: ${fonts.size.small};
+    font-family: ${fonts.family.button};
+    font-weight: ${fonts.fontWeight.title};
+    background: ${({ important }) => important ? `rgba(${colors.purple}, .9)` : `rgba(${colors.black}, .8)`};
 
-        &:hover {
-            color: rgba(${colors.white}, 1);
-        }
-
-        @media screen and (${responsive.sm.min}) {
-            margin: 1rem;
-        }
+    &:hover,
+    &:focus {
+        color: rgba(${colors.white}, 1);
     }
 
     & img {
