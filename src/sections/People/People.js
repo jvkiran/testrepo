@@ -21,7 +21,7 @@ const People = () => (
 
         <ContentRow narrow>
             <StyledParagraph center className="intro">
-                Ocean is being built by a diverse ecosystem of contributors who share a common vision of unlocking data for AI. Our Core Team and Advisors have converged from many different countries, industries, and backgrounds to collaborate on kickstarting a New Data Economy.
+                Ocean Protocol is being built by a diverse ecosystem of contributors who share a common vision of unlocking data for AI. Our core team and advisors have converged from many different countries, industries, and backgrounds to collaborate on kickstarting a New Data Economy.
             </StyledParagraph>
         </ContentRow>
 
