@@ -30,8 +30,8 @@ const MenuItems = [
         href: '#why'
     },
     {
-        name: 'Team',
-        href: '#team'
+        name: 'People',
+        href: '#people'
     },
     {
         name: 'Blog',
