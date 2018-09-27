@@ -9,7 +9,7 @@ import TermsPrelaunch from './pages/TermsPrelaunch'
 import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 
-const App = () => (
+const App = ({ location }) => (
     <Fragment>
         <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`} />} />
@@ -25,7 +25,7 @@ const App = () => (
 )
 
 App.propTypes = {
-    location: PropTypes.object, // eslint-disable-line
+    location: PropTypes.object
 }
 
 export default App
