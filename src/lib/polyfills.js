@@ -1,5 +1,4 @@
-/* eslint-disable */
-window.matchMedia = window.matchMedia || function () {
+window.matchMedia = window.matchMedia || function() {
     return {
         matches: false,
         addListener() { },
