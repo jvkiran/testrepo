@@ -690,5 +690,11 @@
         "eventName": "Data Natives",
         "date": "2018-11-22",
         "link": "http://datanatives.io"
+    },    
+      {
+        "city": "Seoul",
+        "eventName": "AI Summit Seoul",
+        "date": "2018-12-04",
+        "link": "http://aisummit.co.kr"
     }
 ]
