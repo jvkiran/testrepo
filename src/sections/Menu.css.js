@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import fadeIn from 'react-animations/lib/fade-in'
 import { colors, fonts, responsive, transitions, layout } from '../styles'
@@ -36,7 +37,7 @@ export const StyledContainer = styled.div`
     align-items: center;
 `
 
-export const StyledLogo = styled.div`
+export const StyledLogo = styled(Link)`
     height: 60px;
     z-index: 10;
     margin-left: 20px;

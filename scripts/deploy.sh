@@ -23,13 +23,6 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
 
     s3sync $AWS_S3_BUCKET_BETA
 
-    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/settings/development_mode" \
-    -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
-    -H "X-Auth-Key: $CLOUDFLARE_KEY" \
-    -H "Content-Type: application/json" \
-    --data '{"value":"off"}'
-
-
 ##
 ## check for master push which is no pull request
 ##
