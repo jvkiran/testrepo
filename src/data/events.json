@@ -616,15 +616,15 @@
     },
       {
         "city": "Bratislava",
-        "eventName": "Paralelna Polis Meetup",
+        "eventName": "Web3 Polkadot + Ocean Meetup",
         "date": "2018-10-10",
-        "link": "https://paralelnapolis.sk/homepage/"
+        "link": "https://www.eventbrite.co.uk/e/visions-of-web-3-polkadot-network-ocean-protocol-tickets-50949237541"
     },
      {
         "city": "Vienna",
-        "eventName": "Wexelerate Meetup",
+        "eventName": "Web3 Polkadot + Ocean Meetup",
         "date": "2018-10-11",
-        "link": "https://www.wexelerate.com"
+        "link": "https://www.eventbrite.at/e/web-3-the-visions-of-a-decentralized-web-tickets-50903432537"
     },
   
       {
@@ -640,12 +640,30 @@
         "date": "2018-10-12",
         "link": "https://go.dlt.mobi/events/NM/"
     },
+      {
+        "city": "London",
+        "eventName": "The Bitmeet",
+        "date": "2018-10-13",
+        "link": "https://www.eventbrite.com/e/the-big-bitmeet-2018-largest-student-led-blockchain-conference-bigbitmeetio-tickets-50133286008"
+    },
+      {
+        "city": "Singapore",
+        "eventName": "NASA Hackathon",
+        "date": "2018-10-16",
+        "link": "https://www.eventbrite.sg/e/nasa-space-apps-challenge-2018-pre-hackathon-workshop-tickets-50255883701?aff=invite"
+    },
     {
         "city": "Berlin",
         "eventName": "Web3 Summit",
         "date": "2018-10-22",
         "date_end": "2018-10-24",
         "link": "http://web3summit.com"
+    },
+      {
+        "city": "Berlin",
+        "eventName": "Token Engineering Global Gathering",
+        "date": "2018-10-25",
+        "link": "https://www.meetup.com/Token-Engineering/events/254583192/"
     },
     {
         "city": "Singapore",
