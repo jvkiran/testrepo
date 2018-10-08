@@ -11,7 +11,6 @@ import Newsletter from './pages/Newsletter'
 
 const Routes = () => (
     <Switch>
-        {/* <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`} {...props} />} /> */}
         <Route exact component={Home} path="/" />
         <Route component={Art} path="/art" />
         <Route component={Privacy} path="/privacy" />

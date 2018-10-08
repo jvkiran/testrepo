@@ -30,7 +30,7 @@ export default class Waves extends Component {
     }
 
     componentWillUnmount() {
-        this.destroy()
+        this.reset()
     }
 
     handleVisibility = isVisible => {
@@ -131,16 +131,20 @@ export default class Waves extends Component {
         this.frameId = requestAnimationFrame(this.animate)
     }
 
-    destroy() {
+    reset() {
         cancelAnimationFrame(this.frameId)
-        // if (this.renderer && this.mount) {
-        //     this.mount.removeChild(this.renderer.domElement)
-        // }
         window.removeEventListener('resize', this.handleResize)
         this.setState({
             count: 0,
             running: false
         })
+    }
+
+    destroy() {
+        this.reset()
+        if (this.renderer && this.mount) {
+            this.mount.removeChild(this.renderer.domElement)
+        }
     }
 
     animate = () => {
