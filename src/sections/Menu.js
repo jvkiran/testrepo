@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
 import smoothScroll from '../lib/smoothScroll'
 import Hamburger from '../components/Hamburger'
@@ -144,10 +143,10 @@ class Menu extends Component {
     }
 
     onSmoothScroll = (e) => {
-        if (e.target.getAttribute('href').indexOf('#') !== -1) {
+        if (e.target.getAttribute('href').indexOf('#')) {
             e.preventDefault()
             if (this.state.active) this.toggleMobileMenu()
-            smoothScroll(e)
+            smoothScroll('a[href*="#"]')
         }
     }
 
@@ -155,10 +154,8 @@ class Menu extends Component {
         return (
             <StyledMenu fixed={this.state.fixed}>
                 <StyledContainer>
-                    <StyledLogo>
-                        <Link to={'/'} title="Back to homepage">
-                            <OceanLogo />
-                        </Link>
+                    <StyledLogo to={'/'} title="Back to homepage">
+                        <OceanLogo />
                     </StyledLogo>
                     <StyledNav>
                         {MenuItems.map(item => (
@@ -176,7 +173,7 @@ class Menu extends Component {
                         {MenuItems.map(item => (
                             <StyledMenuItem
                                 current={item.href.replace('#', '') === this.state.current}
-                                href={item.href}
+                                to={item.href}
                                 key={item.name}
                                 onClick={this.onSmoothScroll}>
                                 {item.name}
