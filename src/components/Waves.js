@@ -133,9 +133,9 @@ export default class Waves extends Component {
 
     destroy() {
         cancelAnimationFrame(this.frameId)
-        if (this.renderer && this.mount) {
-            this.mount.removeChild(this.renderer.domElement)
-        }
+        // if (this.renderer && this.mount) {
+        //     this.mount.removeChild(this.renderer.domElement)
+        // }
         window.removeEventListener('resize', this.handleResize)
         this.setState({
             count: 0,
