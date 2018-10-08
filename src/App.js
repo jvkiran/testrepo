@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import ScrollToRouteTop from './components/ScrollToRouteTop'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Art from './pages/Art'
@@ -9,10 +9,10 @@ import TermsPrelaunch from './pages/TermsPrelaunch'
 import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 
-const App = ({ location }) => (
-    <>
+const App = () => (
+    <ScrollToRouteTop>
         <Switch>
-            <Route exact strict path="/:url*" render={({ location }) => <Redirect to={`${location.pathname}/`} />} />
+            <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`} {...props} />} />
             <Route exact component={Home} path="/" />
             <Route exact component={Art} path="/art" />
             <Route exact component={Privacy} path="/privacy" />
@@ -21,11 +21,7 @@ const App = ({ location }) => (
             <Route component={NotFound} path="*" />
         </Switch>
         <Footer />
-    </>
+    </ScrollToRouteTop>
 )
-
-App.propTypes = {
-    location: PropTypes.object
-}
 
 export default App
