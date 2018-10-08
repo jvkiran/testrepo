@@ -23,6 +23,25 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; th
 
     s3sync $AWS_S3_BUCKET_BETA
 
+    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/settings/development_mode" \
+    -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+    -H "X-Auth-Key: $CLOUDFLARE_KEY" \
+    -H "Content-Type: application/json" \
+    --data '{"value":"on"}'
+
+    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/settings/rocket_loader" \
+    -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+    -H "X-Auth-Key: $CLOUDFLARE_KEY" \
+    -H "Content-Type: application/json" \
+    --data '{"value":"off"}'
+
+    curl -X PATCH "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/settings/minify" \
+    -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
+    -H "X-Auth-Key: $CLOUDFLARE_KEY" \
+    -H "Content-Type: application/json" \
+    --data '{"value":{"css":"off","html":"off","js":"off"}}'
+
+
 ##
 ## check for master push which is no pull request
 ##
