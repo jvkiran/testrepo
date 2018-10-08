@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Art from './pages/Art'
@@ -10,9 +9,9 @@ import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 
 const App = () => (
-    <Fragment>
+    <>
         <Switch>
-            <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`} />} />
+            <Route exact strict path="/:url*" render={({ location }) => <Redirect to={`${location.pathname}/`} />} />
             <Route exact component={Home} path="/" />
             <Route exact component={Art} path="/art" />
             <Route exact component={Privacy} path="/privacy" />
@@ -21,11 +20,7 @@ const App = () => (
             <Route component={NotFound} path="*" />
         </Switch>
         <Footer />
-    </Fragment>
+    </>
 )
-
-App.propTypes = {
-    location: PropTypes.object, // eslint-disable-line
-}
 
 export default App
