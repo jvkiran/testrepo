@@ -156,7 +156,7 @@ class Menu extends Component {
             <StyledMenu fixed={this.state.fixed}>
                 <StyledContainer>
                     <StyledLogo>
-                        <Link to={'/'}>
+                        <Link to={'/'} title="Back to homepage">
                             <OceanLogo />
                         </Link>
                     </StyledLogo>
