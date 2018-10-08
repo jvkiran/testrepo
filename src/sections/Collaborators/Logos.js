@@ -1,22 +1,21 @@
 //
-// This file should be made redundant by
+// This file could be made redundant by
 // https://github.com/smooth-code/svgr/issues/161
 //
-
-import Agorai from '../../components/svg/logos/Agorai'
-import Anaconda from '../../components/svg/logos/Anaconda'
-import Aragon from '../../components/svg/logos/Aragon'
-import Bigchaindb from '../../components/svg/logos/Bigchaindb'
-import Dex from '../../components/svg/logos/Dex'
-import Digitalcatapult from '../../components/svg/logos/Digitalcatapult'
-import Enigma from '../../components/svg/logos/Enigma'
-import Fitchain from '../../components/svg/logos/Fitchain'
-import Innogy from '../../components/svg/logos/Innogy'
-import Mattereum from '../../components/svg/logos/Mattereum'
-import Truebit from '../../components/svg/logos/Truebit'
-import Weeve from '../../components/svg/logos/Weeve'
-import Web3foundation from '../../components/svg/logos/Web3foundation'
-import Xprize from '../../components/svg/logos/Xprize'
+import { ReactComponent as Agorai } from '../../assets/logos/agorai.svg'
+import { ReactComponent as Anaconda } from '../../assets/logos/anaconda.svg'
+import { ReactComponent as Aragon } from '../../assets/logos/aragon.svg'
+import { ReactComponent as Bigchaindb } from '../../assets/logos/bigchaindb.svg'
+import { ReactComponent as Dex } from '../../assets/logos/dex.svg'
+import { ReactComponent as Digitalcatapult } from '../../assets/logos/digitalcatapult.svg'
+import { ReactComponent as Enigma } from '../../assets/logos/enigma.svg'
+import { ReactComponent as Fitchain } from '../../assets/logos/fitchain.svg'
+import { ReactComponent as Innogy } from '../../assets/logos/innogy.svg'
+import { ReactComponent as Mattereum } from '../../assets/logos/mattereum.svg'
+import { ReactComponent as Truebit } from '../../assets/logos/truebit.svg'
+import { ReactComponent as Weeve } from '../../assets/logos/weeve.svg'
+import { ReactComponent as Web3foundation } from '../../assets/logos/web3foundation.svg'
+import { ReactComponent as Xprize } from '../../assets/logos/xprize.svg'
 
 export default {
     Agorai,
