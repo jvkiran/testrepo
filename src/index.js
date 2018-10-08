@@ -24,7 +24,3 @@ if (rootElement.hasChildNodes()) {
 } else {
     render(components, rootElement)
 }
-
-if (module.hot) {
-    module.hot.accept()
-}

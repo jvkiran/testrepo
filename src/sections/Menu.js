@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import oceanLogo from '@oceanprotocol/art/logo/logo-white.svg'
+import { Link } from 'react-router-dom'
+import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
 import smoothScroll from '../lib/smoothScroll'
 import Hamburger from '../components/Hamburger'
 import { layout } from '../styles'
@@ -155,9 +156,9 @@ class Menu extends Component {
             <StyledMenu fixed={this.state.fixed}>
                 <StyledContainer>
                     <StyledLogo>
-                        <a href="/">
-                            <img alt="Ocean" src={oceanLogo} />
-                        </a>
+                        <Link to={'/'}>
+                            <OceanLogo />
+                        </Link>
                     </StyledLogo>
                     <StyledNav>
                         {MenuItems.map(item => (
