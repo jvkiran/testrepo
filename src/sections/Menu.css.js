@@ -41,7 +41,8 @@ export const StyledLogo = styled.div`
     z-index: 10;
     margin-left: 20px;
 
-    & img {
+    & svg {
+        width: auto;
         height: 100%;
     }
 `
