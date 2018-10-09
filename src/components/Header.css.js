@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import { Link } from 'react-router-dom'
 import fadeIn from 'react-animations/lib/fade-in'
 import { colors, fonts, transitions } from '../styles'
 
@@ -17,17 +18,18 @@ export const StyledContainer = styled.div`
     align-items: center;
 `
 
-export const StyledLogo = styled.div`
+export const StyledLogo = styled(Link)`
     height: 60px;
     z-index: 10;
     margin-left: 20px;
 
-    & img {
+    & svg {
+        width: auto;
         height: 100%;
     }
 `
 
-export const StyledMenuItem = styled.a`
+export const StyledMenuItem = styled(Link)`
     transition: ${transitions.base};
     color: rgba(${colors.white}, .7);
     font-family: ${fonts.family.button};

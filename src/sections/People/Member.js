@@ -7,6 +7,7 @@ import {
     Name,
     Quote,
     QuoteWrap,
+    QuoteLink,
     Position
 } from './Member.css'
 
@@ -28,7 +29,11 @@ const Member = ({ member, advisor, empty }) => {
                     {advisor && (
                         <QuoteWrap>
                             <MemberPhoto member={item} actionable advisor />
-                            <Quote>{!!item.quote && item.quote}</Quote>
+                            <Quote>
+                                {!!item.quote && item.quote}
+
+                                {item.link && <QuoteLink href={item.link}>More info</QuoteLink>}
+                            </Quote>
                         </QuoteWrap>
                     )}
                     <Name>{item.name}</Name>

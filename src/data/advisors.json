@@ -2,6 +2,7 @@
   {
     "name": "Meltem Demirors",
     "position": "Chief Strategy Officer at CoinShares, Head of CS Treasury",
+    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisors-meltem-demirors-1ca17e775877",
     "twitter": "Melt_Dem",
     "linkedin": "meltdem",
     "image": "meltem",
@@ -10,9 +11,19 @@
   {
     "name": "Dr. Carsten Stöcker",
     "position": "CEO Spherity & Interlinked Protocol",
+    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-2-dr-carsten-stöcker-29255cbcf0de",
     "twitter": "carstenstoecker",
     "linkedin": "carsten-stoecker-1145871",
     "image": "carsten",
     "quote": "Carsten shares deep insights on IoT, energy and identity solutions that can integrate into Ocean Protocol, as well as giving us his futuristic viewpoints to help us see around the corner."
+  },
+  {
+    "name": "Prof. Dr. Sebastian Gajek",
+    "position": "Co-founder & CTO Weeve",
+    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-prof-dr-sebastian-gajek-5f7e3bd60802",
+    "twitter": "weeveSebastian",
+    "linkedin": "sebastiangajek",
+    "image": "sebastian",
+    "quote": "Sebastian gave us great insights in their Token Curation development such as the graded TCR. More importantly, many of their developments, research and insights are being widely shared in the open source community."
   }
 ]
