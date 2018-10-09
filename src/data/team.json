@@ -36,7 +36,8 @@
   },
   {
     "name": "Mike Anderson",
-    "github": "mikera",
+    "linkedin": "mike-anderson-7a9412",
+    "twitter": "mikera",
     "image": "mike"
   },
   {
@@ -101,9 +102,10 @@
     "image": "kiran"
   },
   {
-    "name": "Artur Gomer",
-    "linkedin": "arturgomer",
-    "image": "artur"
+    "name": "Samer Sallam",
+    "github": "ssallam",
+    "linkedin": "samer-sallam-0968644",
+    "image": "samer"
   },
   {
     "name": "Fang Gong",
@@ -113,31 +115,15 @@
     "image": "fang"
   },
   {
-    "name": "Malte Sielski",
-    "linkedin": "malte-sielski-198991ab",
-    "twitter": "malte_slk",
-    "image": "malte"
+    "name": "Jernej Pregelj",
+    "twitter": "jernejpregelj",
+    "linkedin": "jernej-pregelj",
+    "image": "jernej"
   },
   {
-    "name": "Kamal Ved",
-    "linkedin": "kamalved",
-    "image": "kamal"
-  },
-  {
-    "name": "Chalid Mannaa",
-    "linkedin": "cmannaa",
-    "image": "chalid"
-  },
-  {
-    "name": "Katharina Grieß",
-    "github": "codegeschrei",
-    "image": "katharina"
-  },
-  {
-    "name": "Tim Daubenschütz",
-    "twitter": "TimDaub",
-    "github": "TimDaub",
-    "image": "tim"
+    "name": "Troy McConaghy",
+    "twitter": "TroyMc",
+    "image": "troy"
   },
   {
     "name": "Gautam Dhameja",
@@ -146,67 +132,9 @@
     "image": "gautam"
   },
   {
-    "name": "Jernej Pregelj",
-    "twitter": "jernejpregelj",
-    "linkedin": "jernej-pregelj",
-    "image": "jernej"
-  },
-  {
-    "name": "Muawia Khan",
-    "twitter": "mobykhn",
-    "linkedin": "muawiakhan",
-    "image": "muawia"
-  },
-  {
-    "name": "Shahbaz Nazir",
-    "github": "shahbazn",
-    "linkedin": "shahbaz-nazir-84766451",
-    "twitter": "shahbaz_nazir",
-    "image": "shahbaz"
-  },
-  {
-    "name": "Alberto Granzotto",
-    "twitter": "vrde",
-    "github": "vrde",
-    "image": "alberto"
-  },
-  {
-    "name": "Troy McConaghy",
-    "twitter": "TroyMc",
-    "image": "troy"
-  },
-  {
-    "name": "Sarah-Jean Vallon",
-    "linkedin": "sarah-jean-vallon-b4603a65",
-    "image": "sarah"
-  },
-  {
     "name": "Ricardo Garcia",
     "linkedin": "ricardo-garcia-b226a6a9",
     "image": "ricardo"
-  },
-  {
-    "name": "Manuel Rodriguez",
-    "linkedin": "manuel-rodr%C3%ADguez-18555a11a",
-    "github": "manolodewiner",
-    "image": "manuel"
-  },
-  {
-    "name": "Vanshdeep Singh",
-    "github": "kansi",
-    "linkedin": "vanshdeep-singh",
-    "image": "vanshdeep"
-  },
-  {
-    "name": "Daniel Lustig",
-    "linkedin": "daniel-lustig-852a408a",
-    "image": "daniel"
-  },
-  {
-    "name": "Samer Sallam",
-    "github": "ssallam",
-    "linkedin": "samer-sallam-0968644",
-    "image": "samer"
   },
   {
     "name": "Lev Berman",
@@ -214,8 +142,75 @@
     "image": "lev"
   },
   {
-    "name": "Henry YP Ho",
-    "github": "henryyp",
-    "image": "henry"
+    "name": "Chalid Mannaa",
+    "linkedin": "cmannaa",
+    "image": "chalid"
+  },
+  {
+    "name": "Artur Gomer",
+    "linkedin": "arturgomer",
+    "image": "artur"
+  },
+  {
+    "name": "Sarah-Jean Vallon",
+    "linkedin": "sarah-jean-vallon-b4603a65",
+    "image": "sarah"
+  },
+  {
+    "name": "Daniel Lustig",
+    "linkedin": "daniel-lustig-852a408a",
+    "image": "daniel"
+  },
+  {
+    "name": "Malte Sielski",
+    "linkedin": "malte-sielski-198991ab",
+    "twitter": "malte_slk",
+    "image": "malte"
+  },
+  {
+    "name": "Patty Lee",
+    "linkedin": "pattyleeworldtrainer",
+    "image": "patty"
+  },
+  {
+    "name": "Alessandra Albano",
+    "linkedin": "alessandraalbano",
+    "image": "alessandra"
+  },
+  {
+    "name": "Chris Lee",
+    "linkedin": "chris-lee-3aa44938",
+    "image": "chris"
+  },
+  {
+    "name": "Irene Lopez De Vallejo",
+    "linkedin": "irenelopezdevallejo",
+    "twitter": "ILdeV",
+    "image": "irene"
+  },
+  {
+    "name": "Paul Galwas",
+    "linkedin": "paul-galwas-9236b9",
+    "image": "paul"
+  },
+  {
+    "name": "Yvonn Ong",
+    "linkedin": "yvonn-ong",
+    "image": "yvonn"
+  },
+  {
+    "name": "Aishwarya Nari",
+    "linkedin": "aishwarya-v-r",
+    "image": "aish"
+  },
+  {
+    "name": "Kyriakos Zannikos",
+    "linkedin": "kyriakoszannikos",
+    "image": "kyriakos"
+  },
+  {
+    "name": "Sami Jaaskelainen",
+    "linkedin": "sami-jääskeläinen-74a8381",
+    "image": "sami"
   }
 ]
