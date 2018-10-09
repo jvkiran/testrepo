@@ -38,6 +38,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 
 - Events: [`events.json`](src/data/events.json)
 - Team: [`team.json`](src/data/team.json)
+- Advisors: [`advisors.json`](src/data/advisors.json)
 - Art: [`art.json`](src/data/art.json)
 - FAQ: [`faq.json`](src/data/faq.json)
 - Roadmap: [`roadmap.json`](src/data/roadmap.json)
@@ -51,7 +52,6 @@ On the events section, all events are automatically sorted chronologically by th
 #### `date` & `date_end`
 
 When adding a multi-day event, don't use the full event range but only the date one of the team members is actually present at an event. This is usually just one day, e.g. when giving a talk. Only add the optional `date_end` when our presence at an event is confirmed for multiple days.
-
 
 ### Papers
 
@@ -78,14 +78,13 @@ We have the following forms on our website collecting lead data:
 - *Newsletter subscription*: Email
 - *Join as Data Provider*: Name, Email, Company, Comment
 - *Join as Data Consumer*: Name, Email, Company, Comment
-- *Join as Contributor*: Name, Email, Role, Comment
 
 All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
 
 Via Zapier, the data is synced further in real time when new submissions happen:
 
-- the Data Provider, Data Consumer, and Contributor data into Slack channel #form-submissions in real time
-- the Data Provider, Data Consumer, and Contributor data into Google Sheets
+- the Data Provider & Data Consumer into Slack channel #form-submissions
+- the Data Provider & Data Consumer data into Google Sheets
 
 ## SEO
 
@@ -110,7 +109,7 @@ const Page = ({ location }) => {
 }
 
 Page.propTypes = {
-    location: PropTypes.object.isRequired, // eslint-disable-line
+    location: PropTypes.object.isRequired
 }
 ```
 
@@ -189,7 +188,9 @@ Code style follows:
 
 ![shipping](https://cloud.githubusercontent.com/assets/90316/26559768/e21e9724-44b1-11e7-90cf-6ef6ebb06d09.gif)
 
-The site is hosted in a S3 bucket `oceanprotocol.com`, with DNS setup in Cloudflare. Cloudflare provides SSL certificate, among other things. The site gets built & deployed automatically via Travis which is the preferred way of deployment. It makes sure the site is always deployed with fresh dependencies and only after a successful test & build.
+The site is hosted in a S3 bucket `oceanprotocol.com`, with DNS setup in Cloudflare. Cloudflare provides SSL certificate, among other things. 
+
+The site gets built & deployed automatically via Travis which is the preferred way of deployment. It makes sure the site is always deployed with fresh dependencies and only after a successful test & build.
 
 Build & deployment happens under the following conditions on Travis:
 
