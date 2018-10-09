@@ -6,7 +6,7 @@ import Button from '../../components/Button'
 export const ArchiveButton = styled(Button)`
     text-align: center;
     cursor: pointer;
-    margin: 5rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     padding: .8rem 1rem;
     background: rgba(${colors.darkGrey}, .8);
     border: .08rem solid rgb(${colors.pink});

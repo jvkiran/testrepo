@@ -1,11 +1,9 @@
 import React, { PureComponent } from 'react'
-import Slider from 'react-slick'
+import PropTypes from 'prop-types'
 import Event from './Event'
-import { StyledEvents } from './EventsList.css'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+import { StyledEventsList, Track, Item } from './EventsList.css'
 
-function filterEvents(events) {
+const FilteredEvents = ({ events }) => {
     if (events.length > 0) {
         // first, filter out all past events
         const eventsFiltered = events.filter(event => {
@@ -19,42 +17,30 @@ function filterEvents(events) {
         // then, sort the remaining ones by date
         const eventsFilteredSorted = eventsFiltered.sort((a, b) => a.date.localeCompare(b.date))
 
-        // Make the group size equal to the number of future events if there are less than 4
-        const groupSize = (eventsFilteredSorted.length < 4) ? eventsFilteredSorted.length : 4
-
-        return eventsFilteredSorted.map((event, index) => (
-            <Event event={event} key={index} />
-        ))
-            // finally, put a <div> around every 4th event for the slider
-            .reduce((r, element, index) => {
-                index % groupSize === 0 && r.push([])
-                r[r.length - 1].push(element)
-                return r
-            }, [])
-            .map((rowContent, index) => <div key={index}>{rowContent}</div>)
-    } else return []
+        return (
+            <Track>
+                {eventsFilteredSorted.map((event, index) => (
+                    <Item key={index}>
+                        <Event event={event} />
+                    </Item>
+                ))}
+            </Track>
+        )
+    } else {
+        return []
+    }
 }
 
 export default class EventsList extends PureComponent {
-    list = filterEvents(this.props.events)
-
-    settings = {
-        dots: true,
-        infinite: false,
-        arrows: true,
-        speed: 200,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        swipeToSlide: true
+    static propTypes = {
+        events: PropTypes.array
     }
 
     render() {
         return (
-            <StyledEvents>
-                <Slider {...this.settings}>
-                    {this.list}
-                </Slider>
-            </StyledEvents>
+            <StyledEventsList>
+                <FilteredEvents events={this.props.events} />
+            </StyledEventsList>
         )
     }
 }
