@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
 import fadeIn from 'react-animations/lib/fade-in'
