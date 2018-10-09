@@ -1,11 +1,12 @@
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
-import Section from '../components/Section'
-import Title from '../components/Title'
-import Paragraph from '../components/Paragraph'
-import { colors, responsive, fonts, layout } from '../styles'
+import Section from '../../components/Section'
+import Title from '../../components/Title'
+import Paragraph from '../../components/Paragraph'
+import ContentRow from '../../components/ContentRow'
+import { colors, responsive, fonts, layout } from '../../styles'
 
-export const StyledHero = styled(Section)`
+export const Hero = styled(Section)`
     background: rgb(${colors.black});
     padding-top: 0;
     position: relative;
@@ -14,6 +15,10 @@ export const StyledHero = styled(Section)`
 
     @media screen and (${responsive.sm.min}) {
         min-height: calc(100vh - (${layout.pageFrame} * 2));
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     > div {
@@ -24,17 +29,32 @@ export const StyledHero = styled(Section)`
     }
 `
 
-export const StyledHeroContent = styled.div`
+export const HeroContent = styled(ContentRow)`
     position: relative;
     z-index: 2;
-    margin-top: 8rem;
+    margin-top: 4rem;
 
     @media screen and (${responsive.sm.min}) {
-        margin-top: 0;
+        margin-top: 2rem;
+    }
+`
+
+export const HeroGrid = styled.div`
+    @media screen and (${responsive.md.min}) {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: calc(100vh - (${layout.pageFrame} * 8));
+        justify-content: space-between;
+    }
+`
+
+export const HeroGridCell = styled.div`
+    @media screen and (${responsive.md.min}) {
+        &:first-child {
+            flex: 0 0 55%;
+        }
+
+        &:last-child {
+            flex: 0 0 35%;
+        }
     }
 `
 
@@ -51,6 +71,9 @@ export const StyledTagline = styled(Title)`
 
     @media screen and (${responsive.sm.min}) {
         font-size: ${fonts.size.h2};
+    }
+
+    @media screen and (${responsive.md.min}) {
         text-align: left;
     }
 `
@@ -59,13 +82,13 @@ export const StyledParagraph = styled(Paragraph)`
     animation: ${animation} 1.5s backwards;
     text-align: center;
 
-    @media screen and (${responsive.sm.min}) {
+    @media screen and (${responsive.md.min}) {
         text-align: left;
     }
 `
 
 export const StyledVideoThumbnail = styled.div`
-    max-width: 280px;
+    max-width: 200px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -75,8 +98,9 @@ export const StyledVideoThumbnail = styled.div`
     background: rgb(${colors.black});
     animation: ${animation} 1.5s .5s backwards;
 
-    @media screen and (${responsive.sm.min}) {
-        margin-top: 3rem;
+    @media screen and (${responsive.md.min}) {
+        max-width: none;
+        margin-top: 1rem;
     }
 
     img {
