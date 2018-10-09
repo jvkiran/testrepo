@@ -9,11 +9,13 @@ import chalid from './chalid.jpg'
 import chirdeep from './chirdeep.jpg'
 import chris from './chris.jpg'
 import cristina from './cristina.jpg'
+import daniel from './daniel.jpg'
 import daryl from './daryl.jpg'
 import dimi from './dimi.jpg'
 import don from './don.jpg'
 import emily from './emily.jpg'
 import fang from './fang.jpg'
+import gautam from './gautam.jpg'
 import irene from './irene.jpg'
 import john from './john.jpg'
 import kiran from './kiran.jpg'
@@ -25,11 +27,13 @@ import mike from './mike.jpg'
 import oana from './oana.jpg'
 import patty from './patty.jpg'
 import paul from './paul.jpg'
+import ricardo from './ricardo.jpg'
 import sami from './sami.jpg'
 import sarah from './sarah.jpg'
 import sheridan from './sheridan.jpg'
 import timothy from './timothy.jpg'
 import trent from './trent.jpg'
+import troy from './troy.jpg'
 import yvonn from './yvonn.jpg'
 
 export default {
@@ -44,11 +48,13 @@ export default {
     chirdeep,
     chris,
     cristina,
+    daniel,
     daryl,
     dimi,
     don,
     emily,
     fang,
+    gautam,
     irene,
     john,
     kiran,
@@ -60,10 +66,12 @@ export default {
     oana,
     patty,
     paul,
+    ricardo,
     sami,
     sarah,
     sheridan,
     timothy,
     trent,
+    troy,
     yvonn
 }

@@ -115,6 +115,53 @@
     "image": "fang"
   },
   {
+    "name": "Jernej Pregelj",
+    "twitter": "jernejpregelj",
+    "linkedin": "jernej-pregelj",
+    "image": "jernej"
+  },
+  {
+    "name": "Troy McConaghy",
+    "twitter": "TroyMc",
+    "image": "troy"
+  },
+  {
+    "name": "Gautam Dhameja",
+    "twitter": "gautamdhameja",
+    "linkedin": "gautamdhameja",
+    "image": "gautam"
+  },
+  {
+    "name": "Ricardo Garcia",
+    "linkedin": "ricardo-garcia-b226a6a9",
+    "image": "ricardo"
+  },
+  {
+    "name": "Lev Berman",
+    "github": "ldmberman",
+    "image": "lev"
+  },
+  {
+    "name": "Chalid Mannaa",
+    "linkedin": "cmannaa",
+    "image": "chalid"
+  },
+  {
+    "name": "Artur Gomer",
+    "linkedin": "arturgomer",
+    "image": "artur"
+  },
+  {
+    "name": "Sarah-Jean Vallon",
+    "linkedin": "sarah-jean-vallon-b4603a65",
+    "image": "sarah"
+  },
+  {
+    "name": "Daniel Lustig",
+    "linkedin": "daniel-lustig-852a408a",
+    "image": "daniel"
+  },
+  {
     "name": "Malte Sielski",
     "linkedin": "malte-sielski-198991ab",
     "twitter": "malte_slk",
@@ -165,25 +212,5 @@
     "name": "Sami Jaaskelainen",
     "linkedin": "sami-jääskeläinen-74a8381",
     "image": "sami"
-  },
-  {
-    "name": "Chalid Mannaa",
-    "linkedin": "cmannaa",
-    "image": "chalid"
-  },
-  {
-    "name": "Artur Gomer",
-    "linkedin": "arturgomer",
-    "image": "artur"
-  },
-  {
-    "name": "Sarah-Jean Vallon",
-    "linkedin": "sarah-jean-vallon-b4603a65",
-    "image": "sarah"
-  },
-  {
-    "name": "Henry YP Ho",
-    "github": "henryyp",
-    "image": "henry"
   }
 ]
