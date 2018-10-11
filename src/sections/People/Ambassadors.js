@@ -1,3 +1,5 @@
+/* global ga */
+
 import React, { PureComponent } from 'react'
 import Cell from '../../components/Cell'
 import Paragraph from '../../components/Paragraph'
@@ -26,6 +28,10 @@ export default class Ambassadors extends PureComponent {
 
     handleButtonClick = () => {
         window.open(this.link) // eslint-disable-line security/detect-non-literal-fs-filename
+
+        if (window.ga) {
+            ga('send', 'event', 'click', 'ambassador', 'ambassador_section')
+        }
     }
 
     render() {
