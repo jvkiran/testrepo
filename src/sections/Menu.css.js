@@ -4,7 +4,7 @@ import fadeIn from 'react-animations/lib/fade-in'
 import { colors, fonts, responsive, transitions, layout } from '../styles'
 
 export const StyledMenu = styled.nav`
-    background: rgb(${colors.black});
+    background: ${({ fixed }) => (fixed ? `rgb(${colors.black})` : null)};
     transition: transform .3s ease-in-out;
     transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
     padding: .75rem 1rem;
@@ -16,7 +16,7 @@ export const StyledMenu = styled.nav`
         top: ${({ fixed }) => (fixed ? '0' : 'auto')};
         left: ${layout.pageFrame};
         right: ${layout.pageFrame};
-        margin: ${({ fixed }) => (fixed ? '-100px 0' : '1.5rem 0 0 0')};
+        margin: ${({ fixed }) => (fixed ? '-100px 0' : '1rem 0 0 0')};
         border-top: ${({ fixed }) => (fixed ? `${layout.pageFrame} solid #fff` : '0')};
     }
 
@@ -27,6 +27,16 @@ export const StyledMenu = styled.nav`
         right: 0;
         margin: 0;
     }
+`
+
+export const StyledSubMenu = styled.div`
+    background: rgb(${colors.black});
+    position: absolute;
+    text-align: left;
+    padding: 1rem;
+    top: 3rem;
+    left: -1rem;
+    display: none;
 `
 
 export const StyledContainer = styled.div`
@@ -48,10 +58,40 @@ export const StyledLogo = styled(Link)`
     }
 `
 
-export const StyledMenuItem = styled.a`
+export const StyledMenuItem = styled.li`
+    display: inline;
     transition: ${transitions.base};
     color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .7)`)};
     font-family: ${fonts.family.button};
+    position: relative;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+    &:hover,
+    &:focus {
+        ${StyledSubMenu} {
+            display: block;
+        }
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    svg {
+        fill: rgba(${colors.white}, .7);
+        width: .7rem;
+        height: .7rem;
+        margin-left: .3rem;
+        transition: .2s ease-out;
+    }
+`
+
+export const StyledSubMenuItem = styled.a`
+    display: block;
+    color: rgba(${colors.white}, .8);
+    font-family: ${fonts.family.base};
+    font-size: ${fonts.size.small};
 `
 
 export const animation = keyframes`
@@ -71,11 +111,11 @@ export const StyledMobileNav = styled.div`
     justify-content: center;
     color: rgb(${colors.white});
     padding: 2rem;
-    font-size: 2rem;
     transition: ${transitions.long};
 
     & a {
         margin: .5rem 0;
+        color: inherit;
     }
 
     @media screen and (${responsive.md.max}) {
@@ -86,15 +126,18 @@ export const StyledMobileNav = styled.div`
     }
 `
 
-export const StyledNav = styled.div`
+export const StyledNav = styled.ul`
     text-transform: uppercase;
     text-align: right;
     color: rgb(${colors.white});
     animation: 1s ${animation} 1.2s backwards;
+    padding: 0;
+    list-style: none;
 
     & a {
         display: inline-block;
         margin-right: 2rem;
+        color: inherit;
 
         &:hover,
         &:focus,
