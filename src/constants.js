@@ -37,7 +37,9 @@ export const social = {
     'linkedin': 'https://www.linkedin.com/company/13429589/',
     'github': 'https://github.com/oceanprotocol',
     'reddit': 'https://www.reddit.com/r/oceanprotocol/',
-    'gitter': 'https://gitter.im/oceanprotocol/Lobby'
+    'gitter': 'https://gitter.im/oceanprotocol/Lobby',
+    'gitcoin': 'https://gitcoin.co/profile/oceanprotocol',
+    'bountiesNetwork': 'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol'
 }
 
 export const dates = {

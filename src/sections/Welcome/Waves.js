@@ -3,8 +3,8 @@
 import React, { Component } from 'react'
 import VisibilitySensor from 'react-visibility-sensor'
 import * as THREE from 'three/build/three'
-import '../lib/Projector'
-import '../lib/CanvasRenderer'
+import '../../lib/Projector'
+import '../../lib/CanvasRenderer'
 import { StyledWaves } from './Waves.css'
 
 const SEPARATION = 100
