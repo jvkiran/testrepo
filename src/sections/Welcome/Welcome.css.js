@@ -4,7 +4,7 @@ import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import ContentRow from '../../components/ContentRow'
-import { colors, responsive, fonts, layout } from '../../styles'
+import { colors, responsive, fonts, layout, gradients } from '../../styles'
 
 export const Hero = styled(Section)`
     background: rgb(${colors.black});
@@ -33,9 +33,14 @@ export const HeroContent = styled(ContentRow)`
     position: relative;
     z-index: 2;
     margin-top: 4rem;
+    text-align: center;
 
     @media screen and (${responsive.sm.min}) {
         margin-top: 2rem;
+    }
+
+    @media screen and (${responsive.md.min}) {
+        text-align: left;
     }
 `
 
@@ -63,7 +68,6 @@ export const animation = keyframes`
 `
 
 export const StyledTagline = styled(Title)`
-    text-align: center;
     color: rgb(${colors.white});
     animation: ${animation} 1s backwards;
     font-size: ${fonts.size.h3};
@@ -80,11 +84,6 @@ export const StyledTagline = styled(Title)`
 
 export const StyledParagraph = styled(Paragraph)`
     animation: ${animation} 1.5s backwards;
-    text-align: center;
-
-    @media screen and (${responsive.md.min}) {
-        text-align: left;
-    }
 `
 
 export const StyledVideoThumbnail = styled.div`
@@ -117,6 +116,34 @@ export const StyledVideoThumbnail = styled.div`
         img {
             opacity: 1;
         }
+    }
+`
+
+export const Cta = styled.div`
+    margin-bottom: 2rem;
+
+    @media screen and (${responsive.md.min}) {
+        margin-bottom: 1rem;
+    }
+`
+
+export const StyledButton = styled.a`
+    padding: .5rem 1rem;
+    margin: 1% 0;
+    color: rgb(${colors.white});
+    font-size: ${fonts.size.small};
+    text-transform: uppercase;
+    font-family: ${fonts.family.button};
+    font-weight: ${fonts.fontWeight.button};
+    background: ${({ important }) => important ? `${gradients.main}` : `rgba(${colors.grey}, .95)`};
+    display: inline-block;
+    margin-left: .5rem;
+    animation: ${animation} 1.5s .5s backwards;
+    border-radius: .1rem;
+
+    &:first-child {
+        animation-delay: 0;
+        margin-left: 0;
     }
 `
 

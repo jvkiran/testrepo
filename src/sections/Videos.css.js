@@ -256,7 +256,7 @@ export const StyledReactPlayer = styled(ReactPlayer)`
     }
 `
 
-export const VideoListItem = styled.div`
+export const VideoListItem = styled.a`
     cursor: pointer;
 `
 

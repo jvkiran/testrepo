@@ -5,7 +5,7 @@ import LazyLoad from 'react-lazyload'
 import fetch from 'isomorphic-fetch'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import smoothScroll from '../lib/smoothScroll'
+import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import Spinner from '../components/Spinner'
@@ -51,6 +51,12 @@ class SectionContent extends PureComponent {
 
     componentDidMount() {
         this.selectVideo(this.props.ApiResponse[0], 0)
+
+        // eslint-disable-next-line no-unused-vars
+        const scroll = new SmoothScroll('a[href*="#videoScroll"]', {
+            header: '[data-scroll-header]',
+            updateURL: true
+        })
     }
 
     componentWillUnmount() {
@@ -65,10 +71,6 @@ class SectionContent extends PureComponent {
             videoUrl: properties.videoUrl
         })
         this.stopVideo()
-    }
-
-    scrollToVideo() {
-        smoothScroll(document.getElementById('videoScroll'))
     }
 
     openVideo() {
@@ -137,7 +139,11 @@ class SectionContent extends PureComponent {
                 </HeightRow>
                 <Slider {...settings}>
                     {ApiResponse.map((properties, index) => (
-                        <VideoListItem key={index} onClick={() => { this.selectVideo(properties, index); this.scrollToVideo() }}>
+                        <VideoListItem
+                            key={index}
+                            onClick={() => this.selectVideo(properties, index)}
+                            href="#videoScroll"
+                        >
                             <ListContainer className={this.state.active === index ? 'active' : ''}>
                                 <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
                                 <ThumbTitle><span>{properties.title}</span></ThumbTitle>

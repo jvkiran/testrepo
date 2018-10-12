@@ -13,14 +13,16 @@ import {
     StyledTagline,
     StyledParagraph,
     StyledVideoThumbnail,
-    StyledSocialHero
+    StyledSocialHero,
+    StyledButton,
+    Cta
 } from './Welcome.css'
 
 const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
 
 const content = {
     title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
-    description: 'Ocean Protocol is kickstarting a New Data Economy by breaking down data silos and equilizing access to data for all.'
+    description: 'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equilizing access to data for all.'
 }
 
 class Welcome extends Component {
@@ -49,6 +51,15 @@ class Welcome extends Component {
                         <HeroGridCell>
                             <StyledTagline>{content.title}</StyledTagline>
                             <StyledParagraph>{content.description}</StyledParagraph>
+
+                            <Cta>
+                                <StyledButton href="#project" important>
+                                    Learn about the project
+                                </StyledButton>
+                                <StyledButton href="#ambassadors">
+                                    Become an ambassador
+                                </StyledButton>
+                            </Cta>
                         </HeroGridCell>
                         <HeroGridCell>
                             <StyledVideoThumbnail onClick={() => this.toggleModal()}>

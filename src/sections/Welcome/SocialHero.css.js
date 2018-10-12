@@ -1,23 +1,19 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive } from '../../styles'
+import { colors, fonts } from '../../styles'
 
 export const SocialBand = styled.aside`
     margin-top: 2rem;
-    text-align: center;
-
-    @media screen and (${responsive.md.min}) {
-        text-align: left;
-    }
+    margin-left: -1rem;
 `
 
 export const SocialLink = styled.a`
     padding: .5rem 1rem;
     margin: 1% 0;
-    color: rgb(${colors.dimmedGrey});
+    color: rgb(${colors.white});
     font-size: ${fonts.size.small};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
-    background: ${({ important }) => important ? `rgba(${colors.purple}, .95)` : `rgba(${colors.grey}, .95)`};
+    background: ${({ important }) => important ? `rgba(${colors.purple}, .95)` : `rgba(${colors.black}, .95)`};
     display: inline-block;
     margin-left: .5rem;
 

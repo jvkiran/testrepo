@@ -11,13 +11,18 @@ import Bounties from './Bounties'
 
 const actions = [
     {
-        name: 'GitHub',
+        name: 'Check us out on GitHub',
         link: social.github,
         icon: ButtonGithub
     },
     {
         name: 'Telegram Chat',
         link: social.telegram,
+        icon: ButtonTelegram
+    },
+    {
+        name: 'Telegram News',
+        link: social.telegram_news,
         icon: ButtonTelegram
     },
     {

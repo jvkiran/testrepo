@@ -10,7 +10,10 @@ export const colors = {
     purple: '123, 17, 115',
     pink: '246, 56, 138',
     softPink: '218, 89, 119',
-    red: '245, 70, 89'
+    red: '245, 70, 89',
+    green: '95, 179, 89',
+    orange: '179, 95, 54',
+    yellow: '234, 193, 70'
 }
 
 export const gradients = {

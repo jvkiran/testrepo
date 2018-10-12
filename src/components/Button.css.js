@@ -38,6 +38,7 @@ export const Container = styled.button`
     }
 `
 
-export const Children = styled.div`
+export const Children = styled.span`
+    display: block;
     opacity: ${({ fetching }) => (fetching ? 0 : 1)};
 `

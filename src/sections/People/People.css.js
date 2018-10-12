@@ -11,7 +11,7 @@ export const StyledTitle = styled(Title)`
 `
 
 export const StyledSubTitle = styled(SubTitle)`
-    margin-top: -.5rem;
+    margin-top: -1rem;
 `
 
 export const StyledParagraph = styled(Paragraph)`
