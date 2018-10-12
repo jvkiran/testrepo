@@ -34,9 +34,10 @@ export const StyledSubMenu = styled.div`
     position: absolute;
     text-align: left;
     padding: 1rem;
-    top: 3rem;
+    top: 2.5rem;
     left: -1rem;
     display: none;
+    z-index: 10;
 `
 
 export const StyledContainer = styled.div`
@@ -78,6 +79,13 @@ export const StyledMenuItem = styled.li`
         }
     }
 
+    a {
+        &:hover,
+        &:focus {
+            transform: none;
+        }
+    }
+
     svg {
         fill: rgba(${colors.white}, .7);
         width: .7rem;
@@ -89,9 +97,12 @@ export const StyledMenuItem = styled.li`
 
 export const StyledSubMenuItem = styled.a`
     display: block;
-    color: rgba(${colors.white}, .8);
+    color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .8)`)};
     font-family: ${fonts.family.base};
     font-size: ${fonts.size.small};
+    white-space: nowrap;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
 `
 
 export const animation = keyframes`

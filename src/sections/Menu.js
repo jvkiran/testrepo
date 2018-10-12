@@ -23,20 +23,30 @@ const MenuItems = [
     },
     {
         name: 'Project',
-        href: '#project'
-    },
-    {
-        name: 'Papers',
-        href: '#papers'
-    },
-    {
-        name: 'Why Ocean?',
-        href: '#why'
+        href: '#project',
+        sub: [
+            {
+                name: 'Project',
+                href: '#project'
+            },
+            {
+                name: 'Papers',
+                href: '#papers'
+            },
+            {
+                name: 'Why Ocean?',
+                href: '#why'
+            }
+        ]
     },
     {
         name: 'People',
         href: '#people',
         sub: [
+            {
+                name: 'People',
+                href: '#people'
+            },
             {
                 name: 'Core Team',
                 href: '#team'
@@ -65,10 +75,11 @@ const MenuItems = [
     }
 ]
 
-const SubMenu = ({ item }) => (
+const SubMenu = ({ item, current }) => (
     <StyledSubMenu>
         {item.sub.map((subitem, index) => (
             <StyledSubMenuItem
+                current={item.href.replace('#', '') === current}
                 key={index}
                 href={subitem.href}
             >
@@ -79,7 +90,8 @@ const SubMenu = ({ item }) => (
 )
 
 SubMenu.propTypes = {
-    item: PropTypes.object
+    item: PropTypes.object,
+    current: PropTypes.string
 }
 
 class Menu extends Component {
@@ -201,7 +213,7 @@ class Menu extends Component {
                                     {item.sub && <Caret />}
                                 </a>
 
-                                {item.sub && <SubMenu item={item} />}
+                                {item.sub && <SubMenu item={item} current={this.state.current} />}
 
                             </StyledMenuItem>
                         ))}
