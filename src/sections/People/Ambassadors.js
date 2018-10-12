@@ -1,6 +1,7 @@
 /* global ga */
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Cell from '../../components/Cell'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
@@ -29,7 +30,7 @@ export default class Ambassadors extends PureComponent {
     link = 'https://docs.google.com/forms/d/e/1FAIpQLSdq3hHU6hlBbHtJXGUEM_6x32T3o6zM0ynyUikcK_thhH_8cw/viewform'
 
     handleButtonClick = () => {
-        window.open(this.link) // eslint-disable-line security/detect-non-literal-fs-filename
+        this.props.toggleModal('ambassadors')
 
         if (window.ga) {
             ga('send', 'event', 'click', 'ambassador', 'ambassador_section')
@@ -63,4 +64,8 @@ export default class Ambassadors extends PureComponent {
             </SubHeader>
         )
     }
+}
+
+Ambassadors.propTypes = {
+    toggleModal: PropTypes.func.isRequired
 }

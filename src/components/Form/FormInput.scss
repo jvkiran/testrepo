@@ -1,0 +1,108 @@
+@import 'variables';
+@import 'forms';
+
+.input-wrap {
+    background: $brand-gradient;
+    border-radius: 2px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    position: relative;
+
+    &.is-focused {
+        background: $brand-black;
+    }
+}
+
+.input {
+    font-size: $font-size-base;
+    font-family: $font-family-button;
+    color: $brand-black;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    background: $brand-white;
+    padding: $spacer / 3;
+    margin: 0;
+    border-radius: 2px;
+    transition: .2s ease-out;
+    min-height: 43px;
+    appearance: none;
+
+    &:focus {
+        border: none;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    &::placeholder {
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+        color: $brand-grey-light;
+        font-weight: $font-weight-base;
+        transition: .2s ease-out;
+    }
+
+    &[readonly],
+    &[disabled] {
+        background-color: $brand-grey-lighter;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    // &::-webkit-credentials-auto-fill-button,
+    // &::-webkit-caps-lock-indicator {
+    //     background: $brand-white;
+    // }
+
+    // &:-webkit-autofill,
+    // &:-webkit-autofill:hover,
+    // &:-webkit-autofill:focus {
+    //     -webkit-text-fill-color: $brand-white;
+    //     box-shadow: 0 0 0 1000px $brand-black inset;
+    //     transition: background-color 5000s ease-in-out 0s;
+    // }
+}
+
+// stylelint-disable-next-line
+select.input {
+    height: 43px;
+
+    // custom arrow
+    background-image: linear-gradient(45deg, transparent 50%, $brand-purple 50%), linear-gradient(135deg, $brand-purple 50%, transparent 50%);
+    background-position: calc(100% - 21px) 18px, calc(100% - 16px) 18px;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+
+    &:focus {
+        font-family: $font-family-base;
+    }
+}
+
+.form__label {
+    color: $brand-grey;
+    font-size: $font-size-base;
+    font-family: $font-family-title;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: $spacer / 4;
+
+    &.is-required {
+        &:after {
+            content: '*';
+            font-size: $font-size-base;
+            color: $brand-grey-light;
+            display: inline-block;
+            margin-left: .1rem;
+        }
+    }
+}
+
+.count {
+    position: absolute;
+    opacity: .7;
+    font-size: $font-size-mini;
+    margin: 0;
+    right: .2rem;
+    top: .2rem;
+}

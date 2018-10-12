@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Section from '../../components/Section'
 import ContentRow from '../../components/ContentRow'
 import Team from './Team'
@@ -12,7 +13,7 @@ import {
     Line
 } from './People.css'
 
-const People = () => (
+const People = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="people">
         <ContentRow>
             <StyledTitle white>The People Building Ocean Protocol</StyledTitle>
@@ -36,9 +37,13 @@ const People = () => (
 
         <ContentRow>
             <Line />
-            <Ambassadors />
+            <Ambassadors toggleModal={toggleModal} />
         </ContentRow>
     </Section>
 )
+
+People.propTypes = {
+    toggleModal: PropTypes.func.isRequired
+}
 
 export default People

@@ -17,15 +17,6 @@ export const StyledLightbox = styled.div`
     overflow-y: auto;
 `
 
-export const StyledHitbox = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-`
-
 export const StyledCard = styled.div`
     margin: 2rem auto;
     padding: 6rem;
