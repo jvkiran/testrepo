@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
-import smoothScroll from '../lib/smoothScroll'
+import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import Hamburger from '../components/Hamburger'
+import { ReactComponent as Caret } from '../assets/misc/caret.svg'
 import { layout } from '../styles'
 import {
     StyledMenu,
+    StyledSubMenu,
     StyledContainer,
     StyledLogo,
     StyledNav,
     StyledMenuItem,
-    StyledMobileNav
+    StyledMobileNav,
+    StyledSubMenuItem
 } from './Menu.css'
 
 const MenuItems = [
@@ -19,19 +23,43 @@ const MenuItems = [
     },
     {
         name: 'Project',
-        href: '#project'
-    },
-    {
-        name: 'Papers',
-        href: '#papers'
-    },
-    {
-        name: 'Why Ocean?',
-        href: '#why'
+        href: '#project',
+        sub: [
+            {
+                name: 'Project',
+                href: '#project'
+            },
+            {
+                name: 'Papers',
+                href: '#papers'
+            },
+            {
+                name: 'Why Ocean?',
+                href: '#why'
+            }
+        ]
     },
     {
         name: 'People',
-        href: '#people'
+        href: '#people',
+        sub: [
+            {
+                name: 'People',
+                href: '#people'
+            },
+            {
+                name: 'Core Team',
+                href: '#team'
+            },
+            {
+                name: 'Advisors',
+                href: '#advisors'
+            },
+            {
+                name: 'Ambassadors',
+                href: '#ambassadors'
+            }
+        ]
     },
     {
         name: 'Blog',
@@ -46,6 +74,25 @@ const MenuItems = [
         href: '#faq'
     }
 ]
+
+const SubMenu = ({ item, current }) => (
+    <StyledSubMenu>
+        {item.sub.map((subitem, index) => (
+            <StyledSubMenuItem
+                current={item.href.replace('#', '') === current}
+                key={index}
+                href={subitem.href}
+            >
+                {subitem.name}
+            </StyledSubMenuItem>
+        ))}
+    </StyledSubMenu>
+)
+
+SubMenu.propTypes = {
+    item: PropTypes.object,
+    current: PropTypes.string
+}
 
 class Menu extends Component {
     constructor(props) {
@@ -64,6 +111,12 @@ class Menu extends Component {
         this.mapSectionsTop()
         document.addEventListener('scroll', this.toggleFixedMenu)
         document.addEventListener('scroll', this.highlightCurrent)
+
+        // eslint-disable-next-line no-unused-vars
+        const scroll = new SmoothScroll('a[href*="#"]', {
+            header: '[data-scroll-header]',
+            topOnEmptyHash: true
+        })
     }
 
     componentWillUnmount() {
@@ -142,41 +195,36 @@ class Menu extends Component {
         this.setState({ active: !this.state.active })
     }
 
-    onSmoothScroll = (e) => {
-        if (e.target.getAttribute('href').indexOf('#')) {
-            e.preventDefault()
-            if (this.state.active) this.toggleMobileMenu()
-            smoothScroll('a[href*="#"]')
-        }
-    }
-
     render() {
         return (
-            <StyledMenu fixed={this.state.fixed}>
+            <StyledMenu fixed={this.state.fixed} data-scroll-header>
                 <StyledContainer>
-                    <StyledLogo to={'/'} title="Back to homepage">
+                    <StyledLogo to={'#'} title="Back to homepage">
                         <OceanLogo />
                     </StyledLogo>
                     <StyledNav>
                         {MenuItems.map(item => (
                             <StyledMenuItem
                                 current={item.href.replace('#', '') === this.state.current}
-                                href={item.href}
                                 key={item.name}
-                                onClick={this.onSmoothScroll}>
-                                {item.name}
+                            >
+                                <a href={item.href}>
+                                    {item.name}
+                                    {item.sub && <Caret />}
+                                </a>
+
+                                {item.sub && <SubMenu item={item} current={this.state.current} />}
+
                             </StyledMenuItem>
                         ))}
                     </StyledNav>
                     <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
                     <StyledMobileNav active={this.state.active}>
                         {MenuItems.map(item => (
-                            <StyledMenuItem
-                                current={item.href.replace('#', '') === this.state.current}
-                                to={item.href}
-                                key={item.name}
-                                onClick={this.onSmoothScroll}>
-                                {item.name}
+                            <StyledMenuItem key={item.name}>
+                                <a href={item.href} onClick={this.toggleMobileMenu}>
+                                    {item.name}
+                                </a>
                             </StyledMenuItem>
                         ))}
                     </StyledMobileNav>

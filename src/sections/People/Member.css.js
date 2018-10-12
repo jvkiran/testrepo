@@ -15,7 +15,7 @@ export const StyledMember = styled.div`
         flex-basis: calc(100% / 4 - 3rem);
     }
 
-        /* stylelint-disable-next-line */
+    /* stylelint-disable-next-line */
      ${({ member }) => member && (
         `@media screen and (${responsive.lg.min}) {
                 flex-basis: calc(100% / 5 - 3rem);

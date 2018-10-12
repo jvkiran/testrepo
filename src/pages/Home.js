@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import SEO from '../components/SEO'
 import Menu from '../sections/Menu'
-import Welcome from '../sections/Welcome'
+import Welcome from '../sections/Welcome/Welcome'
 import Project from '../sections/Project'
 import Data from '../sections/Data'
 import Papers from '../sections/Papers'
