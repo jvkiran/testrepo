@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import jsonp from 'jsonp'
 import FormInput from '../components/Form/FormInput'
-import FormHelp from '../components/Form/FormHelp'
 import Button from '../components/Button'
 import Paragraph from '../components/Paragraph'
 import SubTitle from '../components/SubTitle'
@@ -62,14 +61,14 @@ const forms = {
                 label: 'Your background',
                 help: 'Please tell us a bit about your background (100 words or less).',
                 maxLength: 100,
-                component: 'textarea',
+                tag: 'textarea',
                 required: true
             },
             interest: {
                 label: 'Your interest',
                 help: 'Why would you like to be an Ocean Protocol Ambassador and what would you bring to the Ocean Protocol community (100 words or less)?',
                 maxLength: 100,
-                component: 'textarea',
+                tag: 'textarea',
                 required: true
             },
             communities: {
@@ -281,73 +280,61 @@ class Modal extends PureComponent {
                                 <div>{this.state.message}</div>
                             ) : (
                                 <form onSubmit={this.onSubmit}>
-                                    <div className="form__group">
-                                        <FormInput
-                                            label={forms[modal].name}
-                                            name="name"
-                                            required
-                                            component="input"
-                                            type="text"
-                                            ref={node => (this.name = node)}
-                                        />
-                                    </div>
+                                    <FormInput
+                                        label={forms[modal].name}
+                                        name="name"
+                                        required
+                                        type="text"
+                                        ref={node => (this.name = node)}
+                                    />
 
-                                    <div className="form__group">
-                                        <FormInput
-                                            label={forms[modal].email}
-                                            name="email"
-                                            required
-                                            component="input"
-                                            type="email"
-                                            ref={node => (this.email = node)}
-                                        />
-                                    </div>
+                                    <FormInput
+                                        label={forms[modal].email}
+                                        name="email"
+                                        required
+                                        type="email"
+                                        ref={node => (this.email = node)}
+                                    />
 
                                     {forms[modal].business && (
-                                        <div className="form__group">
-                                            <FormInput
-                                                label={forms[modal].business}
-                                                name="business"
-                                                required
-                                                component="input"
-                                                type="text"
-                                                ref={node => (this.business = node)}
-                                            />
-                                        </div>
+                                        <FormInput
+                                            label={forms[modal].business}
+                                            name="business"
+                                            required
+                                            type="text"
+                                            ref={node => (this.business = node)}
+                                        />
                                     )}
 
                                     {forms[modal].fields && (
                                         Object.entries(forms[modal].fields)
                                             .map(([key, value]) => (
-                                                <div className="form__group" key={key}>
-                                                    <FormInput
-                                                        label={value.label}
-                                                        placeholder={value.placeholder ? value.placeholder : null}
-                                                        name={key}
-                                                        required={value.required ? value.required : null}
-                                                        component={value.component ? value.component : 'input'}
-                                                        type={value.type ? value.type : 'text'}
-                                                        ref={node => (this.key = node)}
-                                                        maxLength={value.maxLength ? value.maxLength : null}
-                                                        rows={value.maxLength ? '6' : null}
-                                                    />
-                                                    {value.help && <FormHelp>{value.help}</FormHelp>}
-                                                </div>
+                                                <FormInput
+                                                    key={key}
+                                                    label={value.label}
+                                                    placeholder={value.placeholder ? value.placeholder : null}
+                                                    name={key}
+                                                    required={value.required ? value.required : null}
+                                                    tag={value.tag ? value.tag : null}
+                                                    type={value.type ? value.type : 'text'}
+                                                    ref={node => (this.key = node)}
+                                                    maxLength={value.maxLength ? value.maxLength : null}
+                                                    rows={value.maxLength ? '6' : null}
+                                                    help={value.help}
+                                                />
                                             ))
                                     )}
 
                                     {forms[modal].message && (
-                                        <div className="form__group">
-                                            <FormInput
-                                                label={forms[modal].message}
-                                                name="message"
-                                                required
-                                                component="textarea"
-                                                ref={node => (this.message = node)}
-                                                maxLength={255}
-                                                rows="6"
-                                            />
-                                        </div>
+                                        <FormInput
+                                            label={forms[modal].message}
+                                            name="message"
+                                            required
+                                            tag="textarea"
+                                            ref={node => (this.message = node)}
+                                            maxLength={255}
+                                            rows="6"
+                                        />
                                     )}
 
                                     <Button fetching={this.state.fetching} type="submit">

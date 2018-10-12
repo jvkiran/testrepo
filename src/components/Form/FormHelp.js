@@ -1,13 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './FormHelp.scss'
+import { StyledFormHelp } from './FormHelp.css'
 
-const FormHelp = ({ children }) => (
-    <div className="form__help">
-        {children}
-    </div>
-)
+const FormHelp = ({ children }) => <StyledFormHelp>{children}</StyledFormHelp>
 
 FormHelp.propTypes = {
     children: PropTypes.string

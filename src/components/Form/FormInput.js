@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
-import './FormInput.scss'
+import FormHelp from './FormHelp'
+import { FormGroup, InputWrap, Input, Textarea, FormLabel, Count } from './FormInput.css'
 
-const FormTag = ({ component, ...props }) => {
-    const Tag = component
-    return <Tag {...props} />
-}
+const FormTag = ({ tag, ...props }) => (
+    tag === 'textarea' ? <Textarea {...props} /> : <Input {...props} />
+)
 
 class FormInput extends PureComponent {
     state = {
@@ -18,22 +18,22 @@ class FormInput extends PureComponent {
     }
 
     render() {
-        const { name, label, required, component, maxLength, ...props } = this.props
+        const { name, label, required, tag, maxLength, help, ...props } = this.props
 
         return (
-            <>
-                <label
+            <FormGroup>
+                <FormLabel
                     htmlFor={name}
                     className={required ? 'form__label is-required' : 'form__label'}
                     title={required ? 'Required' : null}
                 >
                     {label}
-                </label>
-                <div className={this.state.isFocused ? 'input-wrap is-focused' : 'input-wrap'}>
+                </FormLabel>
+                <InputWrap className={this.state.isFocused ? 'input-wrap is-focused' : 'input-wrap'}>
                     <FormTag
                         className="input"
                         id={name}
-                        component={component}
+                        tag={tag}
                         maxLength={maxLength}
                         value={this.state.input}
                         {...props}
@@ -41,9 +41,10 @@ class FormInput extends PureComponent {
                         onFocus={() => this.setState({ isFocused: true })}
                         onBlur={() => this.setState({ isFocused: false })}
                     />
-                    {!!maxLength && <small className="count">{maxLength - this.state.input.length}</small>}
-                </div>
-            </>
+                    {!!maxLength && <Count>{maxLength - this.state.input.length}</Count>}
+                </InputWrap>
+                {help && <FormHelp>{help}</FormHelp>}
+            </FormGroup>
         )
     }
 }

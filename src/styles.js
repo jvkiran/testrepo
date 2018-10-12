@@ -25,7 +25,8 @@ export const fonts = {
         root: '15px',
         base: '1rem',
         large: '1.25rem',
-        small: '.75rem',
+        small: '.85rem',
+        mini: '.65rem',
         h1: '3.4rem',
         h2: '2.7rem',
         h3: '2rem',
@@ -56,6 +57,7 @@ export const transitions = {
 
 export const layout = {
     pageFrame: '.75rem',
+    spacer: '2rem',
     maxWidth: {
         wide: '80rem',
         base: '60rem',
