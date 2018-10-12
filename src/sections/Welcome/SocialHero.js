@@ -21,6 +21,11 @@ const actions = [
         icon: ButtonTelegram
     },
     {
+        name: 'Telegram News',
+        link: social.telegram_news,
+        icon: ButtonTelegram
+    },
+    {
         name: 'Gitter',
         link: social.gitter,
         icon: ButtonGitter

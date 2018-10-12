@@ -13,7 +13,8 @@ import {
     StyledTagline,
     StyledParagraph,
     StyledVideoThumbnail,
-    StyledSocialHero
+    StyledSocialHero,
+    StyledButton
 } from './Welcome.css'
 
 const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
@@ -49,6 +50,15 @@ class Welcome extends Component {
                         <HeroGridCell>
                             <StyledTagline>{content.title}</StyledTagline>
                             <StyledParagraph>{content.description}</StyledParagraph>
+
+                            <div>
+                                <StyledButton href="#project" important>
+                                    Learn about the project
+                                </StyledButton>
+                                <StyledButton href="#ambassadors">
+                                    Become an ambassador
+                                </StyledButton>
+                            </div>
                         </HeroGridCell>
                         <HeroGridCell>
                             <StyledVideoThumbnail onClick={() => this.toggleModal()}>
