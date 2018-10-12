@@ -11,7 +11,7 @@ import Bounties from './Bounties'
 
 const actions = [
     {
-        name: 'GitHub',
+        name: 'Check us out on GitHub',
         link: social.github,
         icon: ButtonGithub
     },
