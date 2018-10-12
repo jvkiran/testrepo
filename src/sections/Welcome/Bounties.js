@@ -23,16 +23,19 @@ export default class Bounties extends PureComponent {
     getGitcoinBounties = async () => {
         const response = await axios.get('https://gitcoin.co/api/v0.1/bounties/')
 
-        const gitcoin = response.data
+        const gitcoin = response.data // returns only open bounties by default
 
         this.setState({
             gitcoin: gitcoin.filter(
+                // filter the response manually, no way atm to do that as API query
                 item => item.funding_organisation.includes('Ocean Protocol')
             )
         })
     }
 
     getBountiesNetworkBounties = async () => {
+        // get all bounties with 'ocean protocol' in title, description, or categories
+        // TODO: consider pagination, returns 25 items per page
         const response = await axios.get('https://new.api.bounties.network/bounty/?search=ocean%20protocol&bountyStage=1')
         const bountiesNetwork = response.data.results
 

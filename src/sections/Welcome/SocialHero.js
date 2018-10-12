@@ -10,12 +10,6 @@ import { SocialBand, SocialLink } from './SocialHero.css'
 import Bounties from './Bounties'
 
 const actions = [
-    // {
-    //     name: 'Gitcoin Bounties',
-    //     link: social.gitcoin,
-    //     icon: ButtonGitcoin,
-    //     important: true
-    // },
     {
         name: 'GitHub',
         link: social.github,
