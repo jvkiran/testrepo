@@ -119,6 +119,14 @@ export const StyledVideoThumbnail = styled.div`
     }
 `
 
+export const Cta = styled.div`
+    margin-bottom: 2rem;
+
+    @media screen and (${responsive.md.min}) {
+        margin-bottom: 1rem;
+    }
+`
+
 export const StyledButton = styled.a`
     padding: .5rem 1rem;
     margin: 1% 0;
