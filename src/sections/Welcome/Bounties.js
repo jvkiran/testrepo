@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
 import { ReactComponent as ButtonGitcoin } from '../../assets/buttons/gitcoin.svg'
+import { ReactComponent as ButtonBountiesNetwork } from '../../assets/buttons/bountiesnetwork.svg'
 import { social } from '../../constants'
 import { StyledBounties, Bounty } from './Bounties.css'
 
@@ -32,12 +33,10 @@ export default class Bounties extends PureComponent {
     }
 
     getBountiesNetworkBounties = async () => {
-        // 742 is categopry ID for 'ocean protocol'
-        const response = await axios.get('https://new.api.bounties.network/bounty/1407')
-        const bountiesNetwork = response.data
+        const response = await axios.get('https://new.api.bounties.network/bounty/?search=ocean%20protocol&bountyStage=1')
+        const bountiesNetwork = response.data.results
 
         this.setState({ bountiesNetwork })
-        console.log(bountiesNetwork)
     }
 
     componentDidMount() {
@@ -45,21 +44,39 @@ export default class Bounties extends PureComponent {
         this.getBountiesNetworkBounties()
     }
 
+    componentWillUnmount() {
+        this.setState({
+            gitcoin: null,
+            bountiesNetwork: null
+        })
+    }
+
     render() {
-        const { gitcoin } = this.state
+        const { gitcoin, bountiesNetwork } = this.state
 
         return (
             <StyledBounties>
                 {gitcoin && (
                     <Bounty
                         href={social.gitcoin}
-                        title="Gitcoin bounties"
                         important={gitcoin.length > 0}
                     >
                         <ButtonGitcoin />
                         {gitcoin.length > 0 && gitcoin.length}
                         <BountiesText data={gitcoin} />
                         {' on Gitcoin'}
+                    </Bounty>
+                )}
+
+                {bountiesNetwork && (
+                    <Bounty
+                        href={social.bountiesNetwork}
+                        important={bountiesNetwork.length > 0}
+                    >
+                        <ButtonBountiesNetwork />
+                        {bountiesNetwork.length > 0 && bountiesNetwork.length}
+                        <BountiesText data={bountiesNetwork} />
+                        {' on bounties.network'}
                     </Bounty>
                 )}
             </StyledBounties>

@@ -27,4 +27,9 @@ export const Bounty = styled.a`
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
     color: ${({ important }) => important ? `rgb(${colors.pink})` : `rgba(${colors.white}, .8)`};
+    margin-left: 2rem;
+
+    &:first-child {
+        margin-left: 0;
+    }
 `
