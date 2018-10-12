@@ -13,13 +13,15 @@ import { StyledList } from './Ambassadors.css'
 
 const content = {
     title: 'Ambassadors',
-    description: 'Come, Comrade Bender! We must take to the streets! One hundred dollars. Tell her you just want to talk. It has nothing to do with mating. Say it in Russian! No, just a regular mistake. Bender, you risked your life to save me! Morbo can not understand his teleprompter because he forgot how you say that letter that is shaped like a man wearing a hat.\n\nNay, I respect and admire Harold Zoid too much to beat him to death with his own Oscar. Bender, this is Frys decision… and he made it wrong. So it is time for us to interfere in his life.',
+    description: 'The <strong>Ocean Protocol Ambassadors Program</strong> is a grassroots project to involve our incredible community of thinkers, learners, and problem-solvers into the very core of our ecosystem. It is a chance for passionate individuals to be on the frontlines of the data revolution.\n\nWe are excited to bring onboard motivated, curious, and interesting people based all around the world, who are passionate about decentralization, challenging the status quo, and equalizing access to data for all. \n\nThere are a wide range of ways to get involved once you become an Ambassador, and plenty of great reasons to apply, including:',
     list: [
-        'Organize meetups',
-        'Spread the love',
-        'Ride with a dolphin',
-        'All the Slurm you can drink',
-        'All the Slurm'
+        'Be a part of the inner circle of Ocean',
+        'Direct impact on shaping our global community',
+        'Gain valuable new skills and experiences',
+        'Exclusive webinars and video calls with the Ocean team',
+        'Exclusive Telegram Group & chance to be featured on our blog',
+        'First to know about opportunities to earn Ocean tokens',
+        'Plenty of Ocean swag!'
     ]
 }
 
@@ -42,7 +44,7 @@ export default class Ambassadors extends PureComponent {
                 </Cell>
                 <Cell width={3 / 4}>
                     <Paragraph>
-                        {content.description}
+                        <span dangerouslySetInnerHTML={{ __html: content.description }} />
                     </Paragraph>
 
                     <StyledList>
