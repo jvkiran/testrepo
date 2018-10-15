@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import Paragraph from '../../components/Paragraph'
 import SubTitle from '../../components/SubTitle'
 import ModalForm from './ModalForm'
 import { ReactComponent as Cross } from '../../assets/misc/cross.svg'
@@ -37,9 +36,6 @@ export default class Modal extends PureComponent {
                     {modal && (
                         <div>
                             <SubTitle>{forms[modal].title}</SubTitle>
-                            {forms[modal].description && (
-                                <Paragraph>{forms[modal].description}</Paragraph>
-                            )}
                             <ModalForm modal={modal} />
                         </div>
                     )}

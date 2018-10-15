@@ -78,13 +78,14 @@ We have the following forms on our website collecting lead data:
 - *Newsletter subscription*: Email
 - *Join as Data Provider*: Name, Email, Company, Comment
 - *Join as Data Consumer*: Name, Email, Company, Comment
+- *Ambassadors*: Name, Email, Location, Background, Interest, Speaking, LinkedIn, GitHub
 
 All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
 
 Via Zapier, the data is synced further in real time when new submissions happen:
 
-- the Data Provider & Data Consumer into Slack channel #form-submissions
-- the Data Provider & Data Consumer data into Google Sheets
+- the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
+- the Data Provider, Data Consumer & Ambassadors data into Google Sheets
 
 ## SEO
 

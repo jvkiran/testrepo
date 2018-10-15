@@ -1,17 +1,13 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive } from '../../styles'
+import { colors, fonts, layout } from '../../styles'
 
 export const StyledMessage = styled.p`
-    position: absolute;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: ${fonts.size.small};
-    width: calc(100% - 12rem);
-    color: rgb(${colors.red});
-
-    @media screen and (${responsive.sm.max}) {
-        width: calc(100% - 2rem);
-    }
+    margin-top: 3rem;
+    color: rgb(${colors.white});
+    background: ${({ success }) => (success ? `rgb(${colors.green})` : `rgb(${colors.red})`)};
+    padding: calc(${layout.spacer} / 2);
+    border-radius: .1rem;
+    font-family: ${fonts.family.button};
 `
 
 export const Gdpr = styled.div`

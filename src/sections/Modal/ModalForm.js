@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import jsonp from 'jsonp'
 import FormInput from '../../components/Form/FormInput'
+import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
@@ -21,6 +22,13 @@ export default class ModalForm extends PureComponent {
         fetching: false,
         sent: false,
         message: ''
+    }
+
+    messageSuccess() {
+        if (this.props.modal === 'ambassadors') {
+            return 'Thank you! Assuming your profile is a good fit, we will be in touch with you about next steps shortly.'
+        }
+        return 'Thank you! Assuming your profile is a good fit, we will be in touch with you.'
     }
 
     onSubmit = (e) => {
@@ -112,7 +120,7 @@ export default class ModalForm extends PureComponent {
                             this.setState({
                                 fetching: false,
                                 sent: true,
-                                message: data.msg
+                                message: this.messageSuccess()
                             })
                         }
                     }
@@ -125,37 +133,42 @@ export default class ModalForm extends PureComponent {
 
         return (
             this.state.sent ? (
-                <div>{this.state.message}</div>
+                <StyledMessage success>{this.state.message}</StyledMessage>
             ) : (
-                <form onSubmit={this.onSubmit}>
-
-                    {forms[modal].fields && (
-                        Object.entries(forms[modal].fields)
-                            .map(([key, value]) => (
-                                <FormInput
-                                    key={key}
-                                    label={value.label}
-                                    placeholder={value.placeholder ? value.placeholder : null}
-                                    name={key}
-                                    required={value.required ? value.required : null}
-                                    tag={value.tag ? value.tag : null}
-                                    type={value.type ? value.type : 'text'}
-                                    ref={node => (this.key = node)}
-                                    maxLength={value.maxLength ? value.maxLength : null}
-                                    rows={value.maxLength ? '6' : null}
-                                    help={value.help}
-                                />
-                            ))
+                <>
+                    {forms[modal].description && (
+                        <Paragraph>{forms[modal].description}</Paragraph>
                     )}
+                    <form onSubmit={this.onSubmit}>
 
-                    <Button fetching={this.state.fetching} type="submit">
-                        {forms[modal].button}
-                    </Button>
+                        {forms[modal].fields && (
+                            Object.entries(forms[modal].fields)
+                                .map(([key, value]) => (
+                                    <FormInput
+                                        key={key}
+                                        label={value.label}
+                                        placeholder={value.placeholder ? value.placeholder : null}
+                                        name={key}
+                                        required={value.required ? value.required : null}
+                                        tag={value.tag ? value.tag : null}
+                                        type={value.type ? value.type : 'text'}
+                                        ref={node => (this.key = node)}
+                                        maxLength={value.maxLength ? value.maxLength : null}
+                                        rows={value.maxLength ? '6' : null}
+                                        help={value.help}
+                                    />
+                                ))
+                        )}
 
-                    {this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
+                        <Button fetching={this.state.fetching} type="submit">
+                            {forms[modal].button}
+                        </Button>
 
-                    <Gdpr dangerouslySetInnerHTML={{ __html: gdpr.forms.modal }} />
-                </form>
+                        {this.state.message && <StyledMessage>{this.state.message}</StyledMessage>}
+
+                        <Gdpr dangerouslySetInnerHTML={{ __html: gdpr.forms.modal }} />
+                    </form>
+                </>
             )
         )
     }

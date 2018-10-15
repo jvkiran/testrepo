@@ -61,7 +61,7 @@ const forms = {
     },
     ambassadors: {
         title: 'Ocean Protocol Ambassador Program',
-        description: 'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below. \n\nAssuming your profile is a good fit, we will be in touch with you about next steps shortly. We look forward to hearing from you!',
+        description: 'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below. \n\nWe look forward to hearing from you!',
         fields: {
             name: {
                 label: 'Your name',
