@@ -15,6 +15,7 @@ const forms = {
             },
             company: {
                 label: 'Your Company Name',
+                placeholder: 'i.e. Jellyfish Inc.',
                 required: true
             },
             message: {
@@ -44,6 +45,7 @@ const forms = {
             },
             company: {
                 label: 'Your Company Name',
+                placeholder: 'i.e. Jellyfish Inc.',
                 required: true
             },
             message: {
