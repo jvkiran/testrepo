@@ -4,10 +4,12 @@ const forms = {
         fields: {
             name: {
                 label: 'Your name',
+                placeholder: 'i.e. Jelly McJellyfish',
                 required: true
             },
             email: {
                 label: 'Your email',
+                placeholder: 'i.e. jelly@mcjellyfish.com',
                 type: 'email',
                 required: true
             },
@@ -31,10 +33,12 @@ const forms = {
         fields: {
             name: {
                 label: 'Your name',
+                placeholder: 'i.e. Jelly McJellyfish',
                 required: true
             },
             email: {
                 label: 'Your email',
+                placeholder: 'i.e. jelly@mcjellyfish.com',
                 type: 'email',
                 required: true
             },
@@ -59,10 +63,12 @@ const forms = {
         fields: {
             name: {
                 label: 'Your name',
+                placeholder: 'i.e. Jelly McJellyfish',
                 required: true
             },
             email: {
                 label: 'Your email',
+                placeholder: 'i.e. jelly@mcjellyfish.com',
                 type: 'email',
                 required: true
             },

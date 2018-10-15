@@ -81,6 +81,6 @@ export const Count = styled.span`
     opacity: .7;
     font-size: ${fonts.size.mini};
     margin: 0;
-    right: .2rem;
+    right: .4rem;
     top: .2rem;
 `

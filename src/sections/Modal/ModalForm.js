@@ -95,10 +95,7 @@ export default class ModalForm extends PureComponent {
             },
             () =>
                 jsonp(
-                    url,
-                    {
-                        param: 'c'
-                    },
+                    url, { param: 'c' },
                     (err, data) => {
                         if (err) {
                             this.setState({
