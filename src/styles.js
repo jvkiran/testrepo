@@ -26,7 +26,7 @@ export const fonts = {
         base: '1rem',
         large: '1.25rem',
         small: '.85rem',
-        mini: '.65rem',
+        mini: '.7rem',
         h1: '3.4rem',
         h2: '2.7rem',
         h3: '2rem',
