@@ -19,7 +19,7 @@ export const InputWrap = styled.div`
 `
 
 export const Input = styled.input`
-    font-size: ${fonts.size.base};
+    font-size: 1.1rem;
     font-family: ${fonts.family.button};
     color: rgb(${colors.black});
     border: none;
@@ -44,7 +44,9 @@ export const Input = styled.input`
         font-size: ${fonts.size.base};
         color: rgb(${colors.lightGrey});
         font-weight: ${fonts.fontWeight.base};
+        line-height: 1.5;
         transition: .2s ease-out;
+        opacity: 1;
     }
 
     &[readonly],

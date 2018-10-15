@@ -15,11 +15,12 @@ export const StyledLightbox = styled.div`
     visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 `
 
 export const StyledModal = styled.div`
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
     width: 100%;
     z-index: 2;
     max-width: 640px;
