@@ -25,10 +25,10 @@ export default class Modal extends PureComponent {
     }
 
     render() {
-        const { modal, toggle, ...props } = this.props
+        const { modal, toggle } = this.props
 
         return (
-            <StyledLightbox show={!!modal} {...props}>
+            <StyledLightbox>
                 <StyledModal>
                     <StyledClose title="close" onClick={() => toggle()}>
                         <Cross />

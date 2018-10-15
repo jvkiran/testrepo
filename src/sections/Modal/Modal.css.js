@@ -1,5 +1,10 @@
-import styled from 'styled-components'
-import { colors, transitions, responsive } from '../../styles'
+import styled, { keyframes } from 'styled-components'
+import { colors, responsive } from '../../styles'
+
+const fadeIn = keyframes`
+    from { opacity: 0; }
+    to { opacity: 1; }
+`
 
 export const StyledLightbox = styled.div`
     background: rgba(${colors.black}, .7);
@@ -9,13 +14,10 @@ export const StyledLightbox = styled.div`
     right: 0;
     height: 100%;
     z-index: 20;
-    transition: ${transitions.short};
-    opacity: ${({ show }) => (show ? '1' : '0')};
-    pointer-events: ${({ show }) => (show ? 'auto' : 'none')};
-    visibility: ${({ show }) => (show ? 'visible' : 'hidden')};
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    animation: ${fadeIn} .2s ease-out backwards;
 `
 
 export const StyledModal = styled.div`

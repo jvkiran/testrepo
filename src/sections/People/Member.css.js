@@ -38,7 +38,7 @@ export const Position = styled(Name)`
 
 export const Quote = styled.p`
     margin: 0;
-    font-size: ${fonts.size.small};
+    font-size: ${fonts.size.mini};
     color: rgb(${colors.white});
     position: absolute;
     top: 50%;
@@ -54,14 +54,6 @@ export const Quote = styled.p`
     transform: translate(0, -50%) scale(0);
     transform-origin: center;
     transition: .2s ease-out;
-
-    @media (${responsive.sm.min}) {
-        font-size: ${fonts.size.base};
-    }
-
-    @media (${responsive.md.min}) {
-        font-size: ${fonts.size.small};
-    }
 
     &:empty {
         display: none;
