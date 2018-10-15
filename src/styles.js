@@ -171,7 +171,7 @@ export const globalStyles = `
 
   a {
     text-decoration: none;
-    color: rgb(${colors.softPink});
+    color: rgb(${colors.pink});
     transition: ${transitions.short};
   }
 

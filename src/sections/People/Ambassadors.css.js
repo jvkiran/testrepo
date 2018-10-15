@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive } from '../../styles'
+import { colors, fonts, responsive, layout } from '../../styles'
 
 export const StyledList = styled.ul`
     list-style: none;
@@ -30,5 +30,30 @@ export const StyledList = styled.ul`
         height: 1rem;
         margin-right: .75rem;
         margin-left: -1.75rem;
+    }
+`
+
+export const Actions = styled.div`
+    button {
+        margin-bottom: ${layout.spacer};
+    }
+
+    a {
+        font-size: ${fonts.size.small};
+    }
+
+    @media (${responsive.md.min}) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            flex: 0 0 56%;
+            margin-bottom: 0;
+        }
+
+        a {
+            flex: 0 0 38%;
+        }
     }
 `

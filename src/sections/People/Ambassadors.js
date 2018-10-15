@@ -6,11 +6,8 @@ import Cell from '../../components/Cell'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import { ReactComponent as Check } from '../../assets/misc/check.svg'
-import {
-    StyledSubTitle,
-    SubHeader
-} from './People.css'
-import { StyledList } from './Ambassadors.css'
+import { StyledSubTitle, SubHeader } from './People.css'
+import { StyledList, Actions } from './Ambassadors.css'
 
 const content = {
     title: 'Ambassadors',
@@ -57,9 +54,13 @@ export default class Ambassadors extends PureComponent {
                         ))}
                     </StyledList>
 
-                    <Button onClick={this.handleButtonClick}>
+                    <Actions>
+                        <Button onClick={this.handleButtonClick}>
                         Apply to become an ambassador
-                    </Button>
+                        </Button>
+                        <a href="https://blog.oceanprotocol.com/envoys-of-the-new-data-economy-ocean-protocol-ambassadors-3816a0e63611">Announcing the Ocean Protocol Ambassador Program.</a>
+                    </Actions>
+
                 </Cell>
             </SubHeader>
         )
