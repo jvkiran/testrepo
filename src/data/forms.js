@@ -103,6 +103,17 @@ const forms = {
             publicspeaking: {
                 label: 'Public speaking',
                 help: 'How do you feel about public speaking?',
+                type: 'radio',
+                options: [
+                    {
+                        value: 'yes',
+                        label: 'I love it!'
+                    },
+                    {
+                        value: 'no',
+                        label: 'I would rather not.'
+                    }
+                ],
                 required: true
             },
             linkedin: {

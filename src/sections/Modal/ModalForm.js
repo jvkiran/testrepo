@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import jsonp from 'jsonp'
 import FormInput from '../../components/Form/FormInput'
+import FormRadio from '../../components/Form/FormRadio'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import forms from '../../data/forms'
@@ -144,19 +145,30 @@ export default class ModalForm extends PureComponent {
                         {forms[modal].fields && (
                             Object.entries(forms[modal].fields)
                                 .map(([key, value]) => (
-                                    <FormInput
-                                        key={key}
-                                        label={value.label}
-                                        placeholder={value.placeholder ? value.placeholder : null}
-                                        name={key}
-                                        required={value.required ? value.required : null}
-                                        tag={value.tag ? value.tag : null}
-                                        type={value.type ? value.type : 'text'}
-                                        ref={node => (this.key = node)}
-                                        maxLength={value.maxLength ? value.maxLength : null}
-                                        rows={value.maxLength ? '6' : null}
-                                        help={value.help}
-                                    />
+                                    value.type === 'radio' ? (
+                                        <FormRadio
+                                            key={key}
+                                            label={value.label}
+                                            name={key}
+                                            required={value.required ? value.required : null}
+                                            help={value.help}
+                                            options={value.options}
+                                        />
+                                    ) : (
+                                        <FormInput
+                                            key={key}
+                                            label={value.label}
+                                            placeholder={value.placeholder ? value.placeholder : null}
+                                            name={key}
+                                            required={value.required ? value.required : null}
+                                            tag={value.tag ? value.tag : null}
+                                            type={value.type ? value.type : 'text'}
+                                            maxLength={value.maxLength ? value.maxLength : null}
+                                            rows={value.maxLength ? '6' : null}
+                                            help={value.help}
+                                        />
+                                    )
+
                                 ))
                         )}
 

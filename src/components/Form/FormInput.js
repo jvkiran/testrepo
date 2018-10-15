@@ -18,7 +18,7 @@ class FormInput extends PureComponent {
     }
 
     render() {
-        const { name, label, required, tag, maxLength, help, ...props } = this.props
+        const { name, label, required, tag, type, maxLength, help, ...props } = this.props
 
         return (
             <FormGroup>
@@ -31,13 +31,13 @@ class FormInput extends PureComponent {
                 </FormLabel>
                 <InputWrap className={this.state.isFocused ? 'input-wrap is-focused' : 'input-wrap'}>
                     <FormTag
-                        className="input"
                         id={name}
                         name={name}
                         tag={tag}
                         maxLength={maxLength}
                         value={this.state.input}
                         required={required}
+                        type={type}
                         {...props}
                         onChange={this.onChange}
                         onFocus={() => this.setState({ isFocused: true })}

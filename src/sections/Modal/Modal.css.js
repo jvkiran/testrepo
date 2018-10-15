@@ -22,7 +22,7 @@ export const StyledLightbox = styled.div`
 
 export const StyledModal = styled.div`
     margin: 2rem auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     width: 100%;
     z-index: 2;
     max-width: 640px;
