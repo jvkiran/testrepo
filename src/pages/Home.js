@@ -10,13 +10,21 @@ import People from '../sections/People/People'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Faq from '../sections/Faq'
-import Modal from '../sections/Modal'
+import Modal from '../sections/Modal/Modal'
 import Art from '../sections/Art'
 
 export default class Home extends Component {
-    state = { modal: '' }
+    state = {
+        showModal: false,
+        modal: ''
+    }
 
-    toggleModal = (modal = '') => this.setState({ modal })
+    toggleModal = modal => {
+        this.setState({
+            modal,
+            showModal: !this.state.showModal
+        })
+    }
 
     render() {
         return (
@@ -33,7 +41,8 @@ export default class Home extends Component {
                 <Videos />
                 <Faq />
                 <Art />
-                <Modal modal={this.state.modal} toggle={this.toggleModal} />
+
+                {this.state.showModal && <Modal modal={this.state.modal} toggle={this.toggleModal} />}
             </Fragment>
         )
     }

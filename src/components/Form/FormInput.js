@@ -33,9 +33,11 @@ class FormInput extends PureComponent {
                     <FormTag
                         className="input"
                         id={name}
+                        name={name}
                         tag={tag}
                         maxLength={maxLength}
                         value={this.state.input}
+                        required={required}
                         {...props}
                         onChange={this.onChange}
                         onFocus={() => this.setState({ isFocused: true })}
