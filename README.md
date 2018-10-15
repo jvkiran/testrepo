@@ -87,6 +87,8 @@ Via Zapier, the data is synced further in real time when new submissions happen:
 - the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
 - the Data Provider, Data Consumer & Ambassadors data into Google Sheets
 
+All above forms are built out from what's defined in [`src/data/forms.js`](src/data/forms.js). New fields can be added to all forms from there, but data sending for new fields still needs to be handled in the component in [`src/sections/Modal/ModalForm.js`](src/sections/Modal/ModalForm.js).
+
 ## SEO
 
 Dynamic `meta` tags for better search engine ranking can be achieved by using the SEO component on every page under `src/pages/`. Every created page in there requires the use of this component, with some props pushed to it, e.g.:
