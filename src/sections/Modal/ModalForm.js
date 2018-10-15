@@ -27,6 +27,7 @@ export default class ModalForm extends PureComponent {
         e.preventDefault()
 
         const form = e.target
+        const { modal } = this.props
 
         let name
         let email
@@ -82,10 +83,10 @@ export default class ModalForm extends PureComponent {
             github = form.github.value && encodeURIComponent(form.github.value)
         }
 
-        if (this.props.modal === 'ambassadors') {
-            url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&PUBLICSPEAKING=${publicspeaking}&LINKEDIN=${linkedin}&GITHUB=${github}&${gdpr.flag}`
+        if (modal === 'ambassadors') {
+            url = `${forms[modal].baseUrl}&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&LINKEDIN=${linkedin}&GITHUB=${github}&${gdpr.flag}`
         } else {
-            url = `${forms[this.props.modal].baseUrl}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}&${gdpr.flag}`
+            url = `${forms[modal].baseUrl}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}&${gdpr.flag}`
         }
 
         this.setState(
