@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazyload'
 import fetch from 'isomorphic-fetch'
+import Helmet from 'react-helmet'
 import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import Section from '../components/Section'
 import Title from '../components/Title'
@@ -33,6 +34,8 @@ import {
     YouTubeButton,
     VideoBackground
 } from './Videos.css'
+
+const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
 
 class SectionContent extends PureComponent {
     constructor(props) {
@@ -137,7 +140,6 @@ class VideoSlider extends PureComponent {
     }
 
     componentDidMount() {
-        const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
         fetch(url)
             .then(response => {
                 if (response.ok) {
@@ -184,28 +186,33 @@ class VideoSlider extends PureComponent {
 }
 
 const Videos = () => (
-    <Section minHeight={1040} background={colors.black} fontColor={colors.white} id="video">
-        <LazyLoad once unmountIfInvisible height={1040} offset={100}>
-            <Fragment>
-                <ContentRow>
-                    <Title white id="videoScroll">Videos</Title>
-                </ContentRow>
+    <>
+        <Helmet>
+            <link rel="preconnect" href={url} />
+        </Helmet>
+        <Section minHeight={1040} background={colors.black} fontColor={colors.white} id="video">
+            <LazyLoad once unmountIfInvisible height={1040} offset={100}>
+                <Fragment>
+                    <ContentRow>
+                        <Title white id="videoScroll">Videos</Title>
+                    </ContentRow>
 
-                <VideoSlider />
+                    <VideoSlider />
 
-                <ContentRow>
-                    <a href={youtube.channel}>
-                        <YouTubeButton>YouTube Channel</YouTubeButton>
-                    </a>
-                </ContentRow>
+                    <ContentRow>
+                        <a href={youtube.channel}>
+                            <YouTubeButton>YouTube Channel</YouTubeButton>
+                        </a>
+                    </ContentRow>
 
-                <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
-                    <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
-                    <source src={jellyfishVideoMp4} type="video/mp4" />
-                </VideoBackground>
-            </Fragment>
-        </LazyLoad>
-    </Section>
+                    <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
+                        <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
+                        <source src={jellyfishVideoMp4} type="video/mp4" />
+                    </VideoBackground>
+                </Fragment>
+            </LazyLoad>
+        </Section>
+    </>
 )
 
 export default Videos
