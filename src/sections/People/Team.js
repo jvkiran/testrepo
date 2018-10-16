@@ -8,7 +8,7 @@ import {
     StyledSubTitle,
     StyledParagraph,
     SubHeader
-} from './People.css'
+} from './index.css'
 import { StyledTeam } from './Team.css'
 
 const Team = () => (

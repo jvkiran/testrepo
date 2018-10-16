@@ -13,15 +13,6 @@ export const StyledEvent = styled.a`
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
     margin: 1rem;
     height: 100%;
-
-    &:hover,
-    &:focus {
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
-    }
-
-    &:active {
-        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
-    }
 `
 
 export const StyledEventCity = styled.h4`

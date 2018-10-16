@@ -6,7 +6,7 @@ import Cell from '../../components/Cell'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import { ReactComponent as Check } from '../../assets/misc/check.svg'
-import { StyledSubTitle, SubHeader } from './People.css'
+import { StyledSubTitle, SubHeader } from './index.css'
 import { StyledList, Actions } from './Ambassadors.css'
 
 const content = {

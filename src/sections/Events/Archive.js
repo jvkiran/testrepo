@@ -49,36 +49,26 @@ PastEvent.propTypes = {
 }
 
 export default class Archive extends PureComponent {
-    state = {
-        modalIsOpen: false
-    }
-
     static propTypes = {
-        events: PropTypes.array.isRequired
-    }
-
-    closeModal() {
-        this.setState({ modalIsOpen: false })
-        document.getElementsByTagName('html')[0].style.overflow = 'auto'
-    }
-
-    openModal() {
-        this.setState({ modalIsOpen: true })
-        document.getElementsByTagName('html')[0].style.overflow = 'hidden'
+        events: PropTypes.array.isRequired,
+        openModal: PropTypes.func.isRequired,
+        closeModal: PropTypes.func.isRequired,
+        modalIsOpen: PropTypes.bool.isRequired
     }
 
     render() {
         const past = pastEvents(this.props.events)
+        const { openModal, closeModal } = this.props
 
         return (
             <>
-                <ArchiveButton onClick={() => this.openModal()}>
+                <ArchiveButton onClick={() => openModal()}>
                     View Events Archive
                 </ArchiveButton>
-                {this.state.modalIsOpen === true &&
+                {this.props.modalIsOpen &&
                     <ModalOverlay>
                         <Modal>
-                            <StyledClose title="close" onClick={() => this.closeModal()}>
+                            <StyledClose title="close" onClick={() => closeModal()}>
                                 <Cross />
                             </StyledClose>
                             <ArchiveTitle>

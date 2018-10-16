@@ -1,7 +1,12 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import fadeIn from 'react-animations/lib/fade-in'
 import { colors, fonts, responsive } from '../../styles'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
+
+const fadeInAnimation = keyframes`
+    ${fadeIn}
+`
 
 export const ArchiveButton = styled(Button)`
     text-align: center;
@@ -78,6 +83,7 @@ export const Modal = styled.div`
     max-width: 50rem;
     max-height: ${ModalHeight};
     transform: translate(-50%, -50%);
+    animation: ${fadeInAnimation} .2s ease-out backwards;
 
     @media screen and (${responsive.md.min}) {
         padding: 3rem;

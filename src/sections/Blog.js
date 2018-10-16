@@ -2,7 +2,6 @@ import React, { PureComponent, Fragment } from 'react'
 import LazyLoad from 'react-lazyload'
 import axios from 'axios'
 import Helmet from 'react-helmet'
-import FadeIn from '../components/FadeIn'
 import Title from '../components/Title'
 import Section from '../components/Section'
 import ContentRow from '../components/ContentRow'
@@ -68,24 +67,22 @@ export default class Blog extends PureComponent {
                         {fetching ? (
                             <Spinner />
                         ) : (
-                            <LazyLoad once height={524} offset={100}>
-                                <FadeIn>
-                                    <Grid>
-                                        {posts.map(post => (
-                                            <Cell smallGutter key={post.id} width={1 / 3}>
-                                                <a href={post.postUrl}>
-                                                    <StyledCard>
-                                                        <StyledHeader imageUrl={post.imageUrl} />
-                                                        <StyledContent>
-                                                            <StyledTitle>{post.title}</StyledTitle>
-                                                            <StyledSubtitle>{post.subtitle}</StyledSubtitle>
-                                                        </StyledContent>
-                                                    </StyledCard>
-                                                </a>
-                                            </Cell>
-                                        ))}
-                                    </Grid>
-                                </FadeIn>
+                            <LazyLoad once height={524} offset={200}>
+                                <Grid>
+                                    {posts.map(post => (
+                                        <Cell smallGutter key={post.id} width={1 / 3}>
+                                            <a href={post.postUrl}>
+                                                <StyledCard>
+                                                    <StyledHeader imageUrl={post.imageUrl} />
+                                                    <StyledContent>
+                                                        <StyledTitle>{post.title}</StyledTitle>
+                                                        <StyledSubtitle>{post.subtitle}</StyledSubtitle>
+                                                    </StyledContent>
+                                                </StyledCard>
+                                            </a>
+                                        </Cell>
+                                    ))}
+                                </Grid>
                             </LazyLoad>
                         )}
                         <StyledAction fetching={fetching}>

@@ -6,7 +6,7 @@ import {
     StyledSubTitle,
     StyledParagraph,
     SubHeader
-} from './People.css'
+} from './index.css'
 import { StyledAdvisors } from './Advisors.css'
 
 const Advisors = () => (

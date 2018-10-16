@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazyload'
-import FadeIn from '../../components/FadeIn'
 import teamImg from '../../assets/team'
 import advisorsImg from '../../assets/advisors'
 import { Photo } from './MemberPhoto.css'
@@ -20,13 +19,11 @@ const MemberPhoto = ({ member, advisor, empty, ...props }) => {
 
     return (
         <Photo {...props}>
-            <LazyLoad once height={141} offset={100}>
-                <FadeIn>
-                    {empty
-                        ? <img alt={'Coming soon...'} src={src} />
-                        : <img alt={member.name} src={src} />
-                    }
-                </FadeIn>
+            <LazyLoad once height={141} offset={300}>
+                {empty
+                    ? <img alt={'Coming soon...'} src={src} />
+                    : <img alt={member.name} src={src} />
+                }
             </LazyLoad>
         </Photo>
     )

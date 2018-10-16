@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const EventDate = ({ date, dateEnd }) => {
     const eventDate = new Date(date)
     const eventDateFormatted = eventDate.toLocaleDateString('en-US', {
@@ -43,3 +45,8 @@ const EventDate = ({ date, dateEnd }) => {
 }
 
 export default EventDate
+
+EventDate.propTypes = {
+    date: PropTypes.string.isRequired,
+    dateEnd: PropTypes.string
+}

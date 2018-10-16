@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Event from './Event'
-import { StyledEventsList, Item } from './EventsList.css'
+import { StyledEventsList, Item, LastItem } from './EventsList.css'
 
 const FilteredEvents = ({ events }) => {
     if (events.length > 0) {
@@ -27,16 +27,16 @@ const FilteredEvents = ({ events }) => {
     }
 }
 
-export default class EventsList extends PureComponent {
-    static propTypes = {
-        events: PropTypes.array
-    }
+const EventsList = ({ events, openModal }) => (
+    <StyledEventsList>
+        <FilteredEvents events={events} />
+        <LastItem onClick={() => openModal()}>View events archive</LastItem>
+    </StyledEventsList>
+)
 
-    render() {
-        return (
-            <StyledEventsList>
-                <FilteredEvents events={this.props.events} />
-            </StyledEventsList>
-        )
-    }
+EventsList.propTypes = {
+    events: PropTypes.array.isRequired,
+    openModal: PropTypes.func.isRequired
 }
+
+export default EventsList

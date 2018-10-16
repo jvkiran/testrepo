@@ -224,6 +224,7 @@ export const VideoListItem = styled.a`
     min-width: 14rem;
     max-width: 14rem;
     margin: 0 .5rem;
+    transform: translate3d(0, 0, 0);
 
     @media screen and (${responsive.sm.min}) {
         min-width: 16rem;
@@ -236,12 +237,10 @@ export const VideoListItem = styled.a`
 
     &:hover,
     &:focus {
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
         transform: translate3d(0, -.05rem, 0);
     }
 
     &:active {
-        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
         transition: none;
         transform: none;
     }

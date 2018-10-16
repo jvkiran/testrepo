@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { responsive } from '../../styles'
+import { responsive, colors, fonts } from '../../styles'
 
 export const StyledEventsList = styled.ul`
     margin-top: 4rem;
@@ -12,8 +12,8 @@ export const StyledEventsList = styled.ul`
     -ms-overflow-style: -ms-autohiding-scrollbar;
     margin-right: -1.75rem;
     margin-left: -1.75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     display: flex;
     align-items: stretch;
 
@@ -27,10 +27,20 @@ export const StyledEventsList = styled.ul`
 `
 
 export const Item = styled.li`
-    min-width: 20rem;
+    min-width: 17rem;
     display: block;
+    transform: translate3d(0, 0, 0);
+`
 
-    &:last-child {
-        margin-right: 2.5rem;
-    }
+export const LastItem = styled(Item)`
+    min-width: 10rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(${colors.dimmedGrey});
+    font-family: ${fonts.family.button};
+    cursor: pointer;
+    margin-top: 2rem;
 `

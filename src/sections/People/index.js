@@ -11,7 +11,7 @@ import {
     StyledTitle,
     StyledParagraph,
     Line
-} from './People.css'
+} from './index.css'
 
 const People = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="people">
