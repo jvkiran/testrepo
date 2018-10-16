@@ -118,6 +118,6 @@ export const StyledMessage = styled.p`
 
 export const Gdpr = styled.div`
     margin-top: 1rem;
-    font-size: ${fonts.size.small};
+    font-size: ${fonts.size.mini};
     color: rgba(${colors.dimmedGrey}, .7);
 `

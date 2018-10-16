@@ -10,7 +10,7 @@ export const SocialLink = styled.a`
     padding: .5rem 1rem;
     margin: 1% 0;
     color: rgb(${colors.white});
-    font-size: ${fonts.size.small};
+    font-size: ${fonts.size.mini};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
     background: ${({ important }) => important ? `rgba(${colors.purple}, .95)` : `rgba(${colors.black}, .95)`};
