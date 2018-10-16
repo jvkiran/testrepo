@@ -7,7 +7,7 @@ const fadeIn = keyframes`
 `
 
 export const StyledLightbox = styled.div`
-    background: rgba(${colors.black}, .7);
+    background: rgba(${colors.black}, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -17,7 +17,7 @@ export const StyledLightbox = styled.div`
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    animation: ${fadeIn} .2s ease-out backwards;
+    animation: ${fadeIn} 0.2s ease-out backwards;
 `
 
 export const StyledModal = styled.div`
@@ -49,6 +49,6 @@ export const StyledClose = styled.button`
     }
 
     &:hover {
-        opacity: .7;
+        opacity: 0.7;
     }
 `

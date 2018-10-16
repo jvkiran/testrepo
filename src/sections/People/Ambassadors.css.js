@@ -28,7 +28,7 @@ export const StyledList = styled.ul`
         fill: rgb(${colors.pink});
         width: 1rem;
         height: 1rem;
-        margin-right: .75rem;
+        margin-right: 0.75rem;
         margin-left: -1.75rem;
     }
 `

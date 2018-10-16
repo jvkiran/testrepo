@@ -26,7 +26,7 @@ export const Color = styled.div`
     text-align: center;
     color: rgb(${colors.white});
     border: 1px solid rgb(${colors.lightGrey});
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     flex: 0 0 49%;
 
     @media (${responsive.sm.min}) {
@@ -36,7 +36,7 @@ export const Color = styled.div`
 
 export const ColorName = styled.h5`
     margin: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     color: rgb(${colors.white});
     line-height: ${fonts.lineHeight.base};
 
@@ -49,13 +49,13 @@ export const ColorName = styled.h5`
 export const ColorValue = styled.span`
     margin: 0;
     display: block;
-    color: rgba(${colors.white}, .7);
+    color: rgba(${colors.white}, 0.7);
     font-size: ${fonts.size.base};
     font-family: ${fonts.family.code};
 
     [color='255, 255, 255'] &,
     [color='226, 226, 226'] & {
-        color: rgba(${colors.grey}, .7);
+        color: rgba(${colors.grey}, 0.7);
     }
 `
 

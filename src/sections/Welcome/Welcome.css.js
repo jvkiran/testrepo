@@ -91,11 +91,11 @@ export const StyledVideoThumbnail = styled.div`
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .6);
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.6);
     cursor: pointer;
     max-height: 180px;
     background: rgb(${colors.black});
-    animation: ${animation} 1.5s .5s backwards;
+    animation: ${animation} 1.5s 0.5s backwards;
 
     @media screen and (${responsive.md.min}) {
         max-width: none;
@@ -103,15 +103,15 @@ export const StyledVideoThumbnail = styled.div`
     }
 
     img {
-        opacity: .9;
-        transition: .2s ease-out;
-        border: .4rem solid rgb(${colors.white});
+        opacity: 0.9;
+        transition: 0.2s ease-out;
+        border: 0.4rem solid rgb(${colors.white});
     }
 
     &:hover,
     &:focus {
-        transform: translate3d(0, -.05rem, 0);
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .6);
+        transform: translate3d(0, -0.05rem, 0);
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.6);
 
         img {
             opacity: 1;
@@ -128,18 +128,19 @@ export const Cta = styled.div`
 `
 
 export const StyledButton = styled.a`
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 1% 0;
     color: rgb(${colors.white});
     font-size: ${fonts.size.small};
     text-transform: uppercase;
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.button};
-    background: ${({ important }) => important ? `${gradients.main}` : `rgba(${colors.grey}, .95)`};
+    background: ${({ important }) =>
+        important ? `${gradients.main}` : `rgba(${colors.grey}, .95)`};
     display: inline-block;
-    margin-left: .5rem;
-    animation: ${animation} 1.5s .5s backwards;
-    border-radius: .1rem;
+    margin-left: 0.5rem;
+    animation: ${animation} 1.5s 0.5s backwards;
+    border-radius: 0.1rem;
 
     &:first-child {
         animation-delay: 0;

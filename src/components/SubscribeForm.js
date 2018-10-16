@@ -35,21 +35,28 @@ export default class SubscribeForm extends Component {
         inputPlaceholder: 'your@email.com',
         btnLabel: 'Subscribe',
         sending: 'Sending...',
-        success: 'Thank you! Please click the link in the confirmation email to complete your subscription.',
+        success:
+            'Thank you! Please click the link in the confirmation email to complete your subscription.',
         error: 'Oops, something went wrong. Would you mind trying again?'
     }
 
-    onSubmit = (e) => {
+    onSubmit = e => {
         e.preventDefault()
 
-        if (!this.input.value || this.input.value.length < 5 || this.input.value.indexOf('@') === -1) {
+        if (
+            !this.input.value ||
+            this.input.value.length < 5 ||
+            this.input.value.indexOf('@') === -1
+        ) {
             this.setState({
                 status: 'error'
             })
             return
         }
 
-        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(this.input.value)}&${gdpr.flag}`
+        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(
+            this.input.value
+        )}&${gdpr.flag}`
 
         this.setState(
             {
@@ -85,7 +92,13 @@ export default class SubscribeForm extends Component {
 
     render() {
         const {
-            maxWidth, action, inputPlaceholder, btnLabel, sending, success, ...props
+            maxWidth,
+            action,
+            inputPlaceholder,
+            btnLabel,
+            sending,
+            success,
+            ...props
         } = this.props
         const { status, msg } = this.state
 
@@ -101,19 +114,38 @@ export default class SubscribeForm extends Component {
                             placeholder={inputPlaceholder}
                             ref={node => (this.input = node)} //eslint-disable-line
                             type="email"
-                            aria-label="Your Email" />
+                            aria-label="Your Email"
+                        />
                         <Button
-                            disabled={this.state.status === 'sending' || this.state.status === 'success'}
+                            disabled={
+                                this.state.status === 'sending' ||
+                                this.state.status === 'success'
+                            }
                             onClick={this.onSubmit}
-                            type="submit">
+                            type="submit"
+                        >
                             {btnLabel}
                         </Button>
                     </StyledSubscribeWrapper>
-                    {status === 'sending' && <StyledMessage dangerouslySetInnerHTML={{ __html: sending }} />}
-                    {status === 'success' && <StyledMessage dangerouslySetInnerHTML={{ __html: success }} />}
-                    {status === 'error' && <StyledMessage dangerouslySetInnerHTML={{ __html: msg }} />}
+                    {status === 'sending' && (
+                        <StyledMessage
+                            dangerouslySetInnerHTML={{ __html: sending }}
+                        />
+                    )}
+                    {status === 'success' && (
+                        <StyledMessage
+                            dangerouslySetInnerHTML={{ __html: success }}
+                        />
+                    )}
+                    {status === 'error' && (
+                        <StyledMessage
+                            dangerouslySetInnerHTML={{ __html: msg }}
+                        />
+                    )}
                 </form>
-                <Gdpr dangerouslySetInnerHTML={{ __html: gdpr.forms.newsletter }} />
+                <Gdpr
+                    dangerouslySetInnerHTML={{ __html: gdpr.forms.newsletter }}
+                />
             </StyledSubscribe>
         )
     }

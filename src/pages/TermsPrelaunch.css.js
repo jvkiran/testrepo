@@ -5,11 +5,13 @@ import ContentRow from '../components/ContentRow'
 import { fonts, colors } from '../styles'
 
 export const StyledSection = styled(Section)`
-    ${ContentRow} { /* stylelint-disable-line */
+    ${ContentRow} {
+        /* stylelint-disable-line */
         max-width: 45rem;
     }
 
-    ${SubTitle} { /* stylelint-disable-line */
+    ${SubTitle} {
+        /* stylelint-disable-line */
         margin-bottom: 3rem;
     }
 
@@ -23,7 +25,7 @@ export const StyledSection = styled(Section)`
 `
 
 export const Line = styled.div`
-    border-top: 2px solid rgba(${colors.lightGrey}, .5);
+    border-top: 2px solid rgba(${colors.lightGrey}, 0.5);
     margin-bottom: 2rem;
     margin-top: 2rem;
 `

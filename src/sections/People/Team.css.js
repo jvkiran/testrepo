@@ -35,7 +35,7 @@ export const StyledTeam = styled.div`
             font-size: 2.25rem;
             line-height: 0;
             vertical-align: middle;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             color: rgb(${colors.pink});
             font-weight: ${fonts.fontWeight.base};
             font-family: ${fonts.family.base};
@@ -44,7 +44,7 @@ export const StyledTeam = styled.div`
 
         &.is-open:before {
             content: '-';
-            top: -.25rem;
+            top: -0.25rem;
         }
     }
 

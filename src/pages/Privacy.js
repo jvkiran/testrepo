@@ -1,8 +1,7 @@
-/* global fetch */
-
 import React, { Fragment, Component } from 'react'
 import PropTypes from 'prop-types'
 import Markdown from 'react-remarkable'
+import fetch from 'isomorphic-fetch'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
@@ -11,6 +10,9 @@ import Spinner from '../components/Spinner'
 import SEO from '../components/SEO'
 import privacy from '../data/privacy.md'
 import { StyledSection, StyledContent } from './Privacy.css'
+
+const title = 'Privacy Policy'
+const description = 'Privacy Policy for the use of oceanprotocol.com.'
 
 export default class Privacy extends Component {
     state = {
@@ -37,15 +39,13 @@ export default class Privacy extends Component {
     }
 
     render() {
-        const title = 'Privacy Policy'
-        const description = 'Privacy Policy for the use of oceanprotocol.com.'
-
         return (
             <Fragment>
                 <SEO
                     description={description}
                     path={this.props.location.pathname}
-                    title={title} />
+                    title={title}
+                />
                 <Header />
                 <StyledSection>
                     <ContentRow>
@@ -57,7 +57,10 @@ export default class Privacy extends Component {
                         {this.state.fetching ? (
                             <Spinner />
                         ) : (
-                            <Markdown options={{ breaks: true, linkify: true }} source={this.state.text} />
+                            <Markdown
+                                options={{ breaks: true, linkify: true }}
+                                source={this.state.text}
+                            />
                         )}
                     </StyledContent>
                 </StyledSection>

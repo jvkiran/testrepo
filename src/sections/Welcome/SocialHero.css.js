@@ -7,15 +7,18 @@ export const SocialBand = styled.aside`
 `
 
 export const SocialLink = styled.a`
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 1% 0;
     color: rgb(${colors.white});
     font-size: ${fonts.size.mini};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
-    background: ${({ important }) => important ? `rgba(${colors.purple}, .95)` : `rgba(${colors.black}, .95)`};
+    background: ${({ important }) =>
+        important
+            ? `rgba(${colors.purple}, .95)`
+            : `rgba(${colors.black}, .95)`};
     display: inline-block;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 
     &:first-child {
         margin-left: 0;
@@ -30,7 +33,7 @@ export const SocialLink = styled.a`
         width: 1.3rem;
         height: 1.3rem;
         vertical-align: middle;
-        margin-top: -.2rem;
-        margin-right: .3rem;
+        margin-top: -0.2rem;
+        margin-right: 0.3rem;
     }
 `

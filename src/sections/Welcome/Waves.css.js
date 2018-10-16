@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import wavesStatic from '../../assets/misc/waves.png'
+import wavesStatic from '../../assets/misc/waves.jpg'
 
 export const StyledWaves = styled.div`
     background: url(${wavesStatic}) no-repeat center bottom;
@@ -20,6 +20,6 @@ export const StyledWaves = styled.div`
         width: 100%;
         top: 10vh;
         z-index: 1;
-        transition: opacity .3s ease-out;
+        transition: opacity 0.3s ease-out;
     }
 `

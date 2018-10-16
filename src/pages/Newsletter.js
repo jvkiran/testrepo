@@ -30,9 +30,13 @@ export default class Newsletter extends Component {
                 <SEO
                     description={description}
                     path={this.props.location.pathname}
-                    title={title} />
+                    title={title}
+                />
                 <Header />
-                <StyledSection background={colors.black} fontColor={colors.white}>
+                <StyledSection
+                    background={colors.black}
+                    fontColor={colors.white}
+                >
                     <ContentRow>
                         <Title white>{title}</Title>
                         <SubTitle>{description}</SubTitle>

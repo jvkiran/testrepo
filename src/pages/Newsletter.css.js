@@ -11,16 +11,19 @@ export const StyledSection = styled(Section)`
     display: flex;
     align-items: center;
 
-    ${ContentRow} { /* stylelint-disable-line */
+    ${ContentRow} {
+        /* stylelint-disable-line */
         max-width: 45rem;
     }
 
-    ${Title} { /* stylelint-disable-line */
+    ${Title} {
+        /* stylelint-disable-line */
         margin-bottom: 1rem;
         margin-top: -4rem;
     }
 
-    ${SubTitle} { /* stylelint-disable-line */
+    ${SubTitle} {
+        /* stylelint-disable-line */
         color: rgb(${colors.lightGrey});
         margin-bottom: 6rem;
         text-align: center;
