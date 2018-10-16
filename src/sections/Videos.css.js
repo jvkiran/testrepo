@@ -6,6 +6,15 @@ import Button from '../components/Button'
 import jellyfish from '../assets/misc/jellyfish-background.jpg'
 import { colors, fonts, responsive, transitions } from '../styles'
 
+export const StyledVideos = styled(ContentRow)`
+    margin-bottom: 2.5rem;
+    z-index: 1;
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: 0;
+    }
+`
+
 export const VideoBackground = styled.video`
     position: absolute;
     top: 50%;
@@ -24,71 +33,6 @@ export const VideoBackground = styled.video`
 export const CenterParagraph = styled(Paragraph)`
     text-align: center;
     z-index: 1;
-`
-
-export const StyledContentRow = styled(ContentRow)`
-    margin-bottom: 2.5rem;
-    z-index: 1;
-
-    @media screen and (${responsive.sm.min}) {
-        margin-bottom: 0;
-    }
-
-    @media screen and (${responsive.md.min}) and (min-height: 900px) {
-        max-width: 65rem;
-    }
-
-    .slick-dots {
-        bottom: -3rem;
-
-        button:before {
-            font-size: ${fonts.size.small};
-            opacity: .25;
-            color: rgb(${colors.white});
-        }
-
-        .slick-active button:before { /* stylelint-disable-line selector-max-compound-selectors */
-            color: rgb(${colors.white});
-        }
-
-        .slick-active:only-child {
-            display: none;
-        }
-    }
-
-    .slick-prev,
-    .slick-next {
-        z-index: 2;
-        width: 1.5rem;
-        height: 1.5rem;
-
-        &.slick-disabled {
-            visibility: hidden;
-        }
-
-        &:before {
-            color: #fff;
-            font-size: 1.5rem;
-        }
-    }
-
-    .slick-prev {
-        left: -1.5rem;
-    }
-
-    .slick-next {
-        right: -1.5rem;
-    }
-
-    @media screen and (${responsive.sm.min}) {
-        .slick-prev {
-            left: -1.5rem;
-        }
-
-        .slick-next {
-            right: -1.5rem;
-        }
-    }
 `
 
 export const HeightRow = styled.div`
@@ -127,7 +71,7 @@ export const RatioContainer = styled.div`
         border: .4rem solid rgb(${colors.white});
         padding: 0;
         padding-top: 1rem;
-        margin: .5rem;
+        margin: .5rem 0;
 
         &:hover,
         &:focus {
@@ -203,10 +147,9 @@ export const VideoContainer = styled.div`
     position: relative;
     left: 0;
     right: 0;
-    top: -.5rem;
+    top: 0;
     z-index: -1;
     margin: .5rem;
-    border: .4rem solid rgb(${colors.white});
     background: rgb(${colors.black});
     display: none;
 
@@ -221,17 +164,21 @@ export const VideoContainer = styled.div`
     }
 `
 
-export const StyledClose = styled.img`
+export const StyledClose = styled.button`
     position: absolute;
     cursor: pointer;
-    width: 1.5rem;
-    height: 1.5rem;
+    background: none;
+    outline: 0;
     top: 1.5rem;
     right: 1.5rem;
     z-index: 21;
 
-    &:hover,
-    &:focus {
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &:hover {
         opacity: .7;
     }
 `
@@ -256,19 +203,36 @@ export const StyledReactPlayer = styled(ReactPlayer)`
     }
 `
 
-export const VideoListItem = styled.a`
-    cursor: pointer;
+export const VideoList = styled.div`
+    padding-bottom: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    display: flex;
+    align-items: stretch;
 `
 
-export const ListContainer = styled.div`
+export const VideoListItem = styled.a`
+    display: block;
     color: rgb(${colors.lightGrey});
     background: rgb(${colors.black});
     border-radius: 2px;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
     transition: ${transitions.base};
     border: .08rem solid rgb(${colors.grey});
-    max-width: 21.3rem;
-    margin: 0 auto;
+    min-width: 14rem;
+    max-width: 14rem;
+    margin: 0 .5rem;
+
+    @media screen and (${responsive.sm.min}) {
+        min-width: 16rem;
+        max-width: 16rem;
+    }
+
+    &:first-child {
+        margin-left: 0;
+    }
 
     &:hover,
     &:focus {
@@ -285,10 +249,6 @@ export const ListContainer = styled.div`
     &.active {
         background: rgb(${colors.white});
         color: rgb(${colors.black});
-    }
-
-    @media screen and (${responsive.sm.min}) {
-        margin: 0 .5rem;
     }
 `
 
