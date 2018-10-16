@@ -8,7 +8,7 @@ import { colors, fonts, responsive, transitions } from '../styles'
 
 export const StyledVideos = styled(ContentRow)`
     margin-bottom: 2.5rem;
-    z-index: 1;
+    z-index: 2;
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: 0;
@@ -287,6 +287,7 @@ export const YouTubeButton = styled(Button)`
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
     font-size: ${fonts.size.small};
     color: rgb(${colors.lightGrey});
+    z-index: 2;
 
     &:hover,
     &:focus {

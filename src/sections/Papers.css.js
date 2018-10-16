@@ -65,12 +65,12 @@ export const StyledFooter = styled.div`
 export const StyledDownload = styled(Button)`
     margin-left: auto;
     margin-right: auto;
+`
 
-    span {
-        font-size: ${fonts.size.small};
-        opacity: .7;
-        margin-left: .3rem;
-    }
+export const FileType = styled.span`
+    font-size: ${fonts.size.small};
+    opacity: .7;
+    margin-left: .3rem;
 `
 
 export const StyledComments = styled.h4`

@@ -18,7 +18,8 @@ import {
     StyledFooter,
     StyledDownload,
     StyledComments,
-    StyledRow
+    StyledRow,
+    FileType
 } from './Papers.css'
 
 const Documentation = () => (
@@ -42,7 +43,7 @@ const Documentation = () => (
                             <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
                                 <StyledDownload
                                     onClick={() => window.ga && ga('send', 'event', 'download', 'tech-whitepaper', 'button')}>
-                                    Download <span>pdf</span>
+                                    Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
                         </StyledFooter>
@@ -61,7 +62,7 @@ const Documentation = () => (
                             <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
                                 <StyledDownload
                                     onClick={() => window.ga && ga('send', 'event', 'download', 'business-whitepaper', 'button')}>
-                                    Download <span>pdf</span>
+                                    Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
                         </StyledFooter>
@@ -80,7 +81,7 @@ const Documentation = () => (
                             <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
                                 <StyledDownload
                                     onClick={() => window.ga && ga('send', 'event', 'download', 'marketplace-framework', 'button')}>
-                                    Download <span>pdf</span>
+                                    Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
                         </StyledFooter>
