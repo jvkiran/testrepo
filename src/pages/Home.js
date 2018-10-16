@@ -11,7 +11,6 @@ import Collaborators from '../sections/Collaborators/Collaborators'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Modal from '../sections/Modal/Modal'
-import Art from '../sections/Art'
 import MorePages from '../sections/MorePages/MorePages'
 
 export default class Home extends Component {
