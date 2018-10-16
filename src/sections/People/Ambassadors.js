@@ -1,15 +1,13 @@
 /* global ga */
 
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import Cell from '../../components/Cell'
 import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import { ReactComponent as Check } from '../../assets/misc/check.svg'
-import {
-    StyledSubTitle,
-    SubHeader
-} from './People.css'
-import { StyledList } from './Ambassadors.css'
+import { StyledSubTitle, SubHeader } from './People.css'
+import { StyledList, Actions } from './Ambassadors.css'
 
 const content = {
     title: 'Ambassadors',
@@ -29,7 +27,7 @@ export default class Ambassadors extends PureComponent {
     link = 'https://docs.google.com/forms/d/e/1FAIpQLSdq3hHU6hlBbHtJXGUEM_6x32T3o6zM0ynyUikcK_thhH_8cw/viewform'
 
     handleButtonClick = () => {
-        window.open(this.link) // eslint-disable-line security/detect-non-literal-fs-filename
+        this.props.toggleModal('ambassadors')
 
         if (window.ga) {
             ga('send', 'event', 'click', 'ambassador', 'ambassador_section')
@@ -56,11 +54,19 @@ export default class Ambassadors extends PureComponent {
                         ))}
                     </StyledList>
 
-                    <Button onClick={this.handleButtonClick}>
+                    <Actions>
+                        <Button onClick={this.handleButtonClick}>
                         Apply to become an ambassador
-                    </Button>
+                        </Button>
+                        <a href="https://blog.oceanprotocol.com/envoys-of-the-new-data-economy-ocean-protocol-ambassadors-3816a0e63611">Announcing the Ocean Protocol Ambassador Program.</a>
+                    </Actions>
+
                 </Cell>
             </SubHeader>
         )
     }
+}
+
+Ambassadors.propTypes = {
+    toggleModal: PropTypes.func.isRequired
 }

@@ -305,7 +305,7 @@ export const ThumbTitle = styled(Paragraph)`
     padding: .5rem 1.25rem 1rem 1.25rem;
     margin: 0;
     text-align: center;
-    font-size: ${fonts.size.small};
+    font-size: ${fonts.size.mini};
 
     span {
         display: block;

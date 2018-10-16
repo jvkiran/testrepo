@@ -22,7 +22,7 @@ const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
 
 const content = {
     title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
-    description: 'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equilizing access to data for all.'
+    description: 'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
 }
 
 class Welcome extends Component {

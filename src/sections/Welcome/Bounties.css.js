@@ -17,7 +17,7 @@ export const Bounty = styled.a`
     display: inline-block;
     padding: .5rem 1rem;
     background: rgba(${colors.black}, .95);
-    font-size: ${fonts.size.small};
+    font-size: ${fonts.size.mini};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
     color: ${({ important }) => important ? `rgb(${colors.pink})` : `rgba(${colors.white}, .8)`};
