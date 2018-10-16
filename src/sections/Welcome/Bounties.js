@@ -16,46 +16,27 @@ const BountiesText = ({ data }) => {
 
 export default class Bounties extends PureComponent {
     state = {
-        gitcoin: null,
-        bountiesNetwork: null
+        networks: ''
     }
 
-    getGitcoinBounties = async () => {
-        const response = await axios.get('https://gitcoin.co/api/v0.1/bounties/')
+    url = 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.sandbox.auth0-extend.com/bounties'
 
-        const gitcoin = response.data // returns only open bounties by default
-
-        this.setState({
-            gitcoin: gitcoin.filter(
-                // filter the response manually, no way atm to do that as API query
-                item => item.funding_organisation.includes('Ocean Protocol')
-            )
-        })
-    }
-
-    getBountiesNetworkBounties = async () => {
-        // get all bounties with 'ocean protocol' in title, description, or categories
-        // TODO: consider pagination, returns 25 items per page
-        const response = await axios.get('https://new.api.bounties.network/bounty/?search=ocean%20protocol&bountyStage=1')
-        const bountiesNetwork = response.data.results
-
-        this.setState({ bountiesNetwork })
+    getNetworks = async () => {
+        const response = await axios.get(this.url)
+        const networks = response.data
+        this.setState({ networks })
     }
 
     componentDidMount() {
-        this.getGitcoinBounties()
-        this.getBountiesNetworkBounties()
+        this.getNetworks()
     }
 
     componentWillUnmount() {
-        this.setState({
-            gitcoin: null,
-            bountiesNetwork: null
-        })
+        this.setState({ networks: '' })
     }
 
     render() {
-        const { gitcoin, bountiesNetwork } = this.state
+        const { gitcoin, bountiesNetwork } = this.state.networks
 
         return (
             <StyledBounties>

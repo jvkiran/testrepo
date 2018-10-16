@@ -60,7 +60,7 @@ const forms = {
         baseUrl: '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
     },
     ambassadors: {
-        title: 'Ocean Protocol Ambassadors Program',
+        title: 'Ocean Protocol Ambassador Program',
         description: 'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below. \n\nWe look forward to hearing from you!',
         fields: {
             name: {

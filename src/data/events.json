@@ -661,6 +661,12 @@
     },
       {
         "city": "Berlin",
+        "eventName": "Ocean, Enigma & Chainlink Meetup",
+        "date": "2018-10-24",
+        "link": "https://www.meetup.com/9984-Meetup/events/255552519/"
+    },  
+      {
+        "city": "Berlin",
         "eventName": "Token Engineering Global Gathering",
         "date": "2018-10-25",
         "link": "https://www.meetup.com/Token-Engineering/events/254583192/"
@@ -678,13 +684,24 @@
         "date_end": "2018-10-30",
         "link": "http://www.cc-forum.com"
     },
+        {
+        "city": "Cluj",
+        "eventName": "When AI Meets Blockchain Meetup",
+        "date": "2018-11-07",
+        "link": "https://www.meetup.com/cryptoland-tech-meetups/events/255553993/"
+    },
+      {
+        "city": "Singapore",
+        "eventName": "Data Sharing Without Sharing Data",
+        "date": "2018-11-19",
+        "link": "https://www.sginnovate.com/events/data-dialogue-data-sharing-without-sharing-data"
+    },
       {
         "city": "Berlin",
-        "eventName": "Blockchain for Science",
-        "date": "2018-11-05",
-        "date_end": "2018-11-06",
-        "link": "https://www.blockchainforsciencecon.com"
-    },
+        "eventName": "Data Natives",
+        "date": "2018-11-22",
+        "link": "http://datanatives.io"
+    },    
     {
         "city": "Berlin",
         "eventName": "Data Natives",
