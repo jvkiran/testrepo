@@ -699,6 +699,12 @@
     },
       {
         "city": "Berlin",
+        "eventName": "Revision Summit",
+        "date": "2018-11-19",
+        "link": "https://revision.io"
+    },
+      {
+        "city": "Berlin",
         "eventName": "Data Natives",
         "date": "2018-11-22",
         "link": "http://datanatives.io"
