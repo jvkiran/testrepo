@@ -14,6 +14,7 @@ export const StyledSection = styled(Section)`
     > div {
         @media screen and (${responsive.sm.min}) {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             flex-direction: row;
         }

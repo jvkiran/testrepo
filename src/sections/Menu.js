@@ -70,8 +70,18 @@ const MenuItems = [
         href: '#video'
     },
     {
-        name: 'Faq',
-        href: '#faq'
+        name: 'More',
+        href: '#more',
+        sub: [
+            {
+                name: 'Art',
+                href: '/art'
+            },
+            {
+                name: 'FAQ',
+                href: '/faq'
+            }
+        ]
     }
 ]
 
