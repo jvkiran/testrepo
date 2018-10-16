@@ -10,7 +10,7 @@ export const StyledSection = styled(Section)`
     }
 
     .Collapsible__contentInner {
-        border-top: 1px solid rgba(${colors.lightGrey}, .4);
+        border-top: 1px solid rgba(${colors.lightGrey}, 0.4);
         padding-top: 1.5rem;
     }
 
@@ -39,7 +39,7 @@ export const StyledSection = styled(Section)`
             font-size: 2.25rem;
             line-height: 0;
             vertical-align: middle;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             color: rgb(${colors.pink});
             font-weight: ${fonts.fontWeight.base};
             font-family: ${fonts.family.base};
@@ -48,7 +48,7 @@ export const StyledSection = styled(Section)`
 
         &.is-open:before {
             content: '-';
-            top: -.25rem;
+            top: -0.25rem;
         }
     }
 `

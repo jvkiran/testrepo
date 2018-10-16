@@ -130,8 +130,12 @@ class Menu extends PureComponent {
         for (let i = 0; i < sectionNodes.length; i++) {
             const sectionId = sectionNodes[i].id
             sections[sectionId] = {
-                top: document.getElementById(sectionId).getBoundingClientRect().top + window.scrollY,
-                bottom: document.getElementById(sectionId).getBoundingClientRect().bottom + window.scrollY
+                top:
+                    document.getElementById(sectionId).getBoundingClientRect()
+                        .top + window.scrollY,
+                bottom:
+                    document.getElementById(sectionId).getBoundingClientRect()
+                        .bottom + window.scrollY
             }
         }
         this.setState({ sections })
@@ -142,20 +146,24 @@ class Menu extends PureComponent {
         const range = []
         const scrollDown = this.state.lastScroll > window.scrollY
         if (scrollDown) {
-            range[0] = window.scrollY + (window.innerHeight * 0)
-            range[1] = window.scrollY + (window.innerHeight * 0.5)
+            range[0] = window.scrollY + window.innerHeight * 0
+            range[1] = window.scrollY + window.innerHeight * 0.5
         } else {
-            range[0] = window.scrollY + (window.innerHeight * 0.5)
-            range[1] = window.scrollY + (window.innerHeight * 1)
+            range[0] = window.scrollY + window.innerHeight * 0.5
+            range[1] = window.scrollY + window.innerHeight * 1
         }
         const sectionIds = Object.keys(this.state.sections)
         for (let i = 0; i < sectionIds.length; i++) {
             const id = sectionIds[i]
             let inView
             if (scrollDown) {
-                inView = this.state.sections[id].top > range[0] && this.state.sections[id].top < range[1]
+                inView =
+                    this.state.sections[id].top > range[0] &&
+                    this.state.sections[id].top < range[1]
             } else {
-                inView = this.state.sections[id].bottom > range[0] && this.state.sections[id].bottom < range[1]
+                inView =
+                    this.state.sections[id].bottom > range[0] &&
+                    this.state.sections[id].bottom < range[1]
             }
             if (inView) {
                 if (this.state.current !== id) {
@@ -169,14 +177,22 @@ class Menu extends PureComponent {
     toggleFixedMenu = () => {
         const pageFrame =
             Number(layout.pageFrame.replace('rem', '')) *
-            Number(window
-                .getComputedStyle(document.getElementsByTagName('html')[0])
-                .getPropertyValue('font-size')
-                .replace('px', ''))
+            Number(
+                window
+                    .getComputedStyle(document.getElementsByTagName('html')[0])
+                    .getPropertyValue('font-size')
+                    .replace('px', '')
+            )
         if (window.innerWidth > 640) {
-            if (window.scrollY >= window.innerHeight - pageFrame && !this.state.fixed) {
+            if (
+                window.scrollY >= window.innerHeight - pageFrame &&
+                !this.state.fixed
+            ) {
                 this.setState({ fixed: true })
-            } else if (window.scrollY < window.innerHeight - pageFrame && this.state.fixed) {
+            } else if (
+                window.scrollY < window.innerHeight - pageFrame &&
+                this.state.fixed
+            ) {
                 this.setState({ fixed: false })
             }
         }
@@ -205,7 +221,10 @@ class Menu extends PureComponent {
                     <StyledNav>
                         {MenuItems.map(item => (
                             <StyledMenuItem
-                                current={item.href.replace('#', '') === this.state.current}
+                                current={
+                                    item.href.replace('#', '') ===
+                                    this.state.current
+                                }
                                 key={item.name}
                             >
                                 <a href={item.href}>
@@ -213,16 +232,26 @@ class Menu extends PureComponent {
                                     {item.sub && <Caret />}
                                 </a>
 
-                                {item.sub && <SubMenu item={item} current={this.state.current} />}
-
+                                {item.sub && (
+                                    <SubMenu
+                                        item={item}
+                                        current={this.state.current}
+                                    />
+                                )}
                             </StyledMenuItem>
                         ))}
                     </StyledNav>
-                    <Hamburger active={this.state.active} onClick={this.toggleMobileMenu} />
+                    <Hamburger
+                        active={this.state.active}
+                        onClick={this.toggleMobileMenu}
+                    />
                     <StyledMobileNav active={this.state.active}>
                         {MenuItems.map(item => (
                             <StyledMenuItem key={item.name}>
-                                <a href={item.href} onClick={this.toggleMobileMenu}>
+                                <a
+                                    href={item.href}
+                                    onClick={this.toggleMobileMenu}
+                                >
                                     {item.name}
                                 </a>
                             </StyledMenuItem>

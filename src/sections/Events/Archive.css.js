@@ -12,22 +12,22 @@ export const ArchiveButton = styled(Button)`
     text-align: center;
     cursor: pointer;
     margin: 3rem auto 0 auto;
-    padding: .8rem 1rem;
-    background: rgba(${colors.darkGrey}, .8);
-    border: .08rem solid rgb(${colors.pink});
-    border-radius: .1rem;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    padding: 0.8rem 1rem;
+    background: rgba(${colors.darkGrey}, 0.8);
+    border: 0.08rem solid rgb(${colors.pink});
+    border-radius: 0.1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     font-size: ${fonts.size.small};
     color: rgb(${colors.lightGrey});
 
     &:hover,
     &:focus {
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
         background: inherit;
     }
 
     &:active {
-        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     }
 
     @media screen and (${responsive.sm.min}) {
@@ -49,7 +49,7 @@ export const StyledClose = styled.button`
     }
 
     &:hover {
-        opacity: .7;
+        opacity: 0.7;
     }
 `
 
@@ -60,7 +60,7 @@ export const ModalOverlay = styled.div`
     right: 0;
     bottom: 0;
     z-index: 20;
-    background-color: rgba(${colors.black}, .7);
+    background-color: rgba(${colors.black}, 0.7);
 `
 
 const ModalHeight = '90vh'
@@ -73,8 +73,8 @@ export const Modal = styled.div`
     bottom: auto;
     background: rgb(${colors.black});
     color: rgb(${colors.white});
-    border-radius: .1rem;
-    border: .08rem solid rgb(${colors.pink});
+    border-radius: 0.1rem;
+    border: 0.08rem solid rgb(${colors.pink});
     outline: none;
     padding: 2rem;
     height: auto;
@@ -83,7 +83,7 @@ export const Modal = styled.div`
     max-width: 50rem;
     max-height: ${ModalHeight};
     transform: translate(-50%, -50%);
-    animation: ${fadeInAnimation} .2s ease-out backwards;
+    animation: ${fadeInAnimation} 0.2s ease-out backwards;
 
     @media screen and (${responsive.md.min}) {
         padding: 3rem;
@@ -105,7 +105,7 @@ export const ArchiveTitle = styled(Paragraph)`
     font-size: ${fonts.size.h4};
     font-family: ${fonts.family.title};
     line-height: ${fonts.lineHeight.title};
-    border-bottom: .08rem solid rgb(${colors.lightGrey});
+    border-bottom: 0.08rem solid rgb(${colors.lightGrey});
     padding-bottom: 1rem;
     margin-bottom: 0;
 `
@@ -116,7 +116,7 @@ export const PastListing = styled.a`
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    border-bottom: .08rem solid rgba(${colors.lightGrey}, .2);
+    border-bottom: 0.08rem solid rgba(${colors.lightGrey}, 0.2);
     font-family: ${fonts.family.button};
     color: rgb(${colors.lightGrey});
 
@@ -137,7 +137,7 @@ export const PastListing = styled.a`
     p {
         width: 100%;
         margin: 0;
-        transition: .2s ease-out;
+        transition: 0.2s ease-out;
     }
 
     .city {

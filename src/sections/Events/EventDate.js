@@ -20,18 +20,24 @@ const EventDate = ({ date, dateEnd }) => {
             month: 'long',
             timeZone: 'UTC'
         })
-        const eventDateEndFormattedMonth = eventDateEnd.toLocaleDateString('en-US', {
-            month: 'long',
-            timeZone: 'UTC'
-        })
+        const eventDateEndFormattedMonth = eventDateEnd.toLocaleDateString(
+            'en-US',
+            {
+                month: 'long',
+                timeZone: 'UTC'
+            }
+        )
         const eventDateFormattedDay = eventDate.toLocaleDateString('en-US', {
             day: 'numeric',
             timeZone: 'UTC'
         })
-        const eventDateEndFormattedDay = eventDateEnd.toLocaleDateString('en-US', {
-            day: 'numeric',
-            timeZone: 'UTC'
-        })
+        const eventDateEndFormattedDay = eventDateEnd.toLocaleDateString(
+            'en-US',
+            {
+                day: 'numeric',
+                timeZone: 'UTC'
+            }
+        )
 
         // handle multi-day events across multiple months
         if (eventDateFormattedMonth !== eventDateEndFormattedMonth) {

@@ -20,10 +20,11 @@ const MemberPhoto = ({ member, advisor, empty, ...props }) => {
     return (
         <Photo {...props}>
             <LazyLoad once height={141} offset={300}>
-                {empty
-                    ? <img alt={'Coming soon...'} src={src} />
-                    : <img alt={member.name} src={src} />
-                }
+                {empty ? (
+                    <img alt={'Coming soon...'} src={src} />
+                ) : (
+                    <img alt={member.name} src={src} />
+                )}
             </LazyLoad>
         </Photo>
     )

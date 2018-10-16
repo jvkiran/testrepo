@@ -39,35 +39,40 @@ export const Circle = styled.div`
 export const StyledPulseCircleZero = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 0 1` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${pulseFade} 3s ease-in-out 0 1` : null};
 `
 
 export const StyledPulseCircleOne = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out .75s infinite` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${pulseFade} 3s ease-in-out .75s infinite` : null};
 `
 
 export const StyledPulseCircleTwo = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 1.5s infinite` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${pulseFade} 3s ease-in-out 1.5s infinite` : null};
 `
 
 export const StyledPulseCircleThree = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 2.25s infinite` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${pulseFade} 3s ease-in-out 2.25s infinite` : null};
 `
 
 export const StyledPulseCircleFour = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${pulseFade} 3s ease-in-out 3s infinite` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${pulseFade} 3s ease-in-out 3s infinite` : null};
 `
 
 export const StyledPulseShadow = styled(Circle)`
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
 `
 
 export const StyledPulseLock = styled.img`

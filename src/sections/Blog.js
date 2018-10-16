@@ -18,7 +18,8 @@ import {
     StyledAction
 } from './Blog.css'
 
-const url = 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol'
+const url =
+    'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol'
 
 export default class Blog extends PureComponent {
     signal = axios.CancelToken.source()
@@ -70,13 +71,23 @@ export default class Blog extends PureComponent {
                             <LazyLoad once height={524} offset={200}>
                                 <Grid>
                                     {posts.map(post => (
-                                        <Cell smallGutter key={post.id} width={1 / 3}>
+                                        <Cell
+                                            smallGutter
+                                            key={post.id}
+                                            width={1 / 3}
+                                        >
                                             <a href={post.postUrl}>
                                                 <StyledCard>
-                                                    <StyledHeader imageUrl={post.imageUrl} />
+                                                    <StyledHeader
+                                                        imageUrl={post.imageUrl}
+                                                    />
                                                     <StyledContent>
-                                                        <StyledTitle>{post.title}</StyledTitle>
-                                                        <StyledSubtitle>{post.subtitle}</StyledSubtitle>
+                                                        <StyledTitle>
+                                                            {post.title}
+                                                        </StyledTitle>
+                                                        <StyledSubtitle>
+                                                            {post.subtitle}
+                                                        </StyledSubtitle>
                                                     </StyledContent>
                                                 </StyledCard>
                                             </a>
@@ -86,9 +97,7 @@ export default class Blog extends PureComponent {
                             </LazyLoad>
                         )}
                         <StyledAction fetching={fetching}>
-                            <a href={social.blog}>
-                                Go to Blog
-                            </a>
+                            <a href={social.blog}>Go to Blog</a>
                         </StyledAction>
                     </ContentRow>
                 </Section>

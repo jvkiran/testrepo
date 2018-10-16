@@ -52,8 +52,8 @@ export const StyledCard = styled.div`
     margin: 5%;
     border-radius: 2px;
     width: 30%;
-    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .07);
-    border: 1px solid rgba(${colors.black}, .07);
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(${colors.black}, 0.07);
     transition: ${transitions.base};
     color: rgb(${colors.grey});
     display: block;
@@ -78,12 +78,12 @@ export const StyledCard = styled.div`
 
     &:hover,
     &:focus {
-        transform: translate3d(0, -.05rem, 0);
-        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .07);
+        transform: translate3d(0, -0.05rem, 0);
+        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.07);
     }
 
     &:active {
-        box-shadow: 0 9px 18px 0 rgba(0, 0, 0, .07);
+        box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.07);
         transform: none;
         transition: none;
     }
@@ -167,7 +167,8 @@ export const StyledDataDots = styled.div`
     width: 40%;
     height: 100vw;
     background: ${({ img }) => `url(${img}) repeat-x left`};
-    animation: ${({ shouldAnimate }) => (shouldAnimate ? `${slideRight} 3s ease-in-out 0s infinite` : null)};
+    animation: ${({ shouldAnimate }) =>
+        shouldAnimate ? `${slideRight} 3s ease-in-out 0s infinite` : null};
 
     @media screen and (${responsive.sm.min}) {
         width: 20%;

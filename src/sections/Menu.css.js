@@ -5,9 +5,10 @@ import { colors, fonts, responsive, transitions, layout } from '../styles'
 
 export const StyledMenu = styled.nav`
     background: ${({ fixed }) => (fixed ? `rgb(${colors.black})` : null)};
-    transition: transform .3s ease-in-out;
-    transform: ${({ fixed }) => (fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)')};
-    padding: .75rem 1rem;
+    transition: transform 0.3s ease-in-out;
+    transform: ${({ fixed }) =>
+        fixed ? 'translate3d(0,100px,0)' : 'translate3d(0,0,0)'};
+    padding: 0.75rem 1rem;
     z-index: 5;
 
     @media screen and (${responsive.md.min}) {
@@ -17,7 +18,8 @@ export const StyledMenu = styled.nav`
         left: ${layout.pageFrame};
         right: ${layout.pageFrame};
         margin: ${({ fixed }) => (fixed ? '-100px 0' : '1rem 0 0 0')};
-        border-top: ${({ fixed }) => (fixed ? `${layout.pageFrame} solid #fff` : '0')};
+        border-top: ${({ fixed }) =>
+            fixed ? `${layout.pageFrame} solid #fff` : '0'};
     }
 
     @media screen and (${responsive.md.max}) {
@@ -62,7 +64,8 @@ export const StyledLogo = styled(Link)`
 export const StyledMenuItem = styled.li`
     display: inline;
     transition: ${transitions.base};
-    color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .7)`)};
+    color: ${({ current }) =>
+        current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .7)`};
     font-family: ${fonts.family.button};
     position: relative;
     padding-bottom: 1rem;
@@ -87,22 +90,23 @@ export const StyledMenuItem = styled.li`
     }
 
     svg {
-        fill: rgba(${colors.white}, .7);
-        width: .7rem;
-        height: .7rem;
-        margin-left: .3rem;
-        transition: .2s ease-out;
+        fill: rgba(${colors.white}, 0.7);
+        width: 0.7rem;
+        height: 0.7rem;
+        margin-left: 0.3rem;
+        transition: 0.2s ease-out;
     }
 `
 
 export const StyledSubMenuItem = styled.a`
     display: block;
-    color: ${({ current }) => (current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .8)`)};
+    color: ${({ current }) =>
+        current ? `rgba(${colors.white}, 1)` : `rgba(${colors.white}, .8)`};
     font-family: ${fonts.family.base};
     font-size: ${fonts.size.small};
     white-space: nowrap;
-    padding-bottom: .5rem;
-    padding-top: .5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
 `
 
 export const animation = keyframes`
@@ -125,7 +129,7 @@ export const StyledMobileNav = styled.div`
     transition: ${transitions.long};
 
     & a {
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         color: inherit;
     }
 
@@ -153,7 +157,10 @@ export const StyledNav = styled.ul`
         &:hover,
         &:focus,
         &.active {
-            color: rgba(${colors.white}, 1); /* stylelint-disable-line selector-no-qualifying-type */
+            color: rgba(
+                ${colors.white},
+                1
+            ); /* stylelint-disable-line selector-no-qualifying-type */
         }
     }
 

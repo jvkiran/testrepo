@@ -13,9 +13,9 @@ export const StyledSubscribe = styled.div`
     & img {
         position: absolute;
         left: 1rem;
-        top: calc(50% - .5rem);
+        top: calc(50% - 0.5rem);
         height: 1rem;
-        opacity: .7;
+        opacity: 0.7;
 
         @media screen and (${responsive.md.max}) {
             top: 1rem;
@@ -29,7 +29,7 @@ export const StyledSubscribe = styled.div`
     & input {
         outline: none;
         font-size: ${fonts.size.base};
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
         margin: 1px;
         padding-left: 3rem;
         background: rgb(${colors.darkGrey});
@@ -48,12 +48,12 @@ export const StyledSubscribe = styled.div`
         }
 
         &::placeholder {
-            color: rgba(${colors.white}, .65);
+            color: rgba(${colors.white}, 0.65);
         }
 
         &:focus {
             &::placeholder {
-                color: rgba(${colors.white}, .5);
+                color: rgba(${colors.white}, 0.5);
             }
         }
     }
@@ -63,7 +63,7 @@ export const StyledSubscribe = styled.div`
         font-size: ${fonts.size.base};
         text-transform: uppercase;
         margin: 0;
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
         background: transparent;
         width: 35%;
         transition: ${transitions.short};
@@ -82,7 +82,7 @@ export const StyledSubscribe = styled.div`
         @media screen and (hover: hover) {
             &:hover,
             &:focus {
-                opacity: .85;
+                opacity: 0.85;
             }
         }
     }
@@ -91,7 +91,11 @@ export const StyledSubscribe = styled.div`
 export const StyledSubscribeWrapper = styled.div`
     display: flex;
     border-radius: 2px;
-    background: linear-gradient(to right, rgb(${colors.purple}), rgb(${colors.pink}));
+    background: linear-gradient(
+        to right,
+        rgb(${colors.purple}),
+        rgb(${colors.pink})
+    );
 
     @media screen and (${responsive.md.max}) {
         flex-wrap: wrap;
@@ -102,12 +106,12 @@ export const StyledMessage = styled.p`
     width: 100%;
     position: absolute;
     text-align: center;
-    margin-top: .25rem;
-    font-size: .8rem;
-    background: rgba(${colors.lightGrey}, .95);
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    background: rgba(${colors.lightGrey}, 0.95);
     color: rgb(${colors.white});
     border-radius: 2px;
-    padding: .3rem;
+    padding: 0.3rem;
 
     a {
         color: rgb(${colors.white});
@@ -119,5 +123,5 @@ export const StyledMessage = styled.p`
 export const Gdpr = styled.div`
     margin-top: 1rem;
     font-size: ${fonts.size.mini};
-    color: rgba(${colors.dimmedGrey}, .7);
+    color: rgba(${colors.dimmedGrey}, 0.7);
 `

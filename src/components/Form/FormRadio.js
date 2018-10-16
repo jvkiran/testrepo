@@ -17,8 +17,15 @@ const FormRadio = ({ name, required, label, help, options }) => (
         <RadioGroup>
             {options.map((option, index) => (
                 <RadioWrap key={index}>
-                    <Radio type="radio" id={option.value} name={name} value={option.value} />
-                    <RadioLabel htmlFor={option.value}>{option.label}</RadioLabel>
+                    <Radio
+                        type="radio"
+                        id={option.value}
+                        name={name}
+                        value={option.value}
+                    />
+                    <RadioLabel htmlFor={option.value}>
+                        {option.label}
+                    </RadioLabel>
                 </RadioWrap>
             ))}
         </RadioGroup>

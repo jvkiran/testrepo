@@ -23,7 +23,9 @@ export const StyledEventsList = styled.ul`
     }
 
     &::-webkit-scrollbar,
-    &::-moz-scrollbar { display: none; }
+    &::-moz-scrollbar {
+        display: none;
+    }
 `
 
 export const Item = styled.li`

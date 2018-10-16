@@ -19,7 +19,7 @@ export const StyledSpinner = styled.div`
         border-radius: 50%;
         border: 2px solid rgb(${colors.purple});
         border-top-color: rgb(${colors.violet});
-        animation: rotate360 .6s linear infinite;
+        animation: rotate360 0.6s linear infinite;
     }
 `
 

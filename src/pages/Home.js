@@ -9,9 +9,8 @@ import Events from '../sections/Events'
 import People from '../sections/People'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
-import Faq from '../sections/Faq'
 import Modal from '../sections/Modal/Modal'
-import Art from '../sections/Art'
+import MorePages from '../sections/MorePages'
 
 export default class Home extends Component {
     state = {
@@ -39,10 +38,11 @@ export default class Home extends Component {
                 <People toggleModal={this.toggleModal} />
                 <Blog />
                 <Videos />
-                <Faq />
-                <Art />
+                <MorePages />
 
-                {this.state.showModal && <Modal modal={this.state.modal} toggle={this.toggleModal} />}
+                {this.state.showModal && (
+                    <Modal modal={this.state.modal} toggle={this.toggleModal} />
+                )}
             </Fragment>
         )
     }

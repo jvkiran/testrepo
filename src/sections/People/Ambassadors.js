@@ -11,7 +11,8 @@ import { StyledList, Actions } from './Ambassadors.css'
 
 const content = {
     title: 'Ambassadors',
-    description: 'The <strong>Ocean Protocol Ambassador Program</strong> is a grassroots project to involve our incredible community of thinkers, learners, and problem-solvers into the very core of our ecosystem. It is a chance for passionate individuals to be on the frontlines of the data revolution.\n\nWe are excited to bring onboard motivated, curious, and interesting people based all around the world, who are passionate about decentralization, challenging the status quo, and equalizing access to data for all. \n\nThere are a wide range of ways to get involved once you become an Ambassador, and plenty of great reasons to apply, including:',
+    description:
+        'The <strong>Ocean Protocol Ambassador Program</strong> is a grassroots project to involve our incredible community of thinkers, learners, and problem-solvers into the very core of our ecosystem. It is a chance for passionate individuals to be on the frontlines of the data revolution.\n\nWe are excited to bring onboard motivated, curious, and interesting people based all around the world, who are passionate about decentralization, challenging the status quo, and equalizing access to data for all. \n\nThere are a wide range of ways to get involved once you become an Ambassador, and plenty of great reasons to apply, including:',
     list: [
         'Be a part of the inner circle of Ocean',
         'Direct impact on shaping our global community',
@@ -24,7 +25,8 @@ const content = {
 }
 
 export default class Ambassadors extends PureComponent {
-    link = 'https://docs.google.com/forms/d/e/1FAIpQLSdq3hHU6hlBbHtJXGUEM_6x32T3o6zM0ynyUikcK_thhH_8cw/viewform'
+    link =
+        'https://docs.google.com/forms/d/e/1FAIpQLSdq3hHU6hlBbHtJXGUEM_6x32T3o6zM0ynyUikcK_thhH_8cw/viewform'
 
     handleButtonClick = () => {
         this.props.toggleModal('ambassadors')
@@ -38,11 +40,17 @@ export default class Ambassadors extends PureComponent {
         return (
             <SubHeader>
                 <Cell width={1 / 4}>
-                    <StyledSubTitle white id="ambassadors">{content.title}</StyledSubTitle>
+                    <StyledSubTitle white id="ambassadors">
+                        {content.title}
+                    </StyledSubTitle>
                 </Cell>
                 <Cell width={3 / 4}>
                     <Paragraph>
-                        <span dangerouslySetInnerHTML={{ __html: content.description }} />
+                        <span
+                            dangerouslySetInnerHTML={{
+                                __html: content.description
+                            }}
+                        />
                     </Paragraph>
 
                     <StyledList>
@@ -56,11 +64,12 @@ export default class Ambassadors extends PureComponent {
 
                     <Actions>
                         <Button onClick={this.handleButtonClick}>
-                        Apply to become an ambassador
+                            Apply to become an ambassador
                         </Button>
-                        <a href="https://blog.oceanprotocol.com/envoys-of-the-new-data-economy-ocean-protocol-ambassadors-3816a0e63611">Announcing the Ocean Protocol Ambassador Program.</a>
+                        <a href="https://blog.oceanprotocol.com/envoys-of-the-new-data-economy-ocean-protocol-ambassadors-3816a0e63611">
+                            Announcing the Ocean Protocol Ambassador Program.
+                        </a>
                     </Actions>
-
                 </Cell>
             </SubHeader>
         )

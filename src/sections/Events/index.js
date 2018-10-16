@@ -4,10 +4,7 @@ import Section from '../../components/Section'
 import ContentRow from '../../components/ContentRow'
 import eventsData from '../../data/events'
 import { colors } from '../../styles'
-import {
-    StyledTitle,
-    StyledParagraph
-} from './index.css'
+import { StyledTitle, StyledParagraph } from './index.css'
 
 import EventsList from './EventsList'
 import Archive from './Archive'
@@ -42,12 +39,24 @@ export default class Events extends PureComponent {
             >
                 <ContentRow narrow>
                     <StyledTitle white>Events</StyledTitle>
-                    <StyledParagraph>Meet members of our team at any of the following events.</StyledParagraph>
+                    <StyledParagraph>
+                        Meet members of our team at any of the following events.
+                    </StyledParagraph>
                 </ContentRow>
 
-                <EventsList events={eventsData} modalIsOpen={this.state.modalIsOpen} openModal={this.openModal} closeModal={this.closeModal} />
+                <EventsList
+                    events={eventsData}
+                    modalIsOpen={this.state.modalIsOpen}
+                    openModal={this.openModal}
+                    closeModal={this.closeModal}
+                />
 
-                <Archive events={eventsData} modalIsOpen={this.state.modalIsOpen} openModal={this.openModal} closeModal={this.closeModal} />
+                <Archive
+                    events={eventsData}
+                    modalIsOpen={this.state.modalIsOpen}
+                    openModal={this.openModal}
+                    closeModal={this.closeModal}
+                />
             </Section>
         )
     }

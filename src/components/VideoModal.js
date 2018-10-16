@@ -24,9 +24,14 @@ const VideoModal = ({ onCloseModal, modalIsOpen, source }) => {
                     <StyledReactPlayer
                         controls
                         config={{ youtube: { playerVars: { color: 'white' } } }}
-                        url={source} />
+                        url={source}
+                    />
                 </YoutubeModal>
-                <StyledClose alt="close" onClick={() => onCloseModal()} src={cross} />
+                <StyledClose
+                    alt="close"
+                    onClick={() => onCloseModal()}
+                    src={cross}
+                />
             </ModalOverlay>
         </Fragment>
     )

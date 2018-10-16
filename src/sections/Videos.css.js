@@ -26,7 +26,7 @@ export const VideoBackground = styled.video`
     transform: translateX(-50%) translateY(-50%);
     background: url(${jellyfish}) no-repeat center center;
     background-size: cover;
-    opacity: .4;
+    opacity: 0.4;
     z-index: 0;
 `
 
@@ -57,7 +57,7 @@ export const RatioContainer = styled.div`
     z-index: 2;
     transition: ${transitions.base};
     overflow: hidden;
-    background: rgba(${colors.white}, .8);
+    background: rgba(${colors.white}, 0.8);
     padding: 1rem;
     margin-bottom: 1rem;
 
@@ -68,16 +68,16 @@ export const RatioContainer = styled.div`
     }
 
     @media screen and (${responsive.sm.min}) {
-        border: .4rem solid rgb(${colors.white});
+        border: 0.4rem solid rgb(${colors.white});
         padding: 0;
         padding-top: 1rem;
-        margin: .5rem 0;
+        margin: 0.5rem 0;
 
         &:hover,
         &:focus {
-            background: rgba(${colors.white}, .7);
+            background: rgba(${colors.white}, 0.7);
             cursor: pointer;
-            transform: translate3d(0, -.05rem, 0);
+            transform: translate3d(0, -0.05rem, 0);
         }
     }
 
@@ -149,7 +149,7 @@ export const VideoContainer = styled.div`
     right: 0;
     top: 0;
     z-index: -1;
-    margin: .5rem;
+    margin: 0.5rem;
     background: rgb(${colors.black});
     display: none;
 
@@ -179,7 +179,7 @@ export const StyledClose = styled.button`
     }
 
     &:hover {
-        opacity: .7;
+        opacity: 0.7;
     }
 `
 
@@ -218,12 +218,12 @@ export const VideoListItem = styled.a`
     color: rgb(${colors.lightGrey});
     background: rgb(${colors.black});
     border-radius: 2px;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     transition: ${transitions.base};
-    border: .08rem solid rgb(${colors.grey});
+    border: 0.08rem solid rgb(${colors.grey});
     min-width: 14rem;
     max-width: 14rem;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     transform: translate3d(0, 0, 0);
 
     @media screen and (${responsive.sm.min}) {
@@ -237,7 +237,7 @@ export const VideoListItem = styled.a`
 
     &:hover,
     &:focus {
-        transform: translate3d(0, -.05rem, 0);
+        transform: translate3d(0, -0.05rem, 0);
     }
 
     &:active {
@@ -252,7 +252,7 @@ export const VideoListItem = styled.a`
 `
 
 export const VideoThumb = styled.img`
-    padding: .4rem;
+    padding: 0.4rem;
     background: rgb(${colors.black});
 
     .active & {
@@ -261,7 +261,7 @@ export const VideoThumb = styled.img`
 `
 
 export const ThumbTitle = styled(Paragraph)`
-    padding: .5rem 1.25rem 1rem 1.25rem;
+    padding: 0.5rem 1.25rem 1rem 1.25rem;
     margin: 0;
     text-align: center;
     font-size: ${fonts.size.mini};
@@ -280,23 +280,23 @@ export const YouTubeButton = styled(Button)`
     text-align: center;
     cursor: pointer;
     margin: 5rem auto 0 auto;
-    padding: .8rem 1rem;
-    background: rgba(${colors.darkGrey}, .8);
-    border: .08rem solid rgb(${colors.grey});
-    border-radius: .1rem;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+    padding: 0.8rem 1rem;
+    background: rgba(${colors.darkGrey}, 0.8);
+    border: 0.08rem solid rgb(${colors.grey});
+    border-radius: 0.1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     font-size: ${fonts.size.small};
     color: rgb(${colors.lightGrey});
     z-index: 2;
 
     &:hover,
     &:focus {
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, .3);
-        background: rgba(${colors.darkGrey}, .95);
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
+        background: rgba(${colors.darkGrey}, 0.95);
     }
 
     &:active {
-        box-shadow: 0 9px 18px 0 rgba(${colors.black}, .3);
+        box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     }
 
     @media screen and (${responsive.sm.min}) {

@@ -15,7 +15,9 @@ const FilteredEvents = ({ events }) => {
         })
 
         // then, sort the remaining ones by date
-        const eventsFilteredSorted = eventsFiltered.sort((a, b) => a.date.localeCompare(b.date))
+        const eventsFilteredSorted = eventsFiltered.sort((a, b) =>
+            a.date.localeCompare(b.date)
+        )
 
         return eventsFilteredSorted.map((event, index) => (
             <Item key={index}>

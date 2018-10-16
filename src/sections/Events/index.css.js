@@ -5,7 +5,9 @@ import Title from '../../components/Title'
 export const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
 
-    span { opacity: .5; }
+    span {
+        opacity: 0.5;
+    }
 `
 
 export const StyledParagraph = styled(Paragraph)`

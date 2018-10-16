@@ -5,9 +5,9 @@ import { colors, fonts, transitions } from '../styles'
 
 export const StyledHeader = styled.header`
     background-color: ${({ background }) => `rgb(${background})`};
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     transform: none;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
 `
 
 export const StyledContainer = styled.div`
@@ -31,7 +31,7 @@ export const StyledLogo = styled(Link)`
 
 export const StyledMenuItem = styled(Link)`
     transition: ${transitions.base};
-    color: rgba(${colors.white}, .7);
+    color: rgba(${colors.white}, 0.7);
     font-family: ${fonts.family.button};
 `
 
@@ -52,7 +52,10 @@ export const StyledNav = styled.nav`
         &:hover,
         &:focus,
         &.active {
-            color: rgba(${colors.white}, 1); /* stylelint-disable-line selector-no-qualifying-type */
+            color: rgba(
+                ${colors.white},
+                1
+            ); /* stylelint-disable-line selector-no-qualifying-type */
         }
     }
 `

@@ -5,7 +5,7 @@ import Title from '../components/Title'
 import { colors, fonts, responsive } from '../styles'
 
 export const StyledWhitepaper = styled(Cell)`
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     padding: 2rem;
     background: rgb(${colors.white});
     color: rgb(${colors.grey});
@@ -69,8 +69,8 @@ export const StyledDownload = styled(Button)`
 
 export const FileType = styled.span`
     font-size: ${fonts.size.small};
-    opacity: .7;
-    margin-left: .3rem;
+    opacity: 0.7;
+    margin-left: 0.3rem;
 `
 
 export const StyledComments = styled.h4`

@@ -3,7 +3,8 @@ import { colors } from '../../styles'
 
 export const Photo = styled.figure`
     margin: 0;
-    border: ${({ actionable }) => (actionable ? `.1rem solid rgb(${colors.pink})` : null)};
+    border: ${({ actionable }) =>
+        actionable ? `.1rem solid rgb(${colors.pink})` : null};
 
     &,
     img {

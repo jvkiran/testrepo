@@ -19,11 +19,11 @@ export const HeaderArt = styled(Section)`
 
     a {
         color: inherit;
-        border-bottom: 1px solid rgba(${colors.white}, .2);
+        border-bottom: 1px solid rgba(${colors.white}, 0.2);
 
         &:hover,
         &:focus {
-            border-bottom-color: rgba(${colors.white}, .4);
+            border-bottom-color: rgba(${colors.white}, 0.4);
         }
     }
 `
@@ -60,10 +60,10 @@ export const Logo = styled.div`
 
     > div {
         border: 1px solid rgb(${colors.lightGrey});
-        border-radius: .2rem;
+        border-radius: 0.2rem;
         padding: 2rem;
         background: ${props => (props.white ? `rgb(${colors.black})` : null)};
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
 `
 
@@ -72,7 +72,7 @@ export const Banners = styled.figure`
     margin: 0;
 
     img {
-        border-radius: .2rem;
+        border-radius: 0.2rem;
     }
 
     a {
@@ -87,7 +87,7 @@ export const StyledCollapsible = styled.div`
     margin-bottom: 4rem;
 
     .Collapsible__contentInner {
-        border-top: 1px solid rgba(${colors.lightGrey}, .4);
+        border-top: 1px solid rgba(${colors.lightGrey}, 0.4);
     }
 
     .Collapsible__trigger {
@@ -110,17 +110,17 @@ export const StyledCollapsible = styled.div`
             font-size: 2.5rem;
             line-height: 0;
             vertical-align: middle;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             color: rgb(${colors.pink});
             font-weight: ${fonts.fontWeight.base};
             font-family: ${fonts.family.base};
             position: relative;
-            top: -.2rem;
+            top: -0.2rem;
         }
 
         &.is-open:before {
             content: '-';
-            top: -.4rem;
+            top: -0.4rem;
         }
     }
 `
@@ -137,9 +137,9 @@ export const KeyVisual = styled.div`
 
     > div {
         border: 1px solid rgb(${colors.lightGrey});
-        border-radius: .2rem;
+        border-radius: 0.2rem;
         padding: 2rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
         background: rgb(${colors.black});
     }
 `

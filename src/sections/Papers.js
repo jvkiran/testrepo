@@ -31,18 +31,40 @@ const Documentation = () => (
         <ContentRow wide>
             <Grid>
                 <Cell smallGutter width={1 / 3}>
-                    <StyledWhitepaper >
+                    <StyledWhitepaper>
                         <StyledTitle>Technical Whitepaper</StyledTitle>
                         <StyledIntro>
-                            This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.
+                            This paper presents Ocean Protocol. Ocean is a
+                            decentralized protocol and network of artificial
+                            intelligence (AI) data/services. It incentivizes for
+                            a vast supply of relevant AI data/services.
                         </StyledIntro>
                         <StyledAbstract>
-                            The heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.
+                            The heart of Ocean’s network is a new construction
+                            called Proofed Curation Markets (PCMs). PCMs bridge
+                            predicted relevance with actual relevance of each AI
+                            service, by combining curation markets with
+                            cryptographic proofs.
                         </StyledAbstract>
                         <StyledFooter>
-                            <a download="Ocean Protocol Technical Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/tech-whitepaper.pdf`}>
+                            <a
+                                download="Ocean Protocol Technical Whitepaper.pdf"
+                                href={`${
+                                    process.env.PUBLIC_URL
+                                }/tech-whitepaper.pdf`}
+                            >
                                 <StyledDownload
-                                    onClick={() => window.ga && ga('send', 'event', 'download', 'tech-whitepaper', 'button')}>
+                                    onClick={() =>
+                                        window.ga &&
+                                        ga(
+                                            'send',
+                                            'event',
+                                            'download',
+                                            'tech-whitepaper',
+                                            'button'
+                                        )
+                                    }
+                                >
                                     Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
@@ -53,15 +75,35 @@ const Documentation = () => (
                     <StyledWhitepaper>
                         <StyledTitle>Business Whitepaper</StyledTitle>
                         <StyledIntro>
-                            This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.
+                            This document presents a summary of the business
+                            model and ecosystem of Ocean Protocol. In addition,
+                            it describes the logic behind the Ocean utility
+                            token and the economics incentives driving the
+                            Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-                            It is complementary to the technical whitepaper for Ocean Protocol.
+                            It is complementary to the technical whitepaper for
+                            Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
-                            <a download="Ocean Protocol Business Whitepaper.pdf" href={`${process.env.PUBLIC_URL}/business-whitepaper.pdf`}>
+                            <a
+                                download="Ocean Protocol Business Whitepaper.pdf"
+                                href={`${
+                                    process.env.PUBLIC_URL
+                                }/business-whitepaper.pdf`}
+                            >
                                 <StyledDownload
-                                    onClick={() => window.ga && ga('send', 'event', 'download', 'business-whitepaper', 'button')}>
+                                    onClick={() =>
+                                        window.ga &&
+                                        ga(
+                                            'send',
+                                            'event',
+                                            'download',
+                                            'business-whitepaper',
+                                            'button'
+                                        )
+                                    }
+                                >
                                     Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
@@ -72,15 +114,35 @@ const Documentation = () => (
                     <StyledWhitepaper>
                         <StyledTitle>Marketplace Framework</StyledTitle>
                         <StyledIntro>
-                            This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.
+                            This document presents a summary of the core
+                            marketplace attributes and components required to
+                            facilitate the successful deployment of the
+                            decentralized data exchange protocol and network
+                            called Ocean Protocol.
                         </StyledIntro>
                         <StyledAbstract>
-                            It is complementary to the technical whitepaper for Ocean Protocol.
+                            It is complementary to the technical whitepaper for
+                            Ocean Protocol.
                         </StyledAbstract>
                         <StyledFooter>
-                            <a download="Ocean Protocol Reference Marketplace Framework.pdf" href={`${process.env.PUBLIC_URL}/marketplace-framework.pdf`}>
+                            <a
+                                download="Ocean Protocol Reference Marketplace Framework.pdf"
+                                href={`${
+                                    process.env.PUBLIC_URL
+                                }/marketplace-framework.pdf`}
+                            >
                                 <StyledDownload
-                                    onClick={() => window.ga && ga('send', 'event', 'download', 'marketplace-framework', 'button')}>
+                                    onClick={() =>
+                                        window.ga &&
+                                        ga(
+                                            'send',
+                                            'event',
+                                            'download',
+                                            'marketplace-framework',
+                                            'button'
+                                        )
+                                    }
+                                >
                                     Download <FileType>pdf</FileType>
                                 </StyledDownload>
                             </a>
@@ -103,9 +165,17 @@ const Documentation = () => (
                     <StyledRow>
                         <SubTitle white>Mission Statement</SubTitle>
                         <StyledAbstract>
-                            Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities have become powerful with control that is a danger to a free and open society.<br /><br />
-
-                            Ocean Protocol aims to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance.
+                            Society is becoming increasingly reliant on data,
+                            especially with the advent of AI. However, a small
+                            handful of organizations with both massive data
+                            assets and AI capabilities have become powerful with
+                            control that is a danger to a free and open society.
+                            <br />
+                            <br />
+                            Ocean Protocol aims to unlock data, for more
+                            equitable outcomes for users of data, using a
+                            thoughtful application of both technology and
+                            governance.
                         </StyledAbstract>
                     </StyledRow>
                 </Cell>

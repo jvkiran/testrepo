@@ -20,6 +20,6 @@ export const StyledWaves = styled.div`
         width: 100%;
         top: 10vh;
         z-index: 1;
-        transition: opacity .3s ease-out;
+        transition: opacity 0.3s ease-out;
     }
 `

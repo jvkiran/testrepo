@@ -3,19 +3,18 @@ import { responsive, layout } from '../styles'
 
 export const StyledSection = styled.section`
     width: 100%;
-    background-color: ${({ background }) => (background ? `rgb(${background})` : 'none')};
-    background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
+    background-color: ${({ background }) =>
+        background ? `rgb(${background})` : 'none'};
+    background-image: ${({ backgroundImage }) =>
+        backgroundImage ? `url(${backgroundImage})` : 'none'};
     background-size: cover;
     background-repeat: no-repeat;
     min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
     margin: 0;
+    margin-bottom: ${layout.pageFrame};
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
-
-    @media screen and (${responsive.sm.min}) {
-        margin-bottom: ${layout.pageFrame};
-    }
 `
 
 export const StyledColumn = styled.div`

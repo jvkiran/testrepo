@@ -35,7 +35,9 @@ import {
     VideoBackground
 } from './Videos.css'
 
-const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${youtube.playlist}`
+const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${
+    youtube.playlist
+}`
 
 class SectionContent extends PureComponent {
     constructor(props) {
@@ -67,7 +69,10 @@ class SectionContent extends PureComponent {
     selectVideo(properties, index) {
         this.setState({
             title: properties.title,
-            description: properties.description.length > 400 ? `${properties.description.substring(0, 397)}...` : properties.description,
+            description:
+                properties.description.length > 400
+                    ? `${properties.description.substring(0, 397)}...`
+                    : properties.description,
             active: index,
             videoUrl: properties.videoUrl
         })
@@ -92,24 +97,44 @@ class SectionContent extends PureComponent {
         return (
             <StyledVideos>
                 <HeightRow id="videoScroll">
-                    <RatioContainer className={this.state.player ? 'hidden' : ''} onClick={() => this.openVideo(this.state.videoUrl)}>
+                    <RatioContainer
+                        className={this.state.player ? 'hidden' : ''}
+                        onClick={() => this.openVideo(this.state.videoUrl)}
+                    >
                         <AspectRatio>
                             <VideoTitle>{this.state.title}</VideoTitle>
-                            <VideoDescription>{this.state.description}<span /></VideoDescription>
+                            <VideoDescription>
+                                {this.state.description}
+                                <span />
+                            </VideoDescription>
                             <PlayButton src={playIcon} />
                         </AspectRatio>
                     </RatioContainer>
-                    <VideoContainer className={this.state.player ? 'active' : ''}>
+                    <VideoContainer
+                        className={this.state.player ? 'active' : ''}
+                    >
                         {this.state.player && (
-                            <StyledClose title="close" onClick={() => this.stopVideo()}>
+                            <StyledClose
+                                title="close"
+                                onClick={() => this.stopVideo()}
+                            >
                                 <Cross />
                             </StyledClose>
                         )}
                         <StyledReactPlayer
                             controls
-                            config={{ youtube: { playerVars: { color: 'white', autoplay: 0, start: 0 } } }}
+                            config={{
+                                youtube: {
+                                    playerVars: {
+                                        color: 'white',
+                                        autoplay: 0,
+                                        start: 0
+                                    }
+                                }
+                            }}
                             playing={this.state.player}
-                            url={this.state.videoUrl} />
+                            url={this.state.videoUrl}
+                        />
                     </VideoContainer>
                 </HeightRow>
                 <VideoList>
@@ -118,10 +143,17 @@ class SectionContent extends PureComponent {
                             key={index}
                             onClick={() => this.selectVideo(properties, index)}
                             href="#videoScroll"
-                            className={this.state.active === index ? 'active' : ''}
+                            className={
+                                this.state.active === index ? 'active' : ''
+                            }
                         >
-                            <VideoThumb alt="video thumbnail" src={properties.imageUrl} />
-                            <ThumbTitle><span>{properties.title}</span></ThumbTitle>
+                            <VideoThumb
+                                alt="video thumbnail"
+                                src={properties.imageUrl}
+                            />
+                            <ThumbTitle>
+                                <span>{properties.title}</span>
+                            </ThumbTitle>
                         </VideoListItem>
                     ))}
                 </VideoList>
@@ -165,20 +197,17 @@ class VideoSlider extends PureComponent {
         const { ApiResponse } = this.state
 
         if (ApiResponse.length === 0) {
-            return (
-                <Spinner />
-            )
+            return <Spinner />
         } else if (ApiResponse.error) {
             return (
                 <CenterParagraph>
-                    There was a problem getting the list.<br />
+                    There was a problem getting the list.
+                    <br />
                     Please try again later!
                 </CenterParagraph>
             )
         } else if (ApiResponse.length > 0) {
-            return (
-                <SectionContent ApiResponse={ApiResponse} />
-            )
+            return <SectionContent ApiResponse={ApiResponse} />
         } else {
             return []
         }
@@ -190,14 +219,19 @@ const Videos = () => (
         <Helmet>
             <link rel="preconnect" href={url} />
         </Helmet>
-        <Section minHeight={1040} background={colors.black} fontColor={colors.white} id="video">
+        <Section
+            minHeight={1040}
+            background={colors.black}
+            fontColor={colors.white}
+            id="video"
+        >
             <LazyLoad once unmountIfInvisible height={1040} offset={100}>
                 <Fragment>
                     <ContentRow>
-                        <Title white id="videoScroll">Videos</Title>
+                        <Title white>Videos</Title>
                     </ContentRow>
 
-                    <VideoSlider />
+                    <VideoSlider id="videoScroll" />
 
                     <ContentRow>
                         <a href={youtube.channel}>
@@ -205,8 +239,17 @@ const Videos = () => (
                         </a>
                     </ContentRow>
 
-                    <VideoBackground autoPlay loop muted playsInline poster={jellyfish}>
-                        <source src={jellyfishVideoWebM} type="video/webm; codecs=vp9,vorbis" />
+                    <VideoBackground
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        poster={jellyfish}
+                    >
+                        <source
+                            src={jellyfishVideoWebM}
+                            type="video/webm; codecs=vp9,vorbis"
+                        />
                         <source src={jellyfishVideoMp4} type="video/mp4" />
                     </VideoBackground>
                 </Fragment>

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import { StyledSection, StyledColumn } from './Section.css'
 
 const Section = ({
-    children, viewport, fontColor, minHeight, background, ...props
+    children,
+    viewport,
+    fontColor,
+    minHeight,
+    background,
+    ...props
 }) => (
     <StyledSection background={background} viewport={viewport} {...props}>
         <StyledColumn fontColor={fontColor} minHeight={minHeight}>

@@ -22,7 +22,8 @@ const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
 
 const content = {
     title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
-    description: 'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
+    description:
+        'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
 }
 
 class Welcome extends Component {
@@ -46,11 +47,12 @@ class Welcome extends Component {
         return (
             <Hero viewport fontColor={colors.white} id="welcome">
                 <HeroContent>
-
                     <HeroGrid>
                         <HeroGridCell>
                             <StyledTagline>{content.title}</StyledTagline>
-                            <StyledParagraph>{content.description}</StyledParagraph>
+                            <StyledParagraph>
+                                {content.description}
+                            </StyledParagraph>
 
                             <Cta>
                                 <StyledButton href="#project" important>
@@ -62,11 +64,14 @@ class Welcome extends Component {
                             </Cta>
                         </HeroGridCell>
                         <HeroGridCell>
-                            <StyledVideoThumbnail onClick={() => this.toggleModal()}>
+                            <StyledVideoThumbnail
+                                onClick={() => this.toggleModal()}
+                            >
                                 <img
                                     alt="Ocean Protocol Video"
                                     src={videoThumb}
-                                    srcSet={srcSet} />
+                                    srcSet={srcSet}
+                                />
                             </StyledVideoThumbnail>
                         </HeroGridCell>
                     </HeroGrid>
@@ -78,7 +83,11 @@ class Welcome extends Component {
 
                 <Waves />
 
-                <VideoModal modalIsOpen={this.state.modalIsOpen} onCloseModal={this.toggleModal} source={this.state.videoUrl} />
+                <VideoModal
+                    modalIsOpen={this.state.modalIsOpen}
+                    onCloseModal={this.toggleModal}
+                    source={this.state.videoUrl}
+                />
             </Hero>
         )
     }

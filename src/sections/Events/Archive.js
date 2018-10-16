@@ -15,12 +15,14 @@ import EventDate from './EventDate'
 
 function pastEvents(events) {
     if (events.length > 0) {
-        const eventsFilteredSorted = events.filter((event) => {
-            const now = new Date()
-            const past = now.setDate(now.getDate() - 3)
-            const eventDate = new Date(event.date)
-            return eventDate <= past
-        }).sort((a, b) => b.date.localeCompare(a.date))
+        const eventsFilteredSorted = events
+            .filter(event => {
+                const now = new Date()
+                const past = now.setDate(now.getDate() - 3)
+                const eventDate = new Date(event.date)
+                return eventDate <= past
+            })
+            .sort((a, b) => b.date.localeCompare(a.date))
 
         return eventsFilteredSorted.map((event, index) => (
             <PastEvent event={event} key={index} />
@@ -35,12 +37,8 @@ const PastEvent = ({ event }) => (
         <p className="date">
             <EventDate date={event.date} dateEnd={event.date_end} />
         </p>
-        <p className="city">
-            {event.city}
-        </p>
-        <p className="event">
-            {event.eventName}
-        </p>
+        <p className="city">{event.city}</p>
+        <p className="event">{event.eventName}</p>
     </PastListing>
 )
 
@@ -65,21 +63,20 @@ export default class Archive extends PureComponent {
                 <ArchiveButton onClick={() => openModal()}>
                     View Events Archive
                 </ArchiveButton>
-                {this.props.modalIsOpen &&
+                {this.props.modalIsOpen && (
                     <ModalOverlay>
                         <Modal>
-                            <StyledClose title="close" onClick={() => closeModal()}>
+                            <StyledClose
+                                title="close"
+                                onClick={() => closeModal()}
+                            >
                                 <Cross />
                             </StyledClose>
-                            <ArchiveTitle>
-                                Events Archive
-                            </ArchiveTitle>
-                            <OverflowDiv>
-                                {past}
-                            </OverflowDiv>
+                            <ArchiveTitle>Events Archive</ArchiveTitle>
+                            <OverflowDiv>{past}</OverflowDiv>
                         </Modal>
                     </ModalOverlay>
-                }
+                )}
             </>
         )
     }

@@ -20,7 +20,8 @@ export default class Bounties extends PureComponent {
         networks: ''
     }
 
-    url = 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.sandbox.auth0-extend.com/bounties'
+    url =
+        'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.sandbox.auth0-extend.com/bounties'
 
     getNetworks = async () => {
         const response = await axios.get(this.url)
@@ -63,7 +64,8 @@ export default class Bounties extends PureComponent {
                             important={bountiesNetwork.length > 0}
                         >
                             <ButtonBountiesNetwork />
-                            {bountiesNetwork.length > 0 && bountiesNetwork.length}
+                            {bountiesNetwork.length > 0 &&
+                                bountiesNetwork.length}
                             <BountiesText data={bountiesNetwork} />
                             {' on bounties.network'}
                         </Bounty>

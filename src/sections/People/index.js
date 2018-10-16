@@ -7,11 +7,7 @@ import Advisors from './Advisors'
 import Ambassadors from './Ambassadors'
 
 import { colors } from '../../styles'
-import {
-    StyledTitle,
-    StyledParagraph,
-    Line
-} from './index.css'
+import { StyledTitle, StyledParagraph, Line } from './index.css'
 
 const People = ({ toggleModal }) => (
     <Section background={colors.black} fontColor={colors.white} id="people">
@@ -21,7 +17,11 @@ const People = ({ toggleModal }) => (
 
         <ContentRow narrow>
             <StyledParagraph center className="intro">
-                Ocean Protocol is being built by a diverse ecosystem of contributors who share a common vision of unlocking data for AI. Our core team and advisors have converged from many different countries, industries, and backgrounds to collaborate on kickstarting a New Data Economy.
+                Ocean Protocol is being built by a diverse ecosystem of
+                contributors who share a common vision of unlocking data for AI.
+                Our core team and advisors have converged from many different
+                countries, industries, and backgrounds to collaborate on
+                kickstarting a New Data Economy.
             </StyledParagraph>
         </ContentRow>
 

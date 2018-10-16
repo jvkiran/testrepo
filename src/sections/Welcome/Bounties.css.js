@@ -8,20 +8,21 @@ export const StyledBounties = styled.aside`
         width: 1.3rem;
         height: 1.3rem;
         vertical-align: middle;
-        margin-top: -.2rem;
-        margin-right: .3rem;
+        margin-top: -0.2rem;
+        margin-right: 0.3rem;
     }
 `
 
 export const Bounty = styled.a`
     display: inline-block;
-    padding: .5rem 1rem;
-    background: rgba(${colors.black}, .95);
+    padding: 0.5rem 1rem;
+    background: rgba(${colors.black}, 0.95);
     font-size: ${fonts.size.mini};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
-    color: ${({ important }) => important ? `rgb(${colors.pink})` : `rgba(${colors.white}, .8)`};
-    margin-left: .5rem;
+    color: ${({ important }) =>
+        important ? `rgb(${colors.pink})` : `rgba(${colors.white}, .8)`};
+    margin-left: 0.5rem;
 
     &:first-child {
         margin-left: 0;
