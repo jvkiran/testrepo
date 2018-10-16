@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import wavesStatic from '../../assets/misc/waves.png'
+import wavesStatic from '../../assets/misc/waves.jpg'
 
 export const StyledWaves = styled.div`
     background: url(${wavesStatic}) no-repeat center bottom;
