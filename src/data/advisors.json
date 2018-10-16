@@ -34,5 +34,13 @@
     "linkedin": "aadrake",
     "image": "adam",
     "quote": "Adam is both, a world-class data scientist and a world-class manager of data scientists & engineers."
+  },
+  {
+    "name": "Chris Ballinger",
+    "position": "CEO & Founder MOBI",
+    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-chris-ballinger-f898e5591c40",
+    "linkedin": "chris-ballinger-5aa38912/",
+    "image": "chris",
+    "quote": "We are excited about Chris’ insight and guidance on how we can further the goals of MOBI by using Ocean Protocol as a secure, data exchange protocol for solving mobility challenges."
   }
 ]
