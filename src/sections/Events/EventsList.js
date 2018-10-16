@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import Event from './Event'
-import { StyledEventsList, Track, Item } from './EventsList.css'
+import { StyledEventsList, Item } from './EventsList.css'
 
 const FilteredEvents = ({ events }) => {
     if (events.length > 0) {
@@ -17,15 +17,11 @@ const FilteredEvents = ({ events }) => {
         // then, sort the remaining ones by date
         const eventsFilteredSorted = eventsFiltered.sort((a, b) => a.date.localeCompare(b.date))
 
-        return (
-            <Track>
-                {eventsFilteredSorted.map((event, index) => (
-                    <Item key={index}>
-                        <Event event={event} />
-                    </Item>
-                ))}
-            </Track>
-        )
+        return eventsFilteredSorted.map((event, index) => (
+            <Item key={index}>
+                <Event event={event} />
+            </Item>
+        ))
     } else {
         return []
     }

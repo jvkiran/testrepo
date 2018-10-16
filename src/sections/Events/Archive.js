@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import cross from '../../assets/misc/cross.svg'
+import { ReactComponent as Cross } from '../../assets/misc/cross.svg'
 import {
     ArchiveButton,
     ModalOverlay,
@@ -78,7 +78,9 @@ export default class Archive extends PureComponent {
                 {this.state.modalIsOpen === true &&
                     <ModalOverlay>
                         <Modal>
-                            <StyledClose alt="close" onClick={() => this.closeModal()} src={cross} />
+                            <StyledClose title="close" onClick={() => this.closeModal()}>
+                                <Cross />
+                            </StyledClose>
                             <ArchiveTitle>
                                 Events Archive
                             </ArchiveTitle>
