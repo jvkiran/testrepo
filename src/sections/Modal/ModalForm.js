@@ -25,13 +25,6 @@ export default class ModalForm extends PureComponent {
         message: ''
     }
 
-    messageSuccess() {
-        if (this.props.modal === 'ambassadors') {
-            return 'Thank you! Assuming your profile is a good fit, we will be in touch with you about next steps shortly.'
-        }
-        return 'Thank you! Assuming your profile is a good fit, we will be in touch with you.'
-    }
-
     onSubmit = (e) => {
         e.preventDefault()
 
@@ -121,7 +114,7 @@ export default class ModalForm extends PureComponent {
                             this.setState({
                                 fetching: false,
                                 sent: true,
-                                message: this.messageSuccess()
+                                message: forms[modal].success
                             })
                         }
                     }
