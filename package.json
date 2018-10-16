@@ -12,8 +12,7 @@
     "test": "npm run lint && react-scripts test",
     "deploy": "./scripts/deploy.sh",
     "eject": "react-scripts eject",
-    "postbuild": "react-snap",
-    "ssr": "npm run build && serve -s build/"
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "@oceanprotocol/art": "^1.0.2",
