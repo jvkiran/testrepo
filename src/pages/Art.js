@@ -167,7 +167,7 @@ const Art = ({ location }) => (
                         href={OceanBanner01}
                         onClick={() => GaEvent('Ocean Banner 01')}
                     >
-                        <LazyLoad once height={337} offset={100}>
+                        <LazyLoad once height={337} offset={200}>
                             <img
                                 alt="Ocean Protocol banner 1"
                                 src={OceanBanner01}
@@ -181,7 +181,7 @@ const Art = ({ location }) => (
                         href={OceanBanner02}
                         onClick={() => GaEvent('Ocean Banner 02')}
                     >
-                        <LazyLoad once height={337} offset={100}>
+                        <LazyLoad once height={337} offset={200}>
                             <img
                                 alt="Ocean Protocol banner 2"
                                 src={OceanBanner02}
@@ -195,7 +195,7 @@ const Art = ({ location }) => (
                         href={OceanBanner03}
                         onClick={() => GaEvent('Ocean Banner 03')}
                     >
-                        <LazyLoad once height={337} offset={100}>
+                        <LazyLoad once height={337} offset={200}>
                             <img
                                 alt="Ocean Protocol banner 3"
                                 src={OceanBanner03}
@@ -209,7 +209,7 @@ const Art = ({ location }) => (
                         href={OceanBanner04}
                         onClick={() => GaEvent('Ocean Banner 04')}
                     >
-                        <LazyLoad once height={337} offset={100}>
+                        <LazyLoad once height={337} offset={200}>
                             <img
                                 alt="Ocean Protocol banner 4"
                                 src={OceanBanner04}
@@ -227,7 +227,7 @@ const Art = ({ location }) => (
                 <KeyVisuals>
                     <KeyVisual>
                         <div>
-                            <LazyLoad once height={370} offset={100}>
+                            <LazyLoad once height={370} offset={200}>
                                 <img
                                     alt="Ocean Protocol Jeyllfish Full"
                                     src={OceanJeyllyfishFull}
@@ -252,7 +252,7 @@ const Art = ({ location }) => (
                     </KeyVisual>
                     <KeyVisual>
                         <div>
-                            <LazyLoad once height={370} offset={100}>
+                            <LazyLoad once height={370} offset={200}>
                                 <img
                                     alt="Ocean Protocol Jeyllfish Grid"
                                     src={OceanJeyllyfishGrid}

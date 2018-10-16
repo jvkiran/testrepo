@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import SubTitle from '../components/SubTitle'
 import arrow from '../assets/misc/arrow.svg'
 import { colors, fonts, responsive, transitions } from '../styles'
@@ -168,7 +168,11 @@ export const StyledDataDots = styled.div`
     height: 100vw;
     background: ${({ img }) => `url(${img}) repeat-x left`};
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${slideRight} 3s ease-in-out 0s infinite` : null};
+        shouldAnimate
+            ? css`
+                  ${slideRight} 3s ease-in-out 0s infinite;
+              `
+            : null};
 
     @media screen and (${responsive.sm.min}) {
         width: 20%;

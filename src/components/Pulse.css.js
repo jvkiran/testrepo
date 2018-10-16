@@ -1,7 +1,7 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import { colors } from '../styles'
 
-export const pulseFade = keyframes`
+const pulseFade = keyframes`
     0% { transform: scale(1); }
     50% { opacity: .7; }
     75% { opacity: .1; }
@@ -40,35 +40,55 @@ export const StyledPulseCircleZero = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${pulseFade} 3s ease-in-out 0 1` : null};
+        shouldAnimate
+            ? css`
+                  ${pulseFade} 3s ease-in-out 0 1;
+              `
+            : null};
 `
 
 export const StyledPulseCircleOne = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${pulseFade} 3s ease-in-out .75s infinite` : null};
+        shouldAnimate
+            ? css`
+                  ${pulseFade} 3s ease-in-out .75s infinite;
+              `
+            : null};
 `
 
 export const StyledPulseCircleTwo = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${pulseFade} 3s ease-in-out 1.5s infinite` : null};
+        shouldAnimate
+            ? css`
+                  ${pulseFade} 3s ease-in-out 1.5s infinite;
+              `
+            : null};
 `
 
 export const StyledPulseCircleThree = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.pink});
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${pulseFade} 3s ease-in-out 2.25s infinite` : null};
+        shouldAnimate
+            ? css`
+                  ${pulseFade} 3s ease-in-out 2.25s infinite;
+              `
+            : null};
 `
 
 export const StyledPulseCircleFour = styled(Circle)`
     opacity: 0;
     border: 1px solid rgb(${colors.purple});
     animation: ${({ shouldAnimate }) =>
-        shouldAnimate ? `${pulseFade} 3s ease-in-out 3s infinite` : null};
+        shouldAnimate
+            ? css`
+                  ${pulseFade} 3s ease-in-out 3s infinite;
+              `
+            : null};
 `
 
 export const StyledPulseShadow = styled(Circle)`
