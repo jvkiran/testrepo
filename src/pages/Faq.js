@@ -21,10 +21,7 @@ export const description = 'Frequently asked questions about Ocean Protocol'
 
 const Faq = ({ location }) => (
     <Fragment>
-        <SEO
-            description={description}
-            path={location.pathname}
-            title={title} />
+        <SEO description={description} path={location.pathname} title={title} />
         <Header />
         <StyledSection>
             <ContentRow>
@@ -35,27 +32,33 @@ const Faq = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                {faq.map((question) => (
+                {faq.map(question => (
                     <StyledFaqRow key={question.title}>
                         <StyledSubTitle>{question.title}</StyledSubTitle>
                         <Grid>
                             <Cell width={1 / 2}>
-                                {question.questions.filter((item, index) => index % 2 === 0).map((questions) => (
-                                    <StyledQaA key={questions.question}>
-                                        <FaqItem
-                                            answer={questions.answer}
-                                            question={questions.question} />
-                                    </StyledQaA>
-                                ))}
+                                {question.questions
+                                    .filter((item, index) => index % 2 === 0)
+                                    .map(questions => (
+                                        <StyledQaA key={questions.question}>
+                                            <FaqItem
+                                                answer={questions.answer}
+                                                question={questions.question}
+                                            />
+                                        </StyledQaA>
+                                    ))}
                             </Cell>
                             <Cell width={1 / 2}>
-                                {question.questions.filter((item, index) => index % 2 === 1).map((questions) => (
-                                    <StyledQaA key={questions.question}>
-                                        <FaqItem
-                                            answer={questions.answer}
-                                            question={questions.question} />
-                                    </StyledQaA>
-                                ))}
+                                {question.questions
+                                    .filter((item, index) => index % 2 === 1)
+                                    .map(questions => (
+                                        <StyledQaA key={questions.question}>
+                                            <FaqItem
+                                                answer={questions.answer}
+                                                question={questions.question}
+                                            />
+                                        </StyledQaA>
+                                    ))}
                             </Cell>
                         </Grid>
                     </StyledFaqRow>

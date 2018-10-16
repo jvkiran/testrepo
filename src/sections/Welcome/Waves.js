@@ -51,7 +51,12 @@ export default class Waves extends Component {
         const scene = new THREE.Scene()
         scene.background = new THREE.Color(0x141414)
 
-        const camera = new THREE.PerspectiveCamera(75, this.state.width / this.state.height, 1, 10000)
+        const camera = new THREE.PerspectiveCamera(
+            75,
+            this.state.width / this.state.height,
+            1,
+            10000
+        )
         camera.position.z = 10000
 
         const PI2 = Math.PI * 2
@@ -69,8 +74,10 @@ export default class Waves extends Component {
         for (let ix = 0; ix < AMOUNTX; ix++) {
             for (let iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++] = new THREE.Sprite(material) // eslint-disable-line no-multi-assign
-                particle.position.x = (ix * SEPARATION) - (AMOUNTX * SEPARATION / 2)
-                particle.position.z = (iy * SEPARATION) - (AMOUNTY * SEPARATION / 2)
+                particle.position.x =
+                    ix * SEPARATION - (AMOUNTX * SEPARATION) / 2
+                particle.position.z =
+                    iy * SEPARATION - (AMOUNTY * SEPARATION) / 2
 
                 scene.add(particle)
             }
@@ -96,8 +103,12 @@ export default class Waves extends Component {
         for (let ix = 0; ix < AMOUNTX; ix++) {
             for (let iy = 0; iy < AMOUNTY; iy++) {
                 particle = particles[i++]
-                particle.position.y = (Math.sin((ix + this.state.count) * 0.3) * 50) + (Math.sin((iy + this.state.count) * 0.5) * 50)
-                particle.scale.x = particle.scale.y = ((Math.sin((ix + this.state.count) * 0.3) + 1) * 4) + ((Math.sin((iy + this.state.count) * 0.5) + 1) * 4) // eslint-disable-line no-multi-assign
+                particle.position.y =
+                    Math.sin((ix + this.state.count) * 0.3) * 50 +
+                    Math.sin((iy + this.state.count) * 0.5) * 50
+                particle.scale.x = particle.scale.y =
+                    (Math.sin((ix + this.state.count) * 0.3) + 1) * 4 +
+                    (Math.sin((iy + this.state.count) * 0.5) + 1) * 4 // eslint-disable-line no-multi-assign
             }
         }
         this.renderer.render(this.scene, this.camera)
@@ -158,9 +169,18 @@ export default class Waves extends Component {
 
     render() {
         return (
-            <VisibilitySensor partialVisibility scrollCheck intervalCheck={false} onChange={this.handleVisibility}>
+            <VisibilitySensor
+                partialVisibility
+                scrollCheck
+                intervalCheck={false}
+                onChange={this.handleVisibility}
+            >
                 <StyledWaves>
-                    <div ref={(mount) => { this.mount = mount }} />
+                    <div
+                        ref={mount => {
+                            this.mount = mount
+                        }}
+                    />
                 </StyledWaves>
             </VisibilitySensor>
         )

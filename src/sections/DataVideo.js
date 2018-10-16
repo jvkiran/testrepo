@@ -9,14 +9,15 @@ import { colors, responsive, fonts } from '../styles'
 const PaddingSection = styled.div`
     background-color: #141414;
     padding: 10px;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
     overflow: hidden;
 `
 
 const StyledSection = styled.div`
     padding-top: 0;
     position: relative;
-    background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
+    background-image: ${({ backgroundImage }) =>
+        backgroundImage ? `url(${backgroundImage})` : 'none'};
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -73,19 +74,40 @@ class DataVideo extends React.Component {
         }
     }
 
-    openVideo(link) { this.setState({ videoUrl: link }) }
+    openVideo(link) {
+        this.setState({ videoUrl: link })
+    }
 
-    closeModal() { this.setState({ videoUrl: '' }) }
+    closeModal() {
+        this.setState({ videoUrl: '' })
+    }
 
     render() {
         return (
             <PaddingSection>
-                <StyledSection backgroundImage={videoBackground} fontColor={colors.white} id="data-video">
+                <StyledSection
+                    backgroundImage={videoBackground}
+                    fontColor={colors.white}
+                    id="data-video"
+                >
                     <AspectRatio>
-                        <StyledTitle>That&apos;s why we&apos;re building <br /> Ocean Protocol</StyledTitle>
-                        <PlayButton onClick={() => this.openVideo('https://www.youtube.com/watch?v=FEeicvNSyk4')} src={playIcon} />
+                        <StyledTitle>
+                            That&apos;s why we&apos;re building <br /> Ocean
+                            Protocol
+                        </StyledTitle>
+                        <PlayButton
+                            onClick={() =>
+                                this.openVideo(
+                                    'https://www.youtube.com/watch?v=FEeicvNSyk4'
+                                )
+                            }
+                            src={playIcon}
+                        />
                     </AspectRatio>
-                    <VideoModal onCloseModal={this.closeModal} source={this.state.videoUrl} />
+                    <VideoModal
+                        onCloseModal={this.closeModal}
+                        source={this.state.videoUrl}
+                    />
                 </StyledSection>
             </PaddingSection>
         )

@@ -26,7 +26,7 @@ export const Line = styled.div`
     width: 100%;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    border-bottom: 1px solid rgba(${colors.white}, .25);
+    border-bottom: 1px solid rgba(${colors.white}, 0.25);
 
     @media screen and (${responsive.sm.max}) {
         margin-top: 2rem;
@@ -51,7 +51,7 @@ export const StyledButton = styled(Button)`
     padding: 1rem 2rem;
     margin: 1rem;
     font-family: ${fonts.family.button};
-    box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 30px 4px rgba(0, 0, 0, 0.5);
 
     &:active,
     &:hover,

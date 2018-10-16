@@ -27,7 +27,7 @@ export const FlexContentRow = styled(ContentRow)`
 export const MilestoneTitle = styled.h1`
     font-size: ${fonts.size.base};
     margin: 0;
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
 
     @media screen and (${responsive.lg.min}) {
         margin-top: -4.75rem;
@@ -56,7 +56,7 @@ export const MilestoneDescription = styled.ul`
 
     @media screen and (${responsive.lg.min}) {
         padding-left: 2rem;
-        padding-right: .5rem;
+        padding-right: 0.5rem;
         font-size: ${fonts.size.small};
         max-width: 15rem;
         margin-left: auto;
@@ -68,11 +68,11 @@ export const MilestoneBullet = styled.div`
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    border: .1rem solid;
+    border: 0.1rem solid;
     background: rgb(${colors.white});
     position: absolute;
     left: -1.05rem;
-    top: -.25rem;
+    top: -0.25rem;
     z-index: 2;
 
     @media screen and (${responsive.lg.min}) {
@@ -84,12 +84,12 @@ export const MilestoneBullet = styled.div`
     &:before {
         content: '';
         position: absolute;
-        left: .05rem;
-        top: .05rem;
-        width: calc(100% - .1rem);
-        height: calc(100% - .1rem);
+        left: 0.05rem;
+        top: 0.05rem;
+        width: calc(100% - 0.1rem);
+        height: calc(100% - 0.1rem);
         border-radius: 50%;
-        border: .25rem solid rgb(${colors.white});
+        border: 0.25rem solid rgb(${colors.white});
     }
 `
 
@@ -100,13 +100,15 @@ export const Milestone = styled.div`
     padding-right: 2rem;
     margin-left: 1rem;
     border-left: .15rem solid;
-    border-left-color: ${({ active }) => (active ? `rgb(${colors.pink})` : `rgb(${colors.lightGrey})`)};
+    border-left-color: ${({ active }) =>
+        active ? `rgb(${colors.pink})` : `rgb(${colors.lightGrey})`};
     flex: 1;
 
     @media screen and (${responsive.lg.min}) {
         border-left: 0;
         border-top: .15rem solid;
-        border-top-color: ${({ active }) => (active ? `rgb(${colors.pink})` : `rgb(${colors.lightGrey})`)};
+        border-top-color: ${({ active }) =>
+            active ? `rgb(${colors.pink})` : `rgb(${colors.lightGrey})`};
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 0;
@@ -135,10 +137,12 @@ export const Milestone = styled.div`
     }
 
     ${MilestoneBullet} { /* stylelint-disable-line */
-        border-color: ${({ active }) => (active ? `rgb(${colors.black})` : `rgb(${colors.lightGrey})`)};
+        border-color: ${({ active }) =>
+            active ? `rgb(${colors.black})` : `rgb(${colors.lightGrey})`};
 
         &:before {
-            background: ${({ active }) => (active ? `rgb(${colors.pink})` : `rgb(${colors.dimmedGrey})`)};
+            background: ${({ active }) =>
+                active ? `rgb(${colors.pink})` : `rgb(${colors.dimmedGrey})`};
         }
     }
 

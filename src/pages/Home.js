@@ -6,12 +6,12 @@ import Project from '../sections/Project'
 import Data from '../sections/Data'
 import Papers from '../sections/Papers'
 import Events from '../sections/Events'
-import People from '../sections/People/People'
+import People from '../sections/People'
 import Collaborators from '../sections/Collaborators/Collaborators'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Modal from '../sections/Modal/Modal'
-import MorePages from '../sections/MorePages/MorePages'
+import MorePages from '../sections/MorePages'
 
 export default class Home extends Component {
     state = {
@@ -41,7 +41,10 @@ export default class Home extends Component {
                 <Blog />
                 <Videos />
                 <MorePages />
-                {this.state.showModal && <Modal modal={this.state.modal} toggle={this.toggleModal} />}
+
+                {this.state.showModal && (
+                    <Modal modal={this.state.modal} toggle={this.toggleModal} />
+                )}
             </Fragment>
         )
     }

@@ -16,19 +16,20 @@ export const StyledMember = styled.div`
     }
 
     /* stylelint-disable-next-line */
-     ${({ member }) => member && (
+    ${({ member }) =>
+        member &&
         `@media screen and (${responsive.lg.min}) {
                 flex-basis: calc(100% / 5 - 3rem);
-        }`
-    )};
+        }`};
 `
 
 export const Name = styled.h3`
     font-size: ${fonts.size.base};
-    color: ${({ empty }) => empty ? `rgb(${colors.grey})` : `rgb(${colors.white})`};
+    color: ${({ empty }) =>
+        empty ? `rgb(${colors.grey})` : `rgb(${colors.white})`};
     text-align: center;
-    margin-top: .75rem;
-    margin-bottom: .35rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.35rem;
 `
 
 export const Position = styled(Name)`
@@ -46,14 +47,14 @@ export const Quote = styled.p`
     right: -1rem;
     z-index: 2;
     background: rgb(${colors.darkGrey});
-    border: .1rem solid rgb(${colors.pink});
+    border: 0.1rem solid rgb(${colors.pink});
     border-radius: 2px;
-    padding: .75rem 1rem;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, .2);
+    padding: 0.75rem 1rem;
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.2);
     opacity: 0;
     transform: translate(0, -50%) scale(0);
     transform-origin: center;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
 
     &:empty {
         display: none;
@@ -65,7 +66,8 @@ export const QuoteWrap = styled.div`
 
     &:hover,
     &:focus {
-        ${Quote} { /* stylelint-disable-line */
+        ${Quote} {
+            /* stylelint-disable-line */
             opacity: 1;
             transform: translate(0, -50%) scale(1);
         }
@@ -74,5 +76,5 @@ export const QuoteWrap = styled.div`
 
 export const QuoteLink = styled.a`
     display: block;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 `

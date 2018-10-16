@@ -21,7 +21,12 @@ export default class Input extends Component {
     }
 
     onChange = ({ target }) => {
-        if (this.props.maxLength && target.value.length > this.props.maxLength) return
+        if (
+            this.props.maxLength &&
+            target.value.length > this.props.maxLength
+        ) {
+            return
+        }
         this.setState({ input: target.value })
     }
 
@@ -31,11 +36,25 @@ export default class Input extends Component {
         return (
             <StyledInputWrapper>
                 {type === 'textarea' ? (
-                    <StyledTextarea onChange={this.onChange} type={type} value={this.state.input} {...props} />
+                    <StyledTextarea
+                        onChange={this.onChange}
+                        type={type}
+                        value={this.state.input}
+                        {...props}
+                    />
                 ) : (
-                    <StyledInput onChange={this.onChange} type={type} value={this.state.input} {...props} />
+                    <StyledInput
+                        onChange={this.onChange}
+                        type={type}
+                        value={this.state.input}
+                        {...props}
+                    />
                 )}
-                {!!maxLength && <StyledCharacterCount>{maxLength - this.state.input.length}</StyledCharacterCount>}
+                {!!maxLength && (
+                    <StyledCharacterCount>
+                        {maxLength - this.state.input.length}
+                    </StyledCharacterCount>
+                )}
             </StyledInputWrapper>
         )
     }

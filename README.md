@@ -3,8 +3,8 @@
 > 🐠 Landing page for Ocean Protocol https://oceanprotocol.com
 
 [![Build Status](https://travis-ci.com/oceanprotocol/site.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/oceanprotocol/site)
-[![css bigchaindb](https://img.shields.io/badge/css-bigchaindb-39BA91.svg)](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-7b1173.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 
 [**Live**](https://oceanprotocol.com) | [**Beta**](https://beta.oceanprotocol.com)
@@ -12,26 +12,25 @@
 
 ## Table of Contents
 
-  - [Content](#content)
-     - [Events](#events)
-        - [date &amp; date_end](#date-date_end)
-     - [Papers](#papers)
-     - [Blog posts](#blog-posts)
-     - [Videos](#videos)
-     - [Collaborators](#collaborators)
-        - [Logo](#logo)
-  - [Forms](#forms)
-  - [SEO](#seo)
-  - [Development](#development)
-     - [Environment variables](#environment-variables)
-     - [Workflow](#workflow)
-     - [Code style](#code-style)
-     - [SVG assets](#svg-assets)
-  - [Deployment: always be shipping](#deployment-always-be-shipping)
-     - [Manual Deployment](#manual-deployment)
-  - [Data Collection &amp; Cookies](#data-collection-cookies)
-     - [Cookie Banner](#cookie-banner)
-     - [Google Analytics](#google-analytics)
+-   [Content](#content)
+    -   [Events](#events)
+        -   [date &amp; date_end](#date-date_end)
+    -   [Papers](#papers)
+    -   [Blog posts](#blog-posts)
+    -   [Videos](#videos)
+    -   [Collaborators](#collaborators)
+        -   [Logo](#logo)
+-   [Forms](#forms)
+-   [SEO](#seo)
+-   [Development](#development)
+    -   [Environment variables](#environment-variables)
+    -   [Workflow](#workflow)
+    -   [Code style](#code-style)
+-   [Deployment: always be shipping](#deployment-always-be-shipping)
+    -   [Manual Deployment](#manual-deployment)
+-   [Data Collection &amp; Cookies](#data-collection-cookies)
+    -   [Cookie Banner](#cookie-banner)
+    -   [Google Analytics](#google-analytics)
 
 ---
 
@@ -39,13 +38,13 @@
 
 Most copy is mixed within the HTML and JSX markup in the files under `src/sections/`. The following content has been isolated in json data files in the `src/data/` directory and can be edited there:
 
-- Events: [`events.json`](src/data/events.json)
-- Team: [`team.json`](src/data/team.json)
-- Advisors: [`advisors.json`](src/data/advisors.json)
-- Collaborators: [`collaborators.json`](src/data/collaborators.json)
-- Art: [`art.json`](src/data/art.json)
-- FAQ: [`faq.json`](src/data/faq.json)
-- Roadmap: [`roadmap.json`](src/data/roadmap.json)
+-   Events: [`events.json`](src/data/events.json)
+-   Team: [`team.json`](src/data/team.json)
+-   Advisors: [`advisors.json`](src/data/advisors.json)
+-   Collaborators: [`collaborators.json`](src/data/collaborators.json)
+-   Art: [`art.json`](src/data/art.json)
+-   FAQ: [`faq.json`](src/data/faq.json)
+-   Roadmap: [`roadmap.json`](src/data/roadmap.json)
 
 ### Events
 
@@ -61,7 +60,7 @@ When adding a multi-day event, don't use the full event range but only the date 
 
 All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
 
-An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule  in `src/lib/whitepaper` and automatically copied in place before deployment.
+An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule in `src/lib/whitepaper` and automatically copied in place before deployment.
 
 ### Blog posts
 
@@ -95,17 +94,17 @@ While all SVGs are automatically cleaned up through [SVGO](https://github.com/sv
 
 We have the following forms on our website collecting lead data:
 
-- *Newsletter subscription*: Email
-- *Join as Data Provider*: Name, Email, Company, Comment
-- *Join as Data Consumer*: Name, Email, Company, Comment
-- *Ambassadors*: Name, Email, Location, Background, Interest, Speaking, LinkedIn, GitHub
+-   _Newsletter subscription_: Email
+-   _Join as Data Provider_: Name, Email, Company, Comment
+-   _Join as Data Consumer_: Name, Email, Company, Comment
+-   _Ambassadors_: Name, Email, Location, Background, Interest, Speaking, LinkedIn, GitHub
 
 All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
 
 Via Zapier, the data is synced further in real time when new submissions happen:
 
-- the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
-- the Data Provider, Data Consumer & Ambassadors data into Google Sheets
+-   the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
+-   the Data Provider, Data Consumer & Ambassadors data into Google Sheets
 
 All above forms are built out from what's defined in [`src/data/forms.js`](src/data/forms.js). New fields can be added to all forms from there, but data sending for new fields still needs to be handled in the component in [`src/sections/Modal/ModalForm.js`](src/sections/Modal/ModalForm.js).
 
@@ -118,8 +117,8 @@ import PropTypes from 'prop-types'
 import SEO from '../components/SEO'
 
 const Page = ({ location }) => {
-    const title= 'PAGE_TITLE'
-    const description= 'PAGE_DESCRIPTION'
+    const title = 'PAGE_TITLE'
+    const description = 'PAGE_DESCRIPTION'
     const image = 'PAGE_IMAGE_PATH'
 
     return (
@@ -127,7 +126,8 @@ const Page = ({ location }) => {
             description={description}
             image={image}
             path={location.pathname}
-            title={title} />
+            title={title}
+        />
     )
 }
 
@@ -159,10 +159,10 @@ npm start
 
 A `.env` file is used to inject environment variables during local development. We're using `create-react-app` so all variables need to be prefixed with `REACT_APP_` to get picked up.
 
-Environment Variable | Usage
----------|---------
-`REACT_APP_ANIMATE_WAVES` | Set to `false` to stop the waves from executing, saving your laptop battery.
-`REACT_APP_ANIMATE_PROJECT` | Set to `false` to disable the Project data dots animation. Takes away some stress from your GPU, saving your laptop battery.
+| Environment Variable        | Usage                                                                                                                        |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `REACT_APP_ANIMATE_WAVES`   | Set to `false` to stop the waves from executing, saving your laptop battery.                                                 |
+| `REACT_APP_ANIMATE_PROJECT` | Set to `false` to disable the Project data dots animation. Takes away some stress from your GPU, saving your laptop battery. |
 
 ### Workflow
 
@@ -204,8 +204,8 @@ Code style for JavaScript and style sheets (we're using [styled-components](http
 
 Code style follows:
 
-- [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
-- [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+-   [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
+-   [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
 
 ### SVG assets
 
@@ -223,24 +223,24 @@ That's done with a simple bash script under [`scripts/svg.sh`](scripts/svg.sh).
 
 ![shipping](https://cloud.githubusercontent.com/assets/90316/26559768/e21e9724-44b1-11e7-90cf-6ef6ebb06d09.gif)
 
-The site is hosted in a S3 bucket `oceanprotocol.com`, with DNS setup in Cloudflare. Cloudflare provides SSL certificate, among other things. 
+The site is hosted in a S3 bucket `oceanprotocol.com`, with DNS setup in Cloudflare. Cloudflare provides SSL certificate, among other things.
 
 The site gets built & deployed automatically via Travis which is the preferred way of deployment. It makes sure the site is always deployed with fresh dependencies and only after a successful test & build.
 
 Build & deployment happens under the following conditions on Travis:
 
-- every push tests & builds the site
-- **live deployment**: every push to the master branch initiates a live deployment
-- **beta deployment**: every new pull request and every subsequent push to it initiates a beta deployment
+-   every push tests & builds the site
+-   **live deployment**: every push to the master branch initiates a live deployment
+-   **beta deployment**: every new pull request and every subsequent push to it initiates a beta deployment
 
 Travis requires the following environment variables to be setup for successful deployments:
 
-- `AWS_ACCESS_KEY_ID`
-- `AWS_SECRET_ACCESS_KEY`
-- `AWS_DEFAULT_REGION`
-- `CLOUDFLARE_EMAIL`
-- `CLOUDFLARE_ZONE`
-- `CLOUDFLARE_KEY`
+-   `AWS_ACCESS_KEY_ID`
+-   `AWS_SECRET_ACCESS_KEY`
+-   `AWS_DEFAULT_REGION`
+-   `CLOUDFLARE_EMAIL`
+-   `CLOUDFLARE_ZONE`
+-   `CLOUDFLARE_KEY`
 
 ### Manual Deployment
 
@@ -257,15 +257,15 @@ From frontend side, nothing gets collected or stored, the S3 bucket has access l
 
 Site communicates against those services where some data collection, like time of request and the user's IP address might be collected:
 
-- https://webtask.io
-- https://mailchimp.com
+-   https://webtask.io
+-   https://mailchimp.com
 
 ### Cookie Banner
 
 When a user first arrives on the site, a cookie banner will be shown. Cookie banner will be accepted automatically on either those conditions:
 
-- user stays on page for more than 10 seconds
-- user browses to another page
+-   user stays on page for more than 10 seconds
+-   user browses to another page
 
 This acceptance is then stored as a cookie (oh the irony) called `hasConsent`. If user is coming from one of our other web properties, she probably has this cookie already so cookie banner won't be shown for her. Likewise, if user has Do Not Track activated, nothing will be shown either.
 

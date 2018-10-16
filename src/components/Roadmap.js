@@ -14,12 +14,21 @@ import {
     DisclaimerAsterisk
 } from './Roadmap.css'
 
-const Milestones = roadmap.map((milestone) => (
-    <Milestone active={milestone.active} className={!!milestone.active && 'active'} key={milestone.title}>
+const Milestones = roadmap.map(milestone => (
+    <Milestone
+        active={milestone.active}
+        className={!!milestone.active && 'active'}
+        key={milestone.title}
+    >
         <MilestoneTitle>{milestone.title}</MilestoneTitle>
-        <MilestoneDate>{milestone.date} <DisclaimerAsterisk className={milestone.active && 'hide'}>*</DisclaimerAsterisk></MilestoneDate>
+        <MilestoneDate>
+            {milestone.date}{' '}
+            <DisclaimerAsterisk className={milestone.active && 'hide'}>
+                *
+            </DisclaimerAsterisk>
+        </MilestoneDate>
         <MilestoneDescription>
-            {milestone.description.map((item) => (
+            {milestone.description.map(item => (
                 <li key={item}>{item}</li>
             ))}
         </MilestoneDescription>
@@ -32,11 +41,14 @@ const Roadmap = () => (
         <ContentRow>
             <Title>Roadmap</Title>
         </ContentRow>
-        <FlexContentRow wide>
-            {Milestones}
-        </FlexContentRow>
+        <FlexContentRow wide>{Milestones}</FlexContentRow>
         <Disclaimer>
-            <p><DisclaimerAsterisk>*</DisclaimerAsterisk> Software is sometimes hard to predict, so there might be delays. We will update projected dates once we are closer to a milestone&#8217;s completion.</p>
+            <p>
+                <DisclaimerAsterisk>*</DisclaimerAsterisk> Software is sometimes
+                hard to predict, so there might be delays. We will update
+                projected dates once we are closer to a milestone&#8217;s
+                completion.
+            </p>
         </Disclaimer>
     </StyledRoadmap>
 )

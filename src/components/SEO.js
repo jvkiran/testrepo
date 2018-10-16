@@ -4,16 +4,14 @@ import PropTypes from 'prop-types'
 
 import { meta } from '../../src/constants'
 
-const SEO = ({
-    title, description, image, path
-}) => {
+const SEO = ({ title, description, image, path }) => {
     const url = `${meta.url}${path}`
 
     return (
         <Helmet
             defaultTitle={`${meta.title} — ${meta.tagline}`}
-            titleTemplate={`%s — ${meta.title}`}>
-
+            titleTemplate={`%s — ${meta.title}`}
+        >
             <html lang="en" />
 
             <title>{title}</title>

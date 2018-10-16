@@ -9,7 +9,8 @@ const Title = styled.h1`
     margin-top: 0;
     margin-bottom: 4rem;
     text-align: center;
-    color: ${({ white }) => (white ? `rgb(${colors.white})` : `rgb(${colors.black})`)};
+    color: ${({ white }) =>
+        white ? `rgb(${colors.white})` : `rgb(${colors.black})`};
     white-space: pre-line;
 
     @media screen and (${responsive.sm.max}) {

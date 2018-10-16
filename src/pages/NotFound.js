@@ -21,7 +21,9 @@ const NotFound = () => (
         <StyledSection id="notfound">
             <ContentRow>
                 <Title>Oops, that did not work</Title>
-                <SubTitle>Pardon us, the page you requested is not here.</SubTitle>
+                <SubTitle>
+                    Pardon us, the page you requested is not here.
+                </SubTitle>
                 <Link to="/">
                     <StyledButton>Go to homepage</StyledButton>
                 </Link>

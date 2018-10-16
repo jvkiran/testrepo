@@ -31,10 +31,11 @@ export const StyledSection = styled(Section)`
         bottom: 0;
         background: url(${fishfail}) no-repeat center center;
         background-size: cover;
-        opacity: .5;
+        opacity: 0.5;
     }
 
-    ${SubTitle} { /* stylelint-disable-line */
+    ${SubTitle} {
+        /* stylelint-disable-line */
         margin-bottom: 4rem;
     }
 `

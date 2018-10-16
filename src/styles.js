@@ -17,7 +17,9 @@ export const colors = {
 }
 
 export const gradients = {
-    main: `linear-gradient(to bottom right, rgb(${colors.purple}) 0%, rgb(${colors.pink}) 100%)`
+    main: `linear-gradient(to bottom right, rgb(${colors.purple}) 0%, rgb(${
+        colors.pink
+    }) 100%)`
 }
 
 export const fonts = {
@@ -34,10 +36,12 @@ export const fonts = {
         h5: '1.125rem'
     },
     family: {
-        base: '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+        base:
+            '"Sharp Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
         title: '"Sharp Sans Display", Helvetica, Arial, sans-serif',
         button: '"Sharp Sans Bold", Helvetica, Arial, sans-serif',
-        code: '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace'
+        code:
+            '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace'
     },
     lineHeight: {
         base: '1.65',

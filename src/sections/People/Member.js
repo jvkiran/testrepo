@@ -15,16 +15,14 @@ const Member = ({ member, advisor, empty }) => {
     const item = member || advisor
 
     return (
-        <StyledMember
-            empty={empty ? true : null}
-            member={member ? true : null}
-        >
-            {empty
-                ? <Fragment>
+        <StyledMember empty={empty ? true : null} member={member ? true : null}>
+            {empty ? (
+                <Fragment>
                     <MemberPhoto empty />
                     <Name empty>To be announced...</Name>
                 </Fragment>
-                : <Fragment>
+            ) : (
+                <Fragment>
                     {member && <MemberPhoto member={item} />}
                     {advisor && (
                         <QuoteWrap>
@@ -32,7 +30,11 @@ const Member = ({ member, advisor, empty }) => {
                             <Quote>
                                 {!!item.quote && item.quote}
 
-                                {item.link && <QuoteLink href={item.link}>More info</QuoteLink>}
+                                {item.link && (
+                                    <QuoteLink href={item.link}>
+                                        More info
+                                    </QuoteLink>
+                                )}
                             </Quote>
                         </QuoteWrap>
                     )}
@@ -40,7 +42,7 @@ const Member = ({ member, advisor, empty }) => {
                     {advisor && <Position>{item.position}</Position>}
                     <MemberLinks member={item} />
                 </Fragment>
-            }
+            )}
         </StyledMember>
     )
 }

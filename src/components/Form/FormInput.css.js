@@ -29,7 +29,7 @@ export const Input = styled.input`
     padding: calc(${layout.spacer} / 3);
     margin: 0;
     border-radius: 2px;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
     min-height: 43px;
     appearance: none;
 
@@ -45,7 +45,7 @@ export const Input = styled.input`
         color: rgb(${colors.lightGrey});
         font-weight: ${fonts.fontWeight.base};
         line-height: 1.5;
-        transition: .2s ease-out;
+        transition: 0.2s ease-out;
         opacity: 1;
     }
 
@@ -73,16 +73,16 @@ export const FormLabel = styled.label`
             font-size: ${fonts.size.base};
             color: rgb(${colors.lightGrey});
             display: inline-block;
-            margin-left: .1rem;
+            margin-left: 0.1rem;
         }
     }
 `
 
 export const Count = styled.span`
     position: absolute;
-    opacity: .7;
+    opacity: 0.7;
     font-size: ${fonts.size.mini};
     margin: 0;
-    right: .4rem;
-    top: .2rem;
+    right: 0.4rem;
+    top: 0.2rem;
 `

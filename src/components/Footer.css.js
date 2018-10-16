@@ -24,7 +24,7 @@ export const StyledActions = styled.div`
 `
 
 export const StyledCopyright = styled(Paragraph)`
-    opacity: .5;
+    opacity: 0.5;
     margin-top: 3rem;
 
     @media screen and (${responsive.sm.min}) {
@@ -41,7 +41,7 @@ export const StyledSocialLinks = styled.div`
     justify-content: space-between;
 
     & a {
-        margin-right: .75rem;
+        margin-right: 0.75rem;
     }
 
     & img {

@@ -7,7 +7,7 @@ export const StyledHamburger = styled.button`
     padding: ${layout.pageFrame};
     cursor: pointer;
     transition-property: opacity, filter;
-    transition-duration: .15s;
+    transition-duration: 0.15s;
     transition-timing-function: linear;
     font: inherit;
     color: inherit;
@@ -32,7 +32,7 @@ export const StyledHamburgerBox = styled.span`
 export const StyledHamburgerInner = styled.span`
     width: 30px;
     height: 3px;
-    background-color: rgba(${colors.white}, .8);
+    background-color: rgba(${colors.white}, 0.8);
     border-radius: 5px;
     position: absolute;
     display: block;
@@ -40,19 +40,25 @@ export const StyledHamburgerInner = styled.span`
     top: auto;
     bottom: 0;
     transition-property: transform;
-    transform: ${({ active }) => (active ? 'translate3d(0, -10px, 0) rotate(-45deg)' : 'translate3d(0, 0, 0) rotate(0)')};
+    transform: ${({ active }) =>
+        active
+            ? 'translate3d(0, -10px, 0) rotate(-45deg)'
+            : 'translate3d(0, 0, 0) rotate(0)'};
     transition-duration: ${({ active }) => (active ? '0.22s' : '0.13s')};
-    transition-timing-function: ${({ active }) => (active ? 'cubic-bezier(0.215, 0.61, 0.355, 1)' : 'cubic-bezier(0.55, 0.055, 0.675, 0.19)')};
+    transition-timing-function: ${({ active }) =>
+        active
+            ? 'cubic-bezier(0.215, 0.61, 0.355, 1)'
+            : 'cubic-bezier(0.55, 0.055, 0.675, 0.19)'};
 
     &:before,
     &:after {
         width: 30px;
         height: 3px;
-        background-color: rgba(${colors.white}, .8);
+        background-color: rgba(${colors.white}, 0.8);
         border-radius: 5px;
         position: absolute;
         transition-property: transform;
-        transition-duration: .15s;
+        transition-duration: 0.15s;
         transition-timing-function: ease;
         content: '';
         display: block;
@@ -63,9 +69,9 @@ export const StyledHamburgerInner = styled.span`
         transform: ${({ active }) => (active ? 'rotate(-90deg)' : 'rotate(0)')};
         /* stylelint-disable */
         transition: ${({ active }) =>
-        (active
-            ? 'top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)'
-            : 'top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)')};
+            active
+                ? 'top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1)'
+                : 'top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19)'};
         /* stylelint-enable */
     }
 
@@ -75,9 +81,9 @@ export const StyledHamburgerInner = styled.span`
         opacity: ${({ active }) => (active ? '0' : '1')};
         /* stylelint-disable */
         transition: ${({ active }) =>
-        (active
-            ? 'top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear'
-            : 'top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear')};
+            active
+                ? 'top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear'
+                : 'top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear'};
         /* stylelint-enable */
     }
 `

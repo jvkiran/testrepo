@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
 import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
@@ -72,6 +72,20 @@ const MenuItems = [
     {
         name: 'Videos',
         href: '#video'
+    },
+    {
+        name: 'More',
+        href: '#more',
+        sub: [
+            {
+                name: 'Art',
+                href: '/art'
+            },
+            {
+                name: 'FAQ',
+                href: '/faq'
+            }
+        ]
     }
 ]
 
@@ -94,7 +108,7 @@ SubMenu.propTypes = {
     current: PropTypes.string
 }
 
-class Menu extends Component {
+class Menu extends PureComponent {
     constructor(props) {
         super(props)
 

@@ -1,13 +1,11 @@
 import React from 'react'
 import { title, description } from '../../pages/Faq'
-import {
-    StyledTitle,
-    StyledSubTitle,
-    StyledLink
-} from './MorePages.css'
+import { StyledTitle, StyledSubTitle, StyledLink } from './index.css'
+
+const location = '/faq'
 
 const Faq = () => (
-    <StyledLink to="/faq">
+    <StyledLink to={location}>
         <StyledTitle white>{title}</StyledTitle>
         <StyledSubTitle center>{description}</StyledSubTitle>
     </StyledLink>

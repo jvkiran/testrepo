@@ -13,9 +13,9 @@ export const Icon = styled.a`
     height: 1.75rem;
     border-radius: 2px;
     display: inline-block;
-    margin-left: .25rem;
-    margin-right: .25rem;
-    opacity: .5;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    opacity: 0.5;
 
     &:hover,
     &:focus {

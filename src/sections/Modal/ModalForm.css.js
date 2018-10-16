@@ -4,9 +4,10 @@ import { colors, fonts, layout } from '../../styles'
 export const StyledMessage = styled.p`
     margin-top: 3rem;
     color: rgb(${colors.white});
-    background: ${({ success }) => (success ? `rgb(${colors.green})` : `rgb(${colors.red})`)};
+    background: ${({ success }) =>
+        success ? `rgb(${colors.green})` : `rgb(${colors.red})`};
     padding: calc(${layout.spacer} / 2);
-    border-radius: .1rem;
+    border-radius: 0.1rem;
     font-family: ${fonts.family.button};
 `
 

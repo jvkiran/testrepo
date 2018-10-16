@@ -21,7 +21,10 @@ const Styleguide = () => (
                 <Color color={color[1]} key={color}>
                     <ColorName>{color[0]}</ColorName>
                     <ColorValue>#{rgbHex(color[1])}</ColorValue>
-                    <ColorValue>rgb({color[1]})</ColorValue>
+                    <ColorValue>
+                        rgb(
+                        {color[1]})
+                    </ColorValue>
                 </Color>
             ))}
         </Colors>
@@ -45,7 +48,8 @@ const Styleguide = () => (
             &{' '}
             <a href="https://sharptype.co/typefaces/sharp-sans-display-no1/">
                 Sharp Sans Display No. 1 Bold
-            </a>.
+            </a>
+            .
         </SectionSubTitle>
 
         <h1>Sharp Sans Display No. 1 Bold</h1>

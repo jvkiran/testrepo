@@ -9,11 +9,11 @@ export const StyledSubTitle = styled(SubTitle)`
 `
 
 export const StyledSection = styled(Section)`
-    ${Title} { /* stylelint-disable-line */
+    ${Title} {
         margin-bottom: 1rem;
     }
 
-    ${SubTitle} { /* stylelint-disable-line */
+    ${SubTitle} {
         color: rgb(${colors.lightGrey});
         margin-bottom: 3rem;
     }
