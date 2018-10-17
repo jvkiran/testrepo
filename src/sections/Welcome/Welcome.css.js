@@ -11,14 +11,14 @@ export const Hero = styled(Section)`
     padding-top: 0;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
 
     @media screen and (${responsive.sm.min}) {
-        min-height: calc(100vh - (${layout.pageFrame} * 2));
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        min-height: 42rem;
+        height: calc(100vh - (${layout.pageFrame} * 2));
     }
 
     > div {
@@ -173,10 +173,6 @@ export const StyledSocialHero = styled.aside`
 
         &:nth-child(6) {
             animation-delay: 2.25s;
-        }
-
-        &:nth-child(7) {
-            animation-delay: 2.5s;
         }
     }
 `
