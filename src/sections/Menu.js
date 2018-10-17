@@ -75,11 +75,11 @@ const MenuItems = [
         sub: [
             {
                 name: 'Art',
-                href: '/art'
+                href: '/art/'
             },
             {
                 name: 'FAQ',
-                href: '/faq'
+                href: '/faq/'
             }
         ]
     }
