@@ -10,6 +10,10 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
+    <link rel="preload" href="%PUBLIC_URL%/fonts/SharpSansDispNo1-Bold.woff2" as="font">
+    <link rel="preload" href="%PUBLIC_URL%/fonts/SharpSans-Medium.woff2" as="font">
+    <link rel="preload" href="%PUBLIC_URL%/fonts/SharpSans-Bold.woff2" as="font">
+
     <style>
         @font-face {
             font-family: 'Sharp Sans Display';
@@ -165,7 +169,8 @@
         </p>
     </div>
 
-    <script src="%PUBLIC_URL%/cookies-eu-banner.min.js">
+    <script src="%PUBLIC_URL%/cookies-eu-banner.min.js"></script>
+    <script>
         new CookiesEuBanner(function () {
             (function (window) {
                 // Google Analytics async snippet

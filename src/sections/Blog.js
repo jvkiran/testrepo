@@ -1,14 +1,12 @@
 import React, { PureComponent, Fragment } from 'react'
-import LazyLoad from 'react-lazyload'
 import axios from 'axios'
-import Helmet from 'react-helmet'
 import Title from '../components/Title'
 import Section from '../components/Section'
 import ContentRow from '../components/ContentRow'
 import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Spinner from '../components/Spinner'
-import { social } from '../constants'
+import { social, webtasks } from '../constants'
 import {
     StyledCard,
     StyledHeader,
@@ -18,8 +16,7 @@ import {
     StyledAction
 } from './Blog.css'
 
-const url =
-    'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/medium/oceanprotocol'
+const url = webtasks.host + '/medium/oceanprotocol'
 
 export default class Blog extends PureComponent {
     signal = axios.CancelToken.source()
@@ -59,42 +56,37 @@ export default class Blog extends PureComponent {
 
         return (
             <Fragment>
-                <Helmet>
-                    <link rel="preconnect" href={url} />
-                </Helmet>
                 <Section id="blog" minHeight={930}>
                     <ContentRow>
                         <Title>Learn more about Ocean Protocol</Title>
                         {fetching ? (
                             <Spinner />
                         ) : (
-                            <LazyLoad once height={524} offset={200}>
-                                <Grid>
-                                    {posts.map(post => (
-                                        <Cell
-                                            smallGutter
-                                            key={post.id}
-                                            width={1 / 3}
-                                        >
-                                            <a href={post.postUrl}>
-                                                <StyledCard>
-                                                    <StyledHeader
-                                                        imageUrl={post.imageUrl}
-                                                    />
-                                                    <StyledContent>
-                                                        <StyledTitle>
-                                                            {post.title}
-                                                        </StyledTitle>
-                                                        <StyledSubtitle>
-                                                            {post.subtitle}
-                                                        </StyledSubtitle>
-                                                    </StyledContent>
-                                                </StyledCard>
-                                            </a>
-                                        </Cell>
-                                    ))}
-                                </Grid>
-                            </LazyLoad>
+                            <Grid>
+                                {posts.map(post => (
+                                    <Cell
+                                        smallGutter
+                                        key={post.id}
+                                        width={1 / 3}
+                                    >
+                                        <a href={post.postUrl}>
+                                            <StyledCard>
+                                                <StyledHeader
+                                                    imageUrl={post.imageUrl}
+                                                />
+                                                <StyledContent>
+                                                    <StyledTitle>
+                                                        {post.title}
+                                                    </StyledTitle>
+                                                    <StyledSubtitle>
+                                                        {post.subtitle}
+                                                    </StyledSubtitle>
+                                                </StyledContent>
+                                            </StyledCard>
+                                        </a>
+                                    </Cell>
+                                ))}
+                            </Grid>
                         )}
                         <StyledAction fetching={fetching}>
                             <a href={social.blog}>Go to Blog</a>
