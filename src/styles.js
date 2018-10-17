@@ -54,9 +54,9 @@ export const fonts = {
 }
 
 export const transitions = {
-    short: 'all .1s ease-in-out',
-    base: 'all .2s ease-in-out',
-    long: 'all .3s ease-in-out'
+    short: 'all .1s ease-out',
+    base: 'all .2s ease-out',
+    long: 'all .3s ease-out'
 }
 
 export const layout = {
@@ -232,9 +232,5 @@ export const globalStyles = `
   iframe {
     max-width: 100%;
     height: auto;
-  }
-
-  .ReactModal__Body--open {
-      overflow: hidden !important;
   }
 `
