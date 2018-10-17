@@ -4,6 +4,7 @@ import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
 import Button from '../components/Button'
 import jellyfish from '../assets/misc/jellyfish-background.jpg'
+import { ReactComponent as Play } from '../assets/misc/play-circle.svg'
 import { colors, fonts, responsive, transitions } from '../styles'
 
 export const StyledVideos = styled(ContentRow)`
@@ -44,7 +45,7 @@ export const HeightRow = styled.div`
     }
 `
 
-export const PlayButton = styled.img`
+export const PlayButton = styled(Play)`
     display: block;
     cursor: pointer;
     width: 3rem;

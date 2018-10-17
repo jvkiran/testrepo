@@ -86,7 +86,8 @@ export const StyledParagraph = styled(Paragraph)`
     animation: ${animation} 1.5s backwards;
 `
 
-export const StyledVideoThumbnail = styled.div`
+export const StyledVideoThumbnail = styled.picture`
+    display: block;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;

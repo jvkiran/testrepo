@@ -1,7 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import cross from '../assets/misc/cross.svg'
+import { ReactComponent as Cross } from '../assets/misc/cross.svg'
 import {
     StyledClose,
     StyledReactPlayer,
@@ -15,9 +15,9 @@ const VideoModal = ({ onCloseModal, modalIsOpen, source }) => {
     }
 
     return (
-        <Fragment>
+        <>
             <Helmet>
-                <html style={{ overflow: 'hidden' }} />
+                <style>{'html { overflow: hidden }'}</style>
             </Helmet>
             <ModalOverlay onClick={() => onCloseModal()}>
                 <YoutubeModal>
@@ -27,13 +27,11 @@ const VideoModal = ({ onCloseModal, modalIsOpen, source }) => {
                         url={source}
                     />
                 </YoutubeModal>
-                <StyledClose
-                    alt="close"
-                    onClick={() => onCloseModal()}
-                    src={cross}
-                />
+                <StyledClose title="close" onClick={() => onCloseModal()}>
+                    <Cross />
+                </StyledClose>
             </ModalOverlay>
-        </Fragment>
+        </>
     )
 }
 

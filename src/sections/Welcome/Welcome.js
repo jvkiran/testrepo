@@ -3,7 +3,9 @@ import Waves from './Waves'
 import SocialHero from './SocialHero'
 import VideoModal from '../../components/VideoModal'
 import videoThumb from '../../assets/misc/video-thumb.jpg'
-import videoThumb2x from '../../assets/misc/video-thumb@2x.jpg'
+import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
+import videoThumbWebP from '../../assets/misc/video-thumb.webp'
+import videoThumbWebPRetina from '../../assets/misc/video-thumb@2x.webp'
 import { colors } from '../../styles'
 import {
     Hero,
@@ -17,8 +19,6 @@ import {
     StyledButton,
     Cta
 } from './Welcome.css'
-
-const srcSet = `${videoThumb2x}  2x,  ${videoThumb} 1x`
 
 const content = {
     title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
@@ -67,10 +67,25 @@ class Welcome extends Component {
                             <StyledVideoThumbnail
                                 onClick={() => this.toggleModal()}
                             >
+                                <source
+                                    type="image/webp"
+                                    media="(min-resolution: 144dpi), 
+                                                (-webkit-min-device-pixel-ratio: 1.5)"
+                                    srcSet={videoThumbWebPRetina}
+                                />
+                                <source
+                                    type="image/webp"
+                                    srcSet={videoThumbWebP}
+                                />
+                                <source
+                                    media="(min-resolution: 144dpi), 
+                                                (-webkit-min-device-pixel-ratio: 1.5)"
+                                    srcSet={videoThumbRetina}
+                                />
+                                <source srcSet={videoThumb} />
                                 <img
-                                    alt="Ocean Protocol Video"
                                     src={videoThumb}
-                                    srcSet={srcSet}
+                                    alt="Ocean Protocol Video"
                                 />
                             </StyledVideoThumbnail>
                         </HeroGridCell>

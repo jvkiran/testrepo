@@ -33,12 +33,9 @@ export const StyledContent = styled.div`
     }
 `
 
-export const StyledAction = styled.div`
+export const StyledAction = styled.aside`
     text-align: center;
     margin-top: 4rem;
-    opacity: ${({ fetching }) => (fetching ? 0 : 1)};
-    pointer-events: ${({ fetching }) => (fetching ? 'none' : 'auto')};
-    visibility: ${({ fetching }) => (fetching ? 'hidden' : 'visible')};
 
     @media screen and (${responsive.sm.max}) {
         margin-top: 2rem;

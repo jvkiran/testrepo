@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { responsive, colors, fonts } from '../../styles'
 
 export const StyledEventsList = styled.ul`
+    position: relative;
     margin-top: 4rem;
     padding: 0;
     padding-bottom: 3rem;
@@ -16,6 +17,7 @@ export const StyledEventsList = styled.ul`
     padding-right: 5rem;
     display: flex;
     align-items: stretch;
+    z-index: 1;
 
     @media screen and (${responsive.sm.min}) {
         margin-right: -2.5rem;

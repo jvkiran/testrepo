@@ -15,6 +15,7 @@ export const StyledSection = styled.section`
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
+    overflow: hidden;
 `
 
 export const StyledColumn = styled.div`
