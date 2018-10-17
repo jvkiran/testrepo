@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Helmet from 'react-helmet'
 import ScrollToRouteTop from './components/ScrollToRouteTop'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -12,7 +11,6 @@ import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 import { createGlobalStyle } from 'styled-components'
 import { globalStyles } from './styles'
-import { webtasks } from './constants'
 
 const GlobalStyles = createGlobalStyle`${globalStyles}`
 
@@ -30,9 +28,6 @@ const Routes = () => (
 
 const App = () => (
     <>
-        <Helmet>
-            <link rel="preconnect" href={webtasks.host} />
-        </Helmet>
         <GlobalStyles />
         <Router>
             <ScrollToRouteTop>
