@@ -218,7 +218,7 @@ const Videos = () => (
         fontColor={colors.white}
         id="video"
     >
-        <LazyLoad once unmountIfInvisible offset={100}>
+        <LazyLoad once unmountIfInvisible height={1148} offset={100}>
             <Fragment>
                 <ContentRow>
                     <Title white>Videos</Title>

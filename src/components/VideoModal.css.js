@@ -2,17 +2,20 @@ import styled from 'styled-components'
 import ReactPlayer from 'react-player'
 import { colors } from '../styles'
 
-export const StyledClose = styled.img`
+export const StyledClose = styled.button`
     position: absolute;
     cursor: pointer;
-    width: 1.5rem;
-    height: 1.5rem;
+    background: none;
+    outline: 0;
     top: 1.5rem;
     right: 1.5rem;
-    z-index: 21;
 
-    &:hover,
-    &:focus {
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    &:hover {
         opacity: 0.7;
     }
 `
