@@ -19,6 +19,8 @@ export const ArchiveButton = styled(Button)`
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
     font-size: ${fonts.size.small};
     color: rgb(${colors.lightGrey});
+    z-index: 1;
+    position: relative;
 
     &:hover,
     &:focus {

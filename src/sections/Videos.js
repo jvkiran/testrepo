@@ -1,20 +1,18 @@
 import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazyload'
-import fetch from 'isomorphic-fetch'
-import Helmet from 'react-helmet'
+import axios from 'axios'
 import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
 import Spinner from '../components/Spinner'
-import playIcon from '../assets/misc/play-circle.svg'
 import { ReactComponent as Cross } from '../assets/misc/cross.svg'
 import jellyfish from '../assets/misc/jellyfish-background.jpg'
 import jellyfishVideoMp4 from '../assets/misc/jellyfish-background.mp4'
 import jellyfishVideoWebM from '../assets/misc/jellyfish-background.webm'
 import { colors } from '../styles'
-import { youtube } from '../constants'
+import { youtube, webtasks } from '../constants'
 import {
     StyledVideos,
     HeightRow,
@@ -35,25 +33,22 @@ import {
     VideoBackground
 } from './Videos.css'
 
-const url = `https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io/youtube/${
-    youtube.playlist
-}`
+const url = `${webtasks.host}/youtube/${youtube.playlist}`
 
 class SectionContent extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            title: '',
-            description: '',
-            active: 0,
-            videoUrl: '',
-            player: false
-        }
+    state = {
+        title: '',
+        description: '',
+        active: 0,
+        videoUrl: '',
+        player: false
     }
 
     componentDidMount() {
-        this.selectVideo(this.props.ApiResponse[0], 0)
+        const { videos } = this.props
+
+        // select first item from response
+        this.selectVideo(videos[0], 0)
 
         // eslint-disable-next-line no-unused-vars
         const scroll = new SmoothScroll('li[href*="#videoScroll"]', {
@@ -80,19 +75,15 @@ class SectionContent extends PureComponent {
     }
 
     openVideo() {
-        this.setState({
-            player: true
-        })
+        this.setState({ player: true })
     }
 
     stopVideo() {
-        this.setState({
-            player: false
-        })
+        this.setState({ player: false })
     }
 
     render() {
-        const { ApiResponse } = this.props
+        const { videos } = this.props
 
         return (
             <StyledVideos>
@@ -107,7 +98,7 @@ class SectionContent extends PureComponent {
                                 {this.state.description}
                                 <span />
                             </VideoDescription>
-                            <PlayButton src={playIcon} />
+                            <PlayButton />
                         </AspectRatio>
                     </RatioContainer>
                     <VideoContainer
@@ -138,7 +129,7 @@ class SectionContent extends PureComponent {
                     </VideoContainer>
                 </HeightRow>
                 <VideoList>
-                    {ApiResponse.map((properties, index) => (
+                    {videos.map((properties, index) => (
                         <VideoListItem
                             key={index}
                             onClick={() => this.selectVideo(properties, index)}
@@ -163,99 +154,100 @@ class SectionContent extends PureComponent {
 }
 
 SectionContent.propTypes = {
-    ApiResponse: PropTypes.array.isRequired
+    videos: PropTypes.array.isRequired
 }
 
 class VideoSlider extends PureComponent {
+    signal = axios.CancelToken.source()
+
     state = {
-        ApiResponse: []
+        videos: [],
+        fetching: false
     }
 
     componentDidMount() {
-        fetch(url)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                }
-                throw new Error('Problem getting content! Start debugging!')
+        this.fetchVideos()
+    }
+
+    componentWillUnmount() {
+        this.signal.cancel()
+    }
+
+    fetchVideos = async () => {
+        try {
+            this.setState({ fetching: true })
+            const response = await axios.get(url, {
+                cancelToken: this.signal.token
             })
-            .then(data => {
-                this.setState({
-                    ApiResponse: data
-                })
-            })
-            .catch(() => {
-                this.setState({
-                    ApiResponse: {
-                        error: true
-                    }
-                })
-            })
+            const videos = response.data
+            this.setState({ fetching: false, videos })
+        } catch (err) {
+            if (axios.isCancel(err)) {
+                return null
+            } else {
+                this.setState({ fetching: false, videos: { error: true } })
+            }
+        }
     }
 
     render() {
-        const { ApiResponse } = this.state
+        const { fetching, videos } = this.state
 
-        if (ApiResponse.length === 0) {
-            return <Spinner />
-        } else if (ApiResponse.error) {
+        if (fetching) return <Spinner />
+
+        if (videos.error) {
             return (
                 <CenterParagraph>
-                    There was a problem getting the list.
+                    There was a problem getting the videos.
                     <br />
                     Please try again later!
                 </CenterParagraph>
             )
-        } else if (ApiResponse.length > 0) {
-            return <SectionContent ApiResponse={ApiResponse} />
-        } else {
-            return []
         }
+
+        return (
+            !fetching && videos.length > 0 && <SectionContent videos={videos} />
+        )
     }
 }
 
 const Videos = () => (
-    <>
-        <Helmet>
-            <link rel="preconnect" href={url} />
-        </Helmet>
-        <Section
-            minHeight={1040}
-            background={colors.black}
-            fontColor={colors.white}
-            id="video"
-        >
-            <LazyLoad once unmountIfInvisible height={1040} offset={100}>
-                <Fragment>
-                    <ContentRow>
-                        <Title white>Videos</Title>
-                    </ContentRow>
+    <Section
+        minHeight={1148}
+        background={colors.black}
+        fontColor={colors.white}
+        id="video"
+    >
+        <LazyLoad once unmountIfInvisible height={1148} offset={100}>
+            <Fragment>
+                <ContentRow>
+                    <Title white>Videos</Title>
+                </ContentRow>
 
-                    <VideoSlider id="videoScroll" />
+                <VideoSlider id="videoScroll" />
 
-                    <ContentRow>
-                        <a href={youtube.channel}>
-                            <YouTubeButton>YouTube Channel</YouTubeButton>
-                        </a>
-                    </ContentRow>
+                <VideoBackground
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={jellyfish}
+                >
+                    <source
+                        src={jellyfishVideoWebM}
+                        type="video/webm; codecs=vp9,vorbis"
+                    />
+                    <source src={jellyfishVideoMp4} type="video/mp4" />
+                </VideoBackground>
+            </Fragment>
+        </LazyLoad>
 
-                    <VideoBackground
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        poster={jellyfish}
-                    >
-                        <source
-                            src={jellyfishVideoWebM}
-                            type="video/webm; codecs=vp9,vorbis"
-                        />
-                        <source src={jellyfishVideoMp4} type="video/mp4" />
-                    </VideoBackground>
-                </Fragment>
-            </LazyLoad>
-        </Section>
-    </>
+        <ContentRow>
+            <a href={youtube.channel}>
+                <YouTubeButton>YouTube Channel</YouTubeButton>
+            </a>
+        </ContentRow>
+    </Section>
 )
 
 export default Videos

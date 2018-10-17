@@ -53,3 +53,7 @@ export const youtube = {
     channel: 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
     playlist: 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
 }
+
+export const webtasks = {
+    host: 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io'
+}

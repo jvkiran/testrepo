@@ -138,7 +138,7 @@ const forms = {
         },
         button: 'Submit',
         success:
-            'Thank you! Assuming your profile is a good fit, we will be in touch with you about next steps shortly.',
+            'Thank you! Assuming your profile is a good fit, we will be in touch with you about next steps after this round closes on November 15th.',
         baseUrl:
             '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=ee0c0eec08'
     }
