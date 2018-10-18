@@ -1,22 +1,46 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 import { ReactComponent as ButtonGitcoin } from '../../assets/buttons/gitcoin.svg'
 import { ReactComponent as ButtonBountiesNetwork } from '../../assets/buttons/bountiesnetwork.svg'
 import { social, webtasks } from '../../constants'
 import { StyledBounties, Bounty } from './Bounties.css'
 
 const BountiesText = ({ data }) => {
-    if (data.length === 0) {
-        return 'No open bounties'
-    } else if (data.length === 1) {
-        return ' open bounty'
+    if (data) {
+        const count = data.length
+
+        if (data.length === 0) {
+            return 'No open bounties'
+        } else if (data.length === 1) {
+            return `${count} open bounty`
+        }
+        return `${count} open bounties`
+    } else {
+        return 'Bounties'
     }
-    return ' open bounties'
+}
+
+const BountiesTextAppend = ({ network }) =>
+    network === 'bountiesNetwork' ? ' on bounties.network' : ' on Gitcoin'
+
+const BountiesIcon = ({ network }) =>
+    network === 'bountiesNetwork' ? (
+        <ButtonBountiesNetwork />
+    ) : (
+        <ButtonGitcoin />
+    )
+
+BountiesIcon.propTypes = {
+    network: PropTypes.string.isRequired
 }
 
 export default class Bounties extends PureComponent {
     state = {
-        networks: ''
+        networks: {
+            gitcoin: null,
+            bountiesNetwork: null
+        }
     }
 
     url = webtasks.host + '/bounties'
@@ -31,38 +55,24 @@ export default class Bounties extends PureComponent {
         this.getNetworks()
     }
 
-    componentWillUnmount() {
-        this.setState({ networks: '' })
-    }
-
     render() {
-        const { gitcoin, bountiesNetwork } = this.state.networks
+        const { networks } = this.state
 
         return (
             <StyledBounties>
-                {gitcoin && (
+                {Object.keys(networks).map(network => (
                     <Bounty
-                        href={social.gitcoin}
-                        important={gitcoin.length > 0}
+                        key={network}
+                        href={social[network]}
+                        important={
+                            networks[network] && networks[network].length > 0
+                        }
                     >
-                        <ButtonGitcoin />
-                        {gitcoin.length > 0 && gitcoin.length}
-                        <BountiesText data={gitcoin} />
-                        {' on Gitcoin'}
+                        <BountiesIcon network={network} />
+                        <BountiesText data={networks[network]} />
+                        <BountiesTextAppend network={network} />
                     </Bounty>
-                )}
-
-                {bountiesNetwork && (
-                    <Bounty
-                        href={social.bountiesNetwork}
-                        important={bountiesNetwork.length > 0}
-                    >
-                        <ButtonBountiesNetwork />
-                        {bountiesNetwork.length > 0 && bountiesNetwork.length}
-                        <BountiesText data={bountiesNetwork} />
-                        {' on bounties.network'}
-                    </Bounty>
-                )}
+                ))}
             </StyledBounties>
         )
     }
