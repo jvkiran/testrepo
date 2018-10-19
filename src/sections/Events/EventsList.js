@@ -14,9 +14,14 @@ const FilteredEvents = ({ events }) => {
             return eventDate > past
         })
 
+        const collator = new Intl.Collator('en', {
+            numeric: true,
+            sensitivity: 'base'
+        })
+
         // then, sort the remaining ones by date
-        let eventsFilteredSorted = eventsFiltered.sort(
-            (a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0)
+        let eventsFilteredSorted = eventsFiltered.sort((a, b) =>
+            collator.compare(a.date, b.date)
         )
 
         return eventsFilteredSorted.map((event, index) => (
