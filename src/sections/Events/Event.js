@@ -9,12 +9,7 @@ import {
 } from './Event.css'
 
 const Event = ({ event }) => (
-    <StyledEvent
-        href={event.link}
-        key={event.city}
-        target="_blank"
-        rel="noopener"
-    >
+    <StyledEvent href={event.link} target="_blank" rel="noopener">
         <StyledEventCity>{event.city}</StyledEventCity>
         {!!event.eventName && (
             <StyledEventName>{event.eventName}</StyledEventName>

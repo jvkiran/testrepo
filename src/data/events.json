@@ -3,8 +3,7 @@
         "city": "Singapore",
         "eventName": "All Who Like Cryptocurrency and Blockchain",
         "date": "2017-11-02",
-        "link":
-            "https://www.meetup.com/All-Who-Like-Cryptocurrency-and-Blockchain/events/244573036/"
+        "link": "https://www.meetup.com/All-Who-Like-Cryptocurrency-and-Blockchain/events/244573036/"
     },
     {
         "city": "Zagreb",
@@ -16,8 +15,7 @@
         "city": "Singapore",
         "eventName": "Inclusive Blockchain Conf",
         "date": "2017-11-15",
-        "link":
-            "http://www.suss.edu.sg/Happenings/Latest-Highlights/Pages/Inclusive-Blockchain-Conference.aspx"
+        "link": "http://www.suss.edu.sg/Happenings/Latest-Highlights/Pages/Inclusive-Blockchain-Conference.aspx"
     },
     {
         "city": "Berlin",
@@ -29,8 +27,7 @@
         "city": "Berlin",
         "eventName": "Blockchain Meetup Berlin",
         "date": "2017-11-23",
-        "link":
-            "https://www.meetup.com/Blockchain-Meetup-Berlin/events/243974982/"
+        "link": "https://www.meetup.com/Blockchain-Meetup-Berlin/events/243974982/"
     },
     {
         "city": "Frankfurt",
@@ -42,8 +39,7 @@
         "city": "Tokyo",
         "eventName": "A.I. University by Team AI",
         "date": "2017-11-29",
-        "link":
-            "https://www.meetup.com/Machine-Learning-Meetup-by-team-ai/events/245076515/"
+        "link": "https://www.meetup.com/Machine-Learning-Meetup-by-team-ai/events/245076515/"
     },
     {
         "city": "Seoul",
@@ -67,8 +63,7 @@
         "city": "San Francisco",
         "eventName": "Token Summit",
         "date": "2017-12-05",
-        "link":
-            "http://tokensummit.com/schedule-token-summit-ii-san-francisco-december-2017/"
+        "link": "http://tokensummit.com/schedule-token-summit-ii-san-francisco-december-2017/"
     },
     {
         "city": "Singapore",
@@ -110,8 +105,7 @@
         "city": "Berlin",
         "eventName": "Blockchain & Data Privacy",
         "date": "2018-01-25",
-        "link":
-            "https://www.eventbrite.com/e/blockchain-data-privacy-tickets-41521706542"
+        "link": "https://www.eventbrite.com/e/blockchain-data-privacy-tickets-41521706542"
     },
     {
         "city": "Berlin",
@@ -153,8 +147,7 @@
         "city": "Singapore",
         "eventName": "Ocean Meetup",
         "date": "2018-03-05",
-        "link":
-            "https://www.eventbrite.sg/e/ocean-protocol-a-decentralised-data-exchange-march-2018-meetup-tickets-42970029515?aff=ocean"
+        "link": "https://www.eventbrite.sg/e/ocean-protocol-a-decentralised-data-exchange-march-2018-meetup-tickets-42970029515?aff=ocean"
     },
     {
         "city": "Paris",
@@ -190,8 +183,7 @@
         "city": "Hong Kong",
         "eventName": "Ocean Protocol Meetup",
         "date": "2018-03-20",
-        "link":
-            "https://www.eventbrite.com/e/ocean-protocol-how-blockchain-will-unlock-data-and-revolutionize-ai-tickets-44320440631"
+        "link": "https://www.eventbrite.com/e/ocean-protocol-how-blockchain-will-unlock-data-and-revolutionize-ai-tickets-44320440631"
     },
     {
         "city": "Kiev",
@@ -228,8 +220,7 @@
         "city": "Hong Kong",
         "eventName": "Token Economy — Silicon Valley HK Symposium",
         "date": "2018-04-08",
-        "link":
-            "https://www.eventbrite.com/e/token-economy-silicon-valley-hk-symposium-tickets-44768380431#"
+        "link": "https://www.eventbrite.com/e/token-economy-silicon-valley-hk-symposium-tickets-44768380431#"
     },
     {
         "city": "Seoul",
@@ -278,8 +269,7 @@
         "city": "Munich",
         "eventName": "Digital Product School of UnternehmerTUM",
         "date": "2018-06-12",
-        "link":
-            "https://www.unternehmertum.de/digital-product-school.html?lang=en"
+        "link": "https://www.unternehmertum.de/digital-product-school.html?lang=en"
     },
     {
         "city": "New York City",
@@ -366,7 +356,7 @@
         "date": "2018-06-05",
         "date_end": "2018-06-06",
         "link": "https://unbound.live/innovfest-unbound-2018"
-    }, 
+    },
     {
         "city": "London",
         "eventName": "Ocean Protocol Meetup",
@@ -410,7 +400,7 @@
         "link": "https://www.eventbrite.com/e/privacy-night-with-ocean-protocol-enigma-web-3-foundation-tickets-47112623124"
     },
     {
-      "city": "Berlin",
+        "city": "Berlin",
         "eventName": "PyData Berlin 2018",
         "date": "2018-07-06",
         "date_end": "2018-07-08",
@@ -428,26 +418,26 @@
         "date": "2018-07-19",
         "link": "https://www.dappcon.io/#speakers"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "DAPPCON",
         "date": "2018-07-20",
         "link": "https://www.dappcon.io/#speakers"
     },
-      {
+    {
         "city": "Munich",
         "eventName": "Blockchained Mobility Hackathon",
         "date": "2018-07-20",
         "date_end": "2018-07-22",
         "link": "https://www.meetup.com/munichblockchain/events/249980691/"
-    },  
-     {
+    },
+    {
         "city": "Berlin",
         "eventName": "Blockchain Visionaire Summit",
         "date": "2018-07-23",
         "link": "https://www.eventbrite.com/e/blockchain-visionnaire-summit-tickets-45876075577"
     },
-     {
+    {
         "city": "Singapore",
         "eventName": "Personal Data Protection Seminar",
         "date": "2018-07-25",
@@ -459,20 +449,20 @@
         "date": "2018-07-31",
         "date_end": "2018-08-02",
         "link": "https://decentralizedweb.net/"
-    },   
-  {
+    },
+    {
         "city": "Berlin",
         "eventName": "Meetup.ai",
         "date": "2018-08-01",
         "link": "http://datanatives.io"
     },
-       {
+    {
         "city": "Berlin",
         "eventName": "Nature 2.0 Meetup",
         "date": "2018-08-15",
         "link": "https://www.meetup.com/9984-Meetup/events/252836524/"
     },
-        {
+    {
         "city": "Singapore",
         "eventName": "Ocean Protocol Meetup",
         "date": "2018-08-16",
@@ -496,32 +486,32 @@
         "date": "2018-08-29",
         "link": "https://mydata2018.org"
     },
-            {
+    {
         "city": "Berlin",
         "eventName": "IFA+ Summit",
         "date": "2018-09-02",
         "link": "https://b2b.ifa-berlin.com"
-    }, 
-     {
+    },
+    {
         "city": "Barnsley",
         "eventName": "The ABC of IoT",
         "date": "2018-09-04",
         "link": "https://www.eventbrite.co.uk/e/the-abc-of-iot-artificial-intelligence-blockchain-and-other-cool-tech-tickets-47846928451?aff=ebapi"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Berlin Blockchain Week",
         "date": "2018-09-05",
         "date_end": "2018-09-11",
         "link": "https://github.com/ledgerz/berlinblockchainweek/blob/master/BBWP/Info/Factsheet.md"
     },
-        {
+    {
         "city": "Berlin",
         "eventName": "Dezentral 2018",
         "date": "2018-09-06",
         "link": "https://www.dezentral.io"
-    },   
-        {
+    },
+    {
         "city": "Berlin",
         "eventName": "Token Engineering Workshop",
         "date": "2018-9-06",
@@ -552,32 +542,32 @@
         "eventName": "PropTech Berlin",
         "date": "2018-09-13",
         "link": "https://futureproptech.de/en"
-    }, 
-      {
+    },
+    {
         "city": "Istanbul",
         "eventName": "KOOP — Blockchain Fest '18",
         "date": "2018-09-18",
         "link": "https://blockchainfest.ist"
-    },  
-      {
+    },
+    {
         "city": "Brussels",
         "eventName": "BDVA — Data for AI",
         "date": "2018-09-18",
         "link": "http://www.bdva.eu/node/1097"
     },
-  {
+    {
         "city": "Singapore",
         "eventName": "The AI Summit Singapore",
         "date": "2018-09-19",
         "link": "https://tmt.knect365.com/ai-summit-singapore/"
     },
-      {
+    {
         "city": "Singapore",
         "eventName": "TechXLR8 Asia",
         "date": "2018-09-19",
         "link": "https://tmt.knect365.com/techxlr8-asia/"
     },
-      {
+    {
         "city": "Singapore",
         "eventName": "Singapore Week of Innovation and Technology",
         "date": "2018-09-19",
@@ -589,68 +579,68 @@
         "date": "2018-09-25",
         "link": "https://futureoftrust.eu/#home"
     },
-      {
+    {
         "city": "Madrid",
         "eventName": "Cotec",
         "date": "2018-09-25",
         "link": "http://cotec.es"
     },
-     {
+    {
         "city": "Berlin",
         "eventName": "Ocean Protocol Meetup",
         "date": "2018-09-25",
         "link": "https://www.meetup.com/9984-Meetup/events/254548640/"
     },
-       {
+    {
         "city": "London",
         "eventName": "Trustless Ecosystems Meetup",
         "date": "2018-10-04",
         "link": "https://www.meetup.com/Trustless-Ecosystems/events/tfmzxpyxnbhc/"
     },
-      {
+    {
         "city": "San Francisco",
         "eventName": "SF Blockchain Week",
         "date": "2018-10-05",
         "date_end": "2018-10-12",
         "link": "http://sfblockchainweek.io"
     },
-      {
+    {
         "city": "Bratislava",
         "eventName": "Web3 Polkadot + Ocean Meetup",
         "date": "2018-10-10",
         "link": "https://www.eventbrite.co.uk/e/visions-of-web-3-polkadot-network-ocean-protocol-tickets-50949237541"
     },
-     {
+    {
         "city": "Vienna",
         "eventName": "Web3 Polkadot + Ocean Meetup",
         "date": "2018-10-11",
         "link": "https://www.eventbrite.at/e/web-3-the-visions-of-a-decentralized-web-tickets-50903432537"
     },
-  
-      {
+
+    {
         "city": "Amsterdam",
         "eventName": "World Summit AI",
         "date": "2018-10-10",
         "date_end": "2018-10-11",
         "link": "https://worldsummit.ai"
     },
-      {
+    {
         "city": "Albuquerque",
         "eventName": "MOBI Americas Community Meeting",
         "date": "2018-10-12",
         "link": "https://go.dlt.mobi/events/NM/"
     },
-      {
+    {
         "city": "London",
         "eventName": "The Bitmeet",
         "date": "2018-10-13",
         "link": "https://www.eventbrite.com/e/the-big-bitmeet-2018-largest-student-led-blockchain-conference-bigbitmeetio-tickets-50133286008"
     },
-      {
+    {
         "city": "Singapore",
         "eventName": "NASA Hackathon",
         "date": "2018-10-16",
-         "date_end": "2018-10-21",
+        "date_end": "2018-10-21",
         "link": "https://www.eventbrite.sg/e/nasa-space-apps-challenge-2018-pre-hackathon-workshop-tickets-50255883701?aff=invite"
     },
     {
@@ -660,13 +650,13 @@
         "date_end": "2018-10-24",
         "link": "http://web3summit.com"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Ocean, Enigma & Chainlink Meetup",
         "date": "2018-10-24",
         "link": "https://www.meetup.com/9984-Meetup/events/255552519/"
-    },  
-      {
+    },
+    {
         "city": "Berlin",
         "eventName": "Token Engineering Global Gathering",
         "date": "2018-10-25",
@@ -685,37 +675,31 @@
         "date_end": "2018-10-30",
         "link": "http://www.cc-forum.com"
     },
-        {
+    {
         "city": "Cluj",
         "eventName": "When AI Meets Blockchain Meetup",
         "date": "2018-11-07",
         "link": "https://www.meetup.com/cryptoland-tech-meetups/events/255553993/"
     },
-      {
+    {
         "city": "Singapore",
         "eventName": "Data Sharing Without Sharing Data",
         "date": "2018-11-19",
         "link": "https://www.sginnovate.com/events/data-dialogue-data-sharing-without-sharing-data"
     },
-      {
+    {
         "city": "Berlin",
         "eventName": "Revision Summit",
         "date": "2018-11-19",
         "link": "https://revision.io"
     },
-      {
-        "city": "Berlin",
-        "eventName": "Data Natives",
-        "date": "2018-11-22",
-        "link": "http://datanatives.io"
-    },    
     {
         "city": "Berlin",
         "eventName": "Data Natives",
         "date": "2018-11-22",
         "link": "http://datanatives.io"
-    },    
-      {
+    },
+    {
         "city": "Seoul",
         "eventName": "AI Summit Seoul",
         "date": "2018-12-04",

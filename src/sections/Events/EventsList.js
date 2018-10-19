@@ -6,7 +6,7 @@ import { StyledEventsList, Item, LastItem } from './EventsList.css'
 const FilteredEvents = ({ events }) => {
     if (events.length > 0) {
         // first, filter out all past events
-        const eventsFiltered = events.filter(event => {
+        let eventsFiltered = events.filter(event => {
             const now = new Date()
             const past = now.setDate(now.getDate() - 3) // 3 days ago from right now
             const eventDate = new Date(event.date)
@@ -14,9 +14,14 @@ const FilteredEvents = ({ events }) => {
             return eventDate > past
         })
 
+        const collator = new Intl.Collator('en', {
+            numeric: true,
+            sensitivity: 'base'
+        })
+
         // then, sort the remaining ones by date
-        const eventsFilteredSorted = eventsFiltered.sort((a, b) =>
-            a.date.localeCompare(b.date)
+        let eventsFilteredSorted = eventsFiltered.sort((a, b) =>
+            collator.compare(a.date, b.date)
         )
 
         return eventsFilteredSorted.map((event, index) => (
