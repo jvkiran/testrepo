@@ -15,6 +15,11 @@ import EventDate from './EventDate'
 
 function pastEvents(events) {
     if (events.length > 0) {
+        const collator = new Intl.Collator('en', {
+            numeric: true,
+            sensitivity: 'base'
+        })
+
         const eventsFilteredSorted = events
             .filter(event => {
                 const now = new Date()
@@ -22,7 +27,7 @@ function pastEvents(events) {
                 const eventDate = new Date(event.date)
                 return eventDate <= past
             })
-            .sort((a, b) => b.date.localeCompare(a.date))
+            .sort((a, b) => collator.compare(b.date, a.date))
 
         return eventsFilteredSorted.map((event, index) => (
             <PastEvent event={event} key={index} />
@@ -46,6 +51,37 @@ PastEvent.propTypes = {
     event: PropTypes.object.isRequired
 }
 
+class ArchiveModal extends PureComponent {
+    static propTypes = {
+        events: PropTypes.array.isRequired,
+        closeModal: PropTypes.func.isRequired
+    }
+
+    state = { past: null }
+
+    componentDidMount() {
+        const past = pastEvents(this.props.events)
+        this.setState({ past })
+    }
+
+    render() {
+        return (
+            <ModalOverlay>
+                <Modal>
+                    <StyledClose
+                        title="close"
+                        onClick={() => this.props.closeModal()}
+                    >
+                        <Cross />
+                    </StyledClose>
+                    <ArchiveTitle>Events Archive</ArchiveTitle>
+                    <OverflowDiv>{this.state.past}</OverflowDiv>
+                </Modal>
+            </ModalOverlay>
+        )
+    }
+}
+
 export default class Archive extends PureComponent {
     static propTypes = {
         events: PropTypes.array.isRequired,
@@ -55,8 +91,7 @@ export default class Archive extends PureComponent {
     }
 
     render() {
-        const past = pastEvents(this.props.events)
-        const { openModal, closeModal } = this.props
+        const { openModal, closeModal, events } = this.props
 
         return (
             <>
@@ -64,18 +99,7 @@ export default class Archive extends PureComponent {
                     View Events Archive
                 </ArchiveButton>
                 {this.props.modalIsOpen && (
-                    <ModalOverlay>
-                        <Modal>
-                            <StyledClose
-                                title="close"
-                                onClick={() => closeModal()}
-                            >
-                                <Cross />
-                            </StyledClose>
-                            <ArchiveTitle>Events Archive</ArchiveTitle>
-                            <OverflowDiv>{past}</OverflowDiv>
-                        </Modal>
-                    </ModalOverlay>
+                    <ArchiveModal closeModal={closeModal} events={events} />
                 )}
             </>
         )
