@@ -41,6 +41,13 @@ export default class SubscribeForm extends Component {
             'Thank you! Please click the link in the confirmation email to complete your subscription.'
     }
 
+    clearMessage() {
+        const timeout = setTimeout(() => {
+            this.setState({ status: null, message: null })
+            clearTimeout(timeout)
+        }, 4000)
+    }
+
     postUser = async email => {
         this.setState({
             status: 'sending',
@@ -64,9 +71,11 @@ export default class SubscribeForm extends Component {
                     status: 'error',
                     message: `Error: ${title}`
                 })
+                this.clearMessage()
             }
         } catch (error) {
             this.setState({ status: 'error', message: error })
+            this.clearMessage()
         }
     }
 
@@ -79,10 +88,7 @@ export default class SubscribeForm extends Component {
             this.input.value.indexOf('@') === -1
         ) {
             this.setState({ status: 'error', message: 'Check your email' })
-            const timeout = setTimeout(() => {
-                this.setState({ status: null, message: null })
-                clearTimeout(timeout)
-            }, 3000)
+            this.clearMessage()
             return
         }
 
