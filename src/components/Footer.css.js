@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import SubscribeForm from '../components/SubscribeForm'
+import FormNewsletter from '../components/FormNewsletter'
 import Paragraph from '../components/Paragraph'
 import { colors, responsive, fonts } from '../styles'
 
@@ -68,7 +68,7 @@ export const StyledContact = styled.div`
     }
 `
 
-export const StyledSubscribeForm = styled(SubscribeForm)`
+export const StyledFormNewsletter = styled(FormNewsletter)`
     .page--newsletter & {
         display: none;
     }

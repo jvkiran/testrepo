@@ -7,7 +7,7 @@ import SubTitle from '../components/SubTitle'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
-import SubscribeForm from '../components/SubscribeForm'
+import FormNewsletter from '../components/FormNewsletter'
 import { colors } from '../styles'
 import { social } from '../constants'
 import {
@@ -185,7 +185,7 @@ const Documentation = () => (
                         <StyledAbstract>
                             Be the first to know when we release new papers.
                         </StyledAbstract>
-                        <SubscribeForm />
+                        <FormNewsletter />
                     </StyledRow>
                 </Cell>
             </Grid>

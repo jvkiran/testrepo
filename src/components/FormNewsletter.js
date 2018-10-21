@@ -10,7 +10,7 @@ import {
     StyledSubscribeWrapper,
     StyledMessage,
     Gdpr
-} from './SubscribeForm.css'
+} from './FormNewsletter.css'
 
 const gdpr = gdprJson[0]
 
