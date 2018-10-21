@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Section from '../components/Section'
-import SubscribeForm from '../components/SubscribeForm'
+import FormNewsletter from '../components/FormNewsletter'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
@@ -30,7 +30,7 @@ export const StyledSection = styled(Section)`
     }
 `
 
-export const StyledSubscribeForm = styled(SubscribeForm)`
+export const StyledFormNewsletter = styled(FormNewsletter)`
     margin-left: auto;
     margin-right: auto;
     max-width: 30rem;

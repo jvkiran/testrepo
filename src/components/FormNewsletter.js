@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import jsonp from 'jsonp'
+import axios from 'axios'
 import emailWhite from '../assets/misc/email-white.svg'
 import Button from './Button'
+import { webtasks } from '../constants'
 import gdprJson from '../data/gdpr'
 import {
     StyledSubscribe,
     StyledSubscribeWrapper,
     StyledMessage,
     Gdpr
-} from './SubscribeForm.css'
+} from './FormNewsletter.css'
 
 const gdpr = gdprJson[0]
 
 export default class SubscribeForm extends Component {
     state = {
         status: null,
-        msg: null
+        message: null
     }
 
     static propTypes = {
@@ -35,9 +36,47 @@ export default class SubscribeForm extends Component {
         inputPlaceholder: 'your@email.com',
         btnLabel: 'Subscribe',
         sending: 'Sending...',
+        exists: 'You are already subscribed. Great!',
         success:
-            'Thank you! Please click the link in the confirmation email to complete your subscription.',
-        error: 'Oops, something went wrong. Would you mind trying again?'
+            'Thank you! Please click the link in the confirmation email to complete your subscription.'
+    }
+
+    clearMessage() {
+        const timeout = setTimeout(() => {
+            this.setState({ status: null, message: null })
+            clearTimeout(timeout)
+        }, 4000)
+    }
+
+    postUser = async email => {
+        this.setState({
+            status: 'sending',
+            message: null
+        })
+
+        const url = `${webtasks.host}/mailchimp/newsletter/${encodeURIComponent(
+            email
+        )}`
+
+        try {
+            let response = await axios.post(url) // eslint-disable-line
+            const { status, title } = response.data
+
+            if (status === 'exists') {
+                this.setState({ status: 'exists' })
+            } else if (status === 'created') {
+                this.setState({ status: 'success' })
+            } else {
+                this.setState({
+                    status: 'error',
+                    message: `Error: ${title}`
+                })
+                this.clearMessage()
+            }
+        } catch (error) {
+            this.setState({ status: 'error', message: error })
+            this.clearMessage()
+        }
     }
 
     onSubmit = e => {
@@ -48,46 +87,12 @@ export default class SubscribeForm extends Component {
             this.input.value.length < 5 ||
             this.input.value.indexOf('@') === -1
         ) {
-            this.setState({
-                status: 'error'
-            })
+            this.setState({ status: 'error', message: 'Check your email' })
+            this.clearMessage()
             return
         }
 
-        const url = `//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=3c6eed8b71&EMAIL=${encodeURIComponent(
-            this.input.value
-        )}&${gdpr.flag}`
-
-        this.setState(
-            {
-                status: 'sending',
-                msg: null
-            },
-            () =>
-                jsonp(
-                    url,
-                    {
-                        param: 'c'
-                    },
-                    (err, data) => {
-                        if (err) {
-                            this.setState({
-                                status: 'error',
-                                msg: err
-                            })
-                        } else if (data.result === 'error') {
-                            this.setState({
-                                status: 'error',
-                                msg: data.msg
-                            })
-                        } else {
-                            this.setState({
-                                status: 'success'
-                            })
-                        }
-                    }
-                )
-        )
+        this.postUser(this.input.value)
     }
 
     render() {
@@ -98,13 +103,14 @@ export default class SubscribeForm extends Component {
             btnLabel,
             sending,
             success,
+            exists,
             ...props
         } = this.props
-        const { status, msg } = this.state
+        const { status, message } = this.state
 
         return (
             <StyledSubscribe maxWidth={maxWidth} {...props}>
-                <form noValidate action={action} method="post">
+                <form action={action} method="post">
                     <img alt="email" src={emailWhite} />
                     <StyledSubscribeWrapper>
                         <input
@@ -117,10 +123,7 @@ export default class SubscribeForm extends Component {
                             aria-label="Your Email"
                         />
                         <Button
-                            disabled={
-                                this.state.status === 'sending' ||
-                                this.state.status === 'success'
-                            }
+                            disabled={this.state.status === 'sending'}
                             onClick={this.onSubmit}
                             type="submit"
                         >
@@ -132,14 +135,21 @@ export default class SubscribeForm extends Component {
                             dangerouslySetInnerHTML={{ __html: sending }}
                         />
                     )}
+                    {status === 'exists' && (
+                        <StyledMessage
+                            dangerouslySetInnerHTML={{ __html: exists }}
+                        />
+                    )}
                     {status === 'success' && (
                         <StyledMessage
+                            success
                             dangerouslySetInnerHTML={{ __html: success }}
                         />
                     )}
                     {status === 'error' && (
                         <StyledMessage
-                            dangerouslySetInnerHTML={{ __html: msg }}
+                            error
+                            dangerouslySetInnerHTML={{ __html: message }}
                         />
                     )}
                 </form>

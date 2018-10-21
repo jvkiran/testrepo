@@ -107,8 +107,9 @@ export const StyledMessage = styled.p`
     position: absolute;
     text-align: center;
     margin-top: 0.25rem;
-    font-size: 0.8rem;
-    background: rgba(${colors.lightGrey}, 0.95);
+    font-size: ${fonts.size.small};
+    font-family: ${fonts.family.button};
+    background: rgb(${colors.lightGrey});
     color: rgb(${colors.white});
     border-radius: 2px;
     padding: 0.3rem;
@@ -118,6 +119,11 @@ export const StyledMessage = styled.p`
         text-decoration: underline;
         font-family: ${fonts.family.button};
     }
+
+    ${({ error, success }) => {
+        if (error) return `background: rgb(${colors.red});`
+        if (success) return `background: rgb(${colors.green});`
+    }};
 `
 
 export const Gdpr = styled.div`
