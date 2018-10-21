@@ -80,6 +80,10 @@ const MenuItems = [
             {
                 name: 'FAQ',
                 href: '/faq/'
+            },
+            {
+                name: 'Newsletter',
+                href: '/newsletter/'
             }
         ]
     }

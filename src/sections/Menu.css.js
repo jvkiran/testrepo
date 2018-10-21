@@ -149,7 +149,7 @@ export const StyledNav = styled.ul`
     padding: 0;
     list-style: none;
 
-    & a {
+    li > a {
         display: inline-block;
         margin-right: 2rem;
         color: inherit;
@@ -157,10 +157,7 @@ export const StyledNav = styled.ul`
         &:hover,
         &:focus,
         &.active {
-            color: rgba(
-                ${colors.white},
-                1
-            ); /* stylelint-disable-line selector-no-qualifying-type */
+            color: rgba(${colors.white}, 1);
         }
     }
 
