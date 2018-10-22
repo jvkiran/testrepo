@@ -91,7 +91,7 @@ const forms = {
                 label: 'Your background',
                 help:
                     'Please tell us a bit about your background (100 words or less).',
-                maxLength: 100,
+                maxWords: 100,
                 tag: 'textarea',
                 required: true
             },
@@ -99,7 +99,7 @@ const forms = {
                 label: 'Your interest',
                 help:
                     'Why would you like to be an Ocean Protocol Ambassador and what would you bring to the Ocean Protocol community (100 words or less)?',
-                maxLength: 100,
+                maxWords: 100,
                 tag: 'textarea',
                 required: true
             },
