@@ -60,7 +60,7 @@ export default class SubscribeForm extends Component {
 
         try {
             let response = await axios.post(url) // eslint-disable-line
-            const { status, title } = response.data
+            const { status, title, detail } = response.data
 
             if (status === 'exists') {
                 this.setState({ status: 'exists' })
@@ -69,9 +69,9 @@ export default class SubscribeForm extends Component {
             } else {
                 this.setState({
                     status: 'error',
-                    message: `Error: ${title}`
+                    message: `Error: ${title}. <span>${detail}</span>`
                 })
-                this.clearMessage()
+                // this.clearMessage()
             }
         } catch (error) {
             this.setState({ status: 'error', message: error })

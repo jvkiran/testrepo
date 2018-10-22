@@ -182,7 +182,16 @@ export default class ModalForm extends PureComponent {
                                                 ? value.maxLength
                                                 : null
                                         }
-                                        rows={value.maxLength ? '6' : null}
+                                        maxWords={
+                                            value.maxWords
+                                                ? value.maxWords
+                                                : null
+                                        }
+                                        rows={
+                                            value.maxLength || value.maxWords
+                                                ? '6'
+                                                : null
+                                        }
                                         help={value.help}
                                     />
                                 )

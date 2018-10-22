@@ -112,12 +112,20 @@ export const StyledMessage = styled.p`
     background: rgb(${colors.lightGrey});
     color: rgb(${colors.white});
     border-radius: 2px;
-    padding: 0.3rem;
+    padding: 0.4rem;
 
     a {
         color: rgb(${colors.white});
         text-decoration: underline;
         font-family: ${fonts.family.button};
+    }
+
+    span {
+        display: block;
+        font-family: ${fonts.family.base};
+        font-size: ${fonts.size.mini};
+        line-height: 1.5;
+        margin-top: 0.1rem;
     }
 
     ${({ error, success }) => {

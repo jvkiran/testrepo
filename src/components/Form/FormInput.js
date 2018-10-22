@@ -15,17 +15,25 @@ const FormTag = ({ tag, ...props }) =>
 class FormInput extends PureComponent {
     state = {
         input: '',
+        wordCount: null,
         isFocused: false
     }
 
     onChange = ({ target }) => {
+        const regex = /\s+/gi
+        const wordCount = target.value
+            .trim()
+            .replace(regex, ' ')
+            .split(' ').length
+
         if (
-            this.props.maxLength &&
-            target.value.length > this.props.maxLength
+            (this.props.maxLength &&
+                target.value.length > this.props.maxLength) ||
+            (this.props.maxWords && wordCount > this.props.maxWords)
         ) {
             return
         }
-        this.setState({ input: target.value })
+        this.setState({ input: target.value, wordCount })
     }
 
     render() {
@@ -36,6 +44,7 @@ class FormInput extends PureComponent {
             tag,
             type,
             maxLength,
+            maxWords,
             help,
             ...props
         } = this.props
@@ -63,6 +72,7 @@ class FormInput extends PureComponent {
                         name={name}
                         tag={tag}
                         maxLength={maxLength}
+                        maxWords={maxWords}
                         value={this.state.input}
                         required={required}
                         type={type}
@@ -73,6 +83,9 @@ class FormInput extends PureComponent {
                     />
                     {!!maxLength && (
                         <Count>{maxLength - this.state.input.length}</Count>
+                    )}
+                    {!!maxWords && (
+                        <Count>{maxWords - this.state.wordCount} words</Count>
                     )}
                 </InputWrap>
                 {help && <FormHelp>{help}</FormHelp>}
