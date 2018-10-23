@@ -38,17 +38,21 @@ BountiesIcon.propTypes = {
 export default class Bounties extends PureComponent {
     state = {
         networks: {
-            gitcoin: null,
-            bountiesNetwork: null
+            gitcoin: {},
+            bountiesNetwork: {}
         }
     }
 
     url = webtasks.host + '/bounties'
 
     getNetworks = async () => {
-        const response = await axios.get(this.url)
-        const networks = response.data
-        this.setState({ networks })
+        try {
+            const response = await axios.get(this.url)
+            const networks = response.data
+            this.setState({ networks })
+        } catch (error) {
+            console.log(error) // eslint-disable-line no-console
+        }
     }
 
     componentDidMount() {
