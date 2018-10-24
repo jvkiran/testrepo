@@ -23,9 +23,8 @@ const FilteredEvents = ({ events }) => {
         let eventsFilteredSorted = eventsFiltered.sort((a, b) =>
             collator.compare(a.date, b.date)
         )
-
         return eventsFilteredSorted.map((event, index) => (
-            <Item key={index}>
+            <Item key={`${index}_${event.eventName}`}>
                 <Event event={event} />
             </Item>
         ))
