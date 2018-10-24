@@ -1,55 +1,9 @@
 [
   {
-    "name": "Mattereum",
-    "logo": "mattereum",
-    "description": "Mattereum adds dispute resolution to Ocean Protocol’s distributed data marketplace.",
-    "link": "https://www.mattereum.com"
-  },
-  {
-    "name": "Weeve",
-    "logo": "weeve",
-    "description": "Exploring IoT data-trading marketplaces with the help of Artificial Intelligence.",
-    "link": "https://weeve.network"
-  },
-  {
-    "name": "Web3 Foundation",
-    "logo": "web3foundation",
-    "description": "We work closely with the Web3 Foundation...",
-    "link": "https://web3.foundation"
-  },
-  {
-    "name": "Aragon",
-    "logo": "aragon",
-    "link": "https://aragon.org"
-  },
-  {
-    "name": "Innogy",
-    "logo": "innogy",
-    "link": "https://www.innogy.com"
-  },
-  {
-    "name": "Agorai",
-    "logo": "agorai",
-    "description": "Agorai will leverage Ocean Protocol’s innovative technology to enable fully transparent, completely decentralized and securely validated data services for Agorai’s AI and Data Marketplace.",
-    "link": "https://agorai.ai"
-  },
-  {
-    "name": "TrueBit",
-    "logo": "truebit",
-    "description": "TrueBit gives Ethereum smart contracts a computational boost.",
-    "link": "https://truebit.io"
-  },
-  {
     "name": "Fitchain",
     "logo": "fitchain",
     "description": "Fitchain allows organizations to publish their business challenges and connect to data scientists who effectively work on a solution.",
     "link": "https://fitchain.io"
-  },
-  {
-    "name": "Digital Catapult",
-    "logo": "digitalcatapult",
-    "description": "Digital Catapult is the UK's leading advanced digital technology innovation center.",
-    "link": "https://www.digicatapult.org.uk"
   },
   {
     "name": "Enigma",
@@ -64,9 +18,45 @@
     "link": "https://ai.xprize.org/"
   },
   {
-    "name": "Anaconda",
-    "logo": "anaconda",
-    "description": "The most popular Python data science platform.",
-    "link": "https://www.anaconda.com"
+    "name": "MOBI - Mobility Open Blockchain Initiative",
+    "logo": "mobi",
+    "description": "Using blockchain and related technologies to make mobility safer, greener, and more accessible.",
+    "link": "https://www.dlt.mobi"
+  },
+  {
+    "name": "Verv",
+    "logo": "verv",
+    "description": "Verv is a clever home energy assistant that gives you intelligent information about key appliances and electricity usage in your home, helping you to tackle your bills, reduce your carbon footprint and keep your home safe.",
+    "link": "https://verv.energy"
+  },
+  {
+    "name": "Couger",
+    "logo": "couger",
+    "description": "",
+    "link": "https://couger.co.jp"
+  },
+  {
+    "name": "Messari",
+    "logo": "messari",
+    "description": "Messari is building an open data library and curation tools that help researchers, investors, and regulators make sense of the cryptoasset industry.",
+    "link": "https://messari.io"
+  },
+  {
+    "name": "IMDA",
+    "logo": "imda",
+    "description": "IMDA aims to build a competitive and sustainable infocomm media industry, developing Singapore as a nucleus for media content, services and applications, while growing the seed of technological innovation and fostering collaboration between local and multinational corporations in the sectors.",
+    "link": "https://www.imda.gov.sg"
+  },
+  {
+    "name": "Connected Life",
+    "logo": "connectedlife",
+    "description": "",
+    "link": ""
+  },
+  {
+    "name": "Unilever",
+    "logo": "unilever",
+    "description": "",
+    "link": "https://www.unilever.com"
   }
 ]

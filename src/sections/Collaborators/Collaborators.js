@@ -12,8 +12,8 @@ import {
 } from './Collaborators.css'
 
 const content = {
-    'title': 'The companies \ntrusting Ocean Protocol',
-    'intro': `We work closely with our collaborators to iterate on the network's underlying technology. The following projects either have an agreement with Ocean Protocol or are actively working on integrating their project with Ocean Protocol.`
+    title: 'The companies \ntrusting Ocean Protocol',
+    intro: `We work closely with our collaborators to iterate on the network's underlying technology. The following projects either have an agreement with Ocean Protocol or are actively working on integrating their project with Ocean Protocol.`
 }
 
 // const fisherYatesShuffle = array => {
@@ -29,15 +29,17 @@ const content = {
 // const collaboratorsShuffled = fisherYatesShuffle(collaborators)
 
 const Collaborators = () => (
-    <Section background={colors.darkPurple} fontColor={colors.white} id="collaborators">
+    <Section
+        background={colors.darkPurple}
+        fontColor={colors.white}
+        id="collaborators"
+    >
         <ContentRow>
             <StyledTitle white>{content.title}</StyledTitle>
         </ContentRow>
 
         <ContentRow narrow>
-            <StyledParagraph>
-                {content.intro}
-            </StyledParagraph>
+            <StyledParagraph>{content.intro}</StyledParagraph>
         </ContentRow>
 
         <ContentRow wide>
@@ -45,7 +47,9 @@ const Collaborators = () => (
             <StyledGrid center textCenter>
                 {collaborators.map(collaborator => {
                     const { name } = collaborator
-                    return <Collaborator key={name} collaborator={collaborator} />
+                    return (
+                        <Collaborator key={name} collaborator={collaborator} />
+                    )
                 })}
             </StyledGrid>
         </ContentRow>
