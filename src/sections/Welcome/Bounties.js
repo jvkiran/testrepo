@@ -7,12 +7,11 @@ import { social, webtasks } from '../../constants'
 import { StyledBounties, Bounty } from './Bounties.css'
 
 const BountiesText = ({ data }) => {
-    if (data >= 0) {
+    if (data !== undefined) {
         if (data === 0) return 'No open bounties'
         if (data === 1) return `${data} open bounty`
         return `${data} open bounties`
     }
-
     return 'Bounties'
 }
 
@@ -33,8 +32,8 @@ BountiesIcon.propTypes = {
 export default class Bounties extends PureComponent {
     state = {
         networks: {
-            gitcoin: null,
-            bountiesNetwork: null
+            gitcoin: undefined,
+            bountiesNetwork: undefined
         }
     }
 
