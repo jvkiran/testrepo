@@ -102,6 +102,7 @@
   },
   {
     "name": "Marcus Jones",
+    "github": "MarcusJones",
     "image": "marcus"
   },
   {
@@ -119,6 +120,7 @@
   {
     "name": "Troy McConaghy",
     "twitter": "TroyMc",
+    "github": "ttmc",
     "image": "troy"
   },
   {
@@ -164,11 +166,13 @@
   },
   {
     "name": "Javier Cortejoso",
+    "github": "jcortejoso",
     "image": "javier"
   },
   {
     "name": "Jernej Pregelj",
     "twitter": "jernejpregelj",
+    "github": "jernejpregelj",
     "linkedin": "jernej-pregelj",
     "image": "jernej"
   },
@@ -179,14 +183,18 @@
   },
   {
     "name": "Enrique Ruiz",
+    "github": "eruizgar91",
     "image": "enrique"
   },
   {
     "name": "Sebastian Gerske",
+    "github": "H34D",
     "image": "sebastian"
   },
   {
     "name": "Manan Patel",
+    "github": "innoprenuer",
+    "twitter": "manan77patel",
     "image": "manan"
   },
   {

@@ -15,6 +15,7 @@ import don from './don.jpg'
 import emily from './emily.jpg'
 import fang from './fang.jpg'
 import irene from './irene.jpg'
+import jernej from './jernej.jpg'
 import john from './john.jpg'
 import kiran from './kiran.jpg'
 import kyriakos from './kyriakos.jpg'
@@ -51,6 +52,7 @@ export default {
     emily,
     fang,
     irene,
+    jernej,
     john,
     kiran,
     kyriakos,
