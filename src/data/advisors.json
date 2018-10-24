@@ -42,5 +42,13 @@
     "linkedin": "chris-ballinger-5aa38912/",
     "image": "chris",
     "quote": "We are excited about Chris’ insight and guidance on how we can further the goals of MOBI by using Ocean Protocol as a secure, data exchange protocol for solving mobility challenges."
+  },
+  {
+    "name": "Jason Teutsch",
+    "position": "CEO & Founder TrueBit",
+    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-jason-teutsch-ff6cc5f84590",
+    "linkedin": "",
+    "image": "jason",
+    "quote": "Jason Teutsch is the founder of TrueBit. He is a mathematician and computer scientist whose research focuses on distributed systems security, game theory, and algorithmic randomness."
   }
 ]
