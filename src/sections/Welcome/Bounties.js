@@ -41,7 +41,14 @@ export default class Bounties extends PureComponent {
 
     getNetworks = async () => {
         try {
-            const response = await axios.get(this.url)
+            const response = await axios({
+                method: 'get',
+                url: this.url,
+                timeout: 10000, // 10 sec.
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
             const networks = response.data
             this.setState({ networks })
         } catch (error) {
