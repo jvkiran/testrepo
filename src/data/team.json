@@ -119,6 +119,7 @@
   },
   {
     "name": "Troy McConaghy",
+    "website": "https://troymcconaghy.com",
     "twitter": "TroyMc",
     "github": "ttmc",
     "image": "troy"
@@ -142,10 +143,14 @@
   },
   {
     "name": "Francesco Galadeta",
+    "website": "https://about.me/fgadaleta",
+    "linkedin": "fragadaleta",
+    "twitter": "ThisIsFrag",
+    "github": "fgadaleta",
     "image": "francesco"
   },
   {
-    "name": "Kwinten Crauweis",
+    "name": "Kwinten Crauwels",
     "image": "kwinten"
   },
   {
@@ -188,7 +193,10 @@
   },
   {
     "name": "Sebastian Gerske",
+    "website": "https://medium.com/@sebastian.gerske",
     "github": "H34D",
+    "linkedin": "sgerske",
+    "twitter": "sgerske",
     "image": "sebastian"
   },
   {
@@ -199,6 +207,8 @@
   },
   {
     "name": "Kevin Tharayil",
+    "twitter": "kevintharayil",
+    "linkedin": "kevintharayil",
     "image": "kevin"
   },
   {
