@@ -22,7 +22,7 @@ import {
     StyledCopyright,
     StyledSocialLinks,
     StyledContact,
-    StyledSubscribeForm
+    StyledFormNewsletter
 } from './Footer.css'
 
 const Footer = () => (
@@ -33,7 +33,7 @@ const Footer = () => (
                     <SubTitle white>Get Involved</SubTitle>
 
                     <StyledSubTitle>Newsletter</StyledSubTitle>
-                    <StyledSubscribeForm maxWidth={28} />
+                    <StyledFormNewsletter maxWidth={28} />
 
                     <StyledSubTitle>Follow</StyledSubTitle>
                     <StyledActions>

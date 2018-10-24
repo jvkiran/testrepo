@@ -682,6 +682,24 @@
         "link": "https://www.meetup.com/cryptoland-tech-meetups/events/255553993/"
     },
     {
+        "city": "Breukelen",
+        "eventName": "DutchChain Entrepreneurial Deep Dive",
+        "date": "2018-11-13",
+        "link": "https://dutchchain.com/events/10578"
+    },
+    {
+        "city": "Singapore",
+        "eventName": "Panel: Utilising Data and AI for Customer Experience",
+        "date": "2018-11-08",
+        "link": "https://www.eventbrite.sg/e/utilising-data-and-ai-for-customer-experience-in-retail-industry-tickets-51576180745"
+    },
+            {
+        "city": "Tokyo",
+        "eventName": "Token Engineering Tokyo #2",
+        "date": "2018-11-09",
+        "link": "https://www.meetup.com/Token-Engineering-Tokyo/events/255691063/"
+    },
+    {
         "city": "Singapore",
         "eventName": "Data Sharing Without Sharing Data",
         "date": "2018-11-19",
@@ -698,6 +716,12 @@
         "eventName": "Data Natives",
         "date": "2018-11-22",
         "link": "http://datanatives.io"
+    },
+       {
+        "city": "Berlin",
+        "eventName": "Deep Berlin",
+        "date": "2018-11-27",
+        "link": "http://deep-berlin.ai"
     },
     {
         "city": "Seoul",

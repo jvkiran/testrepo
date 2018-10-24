@@ -6,7 +6,7 @@ import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
 import Header from '../components/Header'
 import { colors } from '../styles'
-import { StyledSection, StyledSubscribeForm } from './Newsletter.css'
+import { StyledSection, StyledFormNewsletter } from './Newsletter.css'
 
 export default class Newsletter extends Component {
     static propTypes = {
@@ -42,7 +42,7 @@ export default class Newsletter extends Component {
                         <SubTitle>{description}</SubTitle>
                     </ContentRow>
 
-                    <StyledSubscribeForm />
+                    <StyledFormNewsletter />
                 </StyledSection>
             </Fragment>
         )

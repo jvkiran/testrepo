@@ -7,18 +7,12 @@ import { social, webtasks } from '../../constants'
 import { StyledBounties, Bounty } from './Bounties.css'
 
 const BountiesText = ({ data }) => {
-    if (data) {
-        const count = data.length
-
-        if (data.length === 0) {
-            return 'No open bounties'
-        } else if (data.length === 1) {
-            return `${count} open bounty`
-        }
-        return `${count} open bounties`
-    } else {
-        return 'Bounties'
+    if (data !== undefined) {
+        if (data === 0) return 'No open bounties'
+        if (data === 1) return `${data} open bounty`
+        return `${data} open bounties`
     }
+    return 'Bounties'
 }
 
 const BountiesTextAppend = ({ network }) =>
@@ -38,17 +32,28 @@ BountiesIcon.propTypes = {
 export default class Bounties extends PureComponent {
     state = {
         networks: {
-            gitcoin: null,
-            bountiesNetwork: null
+            gitcoin: undefined,
+            bountiesNetwork: undefined
         }
     }
 
     url = webtasks.host + '/bounties'
 
     getNetworks = async () => {
-        const response = await axios.get(this.url)
-        const networks = response.data
-        this.setState({ networks })
+        try {
+            const response = await axios({
+                method: 'get',
+                url: this.url,
+                timeout: 10000, // 10 sec.
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            const networks = response.data
+            this.setState({ networks })
+        } catch (error) {
+            console.log(error) // eslint-disable-line no-console
+        }
     }
 
     componentDidMount() {
@@ -64,9 +69,7 @@ export default class Bounties extends PureComponent {
                     <Bounty
                         key={network}
                         href={social[network]}
-                        important={
-                            networks[network] && networks[network].length > 0
-                        }
+                        important={networks[network] && networks[network] > 0}
                     >
                         <BountiesIcon network={network} />
                         <BountiesText data={networks[network]} />

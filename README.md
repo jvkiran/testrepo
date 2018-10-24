@@ -99,7 +99,9 @@ We have the following forms on our website collecting lead data:
 -   _Join as Data Consumer_: Name, Email, Company, Comment
 -   _Ambassadors_: Name, Email, Location, Background, Interest, Speaking, LinkedIn, GitHub
 
-All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
+All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions except for newsletter make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
+
+Newsletter submissions are handled with a [webtask](https://github.com/oceanprotocol/webtasks#mailchimp) which puts the data into the newsletter list via the MailChimp API.
 
 Via Zapier, the data is synced further in real time when new submissions happen:
 
