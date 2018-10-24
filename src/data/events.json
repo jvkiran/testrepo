@@ -675,11 +675,24 @@
         "date_end": "2018-10-30",
         "link": "http://www.cc-forum.com"
     },
+        {
+        "city": "Berlin",
+        "eventName": "Blockchain for Science",
+        "date": "2018-11-05",
+        "date_end": "2018-11-06",
+        "link": "https://www.blockchainforsciencecon.com"
+    },
     {
         "city": "Cluj",
         "eventName": "When AI Meets Blockchain Meetup",
         "date": "2018-11-07",
         "link": "https://www.meetup.com/cryptoland-tech-meetups/events/255553993/"
+    },
+            {
+        "city": "Rome",
+        "eventName": " ESA - Earth Observation Open Science    ",
+        "date": "2018-11-12",
+        "link": "http://phiweek.esa.int"
     },
     {
         "city": "Breukelen",
@@ -710,12 +723,6 @@
         "eventName": "Revision Summit",
         "date": "2018-11-19",
         "link": "https://revision.io"
-    },
-    {
-        "city": "Berlin",
-        "eventName": "Data Natives",
-        "date": "2018-11-22",
-        "link": "http://datanatives.io"
     },
        {
         "city": "Berlin",
