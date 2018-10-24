@@ -26,26 +26,9 @@ const Team = () => (
             </Cell>
         </SubHeader>
         <StyledTeam>
-            {team
-                .filter(item => teamImg[item.image])
-                .filter((item, index) => index < 15)
-                .map(member => (
-                    <Member key={member.name} member={member} />
-                ))}
-            {team.filter(item => teamImg[item.image]).length >= 15 && (
-                <Collapsible
-                    easing="ease-out"
-                    transitionTime={200}
-                    trigger="See the entire team"
-                >
-                    {team
-                        .filter(item => teamImg[item.image])
-                        .filter((item, index) => index >= 15)
-                        .map(member => (
-                            <Member key={member.name} member={member} />
-                        ))}
-                </Collapsible>
-            )}
+            {team.filter(item => teamImg[item.image]).map(member => (
+                <Member key={member.name} member={member} />
+            ))}
         </StyledTeam>
     </>
 )
