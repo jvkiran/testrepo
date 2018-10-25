@@ -1,37 +1,51 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import buttonLinkedIn from '../../assets/buttons/linkedin.svg'
-import buttonTwitter from '../../assets/buttons/twitter.svg'
-import buttonGithub from '../../assets/buttons/github.svg'
+import { ReactComponent as ButtonWebsite } from '../../assets/buttons/website.svg'
+import { ReactComponent as ButtonLinkedIn } from '../../assets/buttons/linkedin.svg'
+import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
+import { ReactComponent as ButtonGithub } from '../../assets/buttons/github.svg'
 import { Icon, Links } from './MemberLinks.css'
 
 const MemberLinks = ({ member }) => (
     <Links>
-        {!!member.linkedin && (
+        {member.website && (
+            <Icon
+                href={member.website}
+                rel="noopener noreferrer"
+                target="_blank"
+                title="Website"
+            >
+                <ButtonWebsite />
+            </Icon>
+        )}
+        {member.linkedin && (
             <Icon
                 href={`https://www.linkedin.com/in/${member.linkedin}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="LinkedIn"
             >
-                <img alt="linkedin" src={buttonLinkedIn} />
+                <ButtonLinkedIn />
             </Icon>
         )}
-        {!!member.github && (
+        {member.github && (
             <Icon
                 href={`https://github.com/${member.github}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="GitHub"
             >
-                <img alt="github" src={buttonGithub} />
+                <ButtonGithub />
             </Icon>
         )}
-        {!!member.twitter && (
+        {member.twitter && (
             <Icon
                 href={`https://twitter.com/${member.twitter}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Twitter"
             >
-                <img alt="twitter" src={buttonTwitter} />
+                <ButtonTwitter />
             </Icon>
         )}
     </Links>

@@ -22,7 +22,7 @@ export const Icon = styled.a`
         opacity: 1;
     }
 
-    & img {
+    & svg {
         width: 100%;
         height: 100%;
     }
