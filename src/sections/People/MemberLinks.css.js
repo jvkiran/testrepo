@@ -8,7 +8,7 @@ export const Links = styled.div`
     }
 `
 
-export const Icon = styled.a`
+export const IconLink = styled.a`
     width: 1.75rem;
     height: 1.75rem;
     border-radius: 2px;
@@ -22,7 +22,7 @@ export const Icon = styled.a`
         opacity: 1;
     }
 
-    & img {
+    & svg {
         width: 100%;
         height: 100%;
     }

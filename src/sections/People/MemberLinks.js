@@ -1,38 +1,54 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import buttonLinkedIn from '../../assets/buttons/linkedin.svg'
-import buttonTwitter from '../../assets/buttons/twitter.svg'
-import buttonGithub from '../../assets/buttons/github.svg'
-import { Icon, Links } from './MemberLinks.css'
+import { ReactComponent as ButtonWebsite } from '../../assets/buttons/website.svg'
+import { ReactComponent as ButtonLinkedIn } from '../../assets/buttons/linkedin.svg'
+import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
+import { ReactComponent as ButtonGithub } from '../../assets/buttons/github.svg'
+import { IconLink, Links } from './MemberLinks.css'
+
+const utm = '?utm_source=oceanprotocol.com'
 
 const MemberLinks = ({ member }) => (
     <Links>
-        {!!member.linkedin && (
-            <Icon
+        {member.website && (
+            <IconLink
+                href={`${member.website}${utm}`}
+                rel="noopener"
+                target="_blank"
+                title="Website"
+            >
+                <ButtonWebsite />
+            </IconLink>
+        )}
+        {member.linkedin && (
+            <IconLink
                 href={`https://www.linkedin.com/in/${member.linkedin}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="LinkedIn"
             >
-                <img alt="linkedin" src={buttonLinkedIn} />
-            </Icon>
+                <ButtonLinkedIn />
+            </IconLink>
         )}
-        {!!member.github && (
-            <Icon
+        {member.github && (
+            <IconLink
                 href={`https://github.com/${member.github}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="GitHub"
             >
-                <img alt="github" src={buttonGithub} />
-            </Icon>
+                <ButtonGithub />
+            </IconLink>
         )}
-        {!!member.twitter && (
-            <Icon
+        {member.twitter && (
+            <IconLink
                 href={`https://twitter.com/${member.twitter}`}
                 rel="noopener noreferrer"
                 target="_blank"
+                title="Twitter"
             >
-                <img alt="twitter" src={buttonTwitter} />
-            </Icon>
+                <ButtonTwitter />
+            </IconLink>
         )}
     </Links>
 )
