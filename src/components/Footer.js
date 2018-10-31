@@ -15,7 +15,7 @@ import buttonYoutube from '../assets/buttons/youtube.svg'
 import buttonReddit from '../assets/buttons/reddit.svg'
 import buttonGitter from '../assets/buttons/gitter.svg'
 import { colors } from '../styles'
-import { meta, company, social, youtube } from '../constants'
+import { meta, company, social } from '../constants'
 import {
     StyledSubTitle,
     StyledActions,
@@ -68,7 +68,7 @@ const Footer = () => (
                             <a href={social.reddit} title="Reddit">
                                 <img alt="Reddit" src={buttonReddit} />
                             </a>
-                            <a href={youtube.channel} title="YouTube">
+                            <a href={social.youtube} title="YouTube">
                                 <img alt="YouTube" src={buttonYoutube} />
                             </a>
                             <a href={social.linkedin} title="LinkedIn">

@@ -12,10 +12,7 @@
     {
         "title": "Whitepapers",
         "date": "February 2018",
-        "description": [
-            "Technical Whitepaper",
-            "Business Whitepaper"
-        ],
+        "description": ["Technical Whitepaper", "Business Whitepaper"],
         "active": true
     },
     {
