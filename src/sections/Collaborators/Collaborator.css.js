@@ -15,15 +15,6 @@ export const StyledCollaborator = styled.figure`
     @media screen and (${responsive.md.min}) {
         flex-basis: 20%;
     }
-
-    svg {
-        width: 120px;
-        max-height: 60px;
-        fill: rgb(${colors.lightGrey});
-        transition: fill 0.4s ease-out;
-        position: relative;
-        z-index: 1;
-    }
 `
 
 export const StyledDescription = styled.span`
@@ -69,7 +60,17 @@ export const StyledCollaboratorWrap = styled.a`
     padding: 1.5rem;
     margin: auto;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.5);
-    transition-duration: 0.4s;
+    transition: 0.4s ease-out;
+    transform: translate3d(0, 0, 0);
+
+    svg {
+        width: 120px;
+        max-height: 60px;
+        fill: rgb(${colors.lightGrey});
+        transition: fill 0.4s ease-out;
+        position: relative;
+        z-index: 1;
+    }
 
     &:hover,
     &:focus {
