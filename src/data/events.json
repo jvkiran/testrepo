@@ -742,5 +742,11 @@
         "eventName": "AI Summit Seoul",
         "date": "2018-12-04",
         "link": "http://aisummit.co.kr"
+    },
+        {
+        "city": "Global",
+        "eventName": "Bottish 10 Simulcast",
+        "date": "2018-12-13",
+        "link": "http://www.bottish.co/10"
     }
 ]
