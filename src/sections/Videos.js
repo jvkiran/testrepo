@@ -12,7 +12,7 @@ import jellyfish from '../assets/misc/jellyfish-background.jpg'
 import jellyfishVideoMp4 from '../assets/misc/jellyfish-background.mp4'
 import jellyfishVideoWebM from '../assets/misc/jellyfish-background.webm'
 import { colors } from '../styles'
-import { youtube, webtasks } from '../constants'
+import { youtube, webtasks, social } from '../constants'
 import {
     StyledVideos,
     HeightRow,
@@ -33,7 +33,7 @@ import {
     VideoBackground
 } from './Videos.css'
 
-const url = `${webtasks.host}/youtube/${youtube.playlist}`
+const url = `${webtasks.host}/youtube/playlist/${youtube.playlistId}`
 
 class SectionContent extends PureComponent {
     state = {
@@ -243,7 +243,7 @@ const Videos = () => (
         </LazyLoad>
 
         <ContentRow>
-            <a href={youtube.channel}>
+            <a href={social.youtube}>
                 <YouTubeButton>YouTube Channel</YouTubeButton>
             </a>
         </ContentRow>
