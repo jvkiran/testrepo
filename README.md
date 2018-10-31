@@ -6,9 +6,7 @@
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-7b1173.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-
 [**Live**](https://oceanprotocol.com) | [**Beta**](https://beta.oceanprotocol.com)
-
 
 ## Table of Contents
 
@@ -84,7 +82,7 @@ For every collaborator `name`, `logo` and `link` are required, while `descriptio
 
 A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS.
 
-Logo file then needs to be imported and exported from the [`./src/sections/Collaborators/Logos.js`](./src/sections/Collaborators/Logos.js) file.
+Logo file then needs to be imported and exported from the [`./src/assets/logos/index.js`](./src/assets/logos/index.js) file.
 
 _ToDo: remove the need to manually import the logo file._
 

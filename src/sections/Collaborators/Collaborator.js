@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Logos from './Logos'
+import Logos from '../../assets/logos'
 import {
     StyledCollaborator,
     StyledDescription,
