@@ -1,54 +1,63 @@
 [
-  {
-    "name": "Meltem Demirors",
-    "position": "Chief Strategy Officer at CoinShares, Head of CS Treasury",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisors-meltem-demirors-1ca17e775877",
-    "twitter": "Melt_Dem",
-    "linkedin": "meltdem",
-    "image": "meltem",
-    "quote": "From 2015 until now, Meltem has provided strong guidance on our fundraising and go-to-market strategies. As we moved from ascribe.io to BigchainDB and now to Ocean Protocol, her wisdom has been invaluable."
-  },
-  {
-    "name": "Dr. Carsten Stöcker",
-    "position": "CEO Spherity & Interlinked Protocol",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-2-dr-carsten-stöcker-29255cbcf0de",
-    "twitter": "carstenstoecker",
-    "linkedin": "carsten-stoecker-1145871",
-    "image": "carsten",
-    "quote": "Carsten shares deep insights on IoT, energy and identity solutions that can integrate into Ocean Protocol, as well as giving us his futuristic viewpoints to help us see around the corner."
-  },
-  {
-    "name": "Prof. Dr. Sebastian Gajek",
-    "position": "Co-founder & CTO Weeve",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-prof-dr-sebastian-gajek-5f7e3bd60802",
-    "twitter": "weeveSebastian",
-    "linkedin": "sebastiangajek",
-    "image": "sebastian",
-    "quote": "Sebastian gave us great insights in their Token Curation development such as the graded TCR. More importantly, many of their developments, research and insights are being widely shared in the open source community."
-  },
-  {
-    "name": "Adam Drake",
-    "position": "CEO Atazzo",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-adam-drake-2c5b963ff99e",
-    "twitter": "aadrake",
-    "linkedin": "aadrake",
-    "image": "adam",
-    "quote": "Adam is both, a world-class data scientist and a world-class manager of data scientists & engineers."
-  },
-  {
-    "name": "Chris Ballinger",
-    "position": "CEO & Founder MOBI",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-chris-ballinger-f898e5591c40",
-    "linkedin": "chris-ballinger-5aa38912/",
-    "image": "chris",
-    "quote": "We are excited about Chris’ insight and guidance on how we can further the goals of MOBI by using Ocean Protocol as a secure, data exchange protocol for solving mobility challenges."
-  },
-  {
-    "name": "Jason Teutsch",
-    "position": "CEO & Founder TrueBit",
-    "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-jason-teutsch-ff6cc5f84590",
-    "website": "https://people.cs.uchicago.edu/~teutsch/",
-    "image": "jason",
-    "quote": "Jason Teutsch is the founder of TrueBit. He is a mathematician and computer scientist whose research focuses on distributed systems security, game theory, and algorithmic randomness."
-  }
+    {
+        "name": "Meltem Demirors",
+        "position": "Chief Strategy Officer at CoinShares, Head of CS Treasury",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisors-meltem-demirors-1ca17e775877",
+        "twitter": "Melt_Dem",
+        "linkedin": "meltdem",
+        "image": "meltem",
+        "quote": "From 2015 until now, Meltem has provided strong guidance on our fundraising and go-to-market strategies. As we moved from ascribe.io to BigchainDB and now to Ocean Protocol, her wisdom has been invaluable."
+    },
+    {
+        "name": "Dr. Carsten Stöcker",
+        "position": "CEO Spherity & Interlinked Protocol",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-2-dr-carsten-stöcker-29255cbcf0de",
+        "twitter": "carstenstoecker",
+        "linkedin": "carsten-stoecker-1145871",
+        "image": "carsten",
+        "quote": "Carsten shares deep insights on IoT, energy and identity solutions that can integrate into Ocean Protocol, as well as giving us his futuristic viewpoints to help us see around the corner."
+    },
+    {
+        "name": "Prof. Dr. Sebastian Gajek",
+        "position": "Co-founder & CTO Weeve",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-prof-dr-sebastian-gajek-5f7e3bd60802",
+        "twitter": "weeveSebastian",
+        "linkedin": "sebastiangajek",
+        "image": "sebastian",
+        "quote": "Sebastian gave us great insights in their Token Curation development such as the graded TCR. More importantly, many of their developments, research and insights are being widely shared in the open source community."
+    },
+    {
+        "name": "Adam Drake",
+        "position": "CEO Atazzo",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-adam-drake-2c5b963ff99e",
+        "twitter": "aadrake",
+        "linkedin": "aadrake",
+        "image": "adam",
+        "quote": "Adam is both, a world-class data scientist and a world-class manager of data scientists & engineers."
+    },
+    {
+        "name": "Chris Ballinger",
+        "position": "CEO & Founder MOBI",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-chris-ballinger-f898e5591c40",
+        "linkedin": "chris-ballinger-5aa38912/",
+        "image": "chris",
+        "quote": "We are excited about Chris’ insight and guidance on how we can further the goals of MOBI by using Ocean Protocol as a secure, data exchange protocol for solving mobility challenges."
+    },
+    {
+        "name": "Jason Teutsch",
+        "position": "CEO & Founder TrueBit",
+        "link": "https://blog.oceanprotocol.com/ocean-protocol-advisor-jason-teutsch-ff6cc5f84590",
+        "website": "https://people.cs.uchicago.edu/~teutsch/",
+        "image": "jason",
+        "quote": "Jason Teutsch is the founder of TrueBit. He is a mathematician and computer scientist whose research focuses on distributed systems security, game theory, and algorithmic randomness."
+    },
+    {
+        "name": "Peter Wang",
+        "position": "CTO & Co-Founder Anaconda Inc.",
+        "link": "https://blog.oceanprotocol.com/community-focused-data-science-technology-in-anaconda-pydata-2f9f2898659d",
+        "linkedin": "pzwang",
+        "twitter": "pwang",
+        "image": "peter",
+        "quote": "We’re working closely with Peter to provide seamless and powerful tooling for data scientists, to co-create a future that equalizes the opportunity to access data & AI services."
+    }
 ]

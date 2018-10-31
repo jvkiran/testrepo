@@ -1,256 +1,256 @@
 [
-  {
-    "name": "Bruce Pon",
-    "twitter": "BrucePon",
-    "linkedin": "ponbruce",
-    "image": "bruce"
-  },
-  {
-    "name": "Daryl Arnold",
-    "linkedin": "darylarnold",
-    "image": "daryl"
-  },
-  {
-    "name": "Chirdeep Chhabra",
-    "twitter": "chirdeep",
-    "linkedin": "chirdeep",
-    "image": "chirdeep"
-  },
-  {
-    "name": "Trent McConaghy",
-    "website": "http://trent.st",
-    "twitter": "trentmc0",
-    "github": "trentmc",
-    "image": "trent"
-  },
-  {
-    "name": "Don Gossen",
-    "linkedin": "donald-gossen-40ab96",
-    "image": "don"
-  },
-  {
-    "name": "Dimitri De Jonghe",
-    "twitter": "DimitriDeJonghe",
-    "github": "diminator",
-    "linkedin": "dimitridejonghe",
-    "image": "dimi"
-  },
-  {
-    "name": "Cristina Pon",
-    "linkedin": "cristinacenuse",
-    "image": "cristina"
-  },
-  {
-    "name": "Aitor Argomaniz",
-    "github": "aaitor",
-    "image": "aitor"
-  },
-  {
-    "name": "Irene Lopez De Vallejo",
-    "linkedin": "irenelopezdevallejo",
-    "twitter": "ILdeV",
-    "image": "irene"
-  },
-  {
-    "name": "Paul Galwas",
-    "linkedin": "paul-galwas-9236b9",
-    "image": "paul"
-  },
-  {
-    "name": "John Enevoldsen",
-    "linkedin": "john-enevoldsen",
-    "image": "john"
-  },
-  {
-    "name": "Sheridan Johns",
-    "linkedin": "sheridanjohnsiv",
-    "image": "sheridan"
-  },
-  {
-    "name": "Emily Hirschberg",
-    "linkedin": "emily-richards-148357160",
-    "twitter": "Fraulein_Hirsch",
-    "image": "emily"
-  },
-  {
-    "name": "Mike Anderson",
-    "linkedin": "mike-anderson-7a9412",
-    "twitter": "mikera",
-    "image": "mike"
-  },
-  {
-    "name": "Patty Lee",
-    "linkedin": "pattyleeworldtrainer",
-    "image": "patty"
-  },
-  {
-    "name": "Matthias Kretschmann",
-    "website": "https://matthiaskretschmann.com",
-    "twitter": "kremalicious",
-    "github": "kremalicious",
-    "image": "matthias"
-  },
-  {
-    "name": "Ricardo Garcia",
-    "linkedin": "ricardo-garcia-b226a6a9",
-    "image": "ricardo"
-  },
-  {
-    "name": "Yvonn Ong",
-    "linkedin": "yvonn-ong",
-    "image": "yvonn"
-  },
-  {
-    "name": "Marcus Jones",
-    "github": "MarcusJones",
-    "image": "marcus"
-  },
-  {
-    "name": "Timothy Ley",
-    "linkedin": "timothyleymingde",
-    "image": "timothy"
-  },
-  {
-    "name": "Fang Gong",
-    "linkedin": "fang-gong-65413712",
-    "twitter": "gongf05",
-    "github": "gongf05",
-    "image": "fang"
-  },
-  {
-    "name": "Troy McConaghy",
-    "website": "https://troymcconaghy.com",
-    "twitter": "TroyMc",
-    "github": "ttmc",
-    "image": "troy"
-  },
-  {
-    "name": "Chalid Mannaa",
-    "linkedin": "cmannaa",
-    "image": "chalid"
-  },
-  {
-    "name": "Kiran Karkera",
-    "linkedin": "karkerakiran",
-    "twitter": "kaal_daari",
-    "github": "shark8me",
-    "image": "kiran"
-  },
-  {
-    "name": "Alessandra Albano",
-    "linkedin": "alessandraalbano",
-    "image": "alessandra"
-  },
-  {
-    "name": "Francesco Galadeta",
-    "website": "https://about.me/fgadaleta",
-    "linkedin": "fragadaleta",
-    "twitter": "ThisIsFrag",
-    "github": "fgadaleta",
-    "image": "francesco"
-  },
-  {
-    "name": "Kwinten Crauwels",
-    "image": "kwinten"
-  },
-  {
-    "name": "Chris Lee",
-    "linkedin": "chris-lee-3aa44938",
-    "image": "chris"
-  },
-  {
-    "name": "Ahmed Ali",
-    "github": "aabdulwahed",
-    "linkedin": "aabdulwahed",
-    "image": "ahmed"
-  },
-  {
-    "name": "Aishwarya Nair",
-    "linkedin": "aishwarya-v-r",
-    "image": "aish"
-  },
-  {
-    "name": "Javier Cortejoso",
-    "github": "jcortejoso",
-    "image": "javier"
-  },
-  {
-    "name": "Jernej Pregelj",
-    "twitter": "jernejpregelj",
-    "github": "jernejpregelj",
-    "linkedin": "jernej-pregelj",
-    "image": "jernej"
-  },
-  {
-    "name": "Lev Berman",
-    "github": "ldmberman",
-    "image": "lev"
-  },
-  {
-    "name": "Enrique Ruiz",
-    "github": "eruizgar91",
-    "image": "enrique"
-  },
-  {
-    "name": "Sebastian Gerske",
-    "website": "https://medium.com/@sebastian.gerske",
-    "github": "H34D",
-    "linkedin": "sgerske",
-    "twitter": "sgerske",
-    "image": "sebastian"
-  },
-  {
-    "name": "Manan Patel",
-    "github": "innoprenuer",
-    "twitter": "manan77patel",
-    "image": "manan"
-  },
-  {
-    "name": "Kevin Tharayil",
-    "twitter": "kevintharayil",
-    "linkedin": "kevintharayil",
-    "image": "kevin"
-  },
-  {
-    "name": "Samer Sallam",
-    "github": "ssallam",
-    "linkedin": "samer-sallam-0968644",
-    "image": "samer"
-  },
-  {
-    "name": "Kyriakos Zannikos",
-    "linkedin": "kyriakoszannikos",
-    "image": "kyriakos"
-  },
-  {
-    "name": "Sami Jaaskelainen",
-    "linkedin": "sami-jääskeläinen-74a8381",
-    "image": "sami"
-  },
-  {
-    "name": "Sarah-Jean Vallon",
-    "linkedin": "sarah-jean-vallon-b4603a65",
-    "image": "sarah"
-  },
-  {
-    "name": "Artur Gomer",
-    "linkedin": "arturgomer",
-    "image": "artur"
-  },
-  {
-    "name": "Masha McConaghy",
-    "linkedin": "mashamc",
-    "image": "masha"
-  },
-  {
-    "name": "Daniel Lustig",
-    "linkedin": "daniel-lustig-852a408a",
-    "image": "daniel"
-  },
-  {
-    "name": "Malte Sielski",
-    "linkedin": "malte-sielski-198991ab",
-    "twitter": "malte_slk",
-    "image": "malte"
-  }  
+    {
+        "name": "Bruce Pon",
+        "twitter": "BrucePon",
+        "linkedin": "ponbruce",
+        "image": "bruce"
+    },
+    {
+        "name": "Daryl Arnold",
+        "linkedin": "darylarnold",
+        "image": "daryl"
+    },
+    {
+        "name": "Chirdeep Chhabra",
+        "twitter": "chirdeep",
+        "linkedin": "chirdeep",
+        "image": "chirdeep"
+    },
+    {
+        "name": "Trent McConaghy",
+        "website": "http://trent.st",
+        "twitter": "trentmc0",
+        "github": "trentmc",
+        "image": "trent"
+    },
+    {
+        "name": "Don Gossen",
+        "linkedin": "donald-gossen-40ab96",
+        "image": "don"
+    },
+    {
+        "name": "Dimitri De Jonghe",
+        "twitter": "DimitriDeJonghe",
+        "github": "diminator",
+        "linkedin": "dimitridejonghe",
+        "image": "dimi"
+    },
+    {
+        "name": "Cristina Pon",
+        "linkedin": "cristinacenuse",
+        "image": "cristina"
+    },
+    {
+        "name": "Aitor Argomaniz",
+        "github": "aaitor",
+        "image": "aitor"
+    },
+    {
+        "name": "Irene Lopez De Vallejo",
+        "linkedin": "irenelopezdevallejo",
+        "twitter": "ILdeV",
+        "image": "irene"
+    },
+    {
+        "name": "Paul Galwas",
+        "linkedin": "paul-galwas-9236b9",
+        "image": "paul"
+    },
+    {
+        "name": "John Enevoldsen",
+        "linkedin": "john-enevoldsen",
+        "image": "john"
+    },
+    {
+        "name": "Sheridan Johns",
+        "linkedin": "sheridanjohnsiv",
+        "image": "sheridan"
+    },
+    {
+        "name": "Emily Hirschberg",
+        "linkedin": "emily-richards-148357160",
+        "twitter": "Fraulein_Hirsch",
+        "image": "emily"
+    },
+    {
+        "name": "Mike Anderson",
+        "linkedin": "mike-anderson-7a9412",
+        "twitter": "mikera",
+        "image": "mike"
+    },
+    {
+        "name": "Patty Lee",
+        "linkedin": "pattyleeworldtrainer",
+        "image": "patty"
+    },
+    {
+        "name": "Matthias Kretschmann",
+        "website": "https://matthiaskretschmann.com",
+        "twitter": "kremalicious",
+        "github": "kremalicious",
+        "image": "matthias"
+    },
+    {
+        "name": "Ricardo Garcia",
+        "linkedin": "ricardo-garcia-b226a6a9",
+        "image": "ricardo"
+    },
+    {
+        "name": "Yvonn Ong",
+        "linkedin": "yvonn-ong",
+        "image": "yvonn"
+    },
+    {
+        "name": "Marcus Jones",
+        "github": "MarcusJones",
+        "image": "marcus"
+    },
+    {
+        "name": "Timothy Ley",
+        "linkedin": "timothyleymingde",
+        "image": "timothy"
+    },
+    {
+        "name": "Fang Gong",
+        "linkedin": "fang-gong-65413712",
+        "twitter": "gongf05",
+        "github": "gongf05",
+        "image": "fang"
+    },
+    {
+        "name": "Troy McConaghy",
+        "website": "https://troymcconaghy.com",
+        "twitter": "TroyMc",
+        "github": "ttmc",
+        "image": "troy"
+    },
+    {
+        "name": "Chalid Mannaa",
+        "linkedin": "cmannaa",
+        "image": "chalid"
+    },
+    {
+        "name": "Kiran Karkera",
+        "linkedin": "karkerakiran",
+        "twitter": "kaal_daari",
+        "github": "shark8me",
+        "image": "kiran"
+    },
+    {
+        "name": "Alessandra Albano",
+        "linkedin": "alessandraalbano",
+        "image": "alessandra"
+    },
+    {
+        "name": "Francesco Galadeta",
+        "website": "https://about.me/fgadaleta",
+        "linkedin": "fragadaleta",
+        "twitter": "ThisIsFrag",
+        "github": "fgadaleta",
+        "image": "francesco"
+    },
+    {
+        "name": "Kwinten Crauwels",
+        "image": "kwinten"
+    },
+    {
+        "name": "Chris Lee",
+        "linkedin": "chris-lee-3aa44938",
+        "image": "chris"
+    },
+    {
+        "name": "Ahmed Ali",
+        "github": "aabdulwahed",
+        "linkedin": "aabdulwahed",
+        "image": "ahmed"
+    },
+    {
+        "name": "Aishwarya Nair",
+        "linkedin": "aishwarya-v-r",
+        "image": "aish"
+    },
+    {
+        "name": "Javier Cortejoso",
+        "github": "jcortejoso",
+        "image": "javier"
+    },
+    {
+        "name": "Jernej Pregelj",
+        "twitter": "jernejpregelj",
+        "github": "jernejpregelj",
+        "linkedin": "jernej-pregelj",
+        "image": "jernej"
+    },
+    {
+        "name": "Lev Berman",
+        "github": "ldmberman",
+        "image": "lev"
+    },
+    {
+        "name": "Enrique Ruiz",
+        "github": "eruizgar91",
+        "image": "enrique"
+    },
+    {
+        "name": "Sebastian Gerske",
+        "website": "https://medium.com/@sebastian.gerske",
+        "github": "H34D",
+        "linkedin": "sgerske",
+        "twitter": "sgerske",
+        "image": "sebastian"
+    },
+    {
+        "name": "Manan Patel",
+        "github": "innoprenuer",
+        "twitter": "manan77patel",
+        "image": "manan"
+    },
+    {
+        "name": "Kevin Tharayil",
+        "twitter": "kevintharayil",
+        "linkedin": "kevintharayil",
+        "image": "kevin"
+    },
+    {
+        "name": "Samer Sallam",
+        "github": "ssallam",
+        "linkedin": "samer-sallam-0968644",
+        "image": "samer"
+    },
+    {
+        "name": "Kyriakos Zannikos",
+        "linkedin": "kyriakoszannikos",
+        "image": "kyriakos"
+    },
+    {
+        "name": "Sami Jaaskelainen",
+        "linkedin": "sami-jääskeläinen-74a8381",
+        "image": "sami"
+    },
+    {
+        "name": "Sarah-Jean Vallon",
+        "linkedin": "sarah-jean-vallon-b4603a65",
+        "image": "sarah"
+    },
+    {
+        "name": "Artur Gomer",
+        "linkedin": "arturgomer",
+        "image": "artur"
+    },
+    {
+        "name": "Masha McConaghy",
+        "linkedin": "mashamc",
+        "image": "masha"
+    },
+    {
+        "name": "Daniel Lustig",
+        "linkedin": "daniel-lustig-852a408a",
+        "image": "daniel"
+    },
+    {
+        "name": "Malte Sielski",
+        "linkedin": "malte-sielski-198991ab",
+        "twitter": "malte_slk",
+        "image": "malte"
+    }
 ]

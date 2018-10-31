@@ -40,6 +40,7 @@ export const social = {
     github: 'https://github.com/oceanprotocol',
     reddit: 'https://www.reddit.com/r/oceanprotocol/',
     gitter: 'https://gitter.im/oceanprotocol/Lobby',
+    youtube: 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
     gitcoin: 'https://gitcoin.co/profile/oceanprotocol',
     bountiesNetwork:
         'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol'
@@ -50,8 +51,8 @@ export const dates = {
 }
 
 export const youtube = {
-    channel: 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
-    playlist: 'PL_dn0wVs9kWoWmZeuHp_YSEPUdsLVndZ-'
+    channelId: 'UCH8TXwmWWAE9TZO0yTBHB3A',
+    playlistId: 'UUH8TXwmWWAE9TZO0yTBHB3A' // uploads playlist ID
 }
 
 export const webtasks = {
