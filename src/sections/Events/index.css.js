@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Paragraph from '../../components/Paragraph'
 import Title from '../../components/Title'
-import { ReactComponent as Jellyfish } from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
+import jellyfish from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
 
 export const StyledTitle = styled(Title)`
     margin-bottom: 2rem;
@@ -20,9 +20,14 @@ export const StyledParagraph = styled(Paragraph)`
     position: relative;
 `
 
-export const JellyfishBack = styled(Jellyfish)`
+export const JellyfishBack = styled.div`
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: 0;
-    top: 10%;
     opacity: 0.8;
+    background: url(${jellyfish}) no-repeat center center;
+    background-size: contain;
 `
