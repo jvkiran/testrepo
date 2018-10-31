@@ -1,62 +1,62 @@
 [
-  {
-    "name": "Fitchain",
-    "logo": "fitchain",
-    "description": "Fitchain allows organizations to publish their business challenges and connect to data scientists who effectively work on a solution.",
-    "link": "https://fitchain.io"
-  },
-  {
-    "name": "Enigma",
-    "logo": "enigma",
-    "description": "Enigma is using groundbreaking privacy technologies to build the first platform for scalable, end-to-end decentralized applications.",
-    "link": "https://enigma.co"
-  },
-  {
-    "name": "IBM Watson AI XPRIZE®",
-    "logo": "xprize",
-    "description": "Ocean Protocol will help bring data and information to the IBM Watson AI XPRIZE® participants.",
-    "link": "https://ai.xprize.org/"
-  },
-  {
-    "name": "MOBI - Mobility Open Blockchain Initiative",
-    "logo": "mobi",
-    "description": "Using blockchain and related technologies to make mobility safer, greener, and more accessible.",
-    "link": "https://www.dlt.mobi"
-  },
-  {
-    "name": "Verv",
-    "logo": "verv",
-    "description": "Verv is a clever home energy assistant that gives you intelligent information about key appliances and electricity usage in your home, helping you to tackle your bills, reduce your carbon footprint and keep your home safe.",
-    "link": "https://verv.energy"
-  },
-  {
-    "name": "Couger",
-    "logo": "couger",
-    "description": "",
-    "link": "https://couger.co.jp"
-  },
-  {
-    "name": "Messari",
-    "logo": "messari",
-    "description": "Messari is building an open data library and curation tools that help researchers, investors, and regulators make sense of the cryptoasset industry.",
-    "link": "https://messari.io"
-  },
-  {
-    "name": "IMDA",
-    "logo": "imda",
-    "description": "IMDA aims to build a competitive and sustainable infocomm media industry, developing Singapore as a nucleus for media content, services and applications, while growing the seed of technological innovation and fostering collaboration between local and multinational corporations in the sectors.",
-    "link": "https://www.imda.gov.sg"
-  },
-  {
-    "name": "Connected Life",
-    "logo": "connectedlife",
-    "description": "",
-    "link": ""
-  },
-  {
-    "name": "Unilever",
-    "logo": "unilever",
-    "description": "",
-    "link": "https://www.unilever.com"
-  }
+    {
+        "name": "Fitchain",
+        "logo": "fitchain",
+        "description": "Fitchain allows organizations to publish their business challenges and connect to data scientists who effectively work on a solution.",
+        "link": "https://fitchain.io"
+    },
+    {
+        "name": "Enigma",
+        "logo": "enigma",
+        "description": "Enigma is using groundbreaking privacy technologies to build the first platform for scalable, end-to-end decentralized applications.",
+        "link": "https://enigma.co"
+    },
+    {
+        "name": "IBM Watson AI XPRIZE®",
+        "logo": "xprize",
+        "description": "Ocean Protocol will help bring data and information to the IBM Watson AI XPRIZE® participants.",
+        "link": "https://ai.xprize.org/"
+    },
+    {
+        "name": "MOBI - Mobility Open Blockchain Initiative",
+        "logo": "mobi",
+        "description": "Using blockchain and related technologies to make mobility safer, greener, and more accessible.",
+        "link": "https://www.dlt.mobi"
+    },
+    {
+        "name": "Verv",
+        "logo": "verv",
+        "description": "Verv is a clever home energy assistant that gives you intelligent information about key appliances and electricity usage in your home, helping you to tackle your bills, reduce your carbon footprint and keep your home safe.",
+        "link": "https://verv.energy"
+    },
+    {
+        "name": "Couger",
+        "logo": "couger",
+        "description": "",
+        "link": "https://couger.co.jp"
+    },
+    {
+        "name": "Messari",
+        "logo": "messari",
+        "description": "Messari is building an open data library and curation tools that help researchers, investors, and regulators make sense of the cryptoasset industry.",
+        "link": "https://messari.io"
+    },
+    {
+        "name": "IMDA",
+        "logo": "imda",
+        "description": "IMDA aims to build a competitive and sustainable infocomm media industry, developing Singapore as a nucleus for media content, services and applications, while growing the seed of technological innovation and fostering collaboration between local and multinational corporations in the sectors.",
+        "link": "https://www.imda.gov.sg"
+    },
+    {
+        "name": "Connected Life",
+        "logo": "connectedlife",
+        "description": "",
+        "link": ""
+    },
+    {
+        "name": "Unilever",
+        "logo": "unilever",
+        "description": "",
+        "link": "https://www.unilever.com"
+    }
 ]
