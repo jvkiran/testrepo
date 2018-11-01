@@ -4,7 +4,9 @@ import Paragraph from '../../components/Paragraph'
 import Title from '../../components/Title'
 import { colors, responsive } from '../../styles'
 
-export const StyledGrid = styled(Grid)``
+export const StyledGrid = styled(Grid)`
+    margin-bottom: 2rem;
+`
 
 export const StyledTitle = styled(Title)`
     margin-bottom: 2rem;

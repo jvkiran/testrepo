@@ -4,7 +4,9 @@ import Logos from '../../assets/logos'
 import {
     StyledCollaborator,
     StyledDescription,
-    StyledCollaboratorWrap
+    StyledDescriptionTitle,
+    StyledCollaboratorWrap,
+    StyledDescriptionLink
 } from './Collaborator.css'
 
 // generated SVG component names have first letter capitalized,
@@ -30,12 +32,18 @@ const Collaborator = ({ collaborator }) => {
     const { name, logo, link, description } = collaborator
     return (
         <StyledCollaborator>
-            <StyledCollaboratorWrap
-                href={`${link}?utm_source=oceanprotocol.com`}
-            >
+            <StyledCollaboratorWrap>
                 <Logo logo={logo} className={logo} title={name} />
                 {description && (
-                    <StyledDescription>{description}</StyledDescription>
+                    <StyledDescription>
+                        <StyledDescriptionTitle>{name}</StyledDescriptionTitle>
+                        {description}
+                        <StyledDescriptionLink
+                            href={`${link}?utm_source=oceanprotocol.com`}
+                        >
+                            Visit website
+                        </StyledDescriptionLink>
+                    </StyledDescription>
                 )}
             </StyledCollaboratorWrap>
         </StyledCollaborator>
