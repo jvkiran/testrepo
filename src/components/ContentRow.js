@@ -7,8 +7,8 @@ const ContentRow = styled.div`
         narrow
             ? `${layout.maxWidth.small}`
             : wide
-                ? `${layout.maxWidth.wide}`
-                : `${layout.maxWidth.base}`};
+            ? `${layout.maxWidth.wide}`
+            : `${layout.maxWidth.base}`};
     margin: 0 auto;
 
     @media screen and (${responsive.sm.min}) {
