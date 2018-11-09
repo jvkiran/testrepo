@@ -57,12 +57,12 @@ const Footer = () => (
                                 <img alt="Telegram" src={buttonTelegram} />
                             </a>
                             <a href={social.slack} title="Slack">
-                                <img alt="Telegram" src={buttonSlack} />
+                                <img alt="Slack" src={buttonSlack} />
                             </a>
                             <a href={social.github} title="GitHub">
                                 <img alt="GitHub" src={buttonGithub} />
                             </a>
-                            <a href={social.gitter} title="GitHub">
+                            <a href={social.gitter} title="Gitter">
                                 <img alt="Gitter" src={buttonGitter} />
                             </a>
                             <a href={social.reddit} title="Reddit">
