@@ -225,11 +225,6 @@
         "image": "kyriakos"
     },
     {
-        "name": "Sami Jaaskelainen",
-        "linkedin": "sami-jääskeläinen-74a8381",
-        "image": "sami"
-    },
-    {
         "name": "Sarah-Jean Vallon",
         "linkedin": "sarah-jean-vallon-b4603a65",
         "image": "sarah"
@@ -255,4 +250,14 @@
         "twitter": "malte_slk",
         "image": "malte"
     }
+    {
+        "name": "Alexandra Au Yong",
+        "linkedin": "alexandraauyong",
+        "image": "alex"
+    }
+    {
+        "name": "Ervin Tham",
+        "linkedin": "alexandraauyong",
+        "image": "ervintwj"
+    }    
 ]

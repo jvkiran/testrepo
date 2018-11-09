@@ -26,19 +26,21 @@ import mike from './mike.jpg'
 import patty from './patty.jpg'
 import paul from './paul.jpg'
 import ricardo from './ricardo.jpg'
-import sami from './sami.jpg'
 import sarah from './sarah.jpg'
 import sheridan from './sheridan.jpg'
 import timothy from './timothy.jpg'
 import trent from './trent.jpg'
 import troy from './troy.jpg'
 import yvonn from './yvonn.jpg'
+import alex from './alex.jpg'
+import ervin from './ervin.jpg'
 
 export default {
     ahmed,
     aish,
     aitor,
     alessandra,
+    alex,
     artur,
     bruce,
     chalid,
@@ -50,6 +52,7 @@ export default {
     dimi,
     don,
     emily,
+    ervin,
     fang,
     irene,
     jernej,
@@ -63,7 +66,6 @@ export default {
     patty,
     paul,
     ricardo,
-    sami,
     sarah,
     sheridan,
     timothy,
