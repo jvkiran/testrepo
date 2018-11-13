@@ -47,7 +47,7 @@
         {
             "name": "IMDA",
             "logo": "imda",
-            "description": "IMDA aims to build a competitive and sustainable infocomm media industry, developing Singapore as a nucleus for media content, services and applications, while growing the seed of technological innovation and fostering collaboration between local and multinational corporations in the sectors.",
+            "description": "Break down data silos and enable trusted and secure data exchange among private and public sectors to help Singapore accelerate its AI and Smart Nation development.",
             "link": "https://www.imda.gov.sg"
         },
         {
@@ -59,8 +59,14 @@
         {
             "name": "Unilever",
             "logo": "unilever",
-            "description": "hello",
+            "description": "Unlock data and insights to help smallholder farmers in Southeast Asia adopt farming practice that will improve their livelihoods and result in more sustainable outcomes. Extract new shopper insights to offer best in class products and services that are highly customized to consumers' needs.",
             "link": "https://www.unilever.com"
+        },
+        {
+            "name": "Roche",
+            "logo": "roche",
+            "description": "Enable real-time secure data-sharing from its CoaguChek home-monitoring device to the hospital information system to help improve standards of care for patients on blood-thinking therapy.",
+            "link": "https://www.roche.com"
         }
     ]
 }
