@@ -1,6 +1,6 @@
 import React from 'react'
 import Cell from '../../components/Cell'
-// import teamImg from '../../assets/team'
+import teamImg from '../../assets/team'
 import team from '../../data/team'
 import Member from './Member'
 import { StyledSubTitle, StyledParagraph, SubHeader } from './index.css'
@@ -25,10 +25,11 @@ const Team = () => (
             </Cell>
         </SubHeader>
         <StyledTeam>
-            {// team.filter(item => teamImg[item.image]).map(member => (
-            team.map(member => (
-                <Member key={member.name} member={member} />
-            ))}
+            {team
+                .filter(item => teamImg[item.image])
+                .map(member => (
+                    <Member key={member.name} member={member} />
+                ))}
         </StyledTeam>
     </>
 )
