@@ -149,7 +149,12 @@ export default class ModalForm extends PureComponent {
         const { modal } = this.props
 
         return this.state.sent ? (
-            <StyledMessage success>{this.state.message}</StyledMessage>
+            <StyledMessage
+                success
+                dangerouslySetInnerHTML={{
+                    __html: this.state.message
+                }}
+            />
         ) : (
             <>
                 {forms[modal].description && (
