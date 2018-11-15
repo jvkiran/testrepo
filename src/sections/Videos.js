@@ -53,7 +53,8 @@ class SectionContent extends PureComponent {
         // eslint-disable-next-line no-unused-vars
         const scroll = new SmoothScroll('li[href*="#videoScroll"]', {
             header: '[data-scroll-header]',
-            updateURL: true
+            updateURL: false,
+            speedAsDuration: true
         })
     }
 
