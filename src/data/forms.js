@@ -136,6 +136,11 @@ const forms = {
                 label: 'Your GitHub profile',
                 placeholder: 'i.e. https://github.com/oceanprotocol',
                 type: 'url'
+            },
+            twitter: {
+                label: 'Your Twitter profile',
+                placeholder: 'i.e. https://twitter.com/oceanprotocol',
+                type: 'url'
             }
         },
         button: 'Submit',
