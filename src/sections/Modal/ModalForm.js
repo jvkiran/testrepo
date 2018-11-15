@@ -37,8 +37,10 @@ export default class ModalForm extends PureComponent {
         let background
         let interest
         let publicspeaking
+        let community
         let linkedin
         let github
+        let twitter
 
         let url
 
@@ -82,6 +84,11 @@ export default class ModalForm extends PureComponent {
                 encodeURIComponent(form.publicspeaking.value)
         }
 
+        if (form.community) {
+            community =
+                form.community.value && encodeURIComponent(form.community.value)
+        }
+
         if (form.linkedin) {
             linkedin =
                 form.linkedin.value && encodeURIComponent(form.linkedin.value)
@@ -91,10 +98,15 @@ export default class ModalForm extends PureComponent {
             github = form.github.value && encodeURIComponent(form.github.value)
         }
 
+        if (form.twitter) {
+            twitter =
+                form.twitter.value && encodeURIComponent(form.twitter.value)
+        }
+
         if (modal === 'ambassadors') {
             url = `${
                 forms[modal].baseUrl
-            }&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&LINKEDIN=${linkedin}&GITHUB=${github}&${
+            }&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&COMMUNITY=${community}&LINKEDIN=${linkedin}&GITHUB=${github}&TWITTER=${twitter}&${
                 gdpr.flag
             }`
         } else {
