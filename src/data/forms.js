@@ -1,3 +1,5 @@
+import { social } from '../constants.js'
+
 const forms = {
     provider: {
         title: 'Join the Data Providers',
@@ -103,7 +105,7 @@ const forms = {
                 tag: 'textarea',
                 required: true
             },
-            communities: {
+            community: {
                 label: 'Your communities',
                 help: `What kind of communities are you a part of, which are relevant to advancing Ocean's cause and vision?`,
                 placeholder: 'i.e. data science, Python, etc.',
@@ -134,11 +136,17 @@ const forms = {
                 label: 'Your GitHub profile',
                 placeholder: 'i.e. https://github.com/oceanprotocol',
                 type: 'url'
+            },
+            twitter: {
+                label: 'Your Twitter profile',
+                placeholder: 'i.e. https://twitter.com/oceanprotocol',
+                type: 'url'
             }
         },
         button: 'Submit',
-        success:
-            'Thank you! Assuming your profile is a good fit, we will be in touch with you about next steps after this round closes on November 15th.',
+        success: `Thank you for your submission. We will review your application shortly and get back to you if your profile is a good fit. \n\nIn the mean time join the conversation and connect with the <a href=${
+            social.telegram
+        }>Ocean community on Telegram</a>`,
         baseUrl:
             '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=ee0c0eec08'
     }

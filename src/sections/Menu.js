@@ -133,7 +133,10 @@ class Menu extends PureComponent {
         // eslint-disable-next-line no-unused-vars
         const scroll = new SmoothScroll('a[href*="#"]', {
             header: '[data-scroll-header]',
-            topOnEmptyHash: true
+            topOnEmptyHash: true,
+            speed: 500,
+            speedAsDuration: true,
+            easing: 'easeInOutCubic'
         })
     }
 

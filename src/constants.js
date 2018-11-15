@@ -41,7 +41,8 @@ export const social = {
     reddit: 'https://www.reddit.com/r/oceanprotocol/',
     gitter: 'https://gitter.im/oceanprotocol/Lobby',
     youtube: 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
-    gitcoin: 'https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=oceanprotocol&order_by=-web3_created',
+    gitcoin:
+        'https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=oceanprotocol&order_by=-web3_created',
     bountiesNetwork:
         'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol'
 }
