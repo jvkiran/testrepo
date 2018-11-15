@@ -141,7 +141,11 @@ export default class ModalForm extends PureComponent {
         ) : (
             <>
                 {forms[modal].description && (
-                    <Paragraph>{forms[modal].description}</Paragraph>
+                    <Paragraph
+                        dangerouslySetInnerHTML={{
+                            __html: forms[modal].description
+                        }}
+                    />
                 )}
                 <form onSubmit={this.onSubmit}>
                     {forms[modal].fields &&
@@ -202,7 +206,11 @@ export default class ModalForm extends PureComponent {
                     </Button>
 
                     {this.state.message && (
-                        <StyledMessage>{this.state.message}</StyledMessage>
+                        <StyledMessage
+                            dangerouslySetInnerHTML={{
+                                __html: this.state.message
+                            }}
+                        />
                     )}
 
                     <Gdpr
