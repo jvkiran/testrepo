@@ -105,7 +105,7 @@ const forms = {
                 tag: 'textarea',
                 required: true
             },
-            communities: {
+            community: {
                 label: 'Your communities',
                 help: `What kind of communities are you a part of, which are relevant to advancing Ocean's cause and vision?`,
                 placeholder: 'i.e. data science, Python, etc.',
