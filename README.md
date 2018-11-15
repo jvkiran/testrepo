@@ -14,23 +14,24 @@
 
 ## Table of Contents
 
--   [Content](#content)
-    -   [Events](#events)
-        -   [date &amp; date_end](#date-date_end)
-    -   [Papers](#papers)
-    -   [Blog posts](#blog-posts)
-    -   [Videos](#videos)
--   [Forms](#forms)
--   [SEO](#seo)
--   [Development](#development)
-    -   [Environment variables](#environment-variables)
-    -   [Workflow](#workflow)
-    -   [Code style](#code-style)
--   [Deployment: always be shipping](#deployment-always-be-shipping)
-    -   [Manual Deployment](#manual-deployment)
--   [Data Collection &amp; Cookies](#data-collection-cookies)
-    -   [Cookie Banner](#cookie-banner)
-    -   [Google Analytics](#google-analytics)
+- [Table of Contents](#table-of-contents)
+- [Content](#content)
+    - [Events](#events)
+        - [`date` & `date_end`](#date--date_end)
+    - [Papers](#papers)
+    - [Blog posts](#blog-posts)
+    - [Videos](#videos)
+- [Forms](#forms)
+- [SEO](#seo)
+- [Development](#development)
+    - [Environment variables](#environment-variables)
+    - [Workflow](#workflow)
+    - [Code style](#code-style)
+- [Deployment: always be shipping](#deployment-always-be-shipping)
+    - [Manual Deployment](#manual-deployment)
+- [Data Collection & Cookies](#data-collection--cookies)
+    - [Cookie Banner](#cookie-banner)
+    - [Google Analytics](#google-analytics)
 
 ## Content
 
@@ -88,6 +89,8 @@ Via Zapier, the data is synced further in real time when new submissions happen:
 
 -   the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
 -   the Data Provider, Data Consumer & Ambassadors data into Google Sheets
+
+This automation requires the columns in the Google Sheet to not be changed, except for adding new columns at the very end. When columns are renamed, or new ones added at beginning, or in between, the data sending will break. If changes in columns are required, the Zapier task will have to be reconfigured.
 
 All above forms are built out from what's defined in [`src/data/forms.js`](src/data/forms.js). New fields can be added to all forms from there, but data sending for new fields still needs to be handled in the component in [`src/sections/Modal/ModalForm.js`](src/sections/Modal/ModalForm.js).
 
