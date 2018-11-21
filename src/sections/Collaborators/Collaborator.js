@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Logos from '../../assets/logos'
+import { capitalizeFirstLetter } from '../../lib/utils'
 import {
     StyledCollaborator,
     StyledDescription,
@@ -8,12 +9,6 @@ import {
     StyledCollaboratorWrap,
     StyledDescriptionLink
 } from './Collaborator.css'
-
-// generated SVG component names have first letter capitalized,
-// while original SVG file names are all lowercased.
-// Use this helper function to work around that
-const capitalizeFirstLetter = string =>
-    string.charAt(0).toUpperCase() + string.slice(1)
 
 // iterate over the Logos index and output correct logo component
 // by checking against the 'logo' value from ./data/collaborators.json

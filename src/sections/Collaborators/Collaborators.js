@@ -4,6 +4,8 @@ import ContentRow from '../../components/ContentRow'
 import Collaborator from './Collaborator'
 import { colors } from '../../styles'
 import content from '../../data/collaborators.json'
+import Logos from '../../assets/logos'
+import { capitalizeFirstLetter } from '../../lib/utils'
 import {
     StyledGrid,
     StyledParagraph,
@@ -40,12 +42,17 @@ const Collaborators = () => (
         <ContentRow wide>
             <StyledLine />
             <StyledGrid center textCenter>
-                {content.companies.map(collaborator => {
-                    const { name } = collaborator
-                    return (
-                        <Collaborator key={name} collaborator={collaborator} />
-                    )
-                })}
+                {content.companies
+                    .filter(item => Logos[capitalizeFirstLetter(item.logo)])
+                    .map(collaborator => {
+                        const { name } = collaborator
+                        return (
+                            <Collaborator
+                                key={name}
+                                collaborator={collaborator}
+                            />
+                        )
+                    })}
             </StyledGrid>
         </ContentRow>
     </Section>
