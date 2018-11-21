@@ -6,11 +6,7 @@
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-7b1173.svg?style=flat-square)](https://github.com/prettier/prettier)
 
----
-
 [**Live**](https://oceanprotocol.com) | [**Beta**](https://beta.oceanprotocol.com)
-
----
 
 ## Table of Contents
 
@@ -33,6 +29,8 @@
     - [Cookie Banner](#cookie-banner)
     - [Google Analytics](#google-analytics)
 
+---
+
 ## Content
 
 Most copy is mixed within the HTML and JSX markup in the files under `src/sections/`. The following content has been isolated in json data files in the `src/data/` directory and can be edited there:
@@ -40,6 +38,7 @@ Most copy is mixed within the HTML and JSX markup in the files under `src/sectio
 -   Events: [`events.json`](src/data/events.json)
 -   Team: [`team.json`](src/data/team.json)
 -   Advisors: [`advisors.json`](src/data/advisors.json)
+-   Collaborators: [`collaborators.json`](src/data/collaborators.json)
 -   Art: [`art.json`](src/data/art.json)
 -   FAQ: [`faq.json`](src/data/faq.json)
 -   Roadmap: [`roadmap.json`](src/data/roadmap.json)
@@ -71,6 +70,22 @@ Website only communicates with an endpoint created via webtask.io, where the tas
 All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel.
 
 Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the YouTube Data API v3 setup in Google Cloud Platform. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
+
+### Collaborators
+
+All displayed collaborators are sourced from the [`src/data/collaborators.json`](src/data/collaborators.json) file.
+
+For every collaborator `name`, `logo` and `link` are required, while `description` is optional. Here, `logo` refers to the filename of the SVG asset.
+
+#### Logo
+
+A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS.
+
+Logo file then needs to be imported and exported from the [`./src/assets/logos/index.js`](./src/assets/logos/index.js) file.
+
+_ToDo: remove the need to manually import the logo file._
+
+While all SVGs are automatically cleaned up through [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
 
 ## Forms
 
@@ -192,6 +207,18 @@ Code style follows:
 
 -   [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 -   [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+
+### SVG assets
+
+All SVG assets under `src/assets/` will be converted to React components before every build. Makes use of `SVGR` so SVG assets can be imported like so:
+
+```js
+import Logo from './components/svg/Logo'
+
+<Logo />
+```
+
+That's done with a simple bash script under [`scripts/svg.sh`](scripts/svg.sh).
 
 ## Deployment: always be shipping
 

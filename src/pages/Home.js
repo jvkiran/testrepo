@@ -7,6 +7,7 @@ import Data from '../sections/Data'
 import Papers from '../sections/Papers'
 import Events from '../sections/Events'
 import People from '../sections/People'
+import Collaborators from '../sections/Collaborators/Collaborators'
 import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import Modal from '../sections/Modal/Modal'
@@ -36,6 +37,7 @@ export default class Home extends Component {
                 <Papers />
                 <Data />
                 <People toggleModal={this.toggleModal} />
+                <Collaborators />
                 <Blog />
                 <Videos />
                 <MorePages />

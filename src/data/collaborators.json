@@ -1,0 +1,72 @@
+{
+    "title": "The companies \ntrusting Ocean Protocol",
+    "intro": "We work closely with our collaborators to iterate on the network's underlying technology. The following projects either have an agreement with Ocean Protocol or are actively working on integrating their project with Ocean Protocol.",
+    "companies": [
+        {
+            "name": "Fitchain",
+            "logo": "fitchain",
+            "description": "Fitchain allows organizations to publish their business challenges and connect to data scientists who effectively work on a solution.",
+            "link": "https://fitchain.io"
+        },
+        {
+            "name": "Enigma",
+            "logo": "enigma",
+            "description": "Enigma is using groundbreaking privacy technologies to build the first platform for scalable, end-to-end decentralized applications.",
+            "link": "https://enigma.co"
+        },
+        {
+            "name": "IBM Watson AI XPRIZE®",
+            "logo": "xprize",
+            "description": "Ocean Protocol will help bring data and information to the IBM Watson AI XPRIZE® participants.",
+            "link": "https://ai.xprize.org/"
+        },
+        {
+            "name": "MOBI - Mobility Open Blockchain Initiative",
+            "logo": "mobi",
+            "description": "Using blockchain and related technologies to make mobility safer, greener, and more accessible.",
+            "link": "https://www.dlt.mobi"
+        },
+        {
+            "name": "Verv",
+            "logo": "verv",
+            "description": "Verv is a clever home energy assistant that gives you intelligent information about key appliances and electricity usage in your home, helping you to tackle your bills, reduce your carbon footprint and keep your home safe.",
+            "link": "https://verv.energy"
+        },
+        {
+            "name": "Couger",
+            "logo": "couger",
+            "description": "Couger is building the integrated autonomous technology platform Connectome, which integrates AI, IoT, Robotics, and Blockchain to achieve search, prediction and seamless payment execution in the autonomous world.",
+            "link": "https://couger.co.jp"
+        },
+        {
+            "name": "Messari",
+            "logo": "messari",
+            "description": "Messari is building an open data library and curation tools that help researchers, investors, and regulators make sense of the cryptoasset industry.",
+            "link": "https://messari.io"
+        },
+        {
+            "name": "IMDA",
+            "logo": "imda",
+            "description": "Break down data silos and enable trusted and secure data exchange among private and public sectors to help Singapore accelerate its AI and Smart Nation development.",
+            "link": "https://www.imda.gov.sg"
+        },
+        {
+            "name": "Connected Life",
+            "logo": "connectedlife",
+            "description": "A specialist in the application of connected devices, cloud systems and data analytics & AI, ConnectedLife’s unique technology stack delivers highly modular, fast to deploy and low cost IoT for the global Smart Living and Precision Medicine industries.",
+            "link": "https://connectedlife.io"
+        },
+        {
+            "name": "Unilever",
+            "logo": "unilever",
+            "description": "Unlock data and insights to help smallholder farmers in Southeast Asia adopt farming practice that will improve their livelihoods and result in more sustainable outcomes. Extract new shopper insights to offer best in class products and services that are highly customized to consumers' needs.",
+            "link": "https://www.unilever.com"
+        },
+        {
+            "name": "Roche",
+            "logo": "roche",
+            "description": "Improving the standards of care for patients on blood-thinning therapy through automatic and secure transfer of data from the Roche CoaguChek INRange self-monitoring system to hospitals and healthcare professionals.",
+            "link": "https://www.roche.com"
+        }
+    ]
+}

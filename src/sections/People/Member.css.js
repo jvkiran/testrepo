@@ -37,7 +37,7 @@ export const Position = styled(Name)`
     margin-top: 0;
 `
 
-export const Quote = styled.p`
+export const Quote = styled.div`
     margin: 0;
     font-size: ${fonts.size.mini};
     color: rgb(${colors.white});

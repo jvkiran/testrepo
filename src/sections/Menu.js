@@ -58,6 +58,10 @@ const MenuItems = [
             {
                 name: 'Ambassadors',
                 href: '#ambassadors'
+            },
+            {
+                name: 'Collaborators',
+                href: '#collaborators'
             }
         ]
     },
