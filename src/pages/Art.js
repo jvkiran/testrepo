@@ -40,10 +40,16 @@ import OceanBanner01 from '@oceanprotocol/art/banner/banner-ocean-01@2x.png'
 import OceanBanner02 from '@oceanprotocol/art/banner/banner-ocean-02@2x.png'
 import OceanBanner03 from '@oceanprotocol/art/banner/banner-ocean-03@2x.png'
 import OceanBanner04 from '@oceanprotocol/art/banner/banner-ocean-04@2x.png'
+import OceanBanner05 from '@oceanprotocol/art/banner/banner-ocean-05@2x.png'
+import OceanBanner06 from '@oceanprotocol/art/banner/banner-ocean-06@2x.png'
 import OceanJeyllyfishGrid from '@oceanprotocol/art/jellyfish/jellyfish-grid.svg'
 import OceanJeyllyfishGridPNG from '@oceanprotocol/art/jellyfish/jellyfish-grid@2x.png'
 import OceanJeyllyfishFull from '@oceanprotocol/art/jellyfish/jellyfish-full.svg'
 import OceanJeyllyfishFullPNG from '@oceanprotocol/art/jellyfish/jellyfish-full@2x.png'
+import OceanMantarayGrid from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
+import OceanMantarayGridPNG from '@oceanprotocol/art/mantaray/mantaray-grid@2x.png'
+import OceanMantarayFull from '@oceanprotocol/art/mantaray/mantaray-full.svg'
+import OceanMantarayFullPNG from '@oceanprotocol/art/mantaray/mantaray-full@2x.png'
 
 const art = artJson[0]
 const mediakitDownload = `${social.github}/art/archive/master.zip`
@@ -217,6 +223,34 @@ const Art = ({ location }) => (
                         </LazyLoad>
                         PNG
                     </a>
+
+                    <a
+                        download
+                        href={OceanBanner05}
+                        onClick={() => GaEvent('Ocean Banner 05')}
+                    >
+                        <LazyLoad once height={337} offset={200}>
+                            <img
+                                alt="Ocean Protocol banner 5"
+                                src={OceanBanner05}
+                            />
+                        </LazyLoad>
+                        PNG
+                    </a>
+
+                    <a
+                        download
+                        href={OceanBanner06}
+                        onClick={() => GaEvent('Ocean Banner 06')}
+                    >
+                        <LazyLoad once height={337} offset={200}>
+                            <img
+                                alt="Ocean Protocol banner 6"
+                                src={OceanBanner06}
+                            />
+                        </LazyLoad>
+                        PNG
+                    </a>
                 </Banners>
             </ContentRow>
 
@@ -271,6 +305,64 @@ const Art = ({ location }) => (
                             download
                             href={OceanJeyllyfishGridPNG}
                             onClick={() => GaEvent('Jellyfish Grid')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                </KeyVisuals>
+            </ContentRow>
+
+            <ContentRow>
+                <SectionTitle>{art.mantaray.title}</SectionTitle>
+                <SectionSubTitle>{art.mantaray.description}</SectionSubTitle>
+
+                <KeyVisuals>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Mantaray Full"
+                                    src={OceanMantarayFull}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanMantarayFull}
+                            onClick={() => GaEvent('Mantaray Full')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanMantarayFullPNG}
+                            onClick={() => GaEvent('Mantaray Full')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Mantaray Grid"
+                                    src={OceanMantarayGrid}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanMantarayGrid}
+                            onClick={() => GaEvent('Mantaray Grid')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanMantarayGridPNG}
+                            onClick={() => GaEvent('Mantaray Grid')}
                         >
                             PNG
                         </a>
