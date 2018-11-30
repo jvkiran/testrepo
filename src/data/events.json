@@ -749,27 +749,26 @@
         "date": "2018-12-03",
         "link": "https://nips.cc/Conferences/2018/Schedule"
     },
-            {
+    {
         "city": "Leuven",
         "eventName": "Blockchain Unwired",
         "date": "2018-12-03",
         "link": "http://www.blockchainunwired.be"
     },
     {
-        {
         "city": "San Francisco",
         "eventName": "TTI/Vanguard Conference",
         "date": "2018-12-04",
         "link": "http://www.ttivanguard.com/conference/2018/next18_agenda.html"
     },
-        {
+    {
         "city": "Vienna",
         "eventName": "WeAreDevs AI Congress",
         "date": "2018-12-04",
         "date_end": "2018-12-05",
         "link": "https://www.wearedevelopers.com/ai-congress/"
     },
-            {
+    {
         "city": "Seoul",
         "eventName": "Korea AI Summit",
         "date": "2018-12-04",
