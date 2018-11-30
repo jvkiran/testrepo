@@ -749,6 +749,13 @@
         "date": "2018-12-03",
         "link": "https://nips.cc/Conferences/2018/Schedule"
     },
+            {
+        "city": "Leuven",
+        "eventName": "Blockchain Unwired",
+        "date": "2018-12-03",
+        "link": "http://www.blockchainunwired.be"
+    },
+    {
         {
         "city": "San Francisco",
         "eventName": "TTI/Vanguard Conference",
@@ -762,6 +769,19 @@
         "date_end": "2018-12-05",
         "link": "https://www.wearedevelopers.com/ai-congress/"
     },
+            {
+        "city": "Seoul",
+        "eventName": "Korea AI Summit",
+        "date": "2018-12-04",
+        "date_end": "2018-12-05",
+        "link": "http://aisummit.co.kr"
+    },
+           {
+        "city": "New Delhi",
+        "eventName": "Why Blockchain and Why Not",
+        "date": "2018-12-05",
+        "link": "https://events.91springboard.com/events/why-blockchain-and-why-not-with-ankit-raj-jha/f62bfd10-f3ba-11e8-91c3-062e097c0a53"
+    },  
         {
         "city": "Berlin",
         "eventName": "Product Milestone Announcement: Trilobite",
