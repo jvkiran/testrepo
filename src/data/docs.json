@@ -1,0 +1,14 @@
+{
+    "title": "The nitty gritty tech details",
+    "description": "Learn about the components of the Ocean Protocol software stack, and how to run or use the components relevant to you.",
+    "links": [
+        {
+            "title": "What is Ocean Protocol?",
+            "url": "https://docs.oceanprotocol.com/concepts/introduction/"
+        },
+        {
+            "title": "Software Components",
+            "url": "https://docs.oceanprotocol.com/concepts/components/"
+        }
+    ]
+}

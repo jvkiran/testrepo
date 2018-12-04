@@ -29,6 +29,8 @@ export const DocsList = styled.article`
     }
 
     ul {
+        margin: 0;
+        margin-bottom: 1.5rem;
     }
 
     li {

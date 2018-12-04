@@ -8,12 +8,7 @@ import {
     StyledParagraph,
     DocsList
 } from './Docs.css'
-
-const content = {
-    title: 'The nitty gritty tech details',
-    description:
-        'Learn about the components of the Ocean Protocol software stack, and how to run or use the components relevant to you.'
-}
+import content from '../data/docs.json'
 
 const Docs = () => (
     <StyledSection id="docs">
@@ -27,19 +22,17 @@ const Docs = () => (
                     <DocsList>
                         <h2>Ocean Protocol Documentation</h2>
                         <ul>
-                            <li>
-                                <a href="#">A doc</a>
-                            </li>
-                            <li>
-                                <a href="#">A doc</a>
-                            </li>
-                            <li>
-                                <a href="#">A doc</a>
-                            </li>
-                            <li>
-                                <a href="#">A doc</a>
-                            </li>
+                            {content.links.map(link => {
+                                const { title, url } = link
+
+                                return (
+                                    <li key={title}>
+                                        <a href={url}>{title}</a>
+                                    </li>
+                                )
+                            })}
                         </ul>
+                        <a href="https://docs.oceanprotocol.com">Go to Docs</a>
                     </DocsList>
                 </Cell>
             </Grid>
