@@ -6,7 +6,8 @@ import {
     StyledSection,
     StyledTitle,
     StyledParagraph,
-    DocsList
+    DocsList,
+    DocsLink
 } from './Docs.css'
 import content from '../data/docs.json'
 
@@ -31,8 +32,11 @@ const Docs = () => (
                                     </li>
                                 )
                             })}
+                            <li>And much more...</li>
                         </ul>
-                        <a href="https://docs.oceanprotocol.com">Go to Docs</a>
+                        <DocsLink href="https://docs.oceanprotocol.com">
+                            Go to Docs
+                        </DocsLink>
                     </DocsList>
                 </Cell>
             </Grid>
