@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import SEO from '../components/SEO'
 import Menu from '../sections/Menu'
 import Welcome from '../sections/Welcome/Welcome'
+import Docs from '../sections/Docs'
 import Project from '../sections/Project'
 import Data from '../sections/Data'
 import Papers from '../sections/Papers'
@@ -34,6 +35,7 @@ export default class Home extends Component {
                 <Welcome />
                 <Events />
                 <Project toggleModal={this.toggleModal} />
+                <Docs />
                 <Papers />
                 <Data />
                 <People toggleModal={this.toggleModal} />
