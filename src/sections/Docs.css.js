@@ -1,12 +1,22 @@
 import styled from 'styled-components'
 import Section from '../components/Section'
+import Grid from '../components/Grid'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
-import { colors, fonts, transitions } from '../styles'
+import { colors, fonts, transitions, responsive } from '../styles'
 
 export const StyledSection = styled(Section)`
     background-size: cover;
-    min-height: 60vh;
+    background-position: center -5rem;
+    min-height: 550px;
+    margin-left: -2.5rem;
+    width: calc(100% + 5rem);
+    display: flex;
+    align-items: center;
+`
+
+export const StyledGrid = styled(Grid)`
+    align-items: center;
 `
 
 export const StyledTitle = styled(Title)`
@@ -16,6 +26,10 @@ export const StyledTitle = styled(Title)`
 
 export const StyledParagraph = styled(Paragraph)`
     background: rgba(252, 252, 252, 0.75);
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: 0;
+    }
 `
 
 export const DocsList = styled.article`

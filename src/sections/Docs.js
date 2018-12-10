@@ -1,10 +1,10 @@
 import React from 'react'
-import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import mantaray from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 import {
     StyledSection,
+    StyledGrid,
     StyledTitle,
     StyledParagraph,
     DocsList,
@@ -15,11 +15,11 @@ import content from '../data/docs.json'
 const Docs = () => (
     <StyledSection
         id="docs"
-        background={`252,252,252`}
+        background={'252,252,252'}
         backgroundImage={mantaray}
     >
         <ContentRow>
-            <Grid>
+            <StyledGrid>
                 <Cell width={3 / 6}>
                     <StyledTitle>{content.title}</StyledTitle>
                     <StyledParagraph>{content.description}</StyledParagraph>
@@ -44,7 +44,7 @@ const Docs = () => (
                         </DocsLink>
                     </DocsList>
                 </Cell>
-            </Grid>
+            </StyledGrid>
         </ContentRow>
     </StyledSection>
 )
