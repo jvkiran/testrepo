@@ -3,10 +3,8 @@ import Section from '../components/Section'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import { colors, fonts, transitions } from '../styles'
-import mantaray from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 
 export const StyledSection = styled(Section)`
-    background: url(${mantaray}) no-repeat center 4rem;
     background-size: cover;
     min-height: 60vh;
 `
@@ -17,15 +15,15 @@ export const StyledTitle = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    background: rgba(${colors.white}, 0.75);
+    background: rgba(252, 252, 252, 0.75);
 `
 
 export const DocsList = styled.article`
     margin: 0;
     padding: 1.5rem;
-    background: rgba(${colors.dimmedGrey}, 0.9);
+    background: rgb(${colors.white});
     border-radius: 0.2rem;
-    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(${colors.black}, 0.07);
 
     h2 {
