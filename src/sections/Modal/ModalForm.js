@@ -7,7 +7,7 @@ import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
-import { StyledMessage, Gdpr } from './ModalForm.css'
+import { StyledMessage, Gdpr, MailchimpWarning } from './ModalForm.css'
 
 const gdpr = gdprJson[0]
 
@@ -19,7 +19,46 @@ export default class ModalForm extends PureComponent {
     state = {
         fetching: false,
         sent: false,
-        message: ''
+        message: '',
+        mailchimpUnavailable: true // true by default, will only become false on mount if MailChimp can be connected to
+    }
+
+    componentDidMount() {
+        this.mailchimpCheck()
+    }
+
+    mailchimpCheck() {
+        jsonp(forms[this.props.modal].baseUrl, { param: 'c' }, (err, data) => {
+            if (err) {
+                console.log(err) // eslint-disable-line no-console
+            }
+
+            this.setState({
+                mailchimpUnavailable: false
+            })
+        })
+    }
+
+    makeRequest = (url, modal) => {
+        jsonp(url, { param: 'c' }, (err, data) => {
+            if (err) {
+                this.setState({
+                    fetching: false,
+                    message: err
+                })
+            } else if (data.result !== 'success') {
+                this.setState({
+                    fetching: false,
+                    message: data.msg
+                })
+            } else {
+                this.setState({
+                    fetching: false,
+                    sent: true,
+                    message: forms[modal].success
+                })
+            }
+        })
     }
 
     onSubmit = e => {
@@ -122,31 +161,13 @@ export default class ModalForm extends PureComponent {
                 fetching: true,
                 message: ''
             },
-            () =>
-                jsonp(url, { param: 'c' }, (err, data) => {
-                    if (err) {
-                        this.setState({
-                            fetching: false,
-                            message: err
-                        })
-                    } else if (data.result !== 'success') {
-                        this.setState({
-                            fetching: false,
-                            message: data.msg
-                        })
-                    } else {
-                        this.setState({
-                            fetching: false,
-                            sent: true,
-                            message: forms[modal].success
-                        })
-                    }
-                })
+            () => this.makeRequest(url, modal)
         )
     }
 
     render() {
         const { modal } = this.props
+        const { mailchimpUnavailable } = this.state
 
         return this.state.sent ? (
             <StyledMessage
@@ -164,6 +185,13 @@ export default class ModalForm extends PureComponent {
                         }}
                     />
                 )}
+
+                {mailchimpUnavailable && (
+                    <MailchimpWarning>
+                        {`Please make sure to disable your content blocker or add an exception for oceanprotocol.com before submitting this form. We use MailChimp to collect your data and in some cases this is blocked by content blockers in some browsers.`}
+                    </MailchimpWarning>
+                )}
+
                 <form onSubmit={this.onSubmit}>
                     {forms[modal].fields &&
                         Object.entries(forms[modal].fields).map(
