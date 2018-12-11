@@ -7,6 +7,7 @@ import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
+import MailchimpCheck from './MailchimpCheck'
 import { StyledMessage, Gdpr } from './ModalForm.css'
 
 const gdpr = gdprJson[0]
@@ -20,6 +21,28 @@ export default class ModalForm extends PureComponent {
         fetching: false,
         sent: false,
         message: ''
+    }
+
+    makeRequest = (url, modal) => {
+        jsonp(url, { param: 'c' }, (err, data) => {
+            if (err) {
+                this.setState({
+                    fetching: false,
+                    message: err
+                })
+            } else if (data.result !== 'success') {
+                this.setState({
+                    fetching: false,
+                    message: data.msg
+                })
+            } else {
+                this.setState({
+                    fetching: false,
+                    sent: true,
+                    message: forms[modal].success
+                })
+            }
+        })
     }
 
     onSubmit = e => {
@@ -122,37 +145,19 @@ export default class ModalForm extends PureComponent {
                 fetching: true,
                 message: ''
             },
-            () =>
-                jsonp(url, { param: 'c' }, (err, data) => {
-                    if (err) {
-                        this.setState({
-                            fetching: false,
-                            message: err
-                        })
-                    } else if (data.result !== 'success') {
-                        this.setState({
-                            fetching: false,
-                            message: data.msg
-                        })
-                    } else {
-                        this.setState({
-                            fetching: false,
-                            sent: true,
-                            message: forms[modal].success
-                        })
-                    }
-                })
+            () => this.makeRequest(url, modal)
         )
     }
 
     render() {
         const { modal } = this.props
+        const { sent, message, fetching } = this.state
 
-        return this.state.sent ? (
+        return sent ? (
             <StyledMessage
                 success
                 dangerouslySetInnerHTML={{
-                    __html: this.state.message
+                    __html: message
                 }}
             />
         ) : (
@@ -164,6 +169,9 @@ export default class ModalForm extends PureComponent {
                         }}
                     />
                 )}
+
+                <MailchimpCheck modal={modal} />
+
                 <form onSubmit={this.onSubmit}>
                     {forms[modal].fields &&
                         Object.entries(forms[modal].fields).map(
@@ -218,14 +226,14 @@ export default class ModalForm extends PureComponent {
                                 )
                         )}
 
-                    <Button fetching={this.state.fetching} type="submit">
+                    <Button fetching={fetching} type="submit">
                         {forms[modal].button}
                     </Button>
 
-                    {this.state.message && (
+                    {message && (
                         <StyledMessage
                             dangerouslySetInnerHTML={{
-                                __html: this.state.message
+                                __html: message
                             }}
                         />
                     )}
