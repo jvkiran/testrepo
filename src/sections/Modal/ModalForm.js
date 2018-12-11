@@ -7,7 +7,8 @@ import Paragraph from '../../components/Paragraph'
 import Button from '../../components/Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
-import { StyledMessage, Gdpr, MailchimpWarning } from './ModalForm.css'
+import MailchimpCheck from './MailchimpCheck'
+import { StyledMessage, Gdpr } from './ModalForm.css'
 
 const gdpr = gdprJson[0]
 
@@ -19,24 +20,7 @@ export default class ModalForm extends PureComponent {
     state = {
         fetching: false,
         sent: false,
-        message: '',
-        mailchimpUnavailable: true // true by default, will only become false on mount if MailChimp can be connected to
-    }
-
-    componentDidMount() {
-        this.mailchimpCheck()
-    }
-
-    mailchimpCheck() {
-        jsonp(forms[this.props.modal].baseUrl, { param: 'c' }, (err, data) => {
-            if (err) {
-                console.log(err) // eslint-disable-line no-console
-            }
-
-            this.setState({
-                mailchimpUnavailable: false
-            })
-        })
+        message: ''
     }
 
     makeRequest = (url, modal) => {
@@ -167,13 +151,13 @@ export default class ModalForm extends PureComponent {
 
     render() {
         const { modal } = this.props
-        const { mailchimpUnavailable } = this.state
+        const { sent, message, fetching } = this.state
 
-        return this.state.sent ? (
+        return sent ? (
             <StyledMessage
                 success
                 dangerouslySetInnerHTML={{
-                    __html: this.state.message
+                    __html: message
                 }}
             />
         ) : (
@@ -186,11 +170,7 @@ export default class ModalForm extends PureComponent {
                     />
                 )}
 
-                {mailchimpUnavailable && (
-                    <MailchimpWarning>
-                        {`Please make sure to disable your content blocker or add an exception for oceanprotocol.com before submitting this form. We use MailChimp to collect your data and in some cases this is blocked by content blockers in some browsers.`}
-                    </MailchimpWarning>
-                )}
+                <MailchimpCheck modal={modal} />
 
                 <form onSubmit={this.onSubmit}>
                     {forms[modal].fields &&
@@ -246,14 +226,14 @@ export default class ModalForm extends PureComponent {
                                 )
                         )}
 
-                    <Button fetching={this.state.fetching} type="submit">
+                    <Button fetching={fetching} type="submit">
                         {forms[modal].button}
                     </Button>
 
-                    {this.state.message && (
+                    {message && (
                         <StyledMessage
                             dangerouslySetInnerHTML={{
-                                __html: this.state.message
+                                __html: message
                             }}
                         />
                     )}

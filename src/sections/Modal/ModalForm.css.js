@@ -11,12 +11,6 @@ export const StyledMessage = styled.p`
     font-family: ${fonts.family.button};
 `
 
-export const MailchimpWarning = styled.p`
-    font-size: ${fonts.size.small};
-    color: rgb(${colors.red});
-    margin-bottom: 2rem;
-`
-
 export const Gdpr = styled.div`
     margin-top: 2rem;
     font-size: ${fonts.size.small};
