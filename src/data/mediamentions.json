@@ -1,0 +1,10 @@
+{
+    "title": "As featured in",
+    "publications": [
+        {
+            "name": "New York Times",
+            "logo": "newyorktimes",
+            "link": "https://www.nytimes.com"
+        }
+    ]
+}

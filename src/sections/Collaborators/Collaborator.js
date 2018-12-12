@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Logos from '../../assets/logos'
-import { capitalizeFirstLetter } from '../../lib/utils'
+import Logo from '../../components/Logo'
 import {
     StyledCollaborator,
     StyledDescription,
@@ -9,19 +8,6 @@ import {
     StyledCollaboratorWrap,
     StyledDescriptionLink
 } from './Collaborator.css'
-
-// iterate over the Logos index and output correct logo component
-// by checking against the 'logo' value from ./data/collaborators.json
-const Logo = ({ logo, ...props }) => {
-    const logoComponentName = capitalizeFirstLetter(logo)
-
-    if (Logos.hasOwnProperty(logoComponentName)) {
-        let LogoComponent = Logos[logoComponentName]
-        return <LogoComponent key={Logos[logoComponentName]} {...props} />
-    } else {
-        return null
-    }
-}
 
 const Collaborator = ({ collaborator }) => {
     const { name, logo, link, description } = collaborator
