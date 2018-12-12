@@ -2,9 +2,19 @@
     "title": "As featured in",
     "publications": [
         {
+            "name": "Forbes",
+            "logo": "forbes",
+            "link": "https://www.forbes.com"
+        },
+        {
             "name": "New York Times",
             "logo": "newyorktimes",
             "link": "https://www.nytimes.com"
+        },
+        {
+            "name": "San Francisco Chronicle",
+            "logo": "sanfranciscochronicle",
+            "link": "https://www.sfchronicle.com"
         }
     ]
 }

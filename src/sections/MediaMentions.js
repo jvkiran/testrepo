@@ -1,8 +1,12 @@
 import React from 'react'
 import ContentRow from '../components/ContentRow'
-import Logo from '../components/Logo'
 import content from '../data/mediamentions.json'
-import { StyledSection, StyledGrid, StyledTitle } from './MediaMentions.css'
+import {
+    StyledSection,
+    StyledGrid,
+    StyledTitle,
+    StyledLogo
+} from './MediaMentions.css'
 
 const MediaMentions = () => (
     <StyledSection id="mediamentions">
@@ -13,9 +17,8 @@ const MediaMentions = () => (
                     const { name, logo, link } = publication
                     return (
                         <div key={name}>
-                            <a href={link}>
-                                <Logo logo={logo} />
-                                {name}
+                            <a href={link} title={name}>
+                                <StyledLogo logo={logo} />
                             </a>
                         </div>
                     )

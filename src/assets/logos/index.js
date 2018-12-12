@@ -12,6 +12,10 @@ import { ReactComponent as Mobi } from '../../assets/logos/mobi.svg'
 // import { ReactComponent as Unilever } from '../../assets/logos/unilever.svg'
 import { ReactComponent as Xprize } from '../../assets/logos/xprize.svg'
 
+import { ReactComponent as Newyorktimes } from '../../assets/logos/newyorktimes.svg'
+import { ReactComponent as Forbes } from '../../assets/logos/forbes.svg'
+import { ReactComponent as Sanfranciscochronicle } from '../../assets/logos/sanfranciscochronicle.svg'
+
 export default {
     Couger,
     Enigma,
@@ -21,5 +25,9 @@ export default {
     Mobi,
     // Roche,
     // Unilever,
-    Xprize
+    Xprize,
+
+    Newyorktimes,
+    Forbes,
+    Sanfranciscochronicle
 }
