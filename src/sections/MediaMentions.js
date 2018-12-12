@@ -18,7 +18,7 @@ const MediaMentions = () => (
                     return (
                         <div key={name}>
                             <a href={link} title={name}>
-                                <StyledLogo logo={logo} />
+                                <StyledLogo logo={logo} className={logo} />
                             </a>
                         </div>
                     )

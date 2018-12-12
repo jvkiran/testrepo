@@ -12,9 +12,12 @@ import { ReactComponent as Mobi } from '../../assets/logos/mobi.svg'
 // import { ReactComponent as Unilever } from '../../assets/logos/unilever.svg'
 import { ReactComponent as Xprize } from '../../assets/logos/xprize.svg'
 
+import { ReactComponent as Bbc } from '../../assets/logos/bbc.svg'
 import { ReactComponent as Newyorktimes } from '../../assets/logos/newyorktimes.svg'
 import { ReactComponent as Forbes } from '../../assets/logos/forbes.svg'
 import { ReactComponent as Sanfranciscochronicle } from '../../assets/logos/sanfranciscochronicle.svg'
+import { ReactComponent as Cointelegraph } from '../../assets/logos/cointelegraph.svg'
+import { ReactComponent as Bloomberg } from '../../assets/logos/bloomberg.svg'
 
 export default {
     Couger,
@@ -27,7 +30,10 @@ export default {
     // Unilever,
     Xprize,
 
+    Bbc,
     Newyorktimes,
     Forbes,
-    Sanfranciscochronicle
+    Sanfranciscochronicle,
+    Cointelegraph,
+    Bloomberg
 }

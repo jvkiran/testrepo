@@ -2,6 +2,11 @@
     "title": "As featured in",
     "publications": [
         {
+            "name": "BBC Capital",
+            "logo": "bbc",
+            "link": "http://www.bbc.com/capital"
+        },
+        {
             "name": "Forbes",
             "logo": "forbes",
             "link": "https://www.forbes.com"
@@ -15,6 +20,16 @@
             "name": "San Francisco Chronicle",
             "logo": "sanfranciscochronicle",
             "link": "https://www.sfchronicle.com"
+        },
+        {
+            "name": "Cointelegraph",
+            "logo": "cointelegraph",
+            "link": "https://cointelegraph.com"
+        },
+        {
+            "name": "Bloomberg",
+            "logo": "bloomberg",
+            "link": "https://www.bloomberg.com"
         }
     ]
 }
