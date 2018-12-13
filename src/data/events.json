@@ -800,16 +800,16 @@
         "link": "https://www.eventbrite.sg/e/ocean-protocol-product-milestone-announcement-trilobite-release-tickets-53001961293"
     },
     {
+        "city": "Berlin",
+        "eventName": "Berlin Innovation Ventures Mini-Summit",
+        "date": "2018-12-10",
+        "link": "https://berlininnovation.vc/"
+    },
+    {
         "city": "Global",
         "eventName": "Big Data Value Association Webinar",
         "date": "2018-12-11",
         "link": "https://register.gotowebinar.com/register/5124372192900409613"
-    },
-    {
-        "city": "Global",
-        "eventName": "Bottish 10 Simulcast",
-        "date": "2018-12-13",
-        "link": "http://www.bottish.co/10"
     },
     {
         "city": "Amsterdam",
@@ -823,13 +823,13 @@
         "date": "2018-12-12",
         "link": "https://www.meetup.com/nl-NL/Nature2-0-Where-Blockchain-DLT-and-AI-meet/events/254908812/"
     },
-    {
-        "city": "Berlin",
-        "eventName": "Berlin Innovation Ventures Mini-Summit",
-        "date": "2018-12-10",
-        "link": "https://berlininnovation.vc/"
+    { 
+        "city": "Global",
+        "eventName": "Bottish 10 Simulcast",
+        "date": "2018-12-13",
+        "link": "http://www.bottish.co/10"
     },
-    {
+    {  
         "city": "London",
         "eventName": "Product Milestone Announcement: Trilobite",
         "date": "2018-12-18",
