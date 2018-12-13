@@ -11,11 +11,12 @@ import {
     DocsLink
 } from './Docs.css'
 import content from '../data/docs.json'
+import { colors } from '../styles'
 
 const Docs = () => (
     <StyledSection
         id="docs"
-        background={'252,252,252'}
+        background={colors.dimmedGrey}
         backgroundImage={mantaray}
     >
         <ContentRow>

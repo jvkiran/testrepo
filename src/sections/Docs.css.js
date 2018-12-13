@@ -13,6 +13,16 @@ export const StyledSection = styled(Section)`
     width: calc(100% + 5rem);
     display: flex;
     align-items: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(${colors.white}, 0.7);
+    }
 `
 
 export const StyledGrid = styled(Grid)`
@@ -25,7 +35,7 @@ export const StyledTitle = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    background: rgba(252, 252, 252, 0.75);
+    background: rgba(${colors.white}, 0.2);
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: 0;
