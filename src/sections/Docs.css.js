@@ -21,7 +21,7 @@ export const StyledSection = styled(Section)`
         right: 0;
         top: 0;
         bottom: 0;
-        background: rgba(${colors.white}, 0.7);
+        background: rgba(${colors.white}, 0.75);
     }
 `
 
