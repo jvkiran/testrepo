@@ -33,12 +33,12 @@ export default class Home extends Component {
                 <SEO />
                 <Menu />
                 <Welcome />
-                <MediaMentions />
                 <Events />
                 <Project toggleModal={this.toggleModal} />
                 <Papers />
                 <Data />
                 <People toggleModal={this.toggleModal} />
+                <MediaMentions />
                 <Collaborators />
                 <Blog />
                 <Videos />
