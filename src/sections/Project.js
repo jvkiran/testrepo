@@ -9,7 +9,8 @@ import Pulse from '../components/Pulse'
 import Cell from '../components/Cell'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
-import Roadmap from '../components/Roadmap'
+import Docs from '../sections/Docs'
+import Roadmap from '../sections/Roadmap'
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg'
 import dataDotsRight from '../assets/graphics/data-dots-right.svg'
 import {
@@ -109,6 +110,7 @@ const Project = ({ toggleModal, ...props }) => {
                 </Grid>
             </ContentRow>
 
+            <Docs />
             <Roadmap />
         </Section>
     )

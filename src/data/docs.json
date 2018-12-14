@@ -1,0 +1,22 @@
+{
+    "title": "The essential tech details",
+    "description": "Learn about the components of the Ocean Protocol software stack and how to use them.",
+    "links": [
+        {
+            "title": "What is Ocean Protocol?",
+            "url": "https://docs.oceanprotocol.com/concepts/introduction/"
+        },
+        {
+            "title": "Software Components",
+            "url": "https://docs.oceanprotocol.com/concepts/components/"
+        },
+        {
+            "title": "Quickstart",
+            "url": "https://docs.oceanprotocol.com/setup/quickstart/"
+        },
+        {
+            "title": "Get Ether and Ocean Tokens for Testnets",
+            "url": "https://docs.oceanprotocol.com/tutorials/get-ether-and-ocean-tokens/"
+        }
+    ]
+}

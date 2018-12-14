@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import ContentRow from '../components/ContentRow'
-import { colors, responsive, fonts } from '../styles'
+import { colors, responsive, fonts, layout } from '../styles'
 
 export const StyledRoadmap = styled.article`
-    margin-top: 2rem;
+    margin-top: ${layout.pageFrame / 2};
     margin-bottom: -6rem;
     background: rgb(${colors.dimmedGrey});
     margin-left: -2.5rem;

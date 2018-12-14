@@ -30,6 +30,10 @@ const MenuItems = [
                 href: '#project'
             },
             {
+                name: 'Documentation',
+                href: '#docs'
+            },
+            {
                 name: 'Papers',
                 href: '#papers'
             },
