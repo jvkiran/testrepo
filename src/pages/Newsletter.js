@@ -1,10 +1,9 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import SEO from '../components/SEO'
+import Page from '../templates/Page'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import Header from '../components/Header'
 import { colors } from '../styles'
 import { StyledSection, StyledFormNewsletter } from './Newsletter.css'
 
@@ -26,13 +25,12 @@ export default class Newsletter extends Component {
         const description = 'Subscribe to be the first to know about updates.'
 
         return (
-            <Fragment>
-                <SEO
-                    description={description}
-                    path={this.props.location.pathname}
-                    title={title}
-                />
-                <Header />
+            <Page
+                title={title}
+                description={description}
+                location={this.props.location}
+                noheader
+            >
                 <StyledSection
                     background={colors.black}
                     fontColor={colors.white}
@@ -44,7 +42,7 @@ export default class Newsletter extends Component {
 
                     <StyledFormNewsletter />
                 </StyledSection>
-            </Fragment>
+            </Page>
         )
     }
 }

@@ -1,61 +1,44 @@
-import styled, { keyframes } from 'styled-components'
-import { Link } from 'react-router-dom'
-import fadeIn from 'react-animations/lib/fade-in'
-import { colors, fonts, transitions } from '../styles'
+import styled from 'styled-components'
+import Title from '../components/Title'
+import SubTitle from '../components/SubTitle'
+import OceanJeyllyfishBack from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
+import { colors, layout } from '../styles'
 
 export const StyledHeader = styled.header`
-    background-color: ${({ background }) => `rgb(${background})`};
+    background-image: url(${OceanJeyllyfishBack});
+    background-position: center 3rem;
+    display: flex;
+    align-items: center;
+    margin-top: ${layout.pageFrame};
+    background-color: ${({ background }) =>
+        background ? `rgb(${background})` : `rgb(${colors.black})`};
     transition: transform 0.3s ease-in-out;
     transform: none;
-    padding: 0.75rem 1rem;
-`
+    padding: 10rem calc(${layout.pageFrame} * 2) 6rem
+        calc(${layout.pageFrame} * 2);
+    margin-bottom: ${layout.pageFrame};
 
-export const StyledContainer = styled.div`
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-
-export const StyledLogo = styled(Link)`
-    height: 60px;
-    z-index: 10;
-    margin-left: 20px;
-
-    & svg {
-        width: auto;
-        height: 100%;
+    p {
+        margin-bottom: 0;
+        color: rgb(${colors.white});
     }
-`
 
-export const StyledMenuItem = styled(Link)`
-    transition: ${transitions.base};
-    color: rgba(${colors.white}, 0.7);
-    font-family: ${fonts.family.button};
-`
-
-const animation = keyframes`
-    ${fadeIn}
-`
-
-export const StyledNav = styled.nav`
-    text-transform: uppercase;
-    text-align: right;
-    color: rgb(${colors.white});
-    animation: 1s ${animation} 1.2s backwards;
-
-    & a {
-        display: inline-block;
-        margin-right: 2rem;
+    a {
+        color: inherit;
+        border-bottom: 1px solid rgba(${colors.white}, 0.2);
 
         &:hover,
-        &:focus,
-        &.active {
-            color: rgba(
-                ${colors.white},
-                1
-            ); /* stylelint-disable-line selector-no-qualifying-type */
+        &:focus {
+            border-bottom-color: rgba(${colors.white}, 0.4);
         }
     }
+`
+
+export const StyledTitle = styled(Title)`
+    margin-bottom: 1rem;
+    margin-top: 0;
+`
+
+export const StyledSubTitle = styled(SubTitle)`
+    color: rgb(${colors.lightGrey});
 `

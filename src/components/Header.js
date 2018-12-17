@@ -1,34 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
-import { colors } from '../styles'
-import {
-    StyledHeader,
-    StyledContainer,
-    StyledLogo,
-    StyledMenuItem,
-    StyledNav
-} from './Header.css'
+import Paragraph from '../components/Paragraph'
+import ContentRow from '../components/ContentRow'
+import { StyledHeader, StyledTitle, StyledSubTitle } from './Header.css'
 
-const Header = ({ background }) => (
+const Header = ({ background, title, description, text }) => (
     <StyledHeader background={background}>
-        <StyledContainer>
-            <StyledLogo to="/">
-                <OceanLogo />
-            </StyledLogo>
-            <StyledNav>
-                <StyledMenuItem to="/">← Back to homepage</StyledMenuItem>
-            </StyledNav>
-        </StyledContainer>
+        <ContentRow narrow>
+            <StyledTitle white>{title}</StyledTitle>
+            <StyledSubTitle center>{description}</StyledSubTitle>
+            {text && (
+                <Paragraph center dangerouslySetInnerHTML={{ __html: text }} />
+            )}
+        </ContentRow>
     </StyledHeader>
 )
 
 Header.propTypes = {
-    background: PropTypes.string
-}
-
-Header.defaultProps = {
-    background: colors.black
+    background: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    text: PropTypes.string
 }
 
 export default Header

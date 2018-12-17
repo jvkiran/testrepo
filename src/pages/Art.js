@@ -12,13 +12,9 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
-import { colors } from '../styles'
 import { social } from '../constants'
 import content from '../data/pages/art.json'
 import {
-    HeaderArt,
-    StyledTitle,
-    StyledSubTitle,
     StyledFirstContentRow,
     SectionTitle,
     SectionSubTitle,
@@ -29,6 +25,7 @@ import {
     KeyVisual,
     StyledCollapsible
 } from './Art.css'
+import { colors } from '../styles'
 
 // grab all assets from art package
 import OceanLogo from '@oceanprotocol/art/logo/logo.svg'
@@ -58,18 +55,13 @@ function GaEvent(artasset) {
 }
 
 const Art = ({ location }) => (
-    <Page content={content} location={location}>
-        <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
-            <ContentRow narrow>
-                <StyledTitle white>{content.title}</StyledTitle>
-                <StyledSubTitle center>{content.description}</StyledSubTitle>
-                <Paragraph
-                    center
-                    dangerouslySetInnerHTML={{ __html: content.text }}
-                />
-            </ContentRow>
-        </HeaderArt>
-
+    <Page
+        title={content.title}
+        description={content.description}
+        text={content.text}
+        location={location}
+        headerBackground={colors.darkPurple}
+    >
         <Section>
             <StyledFirstContentRow>
                 <Grid>

@@ -3,9 +3,12 @@ import { NavLink } from 'react-router-dom'
 import { colors, fonts, transitions } from '../styles'
 
 export const StyledMenu = styled.nav`
-    background: rgb(${colors.black});
-    padding: 0.75rem 1rem;
+    background-color: ${({ background }) =>
+        background ? `rgb(${background})` : `rgb(${colors.black})`};
+    padding: 1.5rem 1rem;
     z-index: 5;
+    position: absolute;
+    width: 100%;
 `
 
 export const StyledSubMenu = styled.div`
@@ -30,7 +33,7 @@ export const StyledContainer = styled.div`
 export const StyledLogo = styled(NavLink)`
     height: 60px;
     z-index: 10;
-    margin-left: 20px;
+    margin-left: 1rem;
 
     & svg {
         width: auto;

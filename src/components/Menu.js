@@ -14,14 +14,10 @@ import {
 
 import menuItems from '../data/menu.json'
 
-const SubMenu = ({ item, current }) => (
+const SubMenu = ({ item }) => (
     <StyledSubMenu>
         {item.sub.map((subitem, index) => (
-            <StyledSubMenuItem
-                // current={item.href.replace('/', '') === current}
-                key={index}
-                to={subitem.href}
-            >
+            <StyledSubMenuItem key={index} to={subitem.href}>
                 {subitem.name}
             </StyledSubMenuItem>
         ))}
@@ -29,14 +25,17 @@ const SubMenu = ({ item, current }) => (
 )
 
 SubMenu.propTypes = {
-    item: PropTypes.object,
-    current: PropTypes.string
+    item: PropTypes.object
 }
 
 export default class Menu extends PureComponent {
+    static propTypes = {
+        background: PropTypes.string
+    }
+
     render() {
         return (
-            <StyledMenu>
+            <StyledMenu background={this.props.background}>
                 <StyledContainer>
                     <StyledLogo to={'/'} title="Back to homepage">
                         <OceanLogo />
