@@ -34,6 +34,7 @@ export default class Newsletter extends Component {
                 <StyledSection
                     background={colors.black}
                     fontColor={colors.white}
+                    viewport
                 >
                     <ContentRow>
                         <Title white>{title}</Title>

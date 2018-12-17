@@ -7,7 +7,6 @@ import ContentRow from '../components/ContentRow'
 import { colors } from '../styles'
 
 export const StyledSection = styled(Section)`
-    min-height: 87vh;
     display: flex;
     align-items: center;
 
@@ -19,7 +18,6 @@ export const StyledSection = styled(Section)`
     ${Title} {
         /* stylelint-disable-line */
         margin-bottom: 1rem;
-        margin-top: -4rem;
     }
 
     ${SubTitle} {

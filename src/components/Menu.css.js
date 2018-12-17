@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import { colors, fonts, transitions } from '../styles'
+import { colors, fonts, transitions, layout } from '../styles'
 
 export const StyledMenu = styled.nav`
     background-color: ${({ background }) =>
@@ -9,6 +9,7 @@ export const StyledMenu = styled.nav`
     z-index: 5;
     position: ${({ noabsolute }) => (noabsolute ? 'static' : 'absolute')};
     width: 100%;
+    margin-bottom: ${layout.pageFrame};
 `
 
 export const StyledSubMenu = styled.div`

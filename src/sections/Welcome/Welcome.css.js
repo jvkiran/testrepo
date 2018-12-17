@@ -1,14 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
+import { Link } from 'react-router-dom'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import ContentRow from '../../components/ContentRow'
-import { colors, responsive, fonts, layout, gradients } from '../../styles'
+import { colors, responsive, fonts, gradients } from '../../styles'
 
 export const Hero = styled(Section)`
     background: rgb(${colors.black});
-    padding-top: 0;
     position: relative;
     overflow: hidden;
 
@@ -17,8 +17,6 @@ export const Hero = styled(Section)`
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        min-height: 42rem;
-        height: calc(100vh - (${layout.pageFrame} * 2));
     }
 
     > div {
@@ -128,7 +126,7 @@ export const Cta = styled.div`
     }
 `
 
-export const StyledButton = styled.a`
+export const StyledButton = styled(Link)`
     padding: 0.5rem 1rem;
     margin: 1% 0;
     color: rgb(${colors.white});

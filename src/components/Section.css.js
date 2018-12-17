@@ -9,7 +9,9 @@ export const StyledSection = styled.section`
         backgroundImage ? `url(${backgroundImage})` : 'none'};
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
+    height: ${({ viewport }) =>
+        viewport ? `calc(100vh - ${layout.pageFrame} * 2)` : 'auto'};
+    min-height: 42rem;
     margin: 0;
     margin-bottom: ${layout.pageFrame};
     padding-left: 1rem;

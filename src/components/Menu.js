@@ -31,14 +31,14 @@ SubMenu.propTypes = {
 export default class Menu extends PureComponent {
     static propTypes = {
         background: PropTypes.string,
-        noheader: PropTypes.bool
+        noabsolute: PropTypes.bool
     }
 
     render() {
         return (
             <StyledMenu
                 background={this.props.background}
-                noheader={this.props.noheader}
+                noabsolute={this.props.noabsolute}
             >
                 <StyledContainer>
                     <StyledLogo to={'/'} title="Back to homepage">

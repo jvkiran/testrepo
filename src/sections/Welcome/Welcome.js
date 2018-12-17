@@ -26,14 +26,10 @@ const content = {
         'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
 }
 
-class Welcome extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            videoUrl: '',
-            modalIsOpen: false
-        }
+export default class Welcome extends Component {
+    state = {
+        videoUrl: '',
+        modalIsOpen: false
     }
 
     toggleModal = () => {
@@ -55,10 +51,10 @@ class Welcome extends Component {
                             </StyledParagraph>
 
                             <Cta>
-                                <StyledButton href="#project" important>
+                                <StyledButton to="/project" important>
                                     Learn about the project
                                 </StyledButton>
-                                <StyledButton href="#ambassadors">
+                                <StyledButton to="/community">
                                     Become an ambassador
                                 </StyledButton>
                             </Cta>
@@ -69,7 +65,7 @@ class Welcome extends Component {
                             >
                                 <source
                                     type="image/webp"
-                                    media="(min-resolution: 144dpi), 
+                                    media="(min-resolution: 144dpi),
                                                 (-webkit-min-device-pixel-ratio: 1.5)"
                                     srcSet={videoThumbWebPRetina}
                                 />
@@ -78,7 +74,7 @@ class Welcome extends Component {
                                     srcSet={videoThumbWebP}
                                 />
                                 <source
-                                    media="(min-resolution: 144dpi), 
+                                    media="(min-resolution: 144dpi),
                                                 (-webkit-min-device-pixel-ratio: 1.5)"
                                     srcSet={videoThumbRetina}
                                 />
@@ -107,5 +103,3 @@ class Welcome extends Component {
         )
     }
 }
-
-export default Welcome

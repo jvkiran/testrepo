@@ -10,7 +10,7 @@ export default class Home extends Component {
 
     render() {
         return (
-            <Page location={this.props.location} noabsolute noheader>
+            <Page location={this.props.location} noheader>
                 <Welcome />
                 <h1>Overview</h1>
                 <h1>KYC</h1>

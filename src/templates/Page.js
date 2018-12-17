@@ -28,7 +28,7 @@ export default class Page extends PureComponent {
                 />
                 <Menu
                     background={this.props.headerBackground || null}
-                    noabsolute={this.props.noabsolute}
+                    noabsolute={this.props.noabsolute || null}
                 />
                 {!this.props.noheader && (
                     <Header
