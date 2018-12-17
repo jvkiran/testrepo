@@ -1,0 +1,35 @@
+{
+    "title": "As featured in",
+    "publications": [
+        {
+            "name": "BBC Capital",
+            "logo": "bbc",
+            "link": "http://www.bbc.com/capital/story/20180921-can-you-make-money-selling-your-data"
+        },
+        {
+            "name": "Forbes",
+            "logo": "forbes",
+            "link": "https://www.forbes.com/sites/rachelwolfson/2018/11/20/diversifying-data-with-artificial-intelligence-and-blockchain-technology/"
+        },
+        {
+            "name": "New York Times",
+            "logo": "newyorktimes",
+            "link": "https://www.nytimes.com/2018/10/20/technology/how-the-blockchain-could-break-big-techs-hold-on-ai.html"
+        },
+        {
+            "name": "San Francisco Chronicle",
+            "logo": "sanfranciscochronicle",
+            "link": "https://www.sfchronicle.com/business/amp/How-the-blockchain-could-break-Big-Tech-s-hold-13322048.php"
+        },
+        {
+            "name": "Cointelegraph",
+            "logo": "cointelegraph",
+            "link": "https://cointelegraph.com/news/bmw-to-host-event-for-blockchain-in-auto-tech-tournament"
+        },
+        {
+            "name": "Bloomberg",
+            "logo": "bloomberg",
+            "link": "https://www.bloomberg.com"
+        }
+    ]
+}

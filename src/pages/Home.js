@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Page from '../templates/Page'
 import Welcome from '../sections/Welcome/Welcome'
+import MediaMentions from '../sections/MediaMentions'
 
 export default class Home extends Component {
     static propTypes = {
@@ -14,7 +15,7 @@ export default class Home extends Component {
                 <Welcome />
                 <h1>Overview</h1>
                 <h1>KYC</h1>
-                <h1>Media Mentions</h1>
+                <MediaMentions />
             </Page>
         )
     }
