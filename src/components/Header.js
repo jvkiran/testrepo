@@ -9,15 +9,16 @@ export default class Header extends PureComponent {
         background: PropTypes.string,
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-        text: PropTypes.string
+        text: PropTypes.string,
+        light: PropTypes.bool
     }
 
     render() {
-        const { background, title, description, text } = this.props
+        const { background, title, description, text, light } = this.props
         return (
             <StyledHeader background={background}>
                 <ContentRow narrow>
-                    <StyledTitle white>{title}</StyledTitle>
+                    <StyledTitle white={!light}>{title}</StyledTitle>
                     <StyledSubTitle center>{description}</StyledSubTitle>
                     {text && (
                         <Paragraph

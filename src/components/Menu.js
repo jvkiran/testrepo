@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
+import { ReactComponent as OceanLogoWhite } from '@oceanprotocol/art/logo/logo-white.svg'
+import { ReactComponent as OceanLogoBlack } from '@oceanprotocol/art/logo/logo.svg'
 import { ReactComponent as Caret } from '../assets/misc/caret.svg'
 import {
     StyledMenu,
@@ -31,7 +32,8 @@ SubMenu.propTypes = {
 export default class Menu extends PureComponent {
     static propTypes = {
         background: PropTypes.string,
-        noabsolute: PropTypes.bool
+        noabsolute: PropTypes.bool,
+        light: PropTypes.bool
     }
 
     render() {
@@ -42,9 +44,13 @@ export default class Menu extends PureComponent {
             >
                 <StyledContainer>
                     <StyledLogo to={'/'} title="Back to homepage">
-                        <OceanLogo />
+                        {this.props.light ? (
+                            <OceanLogoBlack />
+                        ) : (
+                            <OceanLogoWhite />
+                        )}
                     </StyledLogo>
-                    <StyledNav>
+                    <StyledNav light={this.props.light}>
                         {menuItems.map(item => (
                             <li key={item.name}>
                                 <StyledMenuItem to={item.href}>

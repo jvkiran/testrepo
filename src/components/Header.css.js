@@ -5,15 +5,14 @@ import OceanJeyllyfishBack from '@oceanprotocol/art/jellyfish/jellyfish-back.svg
 import { colors, layout } from '../styles'
 
 export const StyledHeader = styled.header`
-    background-image: url(${OceanJeyllyfishBack});
-    background-position: center 3rem;
-    display: flex;
-    align-items: center;
-    margin-top: ${layout.pageFrame};
     background-color: ${({ background }) =>
         background ? `rgb(${background})` : `rgb(${colors.black})`};
-    transition: transform 0.3s ease-in-out;
-    transform: none;
+    background-image: url(${OceanJeyllyfishBack});
+    background-position: center 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
     padding: 10rem calc(${layout.pageFrame} * 2) 6rem
         calc(${layout.pageFrame} * 2);
     margin-bottom: ${layout.pageFrame};

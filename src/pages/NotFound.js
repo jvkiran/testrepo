@@ -14,8 +14,9 @@ const NotFound = ({ location }) => (
         description={content.description}
         location={location}
         noheader
+        menuLight
     >
-        <StyledSection id="notfound">
+        <StyledSection viewport id="notfound">
             <ContentRow>
                 <Title>{content.title}</Title>
                 <SubTitle>{content.description}</SubTitle>

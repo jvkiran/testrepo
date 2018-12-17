@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { colors, fonts, transitions, layout } from '../styles'
 
 export const StyledMenu = styled.nav`
-    background-color: ${({ background }) =>
-        background ? `rgb(${background})` : `rgb(${colors.black})`};
-    padding: 1.5rem 1rem;
+    background-color: ${({ noabsolute }) =>
+        noabsolute ? `rgb(${colors.black})` : 'transparent'};
+    padding: 1rem;
     z-index: 5;
     position: ${({ noabsolute }) => (noabsolute ? 'static' : 'absolute')};
     width: 100%;
@@ -13,12 +13,11 @@ export const StyledMenu = styled.nav`
 `
 
 export const StyledSubMenu = styled.div`
-    background: rgb(${colors.black});
     position: absolute;
     text-align: left;
     padding: 1rem;
-    top: 2.5rem;
-    left: -1rem;
+    top: 3rem;
+    right: 1.8rem;
     display: none;
     z-index: 10;
 `
@@ -31,7 +30,7 @@ export const StyledContainer = styled.div`
     align-items: center;
 `
 
-export const StyledLogo = styled(NavLink)`
+export const StyledLogo = styled(Link)`
     height: 60px;
     z-index: 10;
     margin-left: 1rem;
@@ -43,17 +42,16 @@ export const StyledLogo = styled(NavLink)`
 `
 
 export const StyledMenuItem = styled(NavLink)`
-    &:hover,
-    &:focus {
-        transform: none;
+    display: inline-block;
+    margin-right: 2rem;
 
-        svg {
-            transform: rotate(180deg);
-        }
+    &:hover,
+    &:focus,
+    &.active {
+        transform: none;
     }
 
     svg {
-        fill: rgba(${colors.white}, 0.7);
         width: 0.7rem;
         height: 0.7rem;
         margin-left: 0.3rem;
@@ -61,49 +59,75 @@ export const StyledMenuItem = styled(NavLink)`
     }
 `
 
-export const StyledSubMenuItem = styled(NavLink)`
+export const StyledSubMenuItem = styled(StyledMenuItem)`
     display: block;
-    color: rgba(${colors.white}, 0.8);
-    font-family: ${fonts.family.base};
-    font-size: ${fonts.size.small};
     white-space: nowrap;
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
+    margin-right: 0;
+    text-align: right;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
 `
 
 export const StyledNav = styled.ul`
     text-transform: uppercase;
     text-align: right;
-    color: rgb(${colors.white});
     padding: 0;
     list-style: none;
 
     li {
         display: inline;
         transition: ${transitions.base};
-        color: rgba(${colors.white}, 0.7);
         font-family: ${fonts.family.button};
         position: relative;
-        padding-bottom: 1rem;
         padding-top: 1rem;
+        padding-bottom: 1rem;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
             ${StyledSubMenu} {
                 display: block;
             }
-        }
 
-        > a {
-            display: inline-block;
-            margin-right: 2rem;
-            color: inherit;
-
-            &:hover,
-            &:focus,
-            &.active {
-                color: rgba(${colors.white}, 1);
+            svg {
+                transform: rotate(180deg);
             }
         }
+    }
+
+    ${StyledMenuItem} {
+        color: ${({ light }) =>
+            light
+                ? `rgba(${colors.black}, 0.7)`
+                : `rgba(${colors.white}, 0.7)`};
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: ${({ light }) =>
+                light
+                    ? `rgba(${colors.black}, 1)`
+                    : `rgba(${colors.white}, 1)`};
+        }
+
+        svg {
+            fill: ${({ light }) =>
+                light
+                    ? `rgba(${colors.black}, 0.7)`
+                    : `rgba(${colors.white}, 0.7)`};
+        }
+    }
+
+    ${StyledSubMenu} {
+        background: ${({ light }) =>
+            light ? `rgb(${colors.white})` : `rgb(${colors.black})`};
     }
 `

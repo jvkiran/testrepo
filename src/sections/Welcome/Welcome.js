@@ -51,7 +51,7 @@ export default class Welcome extends Component {
                             </StyledParagraph>
 
                             <Cta>
-                                <StyledButton to="/project" important>
+                                <StyledButton to="/project">
                                     Learn about the project
                                 </StyledButton>
                                 <StyledButton to="/community">

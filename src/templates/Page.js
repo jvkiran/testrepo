@@ -14,31 +14,46 @@ export default class Page extends PureComponent {
         text: PropTypes.string,
         headerBackground: PropTypes.string,
         noabsolute: PropTypes.bool,
-        noheader: PropTypes.bool
+        noheader: PropTypes.bool,
+        menuLight: PropTypes.bool
     }
 
     render() {
+        const {
+            children,
+            location,
+            title,
+            description,
+            text,
+            headerBackground,
+            noabsolute,
+            noheader,
+            menuLight
+        } = this.props
+
         return (
             <>
                 <SEO
-                    description={this.props.description || null}
+                    description={description}
                     image={OceanBanner01}
-                    path={this.props.location.pathname}
-                    title={this.props.title || null}
+                    path={location.pathname}
+                    title={title}
                 />
                 <Menu
-                    background={this.props.headerBackground || null}
-                    noabsolute={this.props.noabsolute || null}
+                    background={headerBackground}
+                    light={menuLight}
+                    noabsolute={noabsolute}
                 />
-                {!this.props.noheader && (
+                {!noheader && (
                     <Header
-                        title={this.props.title || null}
-                        description={this.props.description || null}
-                        text={this.props.text || null}
-                        background={this.props.headerBackground || null}
+                        title={title}
+                        description={description}
+                        text={text}
+                        background={headerBackground}
+                        light={menuLight}
                     />
                 )}
-                {this.props.children}
+                {children}
             </>
         )
     }

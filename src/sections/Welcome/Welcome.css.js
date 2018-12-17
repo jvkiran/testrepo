@@ -134,8 +134,7 @@ export const StyledButton = styled(Link)`
     text-transform: uppercase;
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.button};
-    background: ${({ important }) =>
-        important ? `${gradients.main}` : `rgba(${colors.grey}, .95)`};
+    background: rgba(${colors.grey}, 0.95);
     display: inline-block;
     margin-left: 0.5rem;
     animation: ${animation} 1.5s 0.5s backwards;
@@ -144,6 +143,7 @@ export const StyledButton = styled(Link)`
     &:first-child {
         animation-delay: 0;
         margin-left: 0;
+        background: ${gradients.main};
     }
 `
 
