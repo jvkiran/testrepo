@@ -7,6 +7,7 @@ import Blog from '../sections/Blog'
 import Videos from '../sections/Videos'
 import content from '../data/pages/community.json'
 import { colors } from '../styles'
+import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 
 export default class Community extends Component {
     static propTypes = {
@@ -20,7 +21,8 @@ export default class Community extends Component {
                 description={content.description}
                 location={this.props.location}
                 menuLight
-                headerBackground={colors.white}
+                headerBackgroundColor={colors.white}
+                headerBackgroundImage={OceanMantarayBack}
             >
                 <Ambassadors />
                 <h1>Bounties</h1>

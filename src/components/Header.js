@@ -6,17 +6,31 @@ import { StyledHeader, StyledTitle, StyledSubTitle } from './Header.css'
 
 export default class Header extends PureComponent {
     static propTypes = {
-        background: PropTypes.string,
+        backgroundColor: PropTypes.string,
+        backgroundImage: PropTypes.string,
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         text: PropTypes.string,
+        style: PropTypes.object,
         light: PropTypes.bool
     }
 
     render() {
-        const { background, title, description, text, light } = this.props
+        const {
+            backgroundColor,
+            backgroundImage,
+            title,
+            description,
+            text,
+            light,
+            style
+        } = this.props
         return (
-            <StyledHeader background={background}>
+            <StyledHeader
+                backgroundColor={backgroundColor}
+                backgroundImage={backgroundImage}
+                style={style}
+            >
                 <ContentRow narrow>
                     <StyledTitle white={!light}>{title}</StyledTitle>
                     <StyledSubTitle center>{description}</StyledSubTitle>

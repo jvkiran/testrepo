@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Page from '../templates/Page'
 import People from '../sections/People'
+import Collaborators from '../sections/Collaborators'
 import content from '../data/pages/about.json'
 
 export default class Project extends Component {
@@ -17,6 +18,7 @@ export default class Project extends Component {
                 location={this.props.location}
             >
                 <People />
+                <Collaborators />
             </Page>
         )
     }

@@ -7,7 +7,7 @@ import Roadmap from '../sections/Roadmap'
 import Usecases from '../sections/Usecases'
 import Papers from '../sections/Papers'
 import Modal from '../sections/Modal/Modal'
-import content from '../data/pages/project.json'
+import content from '../data/pages/protocol.json'
 
 export default class Project extends Component {
     static propTypes = {

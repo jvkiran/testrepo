@@ -11,7 +11,7 @@ import {
     StyledParagraph,
     StyledLine,
     StyledTitle
-} from './Collaborators.css'
+} from './index.css'
 
 // const fisherYatesShuffle = array => {
 //     let newArr = [].concat(array) // create new array

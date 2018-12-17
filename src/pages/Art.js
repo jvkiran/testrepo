@@ -60,7 +60,12 @@ const Art = ({ location }) => (
         description={content.description}
         text={content.text}
         location={location}
-        headerBackground={colors.darkPurple}
+        headerBackgroundColor={colors.darkPurple}
+        headerBackgroundImage={OceanMantarayFull}
+        headerStyle={{
+            backgroundPosition: '-20vw 5vh',
+            backgroundSize: '60vw'
+        }}
     >
         <Section>
             <StyledFirstContentRow>

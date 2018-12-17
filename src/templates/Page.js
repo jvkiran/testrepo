@@ -12,7 +12,9 @@ export default class Page extends PureComponent {
         title: PropTypes.string,
         description: PropTypes.string,
         text: PropTypes.string,
-        headerBackground: PropTypes.string,
+        headerBackgroundColor: PropTypes.string,
+        headerBackgroundImage: PropTypes.string,
+        headerStyle: PropTypes.object,
         noabsolute: PropTypes.bool,
         noheader: PropTypes.bool,
         menuLight: PropTypes.bool
@@ -25,7 +27,9 @@ export default class Page extends PureComponent {
             title,
             description,
             text,
-            headerBackground,
+            headerBackgroundColor,
+            headerBackgroundImage,
+            headerStyle,
             noabsolute,
             noheader,
             menuLight
@@ -39,18 +43,16 @@ export default class Page extends PureComponent {
                     path={location.pathname}
                     title={title}
                 />
-                <Menu
-                    background={headerBackground}
-                    light={menuLight}
-                    noabsolute={noabsolute}
-                />
+                <Menu light={menuLight} noabsolute={noabsolute} />
                 {!noheader && (
                     <Header
                         title={title}
                         description={description}
                         text={text}
-                        background={headerBackground}
+                        backgroundColor={headerBackgroundColor}
+                        backgroundImage={headerBackgroundImage}
                         light={menuLight}
+                        style={headerStyle}
                     />
                 )}
                 {children}
