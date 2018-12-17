@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import ScrollToRouteTop from './components/ScrollToRouteTop'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import Project from './pages/Project'
+import Community from './pages/Community'
 import Art from './pages/Art'
 import Faq from './pages/Faq'
 import Privacy from './pages/Privacy'
@@ -17,6 +19,8 @@ const GlobalStyles = createGlobalStyle`${globalStyles}`
 const Routes = () => (
     <Switch>
         <Route exact component={Home} path="/" />
+        <Route component={Project} path="/project" />
+        <Route component={Community} path="/community" />
         <Route component={Art} path="/art" />
         <Route component={Faq} path="/faq" />
         <Route component={Privacy} path="/privacy" />

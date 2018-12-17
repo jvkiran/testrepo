@@ -9,8 +9,6 @@ import Pulse from '../components/Pulse'
 import Cell from '../components/Cell'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
-import Docs from '../sections/Docs'
-import Roadmap from '../sections/Roadmap'
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg'
 import dataDotsRight from '../assets/graphics/data-dots-right.svg'
 import {
@@ -19,7 +17,7 @@ import {
     StyledDataTransfer,
     StyledDataDots,
     StyledSubTitle
-} from './Project.css'
+} from './ProjectIntro.css'
 
 const content = {
     title: 'Ocean Protocol \nunlocks data',
@@ -49,7 +47,7 @@ const content = {
     ]
 }
 
-const Project = ({ toggleModal, ...props }) => {
+const ProjectIntro = ({ toggleModal, ...props }) => {
     const isProduction = process.env.NODE_ENV === 'production'
     let shouldAnimate
 
@@ -109,15 +107,12 @@ const Project = ({ toggleModal, ...props }) => {
                     ))}
                 </Grid>
             </ContentRow>
-
-            <Docs />
-            <Roadmap />
         </Section>
     )
 }
 
-Project.propTypes = {
+ProjectIntro.propTypes = {
     toggleModal: PropTypes.func.isRequired
 }
 
-export default Project
+export default ProjectIntro

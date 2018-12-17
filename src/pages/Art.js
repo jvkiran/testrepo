@@ -15,7 +15,7 @@ import Styleguide from '../components/Styleguide'
 import SEO from '../components/SEO'
 import { colors } from '../styles'
 import { social } from '../constants'
-import artJson from '../data/art'
+import artJson from '../data/pages/art.json'
 import {
     HeaderArt,
     StyledTitle,
@@ -51,7 +51,7 @@ import OceanMantarayGridPNG from '@oceanprotocol/art/mantaray/mantaray-grid@2x.p
 import OceanMantarayFull from '@oceanprotocol/art/mantaray/mantaray-full.svg'
 import OceanMantarayFullPNG from '@oceanprotocol/art/mantaray/mantaray-full@2x.png'
 
-const art = artJson[0]
+const content = artJson[0]
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 function GaEvent(artasset) {
@@ -63,19 +63,19 @@ function GaEvent(artasset) {
 const Art = ({ location }) => (
     <Fragment>
         <SEO
-            description={art.header.tagline}
+            description={content.header.tagline}
             image={OceanBanner01}
             path={location.pathname}
-            title={art.header.title}
+            title={content.header.title}
         />
         <Header background={colors.darkPurple} />
         <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
-                <StyledTitle white>{art.header.title}</StyledTitle>
-                <StyledSubTitle center>{art.header.tagline}</StyledSubTitle>
+                <StyledTitle white>{content.header.title}</StyledTitle>
+                <StyledSubTitle center>{content.header.tagline}</StyledSubTitle>
                 <Paragraph
                     center
-                    dangerouslySetInnerHTML={{ __html: art.header.text }}
+                    dangerouslySetInnerHTML={{ __html: content.header.text }}
                 />
             </ContentRow>
         </HeaderArt>
@@ -84,9 +84,9 @@ const Art = ({ location }) => (
             <StyledFirstContentRow>
                 <Grid>
                     <Cell smallGutter width={1 / 2}>
-                        <SectionTitle>{art.logo.title}</SectionTitle>
+                        <SectionTitle>{content.logo.title}</SectionTitle>
                         <SectionSubTitle>
-                            {art.logo.description}
+                            {content.logo.description}
                         </SectionSubTitle>
                         <Logos>
                             <Logo>
@@ -140,9 +140,9 @@ const Art = ({ location }) => (
                         </Logos>
                     </Cell>
                     <Cell smallGutter width={1 / 3}>
-                        <SectionTitle>{art.mediakit.title}</SectionTitle>
+                        <SectionTitle>{content.mediakit.title}</SectionTitle>
                         <SectionSubTitle>
-                            {art.mediakit.description}
+                            {content.mediakit.description}
                         </SectionSubTitle>
 
                         <Paragraph>
@@ -151,12 +151,12 @@ const Art = ({ location }) => (
                                 href={mediakitDownload}
                                 onClick={() => GaEvent('Mediakit')}
                             >
-                                <Button>{art.mediakit.button}</Button>
+                                <Button>{content.mediakit.button}</Button>
                             </a>
                         </Paragraph>
                         <Paragraph
                             dangerouslySetInnerHTML={{
-                                __html: art.mediakit.text
+                                __html: content.mediakit.text
                             }}
                         />
                     </Cell>
@@ -164,8 +164,8 @@ const Art = ({ location }) => (
             </StyledFirstContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.banner.title}</SectionTitle>
-                <SectionSubTitle>{art.banner.description}</SectionSubTitle>
+                <SectionTitle>{content.banner.title}</SectionTitle>
+                <SectionSubTitle>{content.banner.description}</SectionSubTitle>
 
                 <Banners>
                     <a
@@ -255,8 +255,10 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.jellyfish.title}</SectionTitle>
-                <SectionSubTitle>{art.jellyfish.description}</SectionSubTitle>
+                <SectionTitle>{content.jellyfish.title}</SectionTitle>
+                <SectionSubTitle>
+                    {content.jellyfish.description}
+                </SectionSubTitle>
 
                 <KeyVisuals>
                     <KeyVisual>
@@ -313,8 +315,10 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.mantaray.title}</SectionTitle>
-                <SectionSubTitle>{art.mantaray.description}</SectionSubTitle>
+                <SectionTitle>{content.mantaray.title}</SectionTitle>
+                <SectionSubTitle>
+                    {content.mantaray.description}
+                </SectionSubTitle>
 
                 <KeyVisuals>
                     <KeyVisual>

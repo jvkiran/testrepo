@@ -17,9 +17,9 @@ import {
     StyledUnalyzed,
     StyledThirdGrid,
     StyledUnavailable
-} from './Data.css'
+} from './Usecases.css'
 
-const Data = () => (
+const Usecases = () => (
     <StyledSection id="why">
         <ContentRow narrow>
             <Title>
@@ -179,4 +179,4 @@ const Data = () => (
     </StyledSection>
 )
 
-export default Data
+export default Usecases

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive, layout } from '../../styles'
+import { colors, fonts, responsive, layout } from '../styles'
 
 export const StyledList = styled.ul`
     list-style: none;
