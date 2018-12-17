@@ -7,7 +7,7 @@ export const StyledMenu = styled.nav`
         background ? `rgb(${background})` : `rgb(${colors.black})`};
     padding: 1.5rem 1rem;
     z-index: 5;
-    position: absolute;
+    position: ${({ noabsolute }) => (noabsolute ? 'static' : 'absolute')};
     width: 100%;
 `
 

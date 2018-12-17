@@ -9,10 +9,11 @@ export default class Page extends PureComponent {
     static propTypes = {
         location: PropTypes.object.isRequired,
         children: PropTypes.any,
-        title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
+        title: PropTypes.string,
+        description: PropTypes.string,
         text: PropTypes.string,
         headerBackground: PropTypes.string,
+        noabsolute: PropTypes.bool,
         noheader: PropTypes.bool
     }
 
@@ -20,17 +21,20 @@ export default class Page extends PureComponent {
         return (
             <>
                 <SEO
-                    description={this.props.description}
+                    description={this.props.description || null}
                     image={OceanBanner01}
                     path={this.props.location.pathname}
-                    title={this.props.title}
+                    title={this.props.title || null}
                 />
-                <Menu background={this.props.headerBackground || null} />
+                <Menu
+                    background={this.props.headerBackground || null}
+                    noabsolute={this.props.noabsolute}
+                />
                 {!this.props.noheader && (
                     <Header
-                        title={this.props.title}
-                        description={this.props.description}
-                        text={this.props.text}
+                        title={this.props.title || null}
+                        description={this.props.description || null}
+                        text={this.props.text || null}
                         background={this.props.headerBackground || null}
                     />
                 )}

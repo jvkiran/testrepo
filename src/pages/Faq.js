@@ -19,7 +19,13 @@ export const title = 'FAQ'
 export const description = 'Frequently asked questions about Ocean Protocol'
 
 const Faq = ({ location }) => (
-    <Page title={title} description={description} location={location} noheader>
+    <Page
+        title={title}
+        description={description}
+        location={location}
+        noabsolute
+        noheader
+    >
         <StyledSection>
             <ContentRow>
                 <Cell maxWidth="small" width={1}>

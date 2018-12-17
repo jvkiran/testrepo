@@ -30,12 +30,16 @@ SubMenu.propTypes = {
 
 export default class Menu extends PureComponent {
     static propTypes = {
-        background: PropTypes.string
+        background: PropTypes.string,
+        noheader: PropTypes.bool
     }
 
     render() {
         return (
-            <StyledMenu background={this.props.background}>
+            <StyledMenu
+                background={this.props.background}
+                noheader={this.props.noheader}
+            >
                 <StyledContainer>
                     <StyledLogo to={'/'} title="Back to homepage">
                         <OceanLogo />
