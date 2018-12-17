@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Project",
+        "href": "/project"
+    },
+    {
+        "name": "Community",
+        "href": "/community"
+    },
+    {
+        "name": "Developers",
+        "href": "/developers"
+    },
+    {
+        "name": "About",
+        "href": "/about"
+    },
+    {
+        "name": "More",
+        "href": "#more",
+        "sub": [
+            {
+                "name": "Token",
+                "href": "/token"
+            },
+            {
+                "name": "Art",
+                "href": "/art"
+            },
+            {
+                "name": "FAQ",
+                "href": "/faq"
+            },
+            {
+                "name": "Newsletter",
+                "href": "/newsletter"
+            }
+        ]
+    }
+]

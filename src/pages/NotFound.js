@@ -1,35 +1,34 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import Helmet from 'react-helmet'
+import Page from '../templates/Page'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import Header from '../components/Header'
 import { StyledSection, StyledButton } from './NotFound.css'
+import content from '../data/pages/notfound.json'
 
-const Meta = () => (
-    <Helmet>
-        <title>404 - Not Found</title>
-        <meta content="noindex,nofollow" name="robots" />
-    </Helmet>
-)
-
-const NotFound = () => (
-    <Fragment>
-        <Meta />
-        <Header />
+const NotFound = ({ location }) => (
+    <Page
+        title={content.title}
+        description={content.description}
+        location={location}
+        noheader
+    >
         <StyledSection id="notfound">
             <ContentRow>
-                <Title>Oops, that did not work</Title>
-                <SubTitle>
-                    Pardon us, the page you requested is not here.
-                </SubTitle>
+                <Title>{content.title}</Title>
+                <SubTitle>{content.description}</SubTitle>
                 <Link to="/">
                     <StyledButton>Go to homepage</StyledButton>
                 </Link>
             </ContentRow>
         </StyledSection>
-    </Fragment>
+    </Page>
 )
+
+NotFound.propTypes = {
+    location: PropTypes.object.isRequired
+}
 
 export default NotFound

@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import SEO from '../components/SEO'
-import Menu from '../sections/Menu'
+import Page from '../templates/Page'
 import ProjectIntro from '../sections/ProjectIntro'
 import Docs from '../sections/Docs'
 import Roadmap from '../sections/Roadmap'
 import Usecases from '../sections/Usecases'
 import Papers from '../sections/Papers'
 import Modal from '../sections/Modal/Modal'
-import OceanBanner01 from '@oceanprotocol/art/banner/banner-ocean-01@2x.png'
 import content from '../data/pages/project.json'
 
 export default class Project extends Component {
@@ -30,15 +28,11 @@ export default class Project extends Component {
 
     render() {
         return (
-            <>
-                <SEO
-                    description={content.description}
-                    image={OceanBanner01}
-                    path={this.props.location.pathname}
-                    title={content.title}
-                />
-                <Menu />
-                <h1>Header</h1>
+            <Page
+                title={content.title}
+                description={content.description}
+                location={this.props.location}
+            >
                 <ProjectIntro toggleModal={this.toggleModal} />
                 <h1>Features</h1>
                 <Docs />
@@ -49,7 +43,7 @@ export default class Project extends Component {
                 {this.state.showModal && (
                     <Modal modal={this.state.modal} toggle={this.toggleModal} />
                 )}
-            </>
+            </Page>
         )
     }
 }

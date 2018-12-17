@@ -1,10 +1,10 @@
 /* global ga */
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
-import Header from '../components/Header'
+import Page from '../templates/Page'
 import Button from '../components/Button'
 import Section from '../components/Section'
 import ContentRow from '../components/ContentRow'
@@ -12,10 +12,9 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
-import SEO from '../components/SEO'
 import { colors } from '../styles'
 import { social } from '../constants'
-import artJson from '../data/pages/art.json'
+import content from '../data/pages/art.json'
 import {
     HeaderArt,
     StyledTitle,
@@ -50,8 +49,6 @@ import OceanMantarayGrid from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
 import OceanMantarayGridPNG from '@oceanprotocol/art/mantaray/mantaray-grid@2x.png'
 import OceanMantarayFull from '@oceanprotocol/art/mantaray/mantaray-full.svg'
 import OceanMantarayFullPNG from '@oceanprotocol/art/mantaray/mantaray-full@2x.png'
-
-const content = artJson[0]
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 function GaEvent(artasset) {
@@ -61,21 +58,14 @@ function GaEvent(artasset) {
 }
 
 const Art = ({ location }) => (
-    <Fragment>
-        <SEO
-            description={content.header.tagline}
-            image={OceanBanner01}
-            path={location.pathname}
-            title={content.header.title}
-        />
-        <Header background={colors.darkPurple} />
+    <Page content={content} location={location}>
         <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
             <ContentRow narrow>
-                <StyledTitle white>{content.header.title}</StyledTitle>
-                <StyledSubTitle center>{content.header.tagline}</StyledSubTitle>
+                <StyledTitle white>{content.title}</StyledTitle>
+                <StyledSubTitle center>{content.description}</StyledSubTitle>
                 <Paragraph
                     center
-                    dangerouslySetInnerHTML={{ __html: content.header.text }}
+                    dangerouslySetInnerHTML={{ __html: content.text }}
                 />
             </ContentRow>
         </HeaderArt>
@@ -386,7 +376,7 @@ const Art = ({ location }) => (
                 </StyledCollapsible>
             </ContentRow>
         </Section>
-    </Fragment>
+    </Page>
 )
 
 Art.propTypes = {

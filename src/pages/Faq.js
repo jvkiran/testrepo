@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import Page from '../templates/Page'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import FaqItem from '../components/FaqItem'
 import ContentRow from '../components/ContentRow'
-import Header from '../components/Header'
-import SEO from '../components/SEO'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
 import faq from '../data/faq'
@@ -20,9 +19,7 @@ export const title = 'FAQ'
 export const description = 'Frequently asked questions about Ocean Protocol'
 
 const Faq = ({ location }) => (
-    <Fragment>
-        <SEO description={description} path={location.pathname} title={title} />
-        <Header />
+    <Page title={title} description={description} location={location} noheader>
         <StyledSection>
             <ContentRow>
                 <Cell maxWidth="small" width={1}>
@@ -65,7 +62,7 @@ const Faq = ({ location }) => (
                 ))}
             </ContentRow>
         </StyledSection>
-    </Fragment>
+    </Page>
 )
 
 Faq.propTypes = {
