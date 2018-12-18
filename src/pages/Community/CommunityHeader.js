@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import axios from 'axios'
 import {
     StyledHeaderAddition,
     Engage,
@@ -6,12 +7,42 @@ import {
     CommunityNumber
 } from './CommunityHeader.css'
 
+const arrSum = arr => arr.reduce((a, b) => a + b, 0)
+
 class CommunityCounts extends PureComponent {
     state = {
-        twitter: 0,
-        telegram: 0,
+        twitter: '11.8k',
+        telegram: '7.5k',
         github: 0,
-        bounties: 0
+        bounties: '15'
+    }
+
+    githubUrl = 'https://oceanprotocol-github.now.sh'
+
+    fetchGitHubNumber = async () => {
+        try {
+            const response = await axios({
+                method: 'get',
+                url: this.githubUrl,
+                timeout: 10000, // 10 sec.
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+
+            let numbers = []
+
+            response.data.map(item => {
+                if (item.stars) return numbers.push(item.stars)
+            })
+            this.setState({ github: arrSum(numbers) })
+        } catch (error) {
+            console.log(error) // eslint-disable-line no-console
+        }
+    }
+
+    componentDidMount() {
+        this.fetchGitHubNumber()
     }
 
     render() {
@@ -25,13 +56,13 @@ class CommunityCounts extends PureComponent {
                     <CommunityNumber>{this.state.telegram}</CommunityNumber>
                     <span>Telegram members</span>
                 </li>
-                <li>
+                <li title="Total number of stars across all repositories.">
                     <CommunityNumber>{this.state.github}</CommunityNumber>
                     <span>GitHub stargazers</span>
                 </li>
-                <li>
+                <li title="Total number of open and completed bounties.">
                     <CommunityNumber>{this.state.bounties}</CommunityNumber>
-                    <span>open bounties</span>
+                    <span>Bounties</span>
                 </li>
             </VividCommunity>
         )

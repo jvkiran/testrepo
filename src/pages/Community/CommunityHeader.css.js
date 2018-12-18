@@ -16,13 +16,19 @@ export const Engage = styled.ul``
 
 export const VividCommunity = styled.ul`
     display: flex;
+    justify-content: space-between;
     padding-top: 2rem;
     font-family: ${fonts.family.button};
     color: rgb(${colors.lightGrey});
 
     li {
         text-align: center;
-        flex: 1 1 20%;
+        flex: 0 0 20%;
+        font-size: ${fonts.size.small};
+
+        span {
+            white-space: nowrap;
+        }
     }
 `
 
