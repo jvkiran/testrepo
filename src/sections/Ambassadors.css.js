@@ -1,27 +1,5 @@
 import styled from 'styled-components'
-import Title from '../components/Title'
-import Paragraph from '../components/Paragraph'
 import { colors, fonts, responsive } from '../styles'
-
-export const StyledTitle = styled(Title)`
-    margin-bottom: 2rem;
-`
-
-export const StyledParagraph = styled(Paragraph)`
-    margin-bottom: 0;
-`
-
-export const Line = styled.div`
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid rgba(${colors.white}, 0.25);
-
-    @media screen and (${responsive.sm.min}) {
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-`
 
 export const StyledList = styled.ul`
     list-style: none;

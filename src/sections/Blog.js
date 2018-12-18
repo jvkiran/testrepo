@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
 import LazyLoad from 'react-lazyload'
-import Title from '../components/Title'
 import Section from '../components/Section'
-import ContentRow from '../components/ContentRow'
+import SectionHeader from '../components/SectionHeader'
 import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Spinner from '../components/Spinner'
@@ -81,9 +80,7 @@ class BlogList extends PureComponent {
 
 const Blog = () => (
     <Section id="blog" viewport>
-        <ContentRow>
-            <Title>From our Blog</Title>
-        </ContentRow>
+        <SectionHeader title={'From our Blog'} />
 
         <LazyLoad once height={524} offset={200}>
             <BlogList />

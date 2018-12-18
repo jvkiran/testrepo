@@ -7,16 +7,11 @@ import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
 import Paragraph from '../components/Paragraph'
+import SectionHeader from '../components/SectionHeader'
 import Button from '../components/Button'
 import Modal from '../sections/Modal/Modal'
 import { ReactComponent as Check } from '../assets/misc/check.svg'
-import {
-    StyledTitle,
-    StyledParagraph,
-    StyledList,
-    StyledActions,
-    Line
-} from './Ambassadors.css'
+import { StyledList, StyledActions } from './Ambassadors.css'
 import { colors } from '../styles'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 
@@ -71,18 +66,6 @@ const List = () => (
     </StyledList>
 )
 
-const SectionHeader = () => (
-    <>
-        <ContentRow>
-            <StyledTitle white>{content.title}</StyledTitle>
-        </ContentRow>
-
-        <ContentRow narrow>
-            <StyledParagraph center>{content.description}</StyledParagraph>
-        </ContentRow>
-    </>
-)
-
 export default class Ambassadors extends PureComponent {
     state = {
         showModal: false,
@@ -117,10 +100,14 @@ export default class Ambassadors extends PureComponent {
                         backgroundPosition: 'center 70vh'
                     }}
                 >
-                    <SectionHeader />
+                    <SectionHeader
+                        title={content.title}
+                        description={content.description}
+                        white
+                        line
+                    />
 
                     <ContentRow>
-                        <Line />
                         <Grid>
                             <Cell width={1 / 2}>
                                 <Paragraph

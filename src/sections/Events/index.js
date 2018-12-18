@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import Section from '../../components/Section'
-import ContentRow from '../../components/ContentRow'
+import SectionHeader from '../../components/SectionHeader'
 import eventsData from '../../data/events'
 import { colors } from '../../styles'
-import { StyledTitle, StyledParagraph, JellyfishBack } from './index.css'
+import { JellyfishBack } from './index.css'
 
 import EventsList from './EventsList'
 import Archive from './Archive'
@@ -30,12 +30,13 @@ export default class Events extends PureComponent {
                 fontColor={colors.white}
                 id="events"
             >
-                <ContentRow narrow>
-                    <StyledTitle white>Events</StyledTitle>
-                    <StyledParagraph>
-                        Meet members of our team at any of the following events.
-                    </StyledParagraph>
-                </ContentRow>
+                <SectionHeader
+                    title={'Events'}
+                    description={
+                        'Meet members of our team at any of the following events.'
+                    }
+                    white
+                />
 
                 <EventsList
                     events={eventsData}

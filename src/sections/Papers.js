@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Section from '../components/Section'
-import Title from '../components/Title'
+import SectionHeader from '../components/SectionHeader'
 import SubTitle from '../components/SubTitle'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
@@ -24,9 +24,7 @@ import {
 
 const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
-        <ContentRow>
-            <Title white>Learn how Ocean Protocol works</Title>
-        </ContentRow>
+        <SectionHeader title={'Learn how Ocean Protocol works'} white />
 
         <ContentRow wide>
             <Grid>
