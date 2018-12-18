@@ -15,7 +15,8 @@ export default class Header extends PureComponent {
         light: PropTypes.bool,
         viewport: PropTypes.bool,
         children: PropTypes.any,
-        additionalComponent: PropTypes.any
+        additionalComponent: PropTypes.any,
+        fullWidth: PropTypes.bool
     }
 
     render() {
@@ -29,7 +30,8 @@ export default class Header extends PureComponent {
             style,
             viewport,
             children,
-            additionalComponent
+            additionalComponent,
+            fullWidth
         } = this.props
         return (
             <StyledHeader
@@ -39,7 +41,7 @@ export default class Header extends PureComponent {
                 viewport={viewport}
                 light={light}
             >
-                <ContentRow narrow style={{ zIndex: 5 }}>
+                <ContentRow narrow={!fullWidth} style={{ zIndex: 5 }}>
                     <StyledTitle white={!light}>{title}</StyledTitle>
                     <StyledSubTitle center>{description}</StyledSubTitle>
                     {text && (

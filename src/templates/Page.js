@@ -15,6 +15,7 @@ export default class Page extends PureComponent {
         headerBackgroundColor: PropTypes.string,
         headerBackgroundImage: PropTypes.string,
         headerViewport: PropTypes.bool,
+        headerFullWidth: PropTypes.bool,
         headerStyle: PropTypes.object,
         noabsolute: PropTypes.bool,
         noheader: PropTypes.bool,
@@ -32,6 +33,7 @@ export default class Page extends PureComponent {
             headerBackgroundColor,
             headerBackgroundImage,
             headerViewport,
+            headerFullWidth,
             headerAddition,
             headerStyle,
             noabsolute,
@@ -59,6 +61,7 @@ export default class Page extends PureComponent {
                         style={headerStyle}
                         viewport={headerViewport}
                         additionalComponent={headerAddition}
+                        fullWidth={headerFullWidth}
                     />
                 )}
                 {children}

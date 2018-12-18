@@ -25,6 +25,7 @@ export default class Community extends Component {
                 headerBackgroundColor={colors.white}
                 headerBackgroundImage={OceanMantarayBack}
                 headerViewport
+                headerFullWidth
                 headerAddition={<CommunityHeader />}
             >
                 <Ambassadors />

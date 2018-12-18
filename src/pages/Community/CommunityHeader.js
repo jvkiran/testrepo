@@ -13,6 +13,7 @@ class CommunityCounts extends PureComponent {
     state = {
         twitter: '11.8k',
         telegram: '7.5k',
+        medium: '2.5k',
         github: 0,
         bounties: '15'
     }
@@ -33,7 +34,10 @@ class CommunityCounts extends PureComponent {
             let numbers = []
 
             response.data.map(item => {
-                if (item.stars) return numbers.push(item.stars)
+                if (item.stars) {
+                    return numbers.push(item.stars)
+                }
+                return null
             })
             this.setState({ github: arrSum(numbers) })
         } catch (error) {
@@ -56,11 +60,15 @@ class CommunityCounts extends PureComponent {
                     <CommunityNumber>{this.state.telegram}</CommunityNumber>
                     <span>Telegram members</span>
                 </li>
-                <li title="Total number of stars across all repositories.">
+                <li title="Numbers of followers on Medium">
+                    <CommunityNumber>{this.state.medium}</CommunityNumber>
+                    <span>Blog followers</span>
+                </li>
+                <li title="Number of stars across all repositories.">
                     <CommunityNumber>{this.state.github}</CommunityNumber>
                     <span>GitHub stargazers</span>
                 </li>
-                <li title="Total number of open and completed bounties.">
+                <li title="Number of open and completed bounties.">
                     <CommunityNumber>{this.state.bounties}</CommunityNumber>
                     <span>Bounties</span>
                 </li>

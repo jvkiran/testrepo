@@ -3,7 +3,7 @@ import Section from '../../components/Section'
 import SectionHeader from '../../components/SectionHeader'
 import eventsData from '../../data/events'
 import { colors } from '../../styles'
-import { JellyfishBack } from './index.css'
+import jellyfish from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
 
 import EventsList from './EventsList'
 import Archive from './Archive'
@@ -27,8 +27,10 @@ export default class Events extends PureComponent {
         return (
             <Section
                 background={colors.black}
+                backgroundImage={jellyfish}
                 fontColor={colors.white}
                 id="events"
+                style={{ backgroundSize: '100%' }}
             >
                 <SectionHeader
                     title={'Events'}
@@ -51,7 +53,6 @@ export default class Events extends PureComponent {
                     openModal={this.openModal}
                     closeModal={this.closeModal}
                 />
-                <JellyfishBack />
             </Section>
         )
     }

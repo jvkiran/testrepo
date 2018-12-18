@@ -3,7 +3,6 @@ import { responsive, colors, fonts } from '../../styles'
 
 export const StyledEventsList = styled.ul`
     position: relative;
-    margin-top: 4rem;
     padding: 0;
     padding-bottom: 3rem;
     list-style: none;
