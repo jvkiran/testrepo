@@ -1,26 +1,58 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive, layout } from '../styles'
+import Title from '../components/Title'
+import Paragraph from '../components/Paragraph'
+import { colors, fonts, responsive } from '../styles'
+
+export const StyledTitle = styled(Title)`
+    margin-bottom: 2rem;
+`
+
+export const StyledParagraph = styled(Paragraph)`
+    margin-bottom: 0;
+`
+
+export const Line = styled.div`
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(${colors.white}, 0.25);
+
+    @media screen and (${responsive.sm.min}) {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+`
 
 export const StyledList = styled.ul`
     list-style: none;
     padding: 0;
-    margin: 1rem 0 2rem 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     margin-left: -1rem;
     color: rgb(${colors.lightGrey});
     font-family: ${fonts.family.button};
 
+    @media (${responsive.sm.min}) {
+        margin-left: -3rem;
+        max-width: 100%;
+    }
+
+    @media (${responsive.lg.min}) {
+        margin-left: -4rem;
+        max-width: none;
+    }
+
     li {
         display: inline-block;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 1.5rem;
         margin-bottom: 1.5rem;
         flex: 0 0 100%;
         padding-left: 1.5rem;
 
-        @media (${responsive.md.min}) {
+        @media (${responsive.lg.min}) {
             flex-basis: calc(50% - 2rem);
+            margin-bottom: 2rem;
         }
     }
 
@@ -33,27 +65,28 @@ export const StyledList = styled.ul`
     }
 `
 
-export const Actions = styled.div`
+export const StyledActions = styled.div`
+    margin-top: 2rem;
+    text-align: center;
+
     button {
-        margin-bottom: ${layout.spacer};
+        margin-bottom: 2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     a {
         font-size: ${fonts.size.small};
     }
 
-    @media (${responsive.md.min}) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    @media (${responsive.sm.min}) {
+        margin-left: -3rem;
 
         button {
-            flex: 0 0 56%;
-            margin-bottom: 0;
-        }
-
-        a {
-            flex: 0 0 38%;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     }
 `

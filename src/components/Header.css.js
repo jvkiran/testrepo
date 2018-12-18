@@ -19,12 +19,27 @@ export const StyledHeader = styled.header`
     background-position: center 3rem;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: ${({ viewport }) =>
+        viewport ? `calc(100vh - ${layout.pageFrame} * 2)` : 'auto'};
     display: flex;
     align-items: center;
     padding: 10rem calc(${layout.pageFrame} * 2) 6rem
         calc(${layout.pageFrame} * 2);
     margin-bottom: ${layout.pageFrame};
     text-align: center;
+    position: relative;
+
+    ${({ light }) =>
+        light &&
+        `&:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(${colors.white}, 0.5);
+        }`}
 
     p {
         margin-bottom: 0;

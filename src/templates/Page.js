@@ -14,10 +14,12 @@ export default class Page extends PureComponent {
         text: PropTypes.string,
         headerBackgroundColor: PropTypes.string,
         headerBackgroundImage: PropTypes.string,
+        headerViewport: PropTypes.bool,
         headerStyle: PropTypes.object,
         noabsolute: PropTypes.bool,
         noheader: PropTypes.bool,
-        menuLight: PropTypes.bool
+        menuLight: PropTypes.bool,
+        headerAddition: PropTypes.any
     }
 
     render() {
@@ -29,6 +31,8 @@ export default class Page extends PureComponent {
             text,
             headerBackgroundColor,
             headerBackgroundImage,
+            headerViewport,
+            headerAddition,
             headerStyle,
             noabsolute,
             noheader,
@@ -53,6 +57,8 @@ export default class Page extends PureComponent {
                         backgroundImage={headerBackgroundImage}
                         light={menuLight}
                         style={headerStyle}
+                        viewport={headerViewport}
+                        additionalComponent={headerAddition}
                     />
                 )}
                 {children}

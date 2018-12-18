@@ -12,7 +12,10 @@ export default class Header extends PureComponent {
         description: PropTypes.string.isRequired,
         text: PropTypes.string,
         style: PropTypes.object,
-        light: PropTypes.bool
+        light: PropTypes.bool,
+        viewport: PropTypes.bool,
+        children: PropTypes.any,
+        additionalComponent: PropTypes.any
     }
 
     render() {
@@ -23,15 +26,20 @@ export default class Header extends PureComponent {
             description,
             text,
             light,
-            style
+            style,
+            viewport,
+            children,
+            additionalComponent
         } = this.props
         return (
             <StyledHeader
                 backgroundColor={backgroundColor}
                 backgroundImage={backgroundImage}
                 style={style}
+                viewport={viewport}
+                light={light}
             >
-                <ContentRow narrow>
+                <ContentRow narrow style={{ zIndex: 5 }}>
                     <StyledTitle white={!light}>{title}</StyledTitle>
                     <StyledSubTitle center>{description}</StyledSubTitle>
                     {text && (
@@ -40,6 +48,8 @@ export default class Header extends PureComponent {
                             dangerouslySetInnerHTML={{ __html: text }}
                         />
                     )}
+                    {additionalComponent && additionalComponent}
+                    {children}
                 </ContentRow>
             </StyledHeader>
         )

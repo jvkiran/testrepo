@@ -4,6 +4,7 @@ import Page from '../templates/Page'
 import People from '../sections/People'
 import Collaborators from '../sections/Collaborators'
 import content from '../data/pages/about.json'
+import { colors } from '../styles'
 
 export default class Project extends Component {
     static propTypes = {
@@ -16,6 +17,8 @@ export default class Project extends Component {
                 title={content.title}
                 description={content.description}
                 location={this.props.location}
+                menuLight
+                headerBackgroundColor={colors.white}
             >
                 <People />
                 <Collaborators />

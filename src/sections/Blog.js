@@ -80,9 +80,9 @@ class BlogList extends PureComponent {
 }
 
 const Blog = () => (
-    <Section id="blog" minHeight={930}>
+    <Section id="blog" viewport>
         <ContentRow>
-            <Title>Learn more about Ocean Protocol</Title>
+            <Title>From our Blog</Title>
         </ContentRow>
 
         <LazyLoad once height={524} offset={200}>
