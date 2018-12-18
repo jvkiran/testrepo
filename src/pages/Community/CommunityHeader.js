@@ -6,8 +6,40 @@ import {
     VividCommunity,
     CommunityNumber
 } from './CommunityHeader.css'
+import { social } from '../../constants'
 
 const arrSum = arr => arr.reduce((a, b) => a + b, 0)
+
+const numberUnits = [
+    {
+        key: 'twitter',
+        title: 'Twitter followers',
+        link: social.twitter
+    },
+    {
+        key: 'telegram',
+        title: 'Telegram members',
+        link: social.telegram
+    },
+    {
+        key: 'medium',
+        title: 'Blog followers',
+        link: social.blog,
+        tooltip: 'Numbers of followers on Medium'
+    },
+    {
+        key: 'github',
+        title: 'GitHub stargazers',
+        link: social.github,
+        tooltip: 'Number of stars across all repositories.'
+    },
+    {
+        key: 'bounties',
+        title: 'Bounties',
+        link: social.bountiesNetwork,
+        tooltip: 'Number of open and completed bounties.'
+    }
+]
 
 class CommunityCounts extends PureComponent {
     state = {
@@ -39,6 +71,7 @@ class CommunityCounts extends PureComponent {
                 }
                 return null
             })
+
             this.setState({ github: arrSum(numbers) })
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
@@ -52,26 +85,16 @@ class CommunityCounts extends PureComponent {
     render() {
         return (
             <VividCommunity>
-                <li>
-                    <CommunityNumber>{this.state.twitter}</CommunityNumber>
-                    <span>Twitter followers</span>
-                </li>
-                <li>
-                    <CommunityNumber>{this.state.telegram}</CommunityNumber>
-                    <span>Telegram members</span>
-                </li>
-                <li title="Numbers of followers on Medium">
-                    <CommunityNumber>{this.state.medium}</CommunityNumber>
-                    <span>Blog followers</span>
-                </li>
-                <li title="Number of stars across all repositories.">
-                    <CommunityNumber>{this.state.github}</CommunityNumber>
-                    <span>GitHub stargazers</span>
-                </li>
-                <li title="Number of open and completed bounties.">
-                    <CommunityNumber>{this.state.bounties}</CommunityNumber>
-                    <span>Bounties</span>
-                </li>
+                {numberUnits.map(numberUnit => (
+                    <li key={numberUnit.key}>
+                        <a href={numberUnit.link}>
+                            <CommunityNumber>
+                                {this.state[numberUnit.key]}
+                            </CommunityNumber>
+                            <span>{numberUnit.title}</span>
+                        </a>
+                    </li>
+                ))}
             </VividCommunity>
         )
     }
