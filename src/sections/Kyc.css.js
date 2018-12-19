@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import Button from '../components/Button'
-import { gradients, colors, responsive, fonts } from '../styles'
+import { gradients, colors, responsive, fonts, layout } from '../styles'
 
 export const ContributionPlatforms = styled.div`
-    margin-bottom: 4rem;
+    margin-bottom: calc(${layout.spacer} * 2);
 
     @media (${responsive.md.min}) {
         display: flex;
@@ -14,28 +14,22 @@ export const ContributionPlatforms = styled.div`
 export const PlatformButton = styled(Button)`
     background: rgb(${colors.grey});
     font-size: ${fonts.size.small};
-    padding: 1rem 2rem;
+    padding: calc(${layout.spacer} / 2) ${layout.spacer};
     width: auto;
-`
-
-export const Actions = styled.footer`
-    width: calc(100% - 4rem);
-    border-top: 1px solid rgb(${colors.grey});
-    padding-top: 2rem;
     position: absolute;
-    left: 2rem;
-    bottom: 2rem;
+    left: ${layout.spacer};
+    bottom: ${layout.spacer};
 `
 
 export const ContributionPlatform = styled.a`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding: 2rem;
-    padding-bottom: 7rem;
+    padding: ${layout.spacer};
+    padding-bottom: 5rem;
     border-radius: 0.1rem;
-    background: rgb(${colors.black});
-    margin-bottom: 2rem;
+    background: rgb(${colors.darkGrey});
+    margin-bottom: ${layout.spacer};
     color: rgb(${colors.lightGrey});
     position: relative;
 
@@ -44,7 +38,7 @@ export const ContributionPlatform = styled.a`
     }
 
     ul {
-        margin-bottom: 2rem;
+        margin-bottom: ${layout.spacer};
     }
 
     @media (${responsive.md.min}) {
@@ -52,12 +46,12 @@ export const ContributionPlatform = styled.a`
     }
 
     svg {
-        fill: rgb(${colors.grey});
+        fill: rgb(${colors.lightGrey});
         max-width: 10rem;
         width: auto;
-        height: 4rem;
+        height: 2.5rem;
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: ${layout.spacer};
     }
 
     &:first-child {
@@ -66,10 +60,6 @@ export const ContributionPlatform = styled.a`
 
         svg {
             fill: rgb(${colors.darkPurple});
-        }
-
-        ${Actions} {
-            border-top-color: rgb(${colors.darkPurple});
         }
 
         ${PlatformButton} {

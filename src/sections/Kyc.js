@@ -3,14 +3,14 @@ import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
 import ContentRow from '../components/ContentRow'
 import SubTitle from '../components/SubTitle'
+import { Ul, Li } from '../components/Lists'
 import { ReactComponent as Coinlist } from '../assets/logos/coinlist.svg'
 import { ReactComponent as Fractal } from '../assets/logos/fractal.svg'
 import { colors } from '../styles'
 import {
     ContributionPlatforms,
     ContributionPlatform,
-    PlatformButton,
-    Actions
+    PlatformButton
 } from './Kyc.css'
 
 const content = {
@@ -70,17 +70,13 @@ const Kyc = () => (
                             dangerouslySetInnerHTML={{ __html: platform.intro }}
                         />
 
-                        <ul>
+                        <Ul>
                             {platform.list.map((item, index) => (
-                                <li key={index}>{item}</li>
+                                <Li key={index}>{item}</Li>
                             ))}
-                        </ul>
+                        </Ul>
 
-                        <Actions>
-                            <PlatformButton>
-                                Go to {platform.name}
-                            </PlatformButton>
-                        </Actions>
+                        <PlatformButton>Go to {platform.name}</PlatformButton>
                     </ContributionPlatform>
                 ))}
             </ContributionPlatforms>
