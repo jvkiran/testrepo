@@ -1,5 +1,7 @@
 import React from 'react'
 import Section from '../components/Section'
+
+import Cell from '../components/Cell'
 import SectionHeader from '../components/SectionHeader'
 import ContentRow from '../components/ContentRow'
 import SubTitle from '../components/SubTitle'
@@ -10,8 +12,12 @@ import { colors } from '../styles'
 import {
     ContributionPlatforms,
     ContributionPlatform,
-    PlatformButton
+    PlatformIntro,
+    PlatformButton,
+    TokenInfo,
+    Divider
 } from './Kyc.css'
+import Paragraph from '../components/Paragraph'
 
 const content = {
     title: 'Ocean Token Distribution',
@@ -66,7 +72,7 @@ const Kyc = () => (
                             <Fractal />
                         )}
 
-                        <p
+                        <PlatformIntro
                             dangerouslySetInnerHTML={{ __html: platform.intro }}
                         />
 
@@ -81,21 +87,38 @@ const Kyc = () => (
                 ))}
             </ContributionPlatforms>
 
-            <SubTitle white center>
-                The Ocean Token
-            </SubTitle>
+            <Divider />
 
-            <ul>
-                <li>
-                    Token key metrics: number of total tokens, capped
-                    at.../uncapped, minimum individual amount, maximum
-                    individual amount, token price
-                </li>
-                <li>
-                    Learn more about the utility token powering the Ocean
-                    Protocol ecosystem: link to /token page.
-                </li>
-            </ul>
+            <TokenInfo>
+                <Cell width={1 / 3}>
+                    <SubTitle white>The Ocean Token</SubTitle>
+                </Cell>
+                <Cell width={2 / 3}>
+                    <Paragraph
+                        style={{
+                            color: `rgb(${colors.white})`
+                        }}
+                    >
+                        The Ocean Token is a native utility token used as the
+                        means of value exchange, to power the protocol and
+                        incentivize the keeper nodes of the network. The Ocean
+                        Token is inseparable from the Ocean Protocol and Ocean
+                        Protocol network.
+                    </Paragraph>
+
+                    <ul>
+                        <li>
+                            Token key metrics: number of total tokens, capped
+                            at.../uncapped, minimum individual amount, maximum
+                            individual amount, token price
+                        </li>
+                        <li>
+                            Learn more about the utility token powering the
+                            Ocean Protocol ecosystem: link to /token page.
+                        </li>
+                    </ul>
+                </Cell>
+            </TokenInfo>
         </ContentRow>
     </Section>
 )
