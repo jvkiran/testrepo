@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { colors, fonts, transitions } from '../styles'
 
-export const Container = styled.a`
+export const Container = styled.button`
     border: none;
     font: inherit;
     cursor: pointer;

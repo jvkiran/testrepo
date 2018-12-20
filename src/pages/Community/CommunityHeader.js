@@ -8,7 +8,7 @@ import {
     VividCommunity,
     CommunityNumber
 } from './CommunityHeader.css'
-import { social } from '../../constants'
+import { social, webtasks } from '../../constants'
 
 import { ReactComponent as ButtonTelegram } from '../../assets/buttons/telegram.svg'
 import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
@@ -59,22 +59,21 @@ class CommunityCounts extends PureComponent {
         twitter: '11.8k',
         telegram: '7.5k',
         medium: '2.5k',
-        github: 0,
-        bounties: '15'
+        github: '--',
+        bounties: '--'
     }
 
-    githubUrl = 'https://oceanprotocol-github.now.sh'
+    axiosInstance = axios.create({
+        method: 'get',
+        timeout: 10000, // 10 sec.
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
 
     fetchGitHubNumber = async () => {
         try {
-            const response = await axios({
-                method: 'get',
-                url: this.githubUrl,
-                timeout: 10000, // 10 sec.
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
+            const response = await this.axiosInstance(webtasks.github)
 
             let numbers = []
 
@@ -91,8 +90,22 @@ class CommunityCounts extends PureComponent {
         }
     }
 
+    fetchBountiesNumber = async () => {
+        try {
+            const response = await this.axiosInstance(
+                `${webtasks.host}/bounties`
+            )
+
+            const bounties = response.data.total
+            this.setState({ bounties })
+        } catch (error) {
+            console.log(error) // eslint-disable-line no-console
+        }
+    }
+
     componentDidMount() {
         this.fetchGitHubNumber()
+        this.fetchBountiesNumber()
     }
 
     render() {
@@ -100,7 +113,7 @@ class CommunityCounts extends PureComponent {
             <VividCommunity>
                 {numberUnits.map(numberUnit => (
                     <li key={numberUnit.key}>
-                        <a href={numberUnit.link}>
+                        <a href={numberUnit.link} title={numberUnit.tooltip}>
                             <CommunityNumber>
                                 <SocialIcon icon={numberUnit.icon} />
                                 {this.state[numberUnit.key]}

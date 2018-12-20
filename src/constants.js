@@ -52,10 +52,10 @@ export const dates = {
 }
 
 export const youtube = {
-    channelId: 'UCH8TXwmWWAE9TZO0yTBHB3A',
     playlistId: 'UUH8TXwmWWAE9TZO0yTBHB3A' // uploads playlist ID
 }
 
 export const webtasks = {
-    host: 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io'
+    host: 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io',
+    github: 'https://oceanprotocol-github.now.sh'
 }
