@@ -14,7 +14,6 @@ export default class Home extends Component {
         return (
             <Page location={this.props.location} noheader>
                 <Welcome />
-                <h1>Overview</h1>
                 <Token />
                 <MediaMentions />
             </Page>

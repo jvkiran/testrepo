@@ -112,10 +112,6 @@ const Kyc = () => (
                             at.../uncapped, minimum individual amount, maximum
                             individual amount, token price
                         </li>
-                        <li>
-                            Learn more about the utility token powering the
-                            Ocean Protocol ecosystem: link to /token page.
-                        </li>
                     </ul>
                 </Cell>
             </TokenInfo>

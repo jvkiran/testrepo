@@ -5,7 +5,6 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import Protocol from './pages/Protocol'
 import Community from './pages/Community/'
-import About from './pages/About'
 import Art from './pages/Art'
 import Faq from './pages/Faq'
 import Privacy from './pages/Privacy'
@@ -22,7 +21,6 @@ const Routes = () => (
         <Route exact component={Home} path="/" />
         <Route component={Protocol} path="/protocol" />
         <Route component={Community} path="/community" />
-        <Route component={About} path="/about" />
         <Route component={Art} path="/art" />
         <Route component={Faq} path="/faq" />
         <Route component={Privacy} path="/privacy" />

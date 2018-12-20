@@ -4,6 +4,8 @@ import Page from '../templates/Page'
 import ProjectIntro from '../sections/ProjectIntro'
 import Docs from '../sections/Docs'
 import Roadmap from '../sections/Roadmap'
+import People from '../sections/People'
+import Collaborators from '../sections/Collaborators'
 import Usecases from '../sections/Usecases'
 import Papers from '../sections/Papers'
 import Modal from '../sections/Modal/Modal'
@@ -34,10 +36,11 @@ export default class Project extends Component {
                 location={this.props.location}
             >
                 <ProjectIntro toggleModal={this.toggleModal} />
-                <h1>Features</h1>
                 <Docs />
                 <Roadmap />
                 <Papers />
+                <People />
+                <Collaborators />
                 <Usecases />
 
                 {this.state.showModal && (

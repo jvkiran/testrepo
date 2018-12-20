@@ -8,21 +8,9 @@
         "href": "/community"
     },
     {
-        "name": "Developers",
-        "href": "/developers"
-    },
-    {
-        "name": "About",
-        "href": "/about"
-    },
-    {
         "name": "More",
         "href": "#",
         "sub": [
-            {
-                "name": "Token",
-                "href": "/token"
-            },
             {
                 "name": "Art",
                 "href": "/art"
