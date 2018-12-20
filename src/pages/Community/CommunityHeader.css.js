@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Button from '../../components/Button'
 import { colors, fonts, responsive, layout } from '../../styles'
 import { animation } from '../../components/Header.css'
 
@@ -28,18 +27,23 @@ export const Engage = styled.ul`
     }
 `
 
-export const EngageButton = styled(Button)`
+export const EngageButton = styled.a`
+    font-family: ${fonts.family.button};
+    border-radius: 0.2rem;
     text-align: center;
     padding: 0.5rem 1rem;
     background: rgba(${colors.white}, 0.8);
-    border: 0.1rem solid rgb(${colors.lightGrey});
+    border: 0.1rem solid rgb(${colors.pink});
     font-size: ${fonts.size.small};
     color: rgb(${colors.pink});
     z-index: 2;
+    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.08);
 
     &:hover,
     &:focus {
-        background: rgba(${colors.dimmedGrey}, 0.95);
+        background: rgba(${colors.black}, 0.95);
+        color: rgb(${colors.white});
+        border-color: rgb(${colors.black});
     }
 `
 
@@ -52,23 +56,28 @@ export const VividCommunity = styled.ul`
     justify-content: space-between;
 
     li {
+        padding: 0 calc(${layout.spacer} / 4);
         text-align: center;
         font-size: ${fonts.size.small};
-        flex: 0 0 50%;
+        flex: 1 1 50%;
         margin-bottom: ${layout.spacer};
 
         @media (${responsive.sm.min}) {
-            flex: 0 0 20%;
+            flex: 1 1 20%;
             margin-bottom: 0;
         }
     }
 
     a {
         color: rgb(${colors.lightGrey});
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 0.1rem solid transparent;
 
         &:hover,
         &:focus {
-            color: rgb(${colors.pink});
+            background: rgba(${colors.white}, 0.8);
+            border: 0.1rem solid rgb(${colors.pink});
         }
     }
 `
