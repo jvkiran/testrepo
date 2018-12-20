@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Page from '../templates/Page'
 import Welcome from '../sections/Welcome/Welcome'
 import Token from '../sections/Token'
+import Overview from '../sections/Overview'
 import MediaMentions from '../sections/MediaMentions'
 
 export default class Home extends Component {
@@ -14,6 +15,7 @@ export default class Home extends Component {
         return (
             <Page location={this.props.location} noheader>
                 <Welcome />
+                <Overview />
                 <Token />
                 <MediaMentions />
             </Page>

@@ -8,6 +8,10 @@
         "href": "/community"
     },
     {
+        "name": "Developers",
+        "href": "/developers"
+    },
+    {
         "name": "More",
         "href": "#",
         "sub": [
