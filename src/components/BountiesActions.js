@@ -38,6 +38,15 @@ export default class Bounties extends PureComponent {
     }
 
     url = webtasks.host + '/bounties'
+    signal = axios.CancelToken.source()
+
+    componentDidMount() {
+        this.getNetworks()
+    }
+
+    componentWillUnmount() {
+        this.signal.cancel()
+    }
 
     getNetworks = async () => {
         try {
@@ -47,7 +56,8 @@ export default class Bounties extends PureComponent {
                 timeout: 10000, // 10 sec.
                 headers: {
                     'Content-Type': 'application/json'
-                }
+                },
+                cancelToken: this.signal.token
             })
             const networks = response.data
             this.setState({
@@ -59,10 +69,6 @@ export default class Bounties extends PureComponent {
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
         }
-    }
-
-    componentDidMount() {
-        this.getNetworks()
     }
 
     render() {

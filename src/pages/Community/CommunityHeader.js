@@ -75,9 +75,22 @@ class CommunityCounts extends PureComponent {
         }
     })
 
+    signal = axios.CancelToken.source()
+
+    componentDidMount() {
+        this.fetchGitHubNumber()
+        this.fetchBountiesNumber()
+    }
+
+    componentWillUnmount() {
+        this.signal.cancel()
+    }
+
     fetchGitHubNumber = async () => {
         try {
-            const response = await this.axiosInstance(webtasks.github)
+            const response = await this.axiosInstance(webtasks.github, {
+                cancelToken: this.signal.token
+            })
 
             let numbers = []
 
@@ -97,7 +110,10 @@ class CommunityCounts extends PureComponent {
     fetchBountiesNumber = async () => {
         try {
             const response = await this.axiosInstance(
-                `${webtasks.host}/bounties`
+                `${webtasks.host}/bounties`,
+                {
+                    cancelToken: this.signal.token
+                }
             )
 
             const bounties = response.data.total
@@ -105,11 +121,6 @@ class CommunityCounts extends PureComponent {
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
         }
-    }
-
-    componentDidMount() {
-        this.fetchGitHubNumber()
-        this.fetchBountiesNumber()
     }
 
     render() {
