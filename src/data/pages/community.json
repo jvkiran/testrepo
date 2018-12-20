@@ -1,4 +1,18 @@
 {
     "title": "Community",
-    "description": "Engage with..."
+    "description": "Engage with...",
+    "actions": [
+        {
+            "title": "Become an ambassador",
+            "link": "#ambassadors"
+        },
+        {
+            "title": "Participate in a bounty",
+            "link": "#bounties"
+        },
+        {
+            "title": "Meet us at one of our events",
+            "link": "#events"
+        }
+    ]
 }

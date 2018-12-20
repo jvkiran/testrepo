@@ -8,7 +8,7 @@ import { ReactComponent as ButtonMedium } from '../assets/buttons/medium.svg'
 import { ReactComponent as ButtonGithub } from '../assets/buttons/github.svg'
 import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
-import Bounties from '../sections/Welcome/Bounties'
+import Bounties from './BountiesActions'
 
 const actions = [
     {

@@ -1,10 +1,10 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
-import { ReactComponent as ButtonGitcoin } from '../../assets/buttons/gitcoin.svg'
-import { ReactComponent as ButtonBountiesNetwork } from '../../assets/buttons/bountiesnetwork.svg'
-import { social, webtasks } from '../../constants'
-import { StyledBounties, Bounty } from './Bounties.css'
+import { ReactComponent as ButtonGitcoin } from '../assets/buttons/gitcoin.svg'
+import { ReactComponent as ButtonBountiesNetwork } from '../assets/buttons/bountiesnetwork.svg'
+import { social, webtasks } from '../constants'
+import { StyledBounties, Bounty } from './BountiesActions.css'
 
 const BountiesText = ({ data }) => {
     if (data !== undefined) {
@@ -50,7 +50,12 @@ export default class Bounties extends PureComponent {
                 }
             })
             const networks = response.data
-            this.setState({ networks })
+            this.setState({
+                networks: {
+                    gitcoin: networks.gitcoin,
+                    bountiesNetwork: networks.bountiesNetwork
+                }
+            })
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
         }

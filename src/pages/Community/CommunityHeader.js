@@ -9,6 +9,7 @@ import {
     CommunityNumber
 } from './CommunityHeader.css'
 import { social, webtasks } from '../../constants'
+import { actions } from '../../data/pages/community.json'
 
 import { ReactComponent as ButtonTelegram } from '../../assets/buttons/telegram.svg'
 import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
@@ -23,19 +24,21 @@ const numberUnits = [
         key: 'twitter',
         title: 'Twitter followers',
         link: social.twitter,
+        tooltip: 'Number of Twitter followers.',
         icon: ButtonTwitter
     },
     {
         key: 'telegram',
         title: 'Telegram members',
         link: social.telegram,
+        tooltip: 'Number of Telegram group members.',
         icon: ButtonTelegram
     },
     {
         key: 'medium',
         title: 'Blog followers',
         link: social.blog,
-        tooltip: 'Numbers of followers on Medium',
+        tooltip: 'Number of followers on Medium.',
         icon: ButtonMedium
     },
     {
@@ -59,7 +62,7 @@ class CommunityCounts extends PureComponent {
         twitter: '11.8k',
         telegram: '7.5k',
         medium: '2.5k',
-        github: '--',
+        github: '---',
         bounties: '--'
     }
 
@@ -132,21 +135,13 @@ export default class CommunityHeader extends PureComponent {
         return (
             <StyledHeaderAddition>
                 <Engage>
-                    <li>
-                        <EngageButton href="#ambassadors">
-                            Become an ambassador
-                        </EngageButton>
-                    </li>
-                    <li>
-                        <EngageButton href="#bounties">
-                            Participate in a bounty
-                        </EngageButton>
-                    </li>
-                    <li>
-                        <EngageButton href="#events">
-                            Meet us at one of our events
-                        </EngageButton>
-                    </li>
+                    {actions.map(action => (
+                        <li key={action.title}>
+                            <EngageButton href={action.link}>
+                                {action.title}
+                            </EngageButton>
+                        </li>
+                    ))}
                 </Engage>
                 <CommunityCounts />
             </StyledHeaderAddition>
