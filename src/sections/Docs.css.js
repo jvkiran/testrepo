@@ -55,31 +55,6 @@ export const DocsList = styled.article`
         margin-top: 0;
         margin-bottom: 1.5rem;
     }
-
-    ul {
-        margin: 0;
-        margin-bottom: 1.5rem;
-        padding-left: 1.5rem;
-        list-style: none;
-
-        li {
-            position: relative;
-            display: block;
-
-            + li {
-                margin-top: 0.2rem;
-            }
-
-            &:before {
-                content: '▪';
-                top: -2px;
-                position: absolute;
-                left: -1.5rem;
-                color: rgb(${colors.lightGrey});
-                user-select: none;
-            }
-        }
-    }
 `
 
 export const DocsLink = styled.a`

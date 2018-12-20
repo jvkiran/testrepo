@@ -1,6 +1,7 @@
 import React from 'react'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
+import { Ul, Li } from '../components/Lists'
 import mantaray from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 import {
     StyledSection,
@@ -28,18 +29,18 @@ const Docs = () => (
                 <Cell width={3 / 6}>
                     <DocsList>
                         <h2>Ocean Protocol Documentation</h2>
-                        <ul>
+                        <Ul>
                             {content.links.map(link => {
                                 const { title, url } = link
 
                                 return (
-                                    <li key={title}>
+                                    <Li key={title}>
                                         <a href={url}>{title}</a>
-                                    </li>
+                                    </Li>
                                 )
                             })}
-                            <li>And much more...</li>
-                        </ul>
+                            <Li>And much more...</Li>
+                        </Ul>
                         <DocsLink href="https://docs.oceanprotocol.com">
                             Go to Docs
                         </DocsLink>
