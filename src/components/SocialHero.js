@@ -1,11 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import SocialIcon from '../components/SocialIcon'
-import { ReactComponent as ButtonTelegram } from '../assets/buttons/telegram.svg'
-import { ReactComponent as ButtonGitter } from '../assets/buttons/gitter.svg'
-import { ReactComponent as ButtonTwitter } from '../assets/buttons/twitter.svg'
-import { ReactComponent as ButtonMedium } from '../assets/buttons/medium.svg'
-import { ReactComponent as ButtonGithub } from '../assets/buttons/github.svg'
 import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
 import Bounties from './BountiesActions'
@@ -14,32 +9,32 @@ const actions = [
     {
         name: 'Check us out on GitHub',
         link: social.github,
-        icon: ButtonGithub
+        key: 'github'
     },
     {
         name: 'Telegram Chat',
         link: social.telegram,
-        icon: ButtonTelegram
+        key: 'telegram'
     },
     {
         name: 'Telegram News',
         link: social.telegram_news,
-        icon: ButtonTelegram
+        key: 'telegram'
     },
     {
         name: 'Gitter',
         link: social.gitter,
-        icon: ButtonGitter
+        key: 'gitter'
     },
     {
         name: 'Twitter',
         link: social.twitter,
-        icon: ButtonTwitter
+        key: 'twitter'
     },
     {
         name: 'Blog',
-        link: social.blog,
-        icon: ButtonMedium
+        link: social.medium,
+        key: 'medium'
     }
 ]
 
@@ -61,7 +56,7 @@ export default class SocialHero extends PureComponent {
                         target="_blank"
                         light={this.props.light}
                     >
-                        <SocialIcon icon={action.icon} />
+                        <SocialIcon icon={action.key} />
                         {action.name}
                     </SocialLink>
                 ))}

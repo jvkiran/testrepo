@@ -45,6 +45,15 @@ export const EngageButton = styled.a`
         color: rgb(${colors.white});
         border-color: rgb(${colors.black});
     }
+
+    svg {
+        width: ${fonts.size.mini};
+        height: ${fonts.size.mini};
+        fill: rgb(${colors.lightGrey});
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: -0.1rem;
+    }
 `
 
 export const VividCommunity = styled.ul`
@@ -73,6 +82,7 @@ export const VividCommunity = styled.ul`
         display: block;
         padding: 0.5rem 1rem;
         border: 0.1rem solid transparent;
+        border-radius: 0.2rem;
 
         &:hover,
         &:focus {

@@ -38,7 +38,7 @@ const Footer = () => (
                     <StyledSubTitle>Follow</StyledSubTitle>
                     <StyledActions>
                         <StyledSocialLinks>
-                            <a href={social.blog} title="Blog">
+                            <a href={social.medium} title="Blog">
                                 <img alt="Medium" src={buttonMedium} />
                             </a>
                             <a href={social.twitter} title="Twitter">

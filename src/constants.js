@@ -30,7 +30,7 @@ export const company = {
 }
 
 export const social = {
-    blog: 'https://blog.oceanprotocol.com/',
+    medium: 'https://blog.oceanprotocol.com/',
     twitter: 'https://twitter.com/oceanprotocol',
     slack:
         'https://join.slack.com/t/oceanprotocol/shared_invite/enQtMzQ5MjU1MjcwODIyLWQ2MDdhZjI1N2M5MzAzZmVhMjcwYzk4NDk4N2M2MTBkYmZjOWIyZDc5NWFjMGE4OWY5MDkzZWRmNzg1MDRjZDg',

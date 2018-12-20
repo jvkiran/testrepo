@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
-import { ReactComponent as ButtonGitcoin } from '../assets/buttons/gitcoin.svg'
-import { ReactComponent as ButtonBountiesNetwork } from '../assets/buttons/bountiesnetwork.svg'
+import SocialIcon from '../components/SocialIcon'
 import { social, webtasks } from '../constants'
 import { StyledBounties, Bounty } from './BountiesActions.css'
 
@@ -20,9 +19,9 @@ const BountiesTextAppend = ({ network }) =>
 
 const BountiesIcon = ({ network }) =>
     network === 'bountiesNetwork' ? (
-        <ButtonBountiesNetwork />
+        <SocialIcon icon={'bountiesNetwork'} />
     ) : (
-        <ButtonGitcoin />
+        <SocialIcon icon={'gitcoin'} />
     )
 
 BountiesIcon.propTypes = {

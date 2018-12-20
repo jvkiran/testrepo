@@ -14,5 +14,34 @@
             "title": "Meet us at one of our events",
             "link": "#events"
         }
+    ],
+    "numberUnits": [
+        {
+            "key": "twitter",
+            "title": "Twitter followers",
+            "tooltip": "Number of Twitter followers."
+        },
+        {
+            "key": "telegram",
+            "title": "Telegram members",
+            "tooltip": "Number of Telegram group members."
+        },
+        {
+            "key": "medium",
+            "title": "Blog followers",
+            "tooltip": "Number of followers on Medium."
+        },
+        {
+            "key": "github",
+            "title": "GitHub stargazers",
+            "tooltip": "Number of stars across all repositories."
+        },
+        {
+            "key": "bounties",
+            "icon": "gitcoin",
+            "title": "Bounties",
+            "tooltip": "Number of open and completed bounties.",
+            "link": "https://explorer.bounties.network/explorer?search=ocean%20protocol"
+        }
     ]
 }

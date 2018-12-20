@@ -10,55 +10,13 @@ import {
     CommunityNumber
 } from './CommunityHeader.css'
 import { social, webtasks } from '../../constants'
-import { actions } from '../../data/pages/community.json'
-
-import { ReactComponent as ButtonTelegram } from '../../assets/buttons/telegram.svg'
-import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
-import { ReactComponent as ButtonMedium } from '../../assets/buttons/medium.svg'
-import { ReactComponent as ButtonGithub } from '../../assets/buttons/github.svg'
-import { ReactComponent as ButtonGitcoin } from '../../assets/buttons/gitcoin.svg'
+import { actions, numberUnits } from '../../data/pages/community.json'
+import { ReactComponent as Caret } from '../../assets/misc/caret.svg'
 
 const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
-const numberUnits = [
-    {
-        key: 'twitter',
-        title: 'Twitter followers',
-        link: social.twitter,
-        tooltip: 'Number of Twitter followers.',
-        icon: ButtonTwitter
-    },
-    {
-        key: 'telegram',
-        title: 'Telegram members',
-        link: social.telegram,
-        tooltip: 'Number of Telegram group members.',
-        icon: ButtonTelegram
-    },
-    {
-        key: 'medium',
-        title: 'Blog followers',
-        link: social.blog,
-        tooltip: 'Number of followers on Medium.',
-        icon: ButtonMedium
-    },
-    {
-        key: 'github',
-        title: 'GitHub stargazers',
-        link: social.github,
-        tooltip: 'Number of stars across all repositories.',
-        icon: ButtonGithub
-    },
-    {
-        key: 'bounties',
-        title: 'Bounties',
-        link: social.bountiesNetwork,
-        tooltip: 'Number of open and completed bounties.',
-        icon: ButtonGitcoin
-    }
-]
-
 class CommunityCounts extends PureComponent {
+    // TODO: Replace hardcoded platform numbers with fetch responses
     state = {
         twitter: '11.8k',
         telegram: '7.5k',
@@ -128,9 +86,22 @@ class CommunityCounts extends PureComponent {
             <VividCommunity>
                 {numberUnits.map(numberUnit => (
                     <li key={numberUnit.key}>
-                        <a href={numberUnit.link} title={numberUnit.tooltip}>
+                        <a
+                            href={
+                                numberUnit.link
+                                    ? numberUnit.link
+                                    : social[numberUnit.key]
+                            }
+                            title={numberUnit.tooltip}
+                        >
                             <CommunityNumber>
-                                <SocialIcon icon={numberUnit.icon} />
+                                <SocialIcon
+                                    icon={
+                                        numberUnit.icon
+                                            ? numberUnit.icon
+                                            : numberUnit.key
+                                    }
+                                />
                                 {this.state[numberUnit.key]}
                             </CommunityNumber>
                             <span>{numberUnit.title}</span>
@@ -158,7 +129,9 @@ export default class CommunityHeader extends PureComponent {
                     {actions.map(action => (
                         <li key={action.title}>
                             <EngageButton data-scroll href={action.link}>
+                                <Caret />
                                 {action.title}
+                                <Caret />
                             </EngageButton>
                         </li>
                     ))}

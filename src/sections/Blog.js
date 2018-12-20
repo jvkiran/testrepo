@@ -87,7 +87,7 @@ const Blog = () => (
         </LazyLoad>
 
         <StyledAction>
-            <a href={social.blog}>Go to Blog</a>
+            <a href={social.medium}>Go to Blog</a>
         </StyledAction>
     </Section>
 )
