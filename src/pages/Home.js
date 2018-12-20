@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Page from '../templates/Page'
 import Welcome from '../sections/Welcome/Welcome'
-import Kyc from '../sections/Kyc'
+import Token from '../sections/Token'
 import MediaMentions from '../sections/MediaMentions'
 
 export default class Home extends Component {
@@ -15,7 +15,7 @@ export default class Home extends Component {
             <Page location={this.props.location} noheader>
                 <Welcome />
                 <h1>Overview</h1>
-                <Kyc />
+                <Token />
                 <MediaMentions />
             </Page>
         )

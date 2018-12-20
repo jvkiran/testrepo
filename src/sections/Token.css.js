@@ -72,25 +72,15 @@ export const ContributionPlatform = styled.a`
         background: rgb(${colors.white});
         color: rgb(${colors.darkGrey});
 
-        &:hover,
-        &:focus {
-            ${PlatformButton} {
-                background: rgb(${colors.black});
-                color: rgb(${colors.white});
-            }
-        }
-
         svg {
             fill: rgb(${colors.lightGrey});
-        }
-
-        ${PlatformButton} {
         }
     }
 
     &:last-child {
         ${PlatformButton} {
-            background: rgb(${colors.darkGrey});
+            background: rgb(${colors.white});
+            color: rgb(${colors.black});
         }
 
         ${PlatformIntro} {
@@ -101,8 +91,8 @@ export const ContributionPlatform = styled.a`
     &:hover,
     &:focus {
         ${PlatformButton} {
-            background: rgb(${colors.white});
-            color: rgb(${colors.black});
+            background: rgb(${colors.black});
+            color: rgb(${colors.white});
         }
     }
 `

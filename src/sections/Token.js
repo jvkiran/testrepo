@@ -6,7 +6,7 @@ import SectionHeader from '../components/SectionHeader'
 import ContentRow from '../components/ContentRow'
 import SubTitle from '../components/SubTitle'
 import { Ul, Li } from '../components/Lists'
-import { ReactComponent as Coinlist } from '../assets/logos/coinlist.svg'
+import { ReactComponent as CoinList } from '../assets/logos/coinlist.svg'
 import { ReactComponent as Fractal } from '../assets/logos/fractal.svg'
 import { colors } from '../styles'
 import {
@@ -16,7 +16,7 @@ import {
     PlatformButton,
     TokenInfo,
     Divider
-} from './Kyc.css'
+} from './Token.css'
 import Paragraph from '../components/Paragraph'
 
 const content = {
@@ -25,15 +25,15 @@ const content = {
         'Get on the whitelist for the Ocean Token distribution during the network launch on … March 2019. The KYC process is open until … 2019.',
     platforms: [
         {
-            name: 'Coinlist',
-            intro: 'Use <strong>Coinlist</strong> if you:',
+            name: 'CoinList',
+            intro: 'Use <strong>CoinList</strong> if you:',
             list: [
                 'are registering for the first time',
-                'have an existing Coinlist or Angellist account',
-                'have participated in Filecoin, Blockstack, Origin or any other project run by Coinlist',
+                'have an existing CoinList or AngelList account',
+                'have participated in Filecoin, Blockstack, Origin or any other project run by CoinList',
                 'are a US accredited investor'
             ],
-            link: 'https://coinlist.co'
+            link: 'https://coinlist.co/oceanprotocol'
         },
         {
             name: 'Fractal',
@@ -66,8 +66,8 @@ const Kyc = () => (
             <ContributionPlatforms>
                 {content.platforms.map((platform, index) => (
                     <ContributionPlatform key={index} href={platform.link}>
-                        {platform.name === 'Coinlist' ? (
-                            <Coinlist />
+                        {platform.name === 'CoinList' ? (
+                            <CoinList />
                         ) : (
                             <Fractal />
                         )}
