@@ -20,7 +20,8 @@ export default class Page extends PureComponent {
         noabsolute: PropTypes.bool,
         noheader: PropTypes.bool,
         menuLight: PropTypes.bool,
-        headerAddition: PropTypes.any
+        headerAddition: PropTypes.any,
+        headerLeft: PropTypes.bool
     }
 
     render() {
@@ -36,6 +37,7 @@ export default class Page extends PureComponent {
             headerFullWidth,
             headerAddition,
             headerStyle,
+            headerLeft,
             noabsolute,
             noheader,
             menuLight
@@ -62,6 +64,7 @@ export default class Page extends PureComponent {
                         viewport={headerViewport}
                         additionalComponent={headerAddition}
                         fullWidth={headerFullWidth}
+                        left={headerLeft}
                     />
                 )}
                 {children}

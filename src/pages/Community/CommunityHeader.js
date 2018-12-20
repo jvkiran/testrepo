@@ -1,12 +1,20 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
+import SocialIcon from '../../components/SocialIcon'
 import {
     StyledHeaderAddition,
     Engage,
+    EngageButton,
     VividCommunity,
     CommunityNumber
 } from './CommunityHeader.css'
 import { social } from '../../constants'
+
+import { ReactComponent as ButtonTelegram } from '../../assets/buttons/telegram.svg'
+import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
+import { ReactComponent as ButtonMedium } from '../../assets/buttons/medium.svg'
+import { ReactComponent as ButtonGithub } from '../../assets/buttons/github.svg'
+import { ReactComponent as ButtonGitcoin } from '../../assets/buttons/gitcoin.svg'
 
 const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 
@@ -14,30 +22,35 @@ const numberUnits = [
     {
         key: 'twitter',
         title: 'Twitter followers',
-        link: social.twitter
+        link: social.twitter,
+        icon: ButtonTwitter
     },
     {
         key: 'telegram',
         title: 'Telegram members',
-        link: social.telegram
+        link: social.telegram,
+        icon: ButtonTelegram
     },
     {
         key: 'medium',
         title: 'Blog followers',
         link: social.blog,
-        tooltip: 'Numbers of followers on Medium'
+        tooltip: 'Numbers of followers on Medium',
+        icon: ButtonMedium
     },
     {
         key: 'github',
         title: 'GitHub stargazers',
         link: social.github,
-        tooltip: 'Number of stars across all repositories.'
+        tooltip: 'Number of stars across all repositories.',
+        icon: ButtonGithub
     },
     {
         key: 'bounties',
         title: 'Bounties',
         link: social.bountiesNetwork,
-        tooltip: 'Number of open and completed bounties.'
+        tooltip: 'Number of open and completed bounties.',
+        icon: ButtonGitcoin
     }
 ]
 
@@ -89,6 +102,7 @@ class CommunityCounts extends PureComponent {
                     <li key={numberUnit.key}>
                         <a href={numberUnit.link}>
                             <CommunityNumber>
+                                <SocialIcon icon={numberUnit.icon} />
                                 {this.state[numberUnit.key]}
                             </CommunityNumber>
                             <span>{numberUnit.title}</span>
@@ -105,12 +119,20 @@ export default class CommunityHeader extends PureComponent {
         return (
             <StyledHeaderAddition>
                 <Engage>
-                    <li>Become an ambassador</li>
-                    <li>Participate in a bounty</li>
-                    <li>Meet us at one of our events</li>
                     <li>
-                        Follow us: Blog, Videos, Twitter, Telegram, GitHub,
-                        Gitter
+                        <EngageButton href="#ambassadors">
+                            Become an ambassador
+                        </EngageButton>
+                    </li>
+                    <li>
+                        <EngageButton href="#bounties">
+                            Participate in a bounty
+                        </EngageButton>
+                    </li>
+                    <li>
+                        <EngageButton href="#events">
+                            Meet us at one of our events
+                        </EngageButton>
                     </li>
                 </Engage>
                 <CommunityCounts />

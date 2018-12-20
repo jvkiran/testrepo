@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts } from '../../styles'
+import { colors, fonts } from '../styles'
 
 export const SocialBand = styled.aside`
     margin-top: 2rem;
@@ -13,10 +13,8 @@ export const SocialLink = styled.a`
     font-size: ${fonts.size.mini};
     font-family: ${fonts.family.button};
     font-weight: ${fonts.fontWeight.title};
-    background: ${({ important }) =>
-        important
-            ? `rgba(${colors.purple}, .95)`
-            : `rgba(${colors.black}, .95)`};
+    background: ${({ light }) =>
+        light ? `rgba(${colors.white}, .95)` : `rgba(${colors.black}, .95)`};
     display: inline-block;
     margin-left: 0.5rem;
 
@@ -26,7 +24,8 @@ export const SocialLink = styled.a`
 
     &:hover,
     &:focus {
-        color: rgba(${colors.white}, 1);
+        color: ${({ light }) =>
+            light ? `rgba(${colors.black}, 1)` : `rgba(${colors.white}, 1)`};
     }
 
     & svg {

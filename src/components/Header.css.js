@@ -26,7 +26,7 @@ export const StyledHeader = styled.header`
     padding: 10rem calc(${layout.pageFrame} * 2) 6rem
         calc(${layout.pageFrame} * 2);
     margin-bottom: ${layout.pageFrame};
-    text-align: center;
+    text-align: ${({ left }) => (left ? 'left' : 'center')};
     position: relative;
 
     ${({ light }) =>
@@ -45,16 +45,6 @@ export const StyledHeader = styled.header`
         margin-bottom: 0;
         color: rgb(${colors.white});
         animation: ${animation} 1.5s backwards;
-    }
-
-    a {
-        color: inherit;
-        border-bottom: 1px solid rgba(${colors.white}, 0.2);
-
-        &:hover,
-        &:focus {
-            border-bottom-color: rgba(${colors.white}, 0.4);
-        }
     }
 `
 

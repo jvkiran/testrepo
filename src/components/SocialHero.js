@@ -1,13 +1,14 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as ButtonTelegram } from '../../assets/buttons/telegram.svg'
-import { ReactComponent as ButtonGitter } from '../../assets/buttons/gitter.svg'
-import { ReactComponent as ButtonTwitter } from '../../assets/buttons/twitter.svg'
-import { ReactComponent as ButtonMedium } from '../../assets/buttons/medium.svg'
-import { ReactComponent as ButtonGithub } from '../../assets/buttons/github.svg'
-import { social } from '../../constants'
+import SocialIcon from '../components/SocialIcon'
+import { ReactComponent as ButtonTelegram } from '../assets/buttons/telegram.svg'
+import { ReactComponent as ButtonGitter } from '../assets/buttons/gitter.svg'
+import { ReactComponent as ButtonTwitter } from '../assets/buttons/twitter.svg'
+import { ReactComponent as ButtonMedium } from '../assets/buttons/medium.svg'
+import { ReactComponent as ButtonGithub } from '../assets/buttons/github.svg'
+import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
-import Bounties from './Bounties'
+import Bounties from '../sections/Welcome/Bounties'
 
 const actions = [
     {
@@ -42,16 +43,12 @@ const actions = [
     }
 ]
 
-const SocialIcon = ({ icon }) => {
-    const IconName = icon
-    return <IconName />
-}
-
-SocialIcon.propTypes = {
-    icon: PropTypes.any
-}
-
 export default class SocialHero extends PureComponent {
+    static propTypes = {
+        light: PropTypes.bool,
+        nobounties: PropTypes.bool
+    }
+
     render() {
         return (
             <SocialBand>
@@ -62,13 +59,14 @@ export default class SocialHero extends PureComponent {
                         important={action.important ? true : null}
                         rel="noopener noreferrer"
                         target="_blank"
+                        light={this.props.light}
                     >
                         <SocialIcon icon={action.icon} />
                         {action.name}
                     </SocialLink>
                 ))}
 
-                <Bounties />
+                {!this.props.nobounties && <Bounties />}
             </SocialBand>
         )
     }

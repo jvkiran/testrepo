@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { colors, fonts, transitions } from '../styles'
 
-export const Container = styled.button`
+export const Container = styled.a`
     border: none;
     font: inherit;
     cursor: pointer;
-    outline: inherit;
+    outline: none;
     position: relative;
     display: block;
     width: fit-content;
@@ -16,7 +16,7 @@ export const Container = styled.button`
     line-height: 1.38;
     text-transform: uppercase;
     margin: 0;
-    border-radius: 5px;
+    border-radius: 0.2rem;
     transition: ${transitions.short};
     color: rgb(${colors.white});
     background: linear-gradient(

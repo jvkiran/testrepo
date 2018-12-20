@@ -26,10 +26,11 @@ export default class Community extends Component {
                 headerBackgroundImage={OceanMantarayBack}
                 headerViewport
                 headerFullWidth
+                headerLeft
                 headerAddition={<CommunityHeader />}
             >
                 <Ambassadors />
-                <h1>Bounties</h1>
+                <h1 id="bounties">Bounties</h1>
                 <Events />
                 <Blog />
                 <Videos />

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Waves from './Waves'
-import SocialHero from './SocialHero'
+import SocialHero from '../../components/SocialHero'
 import VideoModal from '../../components/VideoModal'
 import videoThumb from '../../assets/misc/video-thumb.jpg'
 import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
