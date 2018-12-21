@@ -46,6 +46,10 @@ import OceanMantarayGrid from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
 import OceanMantarayGridPNG from '@oceanprotocol/art/mantaray/mantaray-grid@2x.png'
 import OceanMantarayFull from '@oceanprotocol/art/mantaray/mantaray-full.svg'
 import OceanMantarayFullPNG from '@oceanprotocol/art/mantaray/mantaray-full@2x.png'
+import OceanSquidGrid from '@oceanprotocol/art/squid/squid-grid.svg'
+import OceanSquidGridPNG from '@oceanprotocol/art/squid/squid-grid@2x.png'
+import OceanSquidFull from '@oceanprotocol/art/squid/squid-full.svg'
+import OceanSquidFullPNG from '@oceanprotocol/art/squid/squid-full@2x.png'
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 function GaEvent(artasset) {
@@ -354,6 +358,64 @@ const Art = ({ location }) => (
                             download
                             href={OceanMantarayGridPNG}
                             onClick={() => GaEvent('Mantaray Grid')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                </KeyVisuals>
+            </ContentRow>
+
+            <ContentRow>
+                <SectionTitle>{content.squid.title}</SectionTitle>
+                <SectionSubTitle>{content.squid.description}</SectionSubTitle>
+
+                <KeyVisuals>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Squid Full"
+                                    src={OceanSquidFull}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanSquidFull}
+                            onClick={() => GaEvent('Squid Full')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanSquidFullPNG}
+                            onClick={() => GaEvent('Squid Full')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Squid Grid"
+                                    src={OceanSquidGrid}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanSquidGrid}
+                            onClick={() => GaEvent('Squid Grid')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanSquidGridPNG}
+                            onClick={() => GaEvent('Squid Grid')}
                         >
                             PNG
                         </a>

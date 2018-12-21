@@ -21,7 +21,11 @@
         "description": "Use any of the following variations of the Ocean Protocol jellyfish. Make sure to always place it on a dark background like our black (#141414)."
     },
     "mantaray": {
-        "title": "Mantaray",
-        "description": "Use any of the following variations of the Ocean Protocol mantaray. Make sure to always place it on a dark background like our black (#141414)."
+        "title": "Manta Ray",
+        "description": "Use any of the following variations of the Ocean Protocol manta ray. Make sure to always place it on a dark background like our black (#141414)."
+    },
+    "squid": {
+        "title": "Squid",
+        "description": "Use any of the following variations of the Ocean Protocol squid. Make sure to always place it on a dark background like our black (#141414)."
     }
 }
