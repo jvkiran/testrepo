@@ -36,7 +36,8 @@ export const StyledLink = styled(NavLink)`
     background-repeat: no-repeat;
     background-size: center -60%;
     background-size: cover;
-    border: ${({ light }) => light && `0.1rem solid rgb(${colors.lightGrey})`};
+    border: ${({ light }) =>
+        light && `0.1rem solid rgba(${colors.dimmedGrey}, .6)`};
     margin-bottom: ${layout.pageFrame};
     position: relative;
 

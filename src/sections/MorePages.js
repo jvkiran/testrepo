@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import artJson from '../data/pages/art'
 import faqJson from '../data/pages/faq'
@@ -27,7 +27,7 @@ const content = [
         title: communityJson.title,
         subtitle: communityJson.description,
         link: '/community',
-        backgroundColor: colors.white,
+        backgroundColor: colors.dimmedGrey,
         backgroundImage: OceanMantaray,
         light: true
     },
@@ -52,36 +52,44 @@ const content = [
     }
 ]
 
-const MorePages = ({ links }) => (
-    <StyledSection id="more">
-        {content.map(item => {
-            // eslint-disable-next-line
-            if (links && !links.includes(item.link)) return
+export default class MorePages extends PureComponent {
+    static propTypes = {
+        links: PropTypes.array
+    }
 
-            return (
-                <StyledLink
-                    key={item.link}
-                    to={item.link}
-                    backgroundColor={item.backgroundColor}
-                    backgroundImage={item.backgroundImage}
-                    light={item.light}
-                >
-                    <StyledTitle white={!item.light}>{item.title}</StyledTitle>
-                    {item.subtitle && (
-                        <StyledSubTitle center>{item.subtitle}</StyledSubTitle>
-                    )}
-                </StyledLink>
-            )
-        })}
-    </StyledSection>
-)
+    static defaultProps = {
+        links: ['/protocol', '/community', '/developers']
+    }
 
-MorePages.propTypes = {
-    links: PropTypes.array
+    render() {
+        const { links } = this.props
+
+        return (
+            <StyledSection id="more">
+                {content.map(item => {
+                    // eslint-disable-next-line
+                    if (links && !links.includes(item.link)) return
+
+                    return (
+                        <StyledLink
+                            key={item.link}
+                            to={item.link}
+                            backgroundColor={item.backgroundColor}
+                            backgroundImage={item.backgroundImage}
+                            light={item.light}
+                        >
+                            <StyledTitle white={!item.light}>
+                                {item.title}
+                            </StyledTitle>
+                            {item.subtitle && (
+                                <StyledSubTitle center>
+                                    {item.subtitle}
+                                </StyledSubTitle>
+                            )}
+                        </StyledLink>
+                    )
+                })}
+            </StyledSection>
+        )
+    }
 }
-
-MorePages.defaultProps = {
-    links: ['/protocol', '/community', '/developers']
-}
-
-export default MorePages
