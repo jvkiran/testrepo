@@ -6,6 +6,7 @@ import videoThumb from '../../assets/misc/video-thumb.jpg'
 import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
 import videoThumbWebP from '../../assets/misc/video-thumb.webp'
 import videoThumbWebPRetina from '../../assets/misc/video-thumb@2x.webp'
+import content from '../../data/welcome.json'
 import { colors } from '../../styles'
 import {
     Hero,
@@ -20,12 +21,6 @@ import {
     Cta
 } from './Welcome.css'
 
-const content = {
-    title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
-    description:
-        'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
-}
-
 export default class Welcome extends Component {
     state = {
         videoUrl: '',
@@ -35,7 +30,7 @@ export default class Welcome extends Component {
     toggleModal = () => {
         this.setState({
             modalIsOpen: !this.state.modalIsOpen,
-            videoUrl: 'https://www.youtube.com/watch?v=FEeicvNSyk4'
+            videoUrl: content.video
         })
     }
 
@@ -49,15 +44,6 @@ export default class Welcome extends Component {
                             <StyledParagraph>
                                 {content.description}
                             </StyledParagraph>
-
-                            <Cta>
-                                <StyledButton to="/project">
-                                    Learn about the project
-                                </StyledButton>
-                                <StyledButton to="/community">
-                                    Become an ambassador
-                                </StyledButton>
-                            </Cta>
                         </HeroGridCell>
                         <HeroGridCell>
                             <StyledVideoThumbnail
@@ -86,6 +72,14 @@ export default class Welcome extends Component {
                             </StyledVideoThumbnail>
                         </HeroGridCell>
                     </HeroGrid>
+
+                    <Cta>
+                        {content.cta.map(action => (
+                            <StyledButton key={action.link} to={action.link}>
+                                {action.title}
+                            </StyledButton>
+                        ))}
+                    </Cta>
 
                     <StyledSocialHero>
                         <SocialHero />

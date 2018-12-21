@@ -5,7 +5,7 @@ import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import ContentRow from '../../components/ContentRow'
-import { colors, responsive, fonts, gradients } from '../../styles'
+import { colors, responsive, fonts, gradients, layout } from '../../styles'
 
 export const Hero = styled(Section)`
     background: rgb(${colors.black});
@@ -119,11 +119,8 @@ export const StyledVideoThumbnail = styled.picture`
 `
 
 export const Cta = styled.div`
-    margin-bottom: 2rem;
-
-    @media screen and (${responsive.md.min}) {
-        margin-bottom: 1rem;
-    }
+    margin-top: calc(${layout.spacer} / 2);
+    margin-bottom: calc(${layout.spacer} * 2);
 `
 
 export const StyledButton = styled(Link)`

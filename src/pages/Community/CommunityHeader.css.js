@@ -35,7 +35,7 @@ export const EngageButton = styled.a`
     background: rgba(${colors.white}, 0.8);
     border: 0.1rem solid rgb(${colors.pink});
     font-size: ${fonts.size.small};
-    color: rgb(${colors.pink});
+    color: rgb(${colors.black});
     z-index: 2;
     box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.08);
 
