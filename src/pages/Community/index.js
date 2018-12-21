@@ -9,7 +9,7 @@ import MorePages from '../../sections/MorePages'
 import content from '../../data/pages/community.json'
 import { colors } from '../../styles'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
-import CommunityHeader from './CommunityHeader'
+import Header from './Header'
 
 export default class Community extends Component {
     static propTypes = {
@@ -28,7 +28,7 @@ export default class Community extends Component {
                 headerViewport
                 headerFullWidth
                 headerLeft
-                headerAddition={<CommunityHeader />}
+                headerAddition={<Header />}
             >
                 <Ambassadors />
                 <h1 id="bounties">Bounties</h1>

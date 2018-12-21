@@ -8,7 +8,7 @@ import {
     EngageButton,
     VividCommunity,
     CommunityNumber
-} from './CommunityHeader.css'
+} from './Header.css'
 import { social, webtasks } from '../../constants'
 import { actions, numberUnits } from '../../data/pages/community.json'
 import { ReactComponent as Caret } from '../../assets/misc/caret.svg'
@@ -113,7 +113,7 @@ class CommunityCounts extends PureComponent {
     }
 }
 
-export default class CommunityHeader extends PureComponent {
+export default class Header extends PureComponent {
     componentDidMount() {
         // eslint-disable-next-line no-unused-vars
         const scroll = new SmoothScroll('a[data-scroll]', {

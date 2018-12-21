@@ -41,27 +41,35 @@ const actions = [
 export default class SocialHero extends PureComponent {
     static propTypes = {
         light: PropTypes.bool,
-        nobounties: PropTypes.bool
+        nobounties: PropTypes.bool,
+        items: PropTypes.array
     }
 
     render() {
+        const { light, nobounties, items } = this.props
+
         return (
             <SocialBand>
-                {actions.map(action => (
-                    <SocialLink
-                        key={action.name}
-                        href={action.link}
-                        important={action.important ? true : null}
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        light={this.props.light}
-                    >
-                        <SocialIcon icon={action.key} />
-                        {action.name}
-                    </SocialLink>
-                ))}
+                {actions.map(action => {
+                    // eslint-disable-next-line
+                    if (items && !items.includes(action.key)) return
 
-                {!this.props.nobounties && <Bounties />}
+                    return (
+                        <SocialLink
+                            key={action.name}
+                            href={action.link}
+                            important={action.important ? true : null}
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            light={light}
+                        >
+                            <SocialIcon icon={action.key} />
+                            {action.name}
+                        </SocialLink>
+                    )
+                })}
+
+                {!nobounties && <Bounties />}
             </SocialBand>
         )
     }
