@@ -4,8 +4,9 @@
     "video": "https: //www.youtube.com/watch?v=FEeicvNSyk4",
     "cta": [
         {
-            "title": "Learn about the protocol",
-            "link": "/protocol"
+            "title": "Register for Token Distribution",
+            "link": "#token",
+            "smooth": true
         },
         {
             "title": "Become an ambassador",

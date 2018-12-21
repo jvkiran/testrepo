@@ -134,13 +134,21 @@ export const StyledButton = styled(Link)`
     background: rgba(${colors.grey}, 0.95);
     display: inline-block;
     margin-left: 0.5rem;
-    animation: ${animation} 1.5s 0.5s backwards;
+    animation: ${animation} 1.5s backwards;
     border-radius: 0.1rem;
 
     &:first-child {
         animation-delay: 0;
         margin-left: 0;
         background: ${gradients.main};
+    }
+
+    &:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.75s;
     }
 `
 

@@ -5,7 +5,7 @@ import FaqItem from '../components/FaqItem'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
-import faq from '../data/faq'
+import content from '../data/pages/faq'
 import {
     StyledSubTitle,
     StyledFaqRow,
@@ -13,14 +13,15 @@ import {
     StyledSection
 } from './Faq.css'
 
-export const title = 'FAQ'
-export const description = 'Frequently asked questions about Ocean Protocol'
-
 const Faq = ({ location }) => (
-    <Page title={title} description={description} location={location}>
+    <Page
+        title={content.title}
+        description={content.description}
+        location={location}
+    >
         <StyledSection>
             <ContentRow>
-                {faq.map(question => (
+                {content.items.map(question => (
                     <StyledFaqRow key={question.title}>
                         <StyledSubTitle>{question.title}</StyledSubTitle>
                         <Grid>

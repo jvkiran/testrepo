@@ -5,6 +5,7 @@ import Ambassadors from '../../sections/Ambassadors'
 import Events from '../../sections/Events'
 import Blog from '../../sections/Blog'
 import Videos from '../../sections/Videos'
+import MorePages from '../../sections/MorePages'
 import content from '../../data/pages/community.json'
 import { colors } from '../../styles'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
@@ -35,6 +36,7 @@ export default class Community extends Component {
                 <Blog />
                 <Videos />
                 <h1>Team</h1>
+                <MorePages />
             </Page>
         )
     }
