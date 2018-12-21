@@ -42,11 +42,12 @@ export default class Header extends PureComponent {
                 style={style}
                 viewport={viewport}
                 light={light}
-                left={left}
             >
                 <ContentRow narrow={!fullWidth} style={{ zIndex: 5 }}>
-                    <StyledTitle white={!light}>{title}</StyledTitle>
-                    <StyledSubTitle>{description}</StyledSubTitle>
+                    <StyledTitle left={left} white={!light}>
+                        {title}
+                    </StyledTitle>
+                    <StyledSubTitle left={left}>{description}</StyledSubTitle>
                     {text && (
                         <Paragraph
                             center

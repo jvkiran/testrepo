@@ -35,8 +35,11 @@ export default class Project extends Component {
                 title={content.title}
                 description={content.description}
                 location={this.props.location}
+                headerViewport
+                headerFullWidth
+                headerAddition={<ProjectIntro toggleModal={this.toggleModal} />}
+                headerStyle={{ backgroundSize: 'contain' }}
             >
-                <ProjectIntro toggleModal={this.toggleModal} />
                 <Docs />
                 <Roadmap />
                 <Papers />

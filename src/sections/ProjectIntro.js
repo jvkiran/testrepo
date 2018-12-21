@@ -7,7 +7,6 @@ import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Pulse from '../components/Pulse'
 import Cell from '../components/Cell'
-import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
 import dataDotsLeft from '../assets/graphics/data-dots-left.svg'
 import dataDotsRight from '../assets/graphics/data-dots-right.svg'
@@ -20,7 +19,6 @@ import {
 } from './ProjectIntro.css'
 
 const content = {
-    title: 'Ocean Protocol \nunlocks data',
     cards: [
         {
             title: 'Data Providers',
@@ -69,8 +67,6 @@ const ProjectIntro = ({ toggleModal, ...props }) => {
     return (
         <Section id="project" {...props}>
             <ContentRow>
-                <Title>{content.title}</Title>
-
                 <StyledData width={1}>
                     <StyledCard onClick={() => _toggleModal('provider')}>
                         <h4>{content.cards[0].title}</h4>
@@ -101,7 +97,9 @@ const ProjectIntro = ({ toggleModal, ...props }) => {
                 <Grid>
                     {content.about.map(aboutBlock => (
                         <Cell key={aboutBlock.title} width={1 / 2}>
-                            <StyledSubTitle>{aboutBlock.title}</StyledSubTitle>
+                            <StyledSubTitle white>
+                                {aboutBlock.title}
+                            </StyledSubTitle>
                             <Paragraph>{aboutBlock.text}</Paragraph>
                         </Cell>
                     ))}

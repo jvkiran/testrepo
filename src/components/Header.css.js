@@ -10,6 +10,7 @@ export const animation = keyframes`
 `
 
 export const StyledHeader = styled.header`
+    color: rgb(${colors.white});
     background-color: ${({ backgroundColor }) =>
         backgroundColor ? `rgb(${backgroundColor})` : `rgb(${colors.black})`};
     background-image: ${({ backgroundImage }) =>
@@ -26,7 +27,6 @@ export const StyledHeader = styled.header`
     padding: 10rem calc(${layout.pageFrame} * 2) 6rem
         calc(${layout.pageFrame} * 2);
     margin-bottom: ${layout.pageFrame};
-    text-align: ${({ left }) => (left ? 'left' : 'center')};
     position: relative;
 
     ${({ light }) =>
@@ -40,12 +40,6 @@ export const StyledHeader = styled.header`
             bottom: 0;
             background: rgba(${colors.white}, 0.5);
         }`}
-
-    p {
-        margin-bottom: 0;
-        color: rgb(${colors.white});
-        animation: ${animation} 1.5s backwards;
-    }
 `
 
 export const StyledTitle = styled(Title)`
@@ -53,10 +47,12 @@ export const StyledTitle = styled(Title)`
     margin-top: 0;
     text-align: inherit;
     animation: ${animation} 1s backwards;
+    text-align: ${({ left }) => (left ? 'left' : 'center')};
 `
 
 export const StyledSubTitle = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
     text-align: inherit;
     animation: ${animation} 1.25s backwards;
+    text-align: ${({ left }) => (left ? 'left' : 'center')};
 `
