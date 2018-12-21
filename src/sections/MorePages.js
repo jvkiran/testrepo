@@ -8,6 +8,7 @@ import developersJson from '../data/pages/developers'
 import { colors } from '../styles'
 import OceanJeyllyfish from '@oceanprotocol/art/jellyfish/jellyfish-grid.svg'
 import OceanMantaray from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
+import OceanSquid from '@oceanprotocol/art/squid/squid-grid.svg'
 import {
     StyledSection,
     StyledLink,
@@ -33,7 +34,9 @@ const content = [
     {
         title: developersJson.title,
         subtitle: developersJson.description,
-        link: '/developers'
+        link: '/developers',
+        backgroundColor: colors.darkPurple,
+        backgroundImage: OceanSquid
     },
     {
         title: artJson.title,
