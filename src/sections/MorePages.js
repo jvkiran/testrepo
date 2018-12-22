@@ -22,13 +22,13 @@ const content = [
     {
         title: protocolJson.title,
         subtitle: protocolJson.description,
-        link: '/protocol',
+        link: '/protocol/',
         backgroundImage: OceanJeyllyfish
     },
     {
         title: communityJson.title,
         subtitle: communityJson.description,
-        link: '/community',
+        link: '/community/',
         backgroundColor: colors.white,
         backgroundImage: OceanMantaray,
         light: true
@@ -36,21 +36,21 @@ const content = [
     {
         title: developersJson.title,
         subtitle: developersJson.description,
-        link: '/developers',
+        link: '/developers/',
         backgroundColor: colors.darkPurple,
         backgroundImage: OceanSquid
     },
     {
         title: artJson.title,
         subtitle: artJson.description,
-        link: '/art',
+        link: '/art/',
         backgroundColor: colors.darkPurple,
         backgroundImage: OceanJeyllyfish
     },
     {
         title: faqJson.title,
         subtitle: faqJson.description,
-        link: '/faq'
+        link: '/faq/'
     }
 ]
 
@@ -60,7 +60,7 @@ export default class MorePages extends PureComponent {
     }
 
     static defaultProps = {
-        links: ['/protocol', '/community', '/developers']
+        links: ['/protocol/', '/community/', '/developers/']
     }
 
     render() {

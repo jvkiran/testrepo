@@ -1,15 +1,15 @@
 [
     {
         "name": "Protocol",
-        "href": "/protocol"
+        "href": "/protocol/"
     },
     {
         "name": "Community",
-        "href": "/community"
+        "href": "/community/"
     },
     {
         "name": "Developers",
-        "href": "/developers"
+        "href": "/developers/"
     },
     {
         "name": "More",
@@ -17,15 +17,15 @@
         "sub": [
             {
                 "name": "Art",
-                "href": "/art"
+                "href": "/art/"
             },
             {
                 "name": "FAQ",
-                "href": "/faq"
+                "href": "/faq/"
             },
             {
                 "name": "Newsletter",
-                "href": "/newsletter"
+                "href": "/newsletter/"
             }
         ]
     }
