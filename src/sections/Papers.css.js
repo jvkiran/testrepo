@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Cell from '../components/Cell'
 import Button from '../components/Button'
 import Title from '../components/Title'
+import SubTitle from '../components/SubTitle'
 import { colors, fonts, responsive } from '../styles'
 
 export const StyledWhitepaper = styled(Cell)`
@@ -45,7 +46,7 @@ export const StyledWhitepaper = styled(Cell)`
 export const StyledTitle = styled(Title)`
     margin-top: 0;
     margin-bottom: 2rem;
-    font-size: ${fonts.size.h3};
+    font-size: ${fonts.size.h3} !important;
     word-spacing: 100vw; /* make sure every word is on its own line */
 `
 
@@ -73,9 +74,8 @@ export const FileType = styled.span`
     margin-left: 0.3rem;
 `
 
-export const StyledComments = styled.h4`
+export const StyledComments = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    text-align: center;
     margin-top: 2rem;
     margin-bottom: 0;
 `

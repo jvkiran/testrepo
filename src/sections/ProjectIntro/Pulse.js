@@ -1,5 +1,5 @@
 import React from 'react'
-import pulseLock from '../assets/graphics/pulse-lock.svg'
+import { ReactComponent as Logo } from '../../assets/misc/logo-logomark.svg'
 import {
     StyledPulseContainer,
     StyledPulseWrapper,
@@ -8,7 +8,6 @@ import {
     StyledPulseCircleTwo,
     StyledPulseCircleThree,
     StyledPulseCircleFour,
-    StyledPulseShadow,
     StyledPulseLock
 } from './Pulse.css'
 
@@ -20,8 +19,9 @@ const Pulse = props => (
             <StyledPulseCircleTwo {...props} />
             <StyledPulseCircleThree {...props} />
             <StyledPulseCircleFour {...props} />
-            <StyledPulseShadow />
-            <StyledPulseLock alt="pulse" src={pulseLock} />
+            <StyledPulseLock>
+                <Logo />
+            </StyledPulseLock>
         </StyledPulseWrapper>
     </StyledPulseContainer>
 )

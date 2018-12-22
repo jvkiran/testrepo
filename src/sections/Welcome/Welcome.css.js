@@ -30,14 +30,11 @@ export const Hero = styled(Section)`
 export const HeroContent = styled(ContentRow)`
     position: relative;
     z-index: 2;
-    margin-top: 4rem;
+    margin-top: 6rem;
     text-align: center;
 
-    @media screen and (${responsive.sm.min}) {
-        margin-top: 2rem;
-    }
-
     @media screen and (${responsive.md.min}) {
+        margin-top: 2rem;
         text-align: left;
     }
 `

@@ -1,9 +1,9 @@
 import styled, { css, keyframes } from 'styled-components'
-import { colors } from '../styles'
+import { colors } from '../../styles'
 
 const pulseFade = keyframes`
     0% { transform: scale(1); }
-    50% { opacity: .7; }
+    50% { opacity: .9; }
     75% { opacity: .1; }
 
     100% {
@@ -91,13 +91,16 @@ export const StyledPulseCircleFour = styled(Circle)`
             : null};
 `
 
-export const StyledPulseShadow = styled(Circle)`
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
-`
-
-export const StyledPulseLock = styled.img`
+export const StyledPulseLock = styled.div`
     position: absolute;
-    left: -24px;
-    top: -20px;
+    left: -0.7rem;
+    top: -0.7rem;
     max-width: none;
+    width: 5rem;
+    height: 5rem;
+    background: rgb(${colors.darkGrey});
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.2);
+    border: 0.1rem solid rgba(${colors.pink}, 0.2);
 `

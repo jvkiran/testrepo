@@ -153,7 +153,7 @@ const Documentation = () => (
         <ContentRow>
             <StyledComments>
                 Have a comment or suggestions about any of our documents? <br />
-                Let us know <a href={social.twitter}>@oceanprotocol</a>
+                Let us know <a href={social.twitter}>@oceanprotocol</a>.
             </StyledComments>
         </ContentRow>
 
@@ -161,7 +161,9 @@ const Documentation = () => (
             <Grid>
                 <Cell width={1 / 2}>
                     <StyledRow>
-                        <SubTitle white>Mission Statement</SubTitle>
+                        <SubTitle left white>
+                            Mission Statement
+                        </SubTitle>
                         <StyledAbstract>
                             Society is becoming increasingly reliant on data,
                             especially with the advent of AI. However, a small
@@ -179,7 +181,9 @@ const Documentation = () => (
                 </Cell>
                 <Cell width={1 / 2}>
                     <StyledRow>
-                        <SubTitle white>Subscribe to updates</SubTitle>
+                        <SubTitle left white>
+                            Subscribe to updates
+                        </SubTitle>
                         <StyledAbstract>
                             Be the first to know when we release new papers.
                         </StyledAbstract>

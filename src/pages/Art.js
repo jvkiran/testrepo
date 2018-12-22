@@ -75,7 +75,7 @@ const Art = ({ location }) => (
             <StyledFirstContentRow>
                 <Grid>
                     <Cell smallGutter width={1 / 2}>
-                        <SectionTitle>{content.logo.title}</SectionTitle>
+                        <SectionTitle left>{content.logo.title}</SectionTitle>
                         <SectionSubTitle>
                             {content.logo.description}
                         </SectionSubTitle>
@@ -131,7 +131,9 @@ const Art = ({ location }) => (
                         </Logos>
                     </Cell>
                     <Cell smallGutter width={1 / 3}>
-                        <SectionTitle>{content.mediakit.title}</SectionTitle>
+                        <SectionTitle left>
+                            {content.mediakit.title}
+                        </SectionTitle>
                         <SectionSubTitle>
                             {content.mediakit.description}
                         </SectionSubTitle>
@@ -155,7 +157,7 @@ const Art = ({ location }) => (
             </StyledFirstContentRow>
 
             <ContentRow>
-                <SectionTitle>{content.banner.title}</SectionTitle>
+                <SectionTitle left>{content.banner.title}</SectionTitle>
                 <SectionSubTitle>{content.banner.description}</SectionSubTitle>
 
                 <Banners>
@@ -246,7 +248,7 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{content.jellyfish.title}</SectionTitle>
+                <SectionTitle left>{content.jellyfish.title}</SectionTitle>
                 <SectionSubTitle>
                     {content.jellyfish.description}
                 </SectionSubTitle>
@@ -306,7 +308,7 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{content.mantaray.title}</SectionTitle>
+                <SectionTitle left>{content.mantaray.title}</SectionTitle>
                 <SectionSubTitle>
                     {content.mantaray.description}
                 </SectionSubTitle>
@@ -366,7 +368,7 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{content.squid.title}</SectionTitle>
+                <SectionTitle left>{content.squid.title}</SectionTitle>
                 <SectionSubTitle>{content.squid.description}</SectionSubTitle>
 
                 <KeyVisuals>

@@ -9,8 +9,6 @@ export const StyledSection = styled(Section)`
     background-size: cover;
     background-position: center -5rem;
     min-height: 550px;
-    margin-left: -2.5rem;
-    width: calc(100% + 5rem);
     display: flex;
     align-items: center;
 

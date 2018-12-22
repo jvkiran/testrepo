@@ -1,34 +1,29 @@
-/* global ga */
-
 import React from 'react'
 import PropTypes from 'prop-types'
-import Section from '../components/Section'
-import Grid from '../components/Grid'
-import ContentRow from '../components/ContentRow'
-import Pulse from '../components/Pulse'
-import Cell from '../components/Cell'
-import Paragraph from '../components/Paragraph'
-import dataDotsLeft from '../assets/graphics/data-dots-left.svg'
-import dataDotsRight from '../assets/graphics/data-dots-right.svg'
+import Grid from '../../components/Grid'
+import ContentRow from '../../components/ContentRow'
+import Cell from '../../components/Cell'
+import Paragraph from '../../components/Paragraph'
+import SubTitle from '../../components/SubTitle'
+import dataDotsLeft from '../../assets/graphics/data-dots-left.svg'
+import dataDotsRight from '../../assets/graphics/data-dots-right.svg'
 import {
     StyledData,
     StyledCard,
     StyledDataTransfer,
-    StyledDataDots,
-    StyledSubTitle
+    StyledDataDots
 } from './ProjectIntro.css'
+import Pulse from './Pulse'
 
 const content = {
     cards: [
         {
             title: 'Data Providers',
-            text: 'Unlock your data and earn revenue.',
-            action: 'Publish data'
+            text: 'As a provider you can unlock your data and earn revenue.'
         },
         {
             title: 'Data Consumers',
-            text: 'Discover and buy data.',
-            action: 'Get data'
+            text: 'As a consumer you can discover and buy data.'
         }
     ],
     about: [
@@ -55,23 +50,13 @@ const ProjectIntro = ({ toggleModal, ...props }) => {
         shouldAnimate = process.env.REACT_APP_ANIMATE_PROJECT === 'true'
     }
 
-    const _toggleModal = modal => {
-        if (modal === 'consumer' && window.ga) {
-            ga('send', 'event', 'click', 'consumer', 'intro_card')
-        } else if (modal === 'provider' && window.ga) {
-            ga('send', 'event', 'click', 'provider', 'intro_card')
-        }
-        toggleModal(modal)
-    }
-
     return (
-        <Section id="project" {...props}>
+        <div id="project">
             <ContentRow>
                 <StyledData width={1}>
-                    <StyledCard onClick={() => _toggleModal('provider')}>
+                    <StyledCard>
                         <h4>{content.cards[0].title}</h4>
                         <p>{content.cards[0].text}</p>
-                        <button>{content.cards[0].action}</button>
                     </StyledCard>
                     <StyledDataTransfer>
                         <StyledDataDots
@@ -87,25 +72,22 @@ const ProjectIntro = ({ toggleModal, ...props }) => {
                             shouldAnimate={shouldAnimate}
                         />
                     </StyledDataTransfer>
-                    <StyledCard onClick={() => _toggleModal('consumer')}>
+                    <StyledCard>
                         <h4>{content.cards[1].title}</h4>
                         <p>{content.cards[1].text}</p>
-                        <button>{content.cards[1].action}</button>
                     </StyledCard>
                 </StyledData>
 
                 <Grid>
                     {content.about.map(aboutBlock => (
                         <Cell key={aboutBlock.title} width={1 / 2}>
-                            <StyledSubTitle white>
-                                {aboutBlock.title}
-                            </StyledSubTitle>
+                            <SubTitle white>{aboutBlock.title}</SubTitle>
                             <Paragraph>{aboutBlock.text}</Paragraph>
                         </Cell>
                     ))}
                 </Grid>
             </ContentRow>
-        </Section>
+        </div>
     )
 }
 

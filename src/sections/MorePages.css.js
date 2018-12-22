@@ -26,7 +26,7 @@ export const StyledSection = styled(Section)`
 export const StyledLink = styled(NavLink)`
     flex: 1 1 100%;
     display: block;
-    padding: 4rem 1rem;
+    padding: 3rem 2rem 6rem 2rem;
     background-color: ${({ backgroundColor }) =>
         backgroundColor
             ? `rgb(${backgroundColor})`
@@ -68,17 +68,33 @@ export const StyledLink = styled(NavLink)`
 `
 
 export const StyledTitle = styled(Title)`
-    font-size: ${fonts.size.h3};
-    margin-bottom: 1rem;
-    margin-top: 0;
+    font-size: ${fonts.size.h3} !important;
+    margin: 0;
     position: relative;
     z-index: 1;
 `
 
 export const StyledSubTitle = styled(SubTitle)`
-    font-size: ${fonts.size.large};
+    font-size: ${fonts.size.large} !important;
     color: rgb(${colors.lightGrey});
+    margin-top: 1rem;
     margin-bottom: 0;
     position: relative;
     z-index: 1;
+`
+
+export const LearnMore = styled.span`
+    display: block;
+    font-family: ${fonts.family.button};
+    font-size: ${fonts.size.small};
+    text-transform: uppercase;
+    color: rgb(${colors.pink});
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 3rem;
+
+    svg {
+        fill: rgb(${colors.pink});
+    }
 `

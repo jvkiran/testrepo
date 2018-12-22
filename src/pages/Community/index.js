@@ -23,7 +23,7 @@ export default class Community extends Component {
                 description={content.description}
                 location={this.props.location}
                 menuLight
-                headerBackgroundColor={colors.dimmedGrey}
+                headerBackgroundColor={colors.white}
                 headerBackgroundImage={OceanMantarayBack}
                 headerViewport
                 headerFullWidth

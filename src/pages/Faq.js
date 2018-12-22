@@ -23,7 +23,7 @@ const Faq = ({ location }) => (
             <ContentRow>
                 {content.items.map(question => (
                     <StyledFaqRow key={question.title}>
-                        <StyledSubTitle>{question.title}</StyledSubTitle>
+                        <StyledSubTitle left>{question.title}</StyledSubTitle>
                         <Grid>
                             <Cell width={1 / 2}>
                                 {question.questions

@@ -30,12 +30,14 @@ const Footer = () => (
         <ContentRow>
             <Grid>
                 <Cell smallGutter width={1 / 2}>
-                    <SubTitle white>Get Involved</SubTitle>
+                    <SubTitle left white>
+                        Get Involved
+                    </SubTitle>
 
-                    <StyledSubTitle>Newsletter</StyledSubTitle>
+                    <StyledSubTitle left>Newsletter</StyledSubTitle>
                     <StyledFormNewsletter maxWidth={28} />
 
-                    <StyledSubTitle>Follow</StyledSubTitle>
+                    <StyledSubTitle left>Follow</StyledSubTitle>
                     <StyledActions>
                         <StyledSocialLinks>
                             <a href={social.medium} title="Blog">
@@ -78,7 +80,9 @@ const Footer = () => (
                     </StyledActions>
                 </Cell>
                 <Cell smallGutter width={1 / 2}>
-                    <SubTitle white>{company.name}</SubTitle>
+                    <SubTitle left white>
+                        {company.name}
+                    </SubTitle>
                     <Paragraph>
                         Ocean Protocol is supported by a Singapore based
                         non-profit foundation, whose mandate is to ensure open

@@ -45,14 +45,10 @@ export const StyledHeader = styled.header`
 export const StyledTitle = styled(Title)`
     margin-bottom: 1rem;
     margin-top: 0;
-    text-align: inherit;
     animation: ${animation} 1s backwards;
-    text-align: ${({ left }) => (left ? 'left' : 'center')};
 `
 
 export const StyledSubTitle = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    text-align: inherit;
     animation: ${animation} 1.25s backwards;
-    text-align: ${({ left }) => (left ? 'left' : 'center')};
 `

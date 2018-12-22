@@ -61,7 +61,9 @@ const Kyc = () => (
         />
 
         <ContentRow>
-            <SubTitle white>Register</SubTitle>
+            <SubTitle left white>
+                Register
+            </SubTitle>
 
             <ContributionPlatforms>
                 {content.platforms.map((platform, index) => (
