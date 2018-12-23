@@ -30,9 +30,9 @@ export default class Community extends Component {
                 headerLeft
                 headerAddition={<Header />}
             >
+                <Events />
                 <Ambassadors />
                 <h1 id="bounties">Bounties</h1>
-                <Events />
                 <Blog />
                 <Videos />
                 <h1>Team</h1>

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, fonts, responsive } from '../styles'
+import { colors, fonts, responsive, layout } from '../styles'
 
 export const StyledList = styled.ul`
     list-style: none;
@@ -8,7 +8,7 @@ export const StyledList = styled.ul`
     display: flex;
     flex-wrap: wrap;
     margin-left: -1rem;
-    color: rgb(${colors.lightGrey});
+    color: rgb(${colors.grey});
     font-family: ${fonts.family.button};
 
     @media (${responsive.sm.min}) {
@@ -44,13 +44,11 @@ export const StyledList = styled.ul`
 `
 
 export const StyledActions = styled.div`
-    margin-top: 2rem;
+    margin-top: ${layout.spacer};
     text-align: center;
 
     button {
-        margin-bottom: 2rem;
-        margin-left: auto;
-        margin-right: auto;
+        margin-bottom: ${layout.spacer};
     }
 
     a {
@@ -62,9 +60,6 @@ export const StyledActions = styled.div`
 
         button {
             margin-top: 0;
-            margin-bottom: 2rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
         }
     }
 `

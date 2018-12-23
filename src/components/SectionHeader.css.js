@@ -25,7 +25,7 @@ export const StyledParagraph = styled(Paragraph)`
 export const Line = styled.div`
     width: 100%;
     margin-top: ${layout.spacer};
-    border-bottom: 1px solid rgba(${colors.white}, 0.25);
+    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
 
     @media screen and (${responsive.sm.min}) {
         margin-top: calc(${layout.spacer} * 2);

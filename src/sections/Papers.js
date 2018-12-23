@@ -4,6 +4,7 @@ import React from 'react'
 import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
 import SubTitle from '../components/SubTitle'
+import Button from '../components/Button'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
@@ -16,7 +17,6 @@ import {
     StyledIntro,
     StyledAbstract,
     StyledFooter,
-    StyledDownload,
     StyledComments,
     StyledRow,
     FileType
@@ -24,7 +24,7 @@ import {
 
 const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
-        <SectionHeader title={'Learn how Ocean Protocol works'} white />
+        <SectionHeader title={'Deep Dive Into Our Papers'} white />
 
         <ContentRow wide>
             <Grid>
@@ -51,7 +51,9 @@ const Documentation = () => (
                                     process.env.PUBLIC_URL
                                 }/tech-whitepaper.pdf`}
                             >
-                                <StyledDownload
+                                <Button
+                                    primary
+                                    center
                                     onClick={() =>
                                         window.ga &&
                                         ga(
@@ -64,7 +66,7 @@ const Documentation = () => (
                                     }
                                 >
                                     Download <FileType>pdf</FileType>
-                                </StyledDownload>
+                                </Button>
                             </a>
                         </StyledFooter>
                     </StyledWhitepaper>
@@ -90,7 +92,9 @@ const Documentation = () => (
                                     process.env.PUBLIC_URL
                                 }/business-whitepaper.pdf`}
                             >
-                                <StyledDownload
+                                <Button
+                                    primary
+                                    center
                                     onClick={() =>
                                         window.ga &&
                                         ga(
@@ -103,7 +107,7 @@ const Documentation = () => (
                                     }
                                 >
                                     Download <FileType>pdf</FileType>
-                                </StyledDownload>
+                                </Button>
                             </a>
                         </StyledFooter>
                     </StyledWhitepaper>
@@ -129,7 +133,9 @@ const Documentation = () => (
                                     process.env.PUBLIC_URL
                                 }/marketplace-framework.pdf`}
                             >
-                                <StyledDownload
+                                <Button
+                                    primary
+                                    center
                                     onClick={() =>
                                         window.ga &&
                                         ga(
@@ -142,7 +148,7 @@ const Documentation = () => (
                                     }
                                 >
                                     Download <FileType>pdf</FileType>
-                                </StyledDownload>
+                                </Button>
                             </a>
                         </StyledFooter>
                     </StyledWhitepaper>

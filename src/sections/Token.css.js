@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Button from '../components/Button'
 import Grid from '../components/Grid'
 import { Line } from '../components/SectionHeader.css'
-import { colors, responsive, fonts, layout } from '../styles'
+import { colors, responsive, layout } from '../styles'
 
 export const ContributionPlatforms = styled.div`
     margin-bottom: calc(${layout.spacer} * 2);
@@ -14,8 +14,6 @@ export const ContributionPlatforms = styled.div`
 `
 
 export const PlatformButton = styled(Button)`
-    font-size: ${fonts.size.small};
-    padding: calc(${layout.spacer} / 2) ${layout.spacer};
     width: auto;
     position: absolute;
     left: ${layout.spacer};

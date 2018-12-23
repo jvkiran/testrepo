@@ -1,8 +1,7 @@
-import React, { PureComponent, Fragment } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import LazyLoad from 'react-lazyload'
 import axios from 'axios'
-import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import Section from '../components/Section'
 import Title from '../components/Title'
 import ContentRow from '../components/ContentRow'
@@ -49,13 +48,6 @@ class SectionContent extends PureComponent {
 
         // select first item from response
         this.selectVideo(videos[0], 0)
-
-        // eslint-disable-next-line no-unused-vars
-        const scroll = new SmoothScroll('li[href*="#videoScroll"]', {
-            header: '[data-scroll-header]',
-            updateURL: false,
-            speedAsDuration: true
-        })
     }
 
     componentWillUnmount() {
@@ -134,7 +126,6 @@ class SectionContent extends PureComponent {
                         <VideoListItem
                             key={index}
                             onClick={() => this.selectVideo(properties, index)}
-                            href="#videoScroll"
                             className={
                                 this.state.active === index ? 'active' : ''
                             }
@@ -220,12 +211,12 @@ const Videos = () => (
         id="video"
     >
         <LazyLoad once unmountIfInvisible height={1148} offset={100}>
-            <Fragment>
+            <>
                 <ContentRow>
                     <Title white>Videos</Title>
                 </ContentRow>
 
-                <VideoSlider id="videoScroll" />
+                <VideoSlider />
 
                 <VideoBackground
                     autoPlay
@@ -240,7 +231,7 @@ const Videos = () => (
                     />
                     <source src={jellyfishVideoMp4} type="video/mp4" />
                 </VideoBackground>
-            </Fragment>
+            </>
         </LazyLoad>
 
         <ContentRow>

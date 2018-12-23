@@ -3,16 +3,16 @@
     "description": "Engage with...",
     "actions": [
         {
+            "title": "Meet us at one of our events",
+            "link": "#events"
+        },
+        {
             "title": "Become an ambassador",
             "link": "#ambassadors"
         },
         {
             "title": "Participate in a bounty",
             "link": "#bounties"
-        },
-        {
-            "title": "Meet us at one of our events",
-            "link": "#events"
         }
     ],
     "numberUnits": [

@@ -1,7 +1,26 @@
 import styled from 'styled-components'
-import { colors, fonts, transitions } from '../styles'
+import { HashLink as Link } from 'react-router-hash-link'
+import { colors, fonts, transitions, layout } from '../styles'
 
-export const Container = styled.button`
+const backgrounds = (primary, white, black) => {
+    if (primary) {
+        return `linear-gradient(to right, rgb(${colors.purple}), rgb(${
+            colors.pink
+        }))`
+    }
+
+    if (white) {
+        return `rgba(${colors.white}, 0.95)`
+    }
+
+    if (black) {
+        return `rgba(${colors.black}, 0.95)`
+    }
+
+    return `rgba(${colors.grey}, 0.95)`
+}
+
+export const StyledButton = styled.button`
     border: none;
     font: inherit;
     cursor: pointer;
@@ -9,48 +28,42 @@ export const Container = styled.button`
     position: relative;
     display: block;
     width: fit-content;
-    padding: 15px 35px;
+    padding: ${({ small }) =>
+        small
+            ? `calc(${layout.spacer} / 3) calc(${layout.spacer} / 2)`
+            : `calc(${layout.spacer} / 2) ${layout.spacer}`};
     font-family: ${fonts.family.button};
-    font-size: ${fonts.size.base};
-    font-weight: ${fonts.fontWeight.title};
-    line-height: 1.38;
+    font-size: ${fonts.size.small};
+    font-weight: ${fonts.fontWeight.button};
+    line-height: 1;
     text-transform: uppercase;
-    margin: 0;
-    border-radius: 0.2rem;
+    margin: ${({ center }) => (center ? `0 auto` : 0)};
+    border-radius: ${layout.borderRadius};
     transition: ${transitions.short};
-    color: rgb(${colors.white});
-    background: linear-gradient(
-        to right,
-        rgb(${colors.purple}),
-        rgb(${colors.pink})
-    );
-    box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.1);
+    color: ${({ white }) =>
+        white ? `rgb(${colors.black})` : `rgb(${colors.white})`};
+    background: ${({ primary, white, black }) =>
+        backgrounds(primary, white, black)};
+    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.1);
+    border: ${({ border }) => border && `0.08rem solid rgb(${colors.pink})`};
 
     &:hover,
     &:focus {
-        background: linear-gradient(
-            to right,
-            rgb(${colors.purple}),
-            rgb(${colors.pink})
-        );
+        background: ${({ primary, white, black }) =>
+            backgrounds(primary, white, black)};
         text-decoration: none;
         transform: translate3d(0, -0.05rem, 0);
-        box-shadow: 0 12px 30px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.1);
     }
 
     &:active {
-        background: linear-gradient(
-            to right,
-            rgb(${colors.purple}),
-            rgb(${colors.pink})
-        );
+        background: ${({ primary, white, black }) =>
+            backgrounds(primary, white, black)};
         transition: none;
         transform: none;
-        box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 18px 0 rgba(${colors.black}, 0.1);
     }
 `
 
-export const Children = styled.span`
-    display: block;
-    opacity: ${({ fetching }) => (fetching ? 0 : 1)};
-`
+StyledButton.a = StyledButton.withComponent('a')
+StyledButton.Link = StyledButton.withComponent(Link)

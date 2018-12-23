@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import SubTitle from '../../components/SubTitle'
 import ModalForm from './ModalForm'
 import { ReactComponent as Cross } from '../../assets/misc/cross.svg'
 import forms from '../../data/forms'
-import { StyledLightbox, StyledModal, StyledClose } from './Modal.css'
+import {
+    StyledLightbox,
+    StyledModal,
+    StyledTitle,
+    StyledClose
+} from './Modal.css'
 
 const Modal = ({ modal, toggle }) => (
     <>
@@ -19,7 +23,7 @@ const Modal = ({ modal, toggle }) => (
                 </StyledClose>
                 {modal && (
                     <div>
-                        <SubTitle>{forms[modal].title}</SubTitle>
+                        <StyledTitle left>{forms[modal].title}</StyledTitle>
                         <ModalForm modal={modal} />
                     </div>
                 )}

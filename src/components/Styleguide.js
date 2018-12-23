@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import rgbHex from '../lib/rgb-hex'
 import Button from '../components/Button'
 import { colors, fonts, gradients } from '../styles'
@@ -14,7 +14,7 @@ import {
 } from './Styleguide.css'
 
 const Styleguide = () => (
-    <Fragment>
+    <>
         <SectionTitle>Colors</SectionTitle>
         <Colors>
             {Object.entries(colors).map(color => (
@@ -75,8 +75,14 @@ const Styleguide = () => (
         </p>
 
         <SectionTitle>Buttons</SectionTitle>
+
+        <Button primary>Click me like one of your french buttons</Button>
         <Button>Click me like one of your french buttons</Button>
-    </Fragment>
+        <Button border>Click me like one of your french buttons</Button>
+        <Button border white>
+            Click me like one of your french buttons
+        </Button>
+    </>
 )
 
 export default Styleguide

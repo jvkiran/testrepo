@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { HashLink as Link } from 'react-router-hash-link'
+import Button from '../../components/Button'
 import { colors, fonts, responsive, layout } from '../../styles'
 import { animation } from '../../components/Header.css'
 
@@ -48,33 +48,22 @@ export const Engage = styled.ul`
     }
 `
 
-export const EngageButton = styled(Link)`
-    display: block;
-    font-family: ${fonts.family.button};
-    border-radius: 0.2rem;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    background: rgba(${colors.white}, 0.8);
-    border: 0.1rem solid rgb(${colors.pink});
-    font-size: ${fonts.size.small};
-    color: rgb(${colors.black});
+export const EngageButton = styled(Button)`
     z-index: 2;
-    box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.08);
-
-    &:hover,
-    &:focus {
-        background: rgba(${colors.black}, 0.95);
-        color: rgb(${colors.white});
-        border-color: rgb(${colors.black});
-    }
 
     svg {
         width: ${fonts.size.mini};
         height: ${fonts.size.mini};
         fill: rgb(${colors.lightGrey});
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
         margin-bottom: -0.1rem;
+
+        &:first-child {
+            margin-right: 0.5rem;
+        }
+
+        &:last-child {
+            margin-left: 0.5rem;
+        }
     }
 `
 

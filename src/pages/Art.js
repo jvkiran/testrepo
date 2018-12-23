@@ -139,13 +139,14 @@ const Art = ({ location }) => (
                         </SectionSubTitle>
 
                         <Paragraph>
-                            <a
+                            <Button
+                                primary
                                 download
                                 href={mediakitDownload}
                                 onClick={() => GaEvent('Mediakit')}
                             >
-                                <Button>{content.mediakit.button}</Button>
-                            </a>
+                                {content.mediakit.button}
+                            </Button>
                         </Paragraph>
                         <Paragraph
                             dangerouslySetInnerHTML={{

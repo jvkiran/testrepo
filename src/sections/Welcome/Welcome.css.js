@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
-import { HashLink as Link } from 'react-router-hash-link'
 import Section from '../../components/Section'
+import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import ContentRow from '../../components/ContentRow'
@@ -117,19 +117,11 @@ export const Cta = styled.div`
     margin-bottom: calc(${layout.spacer} * 2);
 `
 
-export const StyledButton = styled(Link)`
-    padding: 0.5rem 1rem;
+export const StyledButton = styled(Button)`
     margin: 1% 0;
-    color: rgb(${colors.white});
-    font-size: ${fonts.size.small};
-    text-transform: uppercase;
-    font-family: ${fonts.family.button};
-    font-weight: ${fonts.fontWeight.button};
-    background: rgba(${colors.grey}, 0.95);
     display: inline-block;
     margin-left: 0.5rem;
     animation: ${animation} 1.25s backwards;
-    border-radius: 0.1rem;
 
     &:first-child {
         margin-left: 0;

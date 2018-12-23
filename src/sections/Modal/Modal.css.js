@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
-import { colors, responsive } from '../../styles'
+import Title from '../../components/Title'
+import { colors, responsive, fonts, layout } from '../../styles'
 
 const fadeIn = keyframes`
     from { opacity: 0; }
@@ -32,6 +33,14 @@ export const StyledModal = styled.div`
 
     @media screen and (${responsive.sm.min}) {
         padding: 5rem 6rem;
+    }
+`
+
+export const StyledTitle = styled(Title)`
+    margin-bottom: ${layout.spacer};
+
+    @media screen and (${responsive.sm.min}) {
+        font-size: ${fonts.size.h2};
     }
 `
 

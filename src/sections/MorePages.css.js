@@ -44,6 +44,10 @@ export const StyledPage = styled.div`
         background-size: cover;
         height: 100%;
 
+        @media screen and (${responsive.sm.min}) {
+            padding: 5rem 2rem 8rem 2rem;
+        }
+
         /* Overlay to dim the background image */
         &:before {
             content: '';
@@ -113,6 +117,10 @@ export const LearnMore = styled.span`
     left: 2rem;
     right: 2rem;
     bottom: 3rem;
+
+    @media screen and (${responsive.sm.min}) {
+        bottom: 5rem;
+    }
 
     svg {
         fill: rgb(${colors.pink});

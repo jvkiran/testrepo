@@ -84,7 +84,9 @@ const Kyc = () => (
                             ))}
                         </Ul>
 
-                        <PlatformButton>Go to {platform.name}</PlatformButton>
+                        <PlatformButton primary>
+                            Go to {platform.name}
+                        </PlatformButton>
                     </ContributionPlatform>
                 ))}
             </ContributionPlatforms>

@@ -226,7 +226,7 @@ export default class ModalForm extends PureComponent {
                                 )
                         )}
 
-                    <Button fetching={fetching} type="submit">
+                    <Button primary fetching={fetching} type="submit">
                         {forms[modal].button}
                     </Button>
 

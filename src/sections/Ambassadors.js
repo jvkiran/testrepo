@@ -12,7 +12,6 @@ import Button from '../components/Button'
 import Modal from '../sections/Modal/Modal'
 import { ReactComponent as Check } from '../assets/misc/check.svg'
 import { StyledList, StyledActions } from './Ambassadors.css'
-import { colors } from '../styles'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 
 const content = {
@@ -42,7 +41,9 @@ const content = {
 
 const Actions = ({ handleButtonClick }) => (
     <StyledActions>
-        <Button onClick={handleButtonClick}>{content.button}</Button>
+        <Button primary center onClick={handleButtonClick}>
+            {content.button}
+        </Button>
         {content.links.map(link => (
             <a href={link.link} key={link.name}>
                 {link.name}
@@ -91,9 +92,7 @@ export default class Ambassadors extends PureComponent {
         return (
             <>
                 <Section
-                    background={colors.black}
                     backgroundImage={OceanMantarayBack}
-                    fontColor={colors.white}
                     id="ambassadors"
                     style={{
                         backgroundSize: 'contain',
@@ -103,7 +102,6 @@ export default class Ambassadors extends PureComponent {
                     <SectionHeader
                         title={content.title}
                         description={content.description}
-                        white
                         line
                     />
 

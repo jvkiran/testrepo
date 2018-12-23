@@ -1,5 +1,6 @@
 import React from 'react'
 import ContentRow from '../components/ContentRow'
+import Button from '../components/Button'
 import SubTitle from '../components/SubTitle'
 import Cell from '../components/Cell'
 import { Ul, Li } from '../components/Lists'
@@ -9,8 +10,7 @@ import {
     StyledGrid,
     StyledTitle,
     StyledParagraph,
-    DocsList,
-    DocsLink
+    DocsList
 } from './Docs.css'
 import content from '../data/docs.json'
 import { colors } from '../styles'
@@ -42,9 +42,9 @@ const Docs = () => (
                             })}
                             <Li>And much more...</Li>
                         </Ul>
-                        <DocsLink href="https://docs.oceanprotocol.com">
+                        <Button primary href="https://docs.oceanprotocol.com">
                             Go to Docs
-                        </DocsLink>
+                        </Button>
                     </DocsList>
                 </Cell>
             </StyledGrid>

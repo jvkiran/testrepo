@@ -136,7 +136,13 @@ export default class Header extends PureComponent {
                 <Engage>
                     {actions.map(action => (
                         <li key={action.title}>
-                            <EngageButton smooth to={action.link}>
+                            <EngageButton
+                                border
+                                small
+                                white
+                                smooth
+                                to={action.link}
+                            >
                                 <Caret />
                                 {action.title}
                                 <Caret />

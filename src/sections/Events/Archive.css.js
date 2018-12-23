@@ -9,28 +9,11 @@ const fadeInAnimation = keyframes`
 `
 
 export const ArchiveButton = styled(Button)`
-    text-align: center;
     cursor: pointer;
     margin: 3rem auto 0 auto;
-    padding: 0.8rem 1rem;
-    background: rgba(${colors.darkGrey}, 0.8);
-    border: 0.08rem solid rgb(${colors.pink});
-    border-radius: 0.1rem;
-    box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-    font-size: ${fonts.size.small};
     color: rgb(${colors.lightGrey});
     z-index: 1;
     position: relative;
-
-    &:hover,
-    &:focus {
-        box-shadow: 0 12px 30px 0 rgba(${colors.black}, 0.3);
-        background: inherit;
-    }
-
-    &:active {
-        box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.3);
-    }
 
     @media screen and (${responsive.sm.min}) {
         margin-bottom: -3rem;
