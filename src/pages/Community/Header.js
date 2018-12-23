@@ -17,9 +17,9 @@ const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 class CommunityCounts extends PureComponent {
     // TODO: Replace hardcoded platform numbers with fetch responses
     state = {
-        twitter: '11.8k',
-        telegram: '7.5k',
-        medium: '2.5k',
+        twitter: social.manualNumbers.twitter,
+        telegram: social.manualNumbers.telegram,
+        medium: '----',
         github: '---',
         bounties: '--'
     }
@@ -35,12 +35,29 @@ class CommunityCounts extends PureComponent {
     signal = axios.CancelToken.source()
 
     componentDidMount() {
+        this.fetchMediumNumber()
         this.fetchGitHubNumber()
         this.fetchBountiesNumber()
     }
 
     componentWillUnmount() {
         this.signal.cancel()
+    }
+
+    fetchMediumNumber = async () => {
+        try {
+            const response = await this.axiosInstance(
+                `${webtasks.host}/medium/oceanprotocol/followers`,
+                {
+                    cancelToken: this.signal.token
+                }
+            )
+
+            const medium = response.data.followers
+            this.setState({ medium })
+        } catch (error) {
+            console.log(error) // eslint-disable-line no-console
+        }
     }
 
     fetchGitHubNumber = async () => {

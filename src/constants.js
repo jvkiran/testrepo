@@ -44,7 +44,11 @@ export const social = {
     gitcoin:
         'https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=oceanprotocol&order_by=-web3_created',
     bountiesNetwork:
-        'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol'
+        'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol',
+    manualNumbers: {
+        twitter: '11.8k',
+        telegram: '7.5k'
+    }
 }
 
 export const dates = {
