@@ -14,7 +14,6 @@ export const StyledHeaderAddition = styled.div`
 `
 
 export const Engage = styled.ul`
-    animation: ${animation} 1.25s backwards;
     width: 100%;
     text-align: center;
 
@@ -25,6 +24,7 @@ export const Engage = styled.ul`
     li {
         display: block;
         margin-bottom: calc(${layout.spacer} / 2);
+        animation: ${animation} 1.25s backwards;
 
         @media (${responsive.sm.min}) {
             display: inline-block;
@@ -32,8 +32,17 @@ export const Engage = styled.ul`
             margin-right: calc(${layout.spacer} / 4);
         }
 
-        &:first-child {
+        &:nth-child(1) {
             margin-left: 0;
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.4s;
         }
     }
 `

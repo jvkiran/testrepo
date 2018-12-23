@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Waves from './Waves'
+import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import SocialHero from '../../components/SocialHero'
 import VideoModal from '../../components/VideoModal'
+import Waves from './Waves'
 import videoThumb from '../../assets/misc/video-thumb.jpg'
 import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
 import videoThumbWebP from '../../assets/misc/video-thumb.webp'
@@ -25,6 +26,14 @@ export default class Welcome extends Component {
     state = {
         videoUrl: '',
         modalIsOpen: false
+    }
+
+    componentDidMount() {
+        // eslint-disable-next-line no-unused-vars
+        const scroll = new SmoothScroll('a[data-scroll]', {
+            updateURL: false,
+            speedAsDuration: false
+        })
     }
 
     toggleModal = () => {
@@ -75,7 +84,11 @@ export default class Welcome extends Component {
 
                     <Cta>
                         {content.cta.map(action => (
-                            <StyledButton key={action.link} to={action.link}>
+                            <StyledButton
+                                key={action.link}
+                                to={action.link}
+                                data-scroll
+                            >
                                 {action.title}
                             </StyledButton>
                         ))}

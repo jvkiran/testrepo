@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 import Section from '../../components/Section'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
@@ -20,8 +20,8 @@ export const Hero = styled(Section)`
     }
 
     > div {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: ${layout.spacer};
+        padding-bottom: ${layout.spacer};
         min-height: auto;
         position: static;
     }
@@ -34,7 +34,7 @@ export const HeroContent = styled(ContentRow)`
     text-align: center;
 
     @media screen and (${responsive.md.min}) {
-        margin-top: 2rem;
+        margin-top: ${layout.spacer};
         text-align: left;
     }
 `
@@ -64,9 +64,8 @@ export const animation = keyframes`
 
 export const StyledTagline = styled(Title)`
     color: rgb(${colors.white});
-    animation: ${animation} 1s backwards;
-    font-size: ${fonts.size.h3};
-    margin-bottom: 2rem;
+    animation: ${animation} 1.25s backwards;
+    margin-bottom: ${layout.spacer};
 
     @media screen and (${responsive.sm.min}) {
         font-size: ${fonts.size.h2};
@@ -78,7 +77,7 @@ export const StyledTagline = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    animation: ${animation} 1.5s backwards;
+    animation: ${animation} 1.25s 0.25s backwards;
 `
 
 export const StyledVideoThumbnail = styled.picture`
@@ -91,7 +90,6 @@ export const StyledVideoThumbnail = styled.picture`
     cursor: pointer;
     max-height: 180px;
     background: rgb(${colors.black});
-    animation: ${animation} 1.5s 0.5s backwards;
 
     @media screen and (${responsive.md.min}) {
         max-width: none;
@@ -116,7 +114,6 @@ export const StyledVideoThumbnail = styled.picture`
 `
 
 export const Cta = styled.div`
-    margin-top: calc(${layout.spacer} / 2);
     margin-bottom: calc(${layout.spacer} * 2);
 `
 
@@ -131,21 +128,20 @@ export const StyledButton = styled(Link)`
     background: rgba(${colors.grey}, 0.95);
     display: inline-block;
     margin-left: 0.5rem;
-    animation: ${animation} 1.5s backwards;
+    animation: ${animation} 1.25s backwards;
     border-radius: 0.1rem;
 
     &:first-child {
-        animation-delay: 0;
         margin-left: 0;
         background: ${gradients.main};
     }
 
     &:nth-child(2) {
-        animation-delay: 0.5s;
+        animation-delay: 0.25s;
     }
 
     &:nth-child(3) {
-        animation-delay: 0.75s;
+        animation-delay: 0.5s;
     }
 `
 

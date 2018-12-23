@@ -2,11 +2,24 @@ import styled, { css, keyframes } from 'styled-components'
 import Grid from '../../components/Grid'
 import { colors, responsive, transitions, layout } from '../../styles'
 
+export const moveIn = keyframes`
+    0% {
+        opacity: .01;
+        transform: translate3d(0, 4rem, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+`
+
 export const StyledData = styled.div`
     position: relative;
     width: 100%;
     margin-top: 6rem;
     margin-bottom: 4rem;
+    animation: ${moveIn} 1.25s 0.2s backwards;
 
     @media screen and (${responsive.sm.min}) {
         margin-top: 3rem;
