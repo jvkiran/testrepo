@@ -13,21 +13,24 @@ import TermsPrelaunch from './pages/TermsPrelaunch'
 import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 import { createGlobalStyle } from 'styled-components'
+import smoothscroll from 'smoothscroll-polyfill'
 import { globalStyles } from './styles'
 
 const GlobalStyles = createGlobalStyle`${globalStyles}`
 
+smoothscroll.polyfill()
+
 const Routes = () => (
     <Switch>
         <Route exact component={Home} path="/" />
-        <Route component={Protocol} path="/protocol" />
-        <Route component={Community} path="/community" />
-        <Route component={Developers} path="/developers" />
-        <Route component={Art} path="/art" />
-        <Route component={Faq} path="/faq" />
-        <Route component={Privacy} path="/privacy" />
-        <Route component={TermsPrelaunch} path="/terms-prelaunch" />
-        <Route component={Newsletter} path="/newsletter" />
+        <Route component={Protocol} path="/protocol/" />
+        <Route component={Community} path="/community/" />
+        <Route component={Developers} path="/developers/" />
+        <Route component={Art} path="/art/" />
+        <Route component={Faq} path="/faq/" />
+        <Route component={Privacy} path="/privacy/" />
+        <Route component={TermsPrelaunch} path="/terms-prelaunch/" />
+        <Route component={Newsletter} path="/newsletter/" />
         <Route component={NotFound} path="*" />
     </Switch>
 )

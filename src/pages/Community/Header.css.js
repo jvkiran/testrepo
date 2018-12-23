@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { HashLink as Link } from 'react-router-hash-link'
 import { colors, fonts, responsive, layout } from '../../styles'
 import { animation } from '../../components/Header.css'
 
@@ -47,7 +48,7 @@ export const Engage = styled.ul`
     }
 `
 
-export const EngageButton = styled.a`
+export const EngageButton = styled(Link)`
     display: block;
     font-family: ${fonts.family.button};
     border-radius: 0.2rem;

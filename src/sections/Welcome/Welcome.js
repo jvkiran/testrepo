@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import SocialHero from '../../components/SocialHero'
 import VideoModal from '../../components/VideoModal'
 import Waves from './Waves'
@@ -26,14 +25,6 @@ export default class Welcome extends Component {
     state = {
         videoUrl: '',
         modalIsOpen: false
-    }
-
-    componentDidMount() {
-        // eslint-disable-next-line no-unused-vars
-        const scroll = new SmoothScroll('a[data-scroll]', {
-            updateURL: false,
-            speedAsDuration: false
-        })
     }
 
     toggleModal = () => {
@@ -87,7 +78,7 @@ export default class Welcome extends Component {
                             <StyledButton
                                 key={action.link}
                                 to={action.link}
-                                data-scroll
+                                smooth
                             >
                                 {action.title}
                             </StyledButton>

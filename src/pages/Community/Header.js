@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
-import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.polyfills'
 import SocialIcon from '../../components/SocialIcon'
 import {
     StyledHeaderAddition,
@@ -114,21 +113,13 @@ class CommunityCounts extends PureComponent {
 }
 
 export default class Header extends PureComponent {
-    componentDidMount() {
-        // eslint-disable-next-line no-unused-vars
-        const scroll = new SmoothScroll('a[data-scroll]', {
-            updateURL: true,
-            speedAsDuration: true
-        })
-    }
-
     render() {
         return (
             <StyledHeaderAddition>
                 <Engage>
                     {actions.map(action => (
                         <li key={action.title}>
-                            <EngageButton data-scroll href={action.link}>
+                            <EngageButton smooth to={action.link}>
                                 <Caret />
                                 {action.title}
                                 <Caret />
