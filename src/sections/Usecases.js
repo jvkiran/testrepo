@@ -34,7 +34,9 @@ const Usecases = () => (
                     <StyledLocked alt="data locked" src={dataLocked} />
                 </Cell>
                 <Cell width={2 / 3}>
-                    <SubTitle>A lack of trust prevents data sharing</SubTitle>
+                    <SubTitle left>
+                        A lack of trust prevents data sharing
+                    </SubTitle>
                     <Paragraph>
                         Centralized data exchanges fail because they lack fair
                         and flexible pricing mechanisms, data providers lose
@@ -88,7 +90,7 @@ const Usecases = () => (
                     />
                 </Cell>
                 <Cell width={2 / 3}>
-                    <SubTitle>
+                    <SubTitle left>
                         AI advances six times faster, when data is available
                     </SubTitle>
                     <Paragraph>

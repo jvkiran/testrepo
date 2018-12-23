@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
+import Grid from '../../components/Grid'
 import { colors, responsive, transitions, layout } from '../../styles'
 
 export const StyledData = styled.div`
@@ -112,5 +113,11 @@ export const StyledDataDots = styled.div`
         width: 300px;
         height: 13px;
         animation-name: ${slideRightLarge};
+    }
+`
+
+export const StyledCopy = styled(Grid)`
+    p {
+        color: rgb(${colors.lightGrey});
     }
 `

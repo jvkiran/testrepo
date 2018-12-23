@@ -6,7 +6,7 @@ import Grid from '../../components/Grid'
 import { colors, fonts, responsive } from '../../styles'
 
 export const StyledSubTitle = styled(SubTitle)`
-    margin-top: -1rem;
+    margin-top: -0.5rem;
 `
 
 export const StyledParagraph = styled(Paragraph)`

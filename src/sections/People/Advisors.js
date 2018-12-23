@@ -9,7 +9,7 @@ const Advisors = () => (
     <>
         <SubHeader>
             <Cell width={1 / 4}>
-                <StyledSubTitle white id="advisors">
+                <StyledSubTitle left white id="advisors">
                     Advisors
                 </StyledSubTitle>
             </Cell>

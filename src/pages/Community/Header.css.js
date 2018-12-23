@@ -16,10 +16,21 @@ export const StyledHeaderAddition = styled.div`
 export const Engage = styled.ul`
     animation: ${animation} 1.25s backwards;
     width: 100%;
+    text-align: center;
+
+    @media (${responsive.md.min}) {
+        text-align: left;
+    }
 
     li {
-        display: inline-block;
-        margin-left: ${layout.spacer};
+        display: block;
+        margin-bottom: calc(${layout.spacer} / 2);
+
+        @media (${responsive.sm.min}) {
+            display: inline-block;
+            margin-left: calc(${layout.spacer} / 4);
+            margin-right: calc(${layout.spacer} / 4);
+        }
 
         &:first-child {
             margin-left: 0;
@@ -28,6 +39,7 @@ export const Engage = styled.ul`
 `
 
 export const EngageButton = styled.a`
+    display: block;
     font-family: ${fonts.family.button};
     border-radius: 0.2rem;
     text-align: center;

@@ -49,8 +49,6 @@ export const DocsList = styled.article`
     border: 1px solid rgba(${colors.black}, 0.07);
 
     h2 {
-        font-size: ${fonts.size.h4};
-        margin-top: 0;
         margin-bottom: 1.5rem;
     }
 `

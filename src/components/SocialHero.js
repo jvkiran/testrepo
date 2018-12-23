@@ -49,10 +49,9 @@ export default class SocialHero extends PureComponent {
         const { light, nobounties, items } = this.props
 
         return (
-            <SocialBand>
+            <SocialBand {...this.props}>
                 {actions.map(action => {
-                    // eslint-disable-next-line
-                    if (items && !items.includes(action.key)) return
+                    if (items && !items.includes(action.key)) return null
 
                     return (
                         <SocialLink

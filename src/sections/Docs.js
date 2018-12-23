@@ -1,5 +1,6 @@
 import React from 'react'
 import ContentRow from '../components/ContentRow'
+import SubTitle from '../components/SubTitle'
 import Cell from '../components/Cell'
 import { Ul, Li } from '../components/Lists'
 import mantaray from '@oceanprotocol/art/mantaray/mantaray-back.svg'
@@ -28,7 +29,7 @@ const Docs = () => (
                 </Cell>
                 <Cell width={3 / 6}>
                     <DocsList>
-                        <h2>Ocean Protocol Documentation</h2>
+                        <SubTitle left>Ocean Protocol Documentation</SubTitle>
                         <Ul>
                             {content.links.map(link => {
                                 const { title, url } = link

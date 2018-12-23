@@ -67,7 +67,6 @@ export const QuoteWrap = styled.div`
     &:hover,
     &:focus {
         ${Quote} {
-            /* stylelint-disable-line */
             opacity: 1;
             transform: translate(0, -50%) scale(1);
         }

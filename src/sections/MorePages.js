@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { NavLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import artJson from '../data/pages/art'
 import faqJson from '../data/pages/faq'
@@ -11,7 +12,7 @@ import OceanMantaray from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
 import OceanSquid from '@oceanprotocol/art/squid/squid-grid.svg'
 import {
     StyledSection,
-    StyledLink,
+    StyledPage,
     StyledTitle,
     StyledSubTitle,
     LearnMore
@@ -73,25 +74,26 @@ export default class MorePages extends PureComponent {
                     if (links && !links.includes(item.link)) return
 
                     return (
-                        <StyledLink
+                        <StyledPage
                             key={item.link}
-                            to={item.link}
                             backgroundColor={item.backgroundColor}
                             backgroundImage={item.backgroundImage}
                             light={item.light}
                         >
-                            <StyledTitle left white={!item.light}>
-                                {item.title}
-                            </StyledTitle>
-                            {item.subtitle && (
-                                <StyledSubTitle left center>
-                                    {item.subtitle}
-                                </StyledSubTitle>
-                            )}
-                            <LearnMore>
-                                Learn more <Arrow />
-                            </LearnMore>
-                        </StyledLink>
+                            <NavLink to={item.link}>
+                                <StyledTitle left white={!item.light}>
+                                    {item.title}
+                                </StyledTitle>
+                                {item.subtitle && (
+                                    <StyledSubTitle left center>
+                                        {item.subtitle}
+                                    </StyledSubTitle>
+                                )}
+                                <LearnMore>
+                                    Learn more <Arrow />
+                                </LearnMore>
+                            </NavLink>
+                        </StyledPage>
                     )
                 })}
             </StyledSection>

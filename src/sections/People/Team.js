@@ -10,7 +10,7 @@ const Team = () => (
     <>
         <SubHeader>
             <Cell width={1 / 4}>
-                <StyledSubTitle white id="team">
+                <StyledSubTitle left white id="team">
                     Core team
                 </StyledSubTitle>
             </Cell>
