@@ -59,5 +59,15 @@
         "twitter": "pwang",
         "image": "peter",
         "quote": "We’re working closely with Peter to provide seamless and powerful tooling for data scientists, to co-create a future that equalizes the opportunity to access data & AI services."
+    },
+        {
+        "name": "Andreas Mueller",
+        "position": "Author of Introduction to Machine Learning with Python",
+        "link": "https://blog.oceanprotocol.com/bringing-beloved-machine-learning-library-scikit-learn-to-ocean-3b0e43ce8bd1",
+        "linkedin": "andreas-mueller-b370265a",
+        "twitter": "amuellerml",
+        "image": "andreas",
+        "quote": "Andreas Mueller is one of the core creators of the beloved machine learning tool scikit-learn. We're proud to have him as an advisor to Ocean Protocol."
     }
+    
 ]
