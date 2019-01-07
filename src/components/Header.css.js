@@ -51,4 +51,6 @@ export const StyledTitle = styled(Title)`
 export const StyledSubTitle = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
     animation: ${animation} 1.25s backwards;
+    max-width: ${layout.maxWidth.small};
+    ${({ left }) => !left && 'margin-left: auto; margin-right: auto;'};
 `

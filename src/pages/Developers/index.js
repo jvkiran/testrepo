@@ -27,9 +27,6 @@ export default class Developers extends Component {
             >
                 <Docs />
                 <DataScience />
-                <h1>Tech Bounties</h1>
-                <h1>Product Blog Posts</h1>
-                <h1>Demos</h1>
                 <MorePages />
             </Page>
         )

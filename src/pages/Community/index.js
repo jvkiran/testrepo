@@ -36,7 +36,6 @@ export default class Community extends Component {
                 <Bounties />
                 <Blog />
                 <Videos />
-                <h1>Team</h1>
                 <MorePages />
             </Page>
         )
