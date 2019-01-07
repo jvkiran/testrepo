@@ -842,11 +842,24 @@
         "link": "https://edincubator.eu/2018/12/18/data-sharing-edi-ocean-protocol-meetup/"
     },
         {
+        "city": "Paris",
+        "eventName": "Kaggle Days Paris",
+        "date": "2019-01-25",
+                    "date_end": "2019-01-26",
+        "link": "https://kaggledays.com/paris/?gclid=EAIaIQobChMIy5jF5syw3wIV1ud3Ch0ZCQFJEAAYASAAEgItyfD_BwE"
+    },
+        {
         "city": "Berlin",
         "eventName": "AraCon by Aragon",
         "date": "2019-01-29",
         "date_end": "2018-01-30",
         "link": "https://aracon.one"
+    },
+        {
+        "city": "Den Bosch, Netherlands",
+        "eventName": "Tech Deep Dive Hackathon",
+        "date": "2019-02-04",
+        "link": "https://www.odyssey.org/technical-deep-dive/?bpage=13604"
     },
     {
         "city": "Paris",
