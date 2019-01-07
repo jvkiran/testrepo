@@ -14,30 +14,7 @@ import { ReactComponent as Check } from '../assets/misc/check.svg'
 import { StyledList, StyledActions } from './Ambassadors.css'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 
-const content = {
-    title: 'Become an Ambassador',
-    description:
-        'Be a part of the inner circle of Ocean and have a direct impact on shaping our global community.',
-    text:
-        'The <strong>Ocean Protocol Ambassador Program</strong> is a grassroots project to involve our incredible community of thinkers, learners, and problem-solvers into the very core of our ecosystem. It is a chance for passionate individuals to be on the frontlines of the data revolution.\n\nWe are excited to bring onboard motivated, curious, and interesting people based all around the world, who are passionate about decentralization, challenging the status quo, and equalizing access to data for all. \n\nThere are a wide range of ways to get involved once you become an Ambassador, and plenty of great reasons to apply.',
-    list: [
-        'Be a part of the inner circle of Ocean',
-        'Direct impact on shaping our global community',
-        'Gain valuable new skills and experiences',
-        'Exclusive webinars and video calls with the Ocean team',
-        'Exclusive Telegram Group & chance to be featured on our blog',
-        'First to know about opportunities to earn Ocean tokens',
-        'Plenty of Ocean swag!'
-    ],
-    button: 'Apply to become an ambassador',
-    links: [
-        {
-            name: 'Announcing the Ocean Protocol Ambassador Program.',
-            link:
-                'https://blog.oceanprotocol.com/envoys-of-the-new-data-economy-ocean-protocol-ambassadors-3816a0e63611'
-        }
-    ]
-}
+import content from '../data/ambassadors.json'
 
 const Actions = ({ handleButtonClick }) => (
     <StyledActions>

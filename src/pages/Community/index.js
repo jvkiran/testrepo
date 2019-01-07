@@ -33,6 +33,11 @@ export default class Community extends Component {
                 <Events />
                 <Ambassadors />
                 <h1 id="bounties">Bounties</h1>
+                <p>
+                    Ocean Protocol is a fully open-source project, powered by a
+                    global network of skilled collaborators. Contribute your
+                    expertise to our software stack and be rewarded.
+                </p>
                 <Blog />
                 <Videos />
                 <h1>Team</h1>
