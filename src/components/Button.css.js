@@ -63,6 +63,14 @@ export const StyledButton = styled.button`
         transform: none;
         box-shadow: 0 5px 18px 0 rgba(${colors.black}, 0.1);
     }
+
+    svg {
+        width: 1.3rem;
+        height: 1.3rem;
+        vertical-align: middle;
+        margin-top: -0.2rem;
+        margin-right: 0.3rem;
+    }
 `
 
 StyledButton.a = StyledButton.withComponent('a')

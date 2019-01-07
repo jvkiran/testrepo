@@ -10,6 +10,7 @@ import content from '../../data/pages/community.json'
 import { colors } from '../../styles'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
 import Header from './Header'
+import Bounties from './Bounties'
 
 export default class Community extends Component {
     static propTypes = {
@@ -32,12 +33,7 @@ export default class Community extends Component {
             >
                 <Events />
                 <Ambassadors />
-                <h1 id="bounties">Bounties</h1>
-                <p>
-                    Ocean Protocol is a fully open-source project, powered by a
-                    global network of skilled collaborators. Contribute your
-                    expertise to our software stack and be rewarded.
-                </p>
+                <Bounties />
                 <Blog />
                 <Videos />
                 <h1>Team</h1>

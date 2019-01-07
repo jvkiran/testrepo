@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
 import SocialIcon from '../components/SocialIcon'
+import Button from '../components/Button'
 import { social, webtasks } from '../constants'
-import { StyledBounties, Bounty } from './BountiesActions.css'
+import { StyledBounties } from './BountiesActions.css'
 
 const BountiesText = ({ data }) => {
     if (data !== undefined) {
@@ -74,17 +75,19 @@ export default class Bounties extends PureComponent {
         const { networks } = this.state
 
         return (
-            <StyledBounties>
+            <StyledBounties {...this.props}>
                 {Object.keys(networks).map(network => (
-                    <Bounty
+                    <Button
                         key={network}
                         href={social[network]}
                         important={networks[network] && networks[network] > 0}
+                        border
+                        small
                     >
                         <BountiesIcon network={network} />
                         <BountiesText data={networks[network]} />
                         <BountiesTextAppend network={network} />
-                    </Bounty>
+                    </Button>
                 ))}
             </StyledBounties>
         )

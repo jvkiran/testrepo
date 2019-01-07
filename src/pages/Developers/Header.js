@@ -5,7 +5,7 @@ export default class Header extends PureComponent {
     render() {
         return (
             <StyledHeaderAddition>
-                <StyledSocialHero items={['github', 'gitter']} nobounties />
+                <StyledSocialHero items={['github', 'gitter']} />
             </StyledHeaderAddition>
         )
     }

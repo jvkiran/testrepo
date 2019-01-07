@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import SocialIcon from '../components/SocialIcon'
 import { social } from '../constants'
 import { SocialBand, SocialLink } from './SocialHero.css'
-import Bounties from './BountiesActions'
 
 const actions = [
     {
@@ -41,12 +40,11 @@ const actions = [
 export default class SocialHero extends PureComponent {
     static propTypes = {
         light: PropTypes.bool,
-        nobounties: PropTypes.bool,
         items: PropTypes.array
     }
 
     render() {
-        const { light, nobounties, items } = this.props
+        const { light, items } = this.props
 
         return (
             <SocialBand {...this.props}>
@@ -67,8 +65,6 @@ export default class SocialHero extends PureComponent {
                         </SocialLink>
                     )
                 })}
-
-                {!nobounties && <Bounties />}
             </SocialBand>
         )
     }
