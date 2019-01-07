@@ -60,7 +60,7 @@
         "image": "peter",
         "quote": "We’re working closely with Peter to provide seamless and powerful tooling for data scientists, to co-create a future that equalizes the opportunity to access data & AI services."
     },
-        {
+    {
         "name": "Andreas Mueller",
         "position": "Author of Introduction to Machine Learning with Python",
         "link": "https://blog.oceanprotocol.com/bringing-beloved-machine-learning-library-scikit-learn-to-ocean-3b0e43ce8bd1",
@@ -69,7 +69,7 @@
         "image": "andreas",
         "quote": "Andreas Mueller is one of the core creators of the beloved machine learning tool scikit-learn. We're proud to have him as an advisor to Ocean Protocol."
     },
-            {
+    {
         "name": "Luis Cuende",
         "position": "CEO of Aragon One",
         "link": "https://blog.oceanprotocol.com/walking-the-talk-on-transparent-decentralized-governance-64457ef69035",
@@ -78,7 +78,7 @@
         "image": "luis",
         "quote": "Luis Cuende is the founder of Aragon- a network and tooling for blockchain governance, and one of the top experts in the blockchain space"
     },
-               {
+    {
         "name": "Simon de la Rouviere",
         "position": "Pioneer of Curation Markets & TCRs",
         "link": "https://blog.oceanprotocol.com/curation-thinking-in-data-markets-data-commons-ccab9dce4b98",
@@ -87,7 +87,7 @@
         "image": "simon",
         "quote": "Simon’s quick, curious, and broad-thinking mind will be helpful as we build & grow the Ocean ecosystem, in everything from incentives for data commons to price-setting for data markets."
     },
-                   {
+    {
         "name": "Azeem Azhar",
         "position": "Founder of Expontential View",
         "link": "https://blog.oceanprotocol.com/technology-society-making-the-conversation-happen-b0ac8433997c",
@@ -96,15 +96,13 @@
         "image": "azeem",
         "quote": "Azeem Azhar is a seasoned technologist & manager, and doesn’t shy away from making his case about what’s important and what we might do about it."
     },
-                       {
+    {
         "name": "Amir Banifatemi",
         "position": "Co-Founder of AI for Good & General Manager at AI XPrize",
         "link": "https://blog.oceanprotocol.com/a-driving-force-in-scaling-up-ai-for-good-3defae8f184a",
         "linkedin": "abanifatemi",
         "twitter": "A225",
-        "image": "Amir",
+        "image": "amir",
         "quote": "Amir is General Manager of the AI & Frontier Tech Initiatives group at XPRIZE Foundation. He is a leader in the global AI for Good movement, as epitomized by the global “AI for Good Global Summit” that he co-organizes."
     }
-    
-    
 ]
