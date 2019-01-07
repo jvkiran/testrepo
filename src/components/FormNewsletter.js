@@ -27,7 +27,8 @@ export default class SubscribeForm extends Component {
         inputPlaceholder: PropTypes.string,
         maxWidth: PropTypes.number,
         sending: PropTypes.string,
-        success: PropTypes.string
+        success: PropTypes.string,
+        exists: PropTypes.string
     }
 
     static defaultProps = {
