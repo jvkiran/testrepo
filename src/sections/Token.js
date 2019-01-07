@@ -18,34 +18,7 @@ import {
     Divider
 } from './Token.css'
 import Paragraph from '../components/Paragraph'
-
-const content = {
-    title: 'Ocean Token Distribution',
-    description:
-        'Get on the whitelist for the Ocean Token distribution during the network launch on … March 2019. The KYC process is open until … 2019.',
-    platforms: [
-        {
-            name: 'CoinList',
-            intro: 'Use <strong>CoinList</strong> if you:',
-            list: [
-                'are registering for the first time',
-                'have an existing CoinList or AngelList account',
-                'have participated in Filecoin, Blockstack, Origin or any other project run by CoinList',
-                'are a US accredited investor'
-            ],
-            link: 'https://coinlist.co/oceanprotocol'
-        },
-        {
-            name: 'Fractal',
-            intro: 'Use <strong>Fractal</strong> if you:',
-            list: [
-                'participated in the Ocean Protocol Seed or Pre-Launch phase in March 2018',
-                'prefer your data to be stored exclusively in the EU under GDPR'
-            ],
-            link: 'https://fractal.oceanprotocol.com'
-        }
-    ]
-}
+import content from '../data/token.json'
 
 const Kyc = () => (
     <Section
@@ -95,28 +68,18 @@ const Kyc = () => (
 
             <TokenInfo>
                 <Cell width={1 / 3}>
-                    <SubTitle white>The Ocean Token</SubTitle>
+                    <SubTitle white left>
+                        {content.tokeninfo.title}
+                    </SubTitle>
                 </Cell>
                 <Cell width={2 / 3}>
-                    <Paragraph
-                        style={{
-                            color: `rgb(${colors.white})`
-                        }}
-                    >
-                        The Ocean Token is a native utility token used as the
-                        means of value exchange, to power the protocol and
-                        incentivize the keeper nodes of the network. The Ocean
-                        Token is inseparable from the Ocean Protocol and Ocean
-                        Protocol network.
-                    </Paragraph>
+                    <Paragraph white>{content.tokeninfo.description}</Paragraph>
 
-                    <ul>
-                        <li>
-                            Token key metrics: number of total tokens, capped
-                            at.../uncapped, minimum individual amount, maximum
-                            individual amount, token price
-                        </li>
-                    </ul>
+                    <Ul>
+                        {content.tokeninfo.metrics.map((metric, index) => (
+                            <Li key={index}>{metric}</Li>
+                        ))}
+                    </Ul>
                 </Cell>
             </TokenInfo>
         </ContentRow>

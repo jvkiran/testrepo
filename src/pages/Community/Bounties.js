@@ -48,7 +48,7 @@ export default class Bounties extends PureComponent {
                                 core team may not know exist and help us make
                                 Ocean that much better.
                             </Paragraph>
-                            <a href="#">Suggest a new bounty</a>
+                            <span>Suggest a new bounty</span>
                         </Cell>
                     </Grid>
                 </StyledContent>

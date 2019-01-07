@@ -51,10 +51,6 @@ export const StyledActions = styled.div`
         margin-bottom: ${layout.spacer};
     }
 
-    a {
-        font-size: ${fonts.size.small};
-    }
-
     @media (${responsive.sm.min}) {
         margin-left: -3rem;
 
