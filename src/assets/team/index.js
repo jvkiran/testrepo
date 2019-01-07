@@ -10,12 +10,14 @@ import chris from './chris.jpg'
 import cristina from './cristina.jpg'
 import daniel from './daniel.jpg'
 import daryl from './daryl.jpg'
+import dev from './dev.jpg'
 import dimi from './dimi.jpg'
 import don from './don.jpg'
 import emily from './emily.jpg'
 import enrique from './enrique.jpg'
 import fang from './fang.jpg'
 import irene from './irene.jpg'
+import josepablo from './josepablo.jpg'
 import javier from './javier.jpg'
 import jernej from './jernej.jpg'
 import john from './john.jpg'
@@ -55,6 +57,7 @@ export default {
     cristina,
     daniel,
     daryl,
+    dev,
     dimi,
     don,
     emily,
@@ -62,6 +65,7 @@ export default {
     ervin,
     fang,
     irene,
+    josepablo,
     javier,
     jernej,
     john,
