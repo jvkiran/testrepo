@@ -13,13 +13,18 @@ import daryl from './daryl.jpg'
 import dimi from './dimi.jpg'
 import don from './don.jpg'
 import emily from './emily.jpg'
+import enrique from './enrique.jpg'
 import fang from './fang.jpg'
 import irene from './irene.jpg'
+import javier from './javier.jpg'
 import jernej from './jernej.jpg'
 import john from './john.jpg'
 import kiran from './kiran.jpg'
+import kwinten from './kwinten.jpg'
 import kyriakos from './kyriakos.jpg'
 import malte from './malte.jpg'
+import manan from './manan.jpg'
+import marcus from './marcus.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
 import mike from './mike.jpg'
@@ -27,6 +32,7 @@ import patty from './patty.jpg'
 import paul from './paul.jpg'
 import ricardo from './ricardo.jpg'
 import sarah from './sarah.jpg'
+import sebastian from './sebastian.jpg'
 import sheridan from './sheridan.jpg'
 import timothy from './timothy.jpg'
 import trent from './trent.jpg'
@@ -52,14 +58,19 @@ export default {
     dimi,
     don,
     emily,
+    enrique,
     ervin,
     fang,
     irene,
+    javier,
     jernej,
     john,
     kiran,
+    kwinten,
     kyriakos,
     malte,
+    manan,
+    marcus,
     masha,
     matthias,
     mike,
@@ -67,6 +78,7 @@ export default {
     paul,
     ricardo,
     sarah,
+    sebastian,
     sheridan,
     timothy,
     trent,
