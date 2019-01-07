@@ -47,7 +47,9 @@ export default class Header extends PureComponent {
                     <StyledTitle left={left} white={!light}>
                         {title}
                     </StyledTitle>
-                    <StyledSubTitle left={left}>{description}</StyledSubTitle>
+                    <StyledSubTitle left={left} white={!light}>
+                        {description}
+                    </StyledSubTitle>
                     {text && (
                         <Paragraph
                             center

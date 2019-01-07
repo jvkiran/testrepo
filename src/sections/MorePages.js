@@ -85,7 +85,11 @@ export default class MorePages extends PureComponent {
                                     {item.title}
                                 </StyledTitle>
                                 {item.subtitle && (
-                                    <StyledSubTitle left center>
+                                    <StyledSubTitle
+                                        left
+                                        center
+                                        white={!item.light}
+                                    >
                                         {item.subtitle}
                                     </StyledSubTitle>
                                 )}

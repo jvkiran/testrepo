@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Title from '../components/Title'
 import Paragraph from '../components/Paragraph'
-import { colors, responsive, layout } from '../styles'
+import { colors, fonts, responsive, layout } from '../styles'
 
 export const StyledHeader = styled.header`
     margin-bottom: calc(${layout.spacer} * 2);
@@ -14,6 +14,7 @@ export const StyledTitle = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
+    font-size: ${fonts.size.large};
     margin-top: ${layout.spacer};
     margin-bottom: 0;
     color: ${({ white }) =>

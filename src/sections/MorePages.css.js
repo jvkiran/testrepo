@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import Title from '../components/Title'
-import SubTitle from '../components/SubTitle'
 import Section from '../components/Section'
 import { colors, fonts, layout, responsive, transitions } from '../styles'
 
@@ -94,16 +93,17 @@ export const StyledTitle = styled(Title)`
     }
 `
 
-export const StyledSubTitle = styled(SubTitle)`
-    font-size: ${fonts.size.base} !important;
-    color: rgb(${colors.lightGrey});
-    margin-top: 0.5rem;
+export const StyledSubTitle = styled.p`
+    font-size: ${fonts.size.small};
+    color: ${({ white }) =>
+        white ? `rgb(${colors.dimmedGrey})` : `rgb(${colors.darkGrey})`};
+    margin-top: ${layout.spacer};
     margin-bottom: 0;
     position: relative;
     z-index: 1;
 
     @media screen and (${responsive.sm.min}) {
-        font-size: ${fonts.size.large} !important;
+        font-size: ${fonts.size.base};
     }
 `
 

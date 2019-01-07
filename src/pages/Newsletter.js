@@ -7,6 +7,10 @@ import ContentRow from '../components/ContentRow'
 import { colors } from '../styles'
 import { StyledSection, StyledFormNewsletter } from './Newsletter.css'
 
+const title = 'Newsletter'
+const description =
+    'Can’t get enough? Sign up for our newsletter and receive exclusive insights and updates.'
+
 export default class Newsletter extends Component {
     static propTypes = {
         location: PropTypes.object.isRequired
@@ -21,9 +25,6 @@ export default class Newsletter extends Component {
     }
 
     render() {
-        const title = 'Newsletter'
-        const description = 'Subscribe to be the first to know about updates.'
-
         return (
             <Page
                 title={title}
