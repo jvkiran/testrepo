@@ -25,9 +25,7 @@ export const StyledPage = styled.div`
     flex: 1 1 100%;
     margin-bottom: ${layout.pageFrame};
     position: relative;
-    border: ${({ light }) =>
-        light &&
-        `calc(${layout.pageFrame} / 2) solid rgb(${colors.dimmedGrey})`};
+    ${({ light }) => light && `border: .2rem solid rgb(${colors.dimmedGrey})`};
 
     a {
         display: block;
@@ -61,7 +59,7 @@ export const StyledPage = styled.div`
             background: ${({ light }) =>
                 light
                     ? `rgba(${colors.white}, 0.6)`
-                    : `rgba(${colors.black}, 0.3)`};
+                    : `rgba(${colors.black}, 0.45)`};
         }
 
         &:hover,
@@ -97,7 +95,7 @@ export const StyledSubTitle = styled.p`
     font-size: ${fonts.size.small};
     color: ${({ white }) =>
         white ? `rgb(${colors.dimmedGrey})` : `rgb(${colors.darkGrey})`};
-    margin-top: ${layout.spacer};
+    margin-top: calc(${layout.spacer} / 2);
     margin-bottom: 0;
     position: relative;
     z-index: 1;
