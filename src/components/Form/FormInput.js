@@ -14,10 +14,10 @@ const FormTag = ({ tag, ...props }) =>
     tag === 'textarea' ? <Textarea {...props} /> : <Input {...props} />
 
 FormTag.propTypes = {
-    tag: PropTypes.string.isRequired
+    tag: PropTypes.string
 }
 
-class FormInput extends PureComponent {
+export default class FormInput extends PureComponent {
     static propTypes = {
         name: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
@@ -109,5 +109,3 @@ class FormInput extends PureComponent {
         )
     }
 }
-
-export default FormInput

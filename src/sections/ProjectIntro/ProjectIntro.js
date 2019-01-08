@@ -16,7 +16,6 @@ import {
     StyledDataDots,
     StyledGrid,
     Icon,
-    Line,
     Actions,
     Contact
 } from './ProjectIntro.css'
@@ -72,31 +71,33 @@ export default class ProjectIntro extends PureComponent {
             <>
                 <ContentRow>
                     <DataGraphic />
-                    <Line />
-                    {intro.about.map(aboutBlock => (
-                        <StyledGrid key={aboutBlock.title}>
-                            <Cell width={2 / 3}>
-                                <SubTitle white left>
-                                    {aboutBlock.title}
-                                </SubTitle>
-                                <Paragraph>{aboutBlock.text}</Paragraph>
 
-                                <Actions>
-                                    {aboutBlock.actions &&
-                                        aboutBlock.actions.map(action => (
-                                            <a
-                                                key={action.title}
-                                                href={action.url}
-                                            >
-                                                {action.title}
-                                            </a>
-                                        ))}
-                                </Actions>
-                            </Cell>
-                            <Cell width={1 / 3}>
-                                <Icon />
-                            </Cell>
-                        </StyledGrid>
+                    {intro.about.map(aboutBlock => (
+                        <>
+                            <StyledGrid key={aboutBlock.title}>
+                                <Cell width={2 / 3}>
+                                    <SubTitle white left>
+                                        {aboutBlock.title}
+                                    </SubTitle>
+                                    <Paragraph>{aboutBlock.text}</Paragraph>
+
+                                    <Actions>
+                                        {aboutBlock.actions &&
+                                            aboutBlock.actions.map(action => (
+                                                <a
+                                                    key={action.title}
+                                                    href={action.url}
+                                                >
+                                                    {action.title}
+                                                </a>
+                                            ))}
+                                    </Actions>
+                                </Cell>
+                                <Cell width={1 / 3}>
+                                    <Icon />
+                                </Cell>
+                            </StyledGrid>
+                        </>
                     ))}
                 </ContentRow>
 

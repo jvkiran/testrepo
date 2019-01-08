@@ -19,14 +19,17 @@ export const StyledData = styled.div`
     position: relative;
     width: 100%;
     margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     animation: ${moveIn} 1.25s 0.2s backwards;
+    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
 
     @media screen and (${responsive.sm.min}) {
         margin-top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 6rem;
+        padding-bottom: 6rem;
     }
 `
 
@@ -129,21 +132,13 @@ export const StyledDataDots = styled.div`
     }
 `
 
-export const Line = styled.div`
-    width: 100%;
-    margin-top: ${layout.spacer};
-    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
-
-    @media screen and (${responsive.sm.min}) {
-        margin-top: calc(${layout.spacer} * 3);
-        margin-bottom: ${layout.spacer};
-    }
-`
-
 export const StyledGrid = styled(Grid)`
     padding-top: calc(${layout.spacer} * 2);
     padding-bottom: calc(${layout.spacer} * 2);
     align-items: center;
+    min-height: 70vh;
+    max-height: 500px;
+    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
 
     &:nth-child(even) {
         flex-direction: row-reverse;
@@ -175,7 +170,7 @@ export const Actions = styled.aside`
 
 export const Contact = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    margin-top: calc(${layout.spacer} * 3);
+    margin-top: calc(${layout.spacer} * 2);
     margin-bottom: 0;
 
     button {

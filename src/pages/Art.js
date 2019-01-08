@@ -67,7 +67,7 @@ const Art = ({ location }) => (
         headerBackgroundColor={colors.darkPurple}
         headerBackgroundImage={OceanMantarayFull}
         headerStyle={{
-            backgroundPosition: '-20vw 5vh',
+            backgroundPosition: '-30vw 10vh',
             backgroundSize: '60vw'
         }}
     >
