@@ -32,7 +32,7 @@
                 ]
             },
             {
-                "title": "A 1001 Marketplaces",
+                "title": "1001 Marketplaces",
                 "text": "Any data marketplace can hook into Ocean Protocol to provide “last mile” services, connecting data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace and the data owner controls each dataset.",
                 "actions": [
                     {

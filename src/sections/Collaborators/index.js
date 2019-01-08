@@ -1,17 +1,13 @@
 import React from 'react'
 import Section from '../../components/Section'
 import ContentRow from '../../components/ContentRow'
+import SectionHeader from '../../components/SectionHeader'
 import Collaborator from './Collaborator'
 import { colors } from '../../styles'
 import content from '../../data/collaborators.json'
 import Logos from '../../assets/logos'
 import { capitalizeFirstLetter } from '../../lib/utils'
-import {
-    StyledGrid,
-    StyledParagraph,
-    StyledLine,
-    StyledTitle
-} from './index.css'
+import { StyledGrid, StyledLine } from './index.css'
 
 // const fisherYatesShuffle = array => {
 //     let newArr = [].concat(array) // create new array
@@ -31,13 +27,12 @@ const Collaborators = () => (
         fontColor={colors.white}
         id="collaborators"
     >
-        <ContentRow>
-            <StyledTitle white>{content.title}</StyledTitle>
-        </ContentRow>
-
-        <ContentRow narrow>
-            <StyledParagraph>{content.intro}</StyledParagraph>
-        </ContentRow>
+        <SectionHeader
+            title={content.title}
+            description={content.intro}
+            line
+            white
+        />
 
         <ContentRow wide>
             <StyledLine />
