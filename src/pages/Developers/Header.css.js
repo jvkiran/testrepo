@@ -6,7 +6,6 @@ import { animation } from '../../components/Header.css'
 
 export const StyledHeaderAddition = styled.div`
     text-align: left;
-    padding-top: 2rem;
     color: rgb(${colors.white});
 `
 

@@ -17,12 +17,12 @@ export const moveIn = keyframes`
 export const StyledData = styled.div`
     position: relative;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 4rem;
     margin-bottom: 4rem;
     animation: ${moveIn} 1.25s 0.2s backwards;
 
     @media screen and (${responsive.sm.min}) {
-        margin-top: 3rem;
+        margin-top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,7 +31,6 @@ export const StyledData = styled.div`
 
 export const StyledCard = styled.div`
     background: rgb(${colors.darkGrey});
-    margin: 5%;
     border-radius: 2px;
     padding: ${layout.spacer};
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.2);
@@ -41,7 +40,7 @@ export const StyledCard = styled.div`
     display: block;
 
     @media screen and (${responsive.sm.min}) {
-        width: 30%;
+        width: 35%;
     }
 
     h4 {
@@ -129,8 +128,35 @@ export const StyledDataDots = styled.div`
     }
 `
 
-export const StyledCopy = styled(Grid)`
-    p {
-        color: rgb(${colors.lightGrey});
+export const Line = styled.div`
+    width: 100%;
+    margin-top: ${layout.spacer};
+    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
+
+    @media screen and (${responsive.sm.min}) {
+        margin-top: calc(${layout.spacer} * 3);
+        margin-bottom: ${layout.spacer};
     }
+`
+
+export const StyledGrid = styled(Grid)`
+    padding-top: calc(${layout.spacer} * 2);
+    padding-bottom: calc(${layout.spacer} * 2);
+    align-items: center;
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    p {
+        color: rgb(${colors.dimmedGrey});
+    }
+`
+
+export const Icon = styled.div`
+    background: rgb(${colors.grey});
+    width: 15rem;
+    min-height: 15rem;
+    height: auto;
+    max-width: 100%;
 `

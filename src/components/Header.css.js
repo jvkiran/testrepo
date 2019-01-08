@@ -55,4 +55,5 @@ export const StyledSubTitle = styled.p`
     animation: ${animation} 1.25s backwards;
     max-width: ${layout.maxWidth.small};
     ${({ left }) => !left && 'margin-left: auto; margin-right: auto;'};
+    margin-bottom: calc(${layout.spacer} * 2);
 `

@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Page from '../templates/Page'
-import Title from '../components/Title'
-import SubTitle from '../components/SubTitle'
-import ContentRow from '../components/ContentRow'
-import { colors } from '../styles'
-import { StyledSection, StyledFormNewsletter } from './Newsletter.css'
+import { StyledFormNewsletter } from './Newsletter.css'
 
 const title = 'Newsletter'
 const description =
@@ -30,21 +26,10 @@ export default class Newsletter extends Component {
                 title={title}
                 description={description}
                 location={this.props.location}
-                noheader
-            >
-                <StyledSection
-                    background={colors.black}
-                    fontColor={colors.white}
-                    viewport
-                >
-                    <ContentRow>
-                        <Title white>{title}</Title>
-                        <SubTitle>{description}</SubTitle>
-                    </ContentRow>
-
-                    <StyledFormNewsletter />
-                </StyledSection>
-            </Page>
+                headerViewport
+                headerFullWidth
+                headerAddition={<StyledFormNewsletter />}
+            />
         )
     }
 }

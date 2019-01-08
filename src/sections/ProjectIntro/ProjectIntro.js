@@ -10,7 +10,9 @@ import {
     StyledCard,
     StyledDataTransfer,
     StyledDataDots,
-    StyledCopy
+    StyledGrid,
+    Icon,
+    Line
 } from './ProjectIntro.css'
 import Pulse from './Pulse'
 import { intro } from '../../data/pages/protocol.json'
@@ -48,15 +50,23 @@ const ProjectIntro = () => (
                     <p>{intro.infographic[1].text}</p>
                 </StyledCard>
             </StyledData>
+        </ContentRow>
 
-            <StyledCopy>
-                {intro.about.map(aboutBlock => (
-                    <Cell key={aboutBlock.title} width={1 / 2}>
-                        <SubTitle white>{aboutBlock.title}</SubTitle>
+        <ContentRow>
+            <Line />
+            {intro.about.map(aboutBlock => (
+                <StyledGrid key={aboutBlock.title}>
+                    <Cell width={2 / 3}>
+                        <SubTitle white left>
+                            {aboutBlock.title}
+                        </SubTitle>
                         <Paragraph>{aboutBlock.text}</Paragraph>
                     </Cell>
-                ))}
-            </StyledCopy>
+                    <Cell width={1 / 3}>
+                        <Icon />
+                    </Cell>
+                </StyledGrid>
+            ))}
         </ContentRow>
     </>
 )
