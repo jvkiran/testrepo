@@ -35,7 +35,7 @@ const forms = {
             },
             message: {
                 label: 'Your Message',
-                placeholder: 'Tell us what you want',
+                placeholder: "Tell us what's on your mind",
                 maxLength: 300,
                 tag: 'textarea',
                 required: true

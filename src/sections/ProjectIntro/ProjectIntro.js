@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import ContentRow from '../../components/ContentRow'
 import Cell from '../../components/Cell'
+import Modal from '../../components/Modal'
+import Button from '../../components/Button'
+import ModalForm from '../../components/Form/FormModal'
+import forms from '../../data/forms'
 import Paragraph from '../../components/Paragraph'
 import SubTitle from '../../components/SubTitle'
 import dataDotsLeft from '../../assets/graphics/data-dots-left.svg'
@@ -12,7 +16,9 @@ import {
     StyledDataDots,
     StyledGrid,
     Icon,
-    Line
+    Line,
+    Actions,
+    Contact
 } from './ProjectIntro.css'
 import Pulse from './Pulse'
 import { intro } from '../../data/pages/protocol.json'
@@ -26,49 +32,93 @@ if (isProduction) {
     shouldAnimate = process.env.REACT_APP_ANIMATE_PROJECT === 'true'
 }
 
-const ProjectIntro = () => (
-    <>
-        <ContentRow>
-            <StyledData width={1}>
-                <StyledCard>
-                    <h4>{intro.infographic[0].title}</h4>
-                    <p>{intro.infographic[0].text}</p>
-                </StyledCard>
-                <StyledDataTransfer>
-                    <StyledDataDots
-                        img={dataDotsLeft}
-                        shouldAnimate={shouldAnimate}
-                    />
-                    <StyledDataDots
-                        img={dataDotsRight}
-                        shouldAnimate={shouldAnimate}
-                    />
-                    <Pulse className="pulse" shouldAnimate={shouldAnimate} />
-                </StyledDataTransfer>
-                <StyledCard>
-                    <h4>{intro.infographic[1].title}</h4>
-                    <p>{intro.infographic[1].text}</p>
-                </StyledCard>
-            </StyledData>
-        </ContentRow>
-
-        <ContentRow>
-            <Line />
-            {intro.about.map(aboutBlock => (
-                <StyledGrid key={aboutBlock.title}>
-                    <Cell width={2 / 3}>
-                        <SubTitle white left>
-                            {aboutBlock.title}
-                        </SubTitle>
-                        <Paragraph>{aboutBlock.text}</Paragraph>
-                    </Cell>
-                    <Cell width={1 / 3}>
-                        <Icon />
-                    </Cell>
-                </StyledGrid>
-            ))}
-        </ContentRow>
-    </>
+const DataGraphic = () => (
+    <StyledData width={1}>
+        <StyledCard>
+            <h4>{intro.infographic[0].title}</h4>
+            <p>{intro.infographic[0].text}</p>
+        </StyledCard>
+        <StyledDataTransfer>
+            <StyledDataDots img={dataDotsLeft} shouldAnimate={shouldAnimate} />
+            <StyledDataDots img={dataDotsRight} shouldAnimate={shouldAnimate} />
+            <Pulse className="pulse" shouldAnimate={shouldAnimate} />
+        </StyledDataTransfer>
+        <StyledCard>
+            <h4>{intro.infographic[1].title}</h4>
+            <p>{intro.infographic[1].text}</p>
+        </StyledCard>
+    </StyledData>
 )
 
-export default ProjectIntro
+export default class ProjectIntro extends PureComponent {
+    state = {
+        showModal: false,
+        modal: ''
+    }
+
+    toggleModal = modal => {
+        this.setState({
+            modal,
+            showModal: !this.state.showModal
+        })
+    }
+
+    handleButtonClick = () => {
+        this.toggleModal('contact')
+    }
+
+    render() {
+        return (
+            <>
+                <ContentRow>
+                    <DataGraphic />
+                    <Line />
+                    {intro.about.map(aboutBlock => (
+                        <StyledGrid key={aboutBlock.title}>
+                            <Cell width={2 / 3}>
+                                <SubTitle white left>
+                                    {aboutBlock.title}
+                                </SubTitle>
+                                <Paragraph>{aboutBlock.text}</Paragraph>
+
+                                <Actions>
+                                    {aboutBlock.actions &&
+                                        aboutBlock.actions.map(action => (
+                                            <a
+                                                key={action.title}
+                                                href={action.url}
+                                            >
+                                                {action.title}
+                                            </a>
+                                        ))}
+                                </Actions>
+                            </Cell>
+                            <Cell width={1 / 3}>
+                                <Icon />
+                            </Cell>
+                        </StyledGrid>
+                    ))}
+                </ContentRow>
+
+                <ContentRow narrow center>
+                    <Contact>
+                        {intro.contact.text} <br />
+                        <Button white center onClick={this.handleButtonClick}>
+                            {intro.contact.button}
+                        </Button>
+                    </Contact>
+                </ContentRow>
+
+                {this.state.showModal && (
+                    <Modal
+                        title={forms[this.state.modal].title}
+                        description={forms[this.state.modal].description}
+                        toggle={this.toggleModal}
+                    >
+                        <ModalForm modal={this.state.modal} />
+                    </Modal>
+                )}
+            </>
+        )
+    }
+}

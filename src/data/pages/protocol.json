@@ -19,12 +19,32 @@
             },
             {
                 "title": "A Tokenized Service Layer",
-                "text": "Ocean Protocol provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks. \n\nDiscovery is facilitated by storing and promoting metadata, linking assets and services, and providing a licensing framework with pricing."
+                "text": "Ocean Protocol provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks. \n\nDiscovery is facilitated by storing and promoting metadata, linking assets and services, and providing a licensing framework with pricing.",
+                "actions": [
+                    {
+                        "title": "Terminology",
+                        "url": "https://docs.oceanprotocol.com/concepts/terminology/"
+                    },
+                    {
+                        "title": "Software Components",
+                        "url": "https://docs.oceanprotocol.com/concepts/components/"
+                    }
+                ]
             },
             {
                 "title": "A 1001 Marketplaces",
-                "text": "Any data marketplace can hook into Ocean Protocol to provide “last mile” services, connecting data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace and the data owner controls each dataset."
+                "text": "Any data marketplace can hook into Ocean Protocol to provide “last mile” services, connecting data providers and consumers. Ocean Protocol is designed so that data owners cannot be locked-in to any single marketplace and the data owner controls each dataset.",
+                "actions": [
+                    {
+                        "title": "Set Up a Marketplace",
+                        "url": "https://docs.oceanprotocol.com/setup/marketplace/"
+                    }
+                ]
             }
-        ]
+        ],
+        "contact": {
+            "text": "You can provide or want to use data once our network launches?",
+            "button": "Get In Touch"
+        }
     }
 }
