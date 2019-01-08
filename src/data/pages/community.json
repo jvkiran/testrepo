@@ -41,7 +41,7 @@
             "icon": "gitcoin",
             "title": "Bounties",
             "tooltip": "Number of open and completed bounties.",
-            "link": "https://explorer.bounties.network/explorer?search=ocean%20protocol"
+            "link": "https://docs.oceanprotocol.com/concepts/bounties/"
         }
     ]
 }
