@@ -14,7 +14,6 @@ import {
     StyledSection,
     StyledPage,
     StyledTitle,
-    StyledSubTitle,
     LearnMore
 } from './MorePages.css'
 import { ReactComponent as Arrow } from '../assets/misc/arrow.svg'
@@ -22,13 +21,11 @@ import { ReactComponent as Arrow } from '../assets/misc/arrow.svg'
 const content = [
     {
         title: protocolJson.title,
-        subtitle: protocolJson.description,
         link: '/protocol/',
         backgroundImage: OceanJeyllyfish
     },
     {
         title: communityJson.title,
-        subtitle: communityJson.description,
         link: '/community/',
         backgroundColor: colors.white,
         backgroundImage: OceanMantaray,
@@ -36,7 +33,6 @@ const content = [
     },
     {
         title: developersJson.title,
-        subtitle: developersJson.description,
         link: '/developers/',
         backgroundColor: colors.darkPurple,
         backgroundImage: OceanSquid
@@ -84,15 +80,6 @@ export default class MorePages extends PureComponent {
                                 <StyledTitle left white={!item.light}>
                                     {item.title}
                                 </StyledTitle>
-                                {item.subtitle && (
-                                    <StyledSubTitle
-                                        left
-                                        center
-                                        white={!item.light}
-                                    >
-                                        {item.subtitle}
-                                    </StyledSubTitle>
-                                )}
                                 <LearnMore>
                                     Learn more <Arrow />
                                 </LearnMore>

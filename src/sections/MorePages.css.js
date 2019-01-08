@@ -91,20 +91,6 @@ export const StyledTitle = styled(Title)`
     }
 `
 
-export const StyledSubTitle = styled.p`
-    font-size: ${fonts.size.small};
-    color: ${({ white }) =>
-        white ? `rgb(${colors.dimmedGrey})` : `rgb(${colors.darkGrey})`};
-    margin-top: calc(${layout.spacer} / 2);
-    margin-bottom: 0;
-    position: relative;
-    z-index: 1;
-
-    @media screen and (${responsive.sm.min}) {
-        font-size: ${fonts.size.base};
-    }
-`
-
 export const LearnMore = styled.span`
     display: block;
     font-family: ${fonts.family.button};
