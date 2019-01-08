@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import jsonp from 'jsonp'
 import FormInput from './FormInput'
-import FormRadio from './FormRadio'
+import FormInputRadioCheckbox from './FormInputRadioCheckbox'
 import Button from '../Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
@@ -52,7 +52,7 @@ export default class ModalForm extends PureComponent {
 
         let name
         let email
-        let company
+        let about
         let message
 
         let location
@@ -74,9 +74,8 @@ export default class ModalForm extends PureComponent {
             email = form.email.value && encodeURIComponent(form.email.value)
         }
 
-        if (form.company) {
-            company =
-                form.company.value && encodeURIComponent(form.company.value)
+        if (form.about) {
+            about = form.about.value && encodeURIComponent(form.about.value)
         }
 
         if (form.message) {
@@ -134,7 +133,7 @@ export default class ModalForm extends PureComponent {
         } else {
             url = `${
                 forms[modal].baseUrl
-            }&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}&${
+            }&NAME=${name}&EMAIL=${email}&ABOUT=${about}&MESSAGE=${message}&${
                 gdpr.flag
             }`
         }
@@ -167,8 +166,9 @@ export default class ModalForm extends PureComponent {
                     {forms[modal].fields &&
                         Object.entries(forms[modal].fields).map(
                             ([key, value]) =>
-                                value.type === 'radio' ? (
-                                    <FormRadio
+                                value.type === 'radio' ||
+                                value.type === 'checkbox' ? (
+                                    <FormInputRadioCheckbox
                                         key={key}
                                         label={value.label}
                                         name={key}
@@ -179,6 +179,7 @@ export default class ModalForm extends PureComponent {
                                         }
                                         help={value.help}
                                         options={value.options}
+                                        type={value.type}
                                     />
                                 ) : (
                                     <FormInput

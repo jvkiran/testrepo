@@ -3,9 +3,12 @@ import { fonts, colors, layout, responsive } from '../../styles'
 
 export const RadioGroup = styled.div`
     margin-top: calc(${layout.spacer} / 2);
+    margin-bottom: -2%;
 
     @media screen and (${responsive.sm.min}) {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 `
 
@@ -15,16 +18,10 @@ export const RadioWrap = styled.div`
     text-align: center;
     display: flex;
     align-items: center;
-    margin-bottom: calc(${layout.spacer} / 4);
+    margin-bottom: 2%;
 
     @media screen and (${responsive.sm.min}) {
-        flex: 1;
-        margin-bottom: 0;
-        margin-left: calc(${layout.spacer} / 4);
-
-        &:first-child {
-            margin-left: 0;
-        }
+        flex: 0 0 49%;
     }
 `
 
@@ -33,7 +30,7 @@ export const RadioLabel = styled.label`
     padding: 0;
     font-family: ${fonts.family.button};
     font-size: ${fonts.size.small};
-    line-height: 3.5;
+    line-height: 1.2;
     border: 2px solid rgb(${colors.dimmedGrey});
     border-radius: 0.2rem;
     position: absolute;
@@ -41,6 +38,11 @@ export const RadioLabel = styled.label`
     right: 0;
     top: 0;
     bottom: 0;
+    color: rgb(${colors.grey});
+    text-align: left;
+    padding-left: 2.5rem;
+    display: flex;
+    align-items: center;
 `
 
 export const Radio = styled.input`

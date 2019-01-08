@@ -22,6 +22,7 @@ const Modal = ({ children, title, description, toggle }) => (
                 </StyledClose>
 
                 <StyledTitle left>{title}</StyledTitle>
+
                 {description && (
                     <Paragraph
                         dangerouslySetInnerHTML={{

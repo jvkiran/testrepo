@@ -21,14 +21,17 @@ const forms = {
                 options: [
                     {
                         value: 'provider',
-                        label: 'I want to provide data'
+                        label: 'I can provide data'
                     },
                     {
                         value: 'consumer',
-                        label: 'I want to find and consume data'
+                        label: 'I want to use data'
+                    },
+                    {
+                        value: 'hello',
+                        label: 'Just saying hello'
                     }
-                ],
-                required: true
+                ]
             },
             message: {
                 label: 'Your Message',

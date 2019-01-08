@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import FormNewsletter from '../components/Form/FormNewsletter'
 import Paragraph from '../components/Paragraph'
-import { colors, responsive, fonts } from '../styles'
+import { colors, layout, responsive, fonts } from '../styles'
 
 export const StyledSubTitle = styled.h5`
     color: rgb(${colors.lightGrey});
@@ -65,6 +65,10 @@ export const StyledContact = styled.div`
         font-size: ${fonts.size.h5};
         margin-top: 0;
         color: rgb(${colors.lightGrey});
+    }
+
+    button {
+        margin-top: calc(${layout.spacer} / 2);
     }
 `
 

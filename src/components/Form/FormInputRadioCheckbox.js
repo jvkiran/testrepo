@@ -2,9 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FormHelp from './FormHelp'
 import { FormGroup, FormLabel } from './FormInput.css'
-import { RadioGroup, RadioWrap, Radio, RadioLabel } from './FormRadio.css'
+import {
+    RadioGroup,
+    RadioWrap,
+    Radio,
+    RadioLabel
+} from './FormInputRadioCheckbox.css'
 
-const FormRadio = ({ name, required, label, help, options }) => (
+const FormRadio = ({ name, required, label, help, type, options }) => (
     <FormGroup>
         <FormLabel
             htmlFor={name}
@@ -18,7 +23,7 @@ const FormRadio = ({ name, required, label, help, options }) => (
             {options.map((option, index) => (
                 <RadioWrap key={index}>
                     <Radio
-                        type="radio"
+                        type={type}
                         id={option.value}
                         name={name}
                         value={option.value}
@@ -39,7 +44,8 @@ FormRadio.propTypes = {
     required: PropTypes.bool,
     label: PropTypes.string,
     help: PropTypes.string,
-    options: PropTypes.array
+    options: PropTypes.array,
+    type: PropTypes.string
 }
 
 export default FormRadio

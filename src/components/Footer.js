@@ -6,6 +6,7 @@ import Cell from '../components/Cell'
 import SubTitle from '../components/SubTitle'
 import Paragraph from '../components/Paragraph'
 import Modal from '../components/Modal'
+import Button from '../components/Button'
 import ModalForm from '../components/Form/FormModal'
 import forms from '../data/forms'
 
@@ -140,11 +141,13 @@ export default class Footer extends PureComponent {
                                         <a href="https://oceanprotocol.com">
                                             oceanprotocol.com
                                         </a>
-                                        <button
+                                        <Button
+                                            small
+                                            black
                                             onClick={this.handleButtonClick}
                                         >
                                             Get In Touch
-                                        </button>
+                                        </Button>
                                     </Cell>
 
                                     <Cell smallGutter width={1 / 2}>
