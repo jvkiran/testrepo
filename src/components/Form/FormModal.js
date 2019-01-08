@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import jsonp from 'jsonp'
-import FormInput from '../../components/Form/FormInput'
-import FormRadio from '../../components/Form/FormRadio'
-import Paragraph from '../../components/Paragraph'
-import Button from '../../components/Button'
+import FormInput from './FormInput'
+import FormRadio from './FormRadio'
+import Button from '../Button'
 import forms from '../../data/forms'
 import gdprJson from '../../data/gdpr'
 import MailchimpCheck from './MailchimpCheck'
-import { StyledMessage, Gdpr } from './ModalForm.css'
+import { StyledMessage, Gdpr } from './FormModal.css'
 
 const gdpr = gdprJson[0]
 
@@ -162,14 +161,6 @@ export default class ModalForm extends PureComponent {
             />
         ) : (
             <>
-                {forms[modal].description && (
-                    <Paragraph
-                        dangerouslySetInnerHTML={{
-                            __html: forms[modal].description
-                        }}
-                    />
-                )}
-
                 <MailchimpCheck modal={modal} />
 
                 <form onSubmit={this.onSubmit}>

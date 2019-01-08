@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import emailWhite from '../assets/misc/email-white.svg'
-import Button from './Button'
-import { webtasks } from '../constants'
-import gdprJson from '../data/gdpr'
+import emailWhite from '../../assets/misc/email-white.svg'
+import Button from '../Button'
+import { webtasks } from '../../constants'
+import gdprJson from '../../data/gdpr'
 import {
     StyledSubscribe,
     StyledSubscribeWrapper,

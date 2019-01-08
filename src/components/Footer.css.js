@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import FormNewsletter from '../components/FormNewsletter'
+import FormNewsletter from '../components/Form/FormNewsletter'
 import Paragraph from '../components/Paragraph'
 import { colors, responsive, fonts } from '../styles'
 

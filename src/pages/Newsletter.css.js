@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Section from '../components/Section'
-import FormNewsletter from '../components/FormNewsletter'
+import FormNewsletter from '../components/Form/FormNewsletter'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'

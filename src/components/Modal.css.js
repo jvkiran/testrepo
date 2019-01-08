@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
-import Title from '../../components/Title'
-import { colors, responsive, fonts, layout } from '../../styles'
+import Title from './Title'
+import { colors, responsive, fonts, layout } from '../styles'
 
 const fadeIn = keyframes`
     from { opacity: 0; }

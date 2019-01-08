@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors, responsive, transitions, fonts } from '../styles'
+import { colors, responsive, transitions, fonts } from '../../styles'
 
 export const StyledSubscribe = styled.div`
     position: relative;

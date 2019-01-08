@@ -8,7 +8,7 @@ import Button from '../components/Button'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
-import FormNewsletter from '../components/FormNewsletter'
+import FormNewsletter from '../components/Form/FormNewsletter'
 import { colors } from '../styles'
 import { social } from '../constants'
 import {

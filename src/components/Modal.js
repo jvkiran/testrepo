@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import ModalForm from './ModalForm'
-import { ReactComponent as Cross } from '../../assets/misc/cross.svg'
-import forms from '../../data/forms'
+import Paragraph from '../components/Paragraph'
+import { ReactComponent as Cross } from '../assets/misc/cross.svg'
 import {
     StyledLightbox,
     StyledModal,
@@ -11,7 +10,7 @@ import {
     StyledClose
 } from './Modal.css'
 
-const Modal = ({ modal, toggle }) => (
+const Modal = ({ children, title, description, toggle }) => (
     <>
         <Helmet>
             <style>{'html { overflow: hidden }'}</style>
@@ -21,12 +20,17 @@ const Modal = ({ modal, toggle }) => (
                 <StyledClose title="close" onClick={() => toggle()}>
                     <Cross />
                 </StyledClose>
-                {modal && (
-                    <div>
-                        <StyledTitle left>{forms[modal].title}</StyledTitle>
-                        <ModalForm modal={modal} />
-                    </div>
+
+                <StyledTitle left>{title}</StyledTitle>
+                {description && (
+                    <Paragraph
+                        dangerouslySetInnerHTML={{
+                            __html: description
+                        }}
+                    />
                 )}
+
+                {children}
             </StyledModal>
         </StyledLightbox>
     </>
@@ -35,6 +39,8 @@ const Modal = ({ modal, toggle }) => (
 export default Modal
 
 Modal.propTypes = {
-    modal: PropTypes.string.isRequired,
+    children: PropTypes.any,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
     toggle: PropTypes.func.isRequired
 }

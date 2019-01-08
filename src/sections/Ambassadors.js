@@ -9,7 +9,9 @@ import Grid from '../components/Grid'
 import Paragraph from '../components/Paragraph'
 import SectionHeader from '../components/SectionHeader'
 import Button from '../components/Button'
-import Modal from '../sections/Modal/Modal'
+import Modal from '../components/Modal'
+import ModalForm from '../components/Form/FormModal'
+import forms from '../data/forms'
 import { ReactComponent as Check } from '../assets/misc/check.svg'
 import { StyledList, StyledActions } from './Ambassadors.css'
 import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-back.svg'
@@ -101,7 +103,13 @@ export default class Ambassadors extends PureComponent {
                 </Section>
 
                 {this.state.showModal && (
-                    <Modal modal={this.state.modal} toggle={this.toggleModal} />
+                    <Modal
+                        title={forms[this.state.modal].title}
+                        description={forms[this.state.modal].description}
+                        toggle={this.toggleModal}
+                    >
+                        <ModalForm modal={this.state.modal} />
+                    </Modal>
                 )}
             </>
         )
