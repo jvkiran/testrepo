@@ -56,7 +56,7 @@ export default class Footer extends PureComponent {
             >
                 <ContentRow>
                     <Grid>
-                        <Cell smallGutter width={1 / 2}>
+                        <Cell width={1 / 2}>
                             <SubTitle left white>
                                 Get Involved
                             </SubTitle>
@@ -121,7 +121,7 @@ export default class Footer extends PureComponent {
                                 </StyledSocialLinks>
                             </StyledActions>
                         </Cell>
-                        <Cell smallGutter width={1 / 2}>
+                        <Cell width={1 / 2}>
                             <SubTitle left white>
                                 {company.name}
                             </SubTitle>
@@ -136,43 +136,48 @@ export default class Footer extends PureComponent {
                             </Paragraph>
 
                             <StyledContact>
-                                <Grid>
-                                    <Cell smallGutter width={1 / 2}>
-                                        <a href="https://oceanprotocol.com">
-                                            oceanprotocol.com
-                                        </a>
-                                        <Button
-                                            small
-                                            black
-                                            onClick={this.handleButtonClick}
-                                        >
-                                            Get In Touch
-                                        </Button>
-                                    </Cell>
+                                <a href="https://oceanprotocol.com">
+                                    oceanprotocol.com
+                                </a>
+                                <Button
+                                    small
+                                    black
+                                    onClick={this.handleButtonClick}
+                                >
+                                    Get In Touch
+                                </Button>
 
-                                    <Cell smallGutter width={1 / 2}>
-                                        <div className="address">
-                                            {company.address.singapore.location}
-                                            <br />
-                                            {company.address.singapore.street}
-                                            <br />
-                                            {
-                                                company.address.singapore
-                                                    .street_additional
-                                            }
-                                            <br />
-                                            {
-                                                company.address.singapore.city
-                                            }, {company.address.singapore.zip}
-                                            <br />
-                                            {company.address.singapore.country}
-                                        </div>
-                                    </Cell>
+                                <Grid>
+                                    {Object.values(company.address).map(
+                                        office => (
+                                            <Cell
+                                                key={office.location}
+                                                smallGutter
+                                                width={1 / 2}
+                                            >
+                                                <StyledSubTitle right>
+                                                    {office.city} office
+                                                </StyledSubTitle>
+                                                <div className="address">
+                                                    {office.location}
+                                                    <br />
+                                                    {office.street}
+                                                    <br />
+                                                    {office.street_additional}
+                                                    <br />
+                                                    {office.city}, {office.zip}
+                                                    <br />
+                                                    {office.country}
+                                                </div>
+                                            </Cell>
+                                        )
+                                    )}
                                 </Grid>
                             </StyledContact>
                         </Cell>
                     </Grid>
                 </ContentRow>
+
                 <ContentRow>
                     <StyledCopyright>
                         <small>

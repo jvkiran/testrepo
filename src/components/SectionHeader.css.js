@@ -14,13 +14,16 @@ export const StyledTitle = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    font-size: ${fonts.size.large};
     margin-top: ${layout.spacer};
     margin-bottom: 0;
     color: ${({ white }) =>
         white ? `rgb(${colors.white})` : `rgb(${colors.black})`};
     z-index: 1;
     position: relative;
+
+    @media screen and (${responsive.sm.min}) {
+        font-size: ${fonts.size.large};
+    }
 `
 
 export const Line = styled.div`

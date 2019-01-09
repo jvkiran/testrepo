@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import FormNewsletter from '../components/Form/FormNewsletter'
 import Paragraph from '../components/Paragraph'
-import { colors, layout, responsive, fonts } from '../styles'
+import { colors, layout, responsive } from '../styles'
 
 export const StyledSubTitle = styled.h5`
     color: rgb(${colors.lightGrey});
@@ -58,17 +58,11 @@ export const StyledSocialLinks = styled.div`
 export const StyledContact = styled.div`
     .address {
         color: rgb(${colors.lightGrey});
-        text-align: right;
-    }
-
-    .address__title {
-        font-size: ${fonts.size.h5};
-        margin-top: 0;
-        color: rgb(${colors.lightGrey});
     }
 
     button {
         margin-top: calc(${layout.spacer} / 2);
+        margin-bottom: ${layout.spacer};
     }
 `
 

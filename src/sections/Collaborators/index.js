@@ -9,18 +9,6 @@ import Logos from '../../assets/logos'
 import { capitalizeFirstLetter } from '../../lib/utils'
 import { StyledGrid, StyledLine } from './index.css'
 
-// const fisherYatesShuffle = array => {
-//     let newArr = [].concat(array) // create new array
-
-//     for (var i = array.length - 1; i > 0; i--) {
-//         const j = Math.floor(Math.random() * (i + 1));
-//         [newArr[i], newArr[j]] = [newArr[j], newArr[i]]
-//     }
-//     return newArr
-// }
-
-// const collaboratorsShuffled = fisherYatesShuffle(collaborators)
-
 const Collaborators = () => (
     <Section
         background={colors.darkPurple}
@@ -30,7 +18,6 @@ const Collaborators = () => (
         <SectionHeader
             title={content.title}
             description={content.intro}
-            line
             white
         />
 

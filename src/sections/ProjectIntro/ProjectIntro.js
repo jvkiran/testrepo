@@ -32,20 +32,18 @@ if (isProduction) {
 }
 
 const DataGraphic = () => (
-    <StyledData width={1}>
-        <StyledCard>
-            <h4>{intro.infographic[0].title}</h4>
-            <p>{intro.infographic[0].text}</p>
-        </StyledCard>
+    <StyledData>
+        {intro.infographic.map(copy => (
+            <StyledCard key={copy.title}>
+                <h4>{copy.title}</h4>
+                <p>{copy.text}</p>
+            </StyledCard>
+        ))}
         <StyledDataTransfer>
             <StyledDataDots img={dataDotsLeft} shouldAnimate={shouldAnimate} />
             <StyledDataDots img={dataDotsRight} shouldAnimate={shouldAnimate} />
             <Pulse className="pulse" shouldAnimate={shouldAnimate} />
         </StyledDataTransfer>
-        <StyledCard>
-            <h4>{intro.infographic[1].title}</h4>
-            <p>{intro.infographic[1].text}</p>
-        </StyledCard>
     </StyledData>
 )
 

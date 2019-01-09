@@ -19,7 +19,6 @@ export const StyledParagraph = styled(Paragraph)`
 
 export const StyledLine = styled.div`
     width: 100%;
-    margin-top: 4rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid rgba(${colors.white}, 0.25);
 

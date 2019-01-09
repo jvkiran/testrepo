@@ -24,12 +24,11 @@ export const StyledData = styled.div`
     border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
 
     @media screen and (${responsive.sm.min}) {
-        margin-top: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 6rem;
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
     }
 `
 
