@@ -71,31 +71,29 @@ export default class ProjectIntro extends PureComponent {
                     <DataGraphic />
 
                     {intro.about.map(aboutBlock => (
-                        <>
-                            <StyledGrid key={aboutBlock.title}>
-                                <Cell width={2 / 3}>
-                                    <SubTitle white left>
-                                        {aboutBlock.title}
-                                    </SubTitle>
-                                    <Paragraph>{aboutBlock.text}</Paragraph>
+                        <StyledGrid key={aboutBlock.title}>
+                            <Cell width={2 / 3}>
+                                <SubTitle white left>
+                                    {aboutBlock.title}
+                                </SubTitle>
+                                <Paragraph>{aboutBlock.text}</Paragraph>
 
-                                    <Actions>
-                                        {aboutBlock.actions &&
-                                            aboutBlock.actions.map(action => (
-                                                <a
-                                                    key={action.title}
-                                                    href={action.url}
-                                                >
-                                                    {action.title}
-                                                </a>
-                                            ))}
-                                    </Actions>
-                                </Cell>
-                                <Cell width={1 / 3}>
-                                    <Icon />
-                                </Cell>
-                            </StyledGrid>
-                        </>
+                                <Actions>
+                                    {aboutBlock.actions &&
+                                        aboutBlock.actions.map(action => (
+                                            <a
+                                                key={action.title}
+                                                href={action.url}
+                                            >
+                                                {action.title}
+                                            </a>
+                                        ))}
+                                </Actions>
+                            </Cell>
+                            <Cell width={1 / 3}>
+                                <Icon />
+                            </Cell>
+                        </StyledGrid>
                     ))}
                 </ContentRow>
 

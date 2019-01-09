@@ -37,20 +37,15 @@ export default class Menu extends PureComponent {
     }
 
     render() {
+        const { background, noabsolute, light } = this.props
+
         return (
-            <StyledMenu
-                background={this.props.background}
-                noabsolute={this.props.noabsolute}
-            >
+            <StyledMenu background={background} noabsolute={noabsolute}>
                 <StyledContainer>
                     <StyledLogo to={'/'} title="Back to homepage">
-                        {this.props.light ? (
-                            <OceanLogoBlack />
-                        ) : (
-                            <OceanLogoWhite />
-                        )}
+                        {light ? <OceanLogoBlack /> : <OceanLogoWhite />}
                     </StyledLogo>
-                    <StyledNav light={this.props.light}>
+                    <StyledNav light={light}>
                         {menuItems.map(item => (
                             <li key={item.name}>
                                 <StyledMenuItem to={item.href}>

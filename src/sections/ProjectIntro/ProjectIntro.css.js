@@ -22,13 +22,14 @@ export const StyledData = styled.div`
     padding-bottom: 4rem;
     animation: ${moveIn} 1.25s 0.2s backwards;
     border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @media screen and (${responsive.sm.min}) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-top: 6rem;
         padding-bottom: 8rem;
+        flex-wrap: nowrap;
     }
 `
 
@@ -40,10 +41,14 @@ export const StyledCard = styled.div`
     border: 0.1rem solid rgba(${colors.pink}, 0.1);
     transition: ${transitions.base};
     color: rgb(${colors.lightGrey});
-    display: block;
+    max-width: 20rem;
 
-    @media screen and (${responsive.sm.min}) {
-        width: 35%;
+    &:nth-child(1) {
+        order: 1;
+    }
+
+    &:nth-child(2) {
+        order: 3;
     }
 
     h4 {
@@ -64,19 +69,19 @@ export const StyledDataTransfer = styled.div`
     align-items: center;
     justify-content: center;
     transform: rotate(90deg);
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    order: 2;
+    height: 160px;
+    margin: auto;
 
     .pulse {
         transform: rotate(-90deg);
     }
 
     @media screen and (${responsive.sm.min}) {
-        margin-top: 0;
-        margin-bottom: 0;
-        position: absolute;
-        width: 40%;
-        left: 30%;
+        height: 140px;
+        max-width: 20rem;
+        margin-left: -2.5rem;
+        margin-right: -2.5rem;
 
         &,
         .pulse {
@@ -125,7 +130,7 @@ export const StyledDataDots = styled.div`
             : null};
 
     @media screen and (${responsive.sm.min}) {
-        width: 300px;
+        width: 400px;
         height: 13px;
         animation-name: ${slideRightLarge};
     }
@@ -136,8 +141,11 @@ export const StyledGrid = styled(Grid)`
     padding-bottom: calc(${layout.spacer} * 2);
     align-items: center;
     min-height: 70vh;
-    max-height: 500px;
     border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
+
+    @media screen and (${responsive.sm.min}) {
+        max-height: 500px;
+    }
 
     &:nth-child(even) {
         flex-direction: row-reverse;

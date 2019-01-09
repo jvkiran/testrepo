@@ -85,6 +85,7 @@ export const StyledVideoThumbnail = styled.picture`
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: ${layout.spacer};
     border-radius: 5px;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.6);
     cursor: pointer;
@@ -118,10 +119,16 @@ export const Cta = styled.div`
 `
 
 export const StyledButton = styled(Button)`
-    margin: 1% 0;
-    display: inline-block;
-    margin-left: 0.5rem;
+    display: block;
+    width: 100%;
     animation: ${animation} 1.25s backwards;
+    margin-bottom: calc(${layout.spacer} / 2);
+
+    @media screen and (${responsive.sm.min}) {
+        width: fit-content;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
 
     &:first-child {
         margin-left: 0;
