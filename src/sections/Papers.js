@@ -3,12 +3,10 @@
 import React from 'react'
 import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
-import SubTitle from '../components/SubTitle'
 import Button from '../components/Button'
 import Grid from '../components/Grid'
 import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
-import FormNewsletter from '../components/Form/FormNewsletter'
 import { colors } from '../styles'
 import { social } from '../constants'
 import {
@@ -18,7 +16,6 @@ import {
     StyledAbstract,
     StyledFooter,
     StyledComments,
-    StyledRow,
     FileType
 } from './Papers.css'
 
@@ -161,42 +158,6 @@ const Documentation = () => (
                 Have a comment or suggestions about any of our documents? <br />
                 Let us know <a href={social.twitter}>@oceanprotocol</a>.
             </StyledComments>
-        </ContentRow>
-
-        <ContentRow>
-            <Grid>
-                <Cell width={1 / 2}>
-                    <StyledRow>
-                        <SubTitle left white>
-                            Mission Statement
-                        </SubTitle>
-                        <StyledAbstract>
-                            Society is becoming increasingly reliant on data,
-                            especially with the advent of AI. However, a small
-                            handful of organizations with both massive data
-                            assets and AI capabilities have become powerful with
-                            control that is a danger to a free and open society.
-                            <br />
-                            <br />
-                            Ocean Protocol aims to unlock data, for more
-                            equitable outcomes for users of data, using a
-                            thoughtful application of both technology and
-                            governance.
-                        </StyledAbstract>
-                    </StyledRow>
-                </Cell>
-                <Cell width={1 / 2}>
-                    <StyledRow>
-                        <SubTitle left white>
-                            Subscribe to updates
-                        </SubTitle>
-                        <StyledAbstract>
-                            Be the first to know when we release new papers.
-                        </StyledAbstract>
-                        <FormNewsletter />
-                    </StyledRow>
-                </Cell>
-            </Grid>
         </ContentRow>
     </Section>
 )

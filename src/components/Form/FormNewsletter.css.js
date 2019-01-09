@@ -5,10 +5,7 @@ export const StyledSubscribe = styled.div`
     position: relative;
     max-width: ${({ maxWidth }) => `${maxWidth}rem`};
     width: 100%;
-
-    @media screen and (${responsive.md.max}) {
-        margin: 0 auto;
-    }
+    margin: 0 auto;
 
     & img {
         position: absolute;

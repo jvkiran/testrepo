@@ -42,6 +42,7 @@ export const StyledIntro = styled.div`
 
 export const StyledAbstract = styled.div`
     margin-bottom: ${layout.spacer};
+    text-align: center;
 `
 
 export const StyledFooter = styled.div`
@@ -58,10 +59,5 @@ export const FileType = styled.span`
 export const StyledComments = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
     margin-top: ${layout.spacer};
-    margin-bottom: 0;
-`
-
-export const StyledRow = styled.div`
-    margin-top: calc(${layout.spacer} * 2);
     margin-bottom: 0;
 `
