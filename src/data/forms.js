@@ -15,7 +15,14 @@ const forms = {
                 type: 'email',
                 required: true
             },
-            aboutyou: {
+            message: {
+                label: 'Your Message',
+                placeholder: "Tell us what's on your mind",
+                maxWords: 100,
+                tag: 'textarea',
+                required: true
+            },
+            about: {
                 label: 'About you',
                 type: 'checkbox',
                 options: [
@@ -26,25 +33,14 @@ const forms = {
                     {
                         value: 'consumer',
                         label: 'I want to use data'
-                    },
-                    {
-                        value: 'hello',
-                        label: 'Just saying hello'
                     }
                 ]
-            },
-            message: {
-                label: 'Your Message',
-                placeholder: "Tell us what's on your mind",
-                maxWords: 100,
-                tag: 'textarea',
-                required: true
             }
         },
         button: 'Submit',
         success: `Thank you! We'll try to get back to you as soon as possible.`,
         baseUrl:
-            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
+            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=bbb386bc28'
     },
     ambassadors: {
         title: 'Ocean Protocol Ambassador Program',

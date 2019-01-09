@@ -74,13 +74,22 @@ export default class ModalForm extends PureComponent {
             email = form.email.value && encodeURIComponent(form.email.value)
         }
 
-        if (form.about) {
-            about = form.about.value && encodeURIComponent(form.about.value)
-        }
-
         if (form.message) {
             message =
                 form.message.value && encodeURIComponent(form.message.value)
+        }
+
+        if (form.about) {
+            about = []
+
+            form.about.forEach(checkbox => {
+                if (checkbox.checked) {
+                    about.push(checkbox.value)
+                }
+            })
+
+            about = about.join(', ')
+            about = encodeURIComponent(about)
         }
 
         if (form.location) {
