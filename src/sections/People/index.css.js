@@ -10,7 +10,9 @@ export const StyledSubTitle = styled(SubTitle)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    margin-bottom: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
 `
 
 export const SubHeader = styled(Grid)`
