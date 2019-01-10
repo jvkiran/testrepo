@@ -60,6 +60,11 @@ export const StyledContact = styled.div`
         color: rgb(${colors.lightGrey});
     }
 
+    > a {
+        display: inline-block;
+        margin-bottom: ${layout.spacer};
+    }
+
     button {
         margin-top: calc(${layout.spacer} / 2);
         margin-bottom: ${layout.spacer};

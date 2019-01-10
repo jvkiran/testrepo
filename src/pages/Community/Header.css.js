@@ -49,6 +49,8 @@ export const Engage = styled.ul`
 
 export const EngageButton = styled(Button)`
     z-index: 2;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 
     svg {
         width: ${fonts.size.mini};
