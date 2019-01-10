@@ -17,8 +17,8 @@ const arrSum = arr => arr.reduce((a, b) => a + b, 0)
 class CommunityCounts extends PureComponent {
     // TODO: Replace hardcoded platform numbers with fetch responses
     state = {
-        twitter: social.manualNumbers.twitter,
-        telegram: social.manualNumbers.telegram,
+        twitter: this.kFormatter(social.manualNumbers.twitter),
+        telegram: this.kFormatter(social.manualNumbers.telegram),
         medium: '----',
         github: '---',
         bounties: '--'
@@ -44,6 +44,10 @@ class CommunityCounts extends PureComponent {
         this.signal.cancel()
     }
 
+    kFormatter(num) {
+        return num > 999 ? (num / 1000).toFixed(1) + 'k' : num
+    }
+
     fetchMediumNumber = async () => {
         try {
             const response = await this.axiosInstance(
@@ -53,7 +57,7 @@ class CommunityCounts extends PureComponent {
                 }
             )
 
-            const medium = response.data.followers
+            const medium = this.kFormatter(response.data.followers)
             this.setState({ medium })
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
@@ -75,7 +79,7 @@ class CommunityCounts extends PureComponent {
                 return null
             })
 
-            this.setState({ github: arrSum(numbers) })
+            this.setState({ github: this.kFormatter(arrSum(numbers)) })
         } catch (error) {
             console.log(error) // eslint-disable-line no-console
         }

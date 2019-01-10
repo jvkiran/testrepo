@@ -46,8 +46,8 @@ export const social = {
     bountiesNetwork:
         'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol',
     manualNumbers: {
-        twitter: '11.8k',
-        telegram: '7.5k'
+        twitter: 11862,
+        telegram: 7292
     }
 }
 
