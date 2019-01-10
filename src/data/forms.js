@@ -15,6 +15,10 @@ const forms = {
                 type: 'email',
                 required: true
             },
+            company: {
+                label: 'Your Company Name',
+                placeholder: 'i.e. Jellyfish Inc.'
+            },
             about: {
                 label: 'About you',
                 type: 'checkbox',
@@ -32,7 +36,8 @@ const forms = {
             },
             message: {
                 label: 'Your Message',
-                placeholder: "Tell us what's on your mind",
+                placeholder:
+                    'Tell us why you would like to publish or get data',
                 maxWords: 100,
                 tag: 'textarea',
                 required: true

@@ -55,6 +55,7 @@ export default class ModalForm extends PureComponent {
         let email
         let about
         let message
+        let company
 
         let location
         let background
@@ -73,6 +74,11 @@ export default class ModalForm extends PureComponent {
 
         if (form.email) {
             email = form.email.value && encodeURIComponent(form.email.value)
+        }
+
+        if (form.company) {
+            company =
+                form.company.value && encodeURIComponent(form.company.value)
         }
 
         if (form.message) {
@@ -146,7 +152,7 @@ export default class ModalForm extends PureComponent {
                 listId = forms[modal].listIdConsumer
             }
 
-            url = `${baseUrl}&id=${listId}&NAME=${name}&EMAIL=${email}&MESSAGE=${message}&${
+            url = `${baseUrl}&id=${listId}&NAME=${name}&EMAIL=${email}&COMPANY=${company}&MESSAGE=${message}&${
                 gdpr.flag
             }`
         }
