@@ -49,6 +49,7 @@ export default class ModalForm extends PureComponent {
 
         const form = e.target
         const { modal } = this.props
+        const { baseUrl } = forms[modal]
 
         let name
         let email
@@ -89,7 +90,6 @@ export default class ModalForm extends PureComponent {
             })
 
             about = about.join(', ')
-            about = encodeURIComponent(about)
         }
 
         if (form.location) {
@@ -134,15 +134,19 @@ export default class ModalForm extends PureComponent {
         }
 
         if (modal === 'ambassadors') {
-            url = `${
-                forms[modal].baseUrl
-            }&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&COMMUNITY=${community}&LINKEDIN=${linkedin}&GITHUB=${github}&TWITTER=${twitter}&${
+            url = `${baseUrl}&NAME=${name}&EMAIL=${email}&LOCATION=${location}&BACKGROUND=${background}&INTEREST=${interest}&SPEAKING=${publicspeaking}&COMMUNITY=${community}&LINKEDIN=${linkedin}&GITHUB=${github}&TWITTER=${twitter}&${
                 gdpr.flag
             }`
         } else {
-            url = `${
-                forms[modal].baseUrl
-            }&NAME=${name}&EMAIL=${email}&ABOUT=${about}&MESSAGE=${message}&${
+            let listId
+
+            if (about === 'provider' || about === 'provider, consumer') {
+                listId = forms[modal].listIdProvider
+            } else {
+                listId = forms[modal].listIdConsumer
+            }
+
+            url = `${baseUrl}&id=${listId}&NAME=${name}&EMAIL=${email}&MESSAGE=${message}&${
                 gdpr.flag
             }`
         }

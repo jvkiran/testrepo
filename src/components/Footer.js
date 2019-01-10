@@ -5,10 +5,6 @@ import ContentRow from '../components/ContentRow'
 import Cell from '../components/Cell'
 import SubTitle from '../components/SubTitle'
 import Paragraph from '../components/Paragraph'
-import Modal from '../components/Modal'
-import Button from '../components/Button'
-import ModalForm from '../components/Form/FormModal'
-import forms from '../data/forms'
 
 import buttonMedium from '../assets/buttons/medium.svg'
 import buttonTwitter from '../assets/buttons/twitter.svg'
@@ -139,13 +135,6 @@ export default class Footer extends PureComponent {
                                 <a href="https://oceanprotocol.com">
                                     oceanprotocol.com
                                 </a>
-                                <Button
-                                    small
-                                    black
-                                    onClick={this.handleButtonClick}
-                                >
-                                    Get In Touch
-                                </Button>
 
                                 <Grid>
                                     {Object.values(company.address).map(
@@ -187,16 +176,6 @@ export default class Footer extends PureComponent {
                         </small>
                     </StyledCopyright>
                 </ContentRow>
-
-                {this.state.showModal && (
-                    <Modal
-                        title={forms[this.state.modal].title}
-                        description={forms[this.state.modal].description}
-                        toggle={this.toggleModal}
-                    >
-                        <ModalForm modal={this.state.modal} />
-                    </Modal>
-                )}
             </Section>
         )
     }

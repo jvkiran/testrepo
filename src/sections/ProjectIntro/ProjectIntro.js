@@ -61,7 +61,7 @@ export default class ProjectIntro extends PureComponent {
     }
 
     handleButtonClick = () => {
-        this.toggleModal('contact')
+        this.toggleModal('dataleads')
     }
 
     render() {

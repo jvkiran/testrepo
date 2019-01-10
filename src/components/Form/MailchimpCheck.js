@@ -18,7 +18,17 @@ export default class MailchimpCheck extends PureComponent {
     }
 
     mailchimpCheck() {
-        jsonp(forms[this.props.modal].baseUrl, { param: 'c' }, (err, data) => {
+        let url
+
+        if (forms[this.props.modal].listIdProvider) {
+            url = `${forms[this.props.modal].baseUrl}&id=${
+                forms[this.props.modal].listIdProvider
+            }`
+        } else {
+            url = forms[this.props.modal].baseUrl
+        }
+
+        jsonp(url, { param: 'c' }, (err, data) => {
             if (err) {
                 console.log(err) // eslint-disable-line no-console
             }

@@ -1,7 +1,7 @@
 import { social } from '../constants.js'
 
 const forms = {
-    contact: {
+    dataleads: {
         title: 'Get in Touch',
         fields: {
             name: {
@@ -15,16 +15,10 @@ const forms = {
                 type: 'email',
                 required: true
             },
-            message: {
-                label: 'Your Message',
-                placeholder: "Tell us what's on your mind",
-                maxWords: 100,
-                tag: 'textarea',
-                required: true
-            },
             about: {
                 label: 'About you',
                 type: 'checkbox',
+                required: true,
                 options: [
                     {
                         value: 'provider',
@@ -35,17 +29,26 @@ const forms = {
                         label: 'I want to use data'
                     }
                 ]
+            },
+            message: {
+                label: 'Your Message',
+                placeholder: "Tell us what's on your mind",
+                maxWords: 100,
+                tag: 'textarea',
+                required: true
             }
         },
         button: 'Submit',
-        success: `Thank you! We'll try to get back to you as soon as possible.`,
+        success: `Thank you! Assuming your profile is a good fit, we will be in touch with you.`,
         baseUrl:
-            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=bbb386bc28'
+            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13',
+        listIdProvider: 'b402d6b267',
+        listIdConsumer: '482c337540'
     },
     ambassadors: {
         title: 'Ocean Protocol Ambassador Program',
         description:
-            'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below. \n\nWe look forward to hearing from you!',
+            'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below.\n\nWe look forward to hearing from you!',
         fields: {
             name: {
                 label: 'Your name',
