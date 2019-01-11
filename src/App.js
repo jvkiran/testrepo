@@ -10,6 +10,7 @@ import Art from './pages/Art'
 import Faq from './pages/Faq'
 import Privacy from './pages/Privacy'
 import TermsPrelaunch from './pages/TermsPrelaunch'
+import TermsLaunch from './pages/TermsLaunch'
 import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 import { createGlobalStyle } from 'styled-components'
@@ -30,6 +31,7 @@ const Routes = () => (
         <Route component={Faq} path="/faq/" />
         <Route component={Privacy} path="/privacy/" />
         <Route component={TermsPrelaunch} path="/terms-prelaunch/" />
+        <Route component={TermsLaunch} path="/terms-launch/" />
         <Route component={Newsletter} path="/newsletter/" />
         <Route component={NotFound} path="*" />
     </Switch>

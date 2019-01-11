@@ -4,10 +4,10 @@ import Markdown from 'react-remarkable'
 import fetch from 'isomorphic-fetch'
 import Page from '../templates/Page'
 import Spinner from '../components/Spinner'
-import terms from '../data/termsPrelaunch.md'
-import { StyledContent } from './TermsPrelaunch.css'
+import terms from '../data/termsLaunch.md'
+import { StyledContent } from './TermsLaunch.css'
 
-const title = 'Terms Pre-Launch'
+const title = 'Terms Launch'
 const description =
     'Terms and Conditions for Whitelisting for participating in the Public Pre-Launch Token Exchange and the Network Launch Token Exchange of Ocean Protocol Foundation Ltd.'
 
