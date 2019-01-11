@@ -15,7 +15,8 @@
         "about": [
             {
                 "title": "Trustful Data Sharing",
-                "text": "We bring together decentralized technology, a trust framework, and an ecosystem for data and related services.\n\nThis allows for data to be shared while guaranteeing traceability, transparency, and privacy to enable data owners to maintain control of their data assets and access a wide range of marketplaces and services."
+                "text": "We bring together decentralized technology, a trust framework, and an ecosystem for data and related services.\n\nThis allows for data to be shared while guaranteeing traceability, transparency, and privacy to enable data owners to maintain control of their data assets and access a wide range of marketplaces and services.",
+                "icon": "trustful-data-sharing"
             },
             {
                 "title": "A Tokenized Service Layer",
@@ -29,7 +30,8 @@
                         "title": "Software Components",
                         "url": "https://docs.oceanprotocol.com/concepts/components/"
                     }
-                ]
+                ],
+                "icon": "tokenized-service-layer"
             },
             {
                 "title": "1001 Marketplaces",
@@ -39,7 +41,8 @@
                         "title": "Set Up a Marketplace",
                         "url": "https://docs.oceanprotocol.com/setup/marketplace/"
                     }
-                ]
+                ],
+                "icon": "1001-marketplaces"
             },
             {
                 "title": "The Mission to Unlock Data",

@@ -36,15 +36,6 @@ export const StyledTitle = styled(Title)`
     word-spacing: 100vw; /* make sure every word is on its own line */
 `
 
-export const StyledIntro = styled.div`
-    margin-bottom: calc(${layout.spacer} / 2);
-`
-
-export const StyledAbstract = styled.div`
-    margin-bottom: ${layout.spacer};
-    text-align: center;
-`
-
 export const StyledFooter = styled.div`
     margin-bottom: 0;
     margin-top: auto;

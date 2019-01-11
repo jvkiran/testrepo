@@ -15,7 +15,7 @@ import {
 
 const Styleguide = () => (
     <>
-        <SectionTitle>Colors</SectionTitle>
+        <SectionTitle left>Colors</SectionTitle>
         <Colors>
             {Object.entries(colors).map(color => (
                 <Color color={color[1]} key={color}>
@@ -29,7 +29,7 @@ const Styleguide = () => (
             ))}
         </Colors>
 
-        <SectionTitle>Gradients</SectionTitle>
+        <SectionTitle left>Gradients</SectionTitle>
         <Gradients>
             {Object.entries(gradients).map(gradient => (
                 <Gradient color={gradient[1]} key={gradient}>
@@ -39,7 +39,7 @@ const Styleguide = () => (
             ))}
         </Gradients>
 
-        <SectionTitle>Typography</SectionTitle>
+        <SectionTitle left>Typography</SectionTitle>
         <SectionSubTitle>
             Our branding typefaces are{' '}
             <a href="https://sharptype.co/typefaces/sharp-sans/#features">
@@ -74,7 +74,7 @@ const Styleguide = () => (
             Small body text and <strong>small bold body text</strong>.
         </p>
 
-        <SectionTitle>Buttons</SectionTitle>
+        <SectionTitle left>Buttons</SectionTitle>
 
         <Button primary>Click me like one of your french buttons</Button>
         <Button>Click me like one of your french buttons</Button>
