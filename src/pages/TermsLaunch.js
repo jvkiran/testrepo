@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import Markdown from 'react-remarkable'
 import fetch from 'isomorphic-fetch'
 import Page from '../templates/Page'
@@ -11,7 +12,7 @@ const title = 'Terms Launch'
 const description =
     'Terms and Conditions for Whitelisting for participating in the Public Pre-Launch Token Exchange and the Network Launch Token Exchange of Ocean Protocol Foundation Ltd.'
 
-export default class TermsPrelaunch extends Component {
+export default class TermsLaunch extends Component {
     state = {
         text: '',
         fetching: false
@@ -37,22 +38,27 @@ export default class TermsPrelaunch extends Component {
 
     render() {
         return (
-            <Page
-                title={title}
-                description={description}
-                location={this.props.location}
-            >
-                <StyledContent>
-                    {this.state.fetching ? (
-                        <Spinner />
-                    ) : (
-                        <Markdown
-                            options={{ breaks: true, linkify: true }}
-                            source={this.state.text}
-                        />
-                    )}
-                </StyledContent>
-            </Page>
+            <>
+                <Helmet>
+                    <meta content="noindex,nofollow" name="robots" />
+                </Helmet>
+                <Page
+                    title={title}
+                    description={description}
+                    location={this.props.location}
+                >
+                    <StyledContent>
+                        {this.state.fetching ? (
+                            <Spinner />
+                        ) : (
+                            <Markdown
+                                options={{ breaks: true, linkify: true }}
+                                source={this.state.text}
+                            />
+                        )}
+                    </StyledContent>
+                </Page>
+            </>
         )
     }
 }

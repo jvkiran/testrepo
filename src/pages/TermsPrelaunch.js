@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 import Markdown from 'react-remarkable'
 import fetch from 'isomorphic-fetch'
 import Page from '../templates/Page'
@@ -37,22 +38,27 @@ export default class TermsPrelaunch extends Component {
 
     render() {
         return (
-            <Page
-                title={title}
-                description={description}
-                location={this.props.location}
-            >
-                <StyledContent>
-                    {this.state.fetching ? (
-                        <Spinner />
-                    ) : (
-                        <Markdown
-                            options={{ breaks: true, linkify: true }}
-                            source={this.state.text}
-                        />
-                    )}
-                </StyledContent>
-            </Page>
+            <>
+                <Helmet>
+                    <meta content="noindex,nofollow" name="robots" />
+                </Helmet>
+                <Page
+                    title={title}
+                    description={description}
+                    location={this.props.location}
+                >
+                    <StyledContent>
+                        {this.state.fetching ? (
+                            <Spinner />
+                        ) : (
+                            <Markdown
+                                options={{ breaks: true, linkify: true }}
+                                source={this.state.text}
+                            />
+                        )}
+                    </StyledContent>
+                </Page>
+            </>
         )
     }
 }
