@@ -856,6 +856,12 @@
         "link": "https://aracon.one"
     },
         {
+        "city": "Berlin",
+        "eventName": "Building the New Internet- Meetup",
+        "date": "2019-01-29",
+        "link": "https://www.meetup.com/Orchid-Let-s-Build-a-Natural-Internet/events/257759324/"
+    },
+        {
         "city": "Den Bosch, Netherlands",
         "eventName": "Tech Deep Dive Hackathon",
         "date": "2019-02-04",
