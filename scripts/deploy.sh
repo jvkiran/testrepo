@@ -7,24 +7,27 @@ AWS_S3_BUCKET_BETA="beta.oceanprotocol.com"
 SITEMAP_URL="https%3A%2F%oceanprotocol.com%2Fsitemap.xml"
 
 function s3sync {
-  aws s3 sync ./build s3://"$1" \
-    --cache-control public,max-age=31536000,immutable \
-    --delete \
-    --acl public-read
+    pip install --user awscli
+    export PATH=$PATH:$HOME/.local/bin
 
-  aws s3 sync ./build s3://"$1" \
-    --exclude "*" \
-    --include "*.html" \
-    --include "*.xml" \
-    --include "*.pdf" \
-    --include "*.json" \
-    --include "service-worker.js" \
-    --include "sitemap.xml" \
-    --include "robots.txt" \
-    --include "twitter_card.png" \
-    --cache-control public,max-age=0,must-revalidate \
-    --delete \
-    --acl public-read
+    aws s3 sync ./build s3://"$1" \
+        --cache-control public,max-age=31536000,immutable \
+        --delete \
+        --acl public-read
+
+    aws s3 sync ./build s3://"$1" \
+        --exclude "*" \
+        --include "*.html" \
+        --include "*.xml" \
+        --include "*.pdf" \
+        --include "*.json" \
+        --include "service-worker.js" \
+        --include "sitemap.xml" \
+        --include "robots.txt" \
+        --include "twitter_card.png" \
+        --cache-control public,max-age=0,must-revalidate \
+        --delete \
+        --acl public-read
 }
 
 ##
