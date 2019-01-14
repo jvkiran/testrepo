@@ -15,6 +15,7 @@ function s3sync {
   aws s3 sync ./build s3://"$1" \
     --exclude "*" \
     --include "*.html" \
+    --include "*.xml" \
     --include "*.pdf" \
     --include "*.json" \
     --include "service-worker.js" \
