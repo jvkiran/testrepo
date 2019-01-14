@@ -37,7 +37,7 @@ export default class Bounties extends PureComponent {
         }
     }
 
-    url = webtasks.host + '/bounties'
+    url = webtasks.bounties
     signal = axios.CancelToken.source()
 
     componentDidMount() {

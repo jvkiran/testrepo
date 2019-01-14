@@ -51,5 +51,6 @@ export const youtube = {
 
 export const webtasks = {
     host: 'https://wt-bfc3ae9804422f8a4ea114dc7c403296-0.run.webtask.io',
-    github: 'https://oceanprotocol-github.now.sh'
+    github: 'https://oceanprotocol-github.now.sh',
+    bounties: 'https://oceanprotocol-bounties.now.sh'
 }

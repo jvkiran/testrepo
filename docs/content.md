@@ -75,7 +75,7 @@ The numbers on the community page are fetched from various endpoints:
 
 -   Blog followers: [oceanprotocol/webtasks#get-followers-count](https://github.com/oceanprotocol/webtasks#get-followers-count)
 -   GitHub stargazers: [oceanprotocol/github-projects](https://github.com/oceanprotocol/github-projects)
--   Bounties: [oceanprotocol/webtasks#bounties](https://github.com/oceanprotocol/webtasks#bounties)
+-   Bounties: [oceanprotocol/bounties-api](https://github.com/oceanprotocol/bounties-api)
 
 At the moment, the Twitter and Telegram numbers are hardcoded and need to be updated manually in this file:
 

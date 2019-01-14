@@ -87,12 +87,9 @@ class CommunityCounts extends PureComponent {
 
     fetchBountiesNumber = async () => {
         try {
-            const response = await this.axiosInstance(
-                `${webtasks.host}/bounties`,
-                {
-                    cancelToken: this.signal.token
-                }
-            )
+            const response = await this.axiosInstance(webtasks.bounties, {
+                cancelToken: this.signal.token
+            })
 
             const bounties = response.data.total
             this.setState({ bounties })
