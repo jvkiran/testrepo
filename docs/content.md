@@ -1,21 +1,33 @@
-# Content
+# Content Editing
 
+- [Workflow](#workflow)
 - [Events](#events)
   - [`date` & `date_end`](#date--date_end)
-- [Papers](#papers)
 - [Team](#team)
 - [Advisors](#advisors)
 - [Collaborators](#collaborators)
   - [Logo](#logo)
+- [Media Mentions](#media-mentions)
 - [Blog posts](#blog-posts)
 - [Videos](#videos)
 - [Community numbers](#community-numbers)
+- [Papers](#papers)
 
-Most content has been isolated in json data files in the `src/data/` directory and can be edited there.
+## Workflow
+
+Most content has been isolated in json data files in the `src/data/` directory and this should be the only directory where copy updates happen. The components, sections, and pages used throughout the site source their content from these files.
 
 -   [`src/data/`](../src/data/)
 
-The top-level of that folder holds content files for most sections. The [`src/data/pages/`](../src/data/pages/) folder holds all page content not put into any section, usually meaning the header content for each page.
+The top-level of that folder holds content files for most sections. The [`src/data/pages/`](../src/data/pages/) folder holds all page content, usually meaning the header content for each page.
+
+1. You can edit these files on GitHub. Click on a file and hit the pencil icon to start editing:
+
+    <img width="293" alt="screen shot 2018-11-02 at 11 32 19" src="https://user-images.githubusercontent.com/90316/47910420-15142280-de93-11e8-8ab8-b8616abb7e60.png">
+
+2. when committing changes at the end, create a new branch and open a pull request
+3. ask for review & approval of pull request
+4. merge your pull request
 
 ## Events
 
@@ -26,12 +38,6 @@ On the events section, all events are automatically sorted chronologically by th
 ### `date` & `date_end`
 
 When adding a multi-day event, don't use the full event range but only the date one of the team members is actually present at an event. This is usually just one day, e.g. when giving a talk. Only add the optional `date_end` when our presence at an event is confirmed for multiple days.
-
-## Papers
-
-All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
-
-An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule in `src/lib/whitepaper` and automatically copied in place before deployment.
 
 ## Team
 
@@ -56,6 +62,10 @@ Logo file then needs to be imported and exported from the [`./src/assets/logos/i
 _ToDo: remove the need to manually import the logo file._
 
 While all SVGs are automatically cleaned up through [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
+
+## Media Mentions
+
+tbd
 
 ## Blog posts
 
@@ -89,3 +99,9 @@ manualNumbers: {
     telegram: 7292
 }
 ```
+
+## Papers
+
+All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
+
+An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule in `src/lib/whitepaper` and automatically copied in place before deployment.

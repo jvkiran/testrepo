@@ -26,9 +26,9 @@
 
 Please refer to the content documentation:
 
--   [Content](content.md)
--   [Forms](forms.md)
--   [SEO](seo.md)
+-   [Content Editing](docs/content.md)
+-   [Forms](docs/forms.md)
+-   [SEO](docs/seo.md)
 
 ## Development
 
