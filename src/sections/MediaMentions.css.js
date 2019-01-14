@@ -14,12 +14,6 @@ export const StyledLogo = styled(Logo)`
     max-height: 1.5rem;
     fill: rgb(${colors.grey});
     transition: 0.2s ease-out;
-
-    /* visual weight tweaks */
-    &.cointelegraph {
-        transform: scale(1.3);
-        transform-origin: center;
-    }
 `
 
 export const StyledGrid = styled(Grid)`
