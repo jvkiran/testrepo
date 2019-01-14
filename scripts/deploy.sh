@@ -4,16 +4,26 @@ set -e;
 
 AWS_S3_BUCKET="oceanprotocol.com"
 AWS_S3_BUCKET_BETA="beta.oceanprotocol.com"
+SITEMAP_URL="https%3A%2F%oceanprotocol.com%2Fsitemap.xml"
 
 function s3sync {
-    pip install --user awscli
-    export PATH=$PATH:$HOME/.local/bin
+  aws s3 sync ./build s3://"$1" \
+    --cache-control public,max-age=31536000,immutable \
+    --delete \
+    --acl public-read
 
-    # long caching for everything, except html & pdf files
-    aws s3 sync ./build s3://"$1" --exclude "*.html" --exclude "*.pdf" --cache-control max-age=31536000,public --delete --acl public-read
-
-    # no caching for html & pdf files
-    aws s3 sync ./build s3://"$1" --exclude "*" --include "*.html" --include "*.pdf" --cache-control max-age=0,no-cache,no-store,must-revalidate --delete --acl public-read
+  aws s3 sync ./build s3://"$1" \
+    --exclude "*" \
+    --include "*.html" \
+    --include "*.pdf" \
+    --include "*.json" \
+    --include "service-worker.js" \
+    --include "sitemap.xml" \
+    --include "robots.txt" \
+    --include "twitter_card.png" \
+    --cache-control public,max-age=0,must-revalidate \
+    --delete \
+    --acl public-read
 }
 
 ##
@@ -36,6 +46,12 @@ elif [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; 
     -H "X-Auth-Key: $CLOUDFLARE_KEY" \
     -H "Content-Type: application/json" \
     --data '{"purge_everything":true}'
+
+    # ping search engines
+    # returns: HTTP_STATUSCODE URL
+    curl -sL -w "%{http_code} %{url_effective}\\n" \
+    "http://www.google.com/webmasters/tools/ping?sitemap=$SITEMAP_URL" -o /dev/null \
+    "http://www.bing.com/webmaster/ping.aspx?siteMap=$SITEMAP_URL" -o /dev/null
 
 else
     echo "---------------------------------------------"

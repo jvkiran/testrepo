@@ -54,6 +54,8 @@
         "not op_mini all"
     ],
     "reactSnap": {
+        "cacheAjaxRequests": true,
+        "inlineCss": true,
         "fixWebpackChunksIssue": false
     },
     "husky": {

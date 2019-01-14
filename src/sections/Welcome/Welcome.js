@@ -4,8 +4,6 @@ import VideoModal from '../../components/VideoModal'
 import Waves from './Waves'
 import videoThumb from '../../assets/misc/video-thumb.jpg'
 import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
-import videoThumbWebP from '../../assets/misc/video-thumb.webp'
-import videoThumbWebPRetina from '../../assets/misc/video-thumb@2x.webp'
 import content from '../../data/welcome.json'
 import { colors } from '../../styles'
 import {
@@ -50,18 +48,8 @@ export default class Welcome extends Component {
                                 onClick={() => this.toggleModal()}
                             >
                                 <source
-                                    type="image/webp"
                                     media="(min-resolution: 144dpi),
-                                                (-webkit-min-device-pixel-ratio: 1.5)"
-                                    srcSet={videoThumbWebPRetina}
-                                />
-                                <source
-                                    type="image/webp"
-                                    srcSet={videoThumbWebP}
-                                />
-                                <source
-                                    media="(min-resolution: 144dpi),
-                                                (-webkit-min-device-pixel-ratio: 1.5)"
+                                           (-webkit-min-device-pixel-ratio: 1.5)"
                                     srcSet={videoThumbRetina}
                                 />
                                 <source srcSet={videoThumb} />

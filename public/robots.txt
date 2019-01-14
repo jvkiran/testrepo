@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: */terms-prelaunch
+Disallow: */terms-launch
+
+sitemap: https://oceanprotocol.com/sitemap.xml
