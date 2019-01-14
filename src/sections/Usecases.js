@@ -95,10 +95,10 @@ const Usecases = () => (
                     </SubTitle>
                     <Paragraph>
                         AI models have limited accuracy and usability without
-                        appropriate data. Ocean Protocol will unlock more data
-                        for AI. This should lead to more breakthroughs to help
-                        society. Ocean Protocol gives the tools to unlock the
-                        remaining 99% of untapped data.
+                        appropriate data. Ocean Protocol provides the tools to
+                        unlock the remaining 99% of untapped data, connecting
+                        them to AI, so we can develop more breakthroughs to help
+                        our society.
                     </Paragraph>
 
                     <Collapsible
@@ -109,19 +109,21 @@ const Usecases = () => (
                         <p>
                             We are working with{' '}
                             <a href="https://connectedlife.io">ConnectedLife</a>
-                            , a diagnostics and wearables company, who are
-                            working with hospitals in Munich, Singapore, and
-                            Australia on a Parkinson’s research study. The goal
-                            is to build models based on patient data spanning
-                            these hospitals.
+                            , a company that provides IoT technology and
+                            solutions that revolutionize disease management for
+                            people living with chronic conditions and promote
+                            independent living.
                         </p>
                         <p>
-                            A data marketplace makes it easier to connect the
-                            data suppliers; and it must be decentralized to
-                            avoid the siloing issue. The extra challenge here is
-                            data protection: German data protection laws prevent
-                            the Munich Hospital from transferring the raw data
-                            out of Germany.
+                            Together with hospitals in Munich, Istanbul, and
+                            Singapore, Ocean Protocol provides ConnectedLife the
+                            tools to address the sharing of highly sensitive
+                            healthcare data while reconciling data privacy and
+                            protection laws, allowing it to build diagnostics
+                            and personalized treatment models from the
+                            hospitals’ Parkinson’s Disease patient data. Helping
+                            patients with Parkinson’s Disease to achieve better
+                            and personalised treatment.
                         </p>
                     </Collapsible>
                 </Cell>
