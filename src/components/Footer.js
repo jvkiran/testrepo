@@ -132,35 +132,24 @@ export default class Footer extends PureComponent {
                             </Paragraph>
 
                             <StyledContact>
-                                <a href="https://oceanprotocol.com">
-                                    oceanprotocol.com
-                                </a>
-
                                 <Grid>
-                                    {Object.values(company.address).map(
-                                        office => (
-                                            <Cell
-                                                key={office.location}
-                                                smallGutter
-                                                width={1 / 2}
-                                            >
-                                                <StyledSubTitle right>
-                                                    {office.city} office
-                                                </StyledSubTitle>
-                                                <div className="address">
-                                                    {office.location}
-                                                    <br />
-                                                    {office.street}
-                                                    <br />
-                                                    {office.street_additional}
-                                                    <br />
-                                                    {office.city}, {office.zip}
-                                                    <br />
-                                                    {office.country}
-                                                </div>
-                                            </Cell>
-                                        )
-                                    )}
+                                    <Cell smallGutter width={1 / 2}>
+                                        <a href={meta.url}>oceanprotocol.com</a>
+                                    </Cell>
+                                    <Cell smallGutter width={1 / 2}>
+                                        <div className="address">
+                                            {company.address.location}
+                                            <br />
+                                            {company.address.street}
+                                            <br />
+                                            {company.address.street_additional}
+                                            <br />
+                                            {company.address.city},{' '}
+                                            {company.address.zip}
+                                            <br />
+                                            {company.address.country}
+                                        </div>
+                                    </Cell>
                                 </Grid>
                             </StyledContact>
                         </Cell>
