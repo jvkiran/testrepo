@@ -183,11 +183,6 @@
         "image": "jernej"
     },
     {
-        "name": "Lev Berman",
-        "github": "ldmberman",
-        "image": "lev"
-    },
-    {
         "name": "Enrique Ruiz",
         "github": "eruizgar91",
         "image": "enrique"
@@ -207,6 +202,11 @@
         "twitter": "manan77patel",
         "linkedin": "mananpatel7",
         "image": "manan"
+    },
+    {
+        "name": "José Pablo Fernández",
+        "linkedin": "josé-pablo-fernández-martínez-aa657087",
+        "image": "josepablo"
     },
     {
         "name": "Kevin Tharayil",
