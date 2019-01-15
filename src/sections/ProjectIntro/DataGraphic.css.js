@@ -13,12 +13,21 @@ export const moveIn = keyframes`
     }
 `
 
+export const fadeIn = keyframes`
+    0% {
+        opacity: .01;
+    }
+
+    100% {
+        opacity: 1;
+    }
+`
+
 export const StyledData = styled.div`
     position: relative;
     width: 100%;
     margin-top: 4rem;
     padding-bottom: 4rem;
-    animation: ${moveIn} 1.25s 0.2s backwards;
     border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
     display: flex;
     flex-wrap: wrap;
@@ -40,6 +49,7 @@ export const StyledCard = styled.div`
     transition: ${transitions.base};
     color: rgb(${colors.lightGrey});
     max-width: 20rem;
+    animation: ${moveIn} 1.25s 0.2s backwards;
 
     &:nth-child(1) {
         order: 1;
@@ -47,6 +57,7 @@ export const StyledCard = styled.div`
 
     &:nth-child(2) {
         order: 3;
+        animation-delay: 0.4s;
     }
 
     h4 {
@@ -70,6 +81,7 @@ export const StyledDataTransfer = styled.div`
     order: 2;
     height: 160px;
     margin: auto;
+    animation: ${fadeIn} 1.25s 0.6s backwards;
 
     .pulse {
         transform: rotate(-90deg);
