@@ -18,11 +18,6 @@ export const StyledSubTitle = styled.h5`
     }
 `
 
-export const StyledActions = styled.div`
-    width: 100%;
-    display: flex;
-`
-
 export const StyledCopyright = styled(Paragraph)`
     opacity: 0.5;
     margin-top: 3rem;
@@ -38,20 +33,29 @@ export const StyledCopyright = styled(Paragraph)`
 
 export const StyledSocialLinks = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: ${layout.spacer};
 
     & a {
+        display: block;
         margin-right: 0.75rem;
+        margin-bottom: 0.75rem;
+        flex: 0 0 2.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    @media screen and (${responsive.sm.min}) {
+        margin-bottom: 0;
+
+        & a {
+        }
     }
 
     & img {
         border-radius: 2px;
-        width: calc(2.5rem + 4px);
-        height: calc(2.5rem + 4px);
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        width: 100%;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 `
 
@@ -60,7 +64,7 @@ export const StyledContact = styled.div`
         color: rgb(${colors.lightGrey});
     }
 
-    > a {
+    a {
         display: inline-block;
         margin-bottom: ${layout.spacer};
     }

@@ -81,14 +81,10 @@ export const StyledPage = styled.div`
 `
 
 export const StyledTitle = styled(Title)`
-    font-size: ${fonts.size.h4} !important;
+    font-size: ${fonts.size.h3} !important;
     margin: 0;
     position: relative;
     z-index: 1;
-
-    @media screen and (${responsive.sm.min}) {
-        font-size: ${fonts.size.h3} !important;
-    }
 `
 
 export const LearnMore = styled.span`

@@ -32,7 +32,7 @@ export const social = {
     gitter: 'https://gitter.im/oceanprotocol/Lobby',
     youtube: 'https://www.youtube.com/channel/UCH8TXwmWWAE9TZO0yTBHB3A',
     gitcoin:
-        'https://gitcoin.co/explorer?network=mainnet&idx_status=open&keywords=oceanprotocol&order_by=-web3_created',
+        'https://gitcoin.co/explorer?network=mainnet&idx_status=open&org=oceanprotocol',
     bountiesNetwork:
         'https://explorer.bounties.network/explorer?bountyStage=active&search=ocean%20protocol',
     manualNumbers: {
@@ -40,6 +40,59 @@ export const social = {
         telegram: 7292
     }
 }
+
+export const socialButtons = [
+    {
+        title: 'Blog',
+        url: social.medium,
+        icon: 'medium'
+    },
+    {
+        title: 'Twitter',
+        url: social.twitter,
+        icon: 'twitter'
+    },
+    {
+        title: 'Telegram Group Chat',
+        url: social.telegram,
+        icon: 'telegram'
+    },
+    {
+        title: 'Telegram News Channel',
+        url: social.telegram_news,
+        icon: 'telegram'
+    },
+    {
+        title: 'Slack',
+        url: social.slack,
+        icon: 'slack'
+    },
+    {
+        title: 'GitHub',
+        url: social.github,
+        icon: 'github'
+    },
+    {
+        title: 'Gitter',
+        url: social.gitter,
+        icon: 'gitter'
+    },
+    {
+        title: 'Reddit',
+        url: social.reddit,
+        icon: 'reddit'
+    },
+    {
+        title: 'YouTube Channel',
+        url: social.youtube,
+        icon: 'youtube'
+    },
+    {
+        title: 'LinkedIn',
+        url: social.linkedin,
+        icon: 'linkedin'
+    }
+]
 
 export const dates = {
     prelaunch: 'Mar 07 2018 08:00:00 GMT'
