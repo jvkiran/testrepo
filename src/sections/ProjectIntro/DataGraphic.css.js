@@ -1,6 +1,4 @@
 import styled, { css, keyframes } from 'styled-components'
-import Grid from '../../components/Grid'
-import SubTitle from '../../components/SubTitle'
 import { colors, responsive, transitions, layout } from '../../styles'
 
 export const moveIn = keyframes`
@@ -120,7 +118,6 @@ export const slideRightLarge = keyframes`
 
 export const StyledDataDots = styled.div`
     width: 120px;
-    height: 13px;
     background: ${({ img }) => `url(${img}) repeat-x left`};
     animation: ${({ shouldAnimate }) =>
         shouldAnimate
@@ -131,56 +128,6 @@ export const StyledDataDots = styled.div`
 
     @media screen and (${responsive.sm.min}) {
         width: 400px;
-        height: 13px;
         animation-name: ${slideRightLarge};
-    }
-`
-
-export const StyledGrid = styled(Grid)`
-    padding-top: calc(${layout.spacer} * 2);
-    padding-bottom: calc(${layout.spacer} * 2);
-    align-items: center;
-    min-height: 70vh;
-    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
-
-    @media screen and (${responsive.sm.min}) {
-        max-height: 500px;
-    }
-
-    &:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-
-    p {
-        color: rgb(${colors.dimmedGrey});
-    }
-`
-
-export const Icon = styled.div`
-    background: rgb(${colors.grey});
-    width: 15rem;
-    min-height: 15rem;
-    height: auto;
-    max-width: 100%;
-`
-
-export const Actions = styled.aside`
-    a {
-        display: inline-block;
-        padding: 0 1.5rem;
-
-        &:first-child {
-            padding-left: 0;
-        }
-    }
-`
-
-export const Contact = styled(SubTitle)`
-    color: rgb(${colors.lightGrey});
-    margin-top: calc(${layout.spacer} * 2);
-    margin-bottom: 0;
-
-    button {
-        margin-top: ${layout.spacer};
     }
 `

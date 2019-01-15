@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Page from '../templates/Page'
-import ProjectIntro from '../sections/ProjectIntro/ProjectIntro'
+import ProjectIntro from '../sections/ProjectIntro/'
 import Docs from '../sections/Docs'
 import Roadmap from '../sections/Roadmap'
 import People from '../sections/People'
