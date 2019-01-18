@@ -9,11 +9,12 @@ export const StyledSection = styled.section`
         backgroundImage ? `url(${backgroundImage})` : 'none'};
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: ${({ viewport }) => (viewport ? '100vh' : 'auto')};
+    min-height: ${({ viewport }) =>
+        viewport ? `calc(100vh - ${layout.pageFrame} * 2)` : 'auto'};
     margin: 0;
     margin-bottom: ${layout.pageFrame};
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: calc(${layout.pageFrame} / 2);
+    padding-right: calc(${layout.pageFrame} / 2);
     position: relative;
     overflow: hidden;
 `

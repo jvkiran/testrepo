@@ -1,0 +1,58 @@
+{
+    "title": "The Ocean Protocol",
+    "description": "An ecosystem for the data economy and associated services, with a tokenized service layer that securely exposes data, storage, compute and algorithms for consumption.",
+    "intro": {
+        "infographic": [
+            {
+                "title": "Data Providers",
+                "text": "As a provider you can unlock your data and earn revenue."
+            },
+            {
+                "title": "Data Consumers",
+                "text": "As a consumer you can discover and buy data."
+            }
+        ],
+        "features": [
+            {
+                "title": "Trustful Data Sharing",
+                "text": "We bring together decentralized technology, a trust framework, and an ecosystem for data and related services.\n\nThis allows for data to be shared while guaranteeing traceability, transparency, and privacy to enable data owners to maintain control of their data assets and access a wide range of marketplaces and services.",
+                "graphic": "sharing"
+            },
+            {
+                "title": "A Tokenized Service Layer",
+                "text": "The Ocean protocol provides a tokenized service layer that offers data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements. There is staking on services to signal quality, reputation and ward against Sybil Attacks.\n\nDiscovery is facilitated by storing and promoting metadata, linking assets and services, and providing a licensing framework with pricing.",
+                "actions": [
+                    {
+                        "title": "Terminology",
+                        "url": "https://docs.oceanprotocol.com/concepts/terminology/"
+                    },
+                    {
+                        "title": "Software Components",
+                        "url": "https://docs.oceanprotocol.com/concepts/components/"
+                    }
+                ],
+                "graphic": "layers"
+            },
+            {
+                "title": "1001 Marketplaces",
+                "text": "Any data marketplace can hook into Ocean to provide “last mile” services, connecting data providers and consumers. The Ocean protocol is designed so that data owners control each dataset and cannot be locked into any single marketplace.",
+                "actions": [
+                    {
+                        "title": "Set Up a Marketplace",
+                        "url": "https://docs.oceanprotocol.com/setup/marketplace/"
+                    }
+                ],
+                "graphic": "marketplaces"
+            },
+            {
+                "title": "The Mission to Unlock Data",
+                "text": "Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities attained worrying levels of control which is a danger to a free and open society.\n\nWe aim to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance. Our team and community is committed to kick-starting a New Data Economy that reaches every single person, company and device, giving power back to data owners and enabling people to capture value from data to better our world.",
+                "graphic": "jellyfish"
+            }
+        ],
+        "contact": {
+            "text": "You can provide or want to use data once our network launches?",
+            "button": "Get In Touch"
+        }
+    }
+}

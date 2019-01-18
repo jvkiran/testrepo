@@ -1,34 +1,65 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { ReactComponent as OceanLogo } from '@oceanprotocol/art/logo/logo-white.svg'
-import { colors } from '../styles'
-import {
-    StyledHeader,
-    StyledContainer,
-    StyledLogo,
-    StyledMenuItem,
-    StyledNav
-} from './Header.css'
+import Paragraph from '../components/Paragraph'
+import ContentRow from '../components/ContentRow'
+import { StyledHeader, StyledTitle, StyledSubTitle } from './Header.css'
 
-const Header = ({ background }) => (
-    <StyledHeader background={background}>
-        <StyledContainer>
-            <StyledLogo to="/">
-                <OceanLogo />
-            </StyledLogo>
-            <StyledNav>
-                <StyledMenuItem to="/">← Back to homepage</StyledMenuItem>
-            </StyledNav>
-        </StyledContainer>
-    </StyledHeader>
-)
+export default class Header extends PureComponent {
+    static propTypes = {
+        backgroundColor: PropTypes.string,
+        backgroundImage: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        text: PropTypes.string,
+        style: PropTypes.object,
+        light: PropTypes.bool,
+        viewport: PropTypes.bool,
+        children: PropTypes.any,
+        additionalComponent: PropTypes.any,
+        fullWidth: PropTypes.bool,
+        left: PropTypes.bool
+    }
 
-Header.propTypes = {
-    background: PropTypes.string
+    render() {
+        const {
+            backgroundColor,
+            backgroundImage,
+            title,
+            description,
+            text,
+            light,
+            style,
+            viewport,
+            children,
+            additionalComponent,
+            fullWidth,
+            left
+        } = this.props
+        return (
+            <StyledHeader
+                backgroundColor={backgroundColor}
+                backgroundImage={backgroundImage}
+                style={style}
+                viewport={viewport}
+                light={light}
+            >
+                <ContentRow narrow={!fullWidth} style={{ zIndex: 5 }}>
+                    <StyledTitle left={left} white={!light}>
+                        {title}
+                    </StyledTitle>
+                    <StyledSubTitle left={left} white={!light}>
+                        {description}
+                    </StyledSubTitle>
+                    {text && (
+                        <Paragraph
+                            center
+                            dangerouslySetInnerHTML={{ __html: text }}
+                        />
+                    )}
+                    {additionalComponent && additionalComponent}
+                    {children}
+                </ContentRow>
+            </StyledHeader>
+        )
+    }
 }
-
-Header.defaultProps = {
-    background: colors.black
-}
-
-export default Header

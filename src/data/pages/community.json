@@ -1,0 +1,47 @@
+{
+    "title": "Dive into the Community",
+    "description": "Engage with a vibrant, open, and diverse community of data scientists, AI professionals, blockchain experts and developers.",
+    "actions": [
+        {
+            "title": "Meet us at one of our events",
+            "link": "#events"
+        },
+        {
+            "title": "Become an ambassador",
+            "link": "#ambassadors"
+        },
+        {
+            "title": "Participate in a bounty",
+            "link": "#bounties"
+        }
+    ],
+    "numberUnits": [
+        {
+            "key": "twitter",
+            "title": "Twitter followers",
+            "tooltip": "Number of Twitter followers."
+        },
+        {
+            "key": "telegram",
+            "title": "Telegram members",
+            "tooltip": "Number of Telegram group members."
+        },
+        {
+            "key": "medium",
+            "title": "Blog followers",
+            "tooltip": "Number of followers on Medium."
+        },
+        {
+            "key": "github",
+            "title": "GitHub stargazers",
+            "tooltip": "Number of stars across all repositories."
+        },
+        {
+            "key": "bounties",
+            "icon": "gitcoin",
+            "title": "Bounties",
+            "tooltip": "Number of open and completed bounties.",
+            "link": "https://docs.oceanprotocol.com/concepts/bounties/"
+        }
+    ]
+}

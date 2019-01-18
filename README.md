@@ -6,138 +6,31 @@
 [![js oceanprotocol](https://img.shields.io/badge/js-oceanprotocol-7b1173.svg)](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-7b1173.svg?style=flat-square)](https://github.com/prettier/prettier)
 
+---
+
 [**Live**](https://oceanprotocol.com) | [**Beta**](https://beta.oceanprotocol.com)
-
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Content](#content)
-    - [Events](#events)
-        - [`date` & `date_end`](#date--date_end)
-    - [Papers](#papers)
-    - [Blog posts](#blog-posts)
-    - [Videos](#videos)
-- [Forms](#forms)
-- [SEO](#seo)
-- [Development](#development)
-    - [Environment variables](#environment-variables)
-    - [Workflow](#workflow)
-    - [Code style](#code-style)
-- [Deployment: always be shipping](#deployment-always-be-shipping)
-    - [Manual Deployment](#manual-deployment)
-- [Data Collection & Cookies](#data-collection--cookies)
-    - [Cookie Banner](#cookie-banner)
-    - [Google Analytics](#google-analytics)
 
 ---
 
-## Content
+- [Documentation](#documentation)
+- [Development](#development)
+  - [Environment variables](#environment-variables)
+  - [Workflow](#workflow)
+  - [Code style](#code-style)
+  - [SVG assets](#svg-assets)
+- [Deployment: always be shipping](#deployment-always-be-shipping)
+  - [Manual Deployment](#manual-deployment)
 
-Most copy is mixed within the HTML and JSX markup in the files under `src/sections/`. The following content has been isolated in json data files in the `src/data/` directory and can be edited there:
+---
 
--   Events: [`events.json`](src/data/events.json)
--   Team: [`team.json`](src/data/team.json)
--   Advisors: [`advisors.json`](src/data/advisors.json)
--   Collaborators: [`collaborators.json`](src/data/collaborators.json)
--   Art: [`art.json`](src/data/art.json)
--   FAQ: [`faq.json`](src/data/faq.json)
--   Roadmap: [`roadmap.json`](src/data/roadmap.json)
+## Documentation
 
-### Events
+For all infos not related to development, have a look into the site's documentation:
 
-Events can be added to the events section on the front page by editing the [`src/data/events.json`](src/data/events.json) file, and committing the result in a new Pull Request.
-
-On the events section, all events are automatically sorted chronologically by the `date` value, and past events are put into the archive modal. So the order of the events in the `events.json` file doesn't matter.
-
-#### `date` & `date_end`
-
-When adding a multi-day event, don't use the full event range but only the date one of the team members is actually present at an event. This is usually just one day, e.g. when giving a talk. Only add the optional `date_end` when our presence at an event is confirmed for multiple days.
-
-### Papers
-
-All pdf documents are simply put into the `public` folder, making them available under the root `/` of the live site.
-
-An exception is the technical whitepaper which is sourced from the [`oceanprotocol/whitepaper`](https://github.com/oceanprotocol/whitepaper) submodule in `src/lib/whitepaper` and automatically copied in place before deployment.
-
-### Blog posts
-
-All displayed posts in the Blog section are sourced from our Medium publication under blog.oceanprotocol.com.
-
-Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the Medium RSS feed. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
-
-### Videos
-
-All displayed movies in the Videos section are sourced from a hidden YouTube playlist named `website` in our channel.
-
-Website only communicates with an endpoint created via webtask.io, where the task on webtask.io communicates directly with the YouTube Data API v3 setup in Google Cloud Platform. See [oceanprotocol/webtasks](https://github.com/oceanprotocol/webtasks) for details.
-
-### Collaborators
-
-All displayed collaborators are sourced from the [`src/data/collaborators.json`](src/data/collaborators.json) file.
-
-For every collaborator `name`, `logo` and `link` are required, while `description` is optional. Here, `logo` refers to the filename of the SVG asset.
-
-#### Logo
-
-A logo in SVG format needs to be added to the `./src/assets/logos` folder. It will end up automatically as inlined SVG in the final site allowing styling with CSS.
-
-Logo file then needs to be imported and exported from the [`./src/assets/logos/index.js`](./src/assets/logos/index.js) file.
-
-_ToDo: remove the need to manually import the logo file._
-
-While all SVGs are automatically cleaned up through [SVGO](https://github.com/svg/svgo), it's best to clean and export them from the Sketch file under [`./_media/logos.sketch`](./_media/logos.sketch) for easier maintainability. Make sure to have the [SVGO Compressor plugin](https://sketchapp.com/extensions/plugins/svgo-compressor/) installed in Sketch before exporting.
-
-## Forms
-
-We have the following forms on our website collecting lead data:
-
--   _Newsletter subscription_: Email
--   _Join as Data Provider_: Name, Email, Company, Comment
--   _Join as Data Consumer_: Name, Email, Company, Comment
--   _Ambassadors_: Name, Email, Location, Background, Interest, Speaking, LinkedIn, GitHub
-
-All data is currently collected on MailChimp where each form submission is put into a respective list. All form submissions except for newsletter make use of MailChimp's undocumented `jsonp` functionality, NOT the MailChimp API.
-
-Newsletter submissions are handled with a [webtask](https://github.com/oceanprotocol/webtasks#mailchimp) which puts the data into the newsletter list via the MailChimp API.
-
-Via Zapier, the data is synced further in real time when new submissions happen:
-
--   the Data Provider, Data Consumer & Ambassadors into Slack channel #form-submissions
--   the Data Provider, Data Consumer & Ambassadors data into Google Sheets
-
-This automation requires the columns in the Google Sheet to not be changed, except for adding new columns at the very end. When columns are renamed, or new ones added at beginning, or in between, the data sending will break. If changes in columns are required, the Zapier task will have to be reconfigured.
-
-All above forms are built out from what's defined in [`src/data/forms.js`](src/data/forms.js). New fields can be added to all forms from there, but data sending for new fields still needs to be handled in the component in [`src/sections/Modal/ModalForm.js`](src/sections/Modal/ModalForm.js).
-
-## SEO
-
-Dynamic `meta` tags for better search engine ranking can be achieved by using the SEO component on every page under `src/pages/`. Every created page in there requires the use of this component, with some props pushed to it, e.g.:
-
-```js
-import PropTypes from 'prop-types'
-import SEO from '../components/SEO'
-
-const Page = ({ location }) => {
-    const title = 'PAGE_TITLE'
-    const description = 'PAGE_DESCRIPTION'
-    const image = 'PAGE_IMAGE_PATH'
-
-    return (
-        <SEO
-            description={description}
-            image={image}
-            path={location.pathname}
-            title={title}
-        />
-    )
-}
-
-Page.propTypes = {
-    location: PropTypes.object.isRequired
-}
-```
-
-This component will dynamically generate the required `meta` tags for search engines, Twitter Cards, and Facebook Open Graph tags.
+-   [Content Editing](docs/content.md)
+-   [Forms](docs/forms.md)
+-   [SEO](docs/seo.md)
+-   [Data Collection & Cookies](docs/data-collection.md)
 
 ## Development
 
@@ -251,27 +144,3 @@ Create fresh production build and sync with S3, needs proper credentials in `~/.
 npm run build
 AWS_PROFILE=ocean aws s3 sync ./build s3://oceanprotocol.com --delete --acl public-read
 ```
-
-## Data Collection & Cookies
-
-From frontend side, nothing gets collected or stored, the S3 bucket has access logging deactivated too.
-
-Site communicates against those services where some data collection, like time of request and the user's IP address might be collected:
-
--   https://webtask.io
--   https://mailchimp.com
-
-### Cookie Banner
-
-When a user first arrives on the site, a cookie banner will be shown. Cookie banner will be accepted automatically on either those conditions:
-
--   user stays on page for more than 10 seconds
--   user browses to another page
-
-This acceptance is then stored as a cookie (oh the irony) called `hasConsent`. If user is coming from one of our other web properties, she probably has this cookie already so cookie banner won't be shown for her. Likewise, if user has Do Not Track activated, nothing will be shown either.
-
-### Google Analytics
-
-Only Google Analytics sets cookies but the whole script loading has been connected to the cookie banner mentioned above. If the `hasConsent` cookie set by the cookie banner is `true`, Google's Analytics script is loaded and initialized. Anonymization of IP addresses has been setup too.
-
-If user decides to hit _Reject_ on the cookie banner, all Google cookies will be deleted, and the rejection is stored in cookie `hasConsent` with value of `false.

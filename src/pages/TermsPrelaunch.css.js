@@ -1,31 +1,21 @@
 import styled from 'styled-components'
-import Section from '../components/Section'
-import SubTitle from '../components/SubTitle'
 import ContentRow from '../components/ContentRow'
-import { fonts, colors } from '../styles'
+import { fonts, layout } from '../styles'
 
-export const StyledSection = styled(Section)`
-    ${ContentRow} {
-        /* stylelint-disable-line */
-        max-width: 45rem;
+export const StyledContent = styled(ContentRow)`
+    margin-top: calc(${layout.spacer} * 2);
+    margin-bottom: calc(${layout.spacer} * 2);
+    max-width: 45rem;
+
+    & h1 {
+        font-size: ${fonts.size.h3};
     }
 
-    ${SubTitle} {
-        /* stylelint-disable-line */
-        margin-bottom: 3rem;
-    }
-
-    h1 {
-        font-size: ${fonts.size.h2};
-    }
-
-    h2 {
+    & h2 {
         font-size: ${fonts.size.h4};
     }
-`
 
-export const Line = styled.div`
-    border-top: 2px solid rgba(${colors.lightGrey}, 0.5);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    & h3 {
+        font-size: ${fonts.size.h5};
+    }
 `

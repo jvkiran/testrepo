@@ -1,15 +1,11 @@
-import React, { Fragment, Component } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Markdown from 'react-remarkable'
 import fetch from 'isomorphic-fetch'
-import Title from '../components/Title'
-import SubTitle from '../components/SubTitle'
-import ContentRow from '../components/ContentRow'
-import Header from '../components/Header'
+import Page from '../templates/Page'
 import Spinner from '../components/Spinner'
-import SEO from '../components/SEO'
 import privacy from '../data/privacy.md'
-import { StyledSection, StyledContent } from './Privacy.css'
+import { StyledContent } from './Privacy.css'
 
 const title = 'Privacy Policy'
 const description = 'Privacy Policy for the use of oceanprotocol.com.'
@@ -40,31 +36,22 @@ export default class Privacy extends Component {
 
     render() {
         return (
-            <Fragment>
-                <SEO
-                    description={description}
-                    path={this.props.location.pathname}
-                    title={title}
-                />
-                <Header />
-                <StyledSection>
-                    <ContentRow>
-                        <Title>{title}</Title>
-                        <SubTitle>{description}</SubTitle>
-                    </ContentRow>
-
-                    <StyledContent>
-                        {this.state.fetching ? (
-                            <Spinner />
-                        ) : (
-                            <Markdown
-                                options={{ breaks: true, linkify: true }}
-                                source={this.state.text}
-                            />
-                        )}
-                    </StyledContent>
-                </StyledSection>
-            </Fragment>
+            <Page
+                title={title}
+                description={description}
+                location={this.props.location}
+            >
+                <StyledContent>
+                    {this.state.fetching ? (
+                        <Spinner />
+                    ) : (
+                        <Markdown
+                            options={{ breaks: true, linkify: true }}
+                            source={this.state.text}
+                        />
+                    )}
+                </StyledContent>
+            </Page>
         )
     }
 }

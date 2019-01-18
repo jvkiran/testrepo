@@ -1,53 +1,24 @@
-import React, { Component, Fragment } from 'react'
-import SEO from '../components/SEO'
-import Menu from '../sections/Menu'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import Page from '../templates/Page'
 import Welcome from '../sections/Welcome/Welcome'
-import Project from '../sections/Project'
-import Data from '../sections/Data'
-import Papers from '../sections/Papers'
 import Events from '../sections/Events'
-import People from '../sections/People'
-import Collaborators from '../sections/Collaborators/Collaborators'
-import MediaMentions from '../sections/MediaMentions'
-import Blog from '../sections/Blog'
-import Videos from '../sections/Videos'
-import Modal from '../sections/Modal/Modal'
 import MorePages from '../sections/MorePages'
+import MediaMentions from '../sections/MediaMentions'
 
 export default class Home extends Component {
-    state = {
-        showModal: false,
-        modal: ''
-    }
-
-    toggleModal = modal => {
-        this.setState({
-            modal,
-            showModal: !this.state.showModal
-        })
+    static propTypes = {
+        location: PropTypes.object.isRequired
     }
 
     render() {
         return (
-            <Fragment>
-                <SEO />
-                <Menu />
+            <Page location={this.props.location} noheader>
                 <Welcome />
-                <Events />
-                <Project toggleModal={this.toggleModal} />
-                <Papers />
-                <Data />
-                <People toggleModal={this.toggleModal} />
-                <MediaMentions />
-                <Collaborators />
-                <Blog />
-                <Videos />
                 <MorePages />
-
-                {this.state.showModal && (
-                    <Modal modal={this.state.modal} toggle={this.toggleModal} />
-                )}
-            </Fragment>
+                <Events />
+                <MediaMentions />
+            </Page>
         )
     }
 }

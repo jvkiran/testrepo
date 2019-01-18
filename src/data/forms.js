@@ -1,8 +1,8 @@
 import { social } from '../constants.js'
 
 const forms = {
-    provider: {
-        title: 'Join the Data Providers',
+    dataleads: {
+        title: 'Get in Touch',
         fields: {
             name: {
                 label: 'Your name',
@@ -17,60 +17,43 @@ const forms = {
             },
             company: {
                 label: 'Your Company Name',
-                placeholder: 'i.e. Jellyfish Inc.',
-                required: true
+                placeholder: 'i.e. Jellyfish Inc.'
+            },
+            about: {
+                label: 'About you',
+                type: 'checkbox',
+                required: true,
+                options: [
+                    {
+                        value: 'provider',
+                        label: 'I can provide data'
+                    },
+                    {
+                        value: 'consumer',
+                        label: 'I want to use data'
+                    }
+                ]
             },
             message: {
                 label: 'Your Message',
-                placeholder: 'Tell us why you would like to publish data',
-                maxLength: 100,
+                placeholder:
+                    'Tell us why you would like to publish or get data',
+                maxWords: 100,
                 tag: 'textarea',
                 required: true
             }
         },
         button: 'Submit',
-        success:
-            'Thank you! Assuming your profile is a good fit, we will be in touch with you.',
+        success: `Thank you! Assuming your profile is a good fit, we will be in touch with you.`,
         baseUrl:
-            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=b402d6b267'
-    },
-    consumer: {
-        title: 'Join the Data Consumers',
-        fields: {
-            name: {
-                label: 'Your name',
-                placeholder: 'i.e. Jelly McJellyfish',
-                required: true
-            },
-            email: {
-                label: 'Your email',
-                placeholder: 'i.e. jelly@mcjellyfish.com',
-                type: 'email',
-                required: true
-            },
-            company: {
-                label: 'Your Company Name',
-                placeholder: 'i.e. Jellyfish Inc.',
-                required: true
-            },
-            message: {
-                label: 'Your Message',
-                placeholder: 'Tell us why you would like to get data',
-                maxLength: 100,
-                tag: 'textarea',
-                required: true
-            }
-        },
-        button: 'Submit',
-        success:
-            'Thank you! Assuming your profile is a good fit, we will be in touch with you.',
-        baseUrl:
-            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13&amp;id=482c337540'
+            '//oceanprotocol.us16.list-manage.com/subscribe/post-json?u=cd10df7575858374f6a066d13',
+        listIdProvider: 'b402d6b267',
+        listIdConsumer: '482c337540'
     },
     ambassadors: {
         title: 'Ocean Protocol Ambassador Program',
         description:
-            'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below. \n\nWe look forward to hearing from you!',
+            'Thank you for your interest in becoming an Ocean Protocol Ambassador. To help us learn more about you and why you are interested in representing Ocean Protocol please fill out the information below.\n\nWe look forward to hearing from you!',
         fields: {
             name: {
                 label: 'Your name',

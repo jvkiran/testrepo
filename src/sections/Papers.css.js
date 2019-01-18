@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import Cell from '../components/Cell'
-import Button from '../components/Button'
 import Title from '../components/Title'
-import { colors, fonts, responsive } from '../styles'
+import SubTitle from '../components/SubTitle'
+import { colors, fonts, layout } from '../styles'
 
 export const StyledWhitepaper = styled(Cell)`
-    border-radius: 0.2rem;
-    padding: 2rem;
+    border-radius: ${layout.borderRadius};
+    padding: ${layout.spacer};
     background: rgb(${colors.white});
     color: rgb(${colors.grey});
     hyphens: auto;
@@ -24,47 +24,21 @@ export const StyledWhitepaper = styled(Cell)`
         transform: rotate(45deg);
     }
 
-    @media screen and (${responsive.sm.min}) {
-        min-height: 540px;
-    }
-
-    @media screen and (${responsive.sm.min}) and (${responsive.tablet.max}) {
-        min-height: 0;
-    }
-
     &:first-child {
-        margin-bottom: 2rem;
-    }
-
-    @media screen and (${responsive.sm.max}) {
-        margin: 0;
-        padding: 2rem !important; /* stylelint-disable-line declaration-no-important */
+        margin-bottom: ${layout.spacer};
     }
 `
 
 export const StyledTitle = styled(Title)`
     margin-top: 0;
-    margin-bottom: 2rem;
-    font-size: ${fonts.size.h3};
+    margin-bottom: ${layout.spacer};
+    font-size: ${fonts.size.h3} !important;
     word-spacing: 100vw; /* make sure every word is on its own line */
-`
-
-export const StyledIntro = styled.div`
-    margin-bottom: 1rem;
-`
-
-export const StyledAbstract = styled.div`
-    margin-bottom: 2rem;
 `
 
 export const StyledFooter = styled.div`
     margin-bottom: 0;
     margin-top: auto;
-`
-
-export const StyledDownload = styled(Button)`
-    margin-left: auto;
-    margin-right: auto;
 `
 
 export const FileType = styled.span`
@@ -73,14 +47,8 @@ export const FileType = styled.span`
     margin-left: 0.3rem;
 `
 
-export const StyledComments = styled.h4`
+export const StyledComments = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 0;
-`
-
-export const StyledRow = styled.div`
-    margin-top: 4rem;
+    margin-top: ${layout.spacer};
     margin-bottom: 0;
 `

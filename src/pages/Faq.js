@@ -1,14 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import Title from '../components/Title'
-import SubTitle from '../components/SubTitle'
+import Page from '../templates/Page'
 import FaqItem from '../components/FaqItem'
 import ContentRow from '../components/ContentRow'
-import Header from '../components/Header'
-import SEO from '../components/SEO'
 import Cell from '../components/Cell'
 import Grid from '../components/Grid'
-import faq from '../data/faq'
+import content from '../data/pages/faq'
 import {
     StyledSubTitle,
     StyledFaqRow,
@@ -16,25 +13,17 @@ import {
     StyledSection
 } from './Faq.css'
 
-export const title = 'FAQ'
-export const description = 'Frequently asked questions about Ocean Protocol'
-
 const Faq = ({ location }) => (
-    <Fragment>
-        <SEO description={description} path={location.pathname} title={title} />
-        <Header />
+    <Page
+        title={content.title}
+        description={content.description}
+        location={location}
+    >
         <StyledSection>
             <ContentRow>
-                <Cell maxWidth="small" width={1}>
-                    <Title>{title}</Title>
-                    <SubTitle center>{description}</SubTitle>
-                </Cell>
-            </ContentRow>
-
-            <ContentRow>
-                {faq.map(question => (
+                {content.items.map(question => (
                     <StyledFaqRow key={question.title}>
-                        <StyledSubTitle>{question.title}</StyledSubTitle>
+                        <StyledSubTitle left>{question.title}</StyledSubTitle>
                         <Grid>
                             <Cell width={1 / 2}>
                                 {question.questions
@@ -65,7 +54,7 @@ const Faq = ({ location }) => (
                 ))}
             </ContentRow>
         </StyledSection>
-    </Fragment>
+    </Page>
 )
 
 Faq.propTypes = {

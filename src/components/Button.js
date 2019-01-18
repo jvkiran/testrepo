@@ -1,22 +1,27 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Spinner from '../components/Spinner'
-import { Container, Children } from './Button.css'
+import { StyledButton } from './Button.css'
 
-const Button = ({ fetching, children, ...props }) => (
-    <Container disabled={fetching} {...props}>
-        {fetching && <Spinner />}
-        <Children fetching={fetching}>{children}</Children>
-    </Container>
-)
-
-Button.propTypes = {
-    children: PropTypes.node.isRequired,
-    fetching: PropTypes.bool
-}
-
-Button.defaultProps = {
-    fetching: false
+const Button = ({ fetching, children, to, href, ...props }) => {
+    if (to) {
+        return (
+            <StyledButton.Link to={to} {...props}>
+                {children}
+            </StyledButton.Link>
+        )
+    } else if (href) {
+        return (
+            <StyledButton.a href={href} {...props}>
+                {children}
+            </StyledButton.a>
+        )
+    } else {
+        return (
+            <StyledButton disabled={fetching} {...props}>
+                {fetching ? <Spinner /> : <span>{children}</span>}
+            </StyledButton>
+        )
+    }
 }
 
 export default Button

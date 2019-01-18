@@ -95,7 +95,7 @@ export default class Archive extends PureComponent {
 
         return (
             <>
-                <ArchiveButton onClick={() => openModal()}>
+                <ArchiveButton center border black onClick={() => openModal()}>
                     View Events Archive
                 </ArchiveButton>
                 {this.props.modalIsOpen && (

@@ -62,6 +62,7 @@ export const transitions = {
 export const layout = {
     pageFrame: '.75rem',
     spacer: '2rem',
+    borderRadius: '0.2rem',
     maxWidth: {
         wide: '80rem',
         base: '60rem',

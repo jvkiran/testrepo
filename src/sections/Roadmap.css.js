@@ -3,11 +3,9 @@ import ContentRow from '../components/ContentRow'
 import { colors, responsive, fonts, layout } from '../styles'
 
 export const StyledRoadmap = styled.article`
-    margin-top: ${layout.pageFrame / 2};
-    margin-bottom: -6rem;
+    margin-top: ${layout.pageFrame};
+    margin-bottom: ${layout.pageFrame};
     background: rgb(${colors.dimmedGrey});
-    margin-left: -2.5rem;
-    width: calc(100% + 5rem);
     padding-bottom: 5rem;
     padding-top: 5rem;
 `

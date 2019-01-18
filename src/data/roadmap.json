@@ -20,20 +20,28 @@
         "date": "March 2018",
         "description": [
             "Ocean Token pre-launch distribution",
-            "Singapore, Lead Customers, Advisors"
+            "Activating community",
+            "Consolidating and building up the team",
+            "Partnerships & collaborations: IBM Watson AI XPRIZE"
         ],
         "active": true
     },
     {
-        "title": "Network Beta",
+        "title": "Test network",
         "date": "Q4 2018",
-        "description": ["Tethys beta (v0.9) test network deployed"]
+        "description": [
+            "Development and documentation of Ocean network components",
+            "Trilobite test network deployed",
+            "Building global community: 130+ events, 35+ advisors, 120+ ambassadors, 15+ bounties",
+            "Partnerships & collaborations: MOBI Grand Challenge, Fitchain"
+        ],
+        "active": true
     },
     {
         "title": "Network Launch",
         "date": "Q1 2019",
         "description": [
-            "Tethys (v1.0) network deployed",
+            "Tethys network deployed",
             "AI/Data/Community activated"
         ]
     }

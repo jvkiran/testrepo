@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import FormHelp from './FormHelp'
 import {
     FormGroup,
@@ -12,7 +13,22 @@ import {
 const FormTag = ({ tag, ...props }) =>
     tag === 'textarea' ? <Textarea {...props} /> : <Input {...props} />
 
-class FormInput extends PureComponent {
+FormTag.propTypes = {
+    tag: PropTypes.string
+}
+
+export default class FormInput extends PureComponent {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        required: PropTypes.bool,
+        tag: PropTypes.string,
+        type: PropTypes.string,
+        maxLength: PropTypes.number,
+        maxWords: PropTypes.number,
+        help: PropTypes.string
+    }
+
     state = {
         input: '',
         wordCount: null,
@@ -93,5 +109,3 @@ class FormInput extends PureComponent {
         )
     }
 }
-
-export default FormInput

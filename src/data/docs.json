@@ -15,6 +15,10 @@
             "url": "https://docs.oceanprotocol.com/setup/quickstart/"
         },
         {
+            "title": "Testnets",
+            "url": "https://docs.oceanprotocol.com/concepts/testnets/"
+        },
+        {
             "title": "Get Ether and Ocean Tokens for Testnets",
             "url": "https://docs.oceanprotocol.com/tutorials/get-ether-and-ocean-tokens/"
         }

@@ -1,15 +1,11 @@
 import React from 'react'
 import ContentRow from '../components/ContentRow'
+import Section from '../components/Section'
 import content from '../data/mediamentions.json'
-import {
-    StyledSection,
-    StyledGrid,
-    StyledTitle,
-    StyledLogo
-} from './MediaMentions.css'
+import { StyledGrid, StyledTitle, StyledLogo } from './MediaMentions.css'
 
 const MediaMentions = () => (
-    <StyledSection id="mediamentions">
+    <Section id="mediamentions">
         <ContentRow wide>
             <StyledTitle white>{content.title}</StyledTitle>
             <StyledGrid center textCenter>
@@ -25,7 +21,7 @@ const MediaMentions = () => (
                 })}
             </StyledGrid>
         </ContentRow>
-    </StyledSection>
+    </Section>
 )
 
 export default MediaMentions

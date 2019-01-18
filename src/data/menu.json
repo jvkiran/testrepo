@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Protocol",
+        "href": "/protocol/"
+    },
+    {
+        "name": "Community",
+        "href": "/community/"
+    },
+    {
+        "name": "Developers",
+        "href": "/developers/"
+    },
+    {
+        "name": "More",
+        "href": "#",
+        "sub": [
+            {
+                "name": "Art",
+                "href": "/art/"
+            },
+            {
+                "name": "FAQ",
+                "href": "/faq/"
+            },
+            {
+                "name": "Newsletter",
+                "href": "/newsletter/"
+            }
+        ]
+    }
+]

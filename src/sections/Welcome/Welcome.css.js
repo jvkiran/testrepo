@@ -1,14 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 import fadeInUp from 'react-animations/lib/fade-in-up'
 import Section from '../../components/Section'
+import Button from '../../components/Button'
 import Title from '../../components/Title'
 import Paragraph from '../../components/Paragraph'
 import ContentRow from '../../components/ContentRow'
-import { colors, responsive, fonts, layout, gradients } from '../../styles'
+import { colors, responsive, fonts, gradients, layout } from '../../styles'
 
 export const Hero = styled(Section)`
     background: rgb(${colors.black});
-    padding-top: 0;
     position: relative;
     overflow: hidden;
 
@@ -17,13 +17,11 @@ export const Hero = styled(Section)`
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        min-height: 42rem;
-        height: calc(100vh - (${layout.pageFrame} * 2));
     }
 
     > div {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: ${layout.spacer};
+        padding-bottom: ${layout.spacer};
         min-height: auto;
         position: static;
     }
@@ -32,14 +30,11 @@ export const Hero = styled(Section)`
 export const HeroContent = styled(ContentRow)`
     position: relative;
     z-index: 2;
-    margin-top: 4rem;
+    margin-top: 6rem;
     text-align: center;
 
-    @media screen and (${responsive.sm.min}) {
-        margin-top: 2rem;
-    }
-
     @media screen and (${responsive.md.min}) {
+        margin-top: ${layout.spacer};
         text-align: left;
     }
 `
@@ -69,9 +64,8 @@ export const animation = keyframes`
 
 export const StyledTagline = styled(Title)`
     color: rgb(${colors.white});
-    animation: ${animation} 1s backwards;
-    font-size: ${fonts.size.h3};
-    margin-bottom: 2rem;
+    animation: ${animation} 1.25s backwards;
+    margin-bottom: ${layout.spacer};
 
     @media screen and (${responsive.sm.min}) {
         font-size: ${fonts.size.h2};
@@ -83,7 +77,7 @@ export const StyledTagline = styled(Title)`
 `
 
 export const StyledParagraph = styled(Paragraph)`
-    animation: ${animation} 1.5s backwards;
+    animation: ${animation} 1.25s 0.25s backwards;
 `
 
 export const StyledVideoThumbnail = styled.picture`
@@ -91,12 +85,12 @@ export const StyledVideoThumbnail = styled.picture`
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: ${layout.spacer};
     border-radius: 5px;
     box-shadow: 0 9px 18px 0 rgba(${colors.black}, 0.6);
     cursor: pointer;
     max-height: 180px;
     background: rgb(${colors.black});
-    animation: ${animation} 1.5s 0.5s backwards;
 
     @media screen and (${responsive.md.min}) {
         max-width: none;
@@ -121,31 +115,32 @@ export const StyledVideoThumbnail = styled.picture`
 `
 
 export const Cta = styled.div`
-    margin-bottom: 2rem;
-
-    @media screen and (${responsive.md.min}) {
-        margin-bottom: 1rem;
-    }
+    margin-bottom: calc(${layout.spacer} * 2);
 `
 
-export const StyledButton = styled.a`
-    padding: 0.5rem 1rem;
-    margin: 1% 0;
-    color: rgb(${colors.white});
-    font-size: ${fonts.size.small};
-    text-transform: uppercase;
-    font-family: ${fonts.family.button};
-    font-weight: ${fonts.fontWeight.button};
-    background: ${({ important }) =>
-        important ? `${gradients.main}` : `rgba(${colors.grey}, .95)`};
-    display: inline-block;
-    margin-left: 0.5rem;
-    animation: ${animation} 1.5s 0.5s backwards;
-    border-radius: 0.1rem;
+export const StyledButton = styled(Button)`
+    display: block;
+    width: 100%;
+    animation: ${animation} 1.25s backwards;
+    margin-bottom: calc(${layout.spacer} / 2);
+
+    @media screen and (${responsive.sm.min}) {
+        width: fit-content;
+        display: inline-block;
+        margin-left: 0.5rem;
+    }
 
     &:first-child {
-        animation-delay: 0;
         margin-left: 0;
+        background: ${gradients.main};
+    }
+
+    &:nth-child(2) {
+        animation-delay: 0.25s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: 0.5s;
     }
 `
 

@@ -1,61 +1,59 @@
 import styled, { keyframes } from 'styled-components'
-import { Link } from 'react-router-dom'
-import fadeIn from 'react-animations/lib/fade-in'
-import { colors, fonts, transitions } from '../styles'
+import fadeInUp from 'react-animations/lib/fade-in-up'
+import Title from '../components/Title'
+import OceanJeyllyfishBack from '@oceanprotocol/art/jellyfish/jellyfish-back.svg'
+import { colors, layout, fonts } from '../styles'
+
+export const animation = keyframes`
+    ${fadeInUp}
+`
 
 export const StyledHeader = styled.header`
-    background-color: ${({ background }) => `rgb(${background})`};
-    transition: transform 0.3s ease-in-out;
-    transform: none;
-    padding: 0.75rem 1rem;
-`
-
-export const StyledContainer = styled.div`
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-
-export const StyledLogo = styled(Link)`
-    height: 60px;
-    z-index: 10;
-    margin-left: 20px;
-
-    & svg {
-        width: auto;
-        height: 100%;
-    }
-`
-
-export const StyledMenuItem = styled(Link)`
-    transition: ${transitions.base};
-    color: rgba(${colors.white}, 0.7);
-    font-family: ${fonts.family.button};
-`
-
-const animation = keyframes`
-    ${fadeIn}
-`
-
-export const StyledNav = styled.nav`
-    text-transform: uppercase;
-    text-align: right;
     color: rgb(${colors.white});
-    animation: 1s ${animation} 1.2s backwards;
+    background-color: ${({ backgroundColor }) =>
+        backgroundColor ? `rgb(${backgroundColor})` : `rgb(${colors.black})`};
+    background-image: ${({ backgroundImage }) =>
+        backgroundImage
+            ? `url(${backgroundImage})`
+            : `url(${OceanJeyllyfishBack})`};
+    background-position: center 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: ${({ viewport }) =>
+        viewport ? `calc(100vh - ${layout.pageFrame} * 2)` : 'auto'};
+    display: flex;
+    align-items: center;
+    padding: 10rem calc(${layout.pageFrame} * 2) 6rem
+        calc(${layout.pageFrame} * 2);
+    margin-bottom: ${layout.pageFrame};
+    position: relative;
 
-    & a {
-        display: inline-block;
-        margin-right: 2rem;
+    ${({ light }) =>
+        light &&
+        `&:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(${colors.white}, 0.5);
+        }`}
+`
 
-        &:hover,
-        &:focus,
-        &.active {
-            color: rgba(
-                ${colors.white},
-                1
-            ); /* stylelint-disable-line selector-no-qualifying-type */
-        }
-    }
+export const StyledTitle = styled(Title)`
+    margin-bottom: ${layout.spacer};
+    margin-top: 0;
+    animation: ${animation} 1s backwards;
+`
+
+export const StyledSubTitle = styled.p`
+    text-align: ${({ left }) => (left ? 'left' : 'center')};
+    font-size: ${fonts.size.large};
+    color: ${({ white }) =>
+        white ? `rgb(${colors.dimmedGrey})` : `rgb(${colors.grey})`};
+    animation: ${animation} 1.25s backwards;
+    max-width: ${layout.maxWidth.small};
+    ${({ left }) => !left && 'margin-left: auto; margin-right: auto;'};
+    margin-bottom: calc(${layout.spacer} * 2);
 `

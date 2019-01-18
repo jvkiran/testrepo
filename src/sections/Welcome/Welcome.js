@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import Waves from './Waves'
-import SocialHero from './SocialHero'
+import SocialHero from '../../components/SocialHero'
 import VideoModal from '../../components/VideoModal'
+import Waves from './Waves'
 import videoThumb from '../../assets/misc/video-thumb.jpg'
 import videoThumbRetina from '../../assets/misc/video-thumb@2x.jpg'
-import videoThumbWebP from '../../assets/misc/video-thumb.webp'
-import videoThumbWebPRetina from '../../assets/misc/video-thumb@2x.webp'
+import content from '../../data/welcome.json'
 import { colors } from '../../styles'
 import {
     Hero,
@@ -20,26 +19,16 @@ import {
     Cta
 } from './Welcome.css'
 
-const content = {
-    title: 'A Decentralized Data Exchange Protocol to Unlock Data for AI',
-    description:
-        'Ocean Protocol is kickstarting a Data Economy by breaking down data silos and equalizing access to data for all.'
-}
-
-class Welcome extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            videoUrl: '',
-            modalIsOpen: false
-        }
+export default class Welcome extends Component {
+    state = {
+        videoUrl: '',
+        modalIsOpen: false
     }
 
     toggleModal = () => {
         this.setState({
             modalIsOpen: !this.state.modalIsOpen,
-            videoUrl: 'https://www.youtube.com/watch?v=FEeicvNSyk4'
+            videoUrl: content.video
         })
     }
 
@@ -53,33 +42,14 @@ class Welcome extends Component {
                             <StyledParagraph>
                                 {content.description}
                             </StyledParagraph>
-
-                            <Cta>
-                                <StyledButton href="#project" important>
-                                    Learn about the project
-                                </StyledButton>
-                                <StyledButton href="#ambassadors">
-                                    Become an ambassador
-                                </StyledButton>
-                            </Cta>
                         </HeroGridCell>
                         <HeroGridCell>
                             <StyledVideoThumbnail
                                 onClick={() => this.toggleModal()}
                             >
                                 <source
-                                    type="image/webp"
-                                    media="(min-resolution: 144dpi), 
-                                                (-webkit-min-device-pixel-ratio: 1.5)"
-                                    srcSet={videoThumbWebPRetina}
-                                />
-                                <source
-                                    type="image/webp"
-                                    srcSet={videoThumbWebP}
-                                />
-                                <source
-                                    media="(min-resolution: 144dpi), 
-                                                (-webkit-min-device-pixel-ratio: 1.5)"
+                                    media="(min-resolution: 144dpi),
+                                           (-webkit-min-device-pixel-ratio: 1.5)"
                                     srcSet={videoThumbRetina}
                                 />
                                 <source srcSet={videoThumb} />
@@ -90,6 +60,18 @@ class Welcome extends Component {
                             </StyledVideoThumbnail>
                         </HeroGridCell>
                     </HeroGrid>
+
+                    <Cta>
+                        {content.cta.map(action => (
+                            <StyledButton
+                                key={action.link}
+                                to={action.link}
+                                smooth
+                            >
+                                {action.title}
+                            </StyledButton>
+                        ))}
+                    </Cta>
 
                     <StyledSocialHero>
                         <SocialHero />
@@ -107,5 +89,3 @@ class Welcome extends Component {
         )
     }
 }
-
-export default Welcome

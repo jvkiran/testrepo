@@ -1,6 +1,5 @@
 import React from 'react'
-import ContentRow from '../components/ContentRow'
-import Title from '../components/Title'
+import SectionHeader from '../components/SectionHeader'
 import roadmap from '../data/roadmap'
 import {
     Milestone,
@@ -37,10 +36,8 @@ const Milestones = roadmap.map(milestone => (
 ))
 
 const Roadmap = () => (
-    <StyledRoadmap>
-        <ContentRow>
-            <Title>Roadmap</Title>
-        </ContentRow>
+    <StyledRoadmap id="roadmap">
+        <SectionHeader title={'Roadmap'} />
         <FlexContentRow wide>{Milestones}</FlexContentRow>
         <Disclaimer>
             <p>

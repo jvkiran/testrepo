@@ -1,10 +1,10 @@
 /* global ga */
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import Collapsible from 'react-collapsible'
 import LazyLoad from 'react-lazyload'
-import Header from '../components/Header'
+import Page from '../templates/Page'
 import Button from '../components/Button'
 import Section from '../components/Section'
 import ContentRow from '../components/ContentRow'
@@ -12,14 +12,9 @@ import Grid from '../components/Grid'
 import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import Styleguide from '../components/Styleguide'
-import SEO from '../components/SEO'
-import { colors } from '../styles'
 import { social } from '../constants'
-import artJson from '../data/art'
+import content from '../data/pages/art.json'
 import {
-    HeaderArt,
-    StyledTitle,
-    StyledSubTitle,
     StyledFirstContentRow,
     SectionTitle,
     SectionSubTitle,
@@ -30,6 +25,7 @@ import {
     KeyVisual,
     StyledCollapsible
 } from './Art.css'
+import { colors } from '../styles'
 
 // grab all assets from art package
 import OceanLogo from '@oceanprotocol/art/logo/logo.svg'
@@ -50,8 +46,10 @@ import OceanMantarayGrid from '@oceanprotocol/art/mantaray/mantaray-grid.svg'
 import OceanMantarayGridPNG from '@oceanprotocol/art/mantaray/mantaray-grid@2x.png'
 import OceanMantarayFull from '@oceanprotocol/art/mantaray/mantaray-full.svg'
 import OceanMantarayFullPNG from '@oceanprotocol/art/mantaray/mantaray-full@2x.png'
-
-const art = artJson[0]
+import OceanSquidGrid from '@oceanprotocol/art/squid/squid-grid.svg'
+import OceanSquidGridPNG from '@oceanprotocol/art/squid/squid-grid@2x.png'
+import OceanSquidFull from '@oceanprotocol/art/squid/squid-full.svg'
+import OceanSquidFullPNG from '@oceanprotocol/art/squid/squid-full@2x.png'
 const mediakitDownload = `${social.github}/art/archive/master.zip`
 
 function GaEvent(artasset) {
@@ -61,32 +59,25 @@ function GaEvent(artasset) {
 }
 
 const Art = ({ location }) => (
-    <Fragment>
-        <SEO
-            description={art.header.tagline}
-            image={OceanBanner01}
-            path={location.pathname}
-            title={art.header.title}
-        />
-        <Header background={colors.darkPurple} />
-        <HeaderArt background={colors.darkPurple} fontColor={colors.white}>
-            <ContentRow narrow>
-                <StyledTitle white>{art.header.title}</StyledTitle>
-                <StyledSubTitle center>{art.header.tagline}</StyledSubTitle>
-                <Paragraph
-                    center
-                    dangerouslySetInnerHTML={{ __html: art.header.text }}
-                />
-            </ContentRow>
-        </HeaderArt>
-
+    <Page
+        title={content.title}
+        description={content.description}
+        text={content.text}
+        location={location}
+        headerBackgroundColor={colors.darkPurple}
+        headerBackgroundImage={OceanMantarayFull}
+        headerStyle={{
+            backgroundPosition: '-30vw 10vh',
+            backgroundSize: '60vw'
+        }}
+    >
         <Section>
             <StyledFirstContentRow>
                 <Grid>
                     <Cell smallGutter width={1 / 2}>
-                        <SectionTitle>{art.logo.title}</SectionTitle>
+                        <SectionTitle left>{content.logo.title}</SectionTitle>
                         <SectionSubTitle>
-                            {art.logo.description}
+                            {content.logo.description}
                         </SectionSubTitle>
                         <Logos>
                             <Logo>
@@ -140,23 +131,26 @@ const Art = ({ location }) => (
                         </Logos>
                     </Cell>
                     <Cell smallGutter width={1 / 3}>
-                        <SectionTitle>{art.mediakit.title}</SectionTitle>
+                        <SectionTitle left>
+                            {content.mediakit.title}
+                        </SectionTitle>
                         <SectionSubTitle>
-                            {art.mediakit.description}
+                            {content.mediakit.description}
                         </SectionSubTitle>
 
                         <Paragraph>
-                            <a
+                            <Button
+                                primary
                                 download
                                 href={mediakitDownload}
                                 onClick={() => GaEvent('Mediakit')}
                             >
-                                <Button>{art.mediakit.button}</Button>
-                            </a>
+                                {content.mediakit.button}
+                            </Button>
                         </Paragraph>
                         <Paragraph
                             dangerouslySetInnerHTML={{
-                                __html: art.mediakit.text
+                                __html: content.mediakit.text
                             }}
                         />
                     </Cell>
@@ -164,8 +158,8 @@ const Art = ({ location }) => (
             </StyledFirstContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.banner.title}</SectionTitle>
-                <SectionSubTitle>{art.banner.description}</SectionSubTitle>
+                <SectionTitle left>{content.banner.title}</SectionTitle>
+                <SectionSubTitle>{content.banner.description}</SectionSubTitle>
 
                 <Banners>
                     <a
@@ -255,8 +249,10 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.jellyfish.title}</SectionTitle>
-                <SectionSubTitle>{art.jellyfish.description}</SectionSubTitle>
+                <SectionTitle left>{content.jellyfish.title}</SectionTitle>
+                <SectionSubTitle>
+                    {content.jellyfish.description}
+                </SectionSubTitle>
 
                 <KeyVisuals>
                     <KeyVisual>
@@ -313,8 +309,10 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
-                <SectionTitle>{art.mantaray.title}</SectionTitle>
-                <SectionSubTitle>{art.mantaray.description}</SectionSubTitle>
+                <SectionTitle left>{content.mantaray.title}</SectionTitle>
+                <SectionSubTitle>
+                    {content.mantaray.description}
+                </SectionSubTitle>
 
                 <KeyVisuals>
                     <KeyVisual>
@@ -371,6 +369,64 @@ const Art = ({ location }) => (
             </ContentRow>
 
             <ContentRow>
+                <SectionTitle left>{content.squid.title}</SectionTitle>
+                <SectionSubTitle>{content.squid.description}</SectionSubTitle>
+
+                <KeyVisuals>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Squid Full"
+                                    src={OceanSquidFull}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanSquidFull}
+                            onClick={() => GaEvent('Squid Full')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanSquidFullPNG}
+                            onClick={() => GaEvent('Squid Full')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                    <KeyVisual>
+                        <div>
+                            <LazyLoad once height={370} offset={200}>
+                                <img
+                                    alt="Ocean Protocol Squid Grid"
+                                    src={OceanSquidGrid}
+                                />
+                            </LazyLoad>
+                        </div>
+                        <a
+                            download
+                            href={OceanSquidGrid}
+                            onClick={() => GaEvent('Squid Grid')}
+                        >
+                            SVG
+                        </a>
+                        {' • '}
+                        <a
+                            download
+                            href={OceanSquidGridPNG}
+                            onClick={() => GaEvent('Squid Grid')}
+                        >
+                            PNG
+                        </a>
+                    </KeyVisual>
+                </KeyVisuals>
+            </ContentRow>
+
+            <ContentRow>
                 <StyledCollapsible>
                     <Collapsible
                         easing="ease-out"
@@ -382,7 +438,7 @@ const Art = ({ location }) => (
                 </StyledCollapsible>
             </ContentRow>
         </Section>
-    </Fragment>
+    </Page>
 )
 
 Art.propTypes = {

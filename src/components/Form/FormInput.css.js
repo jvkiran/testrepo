@@ -85,4 +85,5 @@ export const Count = styled.span`
     margin: 0;
     right: 0.4rem;
     top: 0.2rem;
+    color: rgb(${colors.lightGrey});
 `
