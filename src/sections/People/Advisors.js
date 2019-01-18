@@ -24,6 +24,8 @@ const Advisors = () => (
             ))}
             <Member empty />
             <Member empty />
+            <Member empty />
+            <Member empty />
         </StyledAdvisors>
     </>
 )

@@ -5,15 +5,18 @@ import { StyledGrid, StyledCell, StyledGraphic, Actions } from './Features.css'
 import graphicSharing from '../../assets/graphics/feature-sharing.svg'
 import graphicLayers from '../../assets/graphics/feature-layers.svg'
 import graphicMarketplaces from '../../assets/graphics/feature-marketplaces.svg'
+import graphicJellyfish from '@oceanprotocol/art/jellyfish/jellyfish-full.svg'
 
 const Graphic = ({ graphic }) => {
     switch (graphic) {
-        case 'feature-sharing':
+        case 'sharing':
             return <StyledGraphic src={graphicSharing} />
-        case 'feature-layers':
+        case 'layers':
             return <StyledGraphic src={graphicLayers} />
-        case 'feature-marketplaces':
+        case 'marketplaces':
             return <StyledGraphic src={graphicMarketplaces} />
+        case 'jellyfish':
+            return <StyledGraphic src={graphicJellyfish} />
         default:
             return null
     }
@@ -22,7 +25,7 @@ const Graphic = ({ graphic }) => {
 const Features = ({ features }) =>
     features.map(feature => (
         <StyledGrid key={feature.title}>
-            <StyledCell width={2 / 3}>
+            <StyledCell width={7 / 12}>
                 <SubTitle white left>
                     {feature.title}
                 </SubTitle>
@@ -37,7 +40,7 @@ const Features = ({ features }) =>
                         ))}
                 </Actions>
             </StyledCell>
-            <StyledCell width={1 / 3}>
+            <StyledCell width={5 / 12}>
                 <Graphic graphic={feature.graphic} />
             </StyledCell>
         </StyledGrid>

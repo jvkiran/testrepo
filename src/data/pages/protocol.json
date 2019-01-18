@@ -16,7 +16,7 @@
             {
                 "title": "Trustful Data Sharing",
                 "text": "We bring together decentralized technology, a trust framework, and an ecosystem for data and related services.\n\nThis allows for data to be shared while guaranteeing traceability, transparency, and privacy to enable data owners to maintain control of their data assets and access a wide range of marketplaces and services.",
-                "graphic": "feature-sharing"
+                "graphic": "sharing"
             },
             {
                 "title": "A Tokenized Service Layer",
@@ -31,7 +31,7 @@
                         "url": "https://docs.oceanprotocol.com/concepts/components/"
                     }
                 ],
-                "graphic": "feature-layers"
+                "graphic": "layers"
             },
             {
                 "title": "1001 Marketplaces",
@@ -42,11 +42,12 @@
                         "url": "https://docs.oceanprotocol.com/setup/marketplace/"
                     }
                 ],
-                "graphic": "feature-marketplaces"
+                "graphic": "marketplaces"
             },
             {
                 "title": "The Mission to Unlock Data",
-                "text": "Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities attained worrying levels of control which is a danger to a free and open society.\n\nWe aim to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance. Our team and community is committed to kick-starting a New Data Economy that reaches every single person, company and device, giving power back to data owners and enabling people to capture value from data to better our world."
+                "text": "Society is becoming increasingly reliant on data, especially with the advent of AI. However, a small handful of organizations with both massive data assets and AI capabilities attained worrying levels of control which is a danger to a free and open society.\n\nWe aim to unlock data, for more equitable outcomes for users of data, using a thoughtful application of both technology and governance. Our team and community is committed to kick-starting a New Data Economy that reaches every single person, company and device, giving power back to data owners and enabling people to capture value from data to better our world.",
+                "graphic": "jellyfish"
             }
         ],
         "contact": {

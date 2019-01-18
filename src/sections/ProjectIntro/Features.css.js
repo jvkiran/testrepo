@@ -3,26 +3,6 @@ import Grid from '../../components/Grid'
 import Cell from '../../components/Cell'
 import { colors, responsive, layout } from '../../styles'
 
-export const StyledGrid = styled(Grid)`
-    padding-top: calc(${layout.spacer} * 2);
-    padding-bottom: calc(${layout.spacer} * 2);
-    align-items: center;
-    min-height: 70vh;
-    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
-
-    @media screen and (${responsive.sm.min}) {
-        max-height: 500px;
-    }
-
-    &:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-
-    p {
-        color: rgb(${colors.dimmedGrey});
-    }
-`
-
 export const StyledCell = styled(Cell)`
     &:first-child {
         order: 2;
@@ -49,8 +29,37 @@ export const StyledCell = styled(Cell)`
     }
 `
 
+export const StyledGrid = styled(Grid)`
+    padding-top: calc(${layout.spacer} * 2);
+    padding-bottom: calc(${layout.spacer} * 2);
+    align-items: center;
+    min-height: 70vh;
+    border-bottom: 1px solid rgba(${colors.lightGrey}, 0.3);
+
+    @media screen and (${responsive.sm.min}) {
+        max-height: 500px;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    p {
+        color: rgb(${colors.dimmedGrey});
+    }
+
+    /* Mission Statement layout change */
+    &:last-child {
+        ${StyledCell}:last-child {
+            img {
+                transform: scaleX(-1);
+            }
+        }
+    }
+`
+
 export const StyledGraphic = styled.img`
-    width: 10rem;
+    width: 15rem;
     height: auto;
     max-width: 100%;
 
