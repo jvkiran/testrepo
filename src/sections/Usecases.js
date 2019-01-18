@@ -20,7 +20,7 @@ import {
 } from './Usecases.css'
 
 const Usecases = () => (
-    <StyledSection id="why">
+    <StyledSection id="usecases">
         <ContentRow narrow>
             <Title>
                 In 2016, the world produced 16 ZB of data, but only 1% was

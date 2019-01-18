@@ -36,7 +36,7 @@ const Milestones = roadmap.map(milestone => (
 ))
 
 const Roadmap = () => (
-    <StyledRoadmap>
+    <StyledRoadmap id="roadmap">
         <SectionHeader title={'Roadmap'} />
         <FlexContentRow wide>{Milestones}</FlexContentRow>
         <Disclaimer>

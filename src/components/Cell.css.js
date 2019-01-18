@@ -11,9 +11,9 @@ export const Container = styled.div`
     margin: ${({ maxWidth }) => (maxWidth ? '0 auto' : null)};
 
     @media screen and (${responsive.sm.min}) {
-        width: ${({ smallGutter, width }) =>
+        width: ${({ smallGutter, cellWidth }) =>
             smallGutter
-                ? `calc(${width * 100}% - 1rem)`
-                : `calc(${width * 100}% - 3rem)`};
+                ? `calc(${cellWidth * 100}% - 1rem)`
+                : `calc(${cellWidth * 100}% - 3rem)`};
     }
 `
