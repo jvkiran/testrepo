@@ -8,9 +8,9 @@ import Spinner from '../components/Spinner'
 import terms from '../data/termsLaunch.md'
 import { StyledContent } from './TermsLaunch.css'
 
-const title = 'Terms Launch'
+const title = 'Terms & Conditions for the Ocean Token Launch Distribution'
 const description =
-    'Terms and Conditions for Whitelisting for participating in the Public Pre-Launch Token Exchange and the Network Launch Token Exchange of Ocean Protocol Foundation Ltd.'
+    'Terms and Conditions for Whitelisting for participating in the Public Network Launch Token Exchange of Ocean Protocol Foundation Ltd.'
 
 export default class TermsLaunch extends Component {
     state = {

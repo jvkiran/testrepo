@@ -1,6 +1,8 @@
--   [Data Protection](#data-protection)
--   [Privacy Policy EU](#privacy-policy-eu)
+-   [Terms](#terms)
+-   [Privacy Policy](#privacy-policy)
 -   [Marketing Consent](#marketing-consent)
+
+## Terms
 
 Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W), a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, # 03-22 Mapletree Business City, Singapore 117439 (the “**Foundation**”) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the “**Tokens**”) – to the general public in exchange for cryptocurrency during the public Pre-Launch phase (“**Pre-Launch Token Exchange**”) and the Network Launch phase (“**Network Launch Token Exchange**” and together with the Pre-Launch Token Exchange, the “**Initial Token Exchange**”), the launch periods to be announced by the Foundation on its website at [https://oceanprotocol.com](https://oceanprotocol.com/) (the “**Website**”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the “**Project**”) – a decentralised data exchange platform built on blockchain technology to be developed by Company in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
 
