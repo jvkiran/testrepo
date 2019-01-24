@@ -2,6 +2,7 @@
 -   [II - Privacy Policies](#privacy-policies)
 -   [III - Marketing Consent](#marketing-consent)
 
+<a name=“network-launch-terms”></a> 
 ## I - Network Launch Terms
 
 Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W) a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, # 03-22 Mapletree Business City, Singapore 117439 (the “**Foundation**”) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the “**Tokens**”) – to the general public in exchange for cryptocurrency or fiat-currency during the network launch phase, (the “**Network Launch Token Exchange**”), together with the Launch Token Exchange, (the “**Initial Token Exchange**”), and the launch periods to be announced by the Foundation on its website at [https://oceanprotocol.com](https://oceanprotocol.com/) (the “**Website**”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the “**Project**”) – a decentralised data exchange platform built on blockchain technology to be developed by the Foundation in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
@@ -273,7 +274,7 @@ For the purposes of these Terms, your contact details shall be such contact deta
 15.2 The illegality, invalidity or unenforceability of any provision of these Terms under the law of any jurisdiction shall not affect its legality, validity or enforceability under the law of any other jurisdiction nor the legality, validity or enforceability of any other provision.
 
 
-
+<a name=“privacy-policies”></a> 
 ## II - Privacy Policies
 
 ### 1. General Privacy Policy
@@ -288,7 +289,7 @@ If you provide personal data to us, you consent to the collection, use and discl
 
 #### 1.1 Database requests
 
-In order to comply with international sanctions and applicable regulation for securities and to fight money-laundering or the financing of terrorism, we need to check the personal data provided by you against publically available databases.
+In order to comply with international sanctions and applicable regulation for securities and to fight money-laundering or the financing of terrorism, we need to check the personal data provided by you against publicly available databases.
 
 #### 1.2 Contact form
 
@@ -304,7 +305,7 @@ The given permission to the storage of the data, the email address as well as th
 
 We collect, process, use and disclose personal data necessary for the establishment, content-related arrangement or change of the legal relationship (stock data). We collect, process, use and disclose personal data about the use of our Service (usage data) insofar it is necessary for enabling, improving or invoicing the use of the service.
 
-In addition, you acknowledge that the purpose of this Service is to provide information about the Project, the Whitelisting and the Initial Token Exchange (the foregoing capitalised terms are defined in the “**Terms and Conditions for Whitelisting for Participation in the public launch Token Exchange and the Network Launch Token Exchange of Ocean Protocol Foundation Ltd.**” which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms). If you submit personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
+In addition, you acknowledge that the purpose of this Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)). If you submit personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
 
 We also reserve the right to monitor, check and process your personal data if necessary to investigate or obtain evidence concerning any complaint, claim or dispute or any actual or suspected illegal or unlawful conduct or to aid in such investigation or evidence gathering by any law enforcement or regulatory authorities.
 
@@ -327,25 +328,39 @@ Except expressly agreed on, we transmit personal data to third parties only if i
 
 To fulfil the contract, we contracted data processors that are obligated to fully comply with our directives and that may only process your personal data to the extent that we are allowed to do so and only for the given purposes herein.
 
-Data processor Fractal:
-Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
+(a) Data processor CoinList:
+Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. CoinList processes personal data only in the United States.
 
-Data processor Heroku:
+For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy)
+
+(b) Data processor Fractal:
+Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf to fulfil the contract, especially for customer identification.
+
+**Use of Fractal Launchpad for contribution process:**
+
+We use Fractal Blockchain GmbH’s (Fractal) ICO/ITO launchpad software as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf stores & processes the Technical information of your device which you use for orders and communication - cell phone, tablet, notebook, personal computer, etc. (e.g. IP address) and log in information (e-mail address, password); and your Cryptocurrency Address. 
+
+Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
+
+For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
+
+
+(c) Data processor Heroku:
 To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
 
 For further information, please see [Heroku’s data security explanations](https://www.heroku.com/policy/security) as well as [Heroku’s Privacy Policy](https://www.salesforce.com/company/privacy/).
 
-Data processor AWS:
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
+(d) Data processor AWS:
+To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (**“AWS”**). AWS stores your personal data only in Frankfurt, Germany.
 
 For further information, please see [AWS’s Privacy Policy](https://aws.amazon.com/privacy/?nc1=h_ls).
 
-Data processor CS Compliance:
+(e) Data processor CS Compliance:
 To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“**CS Compliance**”). CS Compliance [processes your data in compliance with the German data privacy regulations.
 
 For further information, please email CS Compliance’s Privacy Policy contact contact <info@cs-compliance-service.de>.
 
-Data processor LexisNexis:
+(f) Data processor LexisNexis:
 To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“**LexisNexis**”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
 
 For further information, please see [LexisNexis’ Privacy Policy](https://www.lexisnexis.com/en-us/privacy/default.page).
@@ -380,8 +395,6 @@ This Policy may be amended or updated from time to time to reflect changes in ou
 
 **Please note that Ocean Protocol Foundation collects your Personal Data directly from the country where you are based and stores it on servers in EU.**
 
-**Information about our Contact Form**We use Zendesk’s contact form widget. “**Zendesk**” is a service by Zendesk Inc., of 1019 Market St., San Francisco, CA 94103, USA. If you send enquiries to us via Zendesk’s contact form, your Personal Data is transferred to the USA, where the level of data protection is lower than in the EU/EEA.
-
 #### 2.1 Which Personal Data we process
 
 The categories of Personal Data about you that we may Process include:
@@ -406,7 +419,7 @@ We may collect Personal Data about you from the following sources:
 -   When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data;
 -   When you submit your resume/CV to us for a job application;
 -   When you acquire the Tokens; and
--   When you are participating in the Initial Token Exchange (as defined in the “Terms and Conditions for Whitelisting for Participation in the Initial Token Exchange of Ocean Protocol Foundation Ltd.” which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms).
+-   When you are participating in the **Initial Token Exchange** (as defined which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)).
 
 #### 2.3 Creation of Personal Data
 
@@ -416,7 +429,7 @@ In the course of your interaction on the Ocean Protocol platform, we may also cr
 
 We use your Personal Data to provide, maintain and improve our Services, to grant you access to Ocean Protocol and enable you the use of the Ocean Protocol and the Ocean Protocol platform. For marketing purposes, we use your Personal Data only if and as long as we have received your explicit prior consent and in accordance with respectively applicable additional legal requirements in your jurisdiction. We do not sell your Personal Data to third parties.
 
-In addition, you acknowledge that the purpose of our Service is to provide information about the Initial Project, the Whitelisting and the Initial Token Exchange (the foregoing capitalised terms are defined in the “**Terms and Conditions for Whitelisting for Participation in the Initial Token Exchange of Ocean Protocol Foundation Ltd.**” which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
+In addition, you acknowledge that the purpose of our Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
 
 #### 2.5 Lawful basis for Processing Personal Data
 
@@ -523,7 +536,7 @@ Singapore
 
 Our data privacy officer you can contact is as follows:
 
-[gdpr@oceanprotocol.com](mailto:gdpr@oceanprotocol.com)
+<gdpr@oceanprotocol.com>
 
 We may process your data on behalf of a contract partner of yours (e.g. internet-shop, vendor, seller, service provider). In this case, the privacy policy of your partner applies. Please contact your contract partner for more information.
 
@@ -545,6 +558,7 @@ We may process your data on behalf of a contract partner of yours (e.g. internet
 
 -   ‘**Sensitive Personal Data**’ means Personal Data about race or ethnicity, political opinions, religious or philosophical beliefs, trade union membership, physical or mental health, sexual life, any actual or alleged criminal offences or penalties, or any other information that may be deemed to be sensitive under applicable law.
 
+<a name=“marketing-consent”></a> 
 ## III - Marketing Consent
 
 **I herewith agree to receive marketing and advertising information from Ocean Protocol Foundation Ltd.**
