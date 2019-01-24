@@ -2,7 +2,7 @@
 -   [II - Privacy Policies](#privacy-policies)
 -   [III - Marketing Consent](#marketing-consent)
 
-<a name=“network-launch-terms”></a> 
+<a id=“network-launch-terms”></a> 
 ## I - Network Launch Terms
 
 Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W) a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, # 03-22 Mapletree Business City, Singapore 117439 (the “**Foundation**”) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the “**Tokens**”) – to the general public in exchange for cryptocurrency or fiat-currency during the network launch phase, (the “**Network Launch Token Exchange**”), together with the Launch Token Exchange, (the “**Initial Token Exchange**”), and the launch periods to be announced by the Foundation on its website at [https://oceanprotocol.com](https://oceanprotocol.com/) (the “**Website**”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the “**Project**”) – a decentralised data exchange platform built on blockchain technology to be developed by the Foundation in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
@@ -274,7 +274,7 @@ For the purposes of these Terms, your contact details shall be such contact deta
 15.2 The illegality, invalidity or unenforceability of any provision of these Terms under the law of any jurisdiction shall not affect its legality, validity or enforceability under the law of any other jurisdiction nor the legality, validity or enforceability of any other provision.
 
 
-<a name=“privacy-policies”></a> 
+<a id=“privacy-policies”></a> 
 ## II - Privacy Policies
 
 ### 1. General Privacy Policy
@@ -558,7 +558,7 @@ We may process your data on behalf of a contract partner of yours (e.g. internet
 
 -   ‘**Sensitive Personal Data**’ means Personal Data about race or ethnicity, political opinions, religious or philosophical beliefs, trade union membership, physical or mental health, sexual life, any actual or alleged criminal offences or penalties, or any other information that may be deemed to be sensitive under applicable law.
 
-<a name=“marketing-consent”></a> 
+<a id=“marketing-consent”></a> 
 ## III - Marketing Consent
 
 **I herewith agree to receive marketing and advertising information from Ocean Protocol Foundation Ltd.**
