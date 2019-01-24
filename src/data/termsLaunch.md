@@ -393,7 +393,7 @@ This Policy is meant to inform you, which Personal Data we collect, store, proce
 
 This Policy may be amended or updated from time to time to reflect changes in our practices with respect to the Processing of Personal Data, or changes in applicable law. We encourage you to read this Policy carefully, and to regularly check this page to review any changes we might make in accordance with the terms of this Policy. Your continued use of our Services or website constitutes your agreement to be bound by this Policy, as amended or updated from time to time.
 
-**Please note that Ocean Protocol Foundation collects your Personal Data directly from the country where you are based and stores it on servers in EU.**
+Please note that Ocean Protocol Foundation collects your Personal Data directly from the country where you are based and stores it on servers in EU.
 
 #### 2.1 Which Personal Data we process
 
