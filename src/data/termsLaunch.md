@@ -1,3 +1,7 @@
+---
+title: Terms & Conditions for the Ocean Token Launch Distribution
+---
+
 ## Table of Contents
 
 ## I - Network Launch Terms

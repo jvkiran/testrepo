@@ -18,6 +18,7 @@
         "@oceanprotocol/art": "^2.2.0",
         "axios": "^0.18.0",
         "cookies-eu-banner": "^1.2.14",
+        "gray-matter": "^4.0.2",
         "jsonp": "^0.2.1",
         "prop-types": "^15.6.2",
         "react": "^16.7.0",

@@ -1,4 +1,11 @@
+---
+title: Privacy Policy
+description: Privacy Policy for the use of oceanprotocol.com.
+---
+
 ## Table of Contents
+
+## Introduction
 
 When you are using Ocean Protocol Foundation’s Services and electronic media, we may collect, process and/or disclose data that identify you or make you identifiable (**Personal Data**) in accordance with this privacy policy (**Policy**). Further, we may either receive your Personal Data directly from you when you are sending emails to us or provide your Personal Data otherwise in the course of other interactions with us, or indirectly from third parties who legally provide your Personal Data to us.
 
