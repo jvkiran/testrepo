@@ -1,7 +1,4 @@
--   [I - Network Launch Terms](#network-launch-terms)
--   [II - Privacy Policies](#privacy-policies)
--   [III - Marketing Consent](#marketing-consent)
-
+## Table of Contents
 
 ## I - Network Launch Terms
 
@@ -273,7 +270,6 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 15.2 The illegality, invalidity or unenforceability of any provision of these Terms under the law of any jurisdiction shall not affect its legality, validity or enforceability under the law of any other jurisdiction nor the legality, validity or enforceability of any other provision.
 
-
 ## II - Privacy Policies
 
 ### 1. General Privacy Policy
@@ -337,12 +333,11 @@ Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack,
 
 **Use of Fractal Launchpad for contribution process:**
 
-We use Fractal Blockchain GmbH’s (Fractal) ICO/ITO launchpad software as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf stores & processes the Technical information of your device which you use for orders and communication - cell phone, tablet, notebook, personal computer, etc. (e.g. IP address) and log in information (e-mail address, password); and your Cryptocurrency Address. 
+We use Fractal Blockchain GmbH’s (Fractal) ICO/ITO launchpad software as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf stores & processes the Technical information of your device which you use for orders and communication - cell phone, tablet, notebook, personal computer, etc. (e.g. IP address) and log in information (e-mail address, password); and your Cryptocurrency Address.
 
 Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
 
 For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
-
 
 (c) Data processor Heroku:
 To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.

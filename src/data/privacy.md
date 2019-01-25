@@ -1,3 +1,5 @@
+## Table of Contents
+
 When you are using Ocean Protocol Foundation’s Services and electronic media, we may collect, process and/or disclose data that identify you or make you identifiable (**Personal Data**) in accordance with this privacy policy (**Policy**). Further, we may either receive your Personal Data directly from you when you are sending emails to us or provide your Personal Data otherwise in the course of other interactions with us, or indirectly from third parties who legally provide your Personal Data to us.
 
 This Policy is meant to inform you, which Personal Data we collect, store, process, use and/or disclose, for which purposes and on which legal basis. We further inform you about your rights to protect your Personal Data.
