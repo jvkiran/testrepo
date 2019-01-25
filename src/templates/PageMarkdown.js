@@ -12,7 +12,7 @@ import { StyledContent } from './PageMarkdown.css'
 export default class PageMarkdown extends Component {
     state = {
         text: '',
-        title: '',
+        title: ' ',
         description: '',
         fetching: false
     }
@@ -22,11 +22,13 @@ export default class PageMarkdown extends Component {
         markdownSource: PropTypes.any.isRequired
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.fetchMarkdown()
     }
 
-    fetchMarkdown() {
+    componentDidMount() {}
+
+    async fetchMarkdown() {
         this.setState({ fetching: true })
         fetch(this.props.markdownSource)
             .then(response => response.text())
@@ -42,6 +44,14 @@ export default class PageMarkdown extends Component {
             .catch({ fetching: false })
     }
 
+    MarkdownOutput = ({ text }) =>
+        remark()
+            .use(toc, { maxDepth: 3, tight: true })
+            .use(remark2react, {
+                sanitize: { clobberPrefix: '' } // needed to remove 'user-content' string from generated IDs
+            })
+            .processSync(text).contents
+
     render() {
         return (
             <Page
@@ -53,12 +63,7 @@ export default class PageMarkdown extends Component {
                     {this.state.fetching ? (
                         <Spinner />
                     ) : (
-                        remark()
-                            .use(toc, { maxDepth: 3, tight: true })
-                            .use(remark2react, {
-                                sanitize: { clobberPrefix: '' } // needed to remove 'user-content' string from generated IDs
-                            })
-                            .processSync(this.state.text).contents
+                        <this.MarkdownOutput text={this.state.text} />
                     )}
                 </StyledContent>
             </Page>
