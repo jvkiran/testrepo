@@ -1,5 +1,5 @@
 import React from 'react'
-import privacy from '../data/privacy.md'
+import privacy from '../data/pages/privacy.md'
 import PageMarkdown from '../templates/PageMarkdown'
 
 const Privacy = ({ ...props }) => (
