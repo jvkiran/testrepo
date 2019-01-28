@@ -6,6 +6,8 @@ export const StyledContent = styled(ContentRow)`
     margin-top: calc(${layout.spacer} * 2);
     margin-bottom: calc(${layout.spacer} * 2);
     max-width: 45rem;
+    min-height: 300px;
+    position: relative;
 
     & h1 {
         font-size: ${fonts.size.h3};
