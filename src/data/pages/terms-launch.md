@@ -336,7 +336,7 @@ Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San F
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and proof-of-funds purposes.
+Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and proof-of-funds purposes.
 
 **Use of Fractal Launchpad for contribution process:**
 
