@@ -331,14 +331,12 @@ Except as otherwise stated in this Policy above or expressly agreed on, we trans
 To fulfil the contract, we have contracted data processors to process your personal data on our behalf for the given purposes herein. The personal data you provide may be processed outside Singapore in accordance with applicable data protection law(s).
 
 (a) Data processor CoinList:
-Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and proof-of-funds purposes.
+Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and proof-of-funds purposes.
-
-**Use of Fractal Launchpad for contribution process:**
+Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
@@ -368,7 +366,7 @@ For further information, please see [LexisNexis’ Privacy Policy](https://www.l
 
 #### 1.7 Commercial use policy
 
-Only in the event and for the time that you give us your consent, we will use your personal data and/or transmit it to our business partners DEX Pte. Ltd. (Singapore), BigchainDB GmbH, and Fractal (each Berlin, Germany), in order for us or our business partners to inform you via e-mail about upcoming opportunities that are similar to the Initial Token Exchange that you may participate in with us through this Service or to market and promote our respective products and services.
+Only in the event and for the time that you give us your consent, we will use your personal data and/or transmit it to our business partners CoinList Services LLC (United States), DEX Pte. Ltd. (Singapore), BigchainDB GmbH, and Fractal (each Berlin, Germany), in order for us or our business partners to inform you via e-mail about upcoming opportunities that are similar to the Initial Token Exchange that you may participate in with us through this Service or to market and promote our respective products and services.
 
 You may view, withdraw and (re-)give your declaration of consent at any time by sending an e-mail to the provider of this Service. To withdraw your consent, you may also contact us under the address published in the footer of the e-mail/imprint/legal notice.
 
@@ -446,30 +444,43 @@ When we are involving third party Processors into the performance of our service
 
 Specifically we can already name the following Processors:
 
-Data processor Fractal:
-Our data processor Fractal Blockchain UG (haftungsbeschränkt), c/o Space Shack, Akazienstr. 3a, 10823 Berlin, Germany (“Fractal”), is processing personal data on our behalf to fulfil the contract, especially for customer identification. Fractal processes personal data only in Germany.
+(a) Data processor CoinList:
+Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-Data processor Heroku:
-To store your personal data, we are working together with “Heroku”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States. Heroku stores personal data only in Ireland.
+For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
-For further information, please see Heroku’s data security explanations https://www.heroku.com/policy/security as well as Heroku’s Privacy Policy: https://www.salesforce.com/company/privacy/
+(b) Data processor Fractal:
+Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-Data processor AWS:
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (“AWS”). AWS stores your personal data only in Frankfurt, Germany.
+Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
-For further information, please see AWS’s Privacy Policy: https://aws.amazon.com/privacy/?nc1=h_ls.
+Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
 
-Data processor CS Compliance:
-To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“CS Compliance”). CS Compliance [processes your data in compliance with the German data privacy regulations.
+For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
 
-For further information, please email CS Compliance’s Privacy Policy contact person : Kai Petersen at <kai.petersen@cs-compliance-service.de>.
+(c) Data processor Heroku: 
+To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States.
 
-Data processor LexisNexis:
-To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“LexisNexis”). LexisNexis processes your personal data in compliance with the applicable data protection laws.
+For further information, please see [Heroku’s data security explanations](https://www.heroku.com/policy/security) as well as [Heroku’s Privacy Policy](https://www.salesforce.com/company/privacy/).
 
-For further information, please see LexisNexis’ Privacy Policy: <https://www.lexisnexis.com/en-us/privacy/default.page>
+(d) Data processor AWS:
+To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (**“AWS”**).
 
-**Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**We may also disclose your Personal Data to third parties who are not Processors in terms of Art. 28 of the GDPR.
+For further information, please see [AWS’s Privacy Policy](https://aws.amazon.com/privacy/?nc1=h_ls).
+
+(e) Data processor CS Compliance:
+To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“**CS Compliance**”).
+
+For further information, please email CS Compliance’s Privacy Policy contact contact <info@cs-compliance-service.de>.
+
+(f) Data processor LexisNexis:
+To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“**LexisNexis**”).
+
+For further information, please see [LexisNexis’ Privacy Policy](https://www.lexisnexis.com/en-us/privacy/default.page).
+
+**Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
+ 
+ We may also disclose your Personal Data to third parties who are not Processors in terms of Art. 28 of the GDPR.
 
 The categories of such Non-Processors are:
 
@@ -508,8 +519,9 @@ If you do not want to allow us to use Cookies, you can disable Cookie installati
 In case you consented to our Marketing Policy, we may transfer your Personal Data to our business partners
 
 -   DEX Pte. Ltd. (Singapore),
--   BigchainDB GmbH, Interplanetary Database Foundation e.V. (Berlin, Germany) and
--   Fractal (Berlin, Germany),
+-   BigchainDB GmbH (Berlin, Germany),
+-   Fractal Blockchain GmbH (Berlin, Germany),
+-   CoinList Services LLC (San Francisco, CA, USA)
 
 in order for us or our business partners to inform you via e-mail about upcoming opportunities that are similar to the Initial Token Exchange or to market and promote our respective products and services.
 
@@ -567,8 +579,7 @@ I herewith agree to receive marketing and advertising information from the busin
 
 -   DEX Pte. Ltd. (Singapore),
 -   BigchainDB GmbH (Berlin, Germany),
--   Fractal Blockchain UG (Berlin, Germany),
--   Fractal Launchpad GmbH (Berlin, Germany),
+-   Fractal Blockchain GmbH (Berlin, Germany),
 -   CoinList Services LLC (San Francisco, CA, USA)
 
 Please note that you will receive an email where we request you to click on a confirmation link in order to confirm that you are the owner of the e-mail address you provided to us for marketing communication.
