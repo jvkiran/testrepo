@@ -4,7 +4,7 @@ title: Terms & Conditions for the Ocean Token Launch Distribution
 
 ## Table of Contents
 
-## I - Network Launch Terms
+## I - NETWORK LAUNCH TERMS
 
 **TERMS AND CONDITIONS FOR WHITELISTING 
 FOR PARTICIPATION IN THE NETWORK LAUNCH TOKEN EXCHANGE OF OCEAN PROTOCOL FOUNDATION LTD**.
@@ -29,7 +29,7 @@ The headings in these Terms are included for convenience only and shall not be t
 
 The Parties **HEREBY AGREE** as follows:
 
-### 1. INTRODUCTION, SCOPE OF TERMS AND DEFINITIONS
+### 1. Introduction, Scope Of Terms And Definitions
 
 1.1 These Terms govern your Registration.
 
@@ -53,7 +53,7 @@ The Parties **HEREBY AGREE** as follows:
 
 shall constitute part of these Terms, and no representations, warranties or undertakings are or are intended or purported to be given by any of the Foundation or its Affiliates in respect of any information contained in or on, or any part of, the items as stated in this Paragraph 1.3.
 
-### 2. REGISTRATION AND WHITELISTING
+### 2. Registration And Whitelisting
 
 2.1 Your Registration is governed by these Terms. If you do not accept these Terms, you shall not Register and shall not be eligible to participate in the Initial Token Exchange.
 
@@ -63,7 +63,7 @@ shall constitute part of these Terms, and no representations, warranties or unde
 
 2.4 Upon your successful Registration to the Foundation’s satisfaction in its sole and absolute discretion, you shall be notified of admission to the Whitelist and subject to you fulfilling the Initial Token Exchange Terms, shall be eligible to participate in the Initial Token Exchange.
 
-### 3. REPRESENTATIONS AND WARRANTIES
+### 3. Representations And Warranties
 
 3.1 By accepting these Terms and Registering, you represent and warrant to the Foundation as follows:
 
@@ -155,7 +155,7 @@ A “**senior foreign political figure**” is defined as a senior official in t
 
 (d) your Registration.
 
-### 4. DISCLAIMERS
+### 4. Disclaimers
 
 4.1 To the maximum extent permitted by all applicable laws, regulations and rules and except as otherwise provided in these Terms, each of the Foundation and its Affiliates hereby expressly disclaims its liability and shall in no case be liable to you or any person for:
 
@@ -179,7 +179,7 @@ A “**senior foreign political figure**” is defined as a senior official in t
 
 4.4 The Foundation reserves the right, in its sole and absolute discretion, to abort your Registration, the Whitelisting and/or Initial Token Exchange at any time after your acceptance of these Terms. In the event of such abortion of your Registration, the Whitelisting and/or Initial Token Exchange, you acknowledge and agree that none of the Foundation and its Affiliates shall have any obligation in any form or manner whatsoever to you, and none of the Foundation and its Affiliates shall be liable for any indirect, special, incidental, consequential or other losses of any kind, in tort, contract or otherwise (including but not limited to loss of revenue, income or profits, and loss of use or data), arising out of or in connection with any consequences of such abortion.
 
-### 5. LIMITATION OF LIABILITY AND INDEMNIFICATION
+### 5. Limitation Of Liability And Indemnification
 
 5.1 To the maximum extent permitted by the applicable laws, regulations and rules:
 
@@ -189,17 +189,17 @@ A “**senior foreign political figure**” is defined as a senior official in t
 
 5.2 To the maximum extent permitted by the applicable laws, regulations and rules, you shall indemnify, defend, and hold each of the Foundation, its Affiliates and/or (as the case may be) their respective Subsidiaries, related companies, affiliates, directors, officers, employees, agents, successors, and permitted assignees (“**Indemnified Persons**”) harmless from and against any and all claims, damages, losses, suits, actions, demands, proceedings, expenses, and/or liabilities (including but not limited to reasonable legal fees incurred and/or those necessary to successfully establish the right to indemnification) filed/incurred by any third party against any of the Indemnified Persons arising out of a breach by you of any warranty, representation, or obligation hereunder.
 
-### 6. NO ASSIGNMENT
+### 6. No Assignment
 
 The Foundation may, at its sole and absolute discretion, assign its rights and/or delegate its duties under these Terms. You may not assign your rights or delegate your duties, and any assignment or delegation without the written consent of the Foundation, which the Foundation may withhold at its sole and absolute discretion, shall be void. Subject to these Terms, only you and no other person shall have the right to any claim against the Foundation and/or its Affiliates in connection with your purchase hereunder. You shall not assign, trade or transfer, or attempt to assign, trade or transfer, your right to any such claim. Any such assignment or transfer shall not impose any obligation or liability of the Foundation and/or its Affiliates to the assignee or transferee.
 
-### 7. INTELLECTUAL PROPERTY RIGHTS
+### 7. Intellectual Property Rights
 
 7.1 These Terms shall not entitle you to any intellectual property rights, including the rights in relation to the use, for any purpose, of any information, image, user interface, logos, trademarks, trade names, Internet domain names or copyright in connection with the Whitelisting, the Whitepaper, the Channels, the Foundation and its Affiliates, the Initial Token Exchange, the Tokens and the Project.
 
 7.2 There are no implied licences under these Terms, and any rights not expressly granted to you hereunder are reserved by the Foundation.
 
-### 8. INTELLECTUAL PROPERTY RIGHTS
+### 8. Third Party Online Products and Services
 
 8.1 The pages of the Channels may contain links to third-party websites and services which are owned and operated by third parties (“**Third Party Online Products and Service(s)**”). These links are provided for your information and convenience only, and are NOT an endorsement by the Foundation and/or its Affiliates, their respective directors, officers, employees, agents, successors, and permitted assignees of the contents of such linked websites or third parties, over which none of the aforementioned entities have any control over. Your access to and use of any Third Party Online Products and Service is governed by the terms, conditions, disclaimers and notices found on each such website or in connection with such services. The Foundation has not verified, will not, and is under no obligation to verify the accuracy, suitability or completeness of the contents on such Third Party Online Products and Services, and the Foundation does not control, endorse, warrant, promote, recommend or in any way assumes responsibility or liability for any services or products that may be offered by or accessed through such Third Party Online Products and Services or the operators of them, or the suitability or quality of any of such Third Party Online Products and Services. In addition, the Foundation does not warrant that such Third Party Online Products and Services or the software, data or files contained in, accessed via or linked or referred to in, such Third Party Online Products and Services are free of viruses (or other deleterious data or programs) or defects or that use of such Third Party Online Products and Services will not cause harm or that they conform or will conform with any user expectations. Furthermore, the Foundation is not responsible for maintaining any materials referenced from another website, and makes no warranties for that website or service in such context.
 
@@ -217,25 +217,25 @@ The Foundation may, at its sole and absolute discretion, assign its rights and/o
 
 (f) the direct or indirect use of any Third Party Online Service or any other website or service by other persons.
 
-### 9. NO WAIVER
+### 9. No Waiver
 
 9.1 Any failure of the Foundation and/or its Affiliates to enforce these Terms or to assert any right(s), claim(s) or causes of action against you under these Terms shall not be construed as a waiver of the right of any of the Foundation and/or its Affiliates to assert any right(s), claim(s) or causes of action against you.
 
 9.2 No provision of these Terms shall be considered waived unless such waiver is in writing and signed by the Party that benefits from the enforcement of such provision. No waiver of any provision in these Terms, however, will be deemed a waiver of a subsequent breach of such provision or a waiver of a similar provision. In addition, a waiver of any breach or a failure to enforce any term or condition of these Terms will not in any way affect, limit, or waive a Party’s rights hereunder at any time to enforce strict compliance thereafter with every term and condition hereof.
 
-### 10. ENTIRE AGREEMENT
+### 10. Entire Agreement
 
 10.1 These Terms contain the entire agreement and the understanding between the Parties and supersedes all prior agreements, understandings or arrangements (both oral and written) in relation to your Registration.
 
 10.2 In the event that the Foundation discovers that you, in your Registration, have engaged in unfair, excessive or abusive usage or conduct, the Foundation reserves the right to take such actions as may be necessary, to the fullest extent possible under law, to protect the Foundation and/or its Affiliates from losses, damages, harm or degradation of any form and manner.
 
-### 11. TAXES
+### 11. Taxes
 
 11.1 You shall be responsible for determining any tax applicable and payable to any taxation authority in respect of your Registration (“**Payable Tax**”) and declaring, withholding, collecting, reporting and remitting the correct amount of Payable Tax to the appropriate tax authorities. You shall be solely liable for all penalties, claims, fines, punishments, or other liabilities arising from the non-fulfilment or non-performance to any extent of any of your obligations in relation to the Payable Tax.
 
 11.2 None of the Foundation or any of its Affiliates shall be responsible for determining any Payable Tax and declaring, withholding, collecting, reporting and remitting the correct amount of Payable Tax to the appropriate tax authorities.
 
-### 12. NOTICES
+### 12. Notices
 
 12.1 Any notice or other communication to be given under these Terms shall be in writing, and shall be deemed to have been duly served on, given to or made in relation to a Party if it is:
 
@@ -249,7 +249,7 @@ Provided that where, in the case of delivery by hand, the delivery occurs after 
 
 For the purposes of these Terms, your contact details shall be such contact details as you may notify to the Foundation in writing from time to time in accordance with the requirements of this Paragraph 12.
 
-### 13. GOVERNING LAW AND DISPUTE RESOLUTION
+### 13. Governing Law And Dispute Resolution
 
 13.1 These Terms shall be governed by, and construed in accordance with, the laws of the Republic of Singapore.
 
@@ -265,21 +265,21 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 13.7 Notwithstanding any Dispute or reference of certain Disputes (or part of certain Disputes) for determination by arbitration pursuant to Paragraph 13.5, the Parties will continue to comply with their respective obligations under these Terms.
 
-### 14. CONTRACTS (RIGHTS OF THIRD PARTIES) ACT
+### 14. Contracts (Rights Of Third Parties) Act
 
 14.1 Subject to Clause 14.2, the Contracts (Rights of Third Parties) Act (Chapter 53B) of Singapore, as may be modified, amended or supplemented from time to time, shall apply to these Terms.
 
 14.2 Save for the Foundation’s Affiliates who shall have rights to the extent accorded thereto under these Terms, a person who is not a Party shall not have any rights whatsoever under these Terms or to enforce these Terms.
 
-### 15. SEVERANCE AND PARTIAL INVALIDITY
+### 15. Severance And Partial Invalidity
 
 15.1 If any of these Terms is rendered void, illegal or unenforceable by any legislation to which it is subject, it shall be rendered void, illegal or unenforceable to that extent and no further and, for the avoidance of doubt, the rest of these Terms shall continue to be valid and in full force and effect and shall in no way be affected, impaired or invalidated, and the Parties hereto shall use their commercially reasonable efforts to find and employ an alternative means to achieve the same or substantially the same result as that contemplated by such term, provision, covenant or restriction. It is hereby stipulated and declared to be the intention of the Parties that they would have executed the remaining terms, provisions, covenants and restrictions without including any of such that may be hereafter declared invalid, illegal, void or unenforceable.
 
 15.2 The illegality, invalidity or unenforceability of any provision of these Terms under the law of any jurisdiction shall not affect its legality, validity or enforceability under the law of any other jurisdiction nor the legality, validity or enforceability of any other provision.
 
-## II - Privacy Policies
+## II - PRIVACY POLICIES
 
-### 1. GENERAL PRIVACY POLICY
+### 1. General Privacy Policy
 
 The operator of the network launch token exchange for the Ocean Tokens (“**Tokens**”), including its onboarding, (altogether “**Service**”) is the Ocean Protocol Foundation Ltd., a company limited by guarantee incorporated in Singapore with its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439\. We take the protection of your personal data very seriously. We treat your personal data confidentially and according to the legal data protection regulations and this privacy policy (this “**Privacy Policy**”).
 
@@ -382,7 +382,7 @@ The providers of this Service or the information, products or services featured 
 
 We may amend this Privacy Policy from time to time and will make available the updated Privacy Policy via e-mail. Each time we collect, process, use or disclose personal data, the latest version of this Privacy Policy in force at the time will apply.
 
-### 2. PRIVACY POLICY EU
+### 2. Privacy Policy EU
 
 Ocean Protocol Foundation Ltd. (“**Ocean Protocol Foundation**”, “**we**”, “**us**” or “**our**”) is a Singapore based non-profit company limited by guarantee having its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439. Its mandate is to ensure open access to the Ocean Protocol and the Ocean Protocol platform, operate the launch token exchange and network launch token exchange for Ocean Tokens (“**Tokens**”), including its onboarding, provide long-term governance, community and ecosystem, and be a custodian of funds raised (the “**Services**”). DEX Pte. Ltd. and BigchainDB GmBH are the founders of Ocean Protocol Foundation.
 
@@ -571,7 +571,7 @@ We may process your data on behalf of a contract partner of yours (e.g. internet
 
 -   ‘**Sensitive Personal Data**’ means Personal Data about race or ethnicity, political opinions, religious or philosophical beliefs, trade union membership, physical or mental health, sexual life, any actual or alleged criminal offences or penalties, or any other information that may be deemed to be sensitive under applicable law.
 
-## III - Marketing Consent
+## III - MARKETING CONSENT
 
 **I herewith agree to receive marketing and advertising information from Ocean Protocol Foundation Ltd.**
 
