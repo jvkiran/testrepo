@@ -279,7 +279,7 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 ## II - Privacy Policies
 
-### 1. General Privacy Policy
+### 1. GENERAL PRIVACY POLICY
 
 The operator of the network launch token exchange for the Ocean Tokens (“**Tokens**”), including its onboarding, (altogether “**Service**”) is the Ocean Protocol Foundation Ltd., a company limited by guarantee incorporated in Singapore with its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439\. We take the protection of your personal data very seriously. We treat your personal data confidentially and according to the legal data protection regulations and this privacy policy (this “**Privacy Policy**”).
 
@@ -295,7 +295,7 @@ In order to comply with international sanctions and applicable regulation for se
 
 #### 1.2 Contact form
 
-We use MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred to MailChimp for processing in accordance with their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
+We use MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred for processing in accordance with MailChimp's [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
 
 #### 1.3 Newsletter
 
@@ -382,7 +382,7 @@ The providers of this Service or the information, products or services featured 
 
 We may amend this Privacy Policy from time to time and will make available the updated Privacy Policy via e-mail. Each time we collect, process, use or disclose personal data, the latest version of this Privacy Policy in force at the time will apply.
 
-### 2. Privacy Policy EU
+### 2. PRIVACY POLICY EU
 
 Ocean Protocol Foundation Ltd. (“**Ocean Protocol Foundation**”, “**we**”, “**us**” or “**our**”) is a Singapore based non-profit company limited by guarantee having its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439. Its mandate is to ensure open access to the Ocean Protocol and the Ocean Protocol platform, operate the launch token exchange and network launch token exchange for Ocean Tokens (“**Tokens**”), including its onboarding, provide long-term governance, community and ecosystem, and be a custodian of funds raised (the “**Services**”). DEX Pte. Ltd. and BigchainDB GmBH are the founders of Ocean Protocol Foundation.
 
