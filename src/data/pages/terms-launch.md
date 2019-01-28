@@ -6,7 +6,10 @@ title: Terms & Conditions for the Ocean Token Launch Distribution
 
 ## I - Network Launch Terms
 
-Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W) a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, # 03-22 Mapletree Business City, Singapore 117439 (the “**Foundation**”) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the “**Tokens**”) – to the general public in exchange for cryptocurrency or fiat-currency during the network launch phase, (the “**Network Launch Token Exchange**”), together with the Launch Token Exchange, (the “**Initial Token Exchange**”), and the launch periods to be announced by the Foundation on its website at [https://oceanprotocol.com](https://oceanprotocol.com/) (the “**Website**”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the “**Project**”) – a decentralised data exchange platform built on blockchain technology to be developed by the Foundation in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
+**TERMS AND CONDITIONS FOR WHITELISTING 
+FOR PARTICIPATION IN THE NETWORK LAUNCH TOKEN EXCHANGE OF OCEAN PROTOCOL FOUNDATION LTD**.
+
+Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W), a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, #03-22 Mapletree Business City, Singapore 117439 (the **“Foundation”**) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the **“Tokens”**) – to the general public in exchange for cryptocurrency during the public Network Launch phase (the **“Initial Token Exchange”**), the launch periods to be announced by the Foundation on its website at http://oceanprotocol.com/ (the “Website”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the **“Project”**) – a decentralised data exchange platform built on blockchain technology to be developed by Company in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
 
 Via the Website and in preparation of the Initial Token Exchange, the Foundation is embarking on registration of, and compilation of a listing (“**Whitelist**”) of, persons / body corporate (“**Whitelist Registrant**”) interested to acquire Tokens by way of participation in the Initial Token Exchange (“**Whitelisting**”). The Whitelisting will be on and subject to the following terms and conditions (as may be amended, modified or supplemented from time to time) (these “**Terms**”).
 
@@ -36,11 +39,11 @@ The Parties **HEREBY AGREE** as follows:
 
 “**Ultimate Holding Company**” means a corporation that has another corporation as its Subsidiary and is not itself a Subsidiary of any corporation; and
 
-“**Whitepaper**” means one or more documents (whether or not entitled “**Whitepaper**”), as may be released and amended from time to time at the Foundation’s sole discretion, explaining, among other things, the Project and its technology, the Foundation’s business and the Tokens, and including, but not limited to, the Initial Token Exchange and information about relevant Foundation personnel.
+“**Whitepaper**” means one or more documents (whether or not entitled “Whitepaper”), as may be released and amended from time to time at the Foundation’s sole discretion, explaining, among other things, the Project and its technology, the Foundation’s business and the Tokens, and including, but not limited to, the Initial Token Exchange and information about relevant Foundation personnel.
 
 1.3 No information contained in or on, and no part of the following:
 
-(a) the finalised, published and adopted version or draft of the Whitepaper, the business version of the Whitepaper, the technical primer, the marketplace framework document or any other documents uploaded on the Website, the Foundation’s Telegram channel which is accessible on [t.me/oceanprotocol](https://t.me/oceanprotocol), the Foundation’s blog which is accessible on [blog.oceanprotocol.com](https://blog.oceanprotocol.com/) and/or the Foundation’s Twitter account (@oceanprotocol) (collectively, the “Channels”);
+(a) the finalised, published and adopted version or draft of the Whitepaper, the business version of the Whitepaper, the technical primer, the marketplace framework document or any other documents uploaded on the Website, the Foundation’s Telegram channel which is accessible on [t.me/oceanprotocol](https://t.me/oceanprotocol), the Foundation’s blog which is accessible on [blog.oceanprotocol.com](https://blog.oceanprotocol.com/) and/or the Foundation’s Twitter account (@oceanprotocol) (collectively, the “**Channels**”);
 
 (b) the Channels;
 
@@ -108,7 +111,7 @@ shall constitute part of these Terms, and no representations, warranties or unde
 
 (l) you are (and in the case where you are accepting these Terms on behalf of a corporation, such corporation is) Registering as principal and for your own benefit and you are not acting on the instructions of, or as nominee or agent for or on behalf of any other person;
 
-(m) no consent, approval, order or authorisation of, or registration, qualification, designation, declaration or filing with, any regulatory authority in any jurisdiction ( “Approvals”) is required on your part in connection with your Registration or, where any Approvals are required, such Approvals have been obtained and remain valid and in full force and effect;
+(m) no consent, approval, order or authorisation of, or registration, qualification, designation, declaration or filing with, any regulatory authority in any jurisdiction ( “**Approvals**”) is required on your part in connection with your Registration or, where any Approvals are required, such Approvals have been obtained and remain valid and in full force and effect;
 
 (n) if you are: (i) a natural person, you are of sufficient age and capacity under the applicable laws of the jurisdiction in which you reside and the jurisdiction of which you are a citizen to Register; or (ii) a body corporate, you are legally established and validly existing under the applicable laws of the jurisdiction in which you are incorporated with sufficient legal capacity to Register;
 
@@ -116,15 +119,15 @@ shall constitute part of these Terms, and no representations, warranties or unde
 
 (p) none of you or (and in the case where you are accepting these Terms on behalf of a corporation) any of your Subsidiaries (if any), any of your directors or officers nor, any of your employees, agents or any other person acting on behalf of your or any of your Subsidiaries is an individual or entity that is, or is owned or controlled by an individual or entity that:
 
-(p.i) is listed by the Monetary Authority of Singapore (“MAS”) as designated individuals or entities defined in the respective regulations promulgated under the Monetary Authority of Singapore Act (Chapter 186) of Singapore, the United Nations Act (Chapter 339) of Singapore or the Terrorism (Suppression of Financing) Act (Chapter 325) of Singapore or such other law, regulation or rule as may be prescribed by the MAS from time to time;
+(p.i) is listed by the Monetary Authority of Singapore (“**MAS**”) as designated individuals or entities defined in the respective regulations promulgated under the Monetary Authority of Singapore Act (Chapter 186) of Singapore, the United Nations Act (Chapter 339) of Singapore or the Terrorism (Suppression of Financing) Act (Chapter 325) of Singapore or such other law, regulation or rule as may be prescribed by the MAS from time to time;
 
-(p.ii) is currently the subject of any sanction administered by the United States Office of Foreign Assets Control of the United States Department of the Treasury ("OFAC") or any other United States government authority, is not designated as a "Specially Designated National" or "Blocked Person" by OFAC or subject to any similar sanctions or measures imposed or administered by the United Nations Security Council, the European Union, Her Majesty’s Treasury of the United Kingdom or similar sanctions administered or imposed by the government of Singapore or any other country (collectively, the "Sanctions");
+(p.ii) is currently the subject of any sanction administered by the United States Office of Foreign Assets Control of the United States Department of the Treasury ("**OFAC**") or any other United States government authority, is not designated as a "Specially Designated National" or "Blocked Person" by OFAC or subject to any similar sanctions or measures imposed or administered by the United Nations Security Council, the European Union, Her Majesty’s Treasury of the United Kingdom or similar sanctions administered or imposed by the government of Singapore or any other country (collectively, the "**Sanctions**");
 
 (p.iii) is located, organised or resident in a country or territory that is the subject of such Sanctions (including, without limitation, the Democratic People’s Republic of Korea, the Democratic Republic of Congo, Eritea, Iran, Libya, Somalia, South Sudan, Sudan and Yemen); or
 
 (p.iv) has engaged in and is not now engaged in any dealings or transactions with any government, person, entity or project targeted by, or located in any country or territory, that at the time of the dealing or transaction is or was the subject of any Sanctions;
 
-(q) (in the case where you are accepting these Terms on behalf of a corporation) the operations of you and any of your Subsidiaries, are and have been conducted at all times in compliance with applicable financial record keeping and reporting requirements and money laundering statutes in Singapore and of all jurisdictions in which you and your Subsidiaries conduct business or operations, the rules and regulations thereunder and any related or similar rules, regulations or guidelines, issued, administered or enforced by any governmental agency or proceeding by or before any court or governmental agency (collectively, "Money Laundering Laws") and no action, suit or proceeding by or before any court or governmental agency, authority or body or any arbitrator involving you or your Subsidiaries with respect to Money Laundering Laws is pending and, no such actions, suits or proceedings are threatened or contemplated against you or your Subsidiaries;
+(q) (in the case where you are accepting these Terms on behalf of a corporation) the operations of you and any of your Subsidiaries, are and have been conducted at all times in compliance with applicable financial record keeping and reporting requirements and money laundering statutes in Singapore and of all jurisdictions in which you and your Subsidiaries conduct business or operations, the rules and regulations thereunder and any related or similar rules, regulations or guidelines, issued, administered or enforced by any governmental agency or proceeding by or before any court or governmental agency (collectively, "**Money Laundering Laws**") and no action, suit or proceeding by or before any court or governmental agency, authority or body or any arbitrator involving you or your Subsidiaries with respect to Money Laundering Laws is pending and, no such actions, suits or proceedings are threatened or contemplated against you or your Subsidiaries;
 
 (r) none of: (i) you; (ii) any person controlling or controlled by you; (iii) if you are a privately-held entity, any person having a beneficial interest in you; or (iv) any person for whom you are acting as agent or nominee in connection with your Registration, is a senior foreign political figure, or any immediate family member or close associate of a senior foreign political figure, as such terms are defined below;
 
@@ -184,7 +187,7 @@ A “**senior foreign political figure**” is defined as a senior official in t
 
 (b) you hereby agree to waive all rights to assert any claims against the Foundation and/or its Affiliates under such applicable laws, regulations and rules.
 
-5.2 To the maximum extent permitted by the applicable laws, regulations and rules, you shall indemnify, defend, and hold each of the Foundation, its Affiliates and/or (as the case may be) their respective Subsidiaries, related companies, affiliates, directors, officers, employees, agents, successors, and permitted assignees (“Indemnified Persons”) harmless from and against any and all claims, damages, losses, suits, actions, demands, proceedings, expenses, and/or liabilities (including but not limited to reasonable legal fees incurred and/or those necessary to successfully establish the right to indemnification) filed/incurred by any third party against any of the Indemnified Persons arising out of a breach by you of any warranty, representation, or obligation hereunder.
+5.2 To the maximum extent permitted by the applicable laws, regulations and rules, you shall indemnify, defend, and hold each of the Foundation, its Affiliates and/or (as the case may be) their respective Subsidiaries, related companies, affiliates, directors, officers, employees, agents, successors, and permitted assignees (“**Indemnified Persons**”) harmless from and against any and all claims, damages, losses, suits, actions, demands, proceedings, expenses, and/or liabilities (including but not limited to reasonable legal fees incurred and/or those necessary to successfully establish the right to indemnification) filed/incurred by any third party against any of the Indemnified Persons arising out of a breach by you of any warranty, representation, or obligation hereunder.
 
 ### 6. NO ASSIGNMENT
 
@@ -240,7 +243,7 @@ The Foundation may, at its sole and absolute discretion, assign its rights and/o
 
 (b) transmitted by email or facsimile, in which case such notice shall be deemed to be delivered and received at the time of transmission in legible form.
 
-PROVIDED that where, in the case of delivery by hand, the delivery occurs after 6.00 p.m. on a business day or on a day which is not a business day, receipt shall be deemed to occur at 9.00 a.m. on the next business day.
+Provided that where, in the case of delivery by hand, the delivery occurs after 6.00 p.m. on a business day or on a day which is not a business day, receipt shall be deemed to occur at 9.00 a.m. on the next business day.
 
 12.2 For the purposes of these Terms, the contact details of the Foundation shall be the contact details (including, if applicable, the details of the person for whose attention a notice or communication is to be addressed) as the Foundation may announce on the Website or notify to you in writing from time to time in accordance with the requirements of this Paragraph 12.
 
@@ -250,9 +253,9 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 13.1 These Terms shall be governed by, and construed in accordance with, the laws of the Republic of Singapore.
 
-13.2 Any dispute between the Parties arising out of or in relation to these Terms (“Dispute”) shall be resolved in accordance with this Paragraph 13.
+13.2 Any dispute between the Parties arising out of or in relation to these Terms (“**Dispute**”) shall be resolved in accordance with this Paragraph 13.
 
-13.3 A Party shall give prompt written notice of any Dispute to the other Party (a "Dispute Notice"). Such Dispute Notice will include sufficient details of the Dispute to enable the other Party to consider its position in relation to the Dispute.
+13.3 A Party shall give prompt written notice of any Dispute to the other Party (a "**Dispute Notice**"). Such Dispute Notice will include sufficient details of the Dispute to enable the other Party to consider its position in relation to the Dispute.
 
 13.4 Each Party agrees to use its best endeavours to settle any Dispute amicably between the Parties within a period of 30 days from the date of the Dispute Notice given under Paragraph 13.3.
 
@@ -343,7 +346,7 @@ Fractal Blockchain GmbH is located in Germany and stores this data in secured se
 
 For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
 
-(c) Data processor Heroku:
+(c) Data processor Heroku: 
 To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States.
 
 For further information, please see [Heroku’s data security explanations](https://www.heroku.com/policy/security) as well as [Heroku’s Privacy Policy](https://www.salesforce.com/company/privacy/).
