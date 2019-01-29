@@ -336,33 +336,13 @@ Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San F
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
 Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
 
-For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
-
-(c) Data processor Heroku: 
-To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States.
-
-For further information, please see [Heroku’s data security explanations](https://www.heroku.com/policy/security) as well as [Heroku’s Privacy Policy](https://www.salesforce.com/company/privacy/).
-
-(d) Data processor AWS:
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (**“AWS”**).
-
-For further information, please see [AWS’s Privacy Policy](https://aws.amazon.com/privacy/?nc1=h_ls).
-
-(e) Data processor CS Compliance:
-To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“**CS Compliance**”).
-
-For further information, please email CS Compliance’s Privacy Policy contact contact <info@cs-compliance-service.de>.
-
-(f) Data processor LexisNexis:
-To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“**LexisNexis**”).
-
-For further information, please see [LexisNexis’ Privacy Policy](https://www.lexisnexis.com/en-us/privacy/default.page).
+For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
 #### 1.7 Commercial use policy
 
@@ -450,33 +430,13 @@ Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San F
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
 Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
 
-For more information, you can reach out to their person responsible for data protection at [privacy@fractal.id]().
-
-(c) Data processor Heroku: 
-To store your personal data, we are working together with “**Heroku**”, a service provided by our data processor Heroku Inc., located at The Landmark @ 1 Market St., Suite 300, San Francisco, CA, 94105, United States.
-
-For further information, please see [Heroku’s data security explanations](https://www.heroku.com/policy/security) as well as [Heroku’s Privacy Policy](https://www.salesforce.com/company/privacy/).
-
-(d) Data processor AWS:
-To store your personal data, we are also using Amazon Simple Storage Service, a service provided by our data processor Amazon Web Services, Inc., 410 Terry Avenue North, Seattle WA 98109, United States (**“AWS”**).
-
-For further information, please see [AWS’s Privacy Policy](https://aws.amazon.com/privacy/?nc1=h_ls).
-
-(e) Data processor CS Compliance:
-To process your personal data, we are also using KYC Screening services, a service provided by our data processor CS Compliance Services Ltd. (“**CS Compliance**”).
-
-For further information, please email CS Compliance’s Privacy Policy contact contact <info@cs-compliance-service.de>.
-
-(f) Data processor LexisNexis:
-To process your personal data, we are also using CDDS AML Risk API, a service provided by our data processor LexisNexis GmbH (“**LexisNexis**”).
-
-For further information, please see [LexisNexis’ Privacy Policy](https://www.lexisnexis.com/en-us/privacy/default.page).
+For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
 **Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
  
