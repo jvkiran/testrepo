@@ -340,7 +340,9 @@ Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, German
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
-Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
+Fractal Blockchain GmbH stores this data in servers in the EU and process this information in compliance with the applicable data protection law(s).
+
+Important Note: Your use of Fractal’s launchpad software and/or other services may be subject to your acceptance of a separate End User Agreement with Fractal, the terms of which may allow Fractal to use, on its own behalf, your personal data for Fractal’s own purposes, including marketing purposes. This Privacy Policy does not apply to Fractal's use of your personal data on its own behalf pursuant to the terms of the End User Agreement.
 
 For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
@@ -434,7 +436,7 @@ Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, German
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
-Fractal Blockchain GmbH is located in Germany and stores this data in secured servers in the EU and process this information in compliance with the applicable data protection law(s).
+Fractal Blockchain GmbH stores this data in servers in the EU and process this information in compliance with the applicable data protection law(s).
 
 For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
