@@ -19,24 +19,24 @@ We collect and use information in accordance with the GDPR, or with your specifi
 
 We do not knowingly collect personal information from children under 18 without consent from a parent or guardian. If we learn a child has provided personal information, we may delete it.
 
-## What information we collect and how we use it
+## What Information We Collect and How We Use It
 
 When you visit our site, we don’t log any information about your visit on the server (technically, S3 bucket). We also don’t load any 3rd party scripts tracking your indiviual behavior across multiple channels, like A/B testing tools, social network or sharing buttons, and so on.
 
-We simply don’t measure your engagement with our brand because we believe this is always in violation of your privacy, and ultimately meaningless.
+We simply don’t measure your engagement with our brand based on tracking you, because we believe this is always in violation of your privacy, and ultimately meaningless.
 
-### Web services
+### Web Services
 
-Site communicates against those services where some data collection, like time of request and the user's IP address might be collected:
+The site communicates against those services where some data collection, like time of request and the user's IP address might be collected:
 
--   https://webtask.io
--   https://zeit.co
--   https://cloudflare.com
+-   [Cloudflare](https://www.cloudflare.com), subject to their [Terms](https://www.cloudflare.com/terms/) and [Privacy Policy](https://www.cloudflare.com/privacypolicy/)
+-   [Zeit](https://zeit.co/), subject to their [Terms](https://zeit.co/terms/) and [Privacy Policy](https://zeit.co/privacy)
+-   [Webtask/Auth0](https://auth0.com), subject to their [Terms](https://auth0.com/terms/) and [Privacy Policy](https://auth0.com/privacy)
 
-Additionally, if you are submitting one of our forms:
+Additionally, if you are submitting one of our web forms, your entered data is stored and processed with:
 
--   [MailChimp](https://mailchimp.com): [Privacy Policy](https://mailchimp.com/legal/privacy/)
--   [Zapier](https://zapier.com): [Privacy Policy](https://zapier.com/privacy/)
+-   [MailChimp](https://mailchimp.com/), subject to their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/)
+-   [Zapier](https://zapier.com/), subject to their [Terms](https://zapier.com/terms/) and [Privacy Policy](https://zapier.com/privacy/)
 
 ### Cookies
 
@@ -63,24 +63,25 @@ If you have Do Not Track activated in your browser, or if you rejected our cooki
 
 If you hit _Reject_ on the cookie banner, all previously set Google cookies will be deleted, and the rejection is stored in a cookie `hasConsent` with value of `false`.
 
-## Other Policies
+## Other Terms & Policies
 
--   [Terms & Privacy Policy for Pre-Launch](/terms-prelaunch)
--   [Terms & Privacy Policy for Network Launch](/terms-launch)
+-   [Terms & Privacy Policy for Pre-Launch](/terms-prelaunch/)
+-   [Terms & Privacy Policy for Network Launch](/terms-launch/)
 
 ## Marketing Activities
 
-We may transfer your Personal Data to our business partners:
+We may transfer your personal data to our business partners:
 
 BigchainDB GmbH
 Chausseetraße 19
 10115 Berlin
+Germany
 
 ## Contact & Data Controller
 
 For any requests you can contact us as follows:
 
-Level 3
+Ocean Protocol Foundation Ltd.
 Mapletree Business City
 20 Pasir Panjang Rd
 East Wing #03-22/24

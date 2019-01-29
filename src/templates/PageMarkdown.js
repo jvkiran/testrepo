@@ -28,8 +28,9 @@ export default class PageMarkdown extends Component {
 
     componentDidMount() {}
 
-    async fetchMarkdown() {
+    fetchMarkdown() {
         this.setState({ fetching: true })
+
         fetch(this.props.markdownSource)
             .then(response => response.text())
             .then(text => {
