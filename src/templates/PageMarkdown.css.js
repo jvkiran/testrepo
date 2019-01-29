@@ -9,15 +9,15 @@ export const StyledContent = styled(ContentRow)`
     min-height: 300px;
     position: relative;
 
-    & h1 {
+    & h2 {
         font-size: ${fonts.size.h3};
     }
 
-    & h2 {
+    & h3 {
         font-size: ${fonts.size.h4};
     }
 
-    & h3 {
+    & h4 {
         font-size: ${fonts.size.h5};
     }
 
