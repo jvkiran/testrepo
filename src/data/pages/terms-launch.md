@@ -283,7 +283,7 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 The operator of the network launch token exchange for the Ocean Tokens (“**Tokens**”), including its onboarding, (altogether “**Service**”) is the Ocean Protocol Foundation Ltd., a company limited by guarantee incorporated in Singapore with its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439\. We take the protection of your personal data very seriously. We treat your personal data confidentially and according to the legal data protection regulations and this privacy policy (this “**Privacy Policy**”).
 
-Your provision of personal data, such as names, addresses or e-mail addresses, is strictly on a voluntary basis. However, if you choose not to provide, or to permit the use, disclosure and/or processing of, the personal data we require, it may not be possible for us to provide you with the information, products and/or services you want. Subject to the terms of this Privacy Policy, those data will not be passed on to third parties without your permission or without being required by law.
+Your provision of personal data, such as names, addresses or e-mail addresses, is strictly on a voluntary basis. However, if you choose not to provide, or to permit the use, disclosure and/or processing of, the personal data we require, it may not be possible for us to provide you cd with the information, products and/or services you want. Subject to the terms of this Privacy Policy, those data will not be passed on to third parties without your permission or without being required by law.
 
 However, we would like to point out that data transmissions via internet (e.g. e-mail communication) cannot be entirely secure and may have security vulnerabilities. A complete protection of personal details against unauthorised access by third parties is not possible.
 
@@ -336,15 +336,15 @@ Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San F
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
 Fractal Blockchain GmbH stores this data in servers in the EU and process this information in compliance with the applicable data protection law(s).
 
-Important Note: Your use of Fractal’s launchpad software and/or other services may be subject to your acceptance of a separate End User Agreement with Fractal, the terms of which may allow Fractal to use, on its own behalf, your personal data for Fractal’s own purposes, including marketing purposes. This Privacy Policy does not apply to Fractal's use of your personal data on its own behalf pursuant to the terms of the End User Agreement.
+**Important Note:** Your use of Fractal’s launchpad software and/or other services may be subject to your acceptance of a separate End User Agreement with Fractal, the terms of which may allow Fractal to use, on its own behalf, your personal data for Fractal’s own purposes, including marketing purposes. This Privacy Policy does not apply to Fractal's use of your personal data on its own behalf pursuant to the terms of the End User Agreement.
 
-For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
+For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id>.
 
 #### 1.7 Commercial use policy
 
@@ -432,7 +432,7 @@ Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San F
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
 (b) Data processor Fractal:
-Our data processor Fractal Blockchain GmbH, Akazienstr. 3a, 10823 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
 
