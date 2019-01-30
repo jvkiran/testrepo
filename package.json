@@ -58,7 +58,8 @@
     ],
     "reactSnap": {
         "cacheAjaxRequests": true,
-        "inlineCss": true
+        "inlineCss": true,
+        "fixWebpackChunksIssue": false
     },
     "husky": {
         "hooks": {
