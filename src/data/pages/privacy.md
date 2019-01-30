@@ -1,13 +1,11 @@
 ---
 title: Privacy Policy
-description: Privacy Policy for the use of oceanprotocol.com.
+description: 'TL;DR: If you have Do Not Track activated we don’t collect any information at all about your visit on our site. If deactivated, we make sure to only collect the bare minimum of information needed, as described in this Privacy Policy.'
 ---
 
 ## Table of Contents
 
 ## Introduction
-
-**TL;DR: If you have Do Not Track activated we don’t collect any information at all about your visit on our site. If deactivated, we make sure to only collect the bare minimum of information needed, as described in this Privacy Policy.**
 
 Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it.
 ​
@@ -63,11 +61,6 @@ If you have Do Not Track activated in your browser, or if you rejected our cooki
 
 If you hit _Reject_ on the cookie banner, all previously set Google cookies will be deleted, and the rejection is stored in a cookie `hasConsent` with value of `false`.
 
-## Other Terms & Policies
-
--   [Terms & Privacy Policy for Pre-Launch](/terms-prelaunch/)
--   [Terms & Privacy Policy for Network Launch](/terms-launch/)
-
 ## Marketing Activities
 
 We may transfer your personal data to our business partners:
@@ -89,3 +82,8 @@ Singapore, 117439
 Singapore
 
 gdpr@oceanprotocol.com
+
+## Other Terms & Policies
+
+-   [Terms & Privacy Policy for Pre-Launch](/terms-prelaunch/)
+-   [Terms & Privacy Policy for Network Launch](/terms-launch/)
