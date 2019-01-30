@@ -22,6 +22,7 @@ export const StyledContent = styled(ContentRow)`
     }
 
     ul {
+        margin-top: 0;
         margin-bottom: ${layout.spacer};
         padding-left: 1.5rem;
         list-style: none;
@@ -49,6 +50,21 @@ export const StyledContent = styled(ContentRow)`
         p {
             margin-bottom: 0;
             margin-top: calc(${layout.spacer} / 8);
+        }
+    }
+
+    /* Style TOC based on heading */
+    #table-of-contents {
+        font-size: ${fonts.size.large};
+        color: rgb(${colors.lightGrey});
+        margin-top: 0;
+
+        /* Actual TOC */
+        + ul {
+            background: rgba(${colors.dimmedGrey}, 0.3);
+            padding: ${layout.spacer};
+            padding-left: calc(${layout.spacer} * 2);
+            margin-bottom: calc(${layout.spacer} * 2);
         }
     }
 `
