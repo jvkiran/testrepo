@@ -6,7 +6,7 @@ import remark2react from 'remark-react'
 import toc from 'remark-toc'
 import * as matter from 'gray-matter'
 import Page from '../templates/Page'
-import Spinner from '../components/Spinner'
+// import Spinner from '../components/Spinner'
 import { StyledContent } from './PageMarkdown.css'
 
 export default class PageMarkdown extends Component {
@@ -22,11 +22,9 @@ export default class PageMarkdown extends Component {
         markdownSource: PropTypes.any.isRequired
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.fetchMarkdown()
     }
-
-    componentDidMount() {}
 
     fetchMarkdown() {
         this.setState({ fetching: true })
@@ -61,11 +59,7 @@ export default class PageMarkdown extends Component {
                 location={this.props.location}
             >
                 <StyledContent>
-                    {this.state.fetching ? (
-                        <Spinner />
-                    ) : (
-                        <this.MarkdownOutput text={this.state.text} />
-                    )}
+                    <this.MarkdownOutput text={this.state.text} />
                 </StyledContent>
             </Page>
         )
