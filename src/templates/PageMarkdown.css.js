@@ -23,8 +23,7 @@ export const StyledContent = styled(ContentRow)`
 
     ul {
         margin-top: 0;
-        margin-bottom: ${layout.spacer};
-        padding-left: 1.5rem;
+        padding-left: ${layout.spacer};
         list-style: none;
     }
 

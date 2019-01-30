@@ -7,9 +7,9 @@ description: 'TL;DR: If you have Do Not Track activated we don’t collect any i
 
 ## Introduction
 
-Our Privacy Policy sets out how your personal information is collected and used while you use the Site. We believe your personal information belongs to you, so we are very open about how we use it.
-​
-If you have questions about the Privacy Policy, want to know what data we store about you, or if you want to withdraw your consent to any data processing, let us know by emailing gdpr@oceanprotocol.com.
+Our Privacy Policy sets out how your personal information is collected and used while you use our site. We believe your personal information belongs to you, so we are very open about how we use it.
+
+If you have questions about the Privacy Policy, want to know what data we store about you, or if you want to withdraw your consent to any data processing, let us know by emailing [gdpr@oceanprotocol.com](mailto:gdpr@oceanprotocol.com).
 
 ## Our Policies
 
@@ -45,9 +45,9 @@ When you first arrive on our site, a cookie banner will be shown. This will be a
 
 On our site, only Google Analytics and YouTube set cookies. We have to set a cookie of our own though, for remembering acceptance or rejection of our cookie banner.
 
-If you have Do Not Track activated in your browser, or if you rejected our cookie banner, we don’t collect any information and won’t let Google set any cookies in your browser.
+If you have Do Not Track activated in your browser, or if you rejected our cookie banner, we won’t let Google set any cookies in your browser.
 
-If you reject the cookie banner, all cookies set by Google Analytics will be removed from your browser. You also have the option of disabling Cookies in your browser setting, and deleting Cookies from your computer’s hard disk at any time.
+You also have the option of disabling cookies in your browser setting, and deleting cookies from your computer’s hard disk at any time.
 
 In general, you can block cookies by using your browser’s settings, or by installing a browser add-on such as [Privacy Badger](https://www.eff.org/privacybadger) or [uBlock Origin](https://github.com/gorhill/uBlock).
 
@@ -56,8 +56,6 @@ In general, you can block cookies by using your browser’s settings, or by inst
 The site uses Google Analytics, which provides us with anonymized information about our users (such as anonymized IP address, browser version, and so on) and how they use the site. We use this information to make the site better.
 
 The collected IP addresses are truncated before being sent to Google, making them anonymized. Google Analytics also sets cookies.
-
-If you have Do Not Track activated in your browser, or if you rejected our cookie banner, we don’t collect any information and won’t load anything from Google at all.
 
 If you hit _Reject_ on the cookie banner, all previously set Google cookies will be deleted, and the rejection is stored in a cookie `hasConsent` with value of `false`.
 
@@ -81,7 +79,7 @@ East Wing #03-22/24
 Singapore, 117439
 Singapore
 
-gdpr@oceanprotocol.com
+[gdpr@oceanprotocol.com](mailto:gdpr@oceanprotocol.com)
 
 ## Other Terms & Policies
 

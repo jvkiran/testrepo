@@ -4,6 +4,8 @@ import fetch from 'isomorphic-fetch'
 import remark from 'remark'
 import remark2react from 'remark-react'
 import toc from 'remark-toc'
+import breaks from 'remark-breaks'
+import capitalize from 'remark-capitalize'
 import * as matter from 'gray-matter'
 import Page from '../templates/Page'
 import Spinner from '../components/Spinner'
@@ -46,6 +48,8 @@ export default class PageMarkdown extends Component {
     MarkdownOutput = ({ text }) =>
         remark()
             .use(toc, { maxDepth: 3, tight: true })
+            .use(breaks)
+            .use(capitalize)
             .use(remark2react, {
                 sanitize: { clobberPrefix: '' } // needed to remove 'user-content' string from generated IDs
             })
