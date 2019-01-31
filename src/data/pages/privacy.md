@@ -43,7 +43,7 @@ When you first arrive on our site, a cookie banner will be shown. This will be a
 -   you stay on the landing page for more than 10 seconds
 -   you browse to another page
 
-On our site, only Google Analytics and YouTube set cookies. We have to set a cookie of our own though, for remembering acceptance or rejection of our cookie banner.
+On our site, only Google Analytics and YouTube set cookies. We have to set a cookie of our own though, for remembering your acceptance or rejection of our cookie banner. This cookie will stay in your browser for 13 months, unless you delete it manually. This is so we can detect your acceptance or rejection on your next visit, and adapt the site accordingly.
 
 If you have Do Not Track activated in your browser, or if you rejected our cookie banner, we won’t let Google set any cookies in your browser.
 
@@ -68,11 +68,20 @@ Chausseetraße 19
 10115 Berlin
 Germany
 
+Dex Pte Ltd
+Level 3
+Mapletree Business City
+20 Pasir Panjang Road
+East Wing #03-22/24
+Singapore, 117439
+Singapore
+
 ## Contact & Data Controller
 
 For any requests you can contact us as follows:
 
 Ocean Protocol Foundation Ltd.
+Level 3
 Mapletree Business City
 20 Pasir Panjang Rd
 East Wing #03-22/24
