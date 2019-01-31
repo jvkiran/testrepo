@@ -54,3 +54,18 @@ export const StyledComments = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
     margin-bottom: 0;
 `
+
+export const BlockedPaper = styled.div`
+    text-align: center;
+    margin-top: 40%;
+
+    h3 {
+        font-size: ${fonts.size.large};
+        text-align: center;
+    }
+
+    button {
+        display: inline-block;
+        margin: 0 calc(${layout.spacer} / 2);
+    }
+`
