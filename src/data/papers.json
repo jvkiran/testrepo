@@ -8,7 +8,9 @@
                 "file": "/tech-whitepaper.pdf",
                 "filename": "Ocean Protocol Technical Whitepaper.pdf"
             },
-            "key": "tech-whitepaper"
+            "key": "tech-whitepaper",
+            "version": "1.0.0",
+            "updated": "Feb 2018"
         },
         {
             "title": "Business Whitepaper",
@@ -17,7 +19,9 @@
                 "file": "/business-whitepaper.pdf",
                 "filename": "Ocean Protocol Business Whitepaper.pdf"
             },
-            "key": "business-whitepaper"
+            "key": "business-whitepaper",
+            "version": "1.0.0",
+            "updated": "Feb 2018"
         },
         {
             "title": "Marketplace Framework",
@@ -26,7 +30,9 @@
                 "file": "/marketplace-framework.pdf",
                 "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
             },
-            "key": "marketplace-framework"
+            "key": "marketplace-framework",
+            "version": "1.0.0",
+            "updated": "Feb 2018"
         },
         {
             "title": "Token Distribution",
@@ -36,6 +42,8 @@
                 "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
             },
             "key": "token-distribution",
+            "version": "1.0.0",
+            "updated": "Feb 2018",
             "blocked": true
         }
     ],

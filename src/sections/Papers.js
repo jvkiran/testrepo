@@ -15,7 +15,8 @@ import {
     StyledFooter,
     StyledComments,
     FileType,
-    BlockedPaper
+    BlockedPaper,
+    PaperMeta
 } from './Papers.css'
 import content from '../data/papers.json'
 
@@ -24,21 +25,21 @@ const PaperContent = ({ paper }) => (
         <StyledTitle>{paper.title}</StyledTitle>
         <Paragraph>{paper.description}</Paragraph>
         <StyledFooter>
-            <a
+            <Button
+                primary
+                center
                 download={paper.download.filename}
                 href={`${process.env.PUBLIC_URL}${paper.download.file}`}
+                onClick={() =>
+                    window.ga &&
+                    ga('send', 'event', 'download', paper.key, 'button')
+                }
             >
-                <Button
-                    primary
-                    center
-                    onClick={() =>
-                        window.ga &&
-                        ga('send', 'event', 'download', paper.key, 'button')
-                    }
-                >
-                    Download <FileType>pdf</FileType>
-                </Button>
-            </a>
+                Download <FileType>pdf</FileType>
+            </Button>
+            <PaperMeta>
+                v{paper.version} | {paper.updated}
+            </PaperMeta>
         </StyledFooter>
     </>
 )
@@ -63,14 +64,12 @@ const PaperBlocked = ({
         return (
             <BlockedPaper>
                 <h3>Are you a US resident?</h3>
-                <div>
-                    <Button small onClick={handleUsResident}>
-                        Yes
-                    </Button>
-                    <Button small onClick={handleNonUsResident}>
-                        No
-                    </Button>
-                </div>
+                <Button small onClick={handleUsResident}>
+                    Yes
+                </Button>
+                <Button small onClick={handleNonUsResident}>
+                    No
+                </Button>
             </BlockedPaper>
         )
     }

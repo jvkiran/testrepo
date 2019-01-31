@@ -13,6 +13,7 @@ export const StyledWhitepaper = styled(Cell)`
     position: relative;
     flex: 1 0 auto;
     max-width: 25rem;
+    min-height: 30rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: calc(${layout.spacer} * 2);
@@ -48,6 +49,13 @@ export const FileType = styled.span`
     font-size: ${fonts.size.small};
     opacity: 0.7;
     margin-left: 0.3rem;
+`
+
+export const PaperMeta = styled.div`
+    text-align: center;
+    margin-top: calc(${layout.spacer} / 2);
+    font-size: ${fonts.size.mini};
+    color: rgb(${colors.lightGrey});
 `
 
 export const StyledComments = styled(SubTitle)`
