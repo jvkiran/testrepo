@@ -6,8 +6,7 @@ title: Terms & Conditions for the Ocean Token Launch Distribution
 
 ## I - NETWORK LAUNCH TERMS
 
-**TERMS AND CONDITIONS FOR WHITELISTING 
-FOR PARTICIPATION IN THE NETWORK LAUNCH TOKEN EXCHANGE OF OCEAN PROTOCOL FOUNDATION LTD**.
+**TERMS AND CONDITIONS FOR WHITELISTING FOR PARTICIPATION IN THE NETWORK LAUNCH TOKEN EXCHANGE OF OCEAN PROTOCOL FOUNDATION LTD**.
 
 Ocean Protocol Foundation Ltd. (Company Registration No.: 201729912W), a company incorporated in Singapore with its registered office at 20 Pasir Panjang Road, #03-22 Mapletree Business City, Singapore 117439 (the **“Foundation”**) is proposing to create and distribute cryptographic tokens – the Ocean tokens (the **“Tokens”**) – to the general public in exchange for cryptocurrency during the public Network Launch phase (the **“Initial Token Exchange”**), the launch periods to be announced by the Foundation on its website at http://oceanprotocol.com/ (the “Website”) as well as other Channels (as defined below) which the Foundation may elect. The Tokens are to function as the native cryptographic currency for use on the Ocean Protocol network (the **“Project”**) – a decentralised data exchange platform built on blockchain technology to be developed by Company in collaboration with BigchainDB GmbH (German Company Registration Number HRB 160856B) and DEX Pte. Ltd. (Singapore Company Registration Number 201541022W).
 
@@ -283,11 +282,11 @@ For the purposes of these Terms, your contact details shall be such contact deta
 
 The operator of the network launch token exchange for the Ocean Tokens (“**Tokens**”), including its onboarding, (altogether “**Service**”) is the Ocean Protocol Foundation Ltd., a company limited by guarantee incorporated in Singapore with its registered address at 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439\. We take the protection of your personal data very seriously. We treat your personal data confidentially and according to the legal data protection regulations and this privacy policy (this “**Privacy Policy**”).
 
-Your provision of personal data, such as names, addresses or e-mail addresses, is strictly on a voluntary basis. However, if you choose not to provide, or to permit the use, disclosure and/or processing of, the personal data we require, it may not be possible for us to provide you cd with the information, products and/or services you want. Subject to the terms of this Privacy Policy, those data will not be passed on to third parties without your permission or without being required by law.
+Your provision of personal data, such as names, addresses or e-mail addresses, is strictly on a voluntary basis. However, if you choose not to provide, or to permit the use, disclosure and/or processing of, the personal data we require, it may not be possible for us to provide you cd git with the information, products and/or services you want. Subject to the terms of this Privacy Policy, those data will not be passed on to third parties without your permission or without being required by law.
 
 However, we would like to point out that data transmissions via internet (e.g. e-mail communication) cannot be entirely secure and may have security vulnerabilities. A complete protection of personal details against unauthorised access by third parties is not possible.
 
-If you provide personal data to us, you consent to the collection, use and disclosure of such personal data in accordance with this policy. If you provide the personal data of another individual, it means that you have informed him/her of the purposes for which we require his/her personal data and he/she has consented to the collection, use and disclosure of his/her personal data in accordance with this policy. If you provided personal data to us in earlier token exchange exercises, you consent to our retention, use and disclosure of such personal data for the purposes of the Service in accordance with this policy.
+**IF YOU PROVIDE PERSONAL DATA TO US, YOU CONSENT TO THE COLLECTION, USE AND DISCLOSURE OF SUCH PERSONAL DATA IN ACCORDANCE WITH THIS POLICY. IF YOU PROVIDE THE PERSONAL DATA OF ANOTHER INDIVIDUAL, IT MEANS THAT YOU HAVE INFORMED HIM/HER OF THE PURPOSES FOR WHICH WE REQUIRE HIS/HER PERSONAL DATA AND HE/SHE HAS CONSENTED TO THE COLLECTION, USE AND DISCLOSURE OF HIS/HER PERSONAL DATA IN ACCORDANCE WITH THIS POLICY. IF YOU PROVIDED PERSONAL DATA TO US IN EARLIER TOKEN EXCHANGE EXERCISES, YOU CONSENT TO OUR RETENTION, USE AND DISCLOSURE OF SUCH PERSONAL DATA FOR THE PURPOSES OF THE SERVICE IN ACCORDANCE WITH THIS POLICY.**
 
 #### 1.1 Database requests
 
@@ -305,9 +304,9 @@ The given permission to the storage of the data, the email address as well as th
 
 #### 1.4 Processing of data (customer data and contract data)
 
-We collect, process, use and disclose personal data necessary for the establishment, content-related arrangement or change of the legal relationship established by acknowledging and agreeing to the [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms). We collect, process, use and disclose personal data about the use of our Service (usage data) insofar it is necessary for enabling, improving or invoicing the use of the Service.
+We collect, process, use and disclose personal data necessary for the establishment, content-related arrangement or change of the legal relationship established by acknowledging and agreeing to the [Network Launch Terms](#network-launch-terms). We collect, process, use and disclose personal data about the use of our Service (usage data) insofar it is necessary for enabling, improving or invoicing the use of the Service.
 
-In addition, you acknowledge that the purpose of this Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined in the [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)). If you submit or have submitted  personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
+In addition, you acknowledge that the purpose of this Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined in the [Network Launch Terms](#network-launch-terms)). If you submit or have submitted  personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
 
 We also reserve the right to monitor, check and process your personal data if necessary to investigate or obtain evidence concerning any complaint, claim or dispute or any actual or suspected illegal or unlawful conduct or to aid in such investigation or evidence gathering by any law enforcement or regulatory authorities.
 
@@ -331,7 +330,7 @@ Except as otherwise stated in this Policy above or expressly agreed on, we trans
 To fulfil the contract, we have contracted data processors to process your personal data on our behalf for the given purposes herein. The personal data you provide may be processed outside Singapore in accordance with applicable data protection law(s).
 
 (a) Data processor CoinList:
-Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
@@ -354,7 +353,7 @@ You may view, withdraw and (re-)give your declaration of consent at any time by 
 
 #### 1.8 Right of access to and correction of personal data
 
-You have the right to be informed about your personal data in our possession or under our control, their origin and addressee and the purpose of data processing as well as the right to correction of those data at any time. For further questions and questions concerning personal data, feel free to contact us under the address published in the imprint/legal notice.
+You have the right to be informed about your personal data in our possession or under our control, their origin and addressee and the purpose of data processing as well as the right to correction of those data at any time. For further questions and questions concerning personal data, feel free to contact us under the address published in the imprint/legal notice or send an email to <gdpr@oceanprotocol.com>
 
 #### 1.9 Objection to commercial mails
 
@@ -374,9 +373,19 @@ This Policy is meant to inform you, which Personal Data we collect, store, proce
 
 This Policy may be amended or updated from time to time to reflect changes in our practices with respect to the Processing of Personal Data, or changes in applicable law. We encourage you to read this Policy carefully, and to regularly check this page to review any changes we might make in accordance with the terms of this Policy. Your continued use of our Services or website constitutes your agreement to be bound by this Policy, as amended or updated from time to time.
 
-Please note that Ocean Protocol Foundation collects your Personal Data directly from the country where you are based and stores it on servers in EU.
+#### 2.1 Consent to international transfer in countries with lower level of data protection
 
-#### 2.1 Which Personal Data we process
+If you do not wish your Personal Data to be transferred to third countries outside the EU/EEA, please do not tick the consent box and do not send any Personal Data to Ocean Protocol Foundation. 
+
+Please note that Ocean Protocol Foundation collects your Personal Data directly from the country where you are based and stores it on servers outside EU/EEA, which may be operated by third party service providers. Ocean Protocol Foundation needs to involve the third party service providers due to their legitimate interests in having a secure and sufficient storage system. Ocean Protocol Foundation chooses the respective third party service providers with due care and pays attention that such service providers respect the applicable privacy laws, are aware of the importance of protection of personal data and implement “state-of-the-art” technical and organizational measures. Therefore, your potential interests in not transferring your personal data do not outbalance the legitimate interest of Ocean Protocol Foundation.
+
+**WHEN CONSENTING TO THIS PRIVACY POLICY, YOU ALSO CONSENT TO SUCH INTERNATIONAL TRANSFER TO AND PROCESSING OF YOUR PERSONAL DATA BY SUCH THIRD PARTIES IN THIRD COUNTRIES OUTSIDE THE EU/EEA. PLEASE FIND A LIST OF THE THIRD PARTY SERVICE PROVIDERS AND THE RESPECTIVE THIRD COUNTRIES INVOLVED IN SUCH PROCESSING OF YOUR PERSONAL DATA UNDER SECTION [2.6 LAWFUL BASIS FOR PROCESSING PERSONAL DATA](#26-lawful-basis-for-processing-personal-data), ITEMS (A) TO (D).**
+
+**WITHDRAWAL OF CONSENT**
+
+In the rare circumstances where we ask for your consent to process your Personal Data, any consent is provided freely. If you give your consent, you have the right to withdraw your consent at any time. The withdrawal of consent does not affect the lawfulness of Processing based on consent before its withdrawal. After your withdrawal we will stop to Process your Personal Data, including storage. This paragraph is only relevant for Processing that is entirely voluntary – it does not apply for Processing that is necessary or obligatory in any way. To withdraw your consent, please send us an e-mail to <gdpr@oceanprotocol.com> or send a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439.
+
+#### 2.2 Which Personal Data we process
 
 The categories of Personal Data about you that we may Process include:
 
@@ -388,7 +397,7 @@ The categories of Personal Data about you that we may Process include:
 -   log in information (e-mail address, password); and
 -   your cryptocurrency address.
 
-#### 2.2 How we collect your Personal Data
+#### 2.3 How we collect your Personal Data
 
 We may collect Personal Data about you from the following sources:
 
@@ -400,23 +409,23 @@ We may collect Personal Data about you from the following sources:
 -   When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data;
 -   When you submit your resume/CV to us for a job application;
 -   When you acquire the Tokens; and
--   When you are participating in the **Initial Token Exchange** (as defined which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)).
+-   When you are participating in the **Initial Token Exchange** (as defined which is accessible at [Network Launch Terms](#network-launch-terms)).
 
-#### 2.3 Creation of Personal Data
+#### 2.4 Creation of Personal Data
 
 In the course of your interaction on the Ocean Protocol platform, we may also create Personal Data about you, such as records of your interactions with us and details of your transaction history.
 
-#### 2.4 For which purposes we use your Personal Data
+#### 2.5 For which purposes we use your Personal Data
 
 We use your Personal Data to provide, maintain and improve our Services, to grant you access to Ocean Protocol and enable you the use of the Ocean Protocol and the Ocean Protocol platform. For marketing purposes, we use your Personal Data only if and as long as we have received your explicit prior consent and in accordance with respectively applicable additional legal requirements in your jurisdiction. We do not sell your Personal Data to third parties.
 
-In addition, you acknowledge that the purpose of our Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](https://oceanprotocol.com/terms-launch#network-launch-terms)). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
+In addition, you acknowledge that the purpose of our Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](#network-launch-terms)). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, we will  collect, process and disclose such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
 
-#### 2.5 Lawful basis for Processing Personal Data
+#### 2.6 Lawful basis for Processing Personal Data
 
 In Processing your Personal Data in connection with the purposes set out in this Policy, we may rely on one or more of the following legal bases, depending on the circumstances:
 
--   we have obtained your explicit prior consent to the Processing (this legal basis is only used in relation to Processing that is entirely voluntary – it is not used for Processing that is necessary or obligatory in any way);
+-   we have obtained your explicit prior consent to the Processing (this legal basis is only used exceptionally in relation to Processing that is entirely voluntary – it is not used for Processing that is necessary or obligatory in any way);
 -   the Processing is necessary in connection with any contractual relationship that you may enter into with us;
 -   the Processing is required by applicable law;
 -   the Processing is necessary to protect the vital interests of any individual; or
@@ -427,7 +436,7 @@ When we are involving third party Processors into the performance of our service
 Specifically we can already name the following Processors:
 
 (a) Data processor CoinList:
-Our data processor CoinList Capital LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
@@ -440,18 +449,26 @@ Fractal Blockchain GmbH stores this data in servers in the EU and process this i
 
 For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
-**Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
- 
- We may also disclose your Personal Data to third parties who are not Processors in terms of Art. 28 of the GDPR.
+(c) Data processor BigChainDB: 
+BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigChainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-The categories of such Non-Processors are:
+For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigChainDB.
+
+(d) Data processor DEX: 
+DEX Pte. Ltd., 20 Pasir Panjang Rd, Singapore 11743, Registration 201541022W (**"DEX"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+
+For further information, please refer [here](https://www.dex.sg).
+
+**Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
+   
+We may also disclose your Personal Data to third parties who are not Processors in terms of Art. 28 of the GDPR. The categories of such Non-Processors are:
 
 -   banks, credit agencies and other financial and/or payment service providers
 -   our group affiliates (list of which can be found requested by email: <gdpr@oceanprotocol.com>
 -   other holders or users of Ocean Tokens
 -   IT-service providers
 
-#### 2.6 Processing your Sensitive Personal Data
+#### 2.7 Processing your Sensitive Personal Data
 
 We do not seek to collect or otherwise Process your Sensitive Personal Data, except where:
 
@@ -460,46 +477,46 @@ We do not seek to collect or otherwise Process your Sensitive Personal Data, exc
 -   the Processing is necessary for the establishment, exercise or defence of legal rights; or
 -   we have, in accordance with applicable law, obtained your explicit consent prior to Processing your Sensitive Personal Data (as above, this legal basis is only used in relation to Processing that is entirely voluntary – it is not used for Processing that is necessary or obligatory in any way).
 
-#### 2.7 Consequences if we may not collect your Personal Data
+#### 2.8 Consequences if we may not collect your Personal Data
 
 We need your Personal Data to provide our Services to you and/or perform our contractual obligations towards you. Without providing such Personal Data, we may not be able to provide you the services you are intending to receive.
 
-#### 2.8 Consent and withdrawal
+#### 2.9 Consent and withdrawal
 
 Any consent is provided freely. If you give your consent, you have the right to withdraw your consent at any time. The withdrawal of consent does not affect the lawfulness of Processing based on consent before its withdrawal. After your withdrawal we will stop to Process your Personal Data, including storage. This paragraph is only relevant for Processing that is entirely voluntary – it does not apply for Processing that is necessary or obligatory in any way.
 
 To withdraw your consent, please send us an e-mail to <gdpr@oceanprotocol.com> or a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439.
 
-#### 2.9 Cookies
+#### 2.10 Cookies
 
 We may use cookies from time to time. A Cookie is a unique text file that a Web site can send to your browser software. Cookies do not include any Personal Data. We may use Cookies to identify the browser you are using so that our website displays properly. We also use cookies in various places on our website in order to document your visit to our website and allow for a more efficient website design.
 
-If you do not want to allow us to use Cookies, you can disable Cookie installation via your browser setting or refuse the installation of Cookies when prompted to this effect. You also have the option of deleting Cookies from your computer’s hard disk at any time. The Cookies will be deleted automatically after the period of time prescribed by the concerned regulations in force at that time.
+If you do not want to allow us to use Cookies, you can disable Cookie installation via your browser setting or refuse the installation of Cookies when prompted to this effect. You also have the option of deleting Cookies from your computer’s hard disk at any time. The Cookies will be deleted automatically after the web session of the browser ended.
 
-#### 2.10 Marketing Activities
+#### 2.11 Marketing Activities
 
 In case you consented to our Marketing Policy, we may transfer your Personal Data to our business partners
 
--   DEX Pte. Ltd. (Singapore),
--   BigchainDB GmbH (Berlin, Germany),
--   Fractal Blockchain GmbH (Berlin, Germany),
--   CoinList Services LLC (San Francisco, CA, USA)
+-   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
+-   BigchainDB GmbH (Chausseestraße 19, 10115, Berlin, Germany),
+-   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
+-   CoinList Services LLC (850 Montgomery Street, Suite 350, San Francisco, CA 94133, United States)
 
 in order for us or our business partners to inform you via e-mail about upcoming opportunities that are similar to the Initial Token Exchange or to market and promote our respective products and services.
 
-#### 2.11 Links to Business Partner and Co-Branded Sites
+#### 2.12 Links to Business Partner and Co-Branded Sites
 
 Certain links contained on Ocean Protocol Foundation web sites may direct you to co-branded web sites maintained by Ocean Protocol Foundation or to companies which Ocean Protocol Foundation has established business relationships. When you submit information to one of these co-branded sites or partner companies, you may be submitting it to both Ocean Protocol Foundation and these business partners. Under no circumstances may Ocean Protocol Foundation be held responsible for the privacy practices of these business partners and we therefore strongly encourage you to read their respective privacy policies as they may differ from ours.
 
-#### 2.12 When we erase your Personal Data
+#### 2.13 When we erase your Personal Data
 
 We erase your Personal Data automatically when they are no longer required for the purposes listed above. We also erase your Personal Data according to your request and if further storage is neither required nor permitted by applicable laws.
 
-#### 2.13 Your rights related to data privacy
+#### 2.14 Your rights related to data privacy
 
 You have the right to request access to and rectification or erasure of your Personal Data, or restriction of their Processing. Furthermore, you have the right to object Processing as well as to request data portability. If you are in the EU you have the right to file a complaint to the responsible European Data Protection Authority.
 
-#### 2.14 Our contact information, Data Controller
+#### 2.15 Our contact information, Data Controller
 
 If you have a direct business relationship with us, we are Data Controller according to Art. 4 para. 7 GDPR. For any requests you can contact us as follows:
 
@@ -509,13 +526,13 @@ East Wing # 03-22/24
 Singapore, 117439
 Singapore
 
-Our data privacy officer you can contact is as follows:
+Our data privacy officer is Artur Gomer and you can contact us as follows:
 
 <gdpr@oceanprotocol.com>
 
 We may process your data on behalf of a contract partner of yours (e.g. internet-shop, vendor, seller, service provider). In this case, the privacy policy of your partner applies. Please contact your contract partner for more information.
 
-**(A)** Definitions
+#### 2.16 Definitions
 
 -   ‘**Controller**’ means the entity that decides how and why Personal Data is Processed. In many jurisdictions, the Controller has primary responsibility for complying with applicable data protection laws.
 
@@ -535,17 +552,23 @@ We may process your data on behalf of a contract partner of yours (e.g. internet
 
 ## III - MARKETING CONSENT
 
-**I herewith agree to receive marketing and advertising information from Ocean Protocol Foundation Ltd.**
+### 1. Marketing Consent to Ocean Protocol Foundation Ltd.
 
-I herewith agree to receive marketing and advertising information from the business partners of Ocean Protocol Foundation Ltd., namely:
+**WHEN CONSENTING YOU AGREE TO RECEIVE MARKETING AND ADVERTISING INFORMATION FROM OCEAN PROTOCOL FOUNDATION LTD. (20 PASIR PANJANG RD, SINGAPORE, 117439). FOR THIS PURPOSES OCEAN PROTOCOL FOUNDATION LTD. WILL PROCESS YOUR EMAIL ADDRESS AND YOUR NAME. THE EU COMMISSION CONSIDERS THE LEVEL OF DATA PROTECTION IN SINGAPORE TO BE LOWER THAN IN THE EU/EEA. OCEAN PROTOCOL FOUNDATION LTD. WILL ONLY STORE SUCH PERSONAL DATA AS LONG AS YOUR CONSENT IS VALID AND IF THERE WILL BE NO LEGAL BASIS FOR PROCESSING IN A FURTHER CONTEXT.**
 
--   DEX Pte. Ltd. (Singapore),
--   BigchainDB GmbH (Berlin, Germany),
--   Fractal Blockchain GmbH (Berlin, Germany),
--   CoinList Services LLC (San Francisco, CA, USA)
+It is possible that your personal information will be transferred and stored in countries other than Singapore involving the service of third party service providers. Such countries outside the European Union / European Economic Area may be in particular United States. Please note that the level of data protection in such countries is lower than the level of data protection in your jurisdiction. If such transfer happens, Ocean Protocol Foundation Ltd. has implemented safeguards and data protection solutions to ensure your information is adequately protected in these countries. If you would like to obtain the details of such safeguards, you can request these by contacting Ocean Protocol Foundation Ltd. by email at <gdpr@oceanprotocol.com>.
+
+For further information about the processing, please see our Privacy Policy [Network Launch Terms](#ii---privacy-policies). Please note that you can withdraw, view, and (re-)give your declaration of consent to receive marketing and advertising at any time by writing to <gdpr@oceanprotocol.com> or with sending a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.
+
+### 2. Marketing Consent to our Partners
+
+Subject to the information stated above relating to the level of data protection in Singapore and the right to withdraw the consent, **YOU HEREWITH ALSO AGREE TO RECEIVE MARKETING AND ADVERTISING INFORMATION FROM ALL OF THE FOLLOWING BUSINESS PARTNERS** of Ocean Protocol Foundation Ltd., namely:
+
+-   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
+-   BigchainDB GmbH (Chausseestraße 19, 10115, Berlin, Germany),
+-   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
+-   CoinList Services LLC (850 Montgomery Street, Suite 350, San Francisco, CA 94133, United States)
 
 Please note that you will receive an email where we request you to click on a confirmation link in order to confirm that you are the owner of the e-mail address you provided to us for marketing communication.
-
-You may view, withdraw and (re-)give your declaration of consent at any time by sending an e-mail to the provider of this Service <gdpr@oceanprotocol.com>. To withdraw your consent, you may also contact us under the address published in the footer of the e-mail/imprint/legal notice.
 
 **Mapletree Business City** **20 Pasir Panjang Rd** **East Wing # 03-22/24** **Singapore, 117439** **Singapore**
