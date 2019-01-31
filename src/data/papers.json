@@ -27,6 +27,15 @@
                 "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
             },
             "key": "marketplace-framework"
+        },
+        {
+            "title": "Marketplace Framework",
+            "description": "This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "download": {
+                "file": "/marketplace-framework.pdf",
+                "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
+            },
+            "key": "marketplace-framework"
         }
     ],
     "comment": "Have a comment or suggestions about any of our documents?<br />Let us know <a href='https://twitter.com/oceanprotocol'>@oceanprotocol</a>."

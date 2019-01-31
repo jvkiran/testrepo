@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Cell from '../components/Cell'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
-import { colors, fonts, layout } from '../styles'
+import { colors, fonts, layout, responsive } from '../styles'
 
 export const StyledWhitepaper = styled(Cell)`
     border-radius: ${layout.borderRadius};
@@ -12,6 +12,10 @@ export const StyledWhitepaper = styled(Cell)`
     hyphens: auto;
     position: relative;
     flex: 1 0 auto;
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: calc(${layout.spacer} * 2);
 
     &:before {
         content: '';
@@ -24,8 +28,7 @@ export const StyledWhitepaper = styled(Cell)`
         transform: rotate(45deg);
     }
 
-    &:first-child {
-        margin-bottom: ${layout.spacer};
+    @media screen and (${responsive.sm.min}) {
     }
 `
 
@@ -49,6 +52,5 @@ export const FileType = styled.span`
 
 export const StyledComments = styled(SubTitle)`
     color: rgb(${colors.lightGrey});
-    margin-top: ${layout.spacer};
     margin-bottom: 0;
 `

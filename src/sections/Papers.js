@@ -7,7 +7,6 @@ import Button from '../components/Button'
 import Grid from '../components/Grid'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
-import Cell from '../components/Cell'
 import { colors } from '../styles'
 import {
     StyledWhitepaper,
@@ -22,40 +21,38 @@ const Documentation = () => (
     <Section background={colors.black} fontColor={colors.white} id="papers">
         <SectionHeader title={content.title} white />
 
-        <ContentRow wide>
+        <ContentRow>
             <Grid>
                 {content.papers.map(paper => (
-                    <Cell key={paper.key} smallGutter width={1 / 3}>
-                        <StyledWhitepaper>
-                            <StyledTitle>{paper.title}</StyledTitle>
-                            <Paragraph>{paper.description}</Paragraph>
-                            <StyledFooter>
-                                <a
-                                    download={paper.download.filename}
-                                    href={`${process.env.PUBLIC_URL}${
-                                        paper.download.file
-                                    }`}
+                    <StyledWhitepaper key={paper.key} smallGutter width={1 / 2}>
+                        <StyledTitle>{paper.title}</StyledTitle>
+                        <Paragraph>{paper.description}</Paragraph>
+                        <StyledFooter>
+                            <a
+                                download={paper.download.filename}
+                                href={`${process.env.PUBLIC_URL}${
+                                    paper.download.file
+                                }`}
+                            >
+                                <Button
+                                    primary
+                                    center
+                                    onClick={() =>
+                                        window.ga &&
+                                        ga(
+                                            'send',
+                                            'event',
+                                            'download',
+                                            paper.key,
+                                            'button'
+                                        )
+                                    }
                                 >
-                                    <Button
-                                        primary
-                                        center
-                                        onClick={() =>
-                                            window.ga &&
-                                            ga(
-                                                'send',
-                                                'event',
-                                                'download',
-                                                paper.key,
-                                                'button'
-                                            )
-                                        }
-                                    >
-                                        Download <FileType>pdf</FileType>
-                                    </Button>
-                                </a>
-                            </StyledFooter>
-                        </StyledWhitepaper>
-                    </Cell>
+                                    Download <FileType>pdf</FileType>
+                                </Button>
+                            </a>
+                        </StyledFooter>
+                    </StyledWhitepaper>
                 ))}
             </Grid>
         </ContentRow>
