@@ -7,6 +7,7 @@ import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
 import Button from '../components/Button'
 import Grid from '../components/Grid'
+import Cell from '../components/Cell'
 import Paragraph from '../components/Paragraph'
 import ContentRow from '../components/ContentRow'
 import { colors } from '../styles'
@@ -51,24 +52,27 @@ PaperContent.propTypes = {
 
 const PaperBlocked = ({
     paper,
-    usresident,
-    handleUsResident,
-    handleNonUsResident
+    resident,
+    handleResident,
+    handleNonResident
 }) => {
-    if (usresident === true) {
+    if (resident === true) {
         return (
-            <BlockedPaper>{`Sorry, we can't show you this document`}</BlockedPaper>
+            <BlockedPaper>{`Sorry, we can't show you this document.`}</BlockedPaper>
         )
-    } else if (usresident === false) {
+    } else if (resident === false) {
         return <PaperContent paper={paper} />
     } else {
         return (
             <BlockedPaper>
-                <h3>Are you a US resident?</h3>
-                <Button small onClick={handleUsResident}>
+                <Consumer>
+                    {({ country }) => <h3>Are you a {country} resident?</h3>}
+                </Consumer>
+
+                <Button small onClick={handleResident}>
                     Yes
                 </Button>
-                <Button small onClick={handleNonUsResident}>
+                <Button small onClick={handleNonResident}>
                     No
                 </Button>
             </BlockedPaper>
@@ -78,22 +82,44 @@ const PaperBlocked = ({
 
 PaperBlocked.propTypes = {
     paper: PropTypes.object,
-    usresident: PropTypes.bool,
-    handleUsResident: PropTypes.func,
-    handleNonUsResident: PropTypes.func
+    resident: PropTypes.bool,
+    handleResident: PropTypes.func,
+    handleNonResident: PropTypes.func
+}
+
+const Whitepaper = ({ paper, ...props }) => (
+    <StyledWhitepaper>
+        {/*
+            Show block overlay based on user location
+            See https://github.com/oceanprotocol/site/blob/master/docs/location.md
+        */}
+        <Consumer>
+            {({ country }) =>
+                paper.blocked && paper.blocked === country ? (
+                    <PaperBlocked paper={paper} {...props} />
+                ) : (
+                    <PaperContent paper={paper} />
+                )
+            }
+        </Consumer>
+    </StyledWhitepaper>
+)
+
+Whitepaper.propTypes = {
+    paper: PropTypes.object
 }
 
 export default class Papers extends PureComponent {
     state = {
-        usresident: null
+        resident: null
     }
 
-    handleNonUsResident = () => {
-        this.setState({ usresident: false })
+    handleNonResident = () => {
+        this.setState({ resident: false })
     }
 
-    handleUsResident = () => {
-        this.setState({ usresident: true })
+    handleResident = () => {
+        this.setState({ resident: true })
     }
 
     render() {
@@ -108,33 +134,14 @@ export default class Papers extends PureComponent {
                 <ContentRow>
                     <Grid>
                         {content.papers.map(paper => (
-                            <StyledWhitepaper
-                                key={paper.key}
-                                smallGutter
-                                width={1 / 2}
-                            >
-                                <Consumer>
-                                    {({ country }) =>
-                                        paper.blocked &&
-                                        paper.blocked === country ? (
-                                            <PaperBlocked
-                                                paper={paper}
-                                                usresident={
-                                                    this.state.usresident
-                                                }
-                                                handleUsResident={
-                                                    this.handleUsResident
-                                                }
-                                                handleNonUsResident={
-                                                    this.handleNonUsResident
-                                                }
-                                            />
-                                        ) : (
-                                            <PaperContent paper={paper} />
-                                        )
-                                    }
-                                </Consumer>
-                            </StyledWhitepaper>
+                            <Cell smallGutter width={1 / 2} key={paper.key}>
+                                <Whitepaper
+                                    paper={paper}
+                                    resident={this.state.resident}
+                                    handleResident={this.handleResident}
+                                    handleNonResident={this.handleNonResident}
+                                />
+                            </Cell>
                         ))}
                     </Grid>
                 </ContentRow>
