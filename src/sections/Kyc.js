@@ -16,15 +16,15 @@ import {
     PlatformButton,
     TokenInfo,
     Divider
-} from './Token.css'
+} from './Kyc.css'
 import Paragraph from '../components/Paragraph'
-import content from '../data/token.json'
+import content from '../data/kyc.json'
 
 const Kyc = () => (
     <Section
         background={colors.darkPurple}
         fontColor={colors.lightGrey}
-        id="token"
+        id="register"
     >
         <SectionHeader
             title={content.title}
