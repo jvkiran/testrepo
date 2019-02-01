@@ -9,7 +9,7 @@ export default class Header extends PureComponent {
         backgroundColor: PropTypes.string,
         backgroundImage: PropTypes.string,
         title: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
+        description: PropTypes.string,
         text: PropTypes.string,
         style: PropTypes.object,
         light: PropTypes.bool,
