@@ -13,15 +13,27 @@
             "updated": "March 2018"
         },
         {
-            "title": "Business Whitepaper",
-            "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "title": "Token Distribution",
+            "description": "This document describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.\n\nThe Ocean Tokens (Ocean) are used on the Ocean Protocol network as the means of value exchange, to power the protocol and incentivize the keeper nodes of the network.",
             "download": {
-                "file": "/business-whitepaper.pdf",
-                "filename": "Ocean Protocol Business Whitepaper.pdf"
+                "file": "/token-distribution.pdf",
+                "filename": "Ocean Protocol Token Distribution.pdf"
             },
-            "key": "business-whitepaper",
-            "version": "1.3",
-            "updated": "March 2018"
+            "key": "token-distribution",
+            "version": "0.5",
+            "updated": "Feb 2019",
+            "blocked": "US"
+        },
+        {
+            "title": "Business Strategy",
+            "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "download": {
+                "file": "/business-strategy.pdf",
+                "filename": "Ocean Protocol Business Strategy.pdf"
+            },
+            "key": "business-strategy",
+            "version": "0.5",
+            "updated": "Feb 2019"
         },
         {
             "title": "Marketplace Framework",
@@ -32,19 +44,7 @@
             },
             "key": "marketplace-framework",
             "version": "1.0.0",
-            "updated": "October 2017"
-        },
-        {
-            "title": "Token Distribution",
-            "description": "Ocean Protocol Token Distribution.",
-            "download": {
-                "file": "/token-distribution.pdf",
-                "filename": "Ocean Protocol Token Distribution.pdf"
-            },
-            "key": "token-distribution",
-            "version": "1.0.0",
-            "updated": "Feb 2019",
-            "blocked": "US"
+            "updated": "Oct 2017"
         }
     ],
     "comment": "Have a comment or suggestions about any of our documents?<br />Let us know <a href='https://twitter.com/oceanprotocol'>@oceanprotocol</a>."
