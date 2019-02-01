@@ -1,13 +1,13 @@
 {
     "title": "Ocean Token Distribution",
     "button": {
-        "title": "Register on CoinList",
+        "title": "Register with CoinList",
         "link": "https://coinlist.co/oceanprotocol"
     },
     "fractal": {
         "title": "Did you participate in the March 2018 Pre-Launch?",
         "button": {
-            "title": "Register on Fractal",
+            "title": "Register with Fractal",
             "link": "https://fractal.oceanprotocol.com"
         }
     }
