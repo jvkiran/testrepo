@@ -1,22 +1,14 @@
 {
     "title": "Ocean Token Distribution",
-    "platforms": [
-        {
-            "name": "CoinList",
-            "intro": "Register on CoinList for the upcoming Ocean Token Distribution.",
-            "link": "https://tsm.coinlist.co/oceanprotocol"
-        },
-        {
-            "name": "Fractal",
-            "intro": "Use Fractal if you participated in the Pre-Launch phase in March 2018.",
+    "button": {
+        "title": "Register on CoinList",
+        "link": "https://coinlist.co/oceanprotocol"
+    },
+    "fractal": {
+        "title": "Did you participate in the March 2018 Pre-Launch?",
+        "button": {
+            "title": "Register on Fractal",
             "link": "https://fractal.oceanprotocol.com"
         }
-    ],
-    "tokeninfo": {
-        "title": "The Ocean Token",
-        "description": "Ocean Protocol uses an ERC20 token, as a means of value exchange, to incentivize keepers of the network and for staking & curation. Ocean Tokens will be issued in a limited supply over an extended period of time.",
-        "metrics": [
-            "Learn more in our <a href='/protocol/#papers'>Token Distribution Whitepaper</a>"
-        ]
     }
 }
