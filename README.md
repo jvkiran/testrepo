@@ -31,6 +31,7 @@ For all infos not related to development, have a look into the site's documentat
 -   [Forms](docs/forms.md)
 -   [SEO](docs/seo.md)
 -   [Data Collection & Cookies](docs/data-collection.md)
+-   [User Location Detection](docs/location.md)
 
 ## Development
 

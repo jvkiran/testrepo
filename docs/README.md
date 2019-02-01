@@ -1,3 +1,4 @@
 -   [Content Editing](content.md)
 -   [Forms](forms.md)
 -   [SEO](seo.md)
+-   [User Location Detection](location.md)
