@@ -9,8 +9,8 @@
                 "filename": "Ocean Protocol Technical Whitepaper.pdf"
             },
             "key": "tech-whitepaper",
-            "version": "1.0.0",
-            "updated": "Feb 2018"
+            "version": "0.9.3",
+            "updated": "March 2018"
         },
         {
             "title": "Business Whitepaper",
@@ -20,8 +20,8 @@
                 "filename": "Ocean Protocol Business Whitepaper.pdf"
             },
             "key": "business-whitepaper",
-            "version": "1.0.0",
-            "updated": "Feb 2018"
+            "version": "1.3",
+            "updated": "March 2018"
         },
         {
             "title": "Marketplace Framework",
@@ -32,18 +32,18 @@
             },
             "key": "marketplace-framework",
             "version": "1.0.0",
-            "updated": "Feb 2018"
+            "updated": "October 2017"
         },
         {
             "title": "Token Distribution",
-            "description": "This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "description": "Ocean Protocol Token Distribution.",
             "download": {
-                "file": "/marketplace-framework.pdf",
-                "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
+                "file": "/token-distribution.pdf",
+                "filename": "Ocean Protocol Token Distribution.pdf"
             },
             "key": "token-distribution",
             "version": "1.0.0",
-            "updated": "Feb 2018",
+            "updated": "Feb 2019",
             "blocked": "US"
         }
     ],
