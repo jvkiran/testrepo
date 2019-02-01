@@ -30,5 +30,6 @@ export const Fractal = styled.p`
 `
 
 export const Divider = styled(Line)`
+    margin-top: calc(${layout.spacer} * 1.5);
     margin-bottom: calc(${layout.spacer} * 1.5);
 `
