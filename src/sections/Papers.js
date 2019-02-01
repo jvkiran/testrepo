@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { Consumer } from '../store/createContext'
 import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
 import Button from '../components/Button'
@@ -112,18 +113,27 @@ export default class Papers extends PureComponent {
                                 smallGutter
                                 width={1 / 2}
                             >
-                                {paper.blocked ? (
-                                    <PaperBlocked
-                                        paper={paper}
-                                        usresident={this.state.usresident}
-                                        handleUsResident={this.handleUsResident}
-                                        handleNonUsResident={
-                                            this.handleNonUsResident
-                                        }
-                                    />
-                                ) : (
-                                    <PaperContent paper={paper} />
-                                )}
+                                <Consumer>
+                                    {({ country }) =>
+                                        paper.blocked &&
+                                        paper.blocked === country ? (
+                                            <PaperBlocked
+                                                paper={paper}
+                                                usresident={
+                                                    this.state.usresident
+                                                }
+                                                handleUsResident={
+                                                    this.handleUsResident
+                                                }
+                                                handleNonUsResident={
+                                                    this.handleNonUsResident
+                                                }
+                                            />
+                                        ) : (
+                                            <PaperContent paper={paper} />
+                                        )
+                                    }
+                                </Consumer>
                             </StyledWhitepaper>
                         ))}
                     </Grid>
