@@ -51,11 +51,13 @@ const Kyc = () => (
                             dangerouslySetInnerHTML={{ __html: platform.intro }}
                         />
 
-                        <Ul>
-                            {platform.list.map((item, index) => (
-                                <Li key={index}>{item}</Li>
-                            ))}
-                        </Ul>
+                        {platform.list && (
+                            <Ul>
+                                {platform.list.map((item, index) => (
+                                    <Li key={index}>{item}</Li>
+                                ))}
+                            </Ul>
+                        )}
 
                         <PlatformButton primary>
                             Go to {platform.name}
@@ -77,7 +79,12 @@ const Kyc = () => (
 
                     <Ul>
                         {content.tokeninfo.metrics.map((metric, index) => (
-                            <Li key={index}>{metric}</Li>
+                            <Li
+                                key={index}
+                                dangerouslySetInnerHTML={{
+                                    __html: metric
+                                }}
+                            />
                         ))}
                     </Ul>
                 </Cell>

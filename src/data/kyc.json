@@ -1,24 +1,14 @@
 {
     "title": "Ocean Token Distribution",
-    "description": "Register for the Ocean Network Launch Token Exchange from  Feb 5 until until Mar 19.",
     "platforms": [
         {
             "name": "CoinList",
-            "intro": "Use <strong>CoinList</strong> if you:",
-            "list": [
-                "have/want a CoinList or an AngelList account",
-                "or participated in Filecoin, Blockstack, Origin, or any other project run by CoinList",
-                "or are an accredited US investor"
-            ],
+            "intro": "Register on CoinList for the upcoming Ocean Token Distribution.",
             "link": "https://tsm.coinlist.co/oceanprotocol"
         },
         {
             "name": "Fractal",
-            "intro": "Use <strong>Fractal</strong> if you:",
-            "list": [
-                "have/want a Fractal-ID account",
-                "or participated in the Pre-Launch phase in March 2018"
-            ],
+            "intro": "Use Fractal if you participated in the Pre-Launch phase in March 2018.",
             "link": "https://fractal.oceanprotocol.com"
         }
     ],
@@ -26,10 +16,7 @@
         "title": "The Ocean Token",
         "description": "Ocean Protocol uses an ERC20 token, as a means of value exchange, to incentivize keepers of the network and for staking & curation. Ocean Tokens will be issued in a limited supply over an extended period of time.",
         "metrics": [
-            "Total supply of 1.41 billion OCEAN tokens",
-            "No minimum, no maximum individual contribution limit",
-            "The hard cap is 28M€",
-            "Token price will be determined at network launch"
+            "Learn more in our <a href='/protocol/#papers'>Token Distribution Whitepaper</a>"
         ]
     }
 }
