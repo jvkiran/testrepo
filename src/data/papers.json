@@ -13,18 +13,6 @@
             "updated": "Feb 2019"
         },
         {
-            "title": "Token Distribution",
-            "description": "This document describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.\n\nThe Ocean Tokens (Ocean) are used on the Ocean Protocol network as the means of value exchange, to power the protocol and incentivize the keeper nodes of the network.",
-            "download": {
-                "file": "/token-distribution.pdf",
-                "filename": "Ocean Protocol Token Distribution.pdf"
-            },
-            "key": "token-distribution",
-            "version": "0.6",
-            "updated": "Feb 2019",
-            "blocked": "US"
-        },
-        {
             "title": "Marketplace Framework",
             "description": "This document presents a summary of the core marketplace attributes and components required to facilitate the successful deployment of the decentralized data exchange protocol and network called Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
             "download": {
