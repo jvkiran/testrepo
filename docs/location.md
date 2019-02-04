@@ -1,6 +1,8 @@
 ## User Location Detection
 
-Site makes use of [Cloudflare's Geo IP header](https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-) to detect a user's location based on their IP address.
+Site makes use of [Cloudflare's Geo IP header](https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-) to detect a user's location based on their IP address. 
+
+This detected location does not neccessarily reflect the actual location of the user, there are many legitimate reasons why a user might be behind an IP address belonging to a different country, like VPN software, tracker blocking, using the Tor network, etc.
 
 At the moment, the detection is used in the following places:
 
