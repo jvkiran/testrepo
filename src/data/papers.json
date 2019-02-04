@@ -2,22 +2,27 @@
     "title": "Deep Dive Into Our Papers",
     "papers": [
         {
-            "title": "Technical Whitepaper",
-            "description": "This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.\n\nThe heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.",
+            "title": "Business Strategy",
+            "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
             "download": {
-                "file": "/tech-whitepaper.pdf",
-                "filename": "Ocean Protocol Technical Whitepaper.pdf"
+                "file": "/business-strategy.pdf",
+                "filename": "Ocean Protocol Business Strategy.pdf"
             },
-            "key": "tech-whitepaper"
+            "key": "business-strategy",
+            "version": "0.5",
+            "updated": "Feb 2019"
         },
         {
-            "title": "Business Whitepaper",
-            "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol. In addition, it describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
+            "title": "Token Distribution",
+            "description": "This document describes the logic behind the Ocean utility token and the economics incentives driving the Protocol.\n\nThe Ocean Tokens (Ocean) are used on the Ocean Protocol network as the means of value exchange, to power the protocol and incentivize the keeper nodes of the network.",
             "download": {
-                "file": "/business-whitepaper.pdf",
-                "filename": "Ocean Protocol Business Whitepaper.pdf"
+                "file": "/token-distribution.pdf",
+                "filename": "Ocean Protocol Token Distribution.pdf"
             },
-            "key": "business-whitepaper"
+            "key": "token-distribution",
+            "version": "0.6",
+            "updated": "Feb 2019",
+            "blocked": "US"
         },
         {
             "title": "Marketplace Framework",
@@ -26,7 +31,20 @@
                 "file": "/marketplace-framework.pdf",
                 "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
             },
-            "key": "marketplace-framework"
+            "key": "marketplace-framework",
+            "version": "1.0.0",
+            "updated": "Oct 2017"
+        },
+        {
+            "title": "Technical Whitepaper",
+            "description": "This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.\n\nThe heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.",
+            "download": {
+                "file": "/tech-whitepaper.pdf",
+                "filename": "Ocean Protocol Technical Whitepaper.pdf"
+            },
+            "key": "tech-whitepaper",
+            "version": "0.9.3",
+            "updated": "March 2018"
         }
     ],
     "comment": "Have a comment or suggestions about any of our documents?<br />Let us know <a href='https://twitter.com/oceanprotocol'>@oceanprotocol</a>."

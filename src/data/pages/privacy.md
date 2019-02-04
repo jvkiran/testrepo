@@ -23,6 +23,8 @@ When you visit our site, we don’t log any information about your visit on the 
 
 We simply don’t measure your engagement with our brand based on tracking you, because we believe this is always in violation of your privacy, and ultimately meaningless.
 
+To conform to legal requirements of various jurisdictions, we might adapt certain parts of the site based on your detected location. We do this with [Cloudflare's Geo IP header](https://support.cloudflare.com/hc/en-us/articles/200168236-What-does-Cloudflare-IP-Geolocation-do-), which is read out on the client-side when you visit the site. We never store or further process that information.
+
 ### Web Services
 
 The site communicates against those services where some data collection, like time of request and the user's IP address might be collected:
