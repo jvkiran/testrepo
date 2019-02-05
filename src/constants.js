@@ -95,7 +95,8 @@ export const socialButtons = [
 ]
 
 export const dates = {
-    prelaunch: 'Mar 07 2018 08:00:00 GMT'
+    prelaunch: 'Mar 07 2018 08:00:00 GMT',
+    launch: '2019-02-05T11:00:00.00+01:00'
 }
 
 export const youtube = {

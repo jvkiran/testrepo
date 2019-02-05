@@ -22,13 +22,13 @@ export const StyledSection = styled.section`
 export const StyledColumn = styled.div`
     width: 100%;
     min-height: ${({ minHeight }) => (minHeight ? `${minHeight}px` : 'auto')};
-    padding: 6rem calc(${layout.pageFrame} * 2);
+    padding: 4rem ${layout.pageFrame};
     position: relative;
     display: flex;
     color: ${({ fontColor }) => `rgb(${fontColor})`};
     flex-direction: column;
 
-    @media screen and (${responsive.sm.max}) {
-        padding: 2rem ${layout.pageFrame};
+    @media screen and (${responsive.sm.min}) {
+        padding: 6rem ${layout.pageFrame};
     }
 `

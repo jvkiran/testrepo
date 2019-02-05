@@ -4,8 +4,13 @@
     "video": "https: //www.youtube.com/watch?v=FEeicvNSyk4",
     "cta": [
         {
+            "title": "Register for Token Distribution",
+            "link": "#register",
+            "timed": true
+        },
+        {
             "title": "Learn about the protocol",
-            "link": "/protocol/"
+            "link": "/protocol"
         },
         {
             "title": "Help Build Ocean",

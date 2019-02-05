@@ -18,6 +18,10 @@ import {
     StyledButton,
     Cta
 } from './Welcome.css'
+import { dates } from '../../constants'
+
+const launch = Date.parse(dates.launch)
+const now = Date.now()
 
 export default class Welcome extends Component {
     state = {
@@ -62,15 +66,32 @@ export default class Welcome extends Component {
                     </HeroGrid>
 
                     <Cta>
-                        {content.cta.map(action => (
-                            <StyledButton
-                                key={action.link}
-                                to={action.link}
-                                smooth
-                            >
-                                {action.title}
-                            </StyledButton>
-                        ))}
+                        {content.cta.map(action => {
+                            if (action.timed && now > launch) {
+                                return (
+                                    <StyledButton
+                                        key={action.link}
+                                        to={action.link}
+                                        smooth
+                                    >
+                                        {action.title}
+                                    </StyledButton>
+                                )
+                            }
+
+                            if (!action.timed) {
+                                return (
+                                    <StyledButton
+                                        key={action.link}
+                                        to={action.link}
+                                        smooth
+                                    >
+                                        {action.title}
+                                    </StyledButton>
+                                )
+                            }
+                            return null
+                        })}
                     </Cta>
 
                     <StyledSocialHero>
