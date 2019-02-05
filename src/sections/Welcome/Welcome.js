@@ -21,6 +21,7 @@ import {
 import { dates } from '../../constants'
 
 const launch = Date.parse(dates.launch)
+const now = Date.now()
 
 export default class Welcome extends Component {
     state = {
@@ -66,7 +67,7 @@ export default class Welcome extends Component {
 
                     <Cta>
                         {content.cta.map(action => {
-                            if (action.timed && Date.now() > launch) {
+                            if (action.timed && now > launch) {
                                 return (
                                     <StyledButton
                                         key={action.link}

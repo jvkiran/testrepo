@@ -9,9 +9,10 @@ import content from '../data/kyc.json'
 import { dates } from '../constants'
 
 const launch = Date.parse(dates.launch)
+const now = Date.now()
 
 const Kyc = () => {
-    if (Date.now() < launch) {
+    if (now < launch) {
         return null
     }
 
