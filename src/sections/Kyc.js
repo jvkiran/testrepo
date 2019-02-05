@@ -6,34 +6,43 @@ import { colors } from '../styles'
 import { ReactComponent as Arrow } from '../assets/misc/arrow.svg'
 import { StyledButton, Fractal, Divider } from './Kyc.css'
 import content from '../data/kyc.json'
+import { dates } from '../constants'
 
-const Kyc = () => (
-    <Section
-        background={colors.darkPurple}
-        fontColor={colors.lightGrey}
-        id="register"
-    >
-        <SectionHeader
-            title={content.title}
-            description={content.description}
-            white
-        />
+const launch = Date.parse(dates.launch)
 
-        <ContentRow>
-            <StyledButton primary href={content.button.link}>
-                {content.button.title}
-            </StyledButton>
+const Kyc = () => {
+    if (Date.now() < launch) {
+        return null
+    }
 
-            <Divider />
+    return (
+        <Section
+            background={colors.darkPurple}
+            fontColor={colors.lightGrey}
+            id="register"
+        >
+            <SectionHeader
+                title={content.title}
+                description={content.description}
+                white
+            />
 
-            <Fractal>
-                {content.fractal.title}
-                <a href={content.fractal.button.link}>
-                    {content.fractal.button.title} <Arrow />
-                </a>
-            </Fractal>
-        </ContentRow>
-    </Section>
-)
+            <ContentRow>
+                <StyledButton primary href={content.button.link}>
+                    {content.button.title}
+                </StyledButton>
+
+                <Divider />
+
+                <Fractal>
+                    {content.fractal.title}
+                    <a href={content.fractal.button.link}>
+                        {content.fractal.button.title} <Arrow />
+                    </a>
+                </Fractal>
+            </ContentRow>
+        </Section>
+    )
+}
 
 export default Kyc
