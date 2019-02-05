@@ -5,12 +5,7 @@
     "cta": [
         {
             "title": "Register for Token Distribution",
-            "link": "#register",
-            "timed": true
-        },
-        {
-            "title": "Learn about the protocol",
-            "link": "/protocol"
+            "link": "#register"
         },
         {
             "title": "Help Build Ocean",
