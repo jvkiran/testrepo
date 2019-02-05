@@ -37,6 +37,7 @@ Additionally, if you are submitting one of our web forms, your entered data is s
 
 -   [MailChimp](https://mailchimp.com/), subject to their [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/)
 -   [Zapier](https://zapier.com/), subject to their [Terms](https://zapier.com/terms/) and [Privacy Policy](https://zapier.com/privacy/)
+-   [SendGrid](https://mailchimp.com/), subject to their [Terms](https://sendgrid.com/policies/tos/) and [Privacy Policy](https://sendgrid.com/policies/privacy/)
 
 ### Cookies
 
