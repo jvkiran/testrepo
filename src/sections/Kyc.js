@@ -3,8 +3,7 @@ import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
 import ContentRow from '../components/ContentRow'
 import { colors } from '../styles'
-import { ReactComponent as Arrow } from '../assets/misc/arrow.svg'
-import { StyledButton, Fractal, Divider } from './Kyc.css'
+import { StyledButton } from './Kyc.css'
 import content from '../data/kyc.json'
 
 const Kyc = () => (
@@ -23,15 +22,6 @@ const Kyc = () => (
             <StyledButton primary href={content.button.link}>
                 {content.button.title}
             </StyledButton>
-
-            <Divider />
-
-            <Fractal>
-                {content.fractal.title}
-                <a href={content.fractal.button.link}>
-                    {content.fractal.button.title} <Arrow />
-                </a>
-            </Fractal>
         </ContentRow>
     </Section>
 )
