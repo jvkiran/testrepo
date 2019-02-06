@@ -20,7 +20,6 @@ export default class CookieBanner extends PureComponent {
 
     initAnalytics = () => {
         ReactGA.initialize(meta.analytics, {
-            debug: true,
             gaOptions: {
                 anonymizeIp: true
             }
@@ -40,13 +39,13 @@ export default class CookieBanner extends PureComponent {
         }
 
         return (
-            !this.state.hide && (
-                <CookieBannerUniversal
-                    disableStyle
-                    dismissOnScroll={false}
-                    onAccept={this.initAnalytics}
-                >
-                    {onAccept => (
+            <CookieBannerUniversal
+                disableStyle
+                dismissOnScroll={false}
+                onAccept={this.initAnalytics}
+            >
+                {onAccept =>
+                    !this.state.hide && (
                         <StyledCookieBanner>
                             <p>
                                 {content.cookies.text}
@@ -57,9 +56,9 @@ export default class CookieBanner extends PureComponent {
                                 <button onClick={this.onReject}>Reject</button>
                             </p>
                         </StyledCookieBanner>
-                    )}
-                </CookieBannerUniversal>
-            )
+                    )
+                }
+            </CookieBannerUniversal>
         )
     }
 }
