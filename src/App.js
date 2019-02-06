@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import AppProvider from './store/AppProvider'
 import ScrollToRouteTop from './components/ScrollToRouteTop'
 import Footer from './components/Footer'
@@ -16,7 +16,10 @@ import NotFound from './pages/NotFound'
 import Newsletter from './pages/Newsletter'
 import { createGlobalStyle } from 'styled-components'
 import smoothscroll from 'smoothscroll-polyfill'
+import CookieBanner from './components/CookieBanner'
 import { globalStyles } from './styles'
+import createHistory from 'history/createBrowserHistory'
+import ReactGA from 'react-ga'
 
 const GlobalStyles = createGlobalStyle`${globalStyles}`
 
@@ -38,13 +41,21 @@ const Routes = () => (
     </Switch>
 )
 
+const history = createHistory()
+
+history.listen((location, action) => {
+    ReactGA.set({ page: location.pathname })
+    ReactGA.pageview(location.pathname)
+})
+
 const App = () => (
     <AppProvider>
         <GlobalStyles />
-        <Router>
+        <Router history={history}>
             <ScrollToRouteTop>
                 <Routes />
                 <Footer />
+                <CookieBanner />
             </ScrollToRouteTop>
         </Router>
     </AppProvider>

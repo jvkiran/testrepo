@@ -4,15 +4,13 @@ import axios from 'axios'
 import emailWhite from '../../assets/misc/email-white.svg'
 import Button from '../Button'
 import { webtasks } from '../../constants'
-import gdprJson from '../../data/gdpr'
+import gdpr from '../../data/gdpr'
 import {
     StyledSubscribe,
     StyledSubscribeWrapper,
     StyledMessage,
     Gdpr
 } from './FormNewsletter.css'
-
-const gdpr = gdprJson[0]
 
 export default class SubscribeForm extends Component {
     state = {
