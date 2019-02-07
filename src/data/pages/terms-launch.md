@@ -435,12 +435,17 @@ When we are involving third party Processors into the performance of our service
 
 Specifically we can already name the following Processors:
 
-(a) Data processor CoinList:
+(a) Data processor BigchainDB: 
+BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigchainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+
+For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigchainDB.
+
+(b) Data processor CoinList:
 Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
 
-(b) Data processor Fractal:
+(c) Data processor Fractal:
 Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 Fractal provides a ICO/ITO launchpad software for our use as a white-label solution so as to enable you to contribute / invest your cryptocurrencies for participating in the Ocean token distribution / launch / sale. Fractal, on our behalf, stores and processes the technical information of your device which you use for orders and communication such as your cell phone, tablet, notebook, personal computer, etc. (e.g. IP address), log in information (e-mail address, password), and your cryptocurrency address. 
@@ -449,15 +454,10 @@ Fractal Blockchain GmbH stores this data in servers in the EU and process this i
 
 For more information, you can reach out to their person responsible for data protection at <privacy@fractal.id]>.
 
-(c) Data processor BigChainDB: 
-BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigChainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
-
-For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigChainDB.
-
 (d) Data processor DEX: 
 DEX Pte. Ltd., 20 Pasir Panjang Rd, Singapore 11743, Registration 201541022W (**"DEX"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please refer [here](https://www.dex.sg).
+For further information, please [contact DEX](https://www.dex.sg) and see [Privacy Policy](https://www.dex.sg/privacy-policy/) of DEX.
 
 **Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
    
@@ -497,10 +497,10 @@ If you do not want to allow us to use Cookies, you can disable Cookie installati
 
 In case you consented to our Marketing Policy, we may transfer your Personal Data to our business partners
 
--   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
 -   BigchainDB GmbH (Chausseestraße 19, 10115, Berlin, Germany),
--   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
 -   CoinList Services LLC (850 Montgomery Street, Suite 350, San Francisco, CA 94133, United States)
+-   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
+-   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
 
 in order for us or our business partners to inform you via e-mail about upcoming opportunities that are similar to the Initial Token Exchange or to market and promote our respective products and services.
 
@@ -564,10 +564,10 @@ For further information about the processing, please see our Privacy Policy [Net
 
 Subject to the information stated above relating to the level of data protection in Singapore and the right to withdraw the consent, **YOU HEREWITH ALSO AGREE TO RECEIVE MARKETING AND ADVERTISING INFORMATION FROM ALL OF THE FOLLOWING BUSINESS PARTNERS** of Ocean Protocol Foundation Ltd., namely:
 
--   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
 -   BigchainDB GmbH (Chausseestraße 19, 10115, Berlin, Germany),
--   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
 -   CoinList Services LLC (850 Montgomery Street, Suite 350, San Francisco, CA 94133, United States)
+-   Fractal Blockchain GmbH (Neue Grünstraße 27, 10179 Berlin, Germany),
+-   DEX Pte. Ltd. (20 Pasir Panjang Rd, Singapore 11743),
 
 Please note that you will receive an email where we request you to click on a confirmation link in order to confirm that you are the owner of the e-mail address you provided to us for marketing communication.
 
