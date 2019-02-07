@@ -458,6 +458,7 @@ For further information, please see [Terms of Service](https://www.bigchaindb.co
 DEX Pte. Ltd., 20 Pasir Panjang Rd, Singapore 11743, Registration 201541022W (**"DEX"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
 For further information, please refer [here](https://www.dex.sg).
+https://www.dex.sg/privacy-policy/
 
 **Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
    
