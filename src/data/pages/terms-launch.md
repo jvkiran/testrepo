@@ -435,10 +435,10 @@ When we are involving third party Processors into the performance of our service
 
 Specifically we can already name the following Processors:
 
-(a) Data processor BigChainDB: 
-BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigChainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
+(a) Data processor BigchainDB: 
+BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigchainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigChainDB.
+For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigchainDB.
 
 (b) Data processor CoinList:
 Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
