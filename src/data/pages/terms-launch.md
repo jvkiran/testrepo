@@ -294,7 +294,7 @@ In order to comply with international sanctions and applicable regulation for se
 
 #### 1.2 Contact form
 
-We use MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred for processing in accordance with [MailChimp's Terms](https://mailchimp.com/legal/terms/) and [MailChimp's Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
+We use Sendgrid and MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred for processing in accordance with [Sendgrid Terms](https://sendgrid.com/policies/tos/), [Sendgrid Privacy Policy](https://sendgrid.com/policies/privacy/), [MailChimp Terms](https://mailchimp.com/legal/terms/), and [MailChimp Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via Sendgrid's or MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
 
 #### 1.3 Newsletter
 
