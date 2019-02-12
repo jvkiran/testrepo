@@ -6,6 +6,6 @@ cp ./node_modules/cookies-eu-banner/dist/cookies-eu-banner.min.js ./public/cooki
 
 react-scripts build && \
 
-cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf
+# cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf
 
 exit;
