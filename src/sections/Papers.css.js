@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Title from '../components/Title'
 import SubTitle from '../components/SubTitle'
 import { colors, fonts, layout } from '../styles'
+import Paragraph from '../components/Paragraph'
 
 export const StyledWhitepaper = styled.article`
     border-radius: ${layout.borderRadius};
@@ -81,4 +82,9 @@ export const BlockedPaper = styled.div`
         display: inline-block;
         margin: 0 calc(${layout.spacer} / 2);
     }
+`
+
+export const ComingSoon = styled(Paragraph)`
+    text-align: center;
+    margin-top: 25%;
 `

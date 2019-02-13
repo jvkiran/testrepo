@@ -17,31 +17,39 @@ import {
     StyledComments,
     FileType,
     BlockedPaper,
-    PaperMeta
+    PaperMeta,
+    ComingSoon
 } from './Papers.css'
 import content from '../data/papers.json'
 
 const PaperContent = ({ paper }) => (
     <>
         <StyledTitle>{paper.title}</StyledTitle>
-        <Paragraph>{paper.description}</Paragraph>
-        <StyledFooter>
-            <Button
-                primary
-                center
-                download={paper.download.filename}
-                href={`${process.env.PUBLIC_URL}${paper.download.file}`}
-                onClick={() =>
-                    window.ga &&
-                    ReactGA.ga('send', 'event', 'download', paper.key, 'button')
-                }
-            >
-                Download <FileType>pdf</FileType>
-            </Button>
-            <PaperMeta>
-                v{paper.version} | {paper.updated}
-            </PaperMeta>
-        </StyledFooter>
+  
+        {paper.comingsoon ? (
+            <ComingSoon>{paper.comingsoon}</ComingSoon>
+        ) : (
+            <>
+                <Paragraph>{paper.description}</Paragraph>
+                <StyledFooter>
+                    <Button
+                        primary
+                        center
+                        download={paper.download.filename}
+                        href={`${process.env.PUBLIC_URL}${paper.download.file}`}
+                        onClick={() =>
+                            window.ga &&
+                            ReactGA.ga('send', 'event', 'download', paper.key, 'button')
+                        }
+                    >
+                        Download <FileType>pdf</FileType>
+                    </Button>
+                    <PaperMeta>
+                        v{paper.version} | {paper.updated}
+                    </PaperMeta>
+                </StyledFooter>
+            </>
+        )}
     </>
 )
 

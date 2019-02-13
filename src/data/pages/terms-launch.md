@@ -294,7 +294,7 @@ In order to comply with international sanctions and applicable regulation for se
 
 #### 1.2 Contact form
 
-We use MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred for processing in accordance with MailChimp's [Terms](https://mailchimp.com/legal/terms/) and [Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
+We use Sendgrid and MailChimp and by submitting forms, you acknowledge and agree that the information you provide will be transferred for processing in accordance with [Sendgrid Terms](https://sendgrid.com/policies/tos/), [Sendgrid Privacy Policy](https://sendgrid.com/policies/privacy/), [MailChimp Terms](https://mailchimp.com/legal/terms/), and [MailChimp Privacy Policy](https://mailchimp.com/legal/privacy/). If you send enquiries to us via Sendgrid's or MailChimp's contact form, your data entered into the contact form, including the stated contact data, are stored for the purpose of dealing with your enquiry and in case of additional enquiries.
 
 #### 1.3 Newsletter
 
@@ -304,9 +304,9 @@ The given permission to the storage of the data, the email address as well as th
 
 #### 1.4 Processing of data (customer data and contract data)
 
-We collect, process, use and disclose personal data necessary for the establishment, content-related arrangement or change of the legal relationship established by acknowledging and agreeing to the [Network Launch Terms](#network-launch-terms). We collect, process, use and disclose personal data about the use of our Service (usage data) insofar it is necessary for enabling, improving or invoicing the use of the Service.
+We collect, process, use and disclose personal data necessary for the establishment, content-related arrangement or change of the legal relationship established by acknowledging and agreeing to the [Network Launch Terms](#i---network-launch-terms). We collect, process, use and disclose personal data about the use of our Service (usage data) insofar it is necessary for enabling, improving or invoicing the use of the Service.
 
-In addition, you acknowledge that the purpose of this Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined in the [Network Launch Terms](#network-launch-terms)). If you submit or have submitted  personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
+In addition, you acknowledge that the purpose of this Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined in the [Network Launch Terms](#i---network-launch-terms)). If you submit or have submitted  personal data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of Tokens, you consent to our collection, processing, use and disclosure of such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for Tokens.
 
 We also reserve the right to monitor, check and process your personal data if necessary to investigate or obtain evidence concerning any complaint, claim or dispute or any actual or suspected illegal or unlawful conduct or to aid in such investigation or evidence gathering by any law enforcement or regulatory authorities.
 
@@ -332,7 +332,7 @@ To fulfil the contract, we have contracted data processors to process your perso
 (a) Data processor CoinList:
 Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
+For further information, please see [CoinList Terms of Service](https://coinlist.co/terms) and [CoinList Privacy Policy](https://coinlist.co/privacy).
 
 (b) Data processor Fractal:
 Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
@@ -409,7 +409,7 @@ We may collect Personal Data about you from the following sources:
 -   When you visit any of our websites or use any features or resources available on or through our websites. When you visit our website, your device and browser may automatically disclose certain information (such as device type, operating system, browser type, browser settings, IP address, language settings, dates and times of connecting to a website and other technical communications information), some of which may constitute Personal Data;
 -   When you submit your resume/CV to us for a job application;
 -   When you acquire the Tokens; and
--   When you are participating in the **Initial Token Exchange** (as defined which is accessible at [Network Launch Terms](#network-launch-terms)).
+-   When you are participating in the **Initial Token Exchange** (as defined which is accessible at [Network Launch Terms](#i---network-launch-terms)).
 
 #### 2.4 Creation of Personal Data
 
@@ -419,7 +419,7 @@ In the course of your interaction on the Ocean Protocol platform, we may also cr
 
 We use your Personal Data to provide, maintain and improve our Services, to grant you access to Ocean Protocol and enable you the use of the Ocean Protocol and the Ocean Protocol platform. For marketing purposes, we use your Personal Data only if and as long as we have received your explicit prior consent and in accordance with respectively applicable additional legal requirements in your jurisdiction. We do not sell your Personal Data to third parties.
 
-In addition, you acknowledge that the purpose of our Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](#network-launch-terms)). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, we will  collect, process and disclose such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
+In addition, you acknowledge that the purpose of our Service is to provide information about the **Project**, the **Whitelisting** and the **Initial Token Exchange** (the foregoing capitalised terms are defined which is accessible at [Network Launch Terms](#i---network-launch-terms)). If you submit Personal Data to us for the purpose of being whitelisted for participation in the Initial Token Exchange and/or as a potential acquiror of the Tokens, we will  collect, process and disclose such personal data for the purposes of such whitelisting and also the issuance, distribution, use and circulation of or exchange for the Tokens.
 
 #### 2.6 Lawful basis for Processing Personal Data
 
@@ -438,12 +438,12 @@ Specifically we can already name the following Processors:
 (a) Data processor BigchainDB: 
 BigchainDB GmbH, Chausseestraße 19, 10115, Berlin, Germany, Registration HRB 160856B (**"BigchainDB"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please see [Terms of Service](https://www.bigchaindb.com/terms/) and [Privacy Policy](https://www.bigchaindb.com/privacy/) of BigchainDB.
+For further information, please see [BigchainDB Terms of Service](https://www.bigchaindb.com/terms/) and [BigchainDB Privacy Policy](https://www.bigchaindb.com/privacy/).
 
 (b) Data processor CoinList:
 Our data processor CoinList Services LLC, 850 Montgomery Street, Suite 350, San Francisco, CA 94133 (“**CoinList**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please see [Terms of Service](https://coinlist.co/terms) and [Privacy Policy](https://coinlist.co/privacy) of CoinList.
+For further information, please see [CoinList Terms of Service](https://coinlist.co/terms) and [CoinList Privacy Policy](https://coinlist.co/privacy).
 
 (c) Data processor Fractal:
 Our data processor Fractal Blockchain GmbH, Neue Grünstraße 27, 10179 Berlin, Germany (“**Fractal**”), is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
@@ -457,7 +457,7 @@ For more information, you can reach out to their person responsible for data pro
 (d) Data processor DEX: 
 DEX Pte. Ltd., 20 Pasir Panjang Rd, Singapore 11743, Registration 201541022W (**"DEX"**) is processing personal data on our behalf including for customer identification, anti-money-laundry, accreditation, and contribution purposes.
 
-For further information, please [contact DEX](https://www.dex.sg) and see [Privacy Policy](https://www.dex.sg/privacy-policy/) of DEX.
+For further information, please [contact DEX](https://www.dex.sg) and see [DEX' Privacy Policy](https://www.dex.sg/privacy-policy/).
 
 **Categories of third parties “Non-Processors” to whom we may disclose your Personal Data**.
    
@@ -558,7 +558,7 @@ We may process your data on behalf of a contract partner of yours (e.g. internet
 
 It is possible that your personal information will be transferred and stored in countries other than Singapore involving the service of third party service providers. Such countries outside the European Union / European Economic Area may be in particular United States. Please note that the level of data protection in such countries is lower than the level of data protection in your jurisdiction. If such transfer happens, Ocean Protocol Foundation Ltd. has implemented safeguards and data protection solutions to ensure your information is adequately protected in these countries. If you would like to obtain the details of such safeguards, you can request these by contacting Ocean Protocol Foundation Ltd. by email at <gdpr@oceanprotocol.com>.
 
-For further information about the processing, please see our Privacy Policy [Network Launch Terms](#ii---privacy-policies). Please note that you can withdraw, view, and (re-)give your declaration of consent to receive marketing and advertising at any time by writing to <gdpr@oceanprotocol.com> or with sending a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.
+For further information about the processing, please see our [Network Launch Privacy Policy](#ii---privacy-policies). Please note that you can withdraw, view, and (re-)give your declaration of consent to receive marketing and advertising at any time by writing to <gdpr@oceanprotocol.com> or with sending a letter to Ocean Protocol Foundation Limited, 20 Pasir Panjang Road # 03-22/24, Mapletree Business City, Singapore 117439. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.
 
 ### 2. Marketing Consent to our Partners
 
