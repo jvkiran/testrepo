@@ -25,7 +25,7 @@ import content from '../data/papers.json'
 const PaperContent = ({ paper }) => (
     <>
         <StyledTitle>{paper.title}</StyledTitle>
-  
+
         {paper.comingsoon ? (
             <ComingSoon>{paper.comingsoon}</ComingSoon>
         ) : (
@@ -39,7 +39,13 @@ const PaperContent = ({ paper }) => (
                         href={`${process.env.PUBLIC_URL}${paper.download.file}`}
                         onClick={() =>
                             window.ga &&
-                            ReactGA.ga('send', 'event', 'download', paper.key, 'button')
+                            ReactGA.ga(
+                                'send',
+                                'event',
+                                'download',
+                                paper.key,
+                                'button'
+                            )
                         }
                     >
                         Download <FileType>pdf</FileType>
