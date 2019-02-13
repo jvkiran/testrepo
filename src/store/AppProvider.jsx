@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Provider } from './createContext'
+import { Cookies, CookiesProvider } from 'react-cookie-banner'
+
+const cookies = new Cookies(/* Your cookie header, on browsers defaults to document.cookie */)
 
 export default class AppProvider extends PureComponent {
     state = {
@@ -42,6 +45,12 @@ export default class AppProvider extends PureComponent {
     }
 
     render() {
-        return <Provider value={this.state}>{this.props.children}</Provider>
+        return (
+            <Provider value={this.state}>
+                <CookiesProvider cookies={cookies}>
+                    {this.props.children}
+                </CookiesProvider>
+            </Provider>
+        )
     }
 }

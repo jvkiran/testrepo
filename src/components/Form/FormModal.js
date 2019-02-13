@@ -5,11 +5,9 @@ import FormInput from './FormInput'
 import FormInputRadioCheckbox from './FormInputRadioCheckbox'
 import Button from '../Button'
 import forms from '../../data/forms'
-import gdprJson from '../../data/gdpr'
+import gdpr from '../../data/gdpr'
 import MailchimpCheck from './MailchimpCheck'
 import { StyledMessage, Gdpr } from './FormModal.css'
-
-const gdpr = gdprJson[0]
 
 export default class ModalForm extends PureComponent {
     static propTypes = {

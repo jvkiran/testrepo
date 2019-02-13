@@ -4,7 +4,8 @@ export const meta = {
     description:
         'Ocean Protocol is an ecosystem for sharing data and associated services. It provides a tokenized service layer that exposes data, storage, compute and algorithms for consumption with a set of deterministic proofs on availability and integrity that serve as verifiable service agreements.',
     url: 'https://oceanprotocol.com',
-    image: '/twitter_card.png'
+    image: '/twitter_card.png',
+    analytics: 'UA-60614729-11'
 }
 
 export const company = {

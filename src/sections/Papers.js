@@ -1,7 +1,6 @@
-/* global ga */
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
 import { Consumer } from '../store/createContext'
 import Section from '../components/Section'
 import SectionHeader from '../components/SectionHeader'
@@ -40,7 +39,13 @@ const PaperContent = ({ paper }) => (
                         href={`${process.env.PUBLIC_URL}${paper.download.file}`}
                         onClick={() =>
                             window.ga &&
-                            ga('send', 'event', 'download', paper.key, 'button')
+                            ReactGA.ga(
+                                'send',
+                                'event',
+                                'download',
+                                paper.key,
+                                'button'
+                            )
                         }
                     >
                         Download <FileType>pdf</FileType>
