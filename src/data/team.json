@@ -75,12 +75,6 @@
         "image": "emily"
     },
     {
-        "name": "Mike Anderson",
-        "linkedin": "mike-anderson-7a9412",
-        "twitter": "mikera",
-        "image": "mike"
-    },
-    {
         "name": "Patty Lee",
         "linkedin": "pattyleeworldtrainer",
         "image": "patty"
@@ -131,18 +125,6 @@
         "name": "Chalid Mannaa",
         "linkedin": "cmannaa",
         "image": "chalid"
-    },
-    {
-        "name": "Kiran Karkera",
-        "linkedin": "karkerakiran",
-        "twitter": "kaal_daari",
-        "github": "shark8me",
-        "image": "kiran"
-    },
-    {
-        "name": "Alessandra Albano",
-        "linkedin": "alessandraalbano",
-        "image": "alessandra"
     },
     {
         "name": "Francesco Galadeta",
@@ -236,7 +218,7 @@
         "name": "Ervin Tham",
         "linkedin": "ervintwj",
         "image": "ervin"
-    },       
+    },
     {
         "name": "Sarah-Jean Vallon",
         "linkedin": "sarah-jean-vallon-b4603a65",
