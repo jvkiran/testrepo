@@ -1,7 +1,6 @@
 import ahmed from './ahmed.jpg'
 import aish from './aish.jpg'
 import aitor from './aitor.jpg'
-import alessandra from './alessandra.jpg'
 import artur from './artur.jpg'
 import bruce from './bruce.jpg'
 import chalid from './chalid.jpg'
@@ -21,7 +20,6 @@ import josepablo from './josepablo.jpg'
 import javier from './javier.jpg'
 import jernej from './jernej.jpg'
 import john from './john.jpg'
-import kiran from './kiran.jpg'
 import kwinten from './kwinten.jpg'
 import kyriakos from './kyriakos.jpg'
 import malte from './malte.jpg'
@@ -29,7 +27,6 @@ import manan from './manan.jpg'
 import marcus from './marcus.jpg'
 import masha from './masha.jpg'
 import matthias from './matthias.jpg'
-import mike from './mike.jpg'
 import patty from './patty.jpg'
 import paul from './paul.jpg'
 import ricardo from './ricardo.jpg'
@@ -47,7 +44,6 @@ export default {
     ahmed,
     aish,
     aitor,
-    alessandra,
     alex,
     artur,
     bruce,
@@ -69,7 +65,6 @@ export default {
     javier,
     jernej,
     john,
-    kiran,
     kwinten,
     kyriakos,
     malte,
@@ -77,7 +72,6 @@ export default {
     marcus,
     masha,
     matthias,
-    mike,
     patty,
     paul,
     ricardo,
