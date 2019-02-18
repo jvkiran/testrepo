@@ -2,8 +2,8 @@
 
 set -e;
 
-react-scripts build
+react-scripts build && \
 
-# cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf
+cp ./src/lib/whitepaper/whitepaper.pdf ./build/tech-whitepaper.pdf
 
 exit;

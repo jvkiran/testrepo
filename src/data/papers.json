@@ -2,6 +2,17 @@
     "title": "Deep Dive Into Our Papers",
     "papers": [
         {
+            "title": "Technical Whitepaper",
+            "description": "This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services.\n\nOcean does decentralized orchestration: at its core are decentralized service agreements and decentralized access control, which execute on decentralized virtual machines. This allows connection to, monetization of, and curation of arbitrary data services. On that, Ocean adds network rewards to incentivize data sharing, including privacy-preserving data commons.",
+            "download": {
+                "file": "/tech-whitepaper.pdf",
+                "filename": "Ocean Protocol Technical Whitepaper.pdf"
+            },
+            "key": "tech-whitepaper",
+            "version": "2.0",
+            "updated": "Feb 2019"
+        },
+        {
             "title": "Business Strategy",
             "description": "This document presents a summary of the business model and ecosystem of Ocean Protocol.\n\nIt is complementary to the technical whitepaper for Ocean Protocol.",
             "download": {
@@ -20,20 +31,8 @@
                 "filename": "Ocean Protocol Reference Marketplace Framework.pdf"
             },
             "key": "marketplace-framework",
-            "version": "1.0.0",
+            "version": "1.0",
             "updated": "Oct 2017"
-        },
-        {
-            "title": "Technical Whitepaper",
-            "description": "This paper presents Ocean Protocol. Ocean is a decentralized protocol and network of artificial intelligence (AI) data/services. It incentivizes for a vast supply of relevant AI data/services.\n\nThe heart of Ocean’s network is a new construction called Proofed Curation Markets (PCMs). PCMs bridge predicted relevance with actual relevance of each AI service, by combining curation markets with cryptographic proofs.",
-            "download": {
-                "file": "/tech-whitepaper.pdf",
-                "filename": "Ocean Protocol Technical Whitepaper.pdf"
-            },
-            "key": "tech-whitepaper",
-            "version": "0.9.3",
-            "updated": "March 2018",
-            "comingsoon": "Keep an eye out for our updated 2019 Technical Whitepaper. Coming soon."
         }
     ],
     "comment": "Have a comment or suggestions about any of our documents?<br />Let us know <a href='https://twitter.com/oceanprotocol'>@oceanprotocol</a>."
