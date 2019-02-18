@@ -15,12 +15,4 @@
       <ReplaceKeyPrefixWith>/protocol/#papers</ReplaceKeyPrefixWith>
     </Redirect>
   </RoutingRule>
-  <RoutingRule>
-    <Condition>
-      <KeyPrefixEquals>tech-whitepaper.pdf</KeyPrefixEquals>
-    </Condition>
-    <Redirect>
-      <ReplaceKeyPrefixWith>/protocol/#papers</ReplaceKeyPrefixWith>
-    </Redirect>
-  </RoutingRule>
 </RoutingRules>
