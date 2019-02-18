@@ -4,7 +4,6 @@ import aitor from './aitor.jpg'
 import artur from './artur.jpg'
 import bruce from './bruce.jpg'
 import chalid from './chalid.jpg'
-import chirdeep from './chirdeep.jpg'
 import chris from './chris.jpg'
 import cristina from './cristina.jpg'
 import daniel from './daniel.jpg'
@@ -33,7 +32,6 @@ import ricardo from './ricardo.jpg'
 import sarah from './sarah.jpg'
 import sebastian from './sebastian.jpg'
 import sheridan from './sheridan.jpg'
-import timothy from './timothy.jpg'
 import trent from './trent.jpg'
 import troy from './troy.jpg'
 import yvonn from './yvonn.jpg'
@@ -48,7 +46,6 @@ export default {
     artur,
     bruce,
     chalid,
-    chirdeep,
     chris,
     cristina,
     daniel,
@@ -78,7 +75,6 @@ export default {
     sarah,
     sebastian,
     sheridan,
-    timothy,
     trent,
     troy,
     yvonn
