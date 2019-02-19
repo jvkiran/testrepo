@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
-import Banner from '../sections/Banner'
 import Menu from '../components/Menu'
 import OceanBanner01 from '@oceanprotocol/art/banner/banner-ocean-01@2x.png'
 
@@ -51,11 +50,6 @@ export default class Page extends PureComponent {
                     image={OceanBanner01}
                     path={location.pathname}
                     title={title}
-                />
-                <Banner
-                    light={menuLight}
-                    viewport={headerViewport}
-                    fullWidth={headerFullWidth}
                 />
                 <Menu light={menuLight} noabsolute={noabsolute} />
                 {!noheader && (

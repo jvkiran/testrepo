@@ -7,26 +7,28 @@ import OceanMantarayBack from '@oceanprotocol/art/mantaray/mantaray-grid@2x.png'
 
 export default class Banner extends PureComponent {
     static propTypes = {
-        light: PropTypes.bool,
-        viewport: PropTypes.bool,
-        fullWidth: PropTypes.bool
+        light: PropTypes.bool
     }
 
     render() {
-        const { light, viewport, fullWidth } = this.props
-        return (
-            <StyledBanner
-                backgroundColor={colors.darkPurple}
-                backgroundImage={OceanMantarayBack}
-                viewport={viewport}
-                light={light}
-            >
-                <FlexContentRow wide={!fullWidth} style={{ zIndex: 5 }}>
-                    <StyledLink smooth to="/#register" light={light}>
-                        {content.title}
-                    </StyledLink>
-                </FlexContentRow>
-            </StyledBanner>
-        )
+        const { light } = this.props
+
+        if (content.show === true) {
+            return (
+                <StyledBanner
+                    backgroundColor={colors.darkPurple}
+                    backgroundImage={OceanMantarayBack}
+                    light={light}
+                >
+                    <FlexContentRow style={{ zIndex: 5 }}>
+                        <StyledLink smooth to="/#register" light={light}>
+                            {content.title}
+                        </StyledLink>
+                    </FlexContentRow>
+                </StyledBanner>
+            )
+        } else {
+            return null
+        }
     }
 }

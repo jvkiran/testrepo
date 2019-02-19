@@ -8,6 +8,7 @@ import Protocol from './pages/Protocol'
 import Community from './pages/Community/'
 import Developers from './pages/Developers/'
 import Art from './pages/Art'
+import Banner from './sections/Banner'
 import Faq from './pages/Faq'
 import Privacy from './pages/Privacy'
 import TermsPrelaunch from './pages/TermsPrelaunch'
@@ -53,6 +54,7 @@ const App = () => (
         <GlobalStyles />
         <Router history={history}>
             <ScrollToRouteTop>
+                <Banner />
                 <Routes />
                 <Footer />
                 <CookieBanner />
