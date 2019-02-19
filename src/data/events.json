@@ -775,25 +775,25 @@
         "date_end": "2018-12-05",
         "link": "http://aisummit.co.kr"
     },
-           {
+    {
         "city": "New Delhi",
         "eventName": "Why Blockchain and Why Not",
         "date": "2018-12-05",
         "link": "https://events.91springboard.com/events/why-blockchain-and-why-not-with-ankit-raj-jha/f62bfd10-f3ba-11e8-91c3-062e097c0a53"
-    },  
-        {
+    },
+    {
         "city": "Berlin",
         "eventName": "Product Milestone Announcement: Trilobite",
         "date": "2018-12-05",
         "link": "https://www.meetup.com/Ocean_Protocol_Berlin/events/256543737/"
-    },    
+    },
     {
         "city": "Hong Kong",
         "eventName": "Unveiling the Value of your Data",
         "date": "2018-12-11",
         "link": "https://www.eventbrite.sg/e/unveiling-the-value-of-your-data-tickets-52990547153"
     },
-        {
+    {
         "city": "Singapore",
         "eventName": "Product Milestone Announcement: Trilobite",
         "date": "2018-12-10",
@@ -823,101 +823,101 @@
         "date": "2018-12-12",
         "link": "https://www.meetup.com/nl-NL/Nature2-0-Where-Blockchain-DLT-and-AI-meet/events/254908812/"
     },
-    { 
+    {
         "city": "Global",
         "eventName": "Bottish 10 Simulcast",
         "date": "2018-12-13",
         "link": "http://www.bottish.co/10"
     },
-    {  
+    {
         "city": "London",
         "eventName": "Product Milestone Announcement: Trilobite",
         "date": "2018-12-18",
         "link": "https://www.eventbrite.sg/e/ocean-protocol-product-milestone-announcement-trilobite-release-tickets-53305291562"
     },
-        {
+    {
         "city": "Bilbao",
         "eventName": "European Data Incubator Meetup",
         "date": "2019-01-07",
         "link": "https://edincubator.eu/2018/12/18/data-sharing-edi-ocean-protocol-meetup/"
     },
-            {
+    {
         "city": "Berlin",
         "eventName": "PyData Berlin",
         "date": "2019-01-16",
         "link": "https://www.meetup.com/PyData-Berlin/events/257381223/"
     },
-        {
+    {
         "city": "Paris",
         "eventName": "Kaggle Days Paris",
         "date": "2019-01-25",
-                    "date_end": "2019-01-26",
+        "date_end": "2019-01-26",
         "link": "https://kaggledays.com/paris/?gclid=EAIaIQobChMIy5jF5syw3wIV1ud3Ch0ZCQFJEAAYASAAEgItyfD_BwE"
     },
-        {
+    {
         "city": "Berlin",
         "eventName": "AraCon by Aragon",
         "date": "2019-01-29",
         "date_end": "2018-01-30",
         "link": "https://aracon.one"
     },
-        {
+    {
         "city": "Berlin",
         "eventName": "Building the New Internet- Orchid Meetup",
         "date": "2019-01-29",
         "link": "https://www.meetup.com/Orchid-Let-s-Build-a-Natural-Internet/events/257759324/"
     },
-                    {
+    {
         "city": "Kuwait City",
         "eventName": "ECOH Conference",
         "date": "2019-01-30",
         "date_end": "2019-01-31",
         "link": "https://ecohconference.com"
     },
-        {
+    {
         "city": "Den Bosch, Netherlands",
         "eventName": "Tech Deep Dive Hackathon",
         "date": "2019-02-04",
         "link": "https://www.odyssey.org/technical-deep-dive/?bpage=13604"
     },
-            {
+    {
         "city": "London",
         "eventName": "Radical Exchange",
         "date": "2019-02-08",
         "link": "https://www.meetup.com/radxchangeldn/events/258416054/"
     },
-            {
+    {
         "city": "Dubai",
         "eventName": "AI Governance Summit",
         "date": "2019-02-09",
         "date_end": "2019-02-10",
         "link": "https://www.worldgovernmentsummit.org/annual-gathering/2018/sessions/global-a-i-governance-workshop"
     },
-            {
+    {
         "city": "Munich",
         "eventName": "MOBI Community Conference",
         "date": "2019-02-14",
         "link": "https://dlt.mobi/"
     },
-            {
+    {
         "city": "Singapore",
         "eventName": "Human X AI Meetup",
         "date": "2019-02-19",
         "link": "https://www.eventbrite.com/e/human-x-ai-tickets-55561670452"
     },
-        {
+    {
         "city": "Munich",
         "eventName": "Health AI Lab Meetup",
         "date": "2019-02-20",
         "link": "https://www.meetup.com/Health-AI-Munich/events/258701252/"
     },
-        {
+    {
         "city": "Singapore",
         "eventName": "Ocean Meetup- Empowering AI for Good",
         "date": "2019-02-20",
         "link": "https://www.eventbrite.sg/e/empowering-ai-for-good-tickets-55557040604"
     },
-                {
+    {
         "city": "Paris",
         "eventName": "Ethereum Community Conference",
         "date": "2019-03-07",
@@ -930,7 +930,7 @@
         "date": "2019-03-14",
         "link": "https://hello-tomorrow.org/"
     },
-        {  
+    {
         "city": "Berlin",
         "eventName": "Rise of AI",
         "date": "2019-05-16",

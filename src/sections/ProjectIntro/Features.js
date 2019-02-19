@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Paragraph from '../../components/Paragraph'
 import SubTitle from '../../components/SubTitle'
 import { StyledGrid, StyledCell, StyledGraphic, Actions } from './Features.css'
@@ -8,6 +9,10 @@ import graphicMarketplaces from '../../assets/graphics/feature-marketplaces.svg'
 import graphicJellyfish from '@oceanprotocol/art/jellyfish/jellyfish-full.svg'
 
 const Graphic = ({ graphic }) => {
+    Graphic.propTypes = {
+        graphic: PropTypes.string
+    }
+
     switch (graphic) {
         case 'sharing':
             return <StyledGraphic src={graphicSharing} />
