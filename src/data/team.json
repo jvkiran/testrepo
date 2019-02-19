@@ -11,12 +11,6 @@
         "image": "daryl"
     },
     {
-        "name": "Chirdeep Chhabra",
-        "twitter": "chirdeep",
-        "linkedin": "chirdeep",
-        "image": "chirdeep"
-    },
-    {
         "name": "Trent McConaghy",
         "website": "http://trent.st",
         "twitter": "trentmc0",
@@ -103,11 +97,6 @@
         "image": "marcus"
     },
     {
-        "name": "Timothy Ley",
-        "linkedin": "timothyleymingde",
-        "image": "timothy"
-    },
-    {
         "name": "Fang Gong",
         "linkedin": "fang-gong-65413712",
         "twitter": "gongf05",
@@ -139,9 +128,9 @@
         "image": "kwinten"
     },
     {
-        "name": "Chris Lee",
-        "linkedin": "chris-lee-3aa44938",
-        "image": "chris"
+        "name": "Pedro Gutiérrez",
+        "image": "pedro",
+        "github": "Pedro-vk"
     },
     {
         "name": "Ahmed Ali",
