@@ -4,7 +4,6 @@ import aitor from './aitor.jpg'
 import artur from './artur.jpg'
 import bruce from './bruce.jpg'
 import chalid from './chalid.jpg'
-import chris from './chris.jpg'
 import cristina from './cristina.jpg'
 import daniel from './daniel.jpg'
 import daryl from './daryl.jpg'
@@ -28,6 +27,7 @@ import masha from './masha.jpg'
 import matthias from './matthias.jpg'
 import patty from './patty.jpg'
 import paul from './paul.jpg'
+import pedro from './pedro.jpg'
 import ricardo from './ricardo.jpg'
 import sarah from './sarah.jpg'
 import sebastian from './sebastian.jpg'
@@ -46,7 +46,6 @@ export default {
     artur,
     bruce,
     chalid,
-    chris,
     cristina,
     daniel,
     daryl,
@@ -71,6 +70,7 @@ export default {
     matthias,
     patty,
     paul,
+    pedro,
     ricardo,
     sarah,
     sebastian,
