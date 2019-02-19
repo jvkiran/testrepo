@@ -17,6 +17,7 @@
   - [Environment variables](#environment-variables)
   - [Workflow](#workflow)
   - [Code style](#code-style)
+    - [Editor Setup: VS Code](#editor-setup-vs-code)
   - [SVG assets](#svg-assets)
 - [Deployment: always be shipping](#deployment-always-be-shipping)
   - [Manual Deployment](#manual-deployment)
@@ -95,12 +96,31 @@ Once ready, request a review of your Pull Request from a team member, fixing pos
 
 ### Code style
 
-Code style for JavaScript and style sheets (we're using [styled-components](https://www.styled-components.com)) is enforced before every commit. You won't be able to commit any code with linting errors present so make sure to fix all warnings before committing.
+To enforce a consistent code style, linting is setup for pretty much every file, and is enforced before every commit. You won't be able to commit any code with linting errors present so make sure to fix all warnings before committing.
 
-Code style follows:
+Linting is also part of the test suite, meaning builds on Travis will fail in case of linting errors.
 
--   [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
--   [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+In this repo the following tools are setup for that:
+
+- ESLint with [eslint-config-oceanprotocol](https://github.com/oceanprotocol/eslint-config-oceanprotocol)
+- Stylelint with [stylelint-config-bigchaindb](https://github.com/bigchaindb/stylelint-config-bigchaindb)
+- [Prettier](https://prettier.io)
+
+```bash
+# only run linting checks
+npm run lint
+
+# auto-formatting of all js, css, md, yml files
+npm run format
+```
+
+#### Editor Setup: VS Code
+
+If you use VS Code as your editor, you can install those extensions to get linting as you type, and auto-formatting as you save:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
 
 ### SVG assets
 
