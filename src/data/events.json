@@ -917,6 +917,12 @@
         "date": "2019-02-20",
         "link": "https://www.eventbrite.sg/e/empowering-ai-for-good-tickets-55557040604"
     },
+        {
+        "city": "Berlin",
+        "eventName": "Ocean Protocol Meetup",
+        "date": "2019-03-05",
+        "link": "https://www.meetup.com/Ocean_Protocol_Berlin/events/259068209/"
+    },
     {
         "city": "Paris",
         "eventName": "Ethereum Community Conference",
