@@ -943,9 +943,15 @@
         "link": "https://hello-tomorrow.org/"
     },
     {
-        "city": "Berlin",
+           "city": "Berlin",
         "eventName": "Rise of AI",
         "date": "2019-05-16",
         "link": "https://riseof.ai/"
+    },
+    {
+        "city": "London",
+        "eventName": "CogX Festival of AI and emerging Technology",
+        "date": "2019-06-10",
+        "link": "https://cogx.co"
     }
 ]
