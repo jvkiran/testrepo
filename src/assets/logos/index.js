@@ -16,6 +16,7 @@ import { ReactComponent as Bbc } from '../../assets/logos/bbc.svg'
 import { ReactComponent as Newyorktimes } from '../../assets/logos/newyorktimes.svg'
 import { ReactComponent as Forbes } from '../../assets/logos/forbes.svg'
 import { ReactComponent as Sanfranciscochronicle } from '../../assets/logos/sanfranciscochronicle.svg'
+import { ReactComponent as Cnbc } from '../../assets/logos/cnbc.svg'
 import { ReactComponent as Wired } from '../../assets/logos/wired.svg'
 import { ReactComponent as Bloomberg } from '../../assets/logos/bloomberg.svg'
 
@@ -34,6 +35,7 @@ export default {
     Newyorktimes,
     Forbes,
     Sanfranciscochronicle,
+    Cnbc,
     Wired,
     Bloomberg
 }

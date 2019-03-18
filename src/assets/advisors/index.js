@@ -10,6 +10,10 @@ import meltem from './meltem.jpg'
 import peter from './peter.jpg'
 import sebastian from './sebastian.jpg'
 import simon from './simon.jpg'
+import goertzel from './goertzel.jpg'
+import franck from './franck.jpg'
+import lauterbach from './lauterbach.jpg'
+import messow from './messow.jpg'
 
 export default {
     adam,
@@ -23,5 +27,9 @@ export default {
     meltem,
     peter,
     sebastian,
-    simon
+    simon,
+    goertzel,
+    franck,
+    lauterbach,
+    messow
 }

@@ -107,6 +107,42 @@
             "twitter": "A225",
             "image": "amir",
             "quote": "Amir is General Manager of the AI & Frontier Tech Initiatives group at XPRIZE Foundation. He is a leader in the global AI for Good movement, as epitomized by the global “AI for Good Global Summit” that he co-organizes."
+        },
+        {
+            "name": "Dr. Ben Goertzel",
+            "position": "Founder of SingularityNet",
+            "link": "",
+            "linkedin": "",
+            "twitter": "https://twitter.com/bengoertzel",
+            "image": "goertzel",
+            "quote": "Ben is the CEO of the decentralized AI network SingularityNET, a blockchain-based AI platform company, and the Chief Scientist of Hanson Robotics. He also has decades of expertise applying AI to practical problems in areas ranging from natural language processing and data mining to robotics, video gaming, national security and bioinformatics."
+        },
+        {
+            "name": "Franck Martins",
+            "position": "Head of the MCU, STMicroelectronics",
+            "link": "",
+            "linkedin": "https://www.linkedin.com/in/franckmartins/",
+            "twitter": "",
+            "image": "franck",
+            "quote": "Franck Martins is the Head of the MCU (Microcontroller) Strategic Technical Marketing operations for STMicroelectronics’ Asia Pacific Region. He currently focuses on product roadmap definition, business and solution development for IoT (Internet-of-Things), Wearable, LPWAN, AI, and Smart-City applications."
+        },
+        {
+            "name": "Dr. Anastassia Lauterbach",
+            "position": "Independent Director at Dun & Bradstreet",
+            "link": "",
+            "linkedin": "https://www.linkedin.com/in/anastassia-dr-lauterbach-021a004/",
+            "twitter": "",
+            "image": "lauterbach",
+            "quote": "Dr. Anastassia Lauterbach is a technology strategist possessing unique knowledge of the high-tech ecosystem, able to structure partnership agreements with global technology companies offering mutual advantage."
+        },
+        {
+            "name": "Mark Messow",
+            "position": "Int'l MBA, CPA, Wharton Fellow",
+            "link": "",
+            "linkedin": "https://www.linkedin.com/in/messow/",
+            "twitter": "",
+            "image": "messow",
+            "quote": "Mark is an operations and supply management executive with over 25 years experience building high performing teams while driving value chain transformation."
         }
     ]
 }
