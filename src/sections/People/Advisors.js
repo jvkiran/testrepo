@@ -3,7 +3,10 @@ import Cell from '../../components/Cell'
 import Member from './Member'
 import content from '../../data/advisors'
 import { StyledSubTitle, StyledParagraph, SubHeader } from './index.css'
-import { StyledAdvisors } from './Advisors.css'
+import { StyledAdvisors, StyledCollapsible } from './Advisors.css'
+import Collapsible from 'react-collapsible'
+import ContentRow from '../../components/ContentRow'
+import Team from './Team'
 
 const Advisors = () => (
     <>
@@ -27,6 +30,17 @@ const Advisors = () => (
             <Member empty />
             <Member empty />
         </StyledAdvisors>
+        <StyledCollapsible>
+            <Collapsible
+                easing="ease-out"
+                transitionTime={200}
+                trigger="Core Team"
+            >
+                <ContentRow>
+                    <Team />
+                </ContentRow>
+            </Collapsible>
+        </StyledCollapsible>
     </>
 )
 
