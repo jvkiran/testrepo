@@ -25,16 +25,16 @@ const Advisors = () => (
             {content.members.map(advisor => (
                 <Member key={advisor.name} advisor={advisor} />
             ))}
+            {/**<Member empty />
             <Member empty />
             <Member empty />
-            <Member empty />
-            <Member empty />
+            <Member empty />**/}
         </StyledAdvisors>
         <StyledCollapsible>
             <Collapsible
                 easing="ease-out"
                 transitionTime={200}
-                trigger="Core Team"
+                trigger=""
             >
                 <ContentRow>
                     <Team />
