@@ -2,7 +2,7 @@ import React from 'react'
 import Section from '../../components/Section'
 import SectionHeader from '../../components/SectionHeader'
 import ContentRow from '../../components/ContentRow'
-// import Team from './Team'    
+// import Team from './Team'
 import Advisors from './Advisors'
 
 import { colors } from '../../styles'

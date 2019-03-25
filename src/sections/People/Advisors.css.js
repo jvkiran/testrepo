@@ -8,13 +8,12 @@ export const StyledAdvisors = styled.div`
     margin-left: -2rem;
 `
 export const StyledCollapsible = styled.div`
-
-	.Collapsible__contentInner {
+    .Collapsible__contentInner {
         border-top: 1px solid rgba(${colors.lightGrey}, 0.4);
         padding-top: 1.5rem;
-   }
+    }
 
-	.Collapsible__trigger {
+    .Collapsible__trigger {
         cursor: pointer;
         transition: ${transitions.base};
         display: block;
@@ -46,5 +45,5 @@ export const StyledCollapsible = styled.div`
             content: '-';
             top: -0.25rem;
         }
-   }
+    }
 `

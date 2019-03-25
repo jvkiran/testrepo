@@ -31,11 +31,7 @@ const Advisors = () => (
             <Member empty />**/}
         </StyledAdvisors>
         <StyledCollapsible>
-            <Collapsible
-                easing="ease-out"
-                transitionTime={200}
-                trigger=""
-            >
+            <Collapsible easing="ease-out" transitionTime={200} trigger="">
                 <ContentRow>
                     <Team />
                 </ContentRow>

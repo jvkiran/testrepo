@@ -917,13 +917,13 @@
         "date": "2019-02-20",
         "link": "https://www.eventbrite.sg/e/empowering-ai-for-good-tickets-55557040604"
     },
-        {
+    {
         "city": "Cologne",
         "eventName": "Jeck'n'Tech",
         "date": "2019-02-28",
-        "link": "https://jeckntech.com/#welcome/welcome"       
-       },
-        {        
+        "link": "https://jeckntech.com/#welcome/welcome"
+    },
+    {
         "city": "Berlin",
         "eventName": "Ocean Protocol Meetup",
         "date": "2019-03-05",
@@ -936,7 +936,7 @@
         "date_end": "2019-03-09",
         "link": "https://ethcc.io"
     },
-        {
+    {
         "city": "Brussels",
         "eventName": "Open Energy Marketplaces Meetup",
         "date": "2019-03-08",
@@ -949,7 +949,7 @@
         "link": "https://hello-tomorrow.org/"
     },
     {
-           "city": "Berlin",
+        "city": "Berlin",
         "eventName": "Rise of AI",
         "date": "2019-05-16",
         "link": "https://riseof.ai/"
